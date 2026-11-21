@@ -61,7 +61,8 @@
         "cs": "Otevřeno nonstop; mezi půlnocí a 8:00 pouze pohotovostní případy. Pohotovostní číslo mimo ordinační dobu: +974 3340 9300. V pátek 11:00–13:00 zavřeno kvůli pátečním modlitbám, kromě zcela akutních případů.",
         "sv": "Öppet dygnet runt, årets alla dagar; mellan 00 och 08 endast akutfall. Akutnummer utanför öppettiderna: +974 3340 9300. Stängt för fredagsbönen 11–13, utom vid absoluta nödfall.",
         "da": "Åbent 24/7; mellem midnat og kl. 8 kun akutte tilfælde. Akutnummer uden for åbningstid: +974 3340 9300. Lukket under fredagsbønnen kl. 11–13, bortset fra absolutte nødstilfælde.",
-        "fi": "Auki 24/7; keskiyön ja klo 8 välillä vain päivystystapaukset. Päivystysnumero virka-ajan ulkopuolella: +974 3340 9300. Perjantairukouksen aikaan klo 11–13 suljettu, paitsi ehdottomissa hätätapauksissa."
+        "fi": "Auki 24/7; keskiyön ja klo 8 välillä vain päivystystapaukset. Päivystysnumero virka-ajan ulkopuolella: +974 3340 9300. Perjantairukouksen aikaan klo 11–13 suljettu, paitsi ehdottomissa hätätapauksissa.",
+        "nb": "Åpent hele døgnet; mellom midnatt og kl. 8 kun nødtilfeller. Akuttnummer utenom åpningstid: +974 3340 9300. Stengt under fredagsbønnen kl. 11–13, unntatt absolutte nødtilfeller."
       }
     },
     {
@@ -86,7 +87,8 @@
         "cs": "Pohotovostní péče nonstop, 7 dní v týdnu. Běžná ordinační doba so–čt 8:00–22:00, pá 14:00–21:00. Pohotovostní číslo mimo ordinační dobu: +974 5584 1224.",
         "sv": "Akutvård dygnet runt, alla dagar. Ordinarie öppettider lör–tors 8–22, fre 14–21. Akutnummer utanför öppettiderna: +974 5584 1224.",
         "da": "Akut hjælp 24 timer i døgnet, 7 dage om ugen. Normal åbningstid lør–tor kl. 8–22, fre kl. 14–21. Akutnummer uden for åbningstid: +974 5584 1224.",
-        "fi": "Päivystys 24 tuntia vuorokaudessa, 7 päivää viikossa. Tavalliset aukioloajat la–to 8–22, pe 14–21. Päivystysnumero virka-ajan ulkopuolella: +974 5584 1224."
+        "fi": "Päivystys 24 tuntia vuorokaudessa, 7 päivää viikossa. Tavalliset aukioloajat la–to 8–22, pe 14–21. Päivystysnumero virka-ajan ulkopuolella: +974 5584 1224.",
+        "nb": "Akuttbehandling hele døgnet, sju dager i uken. Ordinær åpningstid lør–tors 8–22, fre 14–21. Akuttnummer utenom åpningstid: +974 5584 1224."
       }
     },
     {
@@ -111,7 +113,8 @@
         "cs": "So–Čt 8:00–20:00. V pátek a mimo ordinační dobu pouze pohotovost, volejte +974 6667 5235. Pobočka Duhail: +974 4498 9620.",
         "sv": "Lör–tors 8–20. På fredagar och utanför öppettiderna endast akutfall, ring +974 6667 5235. Filial i Duhail: +974 4498 9620.",
         "da": "Lør–tor kl. 8–20. Fredag og uden for åbningstid kun akutte tilfælde, ring til +974 6667 5235. Duhail-afdelingen: +974 4498 9620.",
-        "fi": "la–to 8–20. Perjantaisin ja virka-ajan ulkopuolella vain päivystystapaukset, soita +974 6667 5235. Duhailin toimipiste: +974 4498 9620."
+        "fi": "la–to 8–20. Perjantaisin ja virka-ajan ulkopuolella vain päivystystapaukset, soita +974 6667 5235. Duhailin toimipiste: +974 4498 9620.",
+        "nb": "Lør–tor kl. 8–20. Fredag og utenom åpningstid kun nødtilfeller, ring +974 6667 5235. Filialen i Duhail: +974 4498 9620."
       }
     },
     {
@@ -135,7 +138,8 @@
         "cs": "So–Čt 10:00–23:00; pá 14:00–23:00.",
         "sv": "Lör–tors 10–23; fre 14–23.",
         "da": "Lør–tor kl. 10–23; fre kl. 14–23.",
-        "fi": "la–to 10–23; pe 14–23."
+        "fi": "la–to 10–23; pe 14–23.",
+        "nb": "Lør–tor kl. 10–23; fre kl. 14–23."
       }
     }
   ],

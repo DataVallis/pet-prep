@@ -261,7 +261,8 @@
         "cs": "Nonstop pohotovostní linka +34 648 814 864 (pouze pohotovost); objednání +34 913 943 755, 9:30–14:00.",
         "sv": "Jourlinje dygnet runt +34 648 814 864 (endast akutfall); tidsbokning +34 913 943 755, 9.30–14.00.",
         "da": "Akutlinje døgnet rundt +34 648 814 864 (kun akutte tilfælde); tidsbestilling +34 913 943 755, 9.30–14.00.",
-        "fi": "Ympärivuorokautinen päivystysnumero +34 648 814 864 (vain päivystystapauksiin); ajanvaraus +34 913 943 755, klo 9.30–14.00."
+        "fi": "Ympärivuorokautinen päivystysnumero +34 648 814 864 (vain päivystystapauksiin); ajanvaraus +34 913 943 755, klo 9.30–14.00.",
+        "nb": "Akuttelefon hele døgnet +34 648 814 864 (kun nødtilfeller); timebestilling +34 913 943 755, kl. 09.30–14.00."
       },
       "small_animals": true,
       "url": "https://ucm.es/hcv/contacto-y-peticion-de-cita",
@@ -466,7 +467,8 @@
         "cs": "Psi, kočky, exotická zvířata: Po–Pá 9:00–20:00 +34 935 811 894; v noci (20:00–9:00) a o víkendech +34 660 681 894. Koně +34 649 191 206.",
         "sv": "Hundar, katter, exotiska djur: mån–fre 9.00–20.00 +34 935 811 894; nätter (20.00–9.00) och helger +34 660 681 894. Hästar +34 649 191 206.",
         "da": "Hunde, katte, eksotiske dyr: man–fre 9.00–20.00 +34 935 811 894; nætter (20.00–9.00) og weekender +34 660 681 894. Heste +34 649 191 206.",
-        "fi": "Koirat, kissat, eksoottiset eläimet: ma–pe klo 9.00–20.00 +34 935 811 894; yöt (klo 20.00–9.00) ja viikonloput +34 660 681 894. Hevoset +34 649 191 206."
+        "fi": "Koirat, kissat, eksoottiset eläimet: ma–pe klo 9.00–20.00 +34 935 811 894; yöt (klo 20.00–9.00) ja viikonloput +34 660 681 894. Hevoset +34 649 191 206.",
+        "nb": "Hunder, katter, eksotiske dyr: man–fre 9.00–20.00 +34 935 811 894; netter (20.00–9.00) og helger +34 660 681 894. Hester +34 649 191 206."
       },
       "small_animals": true,
       "url": "https://www.uab.cat/web/servicios-clinicos/urgencias-1345893640793.html",
@@ -597,7 +599,8 @@
         "cs": "Pohotovostní telefon +34 629 356 404.",
         "sv": "Akuttelefon +34 629 356 404.",
         "da": "Akuttelefon +34 629 356 404.",
-        "fi": "Päivystyspuhelin +34 629 356 404."
+        "fi": "Päivystyspuhelin +34 629 356 404.",
+        "nb": "Akuttelefon +34 629 356 404."
       },
       "small_animals": true,
       "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/3",
@@ -641,7 +644,8 @@
         "cs": "Nonstop telefonická pohotovostní podpora; druhé číslo +34 607 704 351.",
         "sv": "Akuttelefon dygnet runt; andra numret +34 607 704 351.",
         "da": "Akuttelefon døgnet rundt; ekstra nummer +34 607 704 351.",
-        "fi": "24/7 päivystyspuhelintuki; toinen numero +34 607 704 351."
+        "fi": "24/7 päivystyspuhelintuki; toinen numero +34 607 704 351.",
+        "nb": "Akuttelefon hele døgnet; annet nummer +34 607 704 351."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/diagnostic/",
@@ -672,7 +676,8 @@
         "cs": "Nonstop pohotovostní telefon +34 689 526 816.",
         "sv": "Akuttelefon dygnet runt +34 689 526 816.",
         "da": "Akuttelefon døgnet rundt +34 689 526 816.",
-        "fi": "Päivystyspuhelin 24 h +34 689 526 816."
+        "fi": "Päivystyspuhelin 24 h +34 689 526 816.",
+        "nb": "Akuttelefon hele døgnet +34 689 526 816."
       },
       "small_animals": true,
       "url": "https://centreveterinarisalou.com/es/",
@@ -703,7 +708,8 @@
         "cs": "Pohotovost pro malá zvířata +34 637 380 620; koně +34 607 888 416.",
         "sv": "Akutfall smådjur +34 637 380 620; hästar +34 607 888 416.",
         "da": "Akutte tilfælde hos små dyr +34 637 380 620; heste +34 607 888 416.",
-        "fi": "Pieneläinten päivystys +34 637 380 620; hevosille +34 607 888 416."
+        "fi": "Pieneläinten päivystys +34 637 380 620; hevosille +34 607 888 416.",
+        "nb": "Akutt for små dyr +34 637 380 620; hester +34 607 888 416."
       },
       "small_animals": true,
       "url": "https://hospitalveterinario.uchceu.es/",
@@ -884,7 +890,8 @@
         "cs": "Pohotovostní služba na Carretera Denia-Ondara km. 1, Denia; klinika na Partida Madrigueres Nord 17.",
         "sv": "Akutmottagning på Carretera Denia-Ondara km. 1, Denia; kliniken på Partida Madrigueres Nord 17.",
         "da": "Akutvagt på Carretera Denia-Ondara km. 1, Denia; klinik på Partida Madrigueres Nord 17.",
-        "fi": "Päivystys osoitteessa Carretera Denia-Ondara km. 1, Denia; klinikka osoitteessa Partida Madrigueres Nord 17."
+        "fi": "Päivystys osoitteessa Carretera Denia-Ondara km. 1, Denia; klinikka osoitteessa Partida Madrigueres Nord 17.",
+        "nb": "Akuttjeneste ved Carretera Denia-Ondara km. 1, Denia; klinikk ved Partida Madrigueres Nord 17."
       }
     },
     {
@@ -923,7 +930,8 @@
         "cs": "Pohotovostní telefon +34 699 017 914.",
         "sv": "Akuttelefon +34 699 017 914.",
         "da": "Akuttelefon +34 699 017 914.",
-        "fi": "Päivystyspuhelin +34 699 017 914."
+        "fi": "Päivystyspuhelin +34 699 017 914.",
+        "nb": "Akuttelefon +34 699 017 914."
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinariocostaazahar.com/",
@@ -998,7 +1006,8 @@
         "cs": "Nonstop pohotovostní telefon +34 607 296 977 (sdílený s Hospital Canis).",
         "sv": "Akuttelefon dygnet runt +34 607 296 977 (delas med Hospital Canis).",
         "da": "Akuttelefon døgnet rundt +34 607 296 977 (delt med Hospital Canis).",
-        "fi": "Ympärivuorokautinen päivystysnumero +34 607 296 977 (yhteinen Hospital Canisin kanssa)."
+        "fi": "Ympärivuorokautinen päivystysnumero +34 607 296 977 (yhteinen Hospital Canisin kanssa).",
+        "nb": "Akuttelefon hele døgnet +34 607 296 977 (delt med Hospital Canis)."
       },
       "small_animals": true,
       "url": "https://www.clinicacasmenescal.es/",
@@ -1073,7 +1082,8 @@
         "cs": "Nonstop pohotovostní telefon +34 608 534 110; klinika Po–Pá 9:00–19:30, so 10:00–12:00 (na objednání).",
         "sv": "Akuttelefon dygnet runt +34 608 534 110; kliniken mån–fre 9.00–19.30, lör 10.00–12.00 (efter bokning).",
         "da": "Akuttelefon døgnet rundt +34 608 534 110; klinik man–fre 9.00–19.30, lør 10.00–12.00 (efter aftale).",
-        "fi": "Ympärivuorokautinen päivystysnumero +34 608 534 110; klinikka ma–pe klo 9.00–19.30, la klo 10.00–12.00 (ajanvarauksella)."
+        "fi": "Ympärivuorokautinen päivystysnumero +34 608 534 110; klinikka ma–pe klo 9.00–19.30, la klo 10.00–12.00 (ajanvarauksella).",
+        "nb": "Akuttelefon hele døgnet +34 608 534 110; klinikken er åpen man–fre kl. 09.00–19.30, lør kl. 10.00–12.00 (etter avtale)."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariarafaelcoll.es/",
@@ -1104,7 +1114,8 @@
         "cs": "Pohotovostní telefon +34 613 547 693.",
         "sv": "Akuttelefon +34 613 547 693.",
         "da": "Akuttelefon +34 613 547 693.",
-        "fi": "Päivystyspuhelin +34 613 547 693."
+        "fi": "Päivystyspuhelin +34 613 547 693.",
+        "nb": "Akuttelefon +34 613 547 693."
       },
       "small_animals": true,
       "url": "https://salutanimal.es/es",
@@ -1134,7 +1145,8 @@
         "cs": "Pohotovost pro malá zvířata +34 659 930 301; velká zvířata +34 683 305 499; recepce +34 976 761 633 (Po–Pá 8:30–20:30 v době semestru).",
         "sv": "Akutfall smådjur +34 659 930 301; stora djur +34 683 305 499; reception +34 976 761 633 (mån–fre 8.30–20.30 under terminerna).",
         "da": "Akutte tilfælde hos små dyr +34 659 930 301; store dyr +34 683 305 499; reception +34 976 761 633 (man–fre 8.30–20.30 i semestret).",
-        "fi": "Pieneläinten päivystys +34 659 930 301; suurten eläinten päivystys +34 683 305 499; vastaanotto +34 976 761 633 (ma–pe 8.30–20.30 lukukauden aikana)."
+        "fi": "Pieneläinten päivystys +34 659 930 301; suurten eläinten päivystys +34 683 305 499; vastaanotto +34 976 761 633 (ma–pe 8.30–20.30 lukukauden aikana).",
+        "nb": "Akutt for små dyr +34 659 930 301; store dyr +34 683 305 499; resepsjon +34 976 761 633 (man–fre kl. 8.30–20.30 i semestertiden)."
       },
       "small_animals": true,
       "url": "https://hospitalveterinario.unizar.es/",
@@ -1194,7 +1206,8 @@
         "cs": "Nonstop pohotovostní telefon +34 670 021 355.",
         "sv": "Akuttelefon dygnet runt +34 670 021 355.",
         "da": "Akuttelefon døgnet rundt +34 670 021 355.",
-        "fi": "Ympärivuorokautinen päivystysnumero +34 670 021 355."
+        "fi": "Ympärivuorokautinen päivystysnumero +34 670 021 355.",
+        "nb": "Akuttelefon hele døgnet +34 670 021 355."
       },
       "small_animals": true,
       "url": "https://www.veterinariacondearanda.es/",
@@ -1267,7 +1280,8 @@
         "cs": "Pohotovostní linka +34 688 699 987.",
         "sv": "Jourlinje +34 688 699 987.",
         "da": "Akutlinje +34 688 699 987.",
-        "fi": "Päivystysnumero +34 688 699 987."
+        "fi": "Päivystysnumero +34 688 699 987.",
+        "nb": "Akuttelefon +34 688 699 987."
       },
       "small_animals": true,
       "url": "https://hospitaltucan.com",
@@ -1312,7 +1326,8 @@
         "cs": "Pohotovost denně 9:00–21:00, telefon +34 626 614 106.",
         "sv": "Akutfall dagligen 9–21, telefon +34 626 614 106.",
         "da": "Akut dagligt 9–21, telefon +34 626 614 106.",
-        "fi": "Päivystys päivittäin klo 9–21, puhelin +34 626 614 106."
+        "fi": "Päivystys päivittäin klo 9–21, puhelin +34 626 614 106.",
+        "nb": "Nødtilfeller daglig 9–21, telefon +34 626 614 106."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/san-fermin-hospital-veterinario/",
@@ -1357,7 +1372,8 @@
         "cs": "Nonstop pohotovostní telefon +34 636 203 574, pouze telefonicky.",
         "sv": "Akuttelefon dygnet runt +34 636 203 574 – endast telefon.",
         "da": "Akuttelefon døgnet rundt +34 636 203 574 – kun pr. telefon.",
-        "fi": "Ympärivuorokautinen päivystysnumero +34 636 203 574 – vain puhelimitse."
+        "fi": "Ympärivuorokautinen päivystysnumero +34 636 203 574 – vain puhelimitse.",
+        "nb": "Akuttelefon hele døgnet +34 636 203 574 – kun telefon."
       },
       "small_animals": true,
       "url": "https://clinicaveterinariaalegria.es/",
@@ -1401,7 +1417,8 @@
         "cs": "Ordinace Po–Pá 9:00–15:00 (na objednání); pohotovost nonstop každý den. Objednání a pohotovost: +34 987 293 063 / +34 630 502 382.",
         "sv": "Mottagning mån–fre 9–15 (efter bokning); akutfall dygnet runt alla dagar. Tidsbokning och akutfall: +34 987 293 063 / +34 630 502 382.",
         "da": "Konsultation man–fre 9–15 (efter aftale); akut døgnet rundt hver dag. Tidsbestilling og akut: +34 987 293 063 / +34 630 502 382.",
-        "fi": "Vastaanotto ma–pe klo 9–15 (ajanvarauksella); päivystys 24 h joka päivä. Ajanvaraus ja päivystys: +34 987 293 063 / +34 630 502 382."
+        "fi": "Vastaanotto ma–pe klo 9–15 (ajanvarauksella); päivystys 24 h joka päivä. Ajanvaraus ja päivystys: +34 987 293 063 / +34 630 502 382.",
+        "nb": "Konsultasjoner man–fre kl. 9–15 (etter timebestilling); nødtilfeller hele døgnet, alle dager. Timebestilling og nødtilfeller: +34 987 293 063 / +34 630 502 382."
       },
       "small_animals": true,
       "url": "https://servicios.unileon.es/hospital-veterinario/",
@@ -1432,7 +1449,8 @@
         "cs": "Pohotovost a hospitalizace nonstop, 365 dní v roce. Telefony +34 868 887 502 / +34 609 625 853.",
         "sv": "Akutfall och inläggning dygnet runt, 365 dagar. Telefon +34 868 887 502 / +34 609 625 853.",
         "da": "Akut og indlæggelse døgnet rundt, 365 dage. Telefon +34 868 887 502 / +34 609 625 853.",
-        "fi": "Päivystys ja vuodeosastohoito 24 h, 365 päivää. Puhelimet +34 868 887 502 / +34 609 625 853."
+        "fi": "Päivystys ja vuodeosastohoito 24 h, 365 päivää. Puhelimet +34 868 887 502 / +34 609 625 853.",
+        "nb": "Nødtilfeller og innleggelse hele døgnet, 365 dager. Telefon +34 868 887 502 / +34 609 625 853."
       },
       "small_animals": true,
       "url": "https://www.um.es/web/hcv/",
@@ -1463,7 +1481,8 @@
         "cs": "Otevřeno nonstop každý den; na pohotovost lze přijít přímo.",
         "sv": "Öppet dygnet runt alla dagar; vid akutfall kan du komma direkt utan tidsbokning.",
         "da": "Åben døgnet rundt hver dag; akutte tilfælde kan møde direkte op.",
-        "fi": "Auki 24 h joka päivä; päivystystapaukset voivat tulla suoraan paikalle."
+        "fi": "Auki 24 h joka päivä; päivystystapaukset voivat tulla suoraan paikalle.",
+        "nb": "Åpent hele døgnet alle dager; nødtilfeller kan komme direkte uten time."
       },
       "small_animals": true,
       "url": "https://hcv.ulpgc.es/",
@@ -1494,7 +1513,8 @@
         "cs": "Pohotovost pro malá zvířata +34 661 317 588 (velká zvířata +34 661 316 698), nonstop po celý rok. Ústředna/objednání +34 927 257 102, Po–Pá 8:30–18:00.",
         "sv": "Akutfall smådjur +34 661 317 588 (stora djur +34 661 316 698), dygnet runt hela året. Växel/tidsbokning +34 927 257 102, mån–fre 8.30–18.00.",
         "da": "Akutte tilfælde hos små dyr +34 661 317 588 (store dyr +34 661 316 698), døgnet rundt hele året. Omstilling/tidsbestilling +34 927 257 102, man–fre 8.30–18.00.",
-        "fi": "Pieneläinten päivystys +34 661 317 588 (suurten eläinten päivystys +34 661 316 698), ympäri vuorokauden ympäri vuoden. Vaihde ja ajanvaraus +34 927 257 102, ma–pe 8.30–18.00."
+        "fi": "Pieneläinten päivystys +34 661 317 588 (suurten eläinten päivystys +34 661 316 698), ympäri vuorokauden ympäri vuoden. Vaihde ja ajanvaraus +34 927 257 102, ma–pe 8.30–18.00.",
+        "nb": "Akutt for små dyr +34 661 317 588 (store dyr +34 661 316 698), hele døgnet, hele året. Sentralbord/timebestilling +34 927 257 102, man–fre kl. 8.30–18.00."
       },
       "small_animals": true,
       "url": "https://www.uexfundacion.es/actividad/hcv/",
@@ -1539,7 +1559,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar.",
         "da": "Åben døgnet rundt, 7 dage.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, alle dager."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/animal24/about-us/",
@@ -1569,7 +1590,8 @@
         "cs": "Pohotovost +34 608 953 937; klinika +34 952 595 354.",
         "sv": "Akutfall +34 608 953 937; klinik +34 952 595 354.",
         "da": "Akut +34 608 953 937; klinik +34 952 595 354.",
-        "fi": "Päivystys +34 608 953 937; klinikka +34 952 595 354."
+        "fi": "Päivystys +34 608 953 937; klinikka +34 952 595 354.",
+        "nb": "Nødtilfeller +34 608 953 937; klinikk +34 952 595 354."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/alhaurin-el-grande-hospital-veterinario/",
@@ -1599,7 +1621,8 @@
         "cs": "Pohotovost bez objednání hlavním vchodem z C/ Spengler.",
         "sv": "Akutfall utan tidsbokning via huvudentrén på C/ Spengler.",
         "da": "Akutte tilfælde uden tidsbestilling via hovedindgangen på C/ Spengler.",
-        "fi": "Päivystys ilman ajanvarausta pääovelta C/ Spengler -kadun puolelta."
+        "fi": "Päivystys ilman ajanvarausta pääovelta C/ Spengler -kadun puolelta.",
+        "nb": "Nødtilfeller uten timebestilling via hovedinngangen i C/ Spengler."
       },
       "small_animals": true,
       "url": "https://hospitalveterinariomalaga.es/",
@@ -1672,7 +1695,8 @@
         "cs": "Pohotovost +34 613 131 373; informace +34 951 690 724.",
         "sv": "Akutfall +34 613 131 373; allmänt nummer +34 951 690 724.",
         "da": "Akut +34 613 131 373; generelt +34 951 690 724.",
-        "fi": "Päivystys +34 613 131 373; yleisnumero +34 951 690 724."
+        "fi": "Päivystys +34 613 131 373; yleisnumero +34 951 690 724.",
+        "nb": "Nødtilfeller +34 613 131 373; sentralbord +34 951 690 724."
       },
       "small_animals": true,
       "url": "https://vetmamut.es/",
@@ -1717,7 +1741,8 @@
         "cs": "Ordinace Po–Pá 8:00–21:00, so 9:00–13:00. Pohotovost +34 650 176 854: so 17:00–20:00; ne a o svátcích 10:00–13:00 a 17:00–20:00. Noční služba není; volajícím doporučí pohotovostní nemocnici ve službě.",
         "sv": "Mottagning mån–fre 8–21, lör 9–13. Akutfall +34 650 176 854: lör 17–20; sön/helgdagar 10–13 och 17–20. Ingen nattjänst (de som ringer hänvisas till ett jourhavande djursjukhus).",
         "da": "Konsultation man–fre 8–21, lør 9–13. Akut +34 650 176 854: lør 17–20; søn/helligdage 10–13 og 17–20. Ingen natvagt (opkaldere henvises til et vagthavende hospital).",
-        "fi": "Vastaanotto ma–pe klo 8–21, la klo 9–13. Päivystys +34 650 176 854: la klo 17–20; su/pyhäpäivinä klo 10–13 ja 17–20. Ei yöpäivystystä (soittajat ohjataan päivystävään sairaalaan)."
+        "fi": "Vastaanotto ma–pe klo 8–21, la klo 9–13. Päivystys +34 650 176 854: la klo 17–20; su/pyhäpäivinä klo 10–13 ja 17–20. Ei yöpäivystystä (soittajat ohjataan päivystävään sairaalaan).",
+        "nb": "Konsultasjoner man–fre kl. 8–21, lør kl. 9–13. Nødtilfeller +34 650 176 854: lør kl. 17–20; søn/helligdager kl. 10–13 og 17–20. Ingen nattjeneste (oppringere henvises til et sykehus på vakt)."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariavetsur.com/",
@@ -1747,7 +1772,8 @@
         "cs": "Po–Pá 10:00–20:00, so 10:00–13:30. Nonstop linka +34 608 953 106, pouze pro vlastní pacienty kliniky.",
         "sv": "mån–fre 10–20, lör 10–13.30. Telefonlinje dygnet runt +34 608 953 106, endast för klinikens egna patienter.",
         "da": "man–fre 10–20, lør 10–13.30. Døgnlinje +34 608 953 106, kun for klinikkens egne patienter.",
-        "fi": "ma–pe klo 10–20, la klo 10–13.30. Ympärivuorokautinen numero +34 608 953 106, vain klinikan omille potilaille."
+        "fi": "ma–pe klo 10–20, la klo 10–13.30. Ympärivuorokautinen numero +34 608 953 106, vain klinikan omille potilaille.",
+        "nb": "man–fre 10–20, lør 10–13.30. Døgnlinje +34 608 953 106, kun for klinikkens egne pasienter."
       },
       "small_animals": true,
       "url": "https://www.doctorgorriti.com/",
@@ -1778,7 +1804,8 @@
         "cs": "Pohotovost +34 616 403 350, nonstop 365 dní v roce (telefonicky; péče na klinikách nebo doma podle dostupnosti). Centro Veterinario 365: +34 634 467 333, Po–Pá 9:30–20:00, so, ne a o svátcích 10:00–18:00.",
         "sv": "Akutfall +34 616 403 350, dygnet runt, 365 dagar om året (telefon; vård på klinikerna eller hemma beroende på tillgång). Centro Veterinario 365: +34 634 467 333, mån–fre 9.30–20.00, lör/sön/helgdagar 10.00–18.00.",
         "da": "Akut +34 616 403 350, 365 dage × 24 timer (telefon; behandling på klinikkerne eller hjemme afhængigt af tilgængelighed). Centro Veterinario 365: +34 634 467 333, man–fre 9.30–20.00, lør/søn/helligdage 10.00–18.00.",
-        "fi": "Päivystys +34 616 403 350, 365 päivää, 24 h (puhelimitse; hoito klinikoilla tai kotona saatavuuden mukaan). Centro Veterinario 365: +34 634 467 333, ma–pe klo 9.30–20.00, la/su/pyhäpäivinä klo 10.00–18.00."
+        "fi": "Päivystys +34 616 403 350, 365 päivää, 24 h (puhelimitse; hoito klinikoilla tai kotona saatavuuden mukaan). Centro Veterinario 365: +34 634 467 333, ma–pe klo 9.30–20.00, la/su/pyhäpäivinä klo 10.00–18.00.",
+        "nb": "Nødtilfeller +34 616 403 350, hele døgnet, 365 dager (telefon; behandling på klinikkene eller hjemme avhengig av tilgjengelighet). Centro Veterinario 365: +34 634 467 333, man–fre 9.30–20.00, lør/søn/helligdager 10.00–18.00."
       },
       "small_animals": true,
       "url": "https://centroveterinariovelez.com/",
@@ -1809,7 +1836,8 @@
         "cs": "Pohotovostní telefon +34 656 825 319.",
         "sv": "Akuttelefon +34 656 825 319.",
         "da": "Akuttelefon +34 656 825 319.",
-        "fi": "Päivystyspuhelin +34 656 825 319."
+        "fi": "Päivystyspuhelin +34 656 825 319.",
+        "nb": "Akuttelefon +34 656 825 319."
       },
       "small_animals": true,
       "url": "https://almijaravet.com/",
@@ -1868,7 +1896,8 @@
         "cs": "Společný pohotovostní telefon: +34 650 822 777.",
         "sv": "Gemensam akuttelefon: +34 650 822 777.",
         "da": "Fælles akuttelefon: +34 650 822 777.",
-        "fi": "Ryhmän päivystyspuhelin: +34 650 822 777."
+        "fi": "Ryhmän päivystyspuhelin: +34 650 822 777.",
+        "nb": "Gruppens akuttelefon: +34 650 822 777."
       },
       "small_animals": true,
       "url": "https://somosvet.com/",
@@ -1899,7 +1928,8 @@
         "cs": "Pohotovost +34 679 100 130 (včetně víkendů a svátků); klinika +34 958 977 185, Po–Pá 9:00–21:00, so 10:00–13:30.",
         "sv": "Akutfall +34 679 100 130 (även helger och helgdagar); klinik +34 958 977 185, mån–fre 9–21, lör 10–13.30.",
         "da": "Akut +34 679 100 130 (inkl. weekender og helligdage); klinik +34 958 977 185, man–fre 9–21, lør 10–13.30.",
-        "fi": "Päivystys +34 679 100 130 (myös viikonloppuisin ja pyhäpäivinä); klinikka +34 958 977 185, ma–pe klo 9–21, la klo 10–13.30."
+        "fi": "Päivystys +34 679 100 130 (myös viikonloppuisin ja pyhäpäivinä); klinikka +34 958 977 185, ma–pe klo 9–21, la klo 10–13.30.",
+        "nb": "Nødtilfeller +34 679 100 130 (også i helger og på helligdager); klinikk +34 958 977 185, man–fre 9–21, lør 10–13.30."
       },
       "small_animals": true,
       "url": "https://ispevet.es/",
@@ -1957,7 +1987,8 @@
         "cs": "Osobní pohotovost a hospitalizace nonstop; také pohotovostní telefon +34 662 305 968. Objednání Po–Pá 9:00–21:00, so 9:00–14:00.",
         "sv": "Akutfall på plats och inläggning dygnet runt; även akuttelefon +34 662 305 968. Tidsbokning mån–fre 9–21, lör 9–14.",
         "da": "Akutte tilfælde på stedet og indlæggelse døgnet rundt; også akuttelefon +34 662 305 968. Tidsbestilling man–fre 9–21, lør 9–14.",
-        "fi": "Päivystys ja vuodeosastohoito paikan päällä 24 h; myös päivystyspuhelin +34 662 305 968. Ajanvaraus ma–pe klo 9–21, la klo 9–14."
+        "fi": "Päivystys ja vuodeosastohoito paikan päällä 24 h; myös päivystyspuhelin +34 662 305 968. Ajanvaraus ma–pe klo 9–21, la klo 9–14.",
+        "nb": "Akutthjelp på stedet og innleggelse hele døgnet; også akuttelefon +34 662 305 968. Timeavtaler man–fre 9–21, lør 9–14."
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -2002,7 +2033,8 @@
         "cs": "Pohotovost +34 634 997 806 (nonstop, 365 dní v roce); objednání +34 959 730 929, recepce 9:00–21:00.",
         "sv": "Akutfall +34 634 997 806 (dygnet runt, 365 dagar); tidsbokning +34 959 730 929, reception 9–21.",
         "da": "Akut +34 634 997 806 (døgnet rundt/365 dage); tidsbestilling +34 959 730 929, reception 9–21.",
-        "fi": "Päivystys +34 634 997 806 (24 h / 365 päivää); ajanvaraus +34 959 730 929, vastaanotto klo 9–21."
+        "fi": "Päivystys +34 634 997 806 (24 h / 365 päivää); ajanvaraus +34 959 730 929, vastaanotto klo 9–21.",
+        "nb": "Nødtilfeller +34 634 997 806 (hele døgnet, 365 dager); timebestilling +34 959 730 929, resepsjon 9–21."
       },
       "small_animals": true,
       "url": "https://animalvetxelsaladillo.com/",
@@ -2089,7 +2121,8 @@
         "cs": "Ordinace Po–Pá 9:30–14:30 a 15:30–20:30, so 9:30–13:00; pohotovost nonstop.",
         "sv": "Mottagning mån–fre 9.30–14.30 och 15.30–20.30, lör 9.30–13.00; akutfall dygnet runt.",
         "da": "Konsultation man–fre 9.30–14.30 og 15.30–20.30, lør 9.30–13.00; akut døgnet rundt.",
-        "fi": "Vastaanotto ma–pe klo 9.30–14.30 ja 15.30–20.30, la klo 9.30–13.00; päivystys 24 h."
+        "fi": "Vastaanotto ma–pe klo 9.30–14.30 ja 15.30–20.30, la klo 9.30–13.00; päivystys 24 h.",
+        "nb": "Konsultasjoner man–fre kl. 9.30–14.30 og 15.30–20.30, lør kl. 9.30–13.00; nødtilfeller hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/es-es/veterinario-urgencia-24-horas/24-horas-benartemi/",
@@ -2120,7 +2153,8 @@
         "cs": "Noční a sváteční pohotovostní linka: 20:00–8:00; so 15:00–24:00; o svátcích nonstop.",
         "sv": "Akutlinje nätter/helgdagar: 20–8; lör 15–24; helgdagar dygnet runt.",
         "da": "Akutlinje nat/helligdage: 20–8; lør 15–24; helligdage døgnet rundt.",
-        "fi": "Yö- ja pyhäpäivystysnumero: klo 20–8; la klo 15–24; pyhäpäivinä 24 h."
+        "fi": "Yö- ja pyhäpäivystysnumero: klo 20–8; la klo 15–24; pyhäpäivinä 24 h.",
+        "nb": "Akuttelefon natt/helligdager: 20–8; lør 15–24; helligdager hele døgnet."
       },
       "small_animals": true,
       "source_url": "https://www.loscharcosvet.com/urgencias",
@@ -2149,7 +2183,8 @@
         "cs": "Pohotovostní telefon +34 607 687 299.",
         "sv": "Akuttelefon +34 607 687 299.",
         "da": "Akuttelefon +34 607 687 299.",
-        "fi": "Päivystyspuhelin +34 607 687 299."
+        "fi": "Päivystyspuhelin +34 607 687 299.",
+        "nb": "Akuttelefon +34 607 687 299."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariajameos.es/",
@@ -2179,7 +2214,8 @@
         "cs": "Po–Pá 10:00–13:30 a 17:00–20:30, so 10:00–13:30. Pohotovostní telefon +34 608 642 016.",
         "sv": "mån–fre 10.00–13.30 och 17.00–20.30, lör 10.00–13.30. Akuttelefon +34 608 642 016.",
         "da": "man–fre 10.00–13.30 og 17.00–20.30, lør 10.00–13.30. Akuttelefon +34 608 642 016.",
-        "fi": "ma–pe klo 10.00–13.30 ja 17.00–20.30, la klo 10.00–13.30. Päivystyspuhelin +34 608 642 016."
+        "fi": "ma–pe klo 10.00–13.30 ja 17.00–20.30, la klo 10.00–13.30. Päivystyspuhelin +34 608 642 016.",
+        "nb": "man–fre 10.00–13.30 og 17.00–20.30, lør 10.00–13.30. Nødtelefon +34 608 642 016."
       },
       "small_animals": true,
       "source_url": "https://www.corralejo.info/en/activity/clinica-veterinaria-fuerteventura/",
@@ -2237,7 +2273,8 @@
         "cs": "Po–Pá 9:30–13:30 a odpoledne 16:30–19:30 (v létě) / 16:00–19:00 (v zimě). Pohotovostní telefon +34 647 100 061, ne osobně, do 23:00.",
         "sv": "mån–fre 9.30–13.30 och eftermiddagar 16.30–19.30 (sommar) / 16.00–19.00 (vinter). Akuttelefon +34 647 100 061, inte på plats, till 23.00.",
         "da": "man–fre 9.30–13.30 og eftermiddage 16.30–19.30 (sommer) / 16.00–19.00 (vinter). Akuttelefon +34 647 100 061, ikke personligt fremmøde, til 23.00.",
-        "fi": "ma–pe klo 9.30–13.30 ja iltapäivisin klo 16.30–19.30 (kesä) / 16.00–19.00 (talvi). Päivystyspuhelin +34 647 100 061, ei paikan päällä, klo 23 asti."
+        "fi": "ma–pe klo 9.30–13.30 ja iltapäivisin klo 16.30–19.30 (kesä) / 16.00–19.00 (talvi). Päivystyspuhelin +34 647 100 061, ei paikan päällä, klo 23 asti.",
+        "nb": "man–fre 9.30–13.30 og ettermiddager 16.30–19.30 (sommer) / 16.00–19.00 (vinter). Nødtelefon +34 647 100 061, ikke oppmøte, til kl. 23.00."
       },
       "small_animals": true,
       "url": "https://www.veterinarianatura.com/",
@@ -2267,7 +2304,8 @@
         "cs": "Ordinace Po–Pá 10:30–20:00, so 10:30–14:00; pohotovost nonstop.",
         "sv": "Mottagning mån–fre 10.30–20.00, lör 10.30–14.00; akutfall dygnet runt.",
         "da": "Konsultation man–fre 10.30–20.00, lør 10.30–14.00; akut døgnet rundt.",
-        "fi": "Vastaanotto ma–pe klo 10.30–20.00, la klo 10.30–14.00; päivystys 24 h."
+        "fi": "Vastaanotto ma–pe klo 10.30–20.00, la klo 10.30–14.00; päivystys 24 h.",
+        "nb": "Konsultasjoner man–fre kl. 10.30–20.00, lør kl. 10.30–14.00; nødtilfeller hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinarioabeiro.com/",
@@ -2327,7 +2365,8 @@
         "cs": "Klinika 9:30–21:30; pohotovost nonstop.",
         "sv": "Klinik 9.30–21.30; akutfall dygnet runt.",
         "da": "Klinik 9.30–21.30; akut døgnet rundt.",
-        "fi": "Klinikka klo 9.30–21.30; päivystys 24 h."
+        "fi": "Klinikka klo 9.30–21.30; päivystys 24 h.",
+        "nb": "Klinikk kl. 9.30–21.30; nødtilfeller hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/anicura-navia-clinica-veterinaria/",
@@ -2357,7 +2396,8 @@
         "cs": "Pohotovost nonstop +34 667 416 750; zákaznický servis Po–Pá 9:30–20:30, so 9:30–13:30.",
         "sv": "Akutfall dygnet runt +34 667 416 750; kundtjänst mån–fre 9.30–20.30, lör 9.30–13.30.",
         "da": "Akut døgnet rundt +34 667 416 750; kundeservice man–fre 9.30–20.30, lør 9.30–13.30.",
-        "fi": "Päivystys 24 h +34 667 416 750; asiakaspalvelu ma–pe klo 9.30–20.30, la klo 9.30–13.30."
+        "fi": "Päivystys 24 h +34 667 416 750; asiakaspalvelu ma–pe klo 9.30–20.30, la klo 9.30–13.30.",
+        "nb": "Nødtilfeller hele døgnet +34 667 416 750; kundeservice man–fre 9.30–20.30, lør 9.30–13.30."
       },
       "small_animals": true,
       "url": "https://guvetveterinaria.es/",
@@ -2403,7 +2443,8 @@
         "cs": "Nonstop pohotovostní služba: +34 608 472 984 (také +34 985 131 545).",
         "sv": "Akutjour dygnet runt: +34 608 472 984 (även +34 985 131 545).",
         "da": "Akutvagt døgnet rundt: +34 608 472 984 (også +34 985 131 545).",
-        "fi": "Päivystys 24 h: +34 608 472 984 (myös +34 985 131 545)."
+        "fi": "Päivystys 24 h: +34 608 472 984 (myös +34 985 131 545).",
+        "nb": "Akuttjeneste hele døgnet: +34 608 472 984 (også +34 985 131 545)."
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinarioasturias.com/",
@@ -2433,7 +2474,8 @@
         "cs": "Klinika 9:00–21:00; pohotovost nonstop.",
         "sv": "Klinik 9–21; akutfall dygnet runt.",
         "da": "Klinik 9–21; akut døgnet rundt.",
-        "fi": "Klinikka klo 9–21; päivystys 24 h."
+        "fi": "Klinikka klo 9–21; päivystys 24 h.",
+        "nb": "Klinikk kl. 9–21; nødtilfeller hele døgnet."
       },
       "small_animals": true,
       "url": "https://www.anicura.es/clinicas/buenavista-hospital-veterinario/",
@@ -2463,7 +2505,8 @@
         "cs": "Pohotovost +34 608 483 821, nonstop 365 dní v roce; ordinace Po–Pá 9:30–17:30, objednání +34 942 558 862.",
         "sv": "Akutfall +34 608 483 821, dygnet runt, 365 dagar; mottagning mån–fre 9.30–17.30, tidsbokning +34 942 558 862.",
         "da": "Akut +34 608 483 821, døgnet rundt/365 dage; konsultation man–fre 9.30–17.30, tidsbestilling +34 942 558 862.",
-        "fi": "Päivystys +34 608 483 821, 24 h / 365 päivää; vastaanotto ma–pe klo 9.30–17.30, ajanvaraus +34 942 558 862."
+        "fi": "Päivystys +34 608 483 821, 24 h / 365 päivää; vastaanotto ma–pe klo 9.30–17.30, ajanvaraus +34 942 558 862.",
+        "nb": "Nødtilfeller +34 608 483 821, hele døgnet, 365 dager; konsultasjoner man–fre 9.30–17.30, timebestilling +34 942 558 862."
       },
       "small_animals": true,
       "url": "https://hospitalveterinariocantabria.es/",
@@ -2508,7 +2551,8 @@
         "cs": "Pohotovost +34 634 965 353; informace +34 923 120 462, Po–Pá 9:00–21:00, so 10:00–14:00.",
         "sv": "Akutfall +34 634 965 353; allmänt nummer +34 923 120 462, mån–fre 9–21, lör 10–14.",
         "da": "Akut +34 634 965 353; generelt +34 923 120 462, man–fre 9–21, lør 10–14.",
-        "fi": "Päivystys +34 634 965 353; yleisnumero +34 923 120 462, ma–pe klo 9–21, la klo 10–14."
+        "fi": "Päivystys +34 634 965 353; yleisnumero +34 923 120 462, ma–pe klo 9–21, la klo 10–14.",
+        "nb": "Nødtilfeller +34 634 965 353; sentralbord +34 923 120 462, man–fre 9–21, lør 10–14."
       },
       "small_animals": true,
       "url": "https://veterinariasalinero.com/",
@@ -2538,7 +2582,8 @@
         "cs": "Po–Pá 9:30–14:00 a 16:00–20:00; so 10:00–14:00 a pohotovost; v neděli pouze pohotovost.",
         "sv": "mån–fre 9.30–14.00 och 16.00–20.00; lör 10–14 och akutfall; sön endast akutfall.",
         "da": "man–fre 9.30–14.00 og 16.00–20.00; lør 10–14 og akut; søn kun akut.",
-        "fi": "ma–pe klo 9.30–14.00 ja 16.00–20.00; la klo 10–14 ja päivystys; su vain päivystys."
+        "fi": "ma–pe klo 9.30–14.00 ja 16.00–20.00; la klo 10–14 ja päivystys; su vain päivystys.",
+        "nb": "man–fre 9.30–14.00 og 16.00–20.00; lør 10–14 og nødtilfeller; søn kun nødtilfeller."
       },
       "small_animals": true,
       "url": "https://www.cvlavega.com/",
@@ -2568,7 +2613,8 @@
         "cs": "Klinika +34 987 228 801, Po–Pá 9:30–19:30, so 10:00–14:00. Mimo ordinační dobu nejprve zavolejte na nonstop pohotovostní linku.",
         "sv": "Klinik +34 987 228 801, mån–fre 9.30–19.30, lör 10–14. Utanför öppettiderna ringer du först jourlinjen som är öppen dygnet runt.",
         "da": "Klinik +34 987 228 801, man–fre 9.30–19.30, lør 10–14. Uden for åbningstiden ring først til akutlinjen døgnet rundt.",
-        "fi": "Klinikka +34 987 228 801, ma–pe klo 9.30–19.30, la klo 10–14. Aukioloaikojen ulkopuolella soita ensin ympärivuorokautinen päivystysnumeroon."
+        "fi": "Klinikka +34 987 228 801, ma–pe klo 9.30–19.30, la klo 10–14. Aukioloaikojen ulkopuolella soita ensin ympärivuorokautinen päivystysnumeroon.",
+        "nb": "Klinikk +34 987 228 801, man–fre kl. 9.30–19.30, lør kl. 10–14. Utenfor åpningstid ring først den døgnåpne vakttelefonen."
       },
       "small_animals": true,
       "url": "https://leonveterinaria.com/",
@@ -2599,7 +2645,8 @@
         "cs": "Po–Pá 9:00–20:00, so 10:00–14:00; pohotovost nonstop po celý týden.",
         "sv": "mån–fre 9–20, lör 10–14; akutfall dygnet runt hela veckan.",
         "da": "man–fre 9–20, lør 10–14; akut døgnet rundt hele ugen.",
-        "fi": "ma–pe klo 9–20, la klo 10–14; päivystys 24 h koko viikon."
+        "fi": "ma–pe klo 9–20, la klo 10–14; päivystys 24 h koko viikon.",
+        "nb": "man–fre 9–20, lør 10–14; nødtilfeller hele døgnet, alle dager i uken."
       },
       "small_animals": true,
       "url": "https://www.hv-ciudadreal.com/",
@@ -2629,7 +2676,8 @@
         "cs": "Pohotovost na zavolání po telefonu +34 680 905 575; objednání +34 925 671 993.",
         "sv": "Akutfall via jourtelefon +34 680 905 575; tidsbokning +34 925 671 993.",
         "da": "Akutvagt pr. telefon +34 680 905 575; tidsbestilling +34 925 671 993.",
-        "fi": "Päivystys puhelimitse +34 680 905 575; ajanvaraus +34 925 671 993."
+        "fi": "Päivystys puhelimitse +34 680 905 575; ajanvaraus +34 925 671 993.",
+        "nb": "Nødtilfeller på telefonvakt +34 680 905 575; timebestilling +34 925 671 993."
       },
       "small_animals": true,
       "url": "https://www.cvelparque.net/",
@@ -2660,7 +2708,8 @@
         "cs": "Po–Pá 10:00–14:00 a 17:00–20:30, so 11:00–14:00. Pohotovost +34 616 678 964, podle dostupnosti.",
         "sv": "mån–fre 10–14 och 17–20.30, lör 11–14. Akutfall +34 616 678 964, i mån av tillgång.",
         "da": "man–fre 10–14 og 17–20.30, lør 11–14. Akut +34 616 678 964, afhængigt af tilgængelighed.",
-        "fi": "ma–pe klo 10–14 ja 17–20.30, la klo 11–14. Päivystys +34 616 678 964, saatavuuden mukaan."
+        "fi": "ma–pe klo 10–14 ja 17–20.30, la klo 11–14. Päivystys +34 616 678 964, saatavuuden mukaan.",
+        "nb": "man–fre 10–14 og 17–20.30, lør 11–14. Nødtilfeller +34 616 678 964, avhengig av tilgjengelighet."
       },
       "small_animals": true,
       "url": "https://www.tuveterinarioencuenca.com/",
@@ -2690,7 +2739,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar.",
         "da": "Åben døgnet rundt, 7 dage.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, alle dager."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/bodionzafra/",
@@ -2720,7 +2770,8 @@
         "cs": "Pohotovost +34 639 969 170; klinika +34 927 180 733, Po–Pá 10:00–14:00 a 17:00–20:00, so 11:00–14:00.",
         "sv": "Akutfall +34 639 969 170; klinik +34 927 180 733, mån–fre 10–14 och 17–20, lör 11–14.",
         "da": "Akut +34 639 969 170; klinik +34 927 180 733, man–fre 10–14 og 17–20, lør 11–14.",
-        "fi": "Päivystys +34 639 969 170; klinikka +34 927 180 733, ma–pe klo 10–14 ja 17–20, la klo 11–14."
+        "fi": "Päivystys +34 639 969 170; klinikka +34 927 180 733, ma–pe klo 10–14 ja 17–20, la klo 11–14.",
+        "nb": "Nødtilfeller +34 639 969 170; klinikk +34 927 180 733, man–fre 10–14 og 17–20, lør 11–14."
       },
       "small_animals": true,
       "url": "https://veterinariasanfranciscodeasis.es/",
@@ -2751,7 +2802,8 @@
         "cs": "Po–Pá 9:30–14:00 a 17:30–20:30, so 10:00–13:00. Pohotovost na zavolání mimo ordinační dobu +34 606 343 940.",
         "sv": "mån–fre 9.30–14.00 och 17.30–20.30, lör 10–13. Jour för akutfall utanför klinikens öppettider +34 606 343 940.",
         "da": "Man–fre 9.30–14.00 og 17.30–20.30, lør 10–13. Akutvagt uden for åbningstiden +34 606 343 940.",
-        "fi": "ma–pe klo 9.30–14.00 ja 17.30–20.30, la klo 10–13. Päivystysvalmius klinikan aukioloaikojen ulkopuolella +34 606 343 940."
+        "fi": "ma–pe klo 9.30–14.00 ja 17.30–20.30, la klo 10–13. Päivystysvalmius klinikan aukioloaikojen ulkopuolella +34 606 343 940.",
+        "nb": "man–fre 9.30–14.00 og 17.30–20.30, lør 10–13. Vakt for nødtilfeller utenom åpningstid +34 606 343 940."
       },
       "small_animals": true,
       "url": "https://dovet.es/",
@@ -2782,7 +2834,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Akutfall dygnet runt",
         "da": "Akut døgnet rundt",
-        "fi": "Päivystys 24 h"
+        "fi": "Päivystys 24 h",
+        "nb": "Nødtilfeller hele døgnet"
       },
       "url": "https://www.mascotiti.es/",
       "source_url": "https://www.colvema.org/centro-veterinario/26996-mascotiti-hospital-veterinario",
@@ -2813,7 +2866,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Akutfall dygnet runt",
         "da": "Akut døgnet rundt",
-        "fi": "Päivystys 24 h"
+        "fi": "Päivystys 24 h",
+        "nb": "Nødtilfeller hele døgnet"
       },
       "url": "https://www.mascotiti.es/",
       "source_url": "https://www.mascotiti.es/",
@@ -2844,7 +2898,8 @@
         "cs": "Pohotovostní služba, otevřeno nonstop.",
         "sv": "Akutjour, öppet dygnet runt",
         "da": "Akutvagt, døgnåben",
-        "fi": "Päivystys, auki 24 h"
+        "fi": "Päivystys, auki 24 h",
+        "nb": "Dyrlegevakt, åpent hele døgnet"
       },
       "url": "https://www.ervet.es",
       "source_url": "https://www.colvema.org/centro-veterinario/3950-ervet-urgencias-veterinarias",
@@ -2874,7 +2929,8 @@
         "cs": "Pohotovostní služba, otevřeno nonstop.",
         "sv": "Akutjour, öppet dygnet runt",
         "da": "Akutvagt, døgnåben",
-        "fi": "Päivystys, auki 24 h"
+        "fi": "Päivystys, auki 24 h",
+        "nb": "Dyrlegevakt, åpent hele døgnet"
       },
       "url": "https://www.gattos.net",
       "source_url": "https://www.colvema.org/centro-veterinario/1252-gattos-centro-clinico-felino",
@@ -2905,7 +2961,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Akutfall dygnet runt",
         "da": "Akut døgnet rundt",
-        "fi": "Päivystys 24 h"
+        "fi": "Päivystys 24 h",
+        "nb": "Nødtilfeller hele døgnet"
       },
       "url": "https://www.veterios.com",
       "source_url": "https://www.colvema.org/centro-veterinario/26430-hospital-veterios",
@@ -2935,7 +2992,8 @@
         "cs": "Pohotovostní služba, otevřeno nonstop.",
         "sv": "Akutjour, öppet dygnet runt",
         "da": "Akutvagt, døgnåben",
-        "fi": "Päivystys, auki 24 h"
+        "fi": "Päivystys, auki 24 h",
+        "nb": "Dyrlegevakt, åpent hele døgnet"
       },
       "source_url": "https://www.colvema.org/centro-veterinario/27473-hospital-veterinario-privet-aluche",
       "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
@@ -2965,7 +3023,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Akutfall dygnet runt",
         "da": "Akut døgnet rundt",
-        "fi": "Päivystys 24 h"
+        "fi": "Päivystys 24 h",
+        "nb": "Nødtilfeller hele døgnet"
       },
       "url": "https://www.anicura.es",
       "source_url": "https://www.colvema.org/centro-veterinario/5934-anicura-estoril-hospital-veterinario",
@@ -2995,7 +3054,8 @@
         "cs": "Pohotovost nonstop (koňovití).",
         "sv": "Akutfall dygnet runt (hästar)",
         "da": "Akut døgnet rundt (heste)",
-        "fi": "Päivystys 24 h (hevoseläimet)"
+        "fi": "Päivystys 24 h (hevoseläimet)",
+        "nb": "Nødtilfeller hele døgnet (hest)"
       },
       "url": "https://hvsmveterinario.com/",
       "source_url": "https://www.colvema.org/centro-veterinario/4463-hospital-veterinario-sierra-de-madrid-s-l",
@@ -3026,7 +3086,8 @@
         "cs": "Pohotovostní služba; nonstop telefonní linka.",
         "sv": "Akutjour; telefonlinje dygnet runt",
         "da": "Akutvagt; telefon døgnet rundt",
-        "fi": "Päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Dyrlegevakt; vakttelefon hele døgnet"
       },
       "source_url": "https://www.colvema.org/centro-veterinario/6052-hospital-felino-madrid",
       "note": "COLVEMA states only 'Atención telefónica 24 horas' (24 h phone line), not open 24 h — set false. Cats only.",
@@ -3055,7 +3116,8 @@
         "cs": "Pohotovost; nonstop telefonní linka.",
         "sv": "Akutfall; telefonlinje dygnet runt",
         "da": "Akut; telefon døgnet rundt",
-        "fi": "Päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Nødtilfeller; telefonlinje hele døgnet"
       },
       "url": "https://www.centroveterinarioaldavet.es",
       "source_url": "https://www.colvema.org/centro-veterinario/26156-hospital-veterinario-aldavet",
@@ -3085,7 +3147,8 @@
         "cs": "Nonstop telefonní linka.",
         "sv": "Telefonlinje dygnet runt",
         "da": "Telefon døgnet rundt",
-        "fi": "Ympärivuorokautinen puhelinpäivystys"
+        "fi": "Ympärivuorokautinen puhelinpäivystys",
+        "nb": "Telefonlinje hele døgnet"
       },
       "url": "https://www.centroveterinariosananton.es",
       "source_url": "https://www.colvema.org/centro-veterinario/6658-hospital-veterinario-san-anton",
@@ -3115,7 +3178,8 @@
         "cs": "Pohotovost; nonstop telefonní linka.",
         "sv": "Akutfall; telefonlinje dygnet runt",
         "da": "Akut; telefon døgnet rundt",
-        "fi": "Päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Nødtilfeller; telefonlinje hele døgnet"
       },
       "url": "https://www.lider-veterinaria.es",
       "source_url": "https://www.colvema.org/centro-veterinario/2233-liderveterinaria-clinica-veterinaria",
@@ -3145,7 +3209,8 @@
         "cs": "Osobní pohotovost nonstop; ordinace Po–Pá 9:00–21:00, so 9:00–15:00.",
         "sv": "Akutfall på plats dygnet runt; mottagning mån–fre 9–21, lör 9–15",
         "da": "Akut fremmøde døgnet rundt; konsultationer man–fre 9–21, lør 9–15",
-        "fi": "Päivystys paikan päällä 24 h; vastaanotto ma–pe klo 9–21, la klo 9–15"
+        "fi": "Päivystys paikan päällä 24 h; vastaanotto ma–pe klo 9–21, la klo 9–15",
+        "nb": "Akutthjelp på stedet hele døgnet; konsultasjoner man–fre 9–21, lør 9–15"
       },
       "url": "https://www.unavets.com/tartanga/es/servicios/",
       "source_url": "https://www.unavets.com/tartanga/es/servicios/",
@@ -3176,7 +3241,8 @@
         "cs": "Ordinace Po–Pá 9:00–20:00, so 10:30–13:30; pohotovost nonstop; pohotovostní telefon +34 689 391 119.",
         "sv": "Mottagning mån–fre 9–20, lör 10.30–13.30; akutfall dygnet runt; akuttelefon +34 689 391 119",
         "da": "Konsultationer man–fre 9–20, lør 10.30–13.30; akut døgnet rundt; akuttelefon +34 689 391 119",
-        "fi": "Vastaanotto ma–pe klo 9–20, la klo 10.30–13.30; päivystys 24 h; päivystyspuhelin +34 689 391 119"
+        "fi": "Vastaanotto ma–pe klo 9–20, la klo 10.30–13.30; päivystys 24 h; päivystyspuhelin +34 689 391 119",
+        "nb": "Konsultasjoner man–fre kl. 9–20, lør kl. 10.30–13.30; nødtilfeller hele døgnet; vakttelefon +34 689 391 119"
       },
       "url": "https://www.unavets.com/etorbidevet/es/urgencias-24h/",
       "source_url": "https://www.unavets.com/etorbidevet/es/urgencias-24h/",
@@ -3207,7 +3273,8 @@
         "cs": "Po–Pá 10:00–13:30 a 16:00–19:30, so 10:00–13:00; v neděli pouze pohotovost; pohotovostní telefon +34 606 122 091.",
         "sv": "mån–fre 10–13.30 och 16–19.30, lör 10–13; sön endast akutfall; akuttelefon +34 606 122 091",
         "da": "Man–fre 10–13.30 og 16–19.30, lør 10–13; søn kun akut; akuttelefon +34 606 122 091",
-        "fi": "ma–pe klo 10–13.30 ja 16–19.30, la klo 10–13; su vain päivystys; päivystyspuhelin +34 606 122 091"
+        "fi": "ma–pe klo 10–13.30 ja 16–19.30, la klo 10–13; su vain päivystys; päivystyspuhelin +34 606 122 091",
+        "nb": "man–fre 10–13.30 og 16–19.30, lør 10–13; søn kun nødtilfeller; nødtelefon +34 606 122 091"
       },
       "url": "https://www.irunvet.es/",
       "source_url": "https://www.irunvet.es/",
@@ -3238,7 +3305,8 @@
         "cs": "Pohotovostní linka +34 618 893 420.",
         "sv": "Akutlinje +34 618 893 420",
         "da": "Akuttelefon +34 618 893 420",
-        "fi": "Päivystysnumero +34 618 893 420"
+        "fi": "Päivystysnumero +34 618 893 420",
+        "nb": "Akuttelefon +34 618 893 420"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "note": "Listed by Basque Government as clinic with emergency services; 24 h not stated on an opened page (own site amaita.com could not be fetched).",
@@ -3267,7 +3335,8 @@
         "cs": "Pohotovostní linka +34 687 409 777.",
         "sv": "Akutlinje +34 687 409 777",
         "da": "Akuttelefon +34 687 409 777",
-        "fi": "Päivystysnumero +34 687 409 777"
+        "fi": "Päivystysnumero +34 687 409 777",
+        "nb": "Akuttelefon +34 687 409 777"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "note": "Basque Government list; own site not fetched.",
@@ -3296,7 +3365,8 @@
         "cs": "Pohotovostní linka +34 608 576 505.",
         "sv": "Akutlinje +34 608 576 505",
         "da": "Akuttelefon +34 608 576 505",
-        "fi": "Päivystysnumero +34 608 576 505"
+        "fi": "Päivystysnumero +34 608 576 505",
+        "nb": "Akuttelefon +34 608 576 505"
       },
       "url": "https://txingudivet.com/",
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
@@ -3326,7 +3396,8 @@
         "cs": "Pohotovostní linka +34 675 673 610.",
         "sv": "Akutlinje +34 675 673 610",
         "da": "Akuttelefon +34 675 673 610",
-        "fi": "Päivystysnumero +34 675 673 610"
+        "fi": "Päivystysnumero +34 675 673 610",
+        "nb": "Akuttelefon +34 675 673 610"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "note": "Basque Government list; 24 h not stated.",
@@ -3355,7 +3426,8 @@
         "cs": "Pohotovostní linka +34 607 323 006.",
         "sv": "Akutlinje +34 607 323 006",
         "da": "Akuttelefon +34 607 323 006",
-        "fi": "Päivystysnumero +34 607 323 006"
+        "fi": "Päivystysnumero +34 607 323 006",
+        "nb": "Akuttelefon +34 607 323 006"
       },
       "url": "https://zaunka.es/",
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
@@ -3385,7 +3457,8 @@
         "cs": "Pohotovostní linka +34 655 881 422.",
         "sv": "Akutlinje +34 655 881 422",
         "da": "Akuttelefon +34 655 881 422",
-        "fi": "Päivystysnumero +34 655 881 422"
+        "fi": "Päivystysnumero +34 655 881 422",
+        "nb": "Akuttelefon +34 655 881 422"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -3413,7 +3486,8 @@
         "cs": "Pohotovostní linka +34 656 788 800.",
         "sv": "Akutlinje +34 656 788 800",
         "da": "Akuttelefon +34 656 788 800",
-        "fi": "Päivystysnumero +34 656 788 800"
+        "fi": "Päivystysnumero +34 656 788 800",
+        "nb": "Akuttelefon +34 656 788 800"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -3441,7 +3515,8 @@
         "cs": "Po–Čt 9:30–13:30 a 16:00–19:00, Pá 9:00–13:00 a 15:00–18:00; pohotovost pouze telefonicky +34 688 629 509.",
         "sv": "mån–tors 9.30–13.30 och 16–19, fre 9–13 och 15–18; akutfall endast per telefon +34 688 629 509",
         "da": "Man–tor 9.30–13.30 og 16–19, fre 9–13 og 15–18; akut kun pr. telefon +34 688 629 509",
-        "fi": "ma–to klo 9.30–13.30 ja 16–19, pe klo 9–13 ja 15–18; päivystys vain puhelimitse +34 688 629 509"
+        "fi": "ma–to klo 9.30–13.30 ja 16–19, pe klo 9–13 ja 15–18; päivystys vain puhelimitse +34 688 629 509",
+        "nb": "man–tors 9.30–13.30 og 16–19, fre 9–13 og 15–18; nødtilfeller kun på telefon +34 688 629 509"
       },
       "url": "https://clinicaveterinariaariznabarra.com/",
       "source_url": "https://icova.es/centros/clinica-veterinaria-ariznabarra/",
@@ -3471,7 +3546,8 @@
         "cs": "Pohotovostní linka +34 688 639 855.",
         "sv": "Akutlinje +34 688 639 855",
         "da": "Akuttelefon +34 688 639 855",
-        "fi": "Päivystysnumero +34 688 639 855"
+        "fi": "Päivystysnumero +34 688 639 855",
+        "nb": "Akuttelefon +34 688 639 855"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -3499,7 +3575,8 @@
         "cs": "Pohotovostní linka +34 607 323 006.",
         "sv": "Akutlinje +34 607 323 006",
         "da": "Akuttelefon +34 607 323 006",
-        "fi": "Päivystysnumero +34 607 323 006"
+        "fi": "Päivystysnumero +34 607 323 006",
+        "nb": "Akuttelefon +34 607 323 006"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -3527,7 +3604,8 @@
         "cs": "Pohotovostní linka +34 677 502 775.",
         "sv": "Akutlinje +34 677 502 775",
         "da": "Akuttelefon +34 677 502 775",
-        "fi": "Päivystysnumero +34 677 502 775"
+        "fi": "Päivystysnumero +34 677 502 775",
+        "nb": "Akuttelefon +34 677 502 775"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -3555,7 +3633,8 @@
         "cs": "Pohotovostní linka +34 688 818 525.",
         "sv": "Akutlinje +34 688 818 525",
         "da": "Akuttelefon +34 688 818 525",
-        "fi": "Päivystysnumero +34 688 818 525"
+        "fi": "Päivystysnumero +34 688 818 525",
+        "nb": "Akuttelefon +34 688 818 525"
       },
       "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
       "checked": "2026-11-02"
@@ -3702,7 +3781,8 @@
         "cs": "Po–Pá 10:00–13:30 a 17:00–20:00, so 11:00–13:00; naléhavé případy se ošetřují co nejdříve.",
         "sv": "mån–fre 10–13.30 och 17–20, lör 11–13; brådskande fall tas emot så snart som möjligt",
         "da": "Man–fre 10–13.30 og 17–20, lør 11–13; akutte tilfælde ses hurtigst muligt",
-        "fi": "ma–pe klo 10–13.30 ja 17–20, la klo 11–13; kiireelliset tapaukset otetaan vastaan mahdollisimman pian"
+        "fi": "ma–pe klo 10–13.30 ja 17–20, la klo 11–13; kiireelliset tapaukset otetaan vastaan mahdollisimman pian",
+        "nb": "man–fre 10–13.30 og 17–20, lør 11–13; hastetilfeller tas imot så snart som mulig"
       },
       "url": "https://www.cvesmercadal.com/",
       "source_url": "https://www.cvesmercadal.com/contacto",
@@ -3730,7 +3810,8 @@
         "cs": "Pohotovost během ordinační doby.",
         "sv": "Akutfall under öppettiderna",
         "da": "Akut i åbningstiden",
-        "fi": "Päivystys aukioloaikoina"
+        "fi": "Päivystys aukioloaikoina",
+        "nb": "Nødtilfeller i åpningstiden"
       },
       "url": "https://www.centroveterinariopitiuso.com/",
       "source_url": "https://www.centroveterinariopitiuso.com/servicios-veterinarios/",
@@ -3759,7 +3840,8 @@
         "cs": "Veterinář s návštěvami doma pro naléhavé, ale stabilní případy; nejde o nonstop službu.",
         "sv": "Veterinär med hembesök för brådskande men stabila fall; ingen jour dygnet runt",
         "da": "Dyrlæge med hjemmebesøg ved akutte, men stabile tilfælde; ikke døgnåben",
-        "fi": "Kotikäyntieläinlääkäri kiireellisiin mutta vakaisiin tapauksiin; ei ole ympärivuorokautinen palvelu"
+        "fi": "Kotikäyntieläinlääkäri kiireellisiin mutta vakaisiin tapauksiin; ei ole ympärivuorokautinen palvelu",
+        "nb": "Dyrlege på hjemmebesøk for hastetilfeller som er stabile; ikke en døgnåpen tjeneste"
       },
       "url": "https://www.vetathomeibiza.com/",
       "source_url": "https://www.vetathomeibiza.com/es/emergencies",
@@ -3788,7 +3870,8 @@
         "cs": "Otevřeno nonstop, 7 dní v týdnu; neakutní konzultace na objednání 10:00–22:00.",
         "sv": "Öppet dygnet runt, alla dagar; icke-brådskande konsultationer efter bokning 10.00–22.00",
         "da": "Døgnåben, alle 7 dage; ikke-akutte konsultationer efter aftale 10.00–22.00",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa; ei-kiireelliset vastaanottoajat ajanvarauksella klo 10.00–22.00"
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa; ei-kiireelliset vastaanottoajat ajanvarauksella klo 10.00–22.00",
+        "nb": "Åpent hele døgnet, alle dager; ikke-akutte konsultasjoner etter timebestilling 10.00–22.00"
       },
       "small_animals": true,
       "url": "https://www.unavets.com/veterinariolugo/",
@@ -3819,7 +3902,8 @@
         "cs": "Otevřeno nonstop, 365 dní v roce.",
         "sv": "Öppet dygnet runt, 365 dagar",
         "da": "Døgnåben, alle årets 365 dage",
-        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa"
+        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa",
+        "nb": "Åpent hele døgnet, 365 dager i året"
       },
       "small_animals": true,
       "url": "https://mivet.com/en/faucan-veterinary-hospital/",
@@ -3849,7 +3933,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Akutfall dygnet runt",
         "da": "Akut døgnet rundt",
-        "fi": "Päivystys 24 h"
+        "fi": "Päivystys 24 h",
+        "nb": "Nødtilfeller hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.vetterhospital.com/",
@@ -3879,7 +3964,8 @@
         "cs": "Nonstop, 365 dní v roce; pohotovostní linka +34 648 119 512.",
         "sv": "Dygnet runt, 365 dagar; akutlinje +34 648 119 512",
         "da": "Døgnet rundt, alle årets 365 dage; akuttelefon +34 648 119 512",
-        "fi": "24 h, 365 päivää; päivystysnumero +34 648 119 512"
+        "fi": "24 h, 365 päivää; päivystysnumero +34 648 119 512",
+        "nb": "Hele døgnet, 365 dager i året; akuttlinje +34 648 119 512"
       },
       "small_animals": true,
       "url": "https://www.hospitalveterinarioalba.es/",
@@ -3909,7 +3995,8 @@
         "cs": "Klinika otevřena 9:00–20:30 bez přestávky; nonstop pohotovostní telefon +34 722 200 044.",
         "sv": "Kliniken har öppet 9.00–20.30 utan lunchstängning; akuttelefon dygnet runt +34 722 200 044",
         "da": "Klinikken har åbent 9.00–20.30 uden middagspause; akuttelefon døgnet rundt +34 722 200 044",
-        "fi": "Klinikka auki yhtäjaksoisesti klo 9.00–20.30; ympärivuorokautinen päivystyspuhelin +34 722 200 044"
+        "fi": "Klinikka auki yhtäjaksoisesti klo 9.00–20.30; ympärivuorokautinen päivystyspuhelin +34 722 200 044",
+        "nb": "Klinikk åpen kl. 9.00–20.30 uten opphold; vakttelefon for nødtilfeller hele døgnet +34 722 200 044"
       },
       "small_animals": true,
       "url": "https://centroveterinarioanimalia.es/",
@@ -3940,7 +4027,8 @@
         "cs": "Po–Pá 9:00–21:00, so 10:00–14:00; pohotovost nonstop na stejném čísle.",
         "sv": "mån–fre 9.00–21.00, lör 10.00–14.00; akutfall dygnet runt på samma nummer",
         "da": "Man–fre 9.00–21.00, lør 10.00–14.00; akut døgnet rundt på samme nummer",
-        "fi": "ma–pe klo 9.00–21.00, la klo 10.00–14.00; päivystys 24 h samassa numerossa"
+        "fi": "ma–pe klo 9.00–21.00, la klo 10.00–14.00; päivystys 24 h samassa numerossa",
+        "nb": "man–fre 9.00–21.00, lør 10.00–14.00; nødtilfeller hele døgnet på samme nummer"
       },
       "small_animals": true,
       "url": "https://veterinariavistalegre.com/",
@@ -3971,7 +4059,8 @@
         "cs": "Po–Pá 10:00–19:00, so 10:00–13:00; pohotovost nonstop; také +34 625 539 474 (WhatsApp).",
         "sv": "mån–fre 10.00–19.00, lör 10.00–13.00; akutfall dygnet runt; även +34 625 539 474 (WhatsApp)",
         "da": "Man–fre 10.00–19.00, lør 10.00–13.00; akut døgnet rundt; også +34 625 539 474 (WhatsApp)",
-        "fi": "ma–pe klo 10.00–19.00, la klo 10.00–13.00; päivystys 24 h; myös +34 625 539 474 (WhatsApp)"
+        "fi": "ma–pe klo 10.00–19.00, la klo 10.00–13.00; päivystys 24 h; myös +34 625 539 474 (WhatsApp)",
+        "nb": "man–fre 10.00–19.00, lør 10.00–13.00; nødtilfeller hele døgnet; også +34 625 539 474 (WhatsApp)"
       },
       "small_animals": true,
       "url": "https://hospitalveterinarioburgos.com/",
@@ -4001,7 +4090,8 @@
         "cs": "Pohotovostní linka +34 656 304 866, nonstop 365 dní v roce.",
         "sv": "Akutlinje +34 656 304 866, dygnet runt, 365 dagar",
         "da": "Akuttelefon +34 656 304 866, døgnet rundt alle årets 365 dage",
-        "fi": "Päivystysnumero +34 656 304 866, 24 h / 365 päivää"
+        "fi": "Päivystysnumero +34 656 304 866, 24 h / 365 päivää",
+        "nb": "Akuttelefon +34 656 304 866, hele døgnet / 365 dager"
       },
       "small_animals": true,
       "url": "https://cqvet-tucan.com/",
@@ -4031,7 +4121,8 @@
         "cs": "Pohotovostní služba nonstop; také +34 652 993 742.",
         "sv": "Akutjour dygnet runt; även +34 652 993 742",
         "da": "Akutvagt døgnet rundt; også +34 652 993 742",
-        "fi": "Päivystys 24 h; myös +34 652 993 742"
+        "fi": "Päivystys 24 h; myös +34 652 993 742",
+        "nb": "Akuttjeneste hele døgnet; også +34 652 993 742"
       },
       "small_animals": true,
       "url": "https://wecansegovia.es/hospital-veterinario.php",
@@ -4061,7 +4152,8 @@
         "cs": "Grijota Po–Pá 10:00–14:00 / 17:00–20:00, so 10:00–14:00; pohotovost +34 655 945 381; nonstop služba včetně návštěv doma.",
         "sv": "Grijota mån–fre 10.00–14.00 / 17.00–20.00, lör 10.00–14.00; akutfall +34 655 945 381; jour dygnet runt inklusive hembesök",
         "da": "Grijota man–fre 10.00–14.00 / 17.00–20.00, lør 10.00–14.00; akut +34 655 945 381; vagt døgnet rundt inkl. hjemmebesøg",
-        "fi": "Grijota ma–pe klo 10.00–14.00 / 17.00–20.00, la klo 10.00–14.00; päivystys +34 655 945 381; ympärivuorokautinen palvelu, myös kotikäynnit"
+        "fi": "Grijota ma–pe klo 10.00–14.00 / 17.00–20.00, la klo 10.00–14.00; päivystys +34 655 945 381; ympärivuorokautinen palvelu, myös kotikäynnit",
+        "nb": "Grijota man–fre 10.00–14.00 / 17.00–20.00, lør 10.00–14.00; akutt +34 655 945 381; døgnåpen tjeneste inkludert hjemmebesøk"
       },
       "small_animals": true,
       "url": "https://centroruralvet.com/",
@@ -4092,7 +4184,8 @@
         "cs": "Nonstop pohotovostní linka +34 616 919 360 pouze pro stávající klienty.",
         "sv": "Akutlinje dygnet runt +34 616 919 360 endast för befintliga kunder",
         "da": "Akuttelefon døgnet rundt +34 616 919 360, kun for eksisterende kunder",
-        "fi": "Päivystysnumero 24 h +34 616 919 360 vain nykyisille asiakkaille"
+        "fi": "Päivystysnumero 24 h +34 616 919 360 vain nykyisille asiakkaille",
+        "nb": "Akuttelefon hele døgnet +34 616 919 360, kun for eksisterende kunder"
       },
       "small_animals": true,
       "url": "https://www.dobican.com/",
@@ -4122,7 +4215,8 @@
         "cs": "Ve všední dny 10:00–14:00 / 16:00–19:00; pohotovostní služba po telefonu.",
         "sv": "Vardagar 10.00–14.00 / 16.00–19.00; akutjour per telefon",
         "da": "Hverdage 10.00–14.00 / 16.00–19.00; akutvagt pr. telefon",
-        "fi": "Arkisin 10.00–14.00 / 16.00–19.00; päivystys puhelimitse"
+        "fi": "Arkisin 10.00–14.00 / 16.00–19.00; päivystys puhelimitse",
+        "nb": "Hverdager 10.00–14.00 / 16.00–19.00; akuttjeneste på telefon"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinarialc.es/",
@@ -4152,7 +4246,8 @@
         "cs": "Po–Pá 10:00–20:00, so 10:00–13:30.",
         "sv": "mån–fre 10.00–20.00, lör 10.00–13.30",
         "da": "Man–fre 10.00–20.00, lør 10.00–13.30",
-        "fi": "ma–pe klo 10.00–20.00, la klo 10.00–13.30"
+        "fi": "ma–pe klo 10.00–20.00, la klo 10.00–13.30",
+        "nb": "man–fre 10.00–20.00, lør 10.00–13.30"
       },
       "small_animals": true,
       "url": "https://clinicaveterinaria.io/",
@@ -4182,7 +4277,8 @@
         "cs": "Po–Pá 9:00–21:00, so 10:00–13:30.",
         "sv": "mån–fre 9.00–21.00, lör 10.00–13.30",
         "da": "Man–fre 9.00–21.00, lør 10.00–13.30",
-        "fi": "ma–pe klo 9.00–21.00, la klo 10.00–13.30"
+        "fi": "ma–pe klo 9.00–21.00, la klo 10.00–13.30",
+        "nb": "man–fre 9.00–21.00, lør 10.00–13.30"
       },
       "small_animals": true,
       "url": "https://www.veterinariaargosalbacete.com/",
@@ -4210,7 +4306,8 @@
         "cs": "Po–Pá 10:00–13:30 / 17:00–20:00, so 10:00–14:00; pohotovostní linka +34 967 240 275 (Po–Pá 9:00–10:00, 14:00–17:00, 20:30–24:00; so 9:00–10:00, 17:00–24:00; ne 9:00–14:00, 17:00–24:00); nejbližší nonstop nemocnice: Medivet La Flota, Murcia (+34 968 246 122).",
         "sv": "mån–fre 10.00–13.30 / 17.00–20.00, lör 10.00–14.00; akutlinje +34 967 240 275 (mån–fre 9–10, 14–17, 20.30–24; lör 9–10, 17–24; sön 9–14, 17–24); närmaste djursjukhus med öppet dygnet runt: Medivet La Flota, Murcia (+34 968 246 122)",
         "da": "Man–fre 10.00–13.30 / 17.00–20.00, lør 10.00–14.00; akuttelefon +34 967 240 275 (man–fre 9–10, 14–17, 20.30–24; lør 9–10, 17–24; søn 9–14, 17–24); nærmeste døgnåbne dyrehospital: Medivet La Flota, Murcia (+34 968 246 122)",
-        "fi": "ma–pe klo 10.00–13.30 / 17.00–20.00, la klo 10.00–14.00; päivystysnumero +34 967 240 275 (ma–pe klo 9–10, 14–17, 20.30–24; la klo 9–10, 17–24; su klo 9–14, 17–24); lähin 24 h sairaala: Medivet La Flota, Murcia (+34 968 246 122)"
+        "fi": "ma–pe klo 10.00–13.30 / 17.00–20.00, la klo 10.00–14.00; päivystysnumero +34 967 240 275 (ma–pe klo 9–10, 14–17, 20.30–24; la klo 9–10, 17–24; su klo 9–14, 17–24); lähin 24 h sairaala: Medivet La Flota, Murcia (+34 968 246 122)",
+        "nb": "man–fre 10.00–13.30 / 17.00–20.00, lør 10.00–14.00; nødtelefon +34 967 240 275 (man–fre 9–10, 14–17, 20.30–24; lør 9–10, 17–24; søn 9–14, 17–24); nærmeste døgnåpne dyresykehus: Medivet La Flota, Murcia (+34 968 246 122)"
       },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/es-es/clinicas-veterinarias/los-llanos/",
@@ -4240,7 +4337,8 @@
         "cs": "Po–Čt 10:00–13:30 / 17:00–20:00, Pá 10:00–18:00; pohotovostní kontakt +34 666 557 182.",
         "sv": "mån–tors 10.00–13.30 / 17.00–20.00, fre 10.00–18.00; akutkontakt +34 666 557 182",
         "da": "Man–tor 10.00–13.30 / 17.00–20.00, fre 10.00–18.00; akutkontakt +34 666 557 182",
-        "fi": "ma–to klo 10.00–13.30 / 17.00–20.00, pe klo 10.00–18.00; päivystysyhteys +34 666 557 182"
+        "fi": "ma–to klo 10.00–13.30 / 17.00–20.00, pe klo 10.00–18.00; päivystysyhteys +34 666 557 182",
+        "nb": "man–tors 10.00–13.30 / 17.00–20.00, fre 10.00–18.00; nødkontakt +34 666 557 182"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaal-beitar.es/",
@@ -4270,7 +4368,8 @@
         "cs": "Po–Pá 10:00–13:30 / 17:00–20:00.",
         "sv": "mån–fre 10.00–13.30 / 17.00–20.00",
         "da": "Man–fre 10.00–13.30 / 17.00–20.00",
-        "fi": "ma–pe klo 10.00–13.30 / 17.00–20.00"
+        "fi": "ma–pe klo 10.00–13.30 / 17.00–20.00",
+        "nb": "man–fre 10.00–13.30 / 17.00–20.00"
       },
       "small_animals": true,
       "url": "https://www.nexoveterinarios.es/es/clinica-veterinaria/albacete-cabot",
@@ -4299,7 +4398,8 @@
         "cs": "Po–Út 8:00–15:00 / 17:00–20:00, St–Pá 8:00–20:30, so 9:00–13:30; pohotovost během ordinační doby; v sobotu odpoledne, v neděli a o svátcích ve VetSur Fuengirola.",
         "sv": "mån–tis 8.00–15.00 / 17.00–20.00, ons–fre 8.00–20.30, lör 9.00–13.30; akutfall under öppettiderna; lör eftermiddag, sön och helgdagar på VetSur Fuengirola",
         "da": "Man–tir 8.00–15.00 / 17.00–20.00, ons–fre 8.00–20.30, lør 9.00–13.30; akut i åbningstiden; lør eftermiddag, søn og helligdage hos VetSur Fuengirola",
-        "fi": "ma–ti klo 8.00–15.00 / 17.00–20.00, ke–pe klo 8.00–20.30, la klo 9.00–13.30; päivystys aukioloaikoina; lauantai-iltapäivisin, su ja pyhäpäivinä VetSur Fuengirolassa"
+        "fi": "ma–ti klo 8.00–15.00 / 17.00–20.00, ke–pe klo 8.00–20.30, la klo 9.00–13.30; päivystys aukioloaikoina; lauantai-iltapäivisin, su ja pyhäpäivinä VetSur Fuengirolassa",
+        "nb": "man–tirs 8.00–15.00 / 17.00–20.00, ons–fre 8.00–20.30, lør 9.00–13.30; akuttbehandling i åpningstiden; lørdag ettermiddag, søndag og helligdager ved VetSur Fuengirola"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariavetsur.com/torremolinos",
@@ -4329,7 +4429,8 @@
         "cs": "Po–Pá 10:30–13:30 / 17:00–20:00, so 10:30–13:30; také +34 607 085 171.",
         "sv": "mån–fre 10.30–13.30 / 17.00–20.00, lör 10.30–13.30; även +34 607 085 171",
         "da": "Man–fre 10.30–13.30 / 17.00–20.00, lør 10.30–13.30; også +34 607 085 171",
-        "fi": "ma–pe klo 10.30–13.30 / 17.00–20.00, la klo 10.30–13.30; myös +34 607 085 171"
+        "fi": "ma–pe klo 10.30–13.30 / 17.00–20.00, la klo 10.30–13.30; myös +34 607 085 171",
+        "nb": "man–fre 10.30–13.30 / 17.00–20.00, lør 10.30–13.30; også +34 607 085 171"
       },
       "small_animals": true,
       "url": "https://veterinariaislacristina.com/",
@@ -4358,7 +4459,8 @@
         "cs": "Po a St 9:30–14:00 / 17:00–20:30, Út a Čt 10:00–18:00, Pá 10:00–15:00; pohotovost bez objednání během ordinační doby.",
         "sv": "mån och ons 9.30–14.00 / 17.00–20.30, tis och tors 10.00–18.00, fre 10.00–15.00; akutfall utan tidsbokning under öppettiderna",
         "da": "Man og ons 9.30–14.00 / 17.00–20.30, tir og tor 10.00–18.00, fre 10.00–15.00; akutte tilfælde uden tidsbestilling i åbningstiden",
-        "fi": "ma ja ke klo 9.30–14.00 / 17.00–20.30, ti ja to klo 10.00–18.00, pe klo 10.00–15.00; päivystys ilman ajanvarausta aukioloaikoina"
+        "fi": "ma ja ke klo 9.30–14.00 / 17.00–20.30, ti ja to klo 10.00–18.00, pe klo 10.00–15.00; päivystys ilman ajanvarausta aukioloaikoina",
+        "nb": "Man og ons 9.30–14.00 / 17.00–20.30, tir og tor 10.00–18.00, fre 10.00–15.00; nødtilfeller uten timebestilling i åpningstiden"
       },
       "small_animals": true,
       "url": "https://clinicavarela.com/",
@@ -4387,7 +4489,8 @@
         "cs": "Pohotovost v Hospital Veterinario Ávila El Puerto de Santa María (nonstop), +34 956 870 717.",
         "sv": "Akutfall på Hospital Veterinario Ávila El Puerto de Santa María (dygnet runt), +34 956 870 717",
         "da": "Akut på Hospital Veterinario Ávila El Puerto de Santa María (døgnåbent), +34 956 870 717",
-        "fi": "Päivystys: Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717"
+        "fi": "Päivystys: Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
+        "nb": "Nødtilfeller ved Hospital Veterinario Ávila El Puerto de Santa María (hele døgnet), +34 956 870 717"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -4416,7 +4519,8 @@
         "cs": "Po–Pá 9:00–20:00, so 9:00–14:00; pohotovost osobně v nemocnici El Puerto de Santa María (nonstop).",
         "sv": "mån–fre 9.00–20.00, lör 9.00–14.00; akutfall på plats på djursjukhuset i El Puerto de Santa María (dygnet runt)",
         "da": "Man–fre 9.00–20.00, lør 9.00–14.00; akut på dyrehospitalet i El Puerto de Santa María (døgnåbent)",
-        "fi": "ma–pe klo 9.00–20.00, la klo 9.00–14.00; päivystys paikan päällä El Puerto de Santa Marían sairaalassa (24 h)"
+        "fi": "ma–pe klo 9.00–20.00, la klo 9.00–14.00; päivystys paikan päällä El Puerto de Santa Marían sairaalassa (24 h)",
+        "nb": "man–fre 9.00–20.00, lør 9.00–14.00; nødtilfeller med oppmøte på dyresykehuset i El Puerto de Santa María (døgnåpent)"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -4446,7 +4550,8 @@
         "cs": "Pohotovost v Hospital Veterinario Ávila El Puerto de Santa María (nonstop), +34 956 870 717.",
         "sv": "Akutfall på Hospital Veterinario Ávila El Puerto de Santa María (dygnet runt), +34 956 870 717",
         "da": "Akut på Hospital Veterinario Ávila El Puerto de Santa María (døgnåbent), +34 956 870 717",
-        "fi": "Päivystys: Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717"
+        "fi": "Päivystys: Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
+        "nb": "Nødtilfeller ved Hospital Veterinario Ávila El Puerto de Santa María (hele døgnet), +34 956 870 717"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -4475,7 +4580,8 @@
         "cs": "Pohotovost v Hospital Veterinario Ávila El Puerto de Santa María (nonstop), +34 956 870 717.",
         "sv": "Akutfall på Hospital Veterinario Ávila El Puerto de Santa María (dygnet runt), +34 956 870 717",
         "da": "Akut på Hospital Veterinario Ávila El Puerto de Santa María (døgnåbent), +34 956 870 717",
-        "fi": "Päivystys: Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717"
+        "fi": "Päivystys: Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
+        "nb": "Nødtilfeller ved Hospital Veterinario Ávila El Puerto de Santa María (hele døgnet), +34 956 870 717"
       },
       "small_animals": true,
       "url": "https://clinicasavila.com/",
@@ -4504,7 +4610,8 @@
         "cs": "Po–Pá 9:30–19:30, so 10:00–13:30.",
         "sv": "mån–fre 9.30–19.30, lör 10.00–13.30",
         "da": "Man–fre 9.30–19.30, lør 10.00–13.30",
-        "fi": "ma–pe klo 9.30–19.30, la klo 10.00–13.30"
+        "fi": "ma–pe klo 9.30–19.30, la klo 10.00–13.30",
+        "nb": "man–fre 9.30–19.30, lør 10.00–13.30"
       },
       "small_animals": true,
       "url": "https://atlanticocentroveterinario.es/",
@@ -4534,7 +4641,8 @@
         "cs": "Po–St a Pá 10:00–14:00 / 17:30–20:00, Čt 9:30–16:00, so 10:00–13:30; pohotovost +34 669 479 972 (když nás potřebujete).",
         "sv": "mån–ons och fre 10.00–14.00 / 17.30–20.00, tors 9.30–16.00, lör 10.00–13.30; akutfall +34 669 479 972 (när du behöver oss)",
         "da": "Man–ons og fre 10.00–14.00 / 17.30–20.00, tor 9.30–16.00, lør 10.00–13.30; akut +34 669 479 972 (når du har brug for os)",
-        "fi": "ma–ke ja pe klo 10.00–14.00 / 17.30–20.00, to klo 9.30–16.00, la klo 10.00–13.30; päivystys +34 669 479 972 (kun tarvitset meitä)"
+        "fi": "ma–ke ja pe klo 10.00–14.00 / 17.30–20.00, to klo 9.30–16.00, la klo 10.00–13.30; päivystys +34 669 479 972 (kun tarvitset meitä)",
+        "nb": "man–ons og fre 10.00–14.00 / 17.30–20.00, tors 9.30–16.00, lør 10.00–13.30; nødtilfeller +34 669 479 972 (når du trenger oss)"
       },
       "small_animals": true,
       "url": "https://anubisrota.es/",
@@ -4564,7 +4672,8 @@
         "cs": "Po a Pá 9:00–18:00, Út–Čt 10:00–17:30; pohotovost +34 699 280 334.",
         "sv": "mån och fre 9.00–18.00, tis–tors 10.00–17.30; akutfall +34 699 280 334",
         "da": "Man og fre 9.00–18.00, tir–tor 10.00–17.30; akut +34 699 280 334",
-        "fi": "ma ja pe klo 9.00–18.00, ti–to klo 10.00–17.30; päivystys +34 699 280 334"
+        "fi": "ma ja pe klo 9.00–18.00, ti–to klo 10.00–17.30; päivystys +34 699 280 334",
+        "nb": "Man og fre 9.00–18.00, tir–tor 10.00–17.30; nødtilfeller +34 699 280 334"
       },
       "small_animals": true,
       "url": "https://veterinario-tarifa.com/",
@@ -4594,7 +4703,8 @@
         "cs": "Po–Pá 9:00–21:00, so 10:30–13:30; pohotovostní služba +34 673 761 007.",
         "sv": "mån–fre 9.00–21.00, lör 10.30–13.30; akutjour +34 673 761 007",
         "da": "Man–fre 9.00–21.00, lør 10.30–13.30; akutvagt +34 673 761 007",
-        "fi": "ma–pe klo 9.00–21.00, la klo 10.30–13.30; päivystys +34 673 761 007"
+        "fi": "ma–pe klo 9.00–21.00, la klo 10.30–13.30; päivystys +34 673 761 007",
+        "nb": "man–fre 9.00–21.00, lør 10.30–13.30; akuttjeneste +34 673 761 007"
       },
       "small_animals": true,
       "url": "https://veterinariosurbion.com/",
@@ -4624,7 +4734,8 @@
         "cs": "Pohotovostní případy se ošetřují; také +34 616 757 225.",
         "sv": "Akutfall tas emot; även +34 616 757 225",
         "da": "Akutte tilfælde tages imod; også +34 616 757 225",
-        "fi": "Päivystystapaukset otetaan vastaan; myös +34 616 757 225"
+        "fi": "Päivystystapaukset otetaan vastaan; myös +34 616 757 225",
+        "nb": "Nødtilfeller tas imot; også +34 616 757 225"
       },
       "small_animals": true,
       "url": "https://www.asivet.es/",
@@ -4668,7 +4779,8 @@
         "cs": "Po–Pá 9:15–19:00, so 11:00–14:00; pohotovostní služba pouze telefonicky +34 665 100 954.",
         "sv": "mån–fre 9.15–19.00, lör 11.00–14.00; akutjour endast per telefon +34 665 100 954",
         "da": "Man–fre 9.15–19.00, lør 11.00–14.00; akutvagt kun pr. telefon +34 665 100 954",
-        "fi": "ma–pe klo 9.15–19.00, la klo 11.00–14.00; vain puhelimitse toimiva päivystys +34 665 100 954"
+        "fi": "ma–pe klo 9.15–19.00, la klo 11.00–14.00; vain puhelimitse toimiva päivystys +34 665 100 954",
+        "nb": "man–fre 9.15–19.00, lør 11.00–14.00; akuttjeneste kun på telefon +34 665 100 954"
       },
       "small_animals": true,
       "url": "https://clinicavetsanantonio.com/",
@@ -4698,7 +4810,8 @@
         "cs": "Po–Pá 9:00–19:30, so 10:00–14:00; nepřetržitá pohotovostní péče +34 608 421 993. Druhé pracoviště: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988.",
         "sv": "mån–fre 9.00–19.30, lör 10.00–14.00; kontinuerlig akutvård +34 608 421 993. Ytterligare mottagning: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
         "da": "Man–fre 9.00–19.30, lør 10.00–14.00; kontinuerlig akutbehandling +34 608 421 993. Anden klinik: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
-        "fi": "ma–pe klo 9.00–19.30, la klo 10.00–14.00; jatkuva päivystyshoito +34 608 421 993. Toinen toimipiste: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988"
+        "fi": "ma–pe klo 9.00–19.30, la klo 10.00–14.00; jatkuva päivystyshoito +34 608 421 993. Toinen toimipiste: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
+        "nb": "man–fre 9.00–19.30, lør 10.00–14.00; akuttbehandling hele døgnet +34 608 421 993. Annen lokasjon: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988"
       },
       "small_animals": true,
       "url": "https://www.clinicaalbeitar.es/",
@@ -4728,7 +4841,8 @@
         "cs": "Mobil +34 696 649 550.",
         "sv": "Mobil +34 696 649 550",
         "da": "Mobil +34 696 649 550",
-        "fi": "Matkapuhelin +34 696 649 550"
+        "fi": "Matkapuhelin +34 696 649 550",
+        "nb": "Mobil +34 696 649 550"
       },
       "small_animals": true,
       "url": "https://veterinarianuevasegovia.com/",
@@ -4763,7 +4877,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -4794,7 +4909,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Exotic-animal clinic. Hours per COLVEMA listing."
     },
@@ -4825,7 +4941,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -4856,7 +4973,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -4887,7 +5005,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -4917,7 +5036,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -4948,7 +5068,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Mobile +34 654 916 566. Hours per COLVEMA listing."
     },
@@ -4978,7 +5099,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -5009,7 +5131,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -5039,7 +5162,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Mobile +34 608 112 251. Hours per COLVEMA listing."
     },
@@ -5070,7 +5194,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -5101,7 +5226,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "Hours per COLVEMA listing."
     },
@@ -5131,7 +5257,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou.",
         "sv": "Öppet dygnet runt med akutjour.",
         "da": "Døgnåben med akutvagt.",
-        "fi": "Auki 24 h ja päivystys."
+        "fi": "Auki 24 h ja päivystys.",
+        "nb": "Åpent hele døgnet med akuttjeneste."
       },
       "note": "COLVEMA listing gives no phone and no website (url = COLVEMA listing); contact by e-mail only on the listing. Hours per COLVEMA listing."
     },
@@ -5162,7 +5289,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5192,7 +5320,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5223,7 +5352,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5254,7 +5384,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5285,7 +5416,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5315,7 +5447,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5345,7 +5478,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5376,7 +5510,8 @@
         "cs": "Pouze nonstop telefonní linka; nejprve zavolejte.",
         "sv": "Endast telefonlinje dygnet runt; ring först.",
         "da": "Kun telefon døgnet rundt; ring først.",
-        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin."
+        "fi": "Vain puhelinpäivystys ympäri vuorokauden; soita ensin.",
+        "nb": "Kun telefonlinje hele døgnet; ring først."
       },
       "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
     },
@@ -5735,7 +5870,8 @@
         "cs": "Po–Pá 9:00–21:00, so 9:00–14:00; pohotovost mimo ordinační dobu +34 619 288 298.",
         "sv": "mån–fre 09.00–21.00, lör 09.00–14.00; akutfall utanför öppettiderna +34 619 288 298.",
         "da": "Man–fre 09.00–21.00, lør 09.00–14.00; akut uden for åbningstiden +34 619 288 298.",
-        "fi": "ma–pe klo 9.00–21.00, la klo 9.00–14.00; päivystys aukioloaikojen ulkopuolella +34 619 288 298."
+        "fi": "ma–pe klo 9.00–21.00, la klo 9.00–14.00; päivystys aukioloaikojen ulkopuolella +34 619 288 298.",
+        "nb": "man–fre 09.00–21.00, lør 09.00–14.00; nødtilfeller utenom åpningstid +34 619 288 298."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariakans.es/",
@@ -5766,7 +5902,8 @@
         "cs": "Po–Pá 10:00–20:00, so 10:00–13:30, v neděli zavřeno.",
         "sv": "mån–fre 10.00–20.00, lör 10.00–13.30, sön stängt.",
         "da": "Man–fre 10.00–20.00, lør 10.00–13.30, søn lukket.",
-        "fi": "ma–pe klo 10.00–20.00, la klo 10.00–13.30, su suljettu."
+        "fi": "ma–pe klo 10.00–20.00, la klo 10.00–13.30, su suljettu.",
+        "nb": "man–fre 10.00–20.00, lør 10.00–13.30, søn stengt."
       },
       "small_animals": true,
       "url": "https://www.eivivet.es/",
@@ -5795,7 +5932,8 @@
         "cs": "Po–Pá 9:00–20:00, so 9:00–14:00; samostatné pohotovostní číslo není.",
         "sv": "mån–fre 9.00–20.00, lör 9.00–14.00; inget separat akutnummer.",
         "da": "Man–fre 9.00–20.00, lør 9.00–14.00; intet separat akutnummer.",
-        "fi": "ma–pe klo 9.00–20.00, la klo 9.00–14.00; ei erillistä päivystysnumeroa."
+        "fi": "ma–pe klo 9.00–20.00, la klo 9.00–14.00; ei erillistä päivystysnumeroa.",
+        "nb": "man–fre 9.00–20.00, lør 9.00–14.00; ikke eget nødnummer."
       },
       "small_animals": true,
       "url": "https://www.vilaveterinaris.es/",
@@ -5838,7 +5976,8 @@
         "cs": "Po–Pá 9:30–13:30 a 17:00–20:00, so 11:00–13:00.",
         "sv": "mån–fre 09.30–13.30 och 17.00–20.00, lör 11.00–13.00.",
         "da": "Man–fre 09.30–13.30 og 17.00–20.00, lør 11.00–13.00.",
-        "fi": "ma–pe klo 9.30–13.30 ja 17.00–20.00, la klo 11.00–13.00."
+        "fi": "ma–pe klo 9.30–13.30 ja 17.00–20.00, la klo 11.00–13.00.",
+        "nb": "man–fre 09.30–13.30 og 17.00–20.00, lør 11.00–13.00."
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaperezsintes.com/",
@@ -5868,7 +6007,8 @@
         "cs": "Po, Út, Čt, Pá 9:30–14:30; St 16:00–20:00.",
         "sv": "mån, tis, tors, fre 09.30–14.30; ons 16.00–20.00.",
         "da": "Man, tir, tor, fre 09.30–14.30; ons 16.00–20.00.",
-        "fi": "ma, ti, to, pe klo 9.30–14.30; ke klo 16.00–20.00."
+        "fi": "ma, ti, to, pe klo 9.30–14.30; ke klo 16.00–20.00.",
+        "nb": "Man, tir, tor, fre 09.30–14.30; ons 16.00–20.00."
       },
       "small_animals": true,
       "url": "https://www.vetmenorca.com/",
@@ -5897,7 +6037,8 @@
         "cs": "Po/St/Pá 9:00–15:00, Út/Čt 9:00–19:00, so 10:00–14:00.",
         "sv": "mån/ons/fre 9.00–15.00, tis/tors 9.00–19.00, lör 10.00–14.00.",
         "da": "Man/ons/fre 9.00–15.00, tir/tor 9.00–19.00, lør 10.00–14.00.",
-        "fi": "ma/ke/pe klo 9.00–15.00, ti/to klo 9.00–19.00, la klo 10.00–14.00."
+        "fi": "ma/ke/pe klo 9.00–15.00, ti/to klo 9.00–19.00, la klo 10.00–14.00.",
+        "nb": "man/ons/fre 9.00–15.00, tir/tor 9.00–19.00, lør 10.00–14.00."
       },
       "small_animals": true,
       "url": "https://atlanticoveterinarios.com/",
@@ -5927,7 +6068,8 @@
         "cs": "Nonstop pohotovostní služba; druhé pracoviště Tomares, Av. Blas Infante 1, +34 954 152 208; nejprve zavolejte.",
         "sv": "Akutjour dygnet runt; ytterligare mottagning Tomares, Av. Blas Infante 1, +34 954 152 208; ring först.",
         "da": "Akutvagt døgnet rundt; anden klinik i Tomares, Av. Blas Infante 1, +34 954 152 208; ring på forhånd.",
-        "fi": "Ympärivuorokautinen päivystys; toinen toimipiste Tomares, Av. Blas Infante 1, +34 954 152 208; soita ensin."
+        "fi": "Ympärivuorokautinen päivystys; toinen toimipiste Tomares, Av. Blas Infante 1, +34 954 152 208; soita ensin.",
+        "nb": "Akuttjeneste hele døgnet; en filial i Tomares, Av. Blas Infante 1, +34 954 152 208; ring først."
       },
       "small_animals": true,
       "url": "https://www.unavets.com/catdog/es/servicios/",
@@ -5958,7 +6100,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/3279-hospital-veterinario-alcor-i",
@@ -5988,7 +6131,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/27912-hospital-veterinario-alcor-3",
@@ -6018,7 +6162,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://cvlaestacion.com",
@@ -6048,7 +6193,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.suveterinario.es",
@@ -6078,7 +6224,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://canitasveterinaria.com/",
@@ -6109,7 +6256,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.simbiosisveterinaria.com",
@@ -6139,7 +6287,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.hvchopera.com",
@@ -6169,7 +6318,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/28600-hospital-veterinario-madrid-norte",
@@ -6199,7 +6349,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/28530-liberavet-hospital-24h",
@@ -6229,7 +6380,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/28021-canitas-cc-sambil",
@@ -6260,7 +6412,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/1050-ciudad-de-los-angeles-centro-veterinario",
@@ -6290,7 +6443,8 @@
         "cs": "Otevřeno nonstop s pohotovostní službou; nonstop telefonní linka.",
         "sv": "Öppet dygnet runt med akutjour; telefonlinje dygnet runt",
         "da": "Døgnåben med akutvagt; telefon døgnet rundt",
-        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys"
+        "fi": "Auki 24 h ja päivystys; ympärivuorokautinen puhelinpäivystys",
+        "nb": "Åpent hele døgnet med akuttjeneste; døgnåpen telefon"
       },
       "small_animals": true,
       "url": "https://veterinarioexoticosmadrid.com",
@@ -6321,7 +6475,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.veterinariaparlaeste.com",
@@ -6352,7 +6507,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariadobermann.es",
@@ -6383,7 +6539,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaoporto.com",
@@ -6414,7 +6571,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://petandhealth.es/",
@@ -6445,7 +6603,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.sanacanclinicaveterinaria.com",
@@ -6476,7 +6635,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/27922-bluevet-noroeste",
@@ -6507,7 +6667,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.alegrapet.es",
@@ -6538,7 +6699,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.centrosveterinariosmascoteros.com",
@@ -6569,7 +6731,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.colvema.org/centro-veterinario/1318-la-serna-clinica-veterinaria",
@@ -6600,7 +6763,8 @@
         "cs": "Pohotovostní služba; pouze nonstop telefonní linka (není otevřeno nonstop).",
         "sv": "Akutjour; endast telefonlinje dygnet runt (har inte öppet dygnet runt)",
         "da": "Akutvagt; kun telefon døgnet rundt (ikke døgnåben)",
-        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)"
+        "fi": "Päivystys; vain ympärivuorokautinen puhelinpäivystys (ei auki 24 h)",
+        "nb": "Dyrlegevakt; kun vakttelefon hele døgnet (ikke åpent hele døgnet)"
       },
       "small_animals": true,
       "url": "https://www.clinicaveterinariaparquedelosestados.es",
@@ -6631,7 +6795,8 @@
         "cs": "Pohotovost nonstop po telefonu 971 56 74 74; klinika Po–Pá 9:00–20:00, so, ne a o svátcích 9:00–13:00.",
         "sv": "Akutfall dygnet runt per telefon 971 56 74 74; klinik mån–fre 9–20, lör/sön/helgdagar 9–13",
         "da": "Akut døgnet rundt pr. telefon 971 56 74 74; klinik man–fre 9–20, lør/søn/helligdage 9–13",
-        "fi": "Päivystys 24 h puhelimitse 971 56 74 74; klinikka ma–pe klo 9–20, la/su/pyhäpäivinä klo 9–13"
+        "fi": "Päivystys 24 h puhelimitse 971 56 74 74; klinikka ma–pe klo 9–20, la/su/pyhäpäivinä klo 9–13",
+        "nb": "Nødtilfeller hele døgnet på telefon 971 56 74 74; klinikk man–fre 9–20, lør/søn/helligdager 9–13"
       },
       "small_animals": true,
       "url": "https://www.veterclinic.es/",
@@ -6661,7 +6826,8 @@
         "cs": "Po/St/Pá 9:00–14:00, Út/Čt 16:00–19:30; o víkendech a svátcích zavřeno (pohotovost přes Veterclínic Son Servera 971 56 74 74).",
         "sv": "mån/ons/fre 9–14, tis/tors 16–19.30; stängt helger och helgdagar (akutfall via Veterclínic Son Servera 971 56 74 74)",
         "da": "Man/ons/fre 9–14, tir/tor 16–19.30; weekend og helligdage lukket (akut via Veterclínic Son Servera 971 56 74 74)",
-        "fi": "ma/ke/pe klo 9–14, ti/to klo 16–19.30; viikonloppuisin ja pyhäpäivinä suljettu (päivystys Veterclínic Son Serveran kautta 971 56 74 74)"
+        "fi": "ma/ke/pe klo 9–14, ti/to klo 16–19.30; viikonloppuisin ja pyhäpäivinä suljettu (päivystys Veterclínic Son Serveran kautta 971 56 74 74)",
+        "nb": "man/ons/fre 9–14, tir/tor 16–19.30; stengt i helger og på helligdager (nødtilfeller via Veterclínic Son Servera 971 56 74 74)"
       },
       "small_animals": true,
       "url": "https://www.veterclinic.es/",

@@ -79,7 +79,8 @@
         "cs": "Univerzitní nemocnice pro malá zvířata přístupná veřejnosti, která slouží také SPCA a policejní jednotce K9. Před cestou zavolejte nebo se na UNAM zeptejte na ordinační dobu a pohotovost.",
         "sv": "Universitetets smådjurssjukhus, öppet för allmänheten, som även betjänar SPCA och polisens K9-enhet. Ring innan du kommer eller kontakta UNAM för öppettider och akutfall.",
         "da": "Universitetets dyrehospital for små dyr, åbent for alle; betjener også SPCA og politiets K9-enhed. Ring på forhånd eller kontakt UNAM for åbningstider og akutte tilfælde.",
-        "fi": "Yleisölle avoin yliopiston pieneläinsairaala, joka palvelee myös eläinsuojeluyhdistystä (SPCA) ja poliisin koiraryhmää. Soita etukäteen tai ota yhteyttä UNAMiin ja kysy aukioloajat ja päivystys."
+        "fi": "Yleisölle avoin yliopiston pieneläinsairaala, joka palvelee myös eläinsuojeluyhdistystä (SPCA) ja poliisin koiraryhmää. Soita etukäteen tai ota yhteyttä UNAMiin ja kysy aukioloajat ja päivystys.",
+        "nb": "Universitetssykehus for smådyr, åpent for publikum, og betjener også dyrevernet (SPCA) og politiets hundeenhet. Ring på forhånd eller kontakt UNAM for åpningstider og nødtilfeller."
       }
     },
     {
@@ -104,7 +105,8 @@
         "cs": "Nemocnice pro malá zvířata s pohotovostní službou veterináře; v případě pohotovosti volejte 081 124 9052. Pobočka Okahandja 062 500 969 v ordinační době.",
         "sv": "Smådjurssjukhus med jourhavande veterinär; ring 081 124 9052 vid akutfall. Filialen i Okahandja 062 500 969 under öppettid.",
         "da": "Dyrehospital for små dyr med dyrlæge i vagt; ring på 081 124 9052 ved akutte tilfælde. Afdelingen i Okahandja 062 500 969 i åbningstiden.",
-        "fi": "Pieneläinsairaala, jossa eläinlääkäri päivystysvalmiudessa; päivystystapauksissa soita 081 124 9052. Okahandjan toimipiste 062 500 969 aukioloaikoina."
+        "fi": "Pieneläinsairaala, jossa eläinlääkäri päivystysvalmiudessa; päivystystapauksissa soita 081 124 9052. Okahandjan toimipiste 062 500 969 aukioloaikoina.",
+        "nb": "Smådyrsykehus med dyrlege på vakt; ring 081 124 9052 ved nødtilfeller. Filialen i Okahandja 062 500 969 i åpningstiden."
       }
     },
     {
@@ -128,7 +130,8 @@
         "cs": "Pohotovostní číslo +264 81 877 9708; WhatsApp +264 81 375 5701. Ordinační dobu zjistěte telefonicky před cestou.",
         "sv": "Akutnummer +264 81 877 9708; WhatsApp +264 81 375 5701. Ring innan du kommer för öppettider.",
         "da": "Akutnummer +264 81 877 9708; WhatsApp +264 81 375 5701. Ring på forhånd for åbningstider.",
-        "fi": "Päivystysnumero +264 81 877 9708; WhatsApp +264 81 375 5701. Soita etukäteen ja kysy aukioloajat."
+        "fi": "Päivystysnumero +264 81 877 9708; WhatsApp +264 81 375 5701. Soita etukäteen ja kysy aukioloajat.",
+        "nb": "Akuttnummer +264 81 877 9708; WhatsApp +264 81 375 5701. Ring på forhånd for åpningstider."
       }
     },
     {
@@ -151,7 +154,8 @@
         "cs": "Praxe zaměřená na koně s výjezdní veterinární službou; v případě pohotovosti volejte.",
         "sv": "Veterinärpraktik med inriktning på hästar och mobil veterinärtjänst; ring vid akutfall.",
         "da": "Hestepraksis med mobil dyrlægetjeneste; ring ved akutte tilfælde.",
-        "fi": "Hevosiin keskittyvä vastaanotto, jolla on liikkuva eläinlääkäripalvelu; päivystystapauksissa soita."
+        "fi": "Hevosiin keskittyvä vastaanotto, jolla on liikkuva eläinlääkäripalvelu; päivystystapauksissa soita.",
+        "nb": "Hestefokusert praksis med mobil dyrlegetjeneste; ring ved nødtilfeller."
       }
     },
     {
@@ -173,7 +177,8 @@
         "cs": "Uvedeno městem Swakopmund pro záležitosti zvířat mimo ordinační dobu: veterinář 064 405 207; zraněná nebo nemocná zvířata 081 124 4152. Ordinační dobu zjistěte telefonicky.",
         "sv": "Listad av Swakopmunds kommun för djurärenden utanför öppettid: veterinär 064 405 207; skadade eller sjuka djur 081 124 4152. Ring innan du kommer för öppettider.",
         "da": "Opført af Swakopmund kommune ved dyrerelaterede henvendelser uden for åbningstid: dyrlæge 064 405 207; tilskadekomne eller syge dyr 081 124 4152. Ring på forhånd for åbningstider.",
-        "fi": "Swakopmundin kunnan listaus aukioloaikojen ulkopuolisia eläinasioita varten: eläinlääkäri 064 405 207; loukkaantuneet tai sairaat eläimet 081 124 4152. Soita etukäteen ja kysy aukioloajat."
+        "fi": "Swakopmundin kunnan listaus aukioloaikojen ulkopuolisia eläinasioita varten: eläinlääkäri 064 405 207; loukkaantuneet tai sairaat eläimet 081 124 4152. Soita etukäteen ja kysy aukioloajat.",
+        "nb": "Oppført av Swakopmund kommune for dyresaker utenom åpningstid: dyrlege 064 405 207; skadde eller syke dyr 081 124 4152. Ring på forhånd for åpningstider."
       }
     }
   ],

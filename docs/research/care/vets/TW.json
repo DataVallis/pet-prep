@@ -50,7 +50,8 @@
         "cs": "Nonstop záchranná linka pro zraněná nebo toulavá zvířata (také přes taipejskou městskou linku 1999). Nejde o veterinární kliniku.",
         "sv": "Räddningsjour dygnet runt för skadade eller herrelösa djur (även via Taipeis medborgarlinje 1999). Ingen veterinärklinik.",
         "da": "Døgnåben redningshotline for tilskadekomne eller herreløse dyr (også via Taipeis borgerhotline 1999). Ikke en dyreklinik.",
-        "fi": "Loukkaantuneiden tai kulkueläinten pelastuspuhelin 24 h (myös Taipein kaupungin asukaspuhelimen 1999 kautta). Ei ole eläinlääkäriklinikka."
+        "fi": "Loukkaantuneiden tai kulkueläinten pelastuspuhelin 24 h (myös Taipein kaupungin asukaspuhelimen 1999 kautta). Ei ole eläinlääkäriklinikka.",
+        "nb": "Redningstelefon hele døgnet for skadde eller omstreifende dyr (også via Taipeis innbyggertelefon 1999). Ikke en dyreklinikk."
       }
     },
     {
@@ -75,7 +76,8 @@
         "cs": "Nonstop centrum pohotovostní a intenzivní péče; pohotovostní péče po celý rok (upozornění k svátkům). Před cestou zavolejte.",
         "sv": "Akut- och intensivvårdscentral dygnet runt; akutvård året runt (meddelande inför helger). Ring innan du kommer.",
         "da": "Døgnåbent akut- og intensivcenter; akut hjælp hele året (se meddelelse om helligdage). Ring på forhånd.",
-        "fi": "Päivystys- ja tehohoitokeskus 24 h; päivystys ympäri vuoden (huomioi lomailmoitukset). Soita etukäteen."
+        "fi": "Päivystys- ja tehohoitokeskus 24 h; päivystys ympäri vuoden (huomioi lomailmoitukset). Soita etukäteen.",
+        "nb": "Akutt- og intensivsenter åpent hele døgnet; akuttberedskap hele året (varsel om helligdager). Ring på forhånd."
       }
     },
     {
@@ -100,7 +102,8 @@
         "cs": "Nonstop pohotovostní péče pro kočky a psy. Před cestou zavolejte.",
         "sv": "Akutvård för katter och hundar dygnet runt. Ring innan du kommer.",
         "da": "Akut hjælp døgnet rundt til katte og hunde. Ring på forhånd.",
-        "fi": "Kissojen ja koirien päivystys 24 h. Soita etukäteen."
+        "fi": "Kissojen ja koirien päivystys 24 h. Soita etukäteen.",
+        "nb": "Akuttbehandling av katter og hunder hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -125,7 +128,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -150,7 +154,8 @@
         "cs": "Nonstop pohotovostní péče. Před cestou zavolejte.",
         "sv": "Akutvård dygnet runt. Ring innan du kommer.",
         "da": "Akut hjælp døgnet rundt. Ring på forhånd.",
-        "fi": "Päivystys 24 h. Soita etukäteen."
+        "fi": "Päivystys 24 h. Soita etukäteen.",
+        "nb": "Akuttbehandling hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -175,7 +180,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -200,7 +206,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -225,7 +232,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -250,7 +258,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges ha öppet dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -275,7 +284,8 @@
         "cs": "Noční pohotovostní služba a nonstop hospitalizace. Před cestou zavolejte.",
         "sv": "Nattjour för akutfall och slutenvård dygnet runt. Ring innan du kommer.",
         "da": "Akutvagt om natten og indlæggelse døgnet rundt. Ring på forhånd.",
-        "fi": "Yöpäivystys ja vuodeosastohoito 24 h. Soita etukäteen."
+        "fi": "Yöpäivystys ja vuodeosastohoito 24 h. Soita etukäteen.",
+        "nb": "Akuttjeneste natt og døgnåpen innleggelse. Ring på forhånd."
       }
     },
     {
@@ -300,7 +310,8 @@
         "cs": "Pohotovostní nemocnice pro kočky a psy; o hospitalizovaná zvířata je na místě nonstop postaráno. Před cestou zavolejte.",
         "sv": "Akutsjukhus för katter och hundar; personal på plats dygnet runt för inlagda djur. Ring innan du kommer.",
         "da": "Akuthospital for katte og hunde; personale til stede døgnet rundt hos indlagte kæledyr. Ring på forhånd.",
-        "fi": "Kissojen ja koirien päivystyssairaala; henkilökunta paikalla ympäri vuorokauden sairaalahoidossa oleville eläimille. Soita etukäteen."
+        "fi": "Kissojen ja koirien päivystyssairaala; henkilökunta paikalla ympäri vuorokauden sairaalahoidossa oleville eläimille. Soita etukäteen.",
+        "nb": "Akuttsykehus for katter og hunder; personell på stedet døgnet rundt for innlagte dyr. Ring på forhånd."
       }
     },
     {
@@ -325,7 +336,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -350,7 +362,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -375,7 +388,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -400,7 +414,8 @@
         "cs": "Otevírací dobu potvrďte telefonicky.",
         "sv": "Ring för att bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
-        "fi": "Varmista aukioloajat soittamalla."
+        "fi": "Varmista aukioloajat soittamalla.",
+        "nb": "Ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -425,7 +440,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -450,7 +466,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -475,7 +492,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -500,7 +518,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -525,7 +544,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -550,7 +570,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -575,7 +596,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -600,7 +622,8 @@
         "cs": "Nonstop centrum pohotovostní a intenzivní péče. Před cestou zavolejte.",
         "sv": "Akut- och intensivvårdscentral dygnet runt. Ring innan du kommer.",
         "da": "Døgnåbent akut- og intensivcenter. Ring på forhånd.",
-        "fi": "Päivystys- ja tehohoitokeskus 24 h. Soita etukäteen."
+        "fi": "Päivystys- ja tehohoitokeskus 24 h. Soita etukäteen.",
+        "nb": "Akutt- og intensivsenter åpent hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -625,7 +648,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -650,7 +674,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -675,7 +700,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -700,7 +726,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -725,7 +752,8 @@
         "cs": "Nonstop pohotovost. Před cestou zavolejte.",
         "sv": "Akut dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutmodtagelse. Ring på forhånd.",
-        "fi": "Päivystys 24 h. Soita etukäteen."
+        "fi": "Päivystys 24 h. Soita etukäteen.",
+        "nb": "Akutt hjelp hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -750,7 +778,8 @@
         "cs": "Nonstop pohotovost. Před cestou zavolejte.",
         "sv": "Akut dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutmodtagelse. Ring på forhånd.",
-        "fi": "Päivystys 24 h. Soita etukäteen."
+        "fi": "Päivystys 24 h. Soita etukäteen.",
+        "nb": "Akutt hjelp hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -775,7 +804,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -800,7 +830,8 @@
         "cs": "Pohotovostní nebo prodloužená otevírací doba uváděná v přehledech klinik, hlavně o svátcích. Před cestou zavolejte a ověřte si ji.",
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
-        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen."
+        "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
       }
     },
     {
@@ -825,7 +856,8 @@
         "cs": "Noční pohotovostní služba. Před cestou zavolejte.",
         "sv": "Nattjour för akutfall. Ring innan du kommer.",
         "da": "Akutvagt om natten. Ring på forhånd.",
-        "fi": "Yöpäivystys. Soita etukäteen."
+        "fi": "Yöpäivystys. Soita etukäteen.",
+        "nb": "Akuttjeneste natt. Ring på forhånd."
       }
     },
     {
@@ -850,7 +882,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -875,7 +908,8 @@
         "cs": "Nonstop pohotovost. Před cestou zavolejte.",
         "sv": "Akut dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutmodtagelse. Ring på forhånd.",
-        "fi": "Päivystys 24 h. Soita etukäteen."
+        "fi": "Päivystys 24 h. Soita etukäteen.",
+        "nb": "Akutt hjelp hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -900,7 +934,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -925,7 +960,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -950,7 +986,8 @@
         "cs": "Uváděno jako nonstop klinika; otevírací dobu si ověřte telefonicky.",
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
-        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla."
+        "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -975,7 +1012,8 @@
         "cs": "Otevírací dobu potvrďte telefonicky.",
         "sv": "Ring för att bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
-        "fi": "Varmista aukioloajat soittamalla."
+        "fi": "Varmista aukioloajat soittamalla.",
+        "nb": "Ring for å bekrefte åpningstidene."
       }
     },
     {
@@ -1000,7 +1038,8 @@
         "cs": "Otevírací dobu potvrďte telefonicky.",
         "sv": "Ring för att bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
-        "fi": "Varmista aukioloajat soittamalla."
+        "fi": "Varmista aukioloajat soittamalla.",
+        "nb": "Ring for å bekrefte åpningstidene."
       }
     }
   ],

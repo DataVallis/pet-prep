@@ -68,7 +68,8 @@
         "cs": "Otevřeno nonstop jako traumatologická a pohotovostní veterinární služba mimo ordinační dobu; WhatsApp +27 83 287 2459",
         "sv": "Öppet dygnet runt som jourveterinär för trauma och akutfall utanför ordinarie tid; WhatsApp +27 83 287 2459",
         "da": "Åben døgnet rundt som akutdyrlæge ved traumer og nødsituationer uden for åbningstid; WhatsApp +27 83 287 2459",
-        "fi": "Auki 24/7 trauma- ja päivystysklinikkana aukioloaikojen ulkopuolella; WhatsApp +27 83 287 2459"
+        "fi": "Auki 24/7 trauma- ja päivystysklinikkana aukioloaikojen ulkopuolella; WhatsApp +27 83 287 2459",
+        "nb": "Åpent hele døgnet som dyrlegevakt for traumer og nødtilfeller utenom ordinær åpningstid; WhatsApp +27 83 287 2459"
       },
       "small_animals": true,
       "url": "https://aecvet.co.za/",
@@ -96,7 +97,8 @@
         "cs": "Otevřeno nonstop, každý den v roce; nonstop pohotovostní služba",
         "sv": "Öppet dygnet runt, årets alla dagar; akutmottagning dygnet runt",
         "da": "Åbent døgnet rundt, alle årets dage; akutvagt døgnet rundt",
-        "fi": "Auki 24 h vuoden jokaisena päivänä; päivystys 24 h"
+        "fi": "Auki 24 h vuoden jokaisena päivänä; päivystys 24 h",
+        "nb": "Åpent hele døgnet, alle dager i året; døgnåpen akuttjeneste"
       },
       "small_animals": true,
       "url": "https://www.fourwaysvet.co.za/",
@@ -124,7 +126,8 @@
         "cs": "Otevřeno nonstop pro pohotovosti domácích zvířat. Pohotovostní linka 079 390 0696 (linka při výpadcích proudu 071 695 8885)",
         "sv": "Öppet dygnet runt för akutfall med husdjur. Akutlinje 079 390 0696 (linje vid strömavbrott 071 695 8885)",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon 079 390 0696 (linje ved strømafbrydelser 071 695 8885)",
-        "fi": "Auki 24/7 lemmikkien päivystystapauksille. Päivystysnumero 079 390 0696 (numero sähkökatkojen ajaksi 071 695 8885)"
+        "fi": "Auki 24/7 lemmikkien päivystystapauksille. Päivystysnumero 079 390 0696 (numero sähkökatkojen ajaksi 071 695 8885)",
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje 079 390 0696 (linje ved strømkutt 071 695 8885)"
       },
       "small_animals": true,
       "url": "https://animania.co.za/",
@@ -152,7 +155,8 @@
         "cs": "Otevřeno nonstop; nonstop pohotovostní služba",
         "sv": "Öppet dygnet runt; akutmottagning dygnet runt",
         "da": "Åbent døgnet rundt; akutvagt døgnet rundt",
-        "fi": "Auki 24 h; päivystys 24 h"
+        "fi": "Auki 24 h; päivystys 24 h",
+        "nb": "Åpent hele døgnet; døgnåpen akuttjeneste"
       },
       "small_animals": true,
       "url": "https://germistonvet.co.za/",
@@ -179,7 +183,8 @@
         "cs": "Nonstop pohotovostní a specializovaná referenční nemocnice; běžné konzultace na objednání (Po–Pá 8:00–18:30, so–ne a státní svátky 9:00–18:00); mimo ordinační dobu se účtují příplatky",
         "sv": "Specialist- och akutdjursjukhus för remisser, öppet dygnet runt; ordinarie konsultationer efter tidsbokning (mån–fre 8.00–18.30, lör–sön och helgdagar 9.00–18.00); jourtillägg tillkommer",
         "da": "Døgnåbent akut- og henvisningshospital med specialister; almindelige konsultationer efter aftale (man–fre 8.00–18.30, lør–søn og helligdage 9.00–18.00); tillæg uden for åbningstid",
-        "fi": "Päivystys- ja erikoissairaala 24 h; tavallinen vastaanotto ajanvarauksella (ma–pe 8.00–18.30, la–su ja pyhäpäivinä 9.00–18.00); aukioloajan ulkopuolella lisämaksuja"
+        "fi": "Päivystys- ja erikoissairaala 24 h; tavallinen vastaanotto ajanvarauksella (ma–pe 8.00–18.30, la–su ja pyhäpäivinä 9.00–18.00); aukioloajan ulkopuolella lisämaksuja",
+        "nb": "Akutt spesialist- og henvisningssykehus åpent hele døgnet; ordinære konsultasjoner etter timebestilling (man–fre kl. 08.00–18.30, lør–søn og helligdager kl. 09.00–18.00); tillegg utenom åpningstid"
       },
       "small_animals": true,
       "url": "http://bryanstonvet.co.za/",
@@ -207,7 +212,8 @@
         "cs": "Nonstop pohotovostní péče bez objednání; nonstop monitorování na JIP",
         "sv": "Akutvård dygnet runt utan tidsbokning; intensivövervakning dygnet runt",
         "da": "Akut hjælp uden tidsbestilling døgnet rundt; intensivovervågning døgnet rundt",
-        "fi": "Päivystys ilman ajanvarausta 24/7; tehovalvonta 24/7"
+        "fi": "Päivystys ilman ajanvarausta 24/7; tehovalvonta 24/7",
+        "nb": "Akuttbehandling uten timebestilling hele døgnet; intensivovervåking hele døgnet"
       },
       "small_animals": true,
       "url": "https://www.valleyfarmvet.co.za/",
@@ -235,7 +241,8 @@
         "cs": "Výuková nemocnice. Malá zvířata: v pracovní dny 9:00–19:00, so 9:00–12:00; sazby mimo ordinační dobu v pracovní dny 6:00–8:00 a 19:00–23:00, so 12:00–23:00, ne 6:00–23:00. Doporučujeme se objednat; před cestou zavolejte",
         "sv": "Universitetsdjursjukhus. Smådjur: vardagar 09.00–19.00, lör 09.00–12.00; jourtaxa vardagar 06.00–08.00 och 19.00–23.00, lör 12.00–23.00, sön 06.00–23.00. Tidsbokning rekommenderas; ring innan du åker",
         "da": "Undervisningshospital. Små dyr: hverdage 9.00–19.00, lør 9.00–12.00; takster uden for åbningstid hverdage 6.00–8.00 og 19.00–23.00, lør 12.00–23.00, søn 6.00–23.00. Tidsbestilling anbefales; ring, før du kører derhen",
-        "fi": "Opetussairaala. Pieneläimet: arkisin 9.00–19.00, la 9.00–12.00; aukioloajan ulkopuoliset hinnat arkisin 6.00–8.00 ja 19.00–23.00, la 12.00–23.00, su 6.00–23.00. Ajanvaraus suositeltava; soita ennen matkaa"
+        "fi": "Opetussairaala. Pieneläimet: arkisin 9.00–19.00, la 9.00–12.00; aukioloajan ulkopuoliset hinnat arkisin 6.00–8.00 ja 19.00–23.00, la 12.00–23.00, su 6.00–23.00. Ajanvaraus suositeltava; soita ennen matkaa",
+        "nb": "Universitetssykehus. Smådyr: hverdager 9.00–19.00, lør 9.00–12.00; kvelds-/helgetakst hverdager 6.00–8.00 og 19.00–23.00, lør 12.00–23.00, søn 6.00–23.00. Timebestilling anbefales; ring før du kommer"
       },
       "small_animals": true,
       "url": "https://www.up.ac.za/veterinary-hospital",
@@ -261,7 +268,8 @@
         "cs": "Po–Pá 7:00–18:00, so 8:00–13:00; pohotovostní linka 084 404 1119; návštěvy doma +27 12 804 8901",
         "sv": "Mån–fre 7.00–18.00, lör 8.00–13.00; akutlinje 084 404 1119; hembesök +27 12 804 8901",
         "da": "man–fre 7.00–18.00, lør 8.00–13.00; akuttelefon 084 404 1119; hjemmebesøg +27 12 804 8901",
-        "fi": "ma–pe 7.00–18.00, la 8.00–13.00; päivystysnumero 084 404 1119; kotikäynnit +27 12 804 8901"
+        "fi": "ma–pe 7.00–18.00, la 8.00–13.00; päivystysnumero 084 404 1119; kotikäynnit +27 12 804 8901",
+        "nb": "Man–fre 7.00–18.00, lør 8.00–13.00; nødlinje 084 404 1119; hjemmebesøk +27 12 804 8901"
       },
       "small_animals": true,
       "url": "https://valdegrace.co.za/",
@@ -288,7 +296,8 @@
         "cs": "Zkušený veterinář v pohotovosti nonstop; běžná otevírací doba Po–Pá 7:00–19:00, so 8:00–13:00; mimo ordinační dobu příplatek",
         "sv": "Erfaren veterinär i tjänst dygnet runt för akutfall; ordinarie öppettider mån–fre 7.00–19.00, lör 8.00–13.00; jourtillägg tillkommer",
         "da": "Erfaren dyrlæge på vagt døgnet rundt ved akutte tilfælde; almindelige åbningstider man–fre 7.00–19.00, lør 8.00–13.00; tillæg uden for åbningstid",
-        "fi": "Kokenut eläinlääkäri päivystämässä 24/7 hätätapauksille; normaali aukioloaika ma–pe 7.00–19.00, la 8.00–13.00; aukioloajan ulkopuolella lisämaksu"
+        "fi": "Kokenut eläinlääkäri päivystämässä 24/7 hätätapauksille; normaali aukioloaika ma–pe 7.00–19.00, la 8.00–13.00; aukioloajan ulkopuolella lisämaksu",
+        "nb": "Erfaren dyrlege på vakt hele døgnet for nødtilfeller; vanlig åpningstid man–fre 7.00–19.00, lør 8.00–13.00; tillegg utenom åpningstid"
       },
       "small_animals": true,
       "url": "https://panoramavet.co.za/",
@@ -316,7 +325,8 @@
         "cs": "Pohotovost otevřena nonstop; pohotovostní linka 021 91 911 91; příplatek za pohotovost mimo ordinační dobu",
         "sv": "Öppet dygnet runt för akutfall; akutlinje 021 91 911 91; tillägg för akutfall utanför veterinärens ordinarie tider",
         "da": "Åbent døgnet rundt ved akutte tilfælde; akuttelefon 021 91 911 91; tillæg for akutte tilfælde uden for dyrlægens åbningstid",
-        "fi": "Auki 24 h päivystystapauksille; päivystysnumero 021 91 911 91; päivystysmaksu eläinlääkärin aukioloajan ulkopuolella"
+        "fi": "Auki 24 h päivystystapauksille; päivystysnumero 021 91 911 91; päivystysmaksu eläinlääkärin aukioloajan ulkopuolella",
+        "nb": "Åpent hele døgnet for nødtilfeller; akuttelefon 021 91 911 91; tillegg for nødtilfeller utenom dyrlegens åpningstid"
       },
       "small_animals": true,
       "url": "https://tah.co.za/bellville/",
@@ -344,7 +354,8 @@
         "cs": "Pohotovost otevřena nonstop; příplatek mimo běžnou ordinační dobu",
         "sv": "Öppet dygnet runt för akutfall; tillägg utanför veterinärens ordinarie tider",
         "da": "Åbent døgnet rundt ved akutte tilfælde; tillæg uden for almindelig åbningstid",
-        "fi": "Auki 24 h päivystystapauksille; lisämaksu normaalin aukioloajan ulkopuolella"
+        "fi": "Auki 24 h päivystystapauksille; lisämaksu normaalin aukioloajan ulkopuolella",
+        "nb": "Åpent hele døgnet for nødtilfeller; tillegg utenom ordinær åpningstid hos dyrlegen"
       },
       "small_animals": true,
       "url": "https://tah.co.za/rosmead/",
@@ -372,7 +383,8 @@
         "cs": "Ordinační doba Po–Pá 8:00–18:30, so 8:00–12:30, v neděli a o státních svátcích zavřeno; pohotovosti řeší TAH Bellville (021 91 911 91) nebo TAH Rosmead (021 674 0034)",
         "sv": "Mottagningstider mån–fre 8.00–18.30, lör 8.00–12.30, stängt sön och helgdagar; akutfall hänvisas till TAH Bellville (021 91 911 91) eller TAH Rosmead (021 674 0034)",
         "da": "Dyrlægens åbningstid man–fre 8.00–18.30, lør 8.00–12.30, lukket søndage og helligdage; akutte tilfælde henvises til TAH Bellville (021 91 911 91) eller TAH Rosmead (021 674 0034)",
-        "fi": "Eläinlääkärin vastaanotto ma–pe 8.00–18.30, la 8.00–12.30, su ja pyhäpäivinä suljettu; päivystystapaukset ohjataan TAH Bellvilleen (021 91 911 91) tai TAH Rosmeadiin (021 674 0034)"
+        "fi": "Eläinlääkärin vastaanotto ma–pe 8.00–18.30, la 8.00–12.30, su ja pyhäpäivinä suljettu; päivystystapaukset ohjataan TAH Bellvilleen (021 91 911 91) tai TAH Rosmeadiin (021 674 0034)",
+        "nb": "Åpningstid man–fre 8.00–18.30, lør 8.00–12.30, stengt søndager og helligdager; nødtilfeller henvises til TAH Bellville (021 91 911 91) eller TAH Rosmead (021 674 0034)"
       },
       "small_animals": true,
       "url": "https://tah.co.za/green-point/",
@@ -398,7 +410,8 @@
         "cs": "Ordinační doba Po–Pá 8:30–13:00 a 14:00–17:30, so 9:00–12:00; v neděli a o státních svátcích zavřeno; pohotovost: TAH Rosmead 021 674 0034",
         "sv": "Mottagningstider mån–fre 8.30–13.00 och 14.00–17.30, lör 9.00–12.00; stängt sön och helgdagar; akutfall: TAH Rosmead 021 674 0034",
         "da": "Dyrlægens åbningstid man–fre 8.30–13.00 og 14.00–17.30, lør 9.00–12.00; lukket søndage og helligdage; akut: TAH Rosmead 021 674 0034",
-        "fi": "Eläinlääkärin vastaanotto ma–pe 8.30–13.00 ja 14.00–17.30, la 9.00–12.00; su ja pyhäpäivinä suljettu; päivystys: TAH Rosmead 021 674 0034"
+        "fi": "Eläinlääkärin vastaanotto ma–pe 8.30–13.00 ja 14.00–17.30, la 9.00–12.00; su ja pyhäpäivinä suljettu; päivystys: TAH Rosmead 021 674 0034",
+        "nb": "Åpningstid man–fre 8.30–13.00 og 14.00–17.30, lør 9.00–12.00; stengt søndager og helligdager; nødtilfeller: TAH Rosmead 021 674 0034"
       },
       "small_animals": true,
       "url": "https://tah.co.za/kenilworth/",
@@ -424,7 +437,8 @@
         "cs": "Po–Pá 8:00–18:30, so 9:00–12:00 a 17:00–18:00, ne a státní svátky 10:00–11:00 a 17:00–17:30; telefon pro pohotovost 021 674 4090; příplatek mimo ordinační dobu",
         "sv": "Mån–fre 8.00–18.30, lör 9.00–12.00 och 17.00–18.00, sön och helgdagar 10.00–11.00 och 17.00–17.30; akuttelefon 021 674 4090; jourtillägg",
         "da": "man–fre 8.00–18.30, lør 9.00–12.00 og 17.00–18.00, søn og helligdage 10.00–11.00 og 17.00–17.30; akuttelefon 021 674 4090; tillæg uden for åbningstid",
-        "fi": "ma–pe 8.00–18.30, la 9.00–12.00 ja 17.00–18.00, su ja pyhäpäivinä 10.00–11.00 ja 17.00–17.30; päivystysajan puhelin 021 674 4090; aukioloajan ulkopuolella lisämaksu"
+        "fi": "ma–pe 8.00–18.30, la 9.00–12.00 ja 17.00–18.00, su ja pyhäpäivinä 10.00–11.00 ja 17.00–17.30; päivystysajan puhelin 021 674 4090; aukioloajan ulkopuolella lisämaksu",
+        "nb": "man–fre 8.00–18.30, lør 9.00–12.00 og 17.00–18.00, søn og offentlige helligdager 10.00–11.00 og 17.00–17.30; vakttelefon 021 674 4090; tillegg utenom åpningstid"
       },
       "small_animals": true,
       "url": "https://bluecross.co.za/",
@@ -450,7 +464,8 @@
         "cs": "Po–Pá 8:00–18:30, so 9:00–12:00, ne a státní svátky 10:00–11:00 (příplatek); pohotovosti mimo ordinační dobu: Panorama Veterinary Clinic 021 930 6632",
         "sv": "Mån–fre 8.00–18.30, lör 9.00–12.00, sön och helgdagar 10.00–11.00 (tillägg); akutfall utanför ordinarie tid: Panorama Veterinary Clinic 021 930 6632",
         "da": "man–fre 8.00–18.30, lør 9.00–12.00, søn og helligdage 10.00–11.00 (tillæg); akutte tilfælde uden for åbningstid: Panorama Veterinary Clinic 021 930 6632",
-        "fi": "ma–pe 8.00–18.30, la 9.00–12.00, su ja pyhäpäivinä 10.00–11.00 (lisämaksu); aukioloajan ulkopuoliset päivystystapaukset: Panorama Veterinary Clinic 021 930 6632"
+        "fi": "ma–pe 8.00–18.30, la 9.00–12.00, su ja pyhäpäivinä 10.00–11.00 (lisämaksu); aukioloajan ulkopuoliset päivystystapaukset: Panorama Veterinary Clinic 021 930 6632",
+        "nb": "man–fre 8.00–18.30, lør 9.00–12.00, søn og offentlige helligdager 10.00–11.00 (tillegg); nødtilfeller utenom åpningstid: Panorama Veterinary Clinic 021 930 6632"
       },
       "small_animals": true,
       "url": "https://www.durbanvillevet.co.za/",
@@ -476,7 +491,8 @@
         "cs": "Po–Pá 8:20–18:00, so 9:00–12:00, ne a státní svátky 9:00–10:00; případy ohrožující život bez objednání; mimo ordinační dobu nonstop péče v TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) nebo Vetscape Paarl (021 867 0700)",
         "sv": "Mån–fre 8.20–18.00, lör 9.00–12.00, sön och helgdagar 9.00–10.00; livshotande akutfall behöver ingen tidsbokning; utanför ordinarie tid finns vård dygnet runt hos TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) eller Vetscape Paarl (021 867 0700)",
         "da": "man–fre 8.20–18.00, lør 9.00–12.00, søn og helligdage 9.00–10.00; livstruende tilfælde kræver ikke tidsbestilling; uden for åbningstid døgnåben hjælp hos TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) eller Vetscape Paarl (021 867 0700)",
-        "fi": "ma–pe 8.20–18.00, la 9.00–12.00, su ja pyhäpäivinä 9.00–10.00; hengenvaaralliset hätätapaukset otetaan vastaan ilman ajanvarausta; aukioloajan ulkopuolella 24 tunnin hoito TAH Rosmeadissa (021 674 0034), Panorama Vetissä (021 930 6632) tai Vetscape Paarlissa (021 867 0700)"
+        "fi": "ma–pe 8.20–18.00, la 9.00–12.00, su ja pyhäpäivinä 9.00–10.00; hengenvaaralliset hätätapaukset otetaan vastaan ilman ajanvarausta; aukioloajan ulkopuolella 24 tunnin hoito TAH Rosmeadissa (021 674 0034), Panorama Vetissä (021 930 6632) tai Vetscape Paarlissa (021 867 0700)",
+        "nb": "man–fre 8.20–18.00, lør 9.00–12.00, søn og offentlige helligdager 9.00–10.00; livstruende nødtilfeller trenger ikke time; utenom åpningstid døgnåpen behandling ved TAH Rosmead (021 674 0034), Panorama Vet (021 930 6632) eller Vetscape Paarl (021 867 0700)"
       },
       "small_animals": true,
       "url": "https://www.alphenvet.co.za/",
@@ -502,7 +518,8 @@
         "cs": "Nonstop pohotovostní linka pro kočky a psy: 061 101 3909 (veterinář v pohotovosti); ordinační doba 8:00–18:00",
         "sv": "Akutlinje för katter och hundar dygnet runt: 061 101 3909 (jourhavande veterinär); kontorstid 08.00–18.00",
         "da": "Akuttelefon døgnet rundt for katte og hunde: 061 101 3909 (vagthavende dyrlæge); kontortid 8.00–18.00",
-        "fi": "Päivystyspuhelin kissoille ja koirille 24 h: 061 101 3909 (päivystävä eläinlääkäri); toimisto auki 8.00–18.00"
+        "fi": "Päivystyspuhelin kissoille ja koirille 24 h: 061 101 3909 (päivystävä eläinlääkäri); toimisto auki 8.00–18.00",
+        "nb": "Akuttlinje hele døgnet for katter og hunder: 061 101 3909 (dyrlege på vakt); kontortid kl. 08.00–18.00"
       },
       "small_animals": true,
       "url": "https://vetscape.co.za/",
@@ -530,7 +547,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–13:00, v neděli a o státních svátcích zavřeno; veterináře v pohotovosti zastihnete na čísle 021 851 3511",
         "sv": "Mån–fre 8.00–18.00, lör 8.00–13.00, stängt sön och helgdagar; ring 021 851 3511 för jourhavande veterinär",
         "da": "man–fre 8.00–18.00, lør 8.00–13.00, lukket søndage og helligdage; ring på 021 851 3511 for den vagthavende dyrlæge",
-        "fi": "ma–pe 8.00–18.00, la 8.00–13.00, su ja pyhäpäivinä suljettu; päivystävän eläinlääkärin numero 021 851 3511"
+        "fi": "ma–pe 8.00–18.00, la 8.00–13.00, su ja pyhäpäivinä suljettu; päivystävän eläinlääkärin numero 021 851 3511",
+        "nb": "man–fre 8.00–18.00, lør 8.00–13.00, stengt søndager og offentlige helligdager; ring 021 851 3511 for dyrlegen på vakt"
       },
       "small_animals": true,
       "url": "https://tevavetclinic.co.za/",
@@ -556,7 +574,8 @@
         "cs": "Nonstop veterinární péče; běžná otevírací doba Po–Pá 8:00–18:00, so 8:00–12:00; v neděli a o státních svátcích pouze pohotovost; jiné ordinace sem mimo ordinační dobu odkazují pacienty",
         "sv": "Veterinärvård dygnet runt; ordinarie öppettider mån–fre 8.00–18.00, lör 8.00–12.00; sön och helgdagar endast akutfall; andra kliniker hänvisar fall utanför ordinarie tid hit",
         "da": "Dyrlægehjælp døgnet rundt; almindelige åbningstider man–fre 8.00–18.00, lør 8.00–12.00; kun akutte tilfælde søndage og helligdage; andre klinikker henviser tilfælde uden for åbningstid hertil",
-        "fi": "Eläinlääkäripalvelu 24 h; normaali aukioloaika ma–pe 8.00–18.00, la 8.00–12.00; su ja pyhäpäivinä vain päivystys; muut klinikat ohjaavat aukioloajan ulkopuoliset tapaukset tänne"
+        "fi": "Eläinlääkäripalvelu 24 h; normaali aukioloaika ma–pe 8.00–18.00, la 8.00–12.00; su ja pyhäpäivinä vain päivystys; muut klinikat ohjaavat aukioloajan ulkopuoliset tapaukset tänne",
+        "nb": "Dyrlegehjelp hele døgnet; vanlig åpningstid man–fre kl. 08.00–18.00, lør kl. 08.00–12.00; kun nødtilfeller på søndager og helligdager; andre klinikker henviser tilfeller utenom åpningstid hit"
       },
       "small_animals": true,
       "url": "https://www.westvet.co.za/",
@@ -584,7 +603,8 @@
         "cs": "Ordinace na objednání Po–Pá 8:00–17:30, so 8:00–12:00; pro pohotovosti domácích zvířat otevřeno každý večer do 22:00, 7 dní v týdnu (poplatek za pohotovost)",
         "sv": "Konsultationer efter tidsbokning mån–fre 8.00–17.30, lör 8.00–12.00; öppet till 22.00 varje kväll för akutfall med husdjur, alla dagar i veckan (akutavgift)",
         "da": "Konsultation efter aftale man–fre 8.00–17.30, lør 8.00–12.00; åbent til 22.00 hver aften ved akutte tilfælde hos kæledyr, 7 dage om ugen (akutgebyr)",
-        "fi": "Vastaanotto ajanvarauksella ma–pe 8.00–17.30, la 8.00–12.00; auki joka ilta klo 22 asti lemmikkien päivystystapauksille, 7 vrk viikossa (päivystysmaksu)"
+        "fi": "Vastaanotto ajanvarauksella ma–pe 8.00–17.30, la 8.00–12.00; auki joka ilta klo 22 asti lemmikkien päivystystapauksille, 7 vrk viikossa (päivystysmaksu)",
+        "nb": "Konsultasjoner etter timebestilling man–fre kl. 8.00–17.30, lør kl. 8.00–12.00; åpent til kl. 22.00 hver kveld for nødtilfeller hos kjæledyr, sju dager i uken (akuttgebyr)"
       },
       "small_animals": true,
       "url": "https://hillcrestvets.co.za/",
@@ -608,7 +628,8 @@
         "cs": "Pohotovosti a péče mimo ordinační dobu jsou odkazovány na Westville Veterinary Hospital (031 267 8000)",
         "sv": "Akutfall och vård utanför ordinarie tid hänvisas till Westville Veterinary Hospital (031 267 8000)",
         "da": "Akutte tilfælde og hjælp uden for åbningstid henvises til Westville Veterinary Hospital (031 267 8000)",
-        "fi": "Päivystys- ja aukioloajan ulkopuoliset tapaukset ohjataan Westville Veterinary Hospitaliin (031 267 8000)"
+        "fi": "Päivystys- ja aukioloajan ulkopuoliset tapaukset ohjataan Westville Veterinary Hospitaliin (031 267 8000)",
+        "nb": "Nødtilfeller og behandling utenom åpningstid henvises til Westville Veterinary Hospital (031 267 8000)"
       },
       "small_animals": true,
       "url": "https://www.durbannorthvet.co.za/",
@@ -635,7 +656,8 @@
         "cs": "Ordinace Po–Pá 7:30–12:00 a 15:00–18:00, so 7:30–12:00, v neděli a o státních svátcích zavřeno; číslo pro pohotovost 083 255 3469",
         "sv": "Konsultationer mån–fre 7.30–12.00 och 15.00–18.00, lör 7.30–12.00, stängt sön och helgdagar; akutnummer 083 255 3469",
         "da": "Konsultation man–fre 7.30–12.00 og 15.00–18.00, lør 7.30–12.00, lukket søndage og helligdage; akutnummer 083 255 3469",
-        "fi": "Vastaanotto ma–pe 7.30–12.00 ja 15.00–18.00, la 7.30–12.00, su ja pyhäpäivinä suljettu; päivystysnumero 083 255 3469"
+        "fi": "Vastaanotto ma–pe 7.30–12.00 ja 15.00–18.00, la 7.30–12.00, su ja pyhäpäivinä suljettu; päivystysnumero 083 255 3469",
+        "nb": "Konsultasjoner man–fre kl. 7.30–12.00 og 15.00–18.00, lør kl. 7.30–12.00, stengt søndager og helligdager; nødnummer 083 255 3469"
       },
       "small_animals": true,
       "url": "https://www.eastlondonvet.co.za/",
@@ -662,7 +684,8 @@
         "cs": "Po–Pá 7:30–18:00, so 8:00–12:00; ne a státní svátky 9:00–10:00 (příplatek)",
         "sv": "Mån–fre 7.30–18.00, lör 8.00–12.00; sön och helgdagar 9.00–10.00 (tillägg)",
         "da": "man–fre 7.30–18.00, lør 8.00–12.00; søndage og helligdage 9.00–10.00 (tillæg)",
-        "fi": "ma–pe 7.30–18.00, la 8.00–12.00; su ja pyhäpäivinä 9.00–10.00 (lisämaksu)"
+        "fi": "ma–pe 7.30–18.00, la 8.00–12.00; su ja pyhäpäivinä 9.00–10.00 (lisämaksu)",
+        "nb": "Man–fre 7.30–18.00, lør 8.00–12.00; søndager og helligdager 9.00–10.00 (tillegg)"
       },
       "small_animals": true,
       "url": "https://mountcroixvet.co.za/",
@@ -688,7 +711,8 @@
         "cs": "Po–Pá 8:00–17:30, so 9:00–12:30, v neděli zavřeno; mimo ordinační dobu a v pohotovosti volejte 044 382 6766",
         "sv": "Mån–fre 8.00–17.30, lör 9.00–12.30, stängt sön; utanför ordinarie tid och vid akutfall: ring 044 382 6766",
         "da": "man–fre 8.00–17.30, lør 9.00–12.30, lukket søndage; uden for åbningstid og ved akutte tilfælde: ring på 044 382 6766",
-        "fi": "ma–pe 8.00–17.30, la 9.00–12.30, su suljettu; aukioloajan ulkopuolella ja päivystystapauksissa soita 044 382 6766"
+        "fi": "ma–pe 8.00–17.30, la 9.00–12.30, su suljettu; aukioloajan ulkopuolella ja päivystystapauksissa soita 044 382 6766",
+        "nb": "man–fre 8.00–17.30, lør 9.00–12.30, stengt søndager; utenom åpningstid og ved nødtilfeller: ring 044 382 6766"
       },
       "small_animals": true,
       "url": "https://www.georgerexvet.co.za/",
@@ -713,7 +737,8 @@
         "cs": "Po–Pá 8:00–17:00, so 8:00–11:00, v neděli a o státních svátcích zavřeno; číslo pro pohotovost 076 909 2577",
         "sv": "Mån–fre 8.00–17.00, lör 8.00–11.00, stängt sön och helgdagar; akutnummer 076 909 2577",
         "da": "man–fre 8.00–17.00, lør 8.00–11.00, lukket søndage og helligdage; akutnummer 076 909 2577",
-        "fi": "ma–pe 8.00–17.00, la 8.00–11.00, su ja pyhäpäivinä suljettu; päivystysnumero 076 909 2577"
+        "fi": "ma–pe 8.00–17.00, la 8.00–11.00, su ja pyhäpäivinä suljettu; päivystysnumero 076 909 2577",
+        "nb": "man–fre 8.00–17.00, lør 8.00–11.00, stengt på søndager og offentlige helligdager; nødnummer 076 909 2577"
       },
       "small_animals": true,
       "url": "https://robbergvet.co.za/",
@@ -739,7 +764,8 @@
         "cs": "Nonstop pohotovostní a intenzivní péče s ošetřovatelským personálem na plný úvazek a veterináři v pohotovosti; pohotovostní telefon 084 077 8049; ordinační doba Po–Pá 8:00–17:00, so 8:00–12:00; příplatek za výjezd mimo ordinační dobu",
         "sv": "Akut- och intensivvårdsklinik dygnet runt med heltidsanställd vårdpersonal och jourhavande veterinärer; akuttelefon 084 077 8049; konsultationer mån–fre 8.00–17.00, lör 8.00–12.00; utryckningsavgift utanför ordinarie tid",
         "da": "Døgnåben akut- og intensivklinik med fuldtidsansat plejepersonale og vagthavende dyrlæger; akuttelefon 084 077 8049; konsultation man–fre 8.00–17.00, lør 8.00–12.00; udrykningsgebyr uden for åbningstid",
-        "fi": "24 h päivystys- ja tehohoitoklinikka, jossa on kokoaikainen hoitohenkilökunta ja päivystävät eläinlääkärit; päivystyspuhelin 084 077 8049; vastaanotto ma–pe 8.00–17.00, la 8.00–12.00; aukioloajan ulkopuolisesta kutsusta lisämaksu"
+        "fi": "24 h päivystys- ja tehohoitoklinikka, jossa on kokoaikainen hoitohenkilökunta ja päivystävät eläinlääkärit; päivystyspuhelin 084 077 8049; vastaanotto ma–pe 8.00–17.00, la 8.00–12.00; aukioloajan ulkopuolisesta kutsusta lisämaksu",
+        "nb": "Akutt- og intensivklinikk hele døgnet med dyrepleiere på heltid og dyrleger på vakt; akuttelefon 084 077 8049; konsultasjoner man–fre kl. 08.00–17.00, lør kl. 08.00–12.00; tillegg for utrykning utenom åpningstid"
       },
       "small_animals": true,
       "url": "https://lowveldvet.co.za/",
@@ -767,7 +793,8 @@
         "cs": "Po–Pá 7:30–13:00 a 14:00–18:00, so 8:00–12:00, ne a státní svátky 10:00–11:00 pouze pro pohotovosti",
         "sv": "Mån–fre 7.30–13.00 och 14.00–18.00, lör 8.00–12.00, sön och helgdagar 10.00–11.00 endast för akutfall",
         "da": "man–fre 7.30–13.00 og 14.00–18.00, lør 8.00–12.00, søndage og helligdage 10.00–11.00 kun ved akutte tilfælde",
-        "fi": "ma–pe 7.30–13.00 ja 14.00–18.00, la 8.00–12.00, su ja pyhäpäivinä 10.00–11.00 vain päivystystapauksille"
+        "fi": "ma–pe 7.30–13.00 ja 14.00–18.00, la 8.00–12.00, su ja pyhäpäivinä 10.00–11.00 vain päivystystapauksille",
+        "nb": "Man–fre 7.30–13.00 og 14.00–18.00, lør 8.00–12.00, søndager og helligdager 10.00–11.00 kun for nødtilfeller"
       },
       "small_animals": true,
       "url": "https://www.nelvet.co.za/",
@@ -793,7 +820,8 @@
         "cs": "Po–Pá 8:00–17:30, so 8:30–12:00, ne a státní svátky 10:00–12:00 (pouze pohotovosti); pohotovostní linka mimo ordinační dobu 063 603 0301",
         "sv": "Mån–fre 8.00–17.30, lör 8.30–12.00, sön och helgdagar 10.00–12.00 (endast akutfall); akut-/jourlinje utanför ordinarie tid 063 603 0301",
         "da": "man–fre 8.00–17.30, lør 8.30–12.00, søndage og helligdage 10.00–12.00 (kun akutte tilfælde); akut-/vagttelefon uden for åbningstid 063 603 0301",
-        "fi": "ma–pe 8.00–17.30, la 8.30–12.00, su ja pyhäpäivinä 10.00–12.00 (vain päivystys); päivystys- ja aukioloajan ulkopuolinen numero 063 603 0301"
+        "fi": "ma–pe 8.00–17.30, la 8.30–12.00, su ja pyhäpäivinä 10.00–12.00 (vain päivystys); päivystys- ja aukioloajan ulkopuolinen numero 063 603 0301",
+        "nb": "man–fre 8.00–17.30, lør 8.30–12.00, søndager og offentlige helligdager 10.00–12.00 (kun nødtilfeller); vakttelefon utenom åpningstid 063 603 0301"
       },
       "small_animals": true,
       "url": "https://thevets.co.za/",
@@ -819,7 +847,8 @@
         "cs": "Otevřeno nonstop, 365 dní v roce; nemocnice a specializované referenční pracoviště",
         "sv": "Öppet dygnet runt, 365 dagar om året; djursjukhus och remissenhet för specialistvård",
         "da": "Åbent døgnet rundt, 365 dage om året; hospital og henvisningscenter med specialister",
-        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa; sairaala ja erikoishoidon lähetekeskus"
+        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa; sairaala ja erikoishoidon lähetekeskus",
+        "nb": "Åpent hele døgnet, 365 dager i året; sykehus og henvisningssenter for spesialister"
       },
       "small_animals": true,
       "url": "https://www.olympus24hourvet.com/",
@@ -847,7 +876,8 @@
         "cs": "Po–Pá 8:00–18:00, so 9:00–12:00, v neděli a o státních svátcích zavřeno; nonstop pohotovostní podpora, linka mimo ordinační dobu 082 376 6555",
         "sv": "Mån–fre 08.00–18.00, lör 09.00–12.00, sön och helgdagar stängt; akutstöd dygnet runt, jourlinje 082 376 6555",
         "da": "man–fre 8.00–18.00, lør 9.00–12.00, søn og helligdage lukket; akut hjælp døgnet rundt, vagttelefon uden for åbningstid 082 376 6555",
-        "fi": "ma–pe 8.00–18.00, la 9.00–12.00, su ja pyhäpäivinä suljettu; päivystystuki 24/7, aukioloajan ulkopuolinen numero 082 376 6555"
+        "fi": "ma–pe 8.00–18.00, la 9.00–12.00, su ja pyhäpäivinä suljettu; päivystystuki 24/7, aukioloajan ulkopuolinen numero 082 376 6555",
+        "nb": "Man–fre 08.00–18.00, lør 09.00–12.00, søn og helligdager stengt; akuttberedskap hele døgnet, linje utenom åpningstiden 082 376 6555"
       },
       "small_animals": true,
       "url": "https://georgevet.co.za/",
@@ -875,7 +905,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–17:00; pohotovost nonstop na pohotovostní lince 072 088 1957",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–17.00; jour dygnet runt på akutlinje 072 088 1957",
         "da": "man–fre 8.00–18.00, lør 8.00–17.00; vagt døgnet rundt på akuttelefon 072 088 1957",
-        "fi": "ma–pe 8.00–18.00, la 8.00–17.00; päivystys 24/7 numerossa 072 088 1957"
+        "fi": "ma–pe 8.00–18.00, la 8.00–17.00; päivystys 24/7 numerossa 072 088 1957",
+        "nb": "Man–fre 08.00–18.00, lør 08.00–17.00; vakt hele døgnet på nødlinjen 072 088 1957"
       },
       "small_animals": true,
       "url": "https://vitalvet.co.za/",
@@ -903,7 +934,8 @@
         "cs": "Po–Pá 8:00–17:30, so 8:00–13:00, v neděli a o státních svátcích zavřeno; společná pohotovostní linka skupiny 072 088 1957",
         "sv": "Mån–fre 08.00–17.30, lör 08.00–13.00, sön och helgdagar stängt; gruppens akutlinje 072 088 1957",
         "da": "man–fre 8.00–17.30, lør 8.00–13.00, søn og helligdage lukket; fælles akuttelefon 072 088 1957",
-        "fi": "ma–pe 8.00–17.30, la 8.00–13.00, su ja pyhäpäivinä suljettu; ryhmän päivystysnumero 072 088 1957"
+        "fi": "ma–pe 8.00–17.30, la 8.00–13.00, su ja pyhäpäivinä suljettu; ryhmän päivystysnumero 072 088 1957",
+        "nb": "Man–fre 08.00–17.30, lør 08.00–13.00, søn og helligdager stengt; felles nødlinje 072 088 1957"
       },
       "small_animals": true,
       "url": "https://vitalvet.co.za/",
@@ -930,7 +962,8 @@
         "cs": "Po–Pá 8:00–17:30, so 8:00–13:00, v neděli a o státních svátcích zavřeno; společná pohotovostní linka skupiny 072 088 1957",
         "sv": "Mån–fre 08.00–17.30, lör 08.00–13.00, sön och helgdagar stängt; gruppens akutlinje 072 088 1957",
         "da": "man–fre 8.00–17.30, lør 8.00–13.00, søn og helligdage lukket; fælles akuttelefon 072 088 1957",
-        "fi": "ma–pe 8.00–17.30, la 8.00–13.00, su ja pyhäpäivinä suljettu; ryhmän päivystysnumero 072 088 1957"
+        "fi": "ma–pe 8.00–17.30, la 8.00–13.00, su ja pyhäpäivinä suljettu; ryhmän päivystysnumero 072 088 1957",
+        "nb": "Man–fre 08.00–17.30, lør 08.00–13.00, søn og helligdager stengt; felles nødlinje 072 088 1957"
       },
       "small_animals": true,
       "url": "https://vitalvet.co.za/",
@@ -957,7 +990,8 @@
         "cs": "Po–Pá 7:30–17:00, so 8:00–12:00, ne a státní svátky 9:00–11:00 pouze pohotovosti (příplatek); nonstop pohotovostní linka 082 373 1963",
         "sv": "Mån–fre 07.30–17.00, lör 08.00–12.00, sön och helgdagar 09.00–11.00 endast akutfall (tillägg); akutlinje dygnet runt 082 373 1963",
         "da": "man–fre 7.30–17.00, lør 8.00–12.00, søn og helligdage 9.00–11.00 kun akutte tilfælde (tillæg); akuttelefon døgnet rundt 082 373 1963",
-        "fi": "ma–pe 7.30–17.00, la 8.00–12.00, su ja pyhäpäivinä 9.00–11.00 vain päivystys (lisämaksu); päivystyspuhelin 24 h 082 373 1963"
+        "fi": "ma–pe 7.30–17.00, la 8.00–12.00, su ja pyhäpäivinä 9.00–11.00 vain päivystys (lisämaksu); päivystyspuhelin 24 h 082 373 1963",
+        "nb": "Man–fre 07.30–17.00, lør 08.00–12.00, søn og helligdager 09.00–11.00 kun nødtilfeller (tillegg); nødlinje hele døgnet 082 373 1963"
       },
       "small_animals": true,
       "url": "https://vethouse.co.za/",
@@ -985,7 +1019,8 @@
         "cs": "Po–Pá 7:30–17:00, so 8:00–12:00, v neděli a o státních svátcích zavřeno; pohotovosti mimo ordinační dobu 082 373 1963",
         "sv": "Mån–fre 07.30–17.00, lör 08.00–12.00, stängt sön och helgdagar; akutfall utanför ordinarie tid 082 373 1963",
         "da": "man–fre 7.30–17.00, lør 8.00–12.00, lukket søn og helligdage; akutte tilfælde uden for åbningstid 082 373 1963",
-        "fi": "ma–pe 7.30–17.00, la 8.00–12.00, su ja pyhäpäivinä suljettu; päivystys aukioloajan ulkopuolella 082 373 1963"
+        "fi": "ma–pe 7.30–17.00, la 8.00–12.00, su ja pyhäpäivinä suljettu; päivystys aukioloajan ulkopuolella 082 373 1963",
+        "nb": "Man–fre 07.30–17.00, lør 08.00–12.00, stengt søn og helligdager; nødtilfeller utenom åpningstiden 082 373 1963"
       },
       "small_animals": true,
       "url": "https://vethouse.co.za/",
@@ -1012,7 +1047,8 @@
         "cs": "Linka mimo ordinační dobu 082 819 7645; aktuální otevírací dobu zjistíte telefonicky",
         "sv": "Jourlinje 082 819 7645; ring innan du kommer för aktuella öppettider",
         "da": "Vagttelefon uden for åbningstid 082 819 7645; ring på forhånd for aktuelle åbningstider",
-        "fi": "Päivystysnumero aukioloajan ulkopuolella 082 819 7645; soita etukäteen ja tarkista ajankohtaiset aukioloajat"
+        "fi": "Päivystysnumero aukioloajan ulkopuolella 082 819 7645; soita etukäteen ja tarkista ajankohtaiset aukioloajat",
+        "nb": "Vakttelefon 082 819 7645; ring på forhånd for å høre gjeldende åpningstider"
       },
       "small_animals": true,
       "url": "https://hiltonvethospital.co.za/",
@@ -1039,7 +1075,8 @@
         "cs": "Po–Pá 8:00–17:00, so 8:00–14:30; pro pohotovosti mimo ordinační dobu je vždy k dispozici veterinář na čísle 064 504 3754",
         "sv": "Mån–fre 08.00–17.00, lör 08.00–14.30; en veterinär är alltid tillgänglig för akutfall utanför ordinarie tid på 064 504 3754",
         "da": "man–fre 8.00–17.00, lør 8.00–14.30; en dyrlæge er altid til rådighed ved akutte tilfælde uden for åbningstid på 064 504 3754",
-        "fi": "ma–pe 8.00–17.00, la 8.00–14.30; eläinlääkäri aina tavoitettavissa aukioloajan ulkopuolisissa päivystystapauksissa numerossa 064 504 3754"
+        "fi": "ma–pe 8.00–17.00, la 8.00–14.30; eläinlääkäri aina tavoitettavissa aukioloajan ulkopuolisissa päivystystapauksissa numerossa 064 504 3754",
+        "nb": "Man–fre 08.00–17.00, lør 08.00–14.30; en dyrlege er alltid tilgjengelig for nødtilfeller utenom åpningstiden på 064 504 3754"
       },
       "small_animals": true,
       "url": "https://www.polokwanevetclinic.com/",
@@ -1067,7 +1104,8 @@
         "cs": "Po–Pá 7:00–19:00, so 8:00–12:00 a 17:00–18:00, ne 17:00–18:00; pouze pohotovosti 067 036 3623",
         "sv": "Mån–fre 07.00–19.00, lör 08.00–12.00 och 17.00–18.00, sön 17.00–18.00; endast akutfall 067 036 3623",
         "da": "man–fre 7.00–19.00, lør 8.00–12.00 og 17.00–18.00, søn 17.00–18.00; kun akutte tilfælde 067 036 3623",
-        "fi": "ma–pe 7.00–19.00, la 8.00–12.00 ja 17.00–18.00, su 17.00–18.00; vain päivystys 067 036 3623"
+        "fi": "ma–pe 7.00–19.00, la 8.00–12.00 ja 17.00–18.00, su 17.00–18.00; vain päivystys 067 036 3623",
+        "nb": "Man–fre 07.00–19.00, lør 08.00–12.00 og 17.00–18.00, søn 17.00–18.00; kun nødtilfeller 067 036 3623"
       },
       "small_animals": true,
       "url": "https://fichardtparkanimalclinic.yolasite.com/",
@@ -1094,7 +1132,8 @@
         "cs": "Po–Pá 8:00–17:00, so 8:00–12:00, ne a státní svátky 9:30–10:30",
         "sv": "Mån–fre 08.00–17.00, lör 08.00–12.00, sön och helgdagar 09.30–10.30",
         "da": "man–fre 8.00–17.00, lør 8.00–12.00, søn og helligdage 9.30–10.30",
-        "fi": "ma–pe 8.00–17.00, la 8.00–12.00, su ja pyhäpäivinä 9.30–10.30"
+        "fi": "ma–pe 8.00–17.00, la 8.00–12.00, su ja pyhäpäivinä 9.30–10.30",
+        "nb": "Man–fre 08.00–17.00, lør 08.00–12.00, søn og helligdager 09.30–10.30"
       },
       "small_animals": true,
       "url": "https://bayswatervets.co.za/",
@@ -1121,7 +1160,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–12:00, ne a státní svátky 10:00–12:00 a 16:30–18:00; v době 19:00–7:00 pohotovosti přebírají Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 nebo New South Vet 011 682 3213",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–12.00, sön och helgdagar 10.00–12.00 och 16.30–18.00; 19.00–07.00 hänvisas akutfall till Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 eller New South Vet 011 682 3213",
         "da": "man–fre 8.00–18.00, lør 8.00–12.00, søn og helligdage 10.00–12.00 og 16.30–18.00; 19.00–7.00 henvises akutte tilfælde til Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 eller New South Vet 011 682 3213",
-        "fi": "ma–pe 8.00–18.00, la 8.00–12.00, su ja pyhäpäivinä 10.00–12.00 ja 16.30–18.00; klo 19.00–7.00 päivystystapaukset ohjataan Fourways Vetiin 011 705 3411, Bryanston Vetiin 011 706 6023 tai New South Vetiin 011 682 3213"
+        "fi": "ma–pe 8.00–18.00, la 8.00–12.00, su ja pyhäpäivinä 10.00–12.00 ja 16.30–18.00; klo 19.00–7.00 päivystystapaukset ohjataan Fourways Vetiin 011 705 3411, Bryanston Vetiin 011 706 6023 tai New South Vetiin 011 682 3213",
+        "nb": "Man–fre 08.00–18.00, lør 08.00–12.00, søn og helligdager 10.00–12.00 og 16.30–18.00; kl. 19.00–07.00 henvises nødtilfeller til Fourways Vet 011 705 3411, Bryanston Vet 011 706 6023 eller New South Vet 011 682 3213"
       },
       "small_animals": true,
       "url": "https://bedfordviewvet.co.za/",
@@ -1148,7 +1188,8 @@
         "cs": "Po–Pá 7:30–18:00, so 9:00–12:00, státní svátky 9:00–11:00",
         "sv": "Mån–fre 07.30–18.00, lör 09.00–12.00, helgdagar 09.00–11.00",
         "da": "man–fre 7.30–18.00, lør 9.00–12.00, helligdage 9.00–11.00",
-        "fi": "ma–pe 7.30–18.00, la 9.00–12.00, pyhäpäivinä 9.00–11.00"
+        "fi": "ma–pe 7.30–18.00, la 9.00–12.00, pyhäpäivinä 9.00–11.00",
+        "nb": "Man–fre 07.30–18.00, lør 09.00–12.00, helligdager 09.00–11.00"
       },
       "small_animals": true,
       "url": "https://highveldvet.co.za/",
@@ -1175,7 +1216,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–13:00, v neděli a o státních svátcích zavřeno; číslo pro pohotovost 065 072 0925",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–13.00, sön och helgdagar stängt; akutnummer 065 072 0925",
         "da": "man–fre 8.00–18.00, lør 8.00–13.00, søn og helligdage lukket; akutnummer 065 072 0925",
-        "fi": "ma–pe 8.00–18.00, la 8.00–13.00, su ja pyhäpäivinä suljettu; päivystysnumero 065 072 0925"
+        "fi": "ma–pe 8.00–18.00, la 8.00–13.00, su ja pyhäpäivinä suljettu; päivystysnumero 065 072 0925",
+        "nb": "Man–fre 08.00–18.00, lør 08.00–13.00, søn og helligdager stengt; nødnummer 065 072 0925"
       },
       "small_animals": true,
       "url": "https://www.cncvet.co.za/",
@@ -1202,7 +1244,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–13:00 a 17:00–18:00, ne a státní svátky 9:00–11:00 a 17:00–18:00; pohotovosti mimo ordinační dobu 073 443 0582 (příplatek)",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–13.00 och 17.00–18.00, sön och helgdagar 09.00–11.00 och 17.00–18.00; akutfall utanför ordinarie tid 073 443 0582 (tillägg)",
         "da": "man–fre 8.00–18.00, lør 8.00–13.00 og 17.00–18.00, søn og helligdage 9.00–11.00 og 17.00–18.00; akutte tilfælde uden for åbningstid 073 443 0582 (tillæg)",
-        "fi": "ma–pe 8.00–18.00, la 8.00–13.00 ja 17.00–18.00, su ja pyhäpäivinä 9.00–11.00 ja 17.00–18.00; päivystys aukioloajan ulkopuolella 073 443 0582 (lisämaksu)"
+        "fi": "ma–pe 8.00–18.00, la 8.00–13.00 ja 17.00–18.00, su ja pyhäpäivinä 9.00–11.00 ja 17.00–18.00; päivystys aukioloajan ulkopuolella 073 443 0582 (lisämaksu)",
+        "nb": "Man–fre 08.00–18.00, lør 08.00–13.00 og 17.00–18.00, søn og helligdager 09.00–11.00 og 17.00–18.00; nødtilfeller utenom åpningstiden 073 443 0582 (tillegg)"
       },
       "small_animals": true,
       "url": "https://www.walmervet.co.za/",
@@ -1229,7 +1272,8 @@
         "cs": "Po–Pá 8:00–18:15, so 8:00–12:45 na objednání, ne a státní svátky 9:00–10:45 pouze pohotovostní objednání (příplatek SAVA)",
         "sv": "Mån–fre 08.00–18.15, lör 08.00–12.45 efter tidsbokning, sön och helgdagar 09.00–10.45 endast akuta besök (SAVA-tillägg)",
         "da": "man–fre 8.00–18.15, lør 8.00–12.45 efter aftale, søn og helligdage 9.00–10.45 kun akutte tider (SAVA-tillæg)",
-        "fi": "ma–pe 8.00–18.15, la 8.00–12.45 ajanvarauksella, su ja pyhäpäivinä 9.00–10.45 vain päivystysajat (SAVA-lisämaksu)"
+        "fi": "ma–pe 8.00–18.15, la 8.00–12.45 ajanvarauksella, su ja pyhäpäivinä 9.00–10.45 vain päivystysajat (SAVA-lisämaksu)",
+        "nb": "Man–fre 08.00–18.15, lør 08.00–12.45 etter avtale, søn og helligdager 09.00–10.45 kun akutte timeavtaler (SAVA-tillegg)"
       },
       "small_animals": true,
       "url": "http://www.9thavevet.com/",

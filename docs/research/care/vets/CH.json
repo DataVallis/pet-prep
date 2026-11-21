@@ -81,7 +81,8 @@
         "cs": "Nonstop pohotovost pro malá zvířata; předem prosím zavolejte. Účtuje se pohotovostní poplatek.",
         "sv": "Akutjour för smådjur dygnet runt; ring innan du kommer. Jourtillägg tillkommer.",
         "da": "Akuttjeneste for små kæledyr døgnet rundt; ring på forhånd. Der opkræves akuttillæg.",
-        "fi": "Pieneläinten päivystys 24/7; soita etukäteen. Päivystysmaksu peritään."
+        "fi": "Pieneläinten päivystys 24/7; soita etukäteen. Päivystysmaksu peritään.",
+        "nb": "Akuttjeneste for små dyr hele døgnet; ring på forhånd. Akuttgebyr gjelder."
       },
       "small_animals": true,
       "url": "https://www.tierspital.uzh.ch/en/small-animal-clinics",
@@ -111,7 +112,8 @@
         "cs": "Pohotovost Po–Pá 8:00–17:00 na +41 31 684 23 15; večer, o víkendech a státních svátcích na lince 0900 900 960 (zvýšená sazba). Předem zavolejte.",
         "sv": "Akutfall mån–fre 8–17 på +41 31 684 23 15; kvällar, helger och helgdagar via linjen 0900 900 960 (betalnummer). Ring innan du kommer.",
         "da": "Akut hjælp man–fre 8–17 på +41 31 684 23 15; aftener, weekender og helligdage via nummeret 0900 900 960 (forhøjet takst). Ring på forhånd.",
-        "fi": "Päivystys ma–pe klo 8–17 numerossa +41 31 684 23 15; iltaisin, viikonloppuisin ja pyhäpäivinä numerossa 0900 900 960 (lisämaksullinen). Soita etukäteen."
+        "fi": "Päivystys ma–pe klo 8–17 numerossa +41 31 684 23 15; iltaisin, viikonloppuisin ja pyhäpäivinä numerossa 0900 900 960 (lisämaksullinen). Soita etukäteen.",
+        "nb": "Nødtilfeller man–fre 8–17 på +41 31 684 23 15; kvelder, helger og helligdager via linjen 0900 900 960 (med tilleggstakst). Ring på forhånd."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik.unibe.ch/",
@@ -141,7 +143,8 @@
         "cs": "Pohotovost denně 0:00–23:59; pohotovostní linka mimo ordinační dobu 0900 224 477 (zvýšená sazba). Běžná ordinační doba Po–Pá 7:30–17:30/19:00.",
         "sv": "Akut 00.00–23.59 alla dagar; jourlinje utanför öppettiderna 0900 224 477 (betalnummer). Ordinarie öppettider mån–fre 7.30–17.30/19.00.",
         "da": "Akut hjælp 0.00–23.59 hver dag; akuttelefon uden for åbningstiden 0900 224 477 (forhøjet takst). Almindelig åbningstid man–fre 7.30–17.30/19.00.",
-        "fi": "Päivystys joka päivä klo 0.00–23.59; virka-ajan ulkopuolinen päivystysnumero 0900 224 477 (lisämaksullinen). Normaalit aukioloajat ma–pe klo 7.30–17.30/19.00."
+        "fi": "Päivystys joka päivä klo 0.00–23.59; virka-ajan ulkopuolinen päivystysnumero 0900 224 477 (lisämaksullinen). Normaalit aukioloajat ma–pe klo 7.30–17.30/19.00.",
+        "nb": "Nødtilfeller alle dager 00.00–23.59; akuttlinje utenom åpningstid 0900 224 477 (med tilleggstakst). Ordinær åpningstid man–fre 7.30–17.30/19.00."
       },
       "small_animals": true,
       "url": "https://www.anicura.ch/thun",
@@ -171,7 +174,8 @@
         "cs": "Pohotovost nonstop mimo ordinační dobu; nejdřív zavolejte. Běžná ordinační doba Po–Pá 8:00–12:00 a 14:00–18:00, so 8:00–12:00.",
         "sv": "Akutjour dygnet runt utanför öppettiderna; ring först. Ordinarie öppettider mån–fre 8–12 och 14–18, lör 8–12.",
         "da": "Akuttjeneste døgnet rundt uden for åbningstiden; ring først. Almindelig åbningstid man–fre 8–12 og 14–18, lør 8–12.",
-        "fi": "Päivystys ympäri vuorokauden aukioloaikojen ulkopuolella; soita ensin. Normaalit aukioloajat ma–pe klo 8–12 ja 14–18, la klo 8–12."
+        "fi": "Päivystys ympäri vuorokauden aukioloaikojen ulkopuolella; soita ensin. Normaalit aukioloajat ma–pe klo 8–12 ja 14–18, la klo 8–12.",
+        "nb": "Akuttjeneste døgnet rundt utenom åpningstid; ring først. Ordinær åpningstid man–fre 8–12 og 14–18, lør 8–12."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-interlaken.ch",
@@ -201,7 +205,8 @@
         "cs": "Pohotovost telefonicky nonstop, 365 dní v roce; vyšetření na objednání.",
         "sv": "Akutfall årets alla dagar, dygnet runt, per telefon; konsultationer efter bokad tid.",
         "da": "Akut hjælp 365 dage om året, døgnet rundt, pr. telefon; konsultationer efter aftale.",
-        "fi": "Päivystys 365 päivänä vuodessa, ympäri vuorokauden, puhelimitse; vastaanotto ajanvarauksella."
+        "fi": "Päivystys 365 päivänä vuodessa, ympäri vuorokauden, puhelimitse; vastaanotto ajanvarauksella.",
+        "nb": "Nødtilfeller 365 dager i året, hele døgnet, på telefon; konsultasjoner etter timeavtale."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-brienz.ch",
@@ -231,7 +236,8 @@
         "cs": "Pro pohotovost jsou na hlavním čísle k zastižení kdykoli.",
         "sv": "Går att nå när som helst för akutfall på huvudnumret.",
         "da": "Kan altid kontaktes ved akutte tilfælde på hovednummeret.",
-        "fi": "Tavoitettavissa päivystystapauksissa milloin tahansa pääpuhelinnumerossa."
+        "fi": "Tavoitettavissa päivystystapauksissa milloin tahansa pääpuhelinnumerossa.",
+        "nb": "Nås når som helst ved nødtilfeller på hovednummeret."
       },
       "small_animals": true,
       "url": "https://bergpraxis-animal.ch",
@@ -261,7 +267,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00, so 8:00–11:00. Mimo ordinační dobu (v noci 18:00–7:30, o víkendech od soboty 11:00) pohotovostní linka pro malá zvířata 0900 88 11 11 (zvýšená sazba).",
         "sv": "Mån–fre 8–12 och 14–18, lör 8–11. Utanför öppettiderna (nätter 18.00–07.30, helger från lör 11.00) jourlinje för smådjur 0900 88 11 11 (betalnummer).",
         "da": "Man–fre 8–12 og 14–18, lør 8–11. Uden for åbningstiden (nætter 18.00–7.30, weekender fra lør 11.00) akuttelefon for små kæledyr 0900 88 11 11 (forhøjet takst).",
-        "fi": "ma–pe klo 8–12 ja 14–18, la klo 8–11. Aukioloaikojen ulkopuolella (yöt klo 18.00–7.30, viikonloput lauantaista klo 11.00) pieneläinten päivystysnumero 0900 88 11 11 (lisämaksullinen)."
+        "fi": "ma–pe klo 8–12 ja 14–18, la klo 8–11. Aukioloaikojen ulkopuolella (yöt klo 18.00–7.30, viikonloput lauantaista klo 11.00) pieneläinten päivystysnumero 0900 88 11 11 (lisämaksullinen).",
+        "nb": "man–fre 8–12 og 14–18, lør 8–11. Utenom åpningstid (netter 18.00–07.30, helger fra lør 11.00) vakttelefon for smådyr 0900 88 11 11 (særtakst)."
       },
       "small_animals": true,
       "url": "https://tierarztpraxis-roesslimatte.ch",
@@ -290,7 +297,8 @@
         "cs": "Nonstop pohotovostní číslo pro malá zvířata 0900 00 25 25 (zvýšená sazba) pro město Bern a okolí; ordinace ve službě může účtovat pohotovostní poplatek.",
         "sv": "Journummer för smådjur dygnet runt 0900 00 25 25 (betalnummer) för staden Bern med omnejd; den jourhavande kliniken kan ta ut ett jourtillägg.",
         "da": "Akutnummer for små kæledyr døgnet rundt 0900 00 25 25 (forhøjet takst) til Bern by og omegn; den vagthavende klinik kan opkræve et akuttillæg.",
-        "fi": "Pieneläinten päivystysnumero 0900 00 25 25 ympäri vuorokauden (lisämaksullinen) Bernin kaupungin ja ympäristön alueelle; päivystävä vastaanotto voi periä päivystysmaksun."
+        "fi": "Pieneläinten päivystysnumero 0900 00 25 25 ympäri vuorokauden (lisämaksullinen) Bernin kaupungin ja ympäristön alueelle; päivystävä vastaanotto voi periä päivystysmaksun.",
+        "nb": "Akuttelefon for små dyr hele døgnet 0900 00 25 25 (nummer med høy takst) for byen Bern og omegn; praksisen på vakt kan ta akuttgebyr."
       },
       "small_animals": true,
       "source_url": "https://www.citytiernotfall.ch/",
@@ -320,7 +328,8 @@
         "cs": "Akutní pohotovost denně 8:00–22:00, 365 dní v roce; pokud možno nejdřív zavolejte.",
         "sv": "Akuta fall dagligen 8–22, årets alla dagar; ring först om möjligt.",
         "da": "Akutte tilfælde dagligt 8–22, 365 dage om året; ring først, hvis det er muligt.",
-        "fi": "Äkilliset hätätapaukset päivittäin klo 8–22, 365 päivänä vuodessa; soita mahdollisuuksien mukaan ensin."
+        "fi": "Äkilliset hätätapaukset päivittäin klo 8–22, 365 päivänä vuodessa; soita mahdollisuuksien mukaan ensin.",
+        "nb": "Akutte nødtilfeller daglig 8–22, 365 dager i året; ring først om mulig."
       },
       "small_animals": true,
       "url": "https://vetzentrum-bern.ch",
@@ -350,7 +359,8 @@
         "cs": "Pohotovost nonstop s hospitalizací; pohotovostní linka 0900 900 500 (zvýšená sazba). Běžná ordinační doba Po–Pá 8:00–12:00 a 14:00–17:00.",
         "sv": "Akutjour dygnet runt med slutenvård; jourlinje 0900 900 500 (betalnummer). Ordinarie öppettider mån–fre 8–12 och 14–17.",
         "da": "Akuttjeneste døgnet rundt med mulighed for indlæggelse; akuttelefon 0900 900 500 (forhøjet takst). Almindelig åbningstid man–fre 8–12 og 14–17.",
-        "fi": "Päivystys 24/7 ja vuodeosastohoito; päivystysnumero 0900 900 500 (lisämaksullinen). Normaalit aukioloajat ma–pe klo 8–12 ja 14–17."
+        "fi": "Päivystys 24/7 ja vuodeosastohoito; päivystysnumero 0900 900 500 (lisämaksullinen). Normaalit aukioloajat ma–pe klo 8–12 ja 14–17.",
+        "nb": "Akuttjeneste hele døgnet med innleggelse; akuttlinje 0900 900 500 (nummer med høy takst). Vanlig åpningstid man–fre 8–12 og 14–17."
       },
       "small_animals": true,
       "url": "https://www.marigin.ch",
@@ -379,7 +389,8 @@
         "cs": "Pohotovost nonstop; před každou pohotovostní návštěvou zavolejte. Pouze případy ohrožující život; účtuje se pohotovostní poplatek.",
         "sv": "Akutjour dygnet runt; ring innan du kommer vid varje akutbesök. Endast livshotande fall; jourtillägg tillkommer.",
         "da": "Akuttjeneste døgnet rundt; ring på forhånd før ethvert akut besøg. Kun livstruende tilfælde; der opkræves akuttillæg.",
-        "fi": "Päivystys ympäri vuorokauden; soita etukäteen ennen jokaista päivystyskäyntiä. Vain hengenvaarallisiin tapauksiin; päivystysmaksu peritään."
+        "fi": "Päivystys ympäri vuorokauden; soita etukäteen ennen jokaista päivystyskäyntiä. Vain hengenvaarallisiin tapauksiin; päivystysmaksu peritään.",
+        "nb": "Akuttjeneste hele døgnet; ring på forhånd før hvert akuttbesøk. Bare livstruende tilfeller; akuttgebyr kommer i tillegg."
       },
       "small_animals": true,
       "source_url": "https://www.ennetseeklinik.ch/notfalldienst",
@@ -409,7 +420,8 @@
         "cs": "Pohotovostní linka 0900 527 575 (zvýšená sazba) je denně obsazena 7:00–24:00; mezi 0:00 a 7:00 se akutní případy předávají do Hünenbergu, Feusisbergu nebo Tierspital Zürich.",
         "sv": "Jourlinje 0900 527 575 (betalnummer) bemannad dagligen 7.00 till midnatt; mellan midnatt och 7.00 hänvisas brådskande fall till Hünenberg, Feusisberg eller Tierspital Zürich.",
         "da": "Akuttelefon 0900 527 575 (forhøjet takst) bemandet dagligt 7.00 til midnat; mellem midnat og 7.00 henvises akutte tilfælde til Hünenberg, Feusisberg eller Tierspital Zürich.",
-        "fi": "Päivystysnumero 0900 527 575 (lisämaksullinen) vastaa päivittäin klo 7.00–24.00; klo 24.00–7.00 kiireelliset tapaukset ohjataan Hünenbergiin, Feusisbergiin tai Tierspital Zürichiin."
+        "fi": "Päivystysnumero 0900 527 575 (lisämaksullinen) vastaa päivittäin klo 7.00–24.00; klo 24.00–7.00 kiireelliset tapaukset ohjataan Hünenbergiin, Feusisbergiin tai Tierspital Zürichiin.",
+        "nb": "Akuttelefon 0900 527 575 (nummer med tilleggstakst) bemannet daglig kl. 7.00 til midnatt; mellom midnatt og kl. 7.00 henvises hastetilfeller til Hünenberg, Feusisberg eller Tierspital Zürich."
       },
       "small_animals": true,
       "url": "http://www.tierklinik-obergrund.ch",
@@ -438,7 +450,8 @@
         "cs": "Pohotovost pro malá zvířata pro Basilej a okolí, nonstop, 365 dní v roce; linka se zvýšenou sazbou 0900 99 33 99. Od 18:00 se hovory přepojují do VetTrust Tierklinik Basel.",
         "sv": "Akutjour för smådjur i Basel med omnejd, dygnet runt, årets alla dagar; betalnummer 0900 99 33 99. Från 18.00 kopplas samtal till VetTrust Tierklinik Basel.",
         "da": "Akuttjeneste for små kæledyr i Basel og omegn, døgnet rundt, 365 dage om året; nummer med forhøjet takst 0900 99 33 99. Fra 18.00 stilles opkald om til VetTrust Tierklinik Basel.",
-        "fi": "Pieneläinten päivystys Baselille ja ympäristölle, ympäri vuorokauden, 365 päivänä; lisämaksullinen numero 0900 99 33 99. Klo 18.00 alkaen puhelut ohjataan VetTrust Tierklinik Baseliin."
+        "fi": "Pieneläinten päivystys Baselille ja ympäristölle, ympäri vuorokauden, 365 päivänä; lisämaksullinen numero 0900 99 33 99. Klo 18.00 alkaen puhelut ohjataan VetTrust Tierklinik Baseliin.",
+        "nb": "Akuttjeneste for små dyr for Basel og omegn, hele døgnet, 365 dager; betalingsnummer med høy takst 0900 99 33 99. Fra kl. 18.00 går anrop til VetTrust Tierklinik Basel."
       },
       "small_animals": true,
       "url": "https://www.notfalltierarzt.ch",
@@ -468,7 +481,8 @@
         "cs": "Nonstop včetně státních svátků. V pracovní dny 8:00–17:00 na +41 61 515 66 66; večer, o víkendech a svátcích na lince 0900 515 114 (zvýšená sazba).",
         "sv": "Öppet dygnet runt, även på helgdagar. Vardagar 8–17 på +41 61 515 66 66; kvällar, helger och helgdagar på linjen 0900 515 114 (betalnummer).",
         "da": "Åbent døgnet rundt, også på helligdage. Hverdage 8–17 på +41 61 515 66 66; aftener, weekender og helligdage på nummeret 0900 515 114 (forhøjet takst).",
-        "fi": "Auki 24/7, myös pyhäpäivinä. Arkisin klo 8–17 numerossa +41 61 515 66 66; iltaisin, viikonloppuisin ja pyhäpäivinä numerossa 0900 515 114 (lisämaksullinen)."
+        "fi": "Auki 24/7, myös pyhäpäivinä. Arkisin klo 8–17 numerossa +41 61 515 66 66; iltaisin, viikonloppuisin ja pyhäpäivinä numerossa 0900 515 114 (lisämaksullinen).",
+        "nb": "Åpent hele døgnet, også helligdager. Hverdager kl. 8–17 på +41 61 515 66 66; kvelder, helger og helligdager på 0900 515 114 (betalingsnummer)."
       },
       "small_animals": true,
       "url": "https://www.vettrust.ch/standorte/tierklinik-basel",
@@ -498,7 +512,8 @@
         "cs": "Po–Pá 7:00–18:00, so 7:00–12:00; mimo ordinační dobu pohotovost pro malá zvířata Basilej 0900 99 33 99.",
         "sv": "Mån–fre 7–18, lör 7–12; utanför öppettiderna vänder du dig till akutjouren för smådjur i Basel, 0900 99 33 99.",
         "da": "Man–fre 7–18, lør 7–12; uden for åbningstiden kontakt akuttjenesteen for små kæledyr i Basel 0900 99 33 99.",
-        "fi": "ma–pe klo 7–18, la klo 7–12; aukioloaikojen ulkopuolella Baselin pieneläinpäivystys 0900 99 33 99."
+        "fi": "ma–pe klo 7–18, la klo 7–12; aukioloaikojen ulkopuolella Baselin pieneläinpäivystys 0900 99 33 99.",
+        "nb": "Man–fre 7–18, lør 7–12; utenom åpningstiden se akuttjenesten for små dyr i Basel 0900 99 33 99."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-leimental.ch",
@@ -528,7 +543,8 @@
         "cs": "Ordinační doba Po–Pá 8:00–12:00 a 13:30–18:00, so 8:00–12:00; pohotovostní linka mimo ordinační dobu 071 354 65 60 (pohotovostní poplatek).",
         "sv": "Öppettider mån–fre 8–12 och 13.30–18, lör 8–12; jourlinje utanför öppettiderna 071 354 65 60 (jourtillägg).",
         "da": "Åbningstid man–fre 8–12 og 13.30–18, lør 8–12; akuttelefon uden for åbningstiden 071 354 65 60 (akuttillæg).",
-        "fi": "Klinikan aukioloajat ma–pe klo 8–12 ja 13.30–18, la klo 8–12; päivystysnumero aukioloaikojen ulkopuolella 071 354 65 60 (päivystysmaksu)."
+        "fi": "Klinikan aukioloajat ma–pe klo 8–12 ja 13.30–18, la klo 8–12; päivystysnumero aukioloaikojen ulkopuolella 071 354 65 60 (päivystysmaksu).",
+        "nb": "Klinikkens åpningstid man–fre kl. 8–12 og 13.30–18, lør kl. 8–12; vakttelefon utenfor åpningstid 071 354 65 60 (akuttgebyr)."
       },
       "small_animals": true,
       "url": "https://www.arc-o.ch",
@@ -558,7 +574,8 @@
         "cs": "Organizovaná pohotovostní služba mimo ordinační dobu; zavolejte na kliniku. Po–Pá 8:00–12:00 a 14:00–18:00, so 8:00–11:00.",
         "sv": "Organiserad akutjour utanför öppettiderna; ring kliniken. Mån–fre 8–12 och 14–18, lör 8–11.",
         "da": "Organiseret akuttjeneste uden for åbningstiden; ring til klinikken. Man–fre 8–12 og 14–18, lør 8–11.",
-        "fi": "Päivystys on järjestetty aukioloaikojen ulkopuolelle; soita klinikalle. ma–pe klo 8–12 ja 14–18, la klo 8–11."
+        "fi": "Päivystys on järjestetty aukioloaikojen ulkopuolelle; soita klinikalle. ma–pe klo 8–12 ja 14–18, la klo 8–11.",
+        "nb": "Organisert akuttjeneste utenom åpningstid; ring klinikken. Man–fre 8–12 og 14–18, lør 8–11."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-glattfeld.ch",
@@ -588,7 +605,8 @@
         "cs": "Nonstop pohotovostní telefon; Po–Pá 8:00–12:00 a 13:30–18:00 (ve čtvrtek pouze dopoledne, v úterý do 20:00), o víkendech zavřeno.",
         "sv": "Akuttelefon dygnet runt; mån–fre 8–12 och 13.30–18 (tors endast förmiddag, tis till 20), stängt på helger.",
         "da": "Akuttelefon døgnet rundt; man–fre 8–12 og 13.30–18 (tors kun formiddag, tirs til 20), lukket i weekenden.",
-        "fi": "Päivystyspuhelin ympäri vuorokauden; ma–pe klo 8–12 ja 13.30–18 (to vain aamupäivä, ti klo 20 asti), viikonloppuisin suljettu."
+        "fi": "Päivystyspuhelin ympäri vuorokauden; ma–pe klo 8–12 ja 13.30–18 (to vain aamupäivä, ti klo 20 asti), viikonloppuisin suljettu.",
+        "nb": "Akuttelefon hele døgnet; man–fre 8–12 og 13.30–18 (tor kun formiddag, tir til 20), stengt i helgene."
       },
       "small_animals": true,
       "url": "https://www.kleintierklinik-am-see.ch",
@@ -618,7 +636,8 @@
         "cs": "Pohotovost nonstop, 365 dní v roce; předem zavolejte.",
         "sv": "Akutjour dygnet runt, årets alla dagar; ring innan du kommer.",
         "da": "Akuttjeneste døgnet rundt, 365 dage om året; ring på forhånd.",
-        "fi": "Päivystys ympäri vuorokauden 365 päivänä vuodessa; soita etukäteen."
+        "fi": "Päivystys ympäri vuorokauden 365 päivänä vuodessa; soita etukäteen.",
+        "nb": "Akuttjeneste hele døgnet, 365 dager i året; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxis-niederteufenag.ch/",
@@ -648,7 +667,8 @@
         "cs": "Vlastní pohotovost nonstop; mimo ordinační dobu pohotovostní poplatek. Objednání telefonicky.",
         "sv": "Akutjour dygnet runt på kliniken; jourtillägg utanför öppettiderna. Tidsbokning per telefon.",
         "da": "Akuttjeneste døgnet rundt på stedet; akuttillæg uden for åbningstiden. Tidsbestilling pr. telefon.",
-        "fi": "Oma päivystys ympäri vuorokauden; päivystysmaksu aukioloaikojen ulkopuolella. Ajanvaraus puhelimitse."
+        "fi": "Oma päivystys ympäri vuorokauden; päivystysmaksu aukioloaikojen ulkopuolella. Ajanvaraus puhelimitse.",
+        "nb": "Akuttjeneste i eget hus hele døgnet; tillegg for akutthjelp utenom åpningstid. Timebestilling per telefon."
       },
       "small_animals": true,
       "url": "https://www.silvretta-tieraerzte.ch",
@@ -678,7 +698,8 @@
         "cs": "Nonstop pohotovostní linka na hlavním čísle.",
         "sv": "Akutlinje dygnet runt på huvudnumret.",
         "da": "Akuttelefon døgnet rundt på hovednummeret.",
-        "fi": "Päivystysnumero ympäri vuorokauden pääpuhelinnumerossa."
+        "fi": "Päivystysnumero ympäri vuorokauden pääpuhelinnumerossa.",
+        "nb": "Akuttlinje hele døgnet på hovednummeret."
       },
       "small_animals": true,
       "source_url": "https://tierklinikmasans.ch/",
@@ -708,7 +729,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00; o víkendech zavřeno. V naléhavých případech volejte hlavní číslo.",
         "sv": "Mån–fre 8–12 och 14–18; stängt på helger. Ring huvudnumret vid akutfall.",
         "da": "Man–fre 8–12 og 14–18; lukket i weekenden. Ring på hovednummeret ved akutte tilfælde.",
-        "fi": "ma–pe klo 8–12 ja 14–18; viikonloppuisin suljettu. Päivystystapauksissa soita pääpuhelinnumeroon."
+        "fi": "ma–pe klo 8–12 ja 14–18; viikonloppuisin suljettu. Päivystystapauksissa soita pääpuhelinnumeroon.",
+        "nb": "man–fre 8–12 og 14–18; stengt i helgene. Ring hovednummeret ved nødtilfeller."
       },
       "small_animals": true,
       "source_url": "https://www.gstsvs.ch/de/tierarzt-finder/praxis/praxis/Gross-%20und%20Kleintierpraxis%20Lai%20GmbH",
@@ -737,7 +759,8 @@
         "cs": "Objednání telefonicky; pohotovostní číslo mimo ordinační dobu +41 77 457 00 01.",
         "sv": "Tidsbokning per telefon; journummer utanför öppettiderna +41 77 457 00 01.",
         "da": "Tidsbestilling pr. telefon; akutnummer uden for åbningstiden +41 77 457 00 01.",
-        "fi": "Ajanvaraus puhelimitse; päivystysnumero aukioloaikojen ulkopuolella +41 77 457 00 01."
+        "fi": "Ajanvaraus puhelimitse; päivystysnumero aukioloaikojen ulkopuolella +41 77 457 00 01.",
+        "nb": "Timebestilling på telefon; nødnummer utenfor åpningstid +41 77 457 00 01."
       },
       "small_animals": true,
       "url": "https://www.ktpamsee-murten.ch",
@@ -767,7 +790,8 @@
         "cs": "Pohotovost: zavolejte do ordinace, hovor se přepojí na veterináře ve službě; mimo ordinační hodiny mobil +41 76 681 12 41.",
         "sv": "Akutfall: ring mottagningen, du kopplas vidare till jourhavande veterinär; utanför kontorstid: mobil +41 76 681 12 41.",
         "da": "Akutte tilfælde: ring til klinikken, opkaldet videresendes til den vagthavende dyrlæge; uden for åbningstiden mobil +41 76 681 12 41.",
-        "fi": "Päivystys: soita vastaanotolle, puhelu ohjataan päivystävälle eläinlääkärille; virka-ajan ulkopuolella matkapuhelin +41 76 681 12 41."
+        "fi": "Päivystys: soita vastaanotolle, puhelu ohjataan päivystävälle eläinlääkärille; virka-ajan ulkopuolella matkapuhelin +41 76 681 12 41.",
+        "nb": "Nødtilfeller: ring klinikken, videresendes til vakthavende dyrlege; utenom kontortid mobil +41 76 681 12 41."
       },
       "small_animals": true,
       "url": "https://www.pyanavet.com",
@@ -797,7 +821,8 @@
         "cs": "Pohotovostní veterinář denně 7:00–23:00, 365 dní v roce.",
         "sv": "Jourhavande veterinär dagligen 7–23, årets alla dagar.",
         "da": "Akutdyrlæge dagligt 7–23, 365 dage om året.",
-        "fi": "Päivystävä eläinlääkäri päivittäin klo 7–23, 365 päivänä vuodessa."
+        "fi": "Päivystävä eläinlääkäri päivittäin klo 7–23, 365 päivänä vuodessa.",
+        "nb": "Dyrlegevakt daglig 7–23, 365 dager i året."
       },
       "small_animals": true,
       "url": "https://vetzentrum-zurich.ch",
@@ -827,7 +852,8 @@
         "cs": "K zastižení nonstop telefonicky; běžná ordinační doba Po–Pá 8:00–19:00, so 8:00–16:00.",
         "sv": "Nås dygnet runt per telefon; ordinarie öppettider mån–fre 8–19, lör 8–16.",
         "da": "Kan kontaktes døgnet rundt pr. telefon; almindelig åbningstid man–fre 8–19, lør 8–16.",
-        "fi": "Tavoitettavissa puhelimitse 24/7; normaalit aukioloajat ma–pe klo 8–19, la klo 8–16."
+        "fi": "Tavoitettavissa puhelimitse 24/7; normaalit aukioloajat ma–pe klo 8–19, la klo 8–16.",
+        "nb": "Nås på telefon hele døgnet; ordinær åpningstid man–fre kl. 8–19, lør 8–16."
       },
       "small_animals": true,
       "url": "https://www.doc4petcentroveterinarioagno.ch",
@@ -857,7 +883,8 @@
         "cs": "Po–Pá 8:00–12:00 a 15:00–19:00 (ve čtvrtek do 18:00); v naléhavých případech zavolejte na kliniku.",
         "sv": "Mån–fre 8–12 och 15–19 (tors till 18); ring kliniken vid akutfall.",
         "da": "Man–fre 8–12 og 15–19 (tors til 18); ring til klinikken ved akutte tilfælde.",
-        "fi": "ma–pe klo 8–12 ja 15–19 (to klo 18 asti); soita klinikalle päivystystapauksissa."
+        "fi": "ma–pe klo 8–12 ja 15–19 (to klo 18 asti); soita klinikalle päivystystapauksissa.",
+        "nb": "man–fre 8–12 og 15–19 (tor til 18); ring klinikken ved nødtilfeller."
       },
       "small_animals": true,
       "url": "https://mazzivet.ch",
@@ -887,7 +914,8 @@
         "cs": "Po–St a Pá 8:00–12:00 a 14:00–18:00, Čt 8:00–12:00 a 15:30–19:30; v naléhavých případech volejte hlavní číslo.",
         "sv": "Mån–ons och fre 8–12 och 14–18, tors 8–12 och 15.30–19.30; ring huvudnumret vid akutfall.",
         "da": "Man–ons og fre 8–12 og 14–18, tors 8–12 og 15.30–19.30; ring på hovednummeret ved akutte tilfælde.",
-        "fi": "ma–ke ja pe klo 8–12 ja 14–18, to klo 8–12 ja 15.30–19.30; soita pääpuhelinnumeroon päivystystapauksissa."
+        "fi": "ma–ke ja pe klo 8–12 ja 14–18, to klo 8–12 ja 15.30–19.30; soita pääpuhelinnumeroon päivystystapauksissa.",
+        "nb": "man–ons og fre 8–12 og 14–18, tor 8–12 og 15.30–19.30; ring hovednummeret ved nødtilfeller."
       },
       "small_animals": true,
       "url": "https://www.balli-veterinario.ch",
@@ -917,7 +945,8 @@
         "cs": "Pohotovostní návštěvy veterináře doma nonstop, 7 dní v týdnu, v Ženevě, kantonu Vaud a části Fribourgu; pohotovostní linka 022 552 55 05.",
         "sv": "Akut veterinärjour med hembesök dygnet runt, alla dagar, i Genève, Vaud och delar av Fribourg; jourlinje 022 552 55 05.",
         "da": "Akut dyrlægehjælp med hjemmebesøg døgnet rundt, 7 dage om ugen, i Geneve, Vaud og en del af Fribourg; akuttelefon 022 552 55 05.",
-        "fi": "Eläinlääkärin päivystyskäynnit kotiin ympäri vuorokauden, 7 päivää viikossa, Genevessä, Vaudissa ja osassa Fribourgia; päivystysnumero 022 552 55 05."
+        "fi": "Eläinlääkärin päivystyskäynnit kotiin ympäri vuorokauden, 7 päivää viikossa, Genevessä, Vaudissa ja osassa Fribourgia; päivystysnumero 022 552 55 05.",
+        "nb": "Akutte hjemmebesøk av dyrlege hele døgnet, alle dager, i Genève, Vaud og deler av Fribourg; akuttlinje 022 552 55 05."
       },
       "small_animals": true,
       "url": "https://www.vetoadom.ch/",
@@ -947,7 +976,8 @@
         "cs": "Po–So 8:00–18:00 na objednání; mimo ordinační dobu se hovory přesměrují na partnerskou pohotovostní službu.",
         "sv": "Mån–lör 8–18 efter bokad tid; utanför öppettiderna vidarekopplas samtal till samarbetspartnerns jourtjänst.",
         "da": "Man–lør 8–18 efter aftale; uden for åbningstiden omstilles opkald til partnernes akuttjeneste.",
-        "fi": "ma–la klo 8–18 ajanvarauksella; aukioloaikojen ulkopuolella puhelut ohjataan kumppanin päivystyspalveluun."
+        "fi": "ma–la klo 8–18 ajanvarauksella; aukioloaikojen ulkopuolella puhelut ohjataan kumppanin päivystyspalveluun.",
+        "nb": "man–lør 8–18 etter avtale; utenom åpningstiden videresendes samtaler til samarbeidspartnerens vakttjeneste."
       },
       "small_animals": true,
       "url": "https://vetcity.ch/",
@@ -976,7 +1006,8 @@
         "cs": "Veterinární pohotovostní služba pro Ticino, nonstop, 7 dní v týdnu; linka se zvýšenou sazbou 0900 140 150 (CHF 3/min). Nejdřív zavolejte svému veterináři. Každý den slouží jedna ordinace ve třech oblastech: Bellinzona a údolí, Locarno a údolí, Sottoceneri (včetně Mendrisia); denní seznam je na stránce OVT.",
         "sv": "Jourhavande veterinärtjänst för Ticino, dygnet runt, alla dagar; betalnummer 0900 140 150 (CHF 3/min). Ring först din egen veterinär. En jourhavande klinik per dag i vart och ett av tre områden: Bellinzona med dalar, Locarno med dalar, Sottoceneri (inkl. Mendrisio); den dagliga listan finns på OVT-sidan.",
         "da": "Akut dyrlægevagt for Ticino, døgnet rundt, 7 dage om ugen; nummer med forhøjet takst 0900 140 150 (CHF 3/min). Ring først til din egen dyrlæge. Én vagtklinik pr. dag i hvert af tre områder: Bellinzona og dalene, Locarno og dalene, Sottoceneri (inkl. Mendrisio); den daglige liste findes på OVT's side.",
-        "fi": "Päivystävä eläinlääkäripalvelu Ticinoon, ympäri vuorokauden, 7 päivää viikossa; lisämaksullinen numero 0900 140 150 (CHF 3/min). Soita ensin omalle eläinlääkärillesi. Yksi päivystävä vastaanotto päivässä kolmella alueella: Bellinzona ja laaksot, Locarno ja laaksot, Sottoceneri (mukaan lukien Mendrisio); päivittäinen luettelo on OVT-sivulla."
+        "fi": "Päivystävä eläinlääkäripalvelu Ticinoon, ympäri vuorokauden, 7 päivää viikossa; lisämaksullinen numero 0900 140 150 (CHF 3/min). Soita ensin omalle eläinlääkärillesi. Yksi päivystävä vastaanotto päivässä kolmella alueella: Bellinzona ja laaksot, Locarno ja laaksot, Sottoceneri (mukaan lukien Mendrisio); päivittäinen luettelo on OVT-sivulla.",
+        "nb": "Dyrlegevakt for Ticino, hele døgnet, alle dager; telefon med høyere takst 0900 140 150 (CHF 3/min). Ring først din egen dyrlege. Én vaktklinikk per dag i hvert av tre områder: Bellinzona og dalene, Locarno og dalene, Sottoceneri (inkl. Mendrisio); den daglige listen finnes på OVT-siden."
       },
       "small_animals": true,
       "url": "https://www.veterinariticino.ch/urgenze/",
@@ -1005,7 +1036,8 @@
         "cs": "Veterinární pohotovostní služba pro oblast Lausanne, 7 dní v týdnu; ve dne 8:00–20:00 ordinace SVGL, v noci 20:00–8:00 Maison des Urgences Vétérinaires Nord (Epalinges).",
         "sv": "Veterinärjour för regionen Lausanne, alla dagar i veckan; dagtid 8–20 av SVGL-klinikerna, nätter 20–8 på Maison des Urgences Vétérinaires Nord (Epalinges).",
         "da": "Akut dyrlægevagt for Lausanne-regionen, 7 dage om ugen; om dagen 8–20 af SVGL-klinikkerne, om natten 20–8 på Maison des Urgences Vétérinaires Nord (Epalinges).",
-        "fi": "Päivystävä eläinlääkäripalvelu Lausannen alueelle 7 päivää viikossa; päivisin klo 8–20 päivystävät SVGL-vastaanotot, öisin klo 20–8 Maison des Urgences Vétérinaires Nord (Epalinges)."
+        "fi": "Päivystävä eläinlääkäripalvelu Lausannen alueelle 7 päivää viikossa; päivisin klo 8–20 päivystävät SVGL-vastaanotot, öisin klo 20–8 Maison des Urgences Vétérinaires Nord (Epalinges).",
+        "nb": "Vakttjeneste for dyrlegenødtilfeller i Lausanne-regionen, sju dager i uken; dagtid 8–20 ved SVGL-klinikkene, natt 20–8 ved Maison des Urgences Vétérinaires Nord (Epalinges)."
       },
       "small_animals": true,
       "url": "https://veterinaire-urgence.ch/",
@@ -1035,7 +1067,8 @@
         "cs": "Pohotovost nonstop. Běžná ordinační doba Po–Pá 7:00–20:00, přepážka v sobotu 7:30–12:00. Pohotovostní linka 0900 800 007 (zvýšená sazba). O víkendech se účtuje pohotovostní příplatek; předem zavolejte.",
         "sv": "Jour dygnet runt. Ordinarie öppettider mån–fre 07.00–20.00, lör i receptionen 07.30–12.00. Jourlinje 0900 800 007 (betalnummer). Helgjourtillägg tillkommer; ring innan du kommer.",
         "da": "Vagthavende døgnet rundt. Almindelig åbningstid man–fre 07.00–20.00, lør åben skranke 07.30–12.00. Akuttelefon 0900 800 007 (forhøjet takst). Der opkræves weekendtillæg for akut hjælp; ring på forhånd.",
-        "fi": "Päivystys ympäri vuorokauden. Normaalit aukioloajat ma–pe klo 7.00–20.00, la vastaanotto klo 7.30–12.00. Päivystysnumero 0900 800 007 (lisämaksullinen). Viikonloppuisin peritään päivystyslisä; soita etukäteen."
+        "fi": "Päivystys ympäri vuorokauden. Normaalit aukioloajat ma–pe klo 7.00–20.00, la vastaanotto klo 7.30–12.00. Päivystysnumero 0900 800 007 (lisämaksullinen). Viikonloppuisin peritään päivystyslisä; soita etukäteen.",
+        "nb": "Vakt hele døgnet. Ordinære åpningstider man–fre 07.00–20.00, lør skranke 07.30–12.00. Akuttelefon 0900 800 007 (høyere takst). Tillegg for akutthjelp i helgene; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://tierklinikaw.ch/",
@@ -1064,7 +1097,8 @@
         "cs": "Placená pohotovostní linka (zvýšená sazba) mimo ordinační dobu; volající je automaticky přepojen do ordinace ve službě. Noční služba Tierklinik Aarau West 22:00–8:00.",
         "sv": "Avgiftsbelagd jourlinje (betalnummer) utanför öppettiderna; den som ringer kopplas automatiskt till den jourhavande kliniken. Nattjour på Tierklinik Aarau West 22.00–08.00.",
         "da": "Akuttelefon (forhøjet takst) uden for klinikkernes åbningstid; den, der ringer, stilles automatisk om til den vagthavende klinik. Nattevagt på Tierklinik Aarau West 22.00–08.00.",
-        "fi": "Lisämaksullinen päivystysnumero vastaanottoaikojen ulkopuolella; soittaja yhdistetään automaattisesti päivystävälle vastaanotolle. Tierklinik Aarau Westin yöpäivystys klo 22.00–8.00."
+        "fi": "Lisämaksullinen päivystysnumero vastaanottoaikojen ulkopuolella; soittaja yhdistetään automaattisesti päivystävälle vastaanotolle. Tierklinik Aarau Westin yöpäivystys klo 22.00–8.00.",
+        "nb": "Betalt akuttlinje (særskilt takst) utenom klinikkens åpningstid; den som ringer kobles automatisk til klinikken som har vakt. Nattjeneste ved Tierklinik Aarau West kl. 22.00–08.00."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-brugg.ch/notfalldienst",
@@ -1094,7 +1128,8 @@
         "cs": "Po–Pá 8:00–12:00 a 13:30–18:00, na objednání. Mimo ordinační dobu volejte placenou pohotovostní linku 0900 00 54 00 (přepojí na ordinaci ve službě).",
         "sv": "Mån–fre 08.00–12.00 och 13.30–18.00, efter bokad tid. Utanför öppettiderna ringer du den avgiftsbelagda jourlinjen 0900 00 54 00 (kopplar till jourhavande klinik).",
         "da": "Man–fre 08.00–12.00 og 13.30–18.00, efter aftale. Uden for åbningstiden ring til akuttelefonen 0900 00 54 00 (forhøjet takst, stiller om til den vagthavende klinik).",
-        "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.00, ajanvarauksella. Aukioloaikojen ulkopuolella soita maksulliseen päivystysnumeroon 0900 00 54 00 (yhdistää päivystävälle vastaanotolle)."
+        "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.00, ajanvarauksella. Aukioloaikojen ulkopuolella soita maksulliseen päivystysnumeroon 0900 00 54 00 (yhdistää päivystävälle vastaanotolle).",
+        "nb": "Man–fre 08.00–12.00 og 13.30–18.00, etter avtale. Utenom åpningstiden ring den betalte nødlinjen 0900 00 54 00 (kobler til praksisen på vakt)."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-brugg.ch/",
@@ -1124,7 +1159,8 @@
         "cs": "Po, Út, Pá 8:00–12:00 a 14:00–18:00; St 8:00–12:00 a 14:00–19:30; Čt 9:00–12:00 a 14:00–18:00; so 8:00–12:00. Ordinace zajišťuje pohotovost na stejném čísle.",
         "sv": "Mån, tis, fre 08.00–12.00 och 14.00–18.00; ons 08.00–12.00 och 14.00–19.30; tors 09.00–12.00 och 14.00–18.00; lör 08.00–12.00. Kliniken har en akutjour på samma nummer.",
         "da": "Man, tirs, fre 08.00–12.00 og 14.00–18.00; ons 08.00–12.00 og 14.00–19.30; tors 09.00–12.00 og 14.00–18.00; lør 08.00–12.00. Klinikken har akuttjeneste på samme nummer.",
-        "fi": "ma, ti, pe klo 8.00–12.00 ja 14.00–18.00; ke klo 8.00–12.00 ja 14.00–19.30; to klo 9.00–12.00 ja 14.00–18.00; la klo 8.00–12.00. Vastaanotolla on päivystys samassa numerossa."
+        "fi": "ma, ti, pe klo 8.00–12.00 ja 14.00–18.00; ke klo 8.00–12.00 ja 14.00–19.30; to klo 9.00–12.00 ja 14.00–18.00; la klo 8.00–12.00. Vastaanotolla on päivystys samassa numerossa.",
+        "nb": "Man, tir, fre 08.00–12.00 og 14.00–18.00; ons 08.00–12.00 og 14.00–19.30; tor 09.00–12.00 og 14.00–18.00; lør 08.00–12.00. Praksisen har akuttjeneste på samme nummer."
       },
       "small_animals": true,
       "url": "https://meikovet.ch/tierklinik/lenzburg/",
@@ -1154,7 +1190,8 @@
         "cs": "Po, Pá 8:00–12:00 a 14:00–18:30; Út 8:00–12:00 a 16:00–20:00; St, Čt 8:00–12:00 a 13:30–17:00; so 8:00–11:00. Pohotovostní číslo veterináře mimo ordinační dobu získáte přes číslo ordinace.",
         "sv": "Mån, fre 08.00–12.00 och 14.00–18.30; tis 08.00–12.00 och 16.00–20.00; ons, tors 08.00–12.00 och 13.30–17.00; lör 08.00–11.00. Jourhavande veterinär utanför öppettiderna nås via klinikens nummer.",
         "da": "Man, fre 08.00–12.00 og 14.00–18.30; tirs 08.00–12.00 og 16.00–20.00; ons, tors 08.00–12.00 og 13.30–17.00; lør 08.00–11.00. Akutdyrlæge uden for åbningstiden via klinikkens nummer.",
-        "fi": "ma, pe klo 8.00–12.00 ja 14.00–18.30; ti klo 8.00–12.00 ja 16.00–20.00; ke, to klo 8.00–12.00 ja 13.30–17.00; la klo 8.00–11.00. Päivystävän eläinlääkärin numero aukioloaikojen ulkopuolella vastaanoton numeron kautta."
+        "fi": "ma, pe klo 8.00–12.00 ja 14.00–18.30; ti klo 8.00–12.00 ja 16.00–20.00; ke, to klo 8.00–12.00 ja 13.30–17.00; la klo 8.00–11.00. Päivystävän eläinlääkärin numero aukioloaikojen ulkopuolella vastaanoton numeron kautta.",
+        "nb": "Man, fre 08.00–12.00 og 14.00–18.30; tir 08.00–12.00 og 16.00–20.00; ons, tor 08.00–12.00 og 13.30–17.00; lør 08.00–11.00. Nummer til dyrlegevakten utenom åpningstid via praksisens nummer."
       },
       "small_animals": true,
       "url": "https://meikovet.ch/en/tierklinik/wohlen/",
@@ -1184,7 +1221,8 @@
         "cs": "Po–Pá 9:00–13:00 a 15:00–19:00, so 9:30–13:00. Nonstop pohotovost pro své pacienty na stejném čísle.",
         "sv": "Mån–fre 09.00–13.00 och 15.00–19.00, lör 09.30–13.00. Akutjour dygnet runt för klinikens egna patienter på samma nummer.",
         "da": "Man–fre 09.00–13.00 og 15.00–19.00, lør 09.30–13.00. Akuttjeneste døgnet rundt for klinikkens patienter på samme nummer.",
-        "fi": "ma–pe klo 9.00–13.00 ja 15.00–19.00, la klo 9.30–13.00. Päivystys 24/7 omille potilaille samassa numerossa."
+        "fi": "ma–pe klo 9.00–13.00 ja 15.00–19.00, la klo 9.30–13.00. Päivystys 24/7 omille potilaille samassa numerossa.",
+        "nb": "Man–fre 09.00–13.00 og 15.00–19.00, lør 09.30–13.00. Akuttjeneste hele døgnet for egne pasienter på samme nummer."
       },
       "small_animals": true,
       "url": "https://clinica-alpina.ch/en/locations/tierklinik-clinica-alpina-celerina",
@@ -1214,7 +1252,8 @@
         "cs": "Po–Pá 9:00–13:00 a 15:00–19:00, so 9:30–13:00. Nonstop pohotovost pro své pacienty; pohotovostní číslo +41 81 861 00 88.",
         "sv": "Mån–fre 09.00–13.00 och 15.00–19.00, lör 09.30–13.00. Akutjour dygnet runt för klinikens egna patienter; journummer +41 81 861 00 88.",
         "da": "Man–fre 09.00–13.00 og 15.00–19.00, lør 09.30–13.00. Akuttjeneste døgnet rundt for klinikkens patienter; akutnummer +41 81 861 00 88.",
-        "fi": "ma–pe klo 9.00–13.00 ja 15.00–19.00, la klo 9.30–13.00. Päivystys 24/7 omille potilaille; päivystysnumero +41 81 861 00 88."
+        "fi": "ma–pe klo 9.00–13.00 ja 15.00–19.00, la klo 9.30–13.00. Päivystys 24/7 omille potilaille; päivystysnumero +41 81 861 00 88.",
+        "nb": "Man–fre 09.00–13.00 og 15.00–19.00, lør 09.30–13.00. Akuttjeneste hele døgnet for egne pasienter; nødnummer +41 81 861 00 88."
       },
       "small_animals": true,
       "url": "https://clinica-alpina.ch/en/locations/tierklinik-clinica-alpina-scuol",
@@ -1244,7 +1283,8 @@
         "cs": "Po, Út, St, Pá 8:00–12:00 a 14:00–18:00; Čt 8:00–12:00. Nonstop pohotovostní telefon +41 81 410 15 55.",
         "sv": "Mån, tis, ons, fre 08.00–12.00 och 14.00–18.00; tors 08.00–12.00. Akuttelefon dygnet runt +41 81 410 15 55.",
         "da": "Man, tirs, ons, fre 08.00–12.00 og 14.00–18.00; tors 08.00–12.00. Akuttelefon døgnet rundt +41 81 410 15 55.",
-        "fi": "ma, ti, ke, pe klo 8.00–12.00 ja 14.00–18.00; to klo 8.00–12.00. Päivystyspuhelin 24/7 +41 81 410 15 55."
+        "fi": "ma, ti, ke, pe klo 8.00–12.00 ja 14.00–18.00; to klo 8.00–12.00. Päivystyspuhelin 24/7 +41 81 410 15 55.",
+        "nb": "Man, tir, ons, fre 08.00–12.00 og 14.00–18.00; tor 08.00–12.00. Nødtelefon hele døgnet +41 81 410 15 55."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-davos.ch/",
@@ -1274,7 +1314,8 @@
         "cs": "Nonstop; veterinární pohotovost 365 dní v roce.",
         "sv": "Öppet dygnet runt; veterinärjour dygnet runt, årets alla dagar.",
         "da": "Åbent døgnet rundt; akut dyrlægevagt døgnet rundt, 365 dage om året.",
-        "fi": "Auki 24/7; eläinlääkäripäivystys ympäri vuorokauden, 365 päivänä vuodessa."
+        "fi": "Auki 24/7; eläinlääkäripäivystys ympäri vuorokauden, 365 päivänä vuodessa.",
+        "nb": "Åpent hele døgnet; døgnåpen dyrlegevakt, 365 dager i året."
       },
       "small_animals": true,
       "url": "https://clinicaveterinariatah.ch/en",
@@ -1304,7 +1345,8 @@
         "cs": "Nonstop, každý den v roce. Poplatek za pohotovostní návštěvu od CHF 90 (ve dne) a CHF 150 (v noci, v neděli, o svátcích).",
         "sv": "Öppet dygnet runt, årets alla dagar. Avgift för akutbesök från CHF 90 (dagtid) och CHF 150 (natt, söndag, helgdagar).",
         "da": "Åbent døgnet rundt, alle årets dage. Akutgebyr ved besøg fra CHF 90 (dagtimer) og CHF 150 (nat, søn- og helligdage).",
-        "fi": "Auki ympäri vuorokauden, joka päivä vuoden ympäri. Päivystyskäynnin maksu alkaen CHF 90 (päivisin) ja CHF 150 (yöllä, sunnuntaisin, pyhäpäivinä)."
+        "fi": "Auki ympäri vuorokauden, joka päivä vuoden ympäri. Päivystyskäynnin maksu alkaen CHF 90 (päivisin) ja CHF 150 (yöllä, sunnuntaisin, pyhäpäivinä).",
+        "nb": "Åpent hele døgnet, hver dag hele året. Gebyr for akuttbesøk fra CHF 90 (dagtid) og CHF 150 (natt, søndag, helligdager)."
       },
       "small_animals": true,
       "url": "https://latrinita.ch/en/",
@@ -1334,7 +1376,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–12:00. Pohotovost mimo ordinační dobu zajišťuje společně s Clinica Veterinaria TAH (nonstop).",
         "sv": "Mån–fre 08.00–18.00, lör 08.00–12.00. Akutfall utanför öppettiderna hanteras tillsammans med Clinica Veterinaria TAH (dygnet runt).",
         "da": "Man–fre 08.00–18.00, lør 08.00–12.00. Akutte tilfælde uden for åbningstiden varetages sammen med Clinica Veterinaria TAH (døgnåbent).",
-        "fi": "ma–pe klo 8.00–18.00, la klo 8.00–12.00. Aukioloaikojen ulkopuolisen päivystyksen hoitaa yhdessä Clinica Veterinaria TAH (24/7)."
+        "fi": "ma–pe klo 8.00–18.00, la klo 8.00–12.00. Aukioloaikojen ulkopuolisen päivystyksen hoitaa yhdessä Clinica Veterinaria TAH (24/7).",
+        "nb": "Man–fre 08.00–18.00, lør 08.00–12.00. Nødtilfeller utenom åpningstiden håndteres sammen med Clinica Veterinaria TAH (hele døgnet)."
       },
       "small_animals": true,
       "url": "https://clinicaveterinaria-acacia.ch/",
@@ -1364,7 +1407,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00. Pohotovostní linka mimo ordinační dobu 0900 00 03 03 (přepojí na veterináře ve službě).",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.00. Jourlinje utanför öppettiderna 0900 00 03 03 (kopplar till jourhavande veterinär).",
         "da": "Man–fre 08.00–12.00 og 14.00–18.00. Akuttelefon uden for åbningstiden 0900 00 03 03 (stiller om til den vagthavende dyrlæge).",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 00 03 03 (yhdistää päivystävälle eläinlääkärille)."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 00 03 03 (yhdistää päivystävälle eläinlääkärille).",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.00. Nødlinje utenom åpningstiden 0900 00 03 03 (kobler til dyrlegen på vakt)."
       },
       "small_animals": true,
       "url": "https://tivet.ch/",
@@ -1394,7 +1438,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00. Pohotovostní linka mimo ordinační dobu 0900 00 03 03 (přepojí na veterináře ve službě).",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.00. Jourlinje utanför öppettiderna 0900 00 03 03 (kopplar till jourhavande veterinär).",
         "da": "Man–fre 08.00–12.00 og 14.00–18.00. Akuttelefon uden for åbningstiden 0900 00 03 03 (stiller om til den vagthavende dyrlæge).",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 00 03 03 (yhdistää päivystävälle eläinlääkärille)."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 00 03 03 (yhdistää päivystävälle eläinlääkärille).",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.00. Nødlinje utenom åpningstiden 0900 00 03 03 (kobler til dyrlegen på vakt)."
       },
       "small_animals": true,
       "url": "https://tivet.ch/",
@@ -1424,7 +1469,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00; so 9:00–17:00. Pohotovostní linka mimo ordinační dobu 0900 00 03 03 (přepojí na veterináře ve službě).",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.00; lör 09.00–17.00. Jourlinje utanför öppettiderna 0900 00 03 03 (kopplar till jourhavande veterinär).",
         "da": "Man–fre 08.00–12.00 og 14.00–18.00; lør 09.00–17.00. Akuttelefon uden for åbningstiden 0900 00 03 03 (stiller om til den vagthavende dyrlæge).",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00; la klo 9.00–17.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 00 03 03 (yhdistää päivystävälle eläinlääkärille)."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00; la klo 9.00–17.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 00 03 03 (yhdistää päivystävälle eläinlääkärille).",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.00; lør 09.00–17.00. Nødlinje utenom åpningstiden 0900 00 03 03 (kobler til dyrlegen på vakt)."
       },
       "small_animals": true,
       "url": "https://tivet.ch/",
@@ -1454,7 +1500,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každou noc a o víkendech a státních svátcích nonstop. V pracovní dny ve dne zajišťuje partnerská ordinace.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje natt och dygnet runt på helger och helgdagar, ingen tidsbokning behövs. En partnerklinik täcker dagtid på vardagar.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling hver nat og døgnet rundt i weekender og på helligdage. En partnerklinik dækker hverdage om dagen.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling hver natt og hele døgnet i helger og på helligdager. En samarbeidende klinikk dekker hverdager på dagtid."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/emergency-vet-aigle/",
@@ -1484,7 +1531,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každou noc a o víkendech a státních svátcích nonstop. V pracovní dny ve dne zajišťuje partnerská ordinace.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje natt och dygnet runt på helger och helgdagar, ingen tidsbokning behövs. En partnerklinik täcker dagtid på vardagar.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling hver nat og døgnet rundt i weekender og på helligdage. En partnerklinik dækker hverdage om dagen.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling hver natt og hele døgnet i helger og på helligdager. En samarbeidende klinikk dekker hverdager på dagtid."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-etoy-and-its-region/",
@@ -1514,7 +1562,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každý víkend a státní svátek. Noci v pracovní dny zajišťuje EVC Etoy.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje helg och helgdag utan tidsbokning. Nätter under veckan täcks av EVC Etoy.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling alle weekender og helligdage. Hverdagsnætter dækkes af EVC Etoy.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka viikonloppu ja pyhäpäivä. Arkiyöt hoitaa EVC Etoy."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka viikonloppu ja pyhäpäivä. Arkiyöt hoitaa EVC Etoy.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling i alle helger og på helligdager. Hverdagsnettene dekkes av EVC Etoy."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-lausanne-and-its-region/",
@@ -1544,7 +1593,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každou noc a o víkendech a státních svátcích nonstop. V pracovní dny ve dne zajišťuje partnerská ordinace.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje natt och dygnet runt på helger och helgdagar, ingen tidsbokning behövs. En partnerklinik täcker dagtid på vardagar.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling hver nat og døgnet rundt i weekender og på helligdage. En partnerklinik dækker hverdage om dagen.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling hver natt og hele døgnet i helger og på helligdager. En samarbeidende klinikk dekker hverdager på dagtid."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-chatel-and-its-region/",
@@ -1574,7 +1624,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každou noc a o víkendech a státních svátcích nonstop. V pracovní dny ve dne zajišťuje partnerská ordinace.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje natt och dygnet runt på helger och helgdagar, ingen tidsbokning behövs. En partnerklinik täcker dagtid på vardagar.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling hver nat og døgnet rundt i weekender og på helligdage. En partnerklinik dækker hverdage om dagen.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling hver natt og hele døgnet i helger og på helligdager. En samarbeidende klinikk dekker hverdager på dagtid."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-estavayer-and-its-region/",
@@ -1604,7 +1655,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každou noc a o víkendech a státních svátcích nonstop. V pracovní dny ve dne zajišťuje partnerská ordinace.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje natt och dygnet runt på helger och helgdagar, ingen tidsbokning behövs. En partnerklinik täcker dagtid på vardagar.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling hver nat og døgnet rundt i weekender og på helligdage. En partnerklinik dækker hverdage om dagen.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling hver natt og hele døgnet i helger og på helligdager. En samarbeidende klinikk dekker hverdager på dagtid."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/evc-geneva-and-its-region/",
@@ -1634,7 +1686,8 @@
         "cs": "Veterinární pohotovostní centrum: telefonní linka 058 122 22 22 (bezplatná) nonstop; bez objednání každou noc a o víkendech a státních svátcích nonstop. V pracovní dny ve dne zajišťuje partnerská ordinace.",
         "sv": "Akutcentrum för djur: telefonlinje 058 122 22 22 (gratis) bemannad dygnet runt; drop-in varje natt och dygnet runt på helger och helgdagar, ingen tidsbokning behövs. En partnerklinik täcker dagtid på vardagar.",
         "da": "Akutcenter for dyr: telefon 058 122 22 22 (gratis) besvares døgnet rundt; besøg uden tidsbestilling hver nat og døgnet rundt i weekender og på helligdage. En partnerklinik dækker hverdage om dagen.",
-        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät."
+        "fi": "Eläinlääkäripäivystyskeskus: puhelinnumero 058 122 22 22 (maksuton) vastaa 24/7; ilman ajanvarausta joka yö sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Kumppanivastaanotto hoitaa arkipäivät.",
+        "nb": "Akutt dyrlegesenter: telefon 058 122 22 22 (gratis) besvares hele døgnet; uten timebestilling hver natt og hele døgnet i helger og på helligdager. En samarbeidende klinikk dekker hverdager på dagtid."
       },
       "small_animals": true,
       "url": "https://emergencyvet.ch/en/emergency-vet-evc-bern/",
@@ -1663,7 +1716,8 @@
         "cs": "Placené regionální linky veterináře ve službě mimo ordinační dobu: 0900 502 502 (Sierre, Sion, Conthey) a 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 za minutu; od 21:00 v pracovní dny a od 17:00 o víkendech se hovory přesměrují do EVC Aigle (058 122 22 22).",
         "sv": "Avgiftsbelagda regionala jourlinjer med jourhavande veterinär utanför öppettiderna: 0900 502 502 (Sierre, Sion, Conthey) och 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 per minut; från 21.00 på vardagar och 17.00 på helger vidarekopplas samtal till EVC Aigle (058 122 22 22).",
         "da": "Regionale vagtnumre med forhøjet takst til vagthavende dyrlæge uden for klinikkernes åbningstid: 0900 502 502 (Sierre, Sion, Conthey) og 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 pr. minut; fra 21.00 på hverdage og 17.00 i weekenden stilles opkald om til EVC Aigle (058 122 22 22).",
-        "fi": "Maksulliset alueelliset päivystävien eläinlääkäreiden numerot vastaanottoaikojen ulkopuolella: 0900 502 502 (Sierre, Sion, Conthey) ja 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 minuutilta; arkisin klo 21.00 ja viikonloppuisin klo 17.00 alkaen puhelut ohjataan EVC Aigleen (058 122 22 22)."
+        "fi": "Maksulliset alueelliset päivystävien eläinlääkäreiden numerot vastaanottoaikojen ulkopuolella: 0900 502 502 (Sierre, Sion, Conthey) ja 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 minuutilta; arkisin klo 21.00 ja viikonloppuisin klo 17.00 alkaen puhelut ohjataan EVC Aigleen (058 122 22 22).",
+        "nb": "Betalte regionale vakttelefoner for dyrlege utenom klinikkens åpningstid: 0900 502 502 (Sierre, Sion, Conthey) og 0900 506 506 (Riddes, Martigny, Monthey), CHF 2 per minutt; fra kl. 21.00 på hverdager og kl. 17.00 i helgene videresendes samtalene til EVC Aigle (058 122 22 22)."
       },
       "small_animals": true,
       "url": "https://www.vet-daves.ch/urgences/",
@@ -1693,7 +1747,8 @@
         "cs": "Mimo ordinační dobu volejte regionální linku veterináře ve službě 0900 506 506 (CHF 2/min); od 21:00 v pracovní dny a od 17:00 o víkendech hovory míří do pohotovostního centra EVC v Aigle.",
         "sv": "Utanför öppettiderna ringer du den regionala jourlinjen för veterinär 0900 506 506 (CHF 2/min); från 21.00 på vardagar och 17.00 på helger kopplas samtal till akutcentrumet EVC i Aigle.",
         "da": "Uden for åbningstiden ring til det regionale nummer for vagthavende dyrlæge 0900 506 506 (CHF 2/min); fra 21.00 på hverdage og 17.00 i weekenden går opkald til akutcenteret EVC i Aigle.",
-        "fi": "Aukioloaikojen ulkopuolella soita alueelliseen päivystävien eläinlääkäreiden numeroon 0900 506 506 (CHF 2/min); arkisin klo 21.00 ja viikonloppuisin klo 17.00 alkaen puhelut ohjataan Aiglen EVC-päivystyskeskukseen."
+        "fi": "Aukioloaikojen ulkopuolella soita alueelliseen päivystävien eläinlääkäreiden numeroon 0900 506 506 (CHF 2/min); arkisin klo 21.00 ja viikonloppuisin klo 17.00 alkaen puhelut ohjataan Aiglen EVC-päivystyskeskukseen.",
+        "nb": "Utenom åpningstid ring den regionale vakttelefonen for dyrlege 0900 506 506 (CHF 2/min); fra kl. 21.00 på hverdager og kl. 17.00 i helgene går samtalene til akuttsenteret EVC i Aigle."
       },
       "small_animals": true,
       "url": "https://www.vet-daves.ch/",
@@ -1722,7 +1777,8 @@
         "cs": "Po–Pá 8:00–12:00 a 13:30–18:30, so 8:00–12:00. Pohotovostní hodiny: v pracovní dny 12:00–13:30 a 18:00–21:00, v sobotu 12:00–17:00, v neděli a o svátcích 8:00–17:00.",
         "sv": "Mån–fre 08.00–12.00 och 13.30–18.30, lör 08.00–12.00. Akuttider: vardagar 12.00–13.30 och 18.00–21.00, lördagar 12.00–17.00, söndagar och helgdagar 08.00–17.00.",
         "da": "Man–fre 08.00–12.00 og 13.30–18.30, lør 08.00–12.00. Akuttider: hverdage 12.00–13.30 og 18.00–21.00, lørdage 12.00–17.00, søndage og helligdage 08.00–17.00.",
-        "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.30, la klo 8.00–12.00. Päivystysajat: arkisin klo 12.00–13.30 ja 18.00–21.00, lauantaisin klo 12.00–17.00, sunnuntaisin ja pyhäpäivinä klo 8.00–17.00."
+        "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.30, la klo 8.00–12.00. Päivystysajat: arkisin klo 12.00–13.30 ja 18.00–21.00, lauantaisin klo 12.00–17.00, sunnuntaisin ja pyhäpäivinä klo 8.00–17.00.",
+        "nb": "Man–fre 08.00–12.00 og 13.30–18.30, lør 08.00–12.00. Åpningstider for nødtilfeller: hverdager 12.00–13.30 og 18.00–21.00, lørdager 12.00–17.00, søndager og helligdager 08.00–17.00."
       },
       "small_animals": true,
       "url": "https://www.vetvissigen.ch/",
@@ -1752,7 +1808,8 @@
         "cs": "Po–Pá 8:00–12:00 a 13:00–18:00, so 9:00–12:00. Pohotovost v poledne 12:00–14:00 na 079 120 68 41; mimo ordinační dobu přes regionální linky veterináře ve službě 0900 502 502 / 0900 506 506 (CHF 2/min).",
         "sv": "Mån–fre 08.00–12.00 och 13.00–18.00, lör 09.00–12.00. Akutfall under lunchtid 12.00–14.00 på 079 120 68 41; utanför öppettiderna via de regionala jourlinjerna för veterinär 0900 502 502 / 0900 506 506 (CHF 2/min).",
         "da": "Man–fre 08.00–12.00 og 13.00–18.00, lør 09.00–12.00. Akut hjælp i middagspausen 12.00–14.00 på 079 120 68 41; uden for åbningstiden via de regionale numre til vagthavende dyrlæge 0900 502 502 / 0900 506 506 (CHF 2/min).",
-        "fi": "ma–pe klo 8.00–12.00 ja 13.00–18.00, la klo 9.00–12.00. Päivystys keskipäivällä klo 12.00–14.00 numerossa 079 120 68 41; aukioloaikojen ulkopuolella alueellisten päivystävien eläinlääkäreiden numerot 0900 502 502 / 0900 506 506 (CHF 2/min)."
+        "fi": "ma–pe klo 8.00–12.00 ja 13.00–18.00, la klo 9.00–12.00. Päivystys keskipäivällä klo 12.00–14.00 numerossa 079 120 68 41; aukioloaikojen ulkopuolella alueellisten päivystävien eläinlääkäreiden numerot 0900 502 502 / 0900 506 506 (CHF 2/min).",
+        "nb": "Man–fre 08.00–12.00 og 13.00–18.00, lør 09.00–12.00. Nødtilfeller midt på dagen 12.00–14.00 på 079 120 68 41; utenom åpningstiden via regionale dyrlegevakttelefoner 0900 502 502 / 0900 506 506 (CHF 2/min)."
       },
       "small_animals": true,
       "url": "https://www.catpattes.ch/",
@@ -1781,7 +1838,8 @@
         "cs": "Centrální pohotovostní číslo pro oblast Neuchâtel Littoral a Val-de-Ruz mimo ordinační dobu; pokrývá noci, víkendy a státní svátky. V ordinační době nejdřív zavolejte svému veterináři.",
         "sv": "Centralt journummer för området Neuchâtel Littoral och Val-de-Ruz utanför öppettiderna; gäller nätter, helger och helgdagar. Under öppettiderna ringer du först din vanliga klinik.",
         "da": "Fælles vagtnummer for Neuchâtel Littoral og Val-de-Ruz uden for klinikkernes åbningstid; dækker nætter, weekender og helligdage. I åbningstiden: ring først til din sædvanlige klinik.",
-        "fi": "Neuchâtel Littoralin ja Val-de-Ruzin alueen yhteinen päivystysnumero vastaanottoaikojen ulkopuolella; kattaa yöt, viikonloput ja pyhäpäivät. Aukioloaikoina soita ensin omalle vastaanotollesi."
+        "fi": "Neuchâtel Littoralin ja Val-de-Ruzin alueen yhteinen päivystysnumero vastaanottoaikojen ulkopuolella; kattaa yöt, viikonloput ja pyhäpäivät. Aukioloaikoina soita ensin omalle vastaanotollesi.",
+        "nb": "Sentralt vakttelefonnummer for Neuchâtel Littoral og Val-de-Ruz utenfor praksisenes åpningstid; dekker netter, helger og helligdager. I åpningstiden ring først din vanlige praksis."
       },
       "small_animals": true,
       "url": "https://urgences-veterinaires-ne.ch/",
@@ -1810,7 +1868,8 @@
         "cs": "Veterinární služba mimo ordinační dobu pro dolní část kantonu Neuchâtel a Val-de-Ruz, každý den v roce. Placená linka, CHF 2 až 5 za minutu podle denní doby; někteří mobilní operátoři ji mohou blokovat.",
         "sv": "Veterinärjour utanför öppettiderna för den nedre delen av kantonen Neuchâtel och Val-de-Ruz, årets alla dagar. Betalnummer, CHF 2–5 per minut beroende på tid; kan vara spärrat hos vissa mobiloperatörer.",
         "da": "Dyrlægevagt uden for åbningstiden for den nedre del af kantonen Neuchâtel og Val-de-Ruz, alle årets dage. Forhøjet takst, CHF 2 til 5 pr. minut afhængigt af tidspunktet; kan være spærret hos nogle mobiloperatører.",
-        "fi": "Päivystävän eläinlääkärin palvelu Neuchâtelin alakantonille ja Val-de-Ruzille aukioloaikojen ulkopuolella, joka päivä vuoden ympäri. Maksullinen numero, CHF 2–5 minuutilta kellonajasta riippuen; jotkin matkapuhelinoperaattorit voivat estää sen."
+        "fi": "Päivystävän eläinlääkärin palvelu Neuchâtelin alakantonille ja Val-de-Ruzille aukioloaikojen ulkopuolella, joka päivä vuoden ympäri. Maksullinen numero, CHF 2–5 minuutilta kellonajasta riippuen; jotkin matkapuhelinoperaattorit voivat estää sen.",
+        "nb": "Vakthavende dyrlege utenom åpningstid for nedre kanton Neuchâtel og Val-de-Ruz, alle dager i året. Betalt linje, CHF 2–5 per minutt avhengig av tidspunkt; kan være blokkert hos enkelte mobiloperatører."
       },
       "small_animals": true,
       "url": "https://vetplusneuchatel.ch/",
@@ -1840,7 +1899,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00. Mimo ordinační dobu volejte veterináře ve službě pro dolní část kantonu 0900 80 70 60 (placená linka).",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.00. Utanför öppettiderna ringer du veterinärjouren för nedre kantonen 0900 80 70 60 (betalnummer).",
         "da": "Man–fre 08.00–12.00 og 14.00–18.00. Uden for åbningstiden ring til dyrlægevagten for den nedre kanton 0900 80 70 60 (forhøjet takst).",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00. Aukioloaikojen ulkopuolella soita alakantonin päivystävien eläinlääkäreiden numeroon 0900 80 70 60 (maksullinen numero)."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00. Aukioloaikojen ulkopuolella soita alakantonin päivystävien eläinlääkäreiden numeroon 0900 80 70 60 (maksullinen numero).",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.00. Utenom åpningstiden ring dyrlegevakten i nedre kanton 0900 80 70 60 (betalingslinje)."
       },
       "small_animals": true,
       "url": "https://vetplusneuchatel.ch/",
@@ -1870,7 +1930,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:30. Mimo ordinační dobu: veterinář ve službě na 0840 10 10 10.",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.30. Utanför öppettiderna: jourhavande veterinär via 0840 10 10 10.",
         "da": "Man–fre 08.00–12.00 og 14.00–18.30. Uden for åbningstiden: vagthavende dyrlæge på 0840 10 10 10.",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.30. Aukioloaikojen ulkopuolella: päivystävä eläinlääkäri numerossa 0840 10 10 10."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.30. Aukioloaikojen ulkopuolella: päivystävä eläinlääkäri numerossa 0840 10 10 10.",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.30. Utenom åpningstiden: dyrlege på vakt via 0840 10 10 10."
       },
       "small_animals": true,
       "url": "https://cabinetdubreuil.ch/",
@@ -1900,7 +1961,8 @@
         "cs": "Po, Út, Pá 8:00–12:00 a 13:30–18:30; St, Čt 8:00–12:00 a 14:00–18:30. Skutečné pohotovostní případy mimo ordinační dobu: 0900 901 902 (CHF 3/min), společná linka regionálních ordinací pro malá zvířata.",
         "sv": "Mån, tis, fre 08.00–12.00 och 13.30–18.30; ons, tors 08.00–12.00 och 14.00–18.30. Riktiga akutfall utanför öppettiderna: 0900 901 902 (CHF 3/min), gemensamt för regionala smådjursmottagningar.",
         "da": "Man, tirs, fre 08.00–12.00 og 13.30–18.30; ons, tors 08.00–12.00 og 14.00–18.30. Reelle akutte tilfælde uden for åbningstiden: 0900 901 902 (CHF 3/min), fælles for regionale klinikker for små kæledyr.",
-        "fi": "ma, ti, pe klo 8.00–12.00 ja 13.30–18.30; ke, to klo 8.00–12.00 ja 14.00–18.30. Todelliset päivystystapaukset aukioloaikojen ulkopuolella: 0900 901 902 (CHF 3/min), alueen pieneläinvastaanottojen yhteinen numero."
+        "fi": "ma, ti, pe klo 8.00–12.00 ja 13.30–18.30; ke, to klo 8.00–12.00 ja 14.00–18.30. Todelliset päivystystapaukset aukioloaikojen ulkopuolella: 0900 901 902 (CHF 3/min), alueen pieneläinvastaanottojen yhteinen numero.",
+        "nb": "Man, tir, fre 08.00–12.00 og 13.30–18.30; ons, tor 08.00–12.00 og 14.00–18.30. Reelle nødtilfeller utenom åpningstid: 0900 901 902 (CHF 3/min), delt av regionale smådyrpraksiser."
       },
       "small_animals": true,
       "url": "https://chauxdefonds.vetmint.ch/",
@@ -1930,7 +1992,8 @@
         "cs": "Po–Pá 8:00–18:00; mimo tuto dobu funguje pohotovostní služba (pohotovostní číslo 076 842 68 28).",
         "sv": "Mån–fre 08.00–18.00; en jourtjänst finns utanför dessa tider (journummer 076 842 68 28).",
         "da": "Man–fre 08.00–18.00; uden for disse tider er der en vagtordning (akutnummer 076 842 68 28).",
-        "fi": "ma–pe klo 8.00–18.00; näiden aikojen ulkopuolella toimii päivystys (päivystysnumero 076 842 68 28)."
+        "fi": "ma–pe klo 8.00–18.00; näiden aikojen ulkopuolella toimii päivystys (päivystysnumero 076 842 68 28).",
+        "nb": "Man–fre 08.00–18.00; en vakttjeneste er i drift utenom disse tidene (nødnummer 076 842 68 28)."
       },
       "small_animals": true,
       "url": "https://cabinetveterinairedesmontagnes.ch/",
@@ -1960,7 +2023,8 @@
         "cs": "Číslo veterináře ve službě pro případy mimo ordinační dobu, pro město Delémont.",
         "sv": "Nummer till jourhavande veterinär för fall utanför öppettiderna, för staden Delémont.",
         "da": "Nummer til vagthavende dyrlæge uden for åbningstiden, fra byen Delémont.",
-        "fi": "Päivystävän eläinlääkärin numero aukioloaikojen ulkopuolisiin tapauksiin, Delémontin kaupungista."
+        "fi": "Päivystävän eläinlääkärin numero aukioloaikojen ulkopuolisiin tapauksiin, Delémontin kaupungista.",
+        "nb": "Vakthavende dyrlege for saker utenom åpningstid, fra byen Delémont."
       }
     },
     {
@@ -1985,7 +2049,8 @@
         "cs": "Po, Út, Čt, Pá 9:00–12:00 a 16:00–18:00; St 7:30–10:00. Vyšetření a pohotovost na objednání; mimo ordinační dobu postupujte podle pokynů na záznamníku.",
         "sv": "Mån, tis, tors, fre 09.00–12.00 och 16.00–18.00; ons 07.30–10.00. Konsultationer och akutfall efter bokad tid; utanför öppettiderna följer du instruktionerna på telefonsvararen.",
         "da": "Man, tirs, tors, fre 09.00–12.00 og 16.00–18.00; ons 07.30–10.00. Konsultationer og akutte tilfælde efter aftale; uden for åbningstiden følg vejledningen på telefonsvareren.",
-        "fi": "ma, ti, to, pe klo 9.00–12.00 ja 16.00–18.00; ke klo 7.30–10.00. Vastaanotto ja päivystys ajanvarauksella; aukioloaikojen ulkopuolella noudata puhelinvastaajan ohjeita."
+        "fi": "ma, ti, to, pe klo 9.00–12.00 ja 16.00–18.00; ke klo 7.30–10.00. Vastaanotto ja päivystys ajanvarauksella; aukioloaikojen ulkopuolella noudata puhelinvastaajan ohjeita.",
+        "nb": "Man, tir, tor, fre 09.00–12.00 og 16.00–18.00; ons 07.30–10.00. Konsultasjoner og nødtilfeller etter timebestilling; utenom åpningstid følg beskjeden på telefonsvareren."
       },
       "small_animals": true,
       "url": "https://veterinaire-berger.ch/",
@@ -2014,7 +2079,8 @@
         "cs": "Pohotovostní okruh pro malá zvířata pro Schaffhausen a okolí večer, v noci a o víkendech. Placená linka, CHF 2,80 za minutu; čísla 0900 mohou být u mobilních tarifů blokována, proto je odblokujte předem.",
         "sv": "Jourring för smådjur i Schaffhausen med omnejd på kvällar, nätter och helger. Betalnummer, CHF 2,80 per minut; 0900-nummer kan vara spärrade i mobilabonnemang, så häv spärren i förväg.",
         "da": "Akutring for små kæledyr i Schaffhausen og omegn om aftenen, natten og i weekenden. Nummer med forhøjet takst, CHF 2,80 pr. minut; 0900-numre kan være spærret på mobilabonnementer, så få dem låst op på forhånd.",
-        "fi": "Pieneläinten päivystysrinki Schaffhausenille ja ympäristölle iltaisin, öisin ja viikonloppuisin. Maksullinen numero, CHF 2,80 minuutilta; 0900-numerot voivat olla estettyinä matkapuhelinliittymissä, joten avaa ne etukäteen."
+        "fi": "Pieneläinten päivystysrinki Schaffhausenille ja ympäristölle iltaisin, öisin ja viikonloppuisin. Maksullinen numero, CHF 2,80 minuutilta; 0900-numerot voivat olla estettyinä matkapuhelinliittymissä, joten avaa ne etukäteen.",
+        "nb": "Akuttelefon for små dyr i Schaffhausen og omegn om kvelden, om natten og i helger. Betalingslinje, CHF 2,80 per minutt; 0900-numre kan være sperret på mobilabonnement, så lås dem opp på forhånd."
       },
       "small_animals": true,
       "url": "https://www.tieraerzte-team.ch/notfall",
@@ -2044,7 +2110,8 @@
         "cs": "Po–Pá 7:45–12:00 a 13:30–18:30, so 8:00–12:00. Člen pohotovostního okruhu Schaffhausen (0900 900 109); mimo ordinační dobu je pohotovostní linka nepřetržitě obsazena pohotovostním veterinářem.",
         "sv": "Mån–fre 07.45–12.00 och 13.30–18.30, lör 08.00–12.00. Medlem i Schaffhausens jourring (0900 900 109); utanför öppettiderna är jourlinjen ständigt bemannad av en jourhavande veterinär.",
         "da": "Man–fre 07.45–12.00 og 13.30–18.30, lør 08.00–12.00. Medlem af akutringen i Schaffhausen (0900 900 109); uden for åbningstiden er akuttelefonen altid bemandet af en akutdyrlæge.",
-        "fi": "ma–pe klo 7.45–12.00 ja 13.30–18.30, la klo 8.00–12.00. Schaffhausenin päivystysringin jäsen (0900 900 109); aukioloaikojen ulkopuolella päivystyslinjaa hoitaa jatkuvasti päivystävä eläinlääkäri."
+        "fi": "ma–pe klo 7.45–12.00 ja 13.30–18.30, la klo 8.00–12.00. Schaffhausenin päivystysringin jäsen (0900 900 109); aukioloaikojen ulkopuolella päivystyslinjaa hoitaa jatkuvasti päivystävä eläinlääkäri.",
+        "nb": "Man–fre 07.45–12.00 og 13.30–18.30, lør 08.00–12.00. Medlem av nødringen i Schaffhausen (0900 900 109); utenom åpningstiden er nødlinjen hele tiden bemannet av en vakthavende dyrlege."
       },
       "small_animals": true,
       "url": "https://schaeublis-tierklinik.ch/",
@@ -2074,7 +2141,8 @@
         "cs": "Specializovaná klinika pro psy, kočky a drobná zvířata. Mimo telefonní hodiny jsou volající odkázáni na pohotovostní okruh Schaffhausen na 0900 900 109 (placená linka).",
         "sv": "Specialistklinik för hundar, katter och smådjur. Utanför telefontiderna hänvisas den som ringer till Schaffhausens jourring på 0900 900 109 (betalnummer).",
         "da": "Specialistklinik for hunde, katte og små kæledyr. Uden for telefontiden henvises opkald til akutringen i Schaffhausen på 0900 900 109 (forhøjet takst).",
-        "fi": "Erikoisklinikka koirille, kissoille ja pienille lemmikeille. Puhelinaikojen ulkopuolella soittajat ohjataan Schaffhausenin päivystysringille numeroon 0900 900 109 (maksullinen numero)."
+        "fi": "Erikoisklinikka koirille, kissoille ja pienille lemmikeille. Puhelinaikojen ulkopuolella soittajat ohjataan Schaffhausenin päivystysringille numeroon 0900 900 109 (maksullinen numero).",
+        "nb": "Spesialistklinikk for hunder, katter og små kjæledyr. Utenom telefontiden henvises oppringere til akuttelefonen i Schaffhausen på 0900 900 109 (betalingslinje)."
       },
       "small_animals": true,
       "url": "https://www.tierklinik-rhenus.ch/",
@@ -2104,7 +2172,8 @@
         "cs": "Člen pohotovostního okruhu Schaffhausen: večer a o víkendech 0900 900 109 (placená linka, CHF 2,80/min). Druhé pracoviště v Thayngenu (052 649 11 60).",
         "sv": "Medlem i Schaffhausens jourring: kvällar och helger 0900 900 109 (betalnummer, CHF 2,80/min). Ytterligare en mottagning i Thayngen (052 649 11 60).",
         "da": "Medlem af akutringen i Schaffhausen: aftener og weekender 0900 900 109 (forhøjet takst, CHF 2,80/min). Anden afdeling i Thayngen (052 649 11 60).",
-        "fi": "Schaffhausenin päivystysringin jäsen: iltaisin ja viikonloppuisin 0900 900 109 (maksullinen numero, CHF 2,80/min). Toinen toimipiste Thayngenissa (052 649 11 60)."
+        "fi": "Schaffhausenin päivystysringin jäsen: iltaisin ja viikonloppuisin 0900 900 109 (maksullinen numero, CHF 2,80/min). Toinen toimipiste Thayngenissa (052 649 11 60).",
+        "nb": "Med i akuttringen i Schaffhausen: kvelder og helger 0900 900 109 (betalingslinje, CHF 2,80/min). Ytterligere avdeling i Thayngen (052 649 11 60)."
       },
       "small_animals": true,
       "url": "https://www.tieraerzte-team.ch/",
@@ -2133,7 +2202,8 @@
         "cs": "Pohotovostní okruh winterthurských veterinářů pro malá zvířata mimo ordinační dobu; placená linka, CHF 3,50 za minutu. Ordinace ve službě je k dispozici do 22:00; akutní případy po 22:00 míří na pohotovostní oddělení Tierspital Zürich (+41 44 635 81 12).",
         "sv": "Jourring för smådjursveterinärer i Winterthur utanför öppettiderna; betalnummer, CHF 3,50 per minut. En jourhavande klinik finns tillgänglig till 22.00; brådskande fall efter 22.00 går till akutavdelningen på Tierspital Zürich (+41 44 635 81 12).",
         "da": "Akutring for dyrlæger til små kæledyr i Winterthur uden for klinikkernes åbningstid; nummer med forhøjet takst, CHF 3,50 pr. minut. Der er en vagtklinik til 22.00; akutte tilfælde efter 22.00 henvises til akutmodtagelsen på Tierspital Zürich (+41 44 635 81 12).",
-        "fi": "Winterthurin pieneläinlääkäreiden päivystysrinki vastaanottoaikojen ulkopuolella; maksullinen numero, CHF 3,50 minuutilta. Päivystävä vastaanotto palvelee klo 22.00 asti; klo 22.00 jälkeen kiireelliset tapaukset menevät Tierspital Zürichin päivystysosastolle (+41 44 635 81 12)."
+        "fi": "Winterthurin pieneläinlääkäreiden päivystysrinki vastaanottoaikojen ulkopuolella; maksullinen numero, CHF 3,50 minuutilta. Päivystävä vastaanotto palvelee klo 22.00 asti; klo 22.00 jälkeen kiireelliset tapaukset menevät Tierspital Zürichin päivystysosastolle (+41 44 635 81 12).",
+        "nb": "Akuttordning blant smådyrklinikkene i Winterthur utenom åpningstid; nummer med tilleggstakst, CHF 3,50 per minutt. En vakthavende klinikk er tilgjengelig til kl. 22.00; hastetilfeller etter kl. 22.00 går til akuttavdelingen ved Tierspital Zürich (+41 44 635 81 12)."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-seuzach.ch/",
@@ -2163,7 +2233,8 @@
         "cs": "Po–Pá 7:30–19:30, so 8:00–13:30. Člen winterthurského pohotovostního okruhu; pohotovost pouze po telefonické domluvě. Linka mimo ordinační dobu 0900 908 908 (CHF 3,50/min).",
         "sv": "Mån–fre 07.30–19.30, lör 08.00–13.30. Medlem i Winterthurs jourring; akutfall endast efter bokning per telefon. Jourlinje utanför öppettiderna 0900 908 908 (CHF 3,50/min).",
         "da": "Man–fre 07.30–19.30, lør 08.00–13.30. Medlem af akutringen i Winterthur; akutte tilfælde kun efter telefonisk aftale. Akuttelefon uden for åbningstiden 0900 908 908 (CHF 3,50/min).",
-        "fi": "ma–pe klo 7.30–19.30, la klo 8.00–13.30. Winterthurin päivystysringin jäsen; päivystys vain puhelimessa sovitulla ajalla. Päivystyspuhelin aukioloaikojen ulkopuolella 0900 908 908 (CHF 3,50/min)."
+        "fi": "ma–pe klo 7.30–19.30, la klo 8.00–13.30. Winterthurin päivystysringin jäsen; päivystys vain puhelimessa sovitulla ajalla. Päivystyspuhelin aukioloaikojen ulkopuolella 0900 908 908 (CHF 3,50/min).",
+        "nb": "Man–fre 07.30–19.30, lør 08.00–13.30. Medlem av nødringen i Winterthur; nødtilfeller kun etter telefonavtale. Vakttelefon utenom åpningstiden 0900 908 908 (CHF 3,50/min)."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxis-acr.ch/",
@@ -2193,7 +2264,8 @@
         "cs": "Po, Út, St, Pá 8:00–12:00 a 14:00–18:00; Čt 8:00–12:00; so 9:00–11:00. Mimo ordinační dobu využijte winterthurský pohotovostní okruh 0900 908 908 (CHF 3,50/min); po 22:00 Tierspital Zürich.",
         "sv": "Mån, tis, ons, fre 08.00–12.00 och 14.00–18.00; tors 08.00–12.00; lör 09.00–11.00. Utanför öppettiderna använder du Winterthurs jourring 0900 908 908 (CHF 3,50/min); efter 22.00 vänder du dig till Tierspital Zürich.",
         "da": "Man, tirs, ons, fre 08.00–12.00 og 14.00–18.00; tors 08.00–12.00; lør 09.00–11.00. Uden for åbningstiden: brug akutringen i Winterthur 0900 908 908 (CHF 3,50/min); efter 22.00 Tierspital Zürich.",
-        "fi": "ma, ti, ke, pe klo 8.00–12.00 ja 14.00–18.00; to klo 8.00–12.00; la klo 9.00–11.00. Aukioloaikojen ulkopuolella käytä Winterthurin päivystysrinkiä 0900 908 908 (CHF 3,50/min); klo 22.00 jälkeen Tierspital Zürichiä."
+        "fi": "ma, ti, ke, pe klo 8.00–12.00 ja 14.00–18.00; to klo 8.00–12.00; la klo 9.00–11.00. Aukioloaikojen ulkopuolella käytä Winterthurin päivystysrinkiä 0900 908 908 (CHF 3,50/min); klo 22.00 jälkeen Tierspital Zürichiä.",
+        "nb": "Man, tir, ons, fre 08.00–12.00 og 14.00–18.00; tor 08.00–12.00; lør 09.00–11.00. Utenom åpningstiden: nødringen i Winterthur 0900 908 908 (CHF 3,50/min); etter kl. 22.00 Tierspital Zürich."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-seuzach.ch/",
@@ -2223,7 +2295,8 @@
         "cs": "Klinika pro psy a kočky přijímající pacienty na doporučení; Po–So 8:00–12:00 a 13:00–17:30. Pohotovostní telefon je v pracovní dny obsazen nonstop (ne o státních svátcích).",
         "sv": "Remissklinik för hundar och katter; mån–lör 08.00–12.00 och 13.00–17.30. Akuttelefon bemannad dygnet runt mån–fre (ej helgdagar).",
         "da": "Henvisningsklinik for hunde og katte; man–lør 08.00–12.00 og 13.00–17.30. Akuttelefon besvares døgnet rundt man–fre (ikke på helligdage).",
-        "fi": "Erikoisklinikka koirille ja kissoille; ma–la klo 8.00–12.00 ja 13.00–17.30. Päivystyspuhelin vastaa ympäri vuorokauden ma–pe (ei pyhäpäivinä)."
+        "fi": "Erikoisklinikka koirille ja kissoille; ma–la klo 8.00–12.00 ja 13.00–17.30. Päivystyspuhelin vastaa ympäri vuorokauden ma–pe (ei pyhäpäivinä).",
+        "nb": "Henvisningsklinikk for hunder og katter; man–lør kl. 8.00–12.00 og 13.00–17.30. Akuttelefon besvares hele døgnet man–fre (ikke på helligdager)."
       },
       "small_animals": true,
       "url": "https://www.vetzentrum.ch/",
@@ -2253,7 +2326,8 @@
         "cs": "Pohotovostní ošetření nonstop, 365 dní v roce, po předchozím zavolání. Mimo ordinační hodiny v pracovní dny je pohotovostní číslo 0900 237 797 (CHF 2,50/min).",
         "sv": "Akutbehandling dygnet runt, årets alla dagar, efter telefonkontakt i förväg. Utanför vardagarnas öppettider är journumret 0900 237 797 (CHF 2,50/min).",
         "da": "Akut behandling døgnet rundt, 365 dage om året, efter forudgående telefonisk aftale. Uden for hverdagenes åbningstid er akutnummeret 0900 237 797 (CHF 2,50/min).",
-        "fi": "Päivystyshoito ympäri vuorokauden, 365 päivänä vuodessa, kun on soitettu etukäteen. Arkien aukioloaikojen ulkopuolella päivystysnumero on 0900 237 797 (CHF 2,50/min)."
+        "fi": "Päivystyshoito ympäri vuorokauden, 365 päivänä vuodessa, kun on soitettu etukäteen. Arkien aukioloaikojen ulkopuolella päivystysnumero on 0900 237 797 (CHF 2,50/min).",
+        "nb": "Akuttbehandling hele døgnet, 365 dager i året, etter at du har ringt på forhånd. Utenom hverdagenes åpningstid er akuttnummeret 0900 237 797 (CHF 2,50/min)."
       },
       "small_animals": true,
       "url": "https://www.bessys.ch/",
@@ -2282,7 +2356,8 @@
         "cs": "Regionální pohotovostní okruh veterinářů Zürcher Oberland (oblast Wetzikon, Uster); veterinář ve službě je dostupný na placené lince 0900 144 141 (9:00–21:00 podle jednotlivých ordinací; v noci přes Marigin 0900 900 500 nebo Tierspital Zürich 044 635 81 12).",
         "sv": "Regional jourring för veterinärer i Zürcher Oberland (Wetzikon, Uster-området); en jourhavande veterinär nås på betalnumret 0900 144 141 (09.00–21.00 per medlemsklinik; nätter via Marigin 0900 900 500 eller Tierspital Zürich 044 635 81 12).",
         "da": "Regional akutring for dyrlæger i Zürcher Oberland (Wetzikon, Uster-området); en vagthavende dyrlæge kan træffes på nummeret 0900 144 141 med forhøjet takst (09.00–21.00 pr. medlemsklinik; om natten via Marigin 0900 900 500 eller Tierspital Zürich 044 635 81 12).",
-        "fi": "Zürcher Oberlandin eläinlääkäreiden (Wetzikon, Usterin alue) alueellinen päivystysrinki; päivystävä eläinlääkäri tavoitettavissa maksullisella numerolla 0900 144 141 (klo 9.00–21.00 jäsenvastaanottojen mukaan; öisin Marigin 0900 900 500 tai Tierspital Zürich 044 635 81 12)."
+        "fi": "Zürcher Oberlandin eläinlääkäreiden (Wetzikon, Usterin alue) alueellinen päivystysrinki; päivystävä eläinlääkäri tavoitettavissa maksullisella numerolla 0900 144 141 (klo 9.00–21.00 jäsenvastaanottojen mukaan; öisin Marigin 0900 900 500 tai Tierspital Zürich 044 635 81 12).",
+        "nb": "Regional vaktordning for dyrleger i Zürcher Oberland (Wetzikon, Uster-området); vakthavende dyrlege nås på betalingslinjen 0900 144 141 (kl. 9.00–21.00 per medlemsklinikk; om natten via Marigin 0900 900 500 eller Tierspital Zürich 044 635 81 12)."
       },
       "small_animals": true,
       "url": "https://www.kleintierarzt-wetzikon.ch/blog/88-notfall",
@@ -2312,7 +2387,8 @@
         "cs": "V ordinační době v naléhavých případech předem zavolejte. Mimo ordinační dobu: Notfallring Zürcher Oberland 0900 144 141 (9:00–21:00), v noci Marigin (0900 900 500, nonstop) nebo Tierspital Zürich (044 635 81 12).",
         "sv": "Ring innan du kommer vid akutfall under öppettiderna. Utanför öppettiderna: Notfallring Zürcher Oberland 0900 144 141 (09.00–21.00), på natten Marigin (0900 900 500, dygnet runt) eller Tierspital Zürich (044 635 81 12).",
         "da": "Ring på forhånd ved akutte tilfælde i åbningstiden. Uden for åbningstiden: Notfallring Zürcher Oberland 0900 144 141 (09.00–21.00), om natten Marigin (0900 900 500, døgnåben) eller Tierspital Zürich (044 635 81 12).",
-        "fi": "Soita etukäteen hätätapauksissa aukioloaikoina. Aukioloaikojen ulkopuolella: Notfallring Zürcher Oberland 0900 144 141 (klo 9.00–21.00), öisin Marigin (0900 900 500, 24/7) tai Tierspital Zürich (044 635 81 12)."
+        "fi": "Soita etukäteen hätätapauksissa aukioloaikoina. Aukioloaikojen ulkopuolella: Notfallring Zürcher Oberland 0900 144 141 (klo 9.00–21.00), öisin Marigin (0900 900 500, 24/7) tai Tierspital Zürich (044 635 81 12).",
+        "nb": "Ring på forhånd ved nødtilfeller i åpningstiden. Utenfor åpningstid: Notfallring Zürcher Oberland 0900 144 141 (kl. 9–21), om natten Marigin (0900 900 500, hele døgnet) eller Tierspital Zürich (044 635 81 12)."
       },
       "small_animals": true,
       "url": "https://www.kleintierarzt-wetzikon.ch/",
@@ -2342,7 +2418,8 @@
         "cs": "Po, Út, Čt 8:00–12:00 a 14:00–17:00; St 8:00–12:00; Pá 8:00–12:00 a 14:00–16:00. Pohotovostní číslo mimo ordinační dobu 0900 144 141 (placená linka).",
         "sv": "Mån, tis, tors 08.00–12.00 och 14.00–17.00; ons 08.00–12.00; fre 08.00–12.00 och 14.00–16.00. Journummer utanför öppettiderna 0900 144 141 (betalnummer).",
         "da": "Man, tirs, tors 08.00–12.00 og 14.00–17.00; ons 08.00–12.00; fre 08.00–12.00 og 14.00–16.00. Akutnummer uden for åbningstiden 0900 144 141 (forhøjet takst).",
-        "fi": "ma, ti, to klo 8.00–12.00 ja 14.00–17.00; ke klo 8.00–12.00; pe klo 8.00–12.00 ja 14.00–16.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 144 141 (maksullinen numero)."
+        "fi": "ma, ti, to klo 8.00–12.00 ja 14.00–17.00; ke klo 8.00–12.00; pe klo 8.00–12.00 ja 14.00–16.00. Päivystysnumero aukioloaikojen ulkopuolella 0900 144 141 (maksullinen numero).",
+        "nb": "Man, tir, tor 08.00–12.00 og 14.00–17.00; ons 08.00–12.00; fre 08.00–12.00 og 14.00–16.00. Akuttnummer utenom åpningstid 0900 144 141 (betalingslinje)."
       },
       "small_animals": true,
       "url": "https://www.tierarztpraxiskamber.ch/",
@@ -2372,7 +2449,8 @@
         "cs": "Po–Pá 8:45–22:00, so 8:45–18:00, v neděli zavřeno. Pohotovostní číslo mimo ordinační dobu je uvedeno na webu ordinace.",
         "sv": "Mån–fre 08.45–22.00, lör 08.45–18.00, stängt söndag. Journummer utanför öppettiderna anges på klinikens webbplats.",
         "da": "Man–fre 08.45–22.00, lør 08.45–18.00, lukket søn. Akutnummer uden for åbningstiden er oplyst på klinikkens hjemmeside.",
-        "fi": "ma–pe klo 8.45–22.00, la klo 8.45–18.00, su suljettu. Päivystysnumero aukioloaikojen ulkopuolella on vastaanoton sivuilla."
+        "fi": "ma–pe klo 8.45–22.00, la klo 8.45–18.00, su suljettu. Päivystysnumero aukioloaikojen ulkopuolella on vastaanoton sivuilla.",
+        "nb": "Man–fre 08.45–22.00, lør 08.45–18.00, stengt søndag. Nødnummer utenom åpningstiden oppgis på praksisens nettside."
       },
       "small_animals": true,
       "url": "https://vettrust.ch/en/locations/tierklinik-zuerich-ost",
@@ -2402,7 +2480,8 @@
         "cs": "Po 8:00–12:00 a 14:00–18:00; Út 8:00–12:00 a 14:00–21:00; St–Pá 8:00–12:00 a 14:00–18:00; so 8:00–12:00. Pohotovost v poledne 12:00–13:30 na +41 79 780 28 28; večer, v noci a o víkendech ENNETSeeKLINIK Hünenberg (041 780 80 80) nebo Marigin Feusisberg (055 536 44 44).",
         "sv": "Mån 08.00–12.00 och 14.00–18.00; tis 08.00–12.00 och 14.00–21.00; ons–fre 08.00–12.00 och 14.00–18.00; lör 08.00–12.00. Akutfall mitt på dagen 12.00–13.30 på +41 79 780 28 28; kvällar, nätter och helger på ENNETSeeKLINIK Hünenberg (041 780 80 80) eller Marigin Feusisberg (055 536 44 44).",
         "da": "Man 08.00–12.00 og 14.00–18.00; tirs 08.00–12.00 og 14.00–21.00; ons–fre 08.00–12.00 og 14.00–18.00; lør 08.00–12.00. Akut hjælp i middagspausen 12.00–13.30 på +41 79 780 28 28; aftener, nætter og weekender på ENNETSeeKLINIK Hünenberg (041 780 80 80) eller Marigin Feusisberg (055 536 44 44).",
-        "fi": "ma klo 8.00–12.00 ja 14.00–18.00; ti klo 8.00–12.00 ja 14.00–21.00; ke–pe klo 8.00–12.00 ja 14.00–18.00; la klo 8.00–12.00. Päivystys keskipäivällä klo 12.00–13.30 numerossa +41 79 780 28 28; iltaisin, öisin ja viikonloppuisin ENNETSeeKLINIK Hünenbergissä (041 780 80 80) tai Marigin Feusisbergissä (055 536 44 44)."
+        "fi": "ma klo 8.00–12.00 ja 14.00–18.00; ti klo 8.00–12.00 ja 14.00–21.00; ke–pe klo 8.00–12.00 ja 14.00–18.00; la klo 8.00–12.00. Päivystys keskipäivällä klo 12.00–13.30 numerossa +41 79 780 28 28; iltaisin, öisin ja viikonloppuisin ENNETSeeKLINIK Hünenbergissä (041 780 80 80) tai Marigin Feusisbergissä (055 536 44 44).",
+        "nb": "Man 08.00–12.00 og 14.00–18.00; tir 08.00–12.00 og 14.00–21.00; ons–fre 08.00–12.00 og 14.00–18.00; lør 08.00–12.00. Nødtilfeller midt på dagen 12.00–13.30 på +41 79 780 28 28; kvelder, netter og helger ved ENNETSeeKLINIK Hünenberg (041 780 80 80) eller Marigin Feusisberg (055 536 44 44)."
       },
       "small_animals": true,
       "url": "https://www.myvets.ch/",
@@ -2432,7 +2511,8 @@
         "cs": "Po, St, Pá 8:00–12:00 a 14:00–18:00; Út 8:00–12:00; Čt 8:00–12:00 a 14:00–20:00; so 8:00–12:00 (první a třetí v měsíci). Pohotovost mimo ordinační dobu: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 nebo Tierklinik Aarau West 062 737 80 00.",
         "sv": "Mån, ons, fre 08.00–12.00 och 14.00–18.00; tis 08.00–12.00; tors 08.00–12.00 och 14.00–20.00; lör 08.00–12.00 (1:a och 3:e i månaden). Akutfall utanför öppettiderna: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 eller Tierklinik Aarau West 062 737 80 00.",
         "da": "Man, ons, fre 08.00–12.00 og 14.00–18.00; tirs 08.00–12.00; tors 08.00–12.00 og 14.00–20.00; lør 08.00–12.00 (1. Og 3. I måneden). Akutte tilfælde uden for åbningstiden: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 eller Tierklinik Aarau West 062 737 80 00.",
-        "fi": "ma, ke, pe klo 8.00–12.00 ja 14.00–18.00; ti klo 8.00–12.00; to klo 8.00–12.00 ja 14.00–20.00; la klo 8.00–12.00 (kuukauden 1. ja 3. lauantai). Päivystys aukioloaikojen ulkopuolella: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 tai Tierklinik Aarau West 062 737 80 00."
+        "fi": "ma, ke, pe klo 8.00–12.00 ja 14.00–18.00; ti klo 8.00–12.00; to klo 8.00–12.00 ja 14.00–20.00; la klo 8.00–12.00 (kuukauden 1. ja 3. lauantai). Päivystys aukioloaikojen ulkopuolella: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 tai Tierklinik Aarau West 062 737 80 00.",
+        "nb": "Man, ons, fre 08.00–12.00 og 14.00–18.00; tir 08.00–12.00; tor 08.00–12.00 og 14.00–20.00; lør 08.00–12.00 (1. og 3. i måneden). Nødtilfeller utenom åpningstiden: ENNETSeeKLINIK Hünenberg 041 780 80 80, Marigin Feusisberg 055 536 44 44 eller Tierklinik Aarau West 062 737 80 00."
       },
       "small_animals": true,
       "url": "https://www.kleintierpraxissteinhausen.ch/",
@@ -2462,7 +2542,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00, so 9:00–12:00. Mimo ordinační dobu nonstop pohotovost ve spolupráci s ENNETSeeKLINIK Hünenberg (041 780 80 80); předem zavolejte.",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.00, lör 09.00–12.00. Utanför öppettiderna erbjuds akutvård dygnet runt i samarbete med ENNETSeeKLINIK Hünenberg (041 780 80 80); ring innan du kommer.",
         "da": "Man–fre 08.00–12.00 og 14.00–18.00, lør 09.00–12.00. Uden for åbningstiden akuttjeneste døgnet rundt i samarbejde med ENNETSeeKLINIK Hünenberg (041 780 80 80); ring på forhånd.",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00, la klo 9.00–12.00. Aukioloaikojen ulkopuolella päivystys 24/7 yhteistyössä ENNETSeeKLINIK Hünenbergin kanssa (041 780 80 80); soita etukäteen."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00, la klo 9.00–12.00. Aukioloaikojen ulkopuolella päivystys 24/7 yhteistyössä ENNETSeeKLINIK Hünenbergin kanssa (041 780 80 80); soita etukäteen.",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.00, lør 09.00–12.00. Utenom åpningstiden akuttbehandling hele døgnet i samarbeid med ENNETSeeKLINIK Hünenberg (041 780 80 80); ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vets4pets.swiss/de",
@@ -2492,7 +2573,8 @@
         "cs": "V pracovní dny 8:00–12:00 a 13:00–17:00. Pohotovostní hodiny Po–Pá 7:00–22:00, so 12:00–22:00, ne 7:00–22:00; od 22:00 do 7:30 míří pohotovostní případy do Marigin Feusisberg (0900 900 500). Součást společné kantonální pohotovosti pro malá zvířata.",
         "sv": "Vardagar 08.00–12.00 och 13.00–17.00. Akuttider mån–fre 07.00–22.00, lör 12.00–22.00, sön 07.00–22.00; från 22.00 till 07.30 går akutfall till Marigin Feusisberg (0900 900 500). Ingår i den gemensamma kantonala akutjouren för smådjur.",
         "da": "Hverdage 08.00–12.00 og 13.00–17.00. Akuttider man–fre 07.00–22.00, lør 12.00–22.00, søn 07.00–22.00; fra 22.00 til 07.30 henvises akutte tilfælde til Marigin Feusisberg (0900 900 500). Del af den fælles kantonale akuttjeneste for små kæledyr.",
-        "fi": "Arkisin klo 8.00–12.00 ja 13.00–17.00. Päivystysajat ma–pe klo 7.00–22.00, la klo 12.00–22.00, su klo 7.00–22.00; klo 22.00–7.30 päivystystapaukset menevät Marigin Feusisbergiin (0900 900 500). Osa kantonin yhteistä pieneläinpäivystystä."
+        "fi": "Arkisin klo 8.00–12.00 ja 13.00–17.00. Päivystysajat ma–pe klo 7.00–22.00, la klo 12.00–22.00, su klo 7.00–22.00; klo 22.00–7.30 päivystystapaukset menevät Marigin Feusisbergiin (0900 900 500). Osa kantonin yhteistä pieneläinpäivystystä.",
+        "nb": "Hverdager 8.00–12.00 og 13.00–17.00. Akuttjeneste man–fre 7.00–22.00, lør 12.00–22.00, søn 7.00–22.00; fra 22.00 til 7.30 henvises nødtilfeller til Marigin Feusisberg (0900 900 500). Del av den felles kantonale akutttjenesten for smådyr."
       },
       "small_animals": true,
       "url": "https://www.anicura.ch/standorte/tierklinik-am-kreis-netstal/",
@@ -2522,7 +2604,8 @@
         "cs": "Mimo ordinační dobu funguje pohotovostní služba ordinací na Côte; volejte obvyklé číslo a řiďte se pokyny.",
         "sv": "Utanför öppettiderna finns en gemensam jourtjänst mellan klinikerna på Côte; ring det vanliga numret och följ instruktionerna.",
         "da": "Uden for åbningstiden er der en vagtordning mellem klinikkerne på Côte; ring på det sædvanlige nummer og følg vejledningen.",
-        "fi": "Aukioloaikojen ulkopuolella Côten alueen vastaanottojen yhteinen päivystys on käytettävissä; soita tavalliseen numeroon ja noudata ohjeita."
+        "fi": "Aukioloaikojen ulkopuolella Côten alueen vastaanottojen yhteinen päivystys on käytettävissä; soita tavalliseen numeroon ja noudata ohjeita.",
+        "nb": "Utenom åpningstid finnes en vakttjeneste mellom klinikkene på Côte; ring vanlig nummer og følg anvisningene."
       },
       "small_animals": true,
       "url": "https://www.cabinetveterinairesorby.ch/",
@@ -2552,7 +2635,8 @@
         "cs": "Po–Pá 8:00–18:30, so 8:00–13:00, na objednání. Večer, v noci, o víkendech a svátcích: pohotovost přes pohotovostní službu Riviera vaudoise (číslo na záznamníku).",
         "sv": "Mån–fre 08.00–18.30, lör 08.00–13.00, efter bokad tid. Kvällar, nätter, helger och helgdagar: akutfall via jourtjänsten för Riviera vaudoise (numret finns på telefonsvararen).",
         "da": "Man–fre 08.00–18.30, lør 08.00–13.00, efter aftale. Aftener, nætter, weekender og helligdage: akutte tilfælde via vagtordningen i Riviera vaudoise (nummer på telefonsvareren).",
-        "fi": "ma–pe klo 8.00–18.30, la klo 8.00–13.00, ajanvarauksella. Iltaisin, öisin, viikonloppuisin ja pyhäpäivinä: päivystys Riviera vaudoisen päivystyspalvelun kautta (numero puhelinvastaajassa)."
+        "fi": "ma–pe klo 8.00–18.30, la klo 8.00–13.00, ajanvarauksella. Iltaisin, öisin, viikonloppuisin ja pyhäpäivinä: päivystys Riviera vaudoisen päivystyspalvelun kautta (numero puhelinvastaajassa).",
+        "nb": "Man–fre 08.00–18.30, lør 08.00–13.00, etter avtale. Kvelder, netter, helger og helligdager: nødtilfeller via vakttjenesten i Riviera vaudoise (nummeret står på telefonsvareren)."
       },
       "small_animals": true,
       "url": "https://veterinairevevey.ch/",
@@ -2582,7 +2666,8 @@
         "cs": "Pohotovost mimo ordinační dobu na 0900 001 400 (CHF 2/min), přesměrování podle denní doby: do 22:00 místní pohotovostní ordinace Nord vaudois, poté od 22:00 do 8:00 pohotovostní centra (Medivet nebo EVC).",
         "sv": "Akutfall utanför öppettiderna på 0900 001 400 (CHF 2/min); samtalen vidarekopplas efter tid på dygnet: lokal jourmottagning i Nord vaudois till 22.00, därefter akutcentrum (Medivet eller EVC) 22.00–08.00.",
         "da": "Akutte tilfælde uden for åbningstiden på 0900 001 400 (CHF 2/min), omstillet efter tidspunkt: lokal vagtklinik i Nord vaudois til 22.00, derefter akutcentre (Medivet eller EVC) fra 22.00 til 08.00.",
-        "fi": "Päivystys aukioloaikojen ulkopuolella numerossa 0900 001 400 (CHF 2/min), puhelut ohjataan kellonajan mukaan: paikallinen Nord vaudois -päivystys klo 22.00 asti, sen jälkeen päivystyskeskukset (Medivet tai EVC) klo 22.00–8.00."
+        "fi": "Päivystys aukioloaikojen ulkopuolella numerossa 0900 001 400 (CHF 2/min), puhelut ohjataan kellonajan mukaan: paikallinen Nord vaudois -päivystys klo 22.00 asti, sen jälkeen päivystyskeskukset (Medivet tai EVC) klo 22.00–8.00.",
+        "nb": "Nødtilfeller utenom åpningstid på 0900 001 400 (CHF 2/min), omdirigert etter tidspunkt: lokal permanence i Nord vaudois til kl. 22.00, deretter akuttsentre (Medivet eller EVC) kl. 22.00–08.00."
       },
       "small_animals": true,
       "url": "https://www.casavet.ch/",
@@ -2611,7 +2696,8 @@
         "cs": "Placená pohotovostní linka (CHF 2/min) pro malá zvířata v severním Vaudu, přesměrování podle dne a času: místní pohotovostní ordinace od 18:00 v pracovní dny a o víkendech do 22:00, poté pohotovostní centra (Medivet nebo EVC) 22:00–8:00.",
         "sv": "Avgiftsbelagd akutlinje (CHF 2/min) för smådjur i norra Vaud; samtalen vidarekopplas efter dag och tid: lokal jourmottagning från 18.00 på vardagar och på helger till 22.00, därefter akutcentrum (Medivet eller EVC) 22.00–08.00.",
         "da": "Akuttelefon (CHF 2/min) for små kæledyr i Nordvaud, omstillet efter dag og tidspunkt: lokal vagtklinik fra 18.00 på hverdage og i weekenden til 22.00, derefter akutcentre (Medivet eller EVC) 22.00–08.00.",
-        "fi": "Maksullinen päivystysnumero (CHF 2/min) pieneläimille Pohjois-Vaudissa, puhelut ohjataan päivän ja kellonajan mukaan: paikallinen päivystys arkisin klo 18.00 alkaen ja viikonloppuisin klo 22.00 asti, sen jälkeen päivystyskeskukset (Medivet tai EVC) klo 22.00–8.00."
+        "fi": "Maksullinen päivystysnumero (CHF 2/min) pieneläimille Pohjois-Vaudissa, puhelut ohjataan päivän ja kellonajan mukaan: paikallinen päivystys arkisin klo 18.00 alkaen ja viikonloppuisin klo 22.00 asti, sen jälkeen päivystyskeskukset (Medivet tai EVC) klo 22.00–8.00.",
+        "nb": "Betalt akuttlinje (CHF 2/min) for smådyr i Nord-Vaud, omdirigert etter dag og tidspunkt: lokal permanence fra kl. 18.00 på hverdager og i helgene til kl. 22.00, deretter akuttsentre (Medivet eller EVC) kl. 22.00–08.00."
       },
       "small_animals": true,
       "url": "https://www.casavet.ch/casavet-urgences-yvonand",
@@ -2641,7 +2727,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00, so 9:00–12:00, pouze na objednání.",
         "sv": "Mån–fre 08.00–12.00 och 14.00–18.00, lör 09.00–12.00, endast efter bokad tid.",
         "da": "Man–fre 08.00–12.00 og 14.00–18.00, lør 09.00–12.00, kun efter aftale.",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00, la klo 9.00–12.00, vain ajanvarauksella."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00, la klo 9.00–12.00, vain ajanvarauksella.",
+        "nb": "Man–fre 08.00–12.00 og 14.00–18.00, lør 09.00–12.00, kun etter timebestilling."
       },
       "small_animals": true,
       "url": "https://vets.ch/",
@@ -2671,7 +2758,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00, so 9:00–12:00. Mimo ordinační dobu platí pohotovostní linka 0900 811 818 (zvýšená sazba, pouze ze švýcarské sítě).",
         "sv": "Mån–fre 8–12 och 14–18, lör 9–12. Utanför öppettiderna gäller jourlinjen 0900 811 818 (betalnummer, endast i schweiziska nät).",
         "da": "Man–fre 8–12 og 14–18, lør 9–12. Uden for åbningstiden gælder akuttelefonen 0900 811 818 (forhøjet takst, kun fra det schweiziske net).",
-        "fi": "ma–pe klo 8–12 ja 14–18, la klo 9–12. Aukioloaikojen ulkopuolella käytetään päivystysnumeroa 0900 811 818 (lisämaksullinen, vain sveitsiläisessä verkossa)."
+        "fi": "ma–pe klo 8–12 ja 14–18, la klo 9–12. Aukioloaikojen ulkopuolella käytetään päivystysnumeroa 0900 811 818 (lisämaksullinen, vain sveitsiläisessä verkossa).",
+        "nb": "man–fre 8–12 og 14–18, lør 9–12. Utenom åpningstid gjelder vakttelefonen 0900 811 818 (særtakst, kun sveitsisk nett)."
       },
       "small_animals": true,
       "url": "https://animal-kleintierpraxis.ch/",
@@ -2701,7 +2789,8 @@
         "cs": "Po–Pá s polední přestávkou, so 8:00–12:00. Mimo ordinační dobu slouží pohotovost ordinace z regionu Baden přes placenou linku 0900 00 54 00; od 22:00 do 8:00 hovory míří do Tierklinik Aarau West.",
         "sv": "Mån–fre med lunchpaus, lör 8–12. Utanför öppettiderna har en klinik i Baden-regionen akutjour via betalnumret 0900 00 54 00; mellan 22.00 och 08.00 går samtalen till Tierklinik Aarau West.",
         "da": "Man–fre med middagspause, lør 8–12. Uden for åbningstiden har en klinik i Baden-regionen vagten via nummeret 0900 00 54 00 med forhøjet takst; 22.00–08.00 går opkald til Tierklinik Aarau West.",
-        "fi": "ma–pe (keskipäivätauko), la klo 8–12. Aukioloaikojen ulkopuolella Badenin alueen vastaanotto päivystää maksullisen numeron 0900 00 54 00 kautta; klo 22.00–8.00 puhelut ohjataan Tierklinik Aarau Westiin."
+        "fi": "ma–pe (keskipäivätauko), la klo 8–12. Aukioloaikojen ulkopuolella Badenin alueen vastaanotto päivystää maksullisen numeron 0900 00 54 00 kautta; klo 22.00–8.00 puhelut ohjataan Tierklinik Aarau Westiin.",
+        "nb": "man–fre med middagspause, lør 8–12. Utenom åpningstiden har en praksis i Baden-regionen akuttvakt via nummeret med særtakst 0900 00 54 00; 22.00–8.00 videresendes samtaler til Tierklinik Aarau West."
       },
       "small_animals": true,
       "url": "https://www.tierarzt-baden.ch/",
@@ -2731,7 +2820,8 @@
         "cs": "Pohotovost nonstop po celý rok, včetně nocí, nedělí a státních svátků; předem zavolejte. Pohotovostní linka 0900 70 70 70 (zvýšená sazba).",
         "sv": "Akutjour dygnet runt hela året, även nätter, söndagar och helgdagar; ring innan du kommer. Jourlinje 0900 70 70 70 (betalnummer).",
         "da": "Akuttjeneste døgnet rundt hele året, også om natten, på søndage og helligdage; ring på forhånd. Akuttelefon 0900 70 70 70 (forhøjet takst).",
-        "fi": "Päivystys ympäri vuorokauden ja ympäri vuoden, myös öisin, sunnuntaisin ja pyhäpäivinä; soita etukäteen. Päivystysnumero 0900 70 70 70 (lisämaksullinen)."
+        "fi": "Päivystys ympäri vuorokauden ja ympäri vuoden, myös öisin, sunnuntaisin ja pyhäpäivinä; soita etukäteen. Päivystysnumero 0900 70 70 70 (lisämaksullinen).",
+        "nb": "Akuttjeneste hele døgnet hele året, også om natten, på søndager og helligdager; ring på forhånd. Akuttlinje 0900 70 70 70 (nummer med høy takst)."
       },
       "small_animals": true,
       "url": "https://tierklinik-mittelland.ch/",
@@ -2761,7 +2851,8 @@
         "cs": "Pohotovost mimo ordinační dobu: volejte 0900 837 837 (zvýšená sazba); volající jsou obvykle směrováni na tuto kliniku, která je pro pohotovost vybavená.",
         "sv": "Akutfall utanför öppettiderna: ring 0900 837 837 (betalnummer); den som ringer hänvisas normalt till den här kliniken, som är utrustad för akutfall.",
         "da": "Akut hjælp uden for åbningstiden: ring på 0900 837 837 (forhøjet takst); opkald stilles normalt om til denne klinik, som er udstyret til akutte tilfælde.",
-        "fi": "Päivystys aukioloaikojen ulkopuolella: soita 0900 837 837 (lisämaksullinen); soittajat ohjataan yleensä tälle klinikalle, joka on varustettu päivystystapauksiin."
+        "fi": "Päivystys aukioloaikojen ulkopuolella: soita 0900 837 837 (lisämaksullinen); soittajat ohjataan yleensä tälle klinikalle, joka on varustettu päivystystapauksiin.",
+        "nb": "Akutt utenom åpningstid: ring 0900 837 837 (nummer med tilleggstakst); innringere henvises vanligvis til denne klinikken, som er utstyrt for nødtilfeller."
       },
       "small_animals": true,
       "url": "https://www.vetstation.ch/en",
@@ -2791,7 +2882,8 @@
         "cs": "Mimo ordinační dobu volejte pohotovostní číslo 0900 837 837 (zvýšená sazba).",
         "sv": "Ring journumret 0900 837 837 (betalnummer) utanför öppettiderna.",
         "da": "Ring til akutnummeret 0900 837 837 (forhøjet takst) uden for åbningstiden.",
-        "fi": "Aukioloaikojen ulkopuolella soita päivystysnumeroon 0900 837 837 (lisämaksullinen)."
+        "fi": "Aukioloaikojen ulkopuolella soita päivystysnumeroon 0900 837 837 (lisämaksullinen).",
+        "nb": "Ring nødnummer 0900 837 837 (nummer med høy takst) utenfor åpningstid."
       },
       "small_animals": true,
       "url": "https://www.vetstation.ch/en",
@@ -2821,7 +2913,8 @@
         "cs": "Na akutní termín zavolejte; večer, v noci, v neděli a o státních svátcích přes pohotovostní službu Riviera 0900 906 906 (zvýšená sazba).",
         "sv": "Ring för att boka en brådskande tid; kvällar, nätter, söndagar och helgdagar via Rivieras jourtjänst 0900 906 906 (betalnummer).",
         "da": "Ring for at få en akuttid; aftener, nætter, søndage og helligdage via akuttjenesten i Riviera 0900 906 906 (forhøjet takst).",
-        "fi": "Soita kiireellistä aikaa varten; iltaisin, öisin, sunnuntaisin ja pyhäpäivinä Riviera-päivystyksen kautta 0900 906 906 (lisämaksullinen)."
+        "fi": "Soita kiireellistä aikaa varten; iltaisin, öisin, sunnuntaisin ja pyhäpäivinä Riviera-päivystyksen kautta 0900 906 906 (lisämaksullinen).",
+        "nb": "Ring for en akutt time; kvelder, netter, søndager og helligdager via vakttjenesten Riviera 0900 906 906 (nummer med høy takst)."
       },
       "small_animals": true,
       "url": "https://my-vet.ch/",
@@ -2850,7 +2943,8 @@
         "cs": "Pohotovostní linka večer, v noci, v neděli a o státních svátcích, nonstop, 7 dní v týdnu; odpovídá veterinář a odkáže na ordinaci ve službě. Zvýšená sazba (CHF 2/min 8:00–20:00, CHF 5/min 20:00–8:00).",
         "sv": "Jourlinje för kvällar, nätter, söndagar och helgdagar, dygnet runt, alla dagar i veckan; en veterinär svarar och hänvisar till jourhavande klinik. Betalnummer (CHF 2/min kl. 8–20, CHF 5/min kl. 20–8).",
         "da": "Akuttelefon for aftener, nætter, søndage og helligdage, døgnet rundt, 7 dage om ugen; en dyrlæge svarer og henviser til den vagthavende klinik. Forhøjet takst (CHF 2/min 8–20, CHF 5/min 20–8).",
-        "fi": "Päivystysnumero iltoja, öitä, sunnuntaita ja pyhäpäiviä varten, ympäri vuorokauden ja 7 päivää viikossa; eläinlääkäri vastaa ja ohjaa päivystävälle klinikalle. Lisämaksullinen (CHF 2/min klo 8–20, CHF 5/min klo 20–8)."
+        "fi": "Päivystysnumero iltoja, öitä, sunnuntaita ja pyhäpäiviä varten, ympäri vuorokauden ja 7 päivää viikossa; eläinlääkäri vastaa ja ohjaa päivystävälle klinikalle. Lisämaksullinen (CHF 2/min klo 8–20, CHF 5/min klo 20–8).",
+        "nb": "Akuttelefon for kvelder, netter, søndager og helligdager, hele døgnet og sju dager i uken; en dyrlege svarer og henviser til vakthavende klinikk. Nummer med tilleggstakst (CHF 2/min kl. 8–20, CHF 5/min kl. 20–8)."
       },
       "small_animals": true,
       "url": "https://my-vet.ch/urgenceveterinaire/",
@@ -2880,7 +2974,8 @@
         "cs": "Po–Pá 8:00–12:30 a 13:15–17:30; návštěvy doma na objednání. Pohotovost v ordinační době.",
         "sv": "Mån–fre 8.00–12.30 och 13.15–17.30; hembesök efter bokad tid. Akutjour finns under öppettiderna.",
         "da": "Man–fre 8.00–12.30 og 13.15–17.30; hjemmebesøg efter aftale. Akuttjeneste i åbningstiden.",
-        "fi": "ma–pe klo 8.00–12.30 ja 13.15–17.30; kotikäynnit ajanvarauksella. Päivystys käytettävissä aukioloaikoina."
+        "fi": "ma–pe klo 8.00–12.30 ja 13.15–17.30; kotikäynnit ajanvarauksella. Päivystys käytettävissä aukioloaikoina.",
+        "nb": "man–fre 8.00–12.30 og 13.15–17.30; hjemmebesøk etter avtale. Akuttjeneste tilgjengelig i åpningstiden."
       },
       "small_animals": true,
       "url": "https://veteovet.ch/",
@@ -2909,7 +3004,8 @@
         "cs": "Ordinace pro malá zvířata severně od Nyonu (čtvrť Petite Prairie). Otevírací dobu zjistíte telefonicky.",
         "sv": "Smådjursklinik norr om Nyon (stadsdelen Petite Prairie). Ring för öppettider.",
         "da": "Klinik for små kæledyr nord for Nyon (kvarteret Petite Prairie). Ring for åbningstider.",
-        "fi": "Pieneläinvastaanotto Nyonin pohjoispuolella (Petite Prairien kaupunginosa). Soita ja kysy aukioloajat."
+        "fi": "Pieneläinvastaanotto Nyonin pohjoispuolella (Petite Prairien kaupunginosa). Soita ja kysy aukioloajat.",
+        "nb": "Smådyrklinikk nord for Nyon (bydelen Petite Prairie). Ring for åpningstider."
       },
       "small_animals": true,
       "url": "https://veterinaire-letrefle.ch/",
@@ -2939,7 +3035,8 @@
         "cs": "Pohotovostní centrum nonstop, 7 dní v týdnu, včetně víkendů a státních svátků.",
         "sv": "Akutcentrum öppet dygnet runt, alla dagar i veckan, även helger och helgdagar.",
         "da": "Akutcenter åbent døgnet rundt, 7 dage om ugen, også i weekender og på helligdage.",
-        "fi": "Päivystyskeskus auki ympäri vuorokauden, 7 päivää viikossa, myös viikonloppuisin ja pyhäpäivinä."
+        "fi": "Päivystyskeskus auki ympäri vuorokauden, 7 päivää viikossa, myös viikonloppuisin ja pyhäpäivinä.",
+        "nb": "Akuttsenter åpent hele døgnet, sju dager i uken, også i helger og på helligdager."
       },
       "small_animals": true,
       "url": "https://www.veturgences.ch/",
@@ -2969,7 +3066,8 @@
         "cs": "Večer a o víkendech: pohotovostní okruh Schaffhausen 0900 900 109 (zvýšená sazba) pro malá zvířata.",
         "sv": "Kvällar och helger: Schaffhausens jourring 0900 900 109 (betalnummer) för smådjur.",
         "da": "Aftener og weekender: akutringen i Schaffhausen 0900 900 109 (forhøjet takst) for små kæledyr.",
-        "fi": "Iltaisin ja viikonloppuisin: Schaffhausenin päivystysrinki 0900 900 109 (lisämaksullinen) pieneläimille."
+        "fi": "Iltaisin ja viikonloppuisin: Schaffhausenin päivystysrinki 0900 900 109 (lisämaksullinen) pieneläimille.",
+        "nb": "Kvelder og helger: akuttring Schaffhausen 0900 900 109 (forhøyet takst) for smådyr."
       },
       "small_animals": true,
       "url": "https://www.tieraerzte-team.ch/",
@@ -2999,7 +3097,8 @@
         "cs": "Po–Pá 8:30–13:00 a 14:30–19:00, so 9:00–13:00, v neděli zavřeno. Člen pohotovostního okruhu Schaffhausen (0900 900 109).",
         "sv": "Mån–fre 8.30–13.00 och 14.30–19.00, lör 9.00–13.00, sön stängt. Medlem i Schaffhausens jourring (0900 900 109).",
         "da": "Man–fre 8.30–13.00 og 14.30–19.00, lør 9.00–13.00, søn lukket. Medlem af akutringen i Schaffhausen (0900 900 109).",
-        "fi": "ma–pe klo 8.30–13.00 ja 14.30–19.00, la klo 9.00–13.00, su suljettu. Schaffhausenin päivystysringin jäsen (0900 900 109)."
+        "fi": "ma–pe klo 8.30–13.00 ja 14.30–19.00, la klo 9.00–13.00, su suljettu. Schaffhausenin päivystysringin jäsen (0900 900 109).",
+        "nb": "man–fre 8.30–13.00 og 14.30–19.00, lør 9.00–13.00, søn stengt. Medlem av vaktringen i Schaffhausen (0900 900 109)."
       },
       "small_animals": true,
       "url": "https://vettrust.ch/en/locations/zentrum-tiermedizin-klettgau",
@@ -3028,7 +3127,8 @@
         "cs": "Pohotovostní linka VetTrust, nonstop, 7 dní v týdnu; volající jsou podle PSČ směrováni na nejbližší pracoviště VetTrust ve službě.",
         "sv": "Jourlinje för VetTrust, dygnet runt, alla dagar i veckan; den som ringer kopplas vidare utifrån postnummer till närmaste jourhavande VetTrust-enhet.",
         "da": "VetTrust akuttelefon, døgnet rundt, 7 dage om ugen; opkald stilles efter postnummer om til nærmeste VetTrust-afdeling i vagt.",
-        "fi": "VetTrustin päivystysnumero ympäri vuorokauden, 7 päivää viikossa; soittajat ohjataan postinumeron mukaan lähimpään päivystävään VetTrust-toimipisteeseen."
+        "fi": "VetTrustin päivystysnumero ympäri vuorokauden, 7 päivää viikossa; soittajat ohjataan postinumeron mukaan lähimpään päivystävään VetTrust-toimipisteeseen.",
+        "nb": "VetTrusts vakttelefon, døgnåpen, sju dager i uken; innringere ledes etter postnummer til nærmeste VetTrust-klinikk med vakt."
       },
       "small_animals": true,
       "url": "https://vettrust.ch/en/health/emergency",
@@ -3058,7 +3158,8 @@
         "cs": "Otevírací dobu a pohotovost zjistíte telefonicky v ordinaci.",
         "sv": "Ring kliniken för öppettider och akutfall.",
         "da": "Ring til klinikken for åbningstider og akutte tilfælde.",
-        "fi": "Soita vastaanotolle ja kysy aukioloajat sekä päivystysjärjestelyt."
+        "fi": "Soita vastaanotolle ja kysy aukioloajat sekä päivystysjärjestelyt.",
+        "nb": "Ring praksisen for å høre åpningstider og vakt for nødtilfeller."
       },
       "small_animals": true,
       "source_url": "https://www.svpm-asme.ch/fr/recherche-veterinaire/recherche-cabinets/recherche-cabinets/cabinet/Clinique%20V%C3%A9t%C3%A9rinaire%20La%20Condem%C3%A8ne%20S%C3%A0rl",
@@ -3084,7 +3185,8 @@
         "cs": "Víkendovou službu sdílí několik veterinářů od soboty 10:00 do pondělí 7:00; aktuální seznam služeb se aktualizuje každou sobotu.",
         "sv": "Flera veterinärer delar på helgjouren från lördag 10.00 till måndag 07.00; den aktuella jourlistan uppdateras varje lördag.",
         "da": "Flere dyrlæger deler weekendvagten fra lørdag 10.00 til mandag 07.00; den aktuelle vagtliste opdateres hver lørdag.",
-        "fi": "Useat eläinlääkärit jakavat viikonloppupäivystyksen lauantaista klo 10.00 maanantaihin klo 7.00; ajankohtainen päivystysluettelo päivitetään joka lauantai."
+        "fi": "Useat eläinlääkärit jakavat viikonloppupäivystyksen lauantaista klo 10.00 maanantaihin klo 7.00; ajankohtainen päivystysluettelo päivitetään joka lauantai.",
+        "nb": "Flere dyrleger deler helgevakten fra lørdag kl. 10.00 til mandag kl. 7.00; gjeldende vaktliste oppdateres hver lørdag."
       },
       "small_animals": true,
       "url": "https://www.vetj.ch/de-de/19-service-de-garde/41-veterinaire-garde-intro-fr.html",
@@ -3114,7 +3216,8 @@
         "cs": "Po–Pá 8:00–12:00 a 14:00–18:00 na objednání. Akutní případy: zavolejte do ordinace nebo na regionální pohotovost 0900 140 150 (zvýšená sazba).",
         "sv": "Mån–fre 8.00–12.00 och 14.00–18.00 efter bokad tid. Brådskande fall: ring kliniken eller den regionala jouren 0900 140 150 (betalnummer).",
         "da": "Man–fre 8.00–12.00 og 14.00–18.00 efter aftale. Akutte tilfælde: ring til klinikken eller til den regionale akuttjeneste 0900 140 150 (forhøjet takst).",
-        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00 ajanvarauksella. Kiireelliset tapaukset: soita vastaanotolle tai alueelliseen päivystykseen 0900 140 150 (lisämaksullinen)."
+        "fi": "ma–pe klo 8.00–12.00 ja 14.00–18.00 ajanvarauksella. Kiireelliset tapaukset: soita vastaanotolle tai alueelliseen päivystykseen 0900 140 150 (lisämaksullinen).",
+        "nb": "man–fre 8.00–12.00 og 14.00–18.00 etter timebestilling. Hastetilfeller: ring praksisen eller den regionale vakttjenesten 0900 140 150 (særtakst)."
       },
       "small_animals": true,
       "url": "https://www.veterinariogozzoli.ch/",
@@ -3144,7 +3247,8 @@
         "cs": "Po–Pá 8:00–12:00 a 13:30–18:00, so 9:00–12:00. Pohotovost pro klienty i mimo ordinační dobu.",
         "sv": "Mån–fre 8.00–12.00 och 13.30–18.00, lör 9.00–12.00. Akutjour för kunder även utanför öppettiderna.",
         "da": "Man–fre 8.00–12.00 og 13.30–18.00, lør 9.00–12.00. Akuttjeneste for kunder også uden for åbningstiden.",
-        "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.00, la klo 9.00–12.00. Päivystys asiakkaille myös aukioloaikojen ulkopuolella."
+        "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.00, la klo 9.00–12.00. Päivystys asiakkaille myös aukioloaikojen ulkopuolella.",
+        "nb": "man–fre 8.00–12.00 og 13.30–18.00, lør 9.00–12.00. Akuttjeneste for klienter også utenom åpningstid."
       },
       "small_animals": true,
       "url": "https://www.centroveterinario.ch/",

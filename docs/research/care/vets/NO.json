@@ -48,7 +48,8 @@
         "cs": "Pohotovostní recepce otevřená každý den, nonstop, celý rok.",
         "sv": "Akutmottagning öppen varje dag, dygnet runt, hela året",
         "da": "Akutmodtagelse åben hver dag, døgnet rundt, hele året",
-        "fi": "Päivystysvastaanotto auki joka päivä ympäri vuorokauden, ympäri vuoden"
+        "fi": "Päivystysvastaanotto auki joka päivä ympäri vuorokauden, ympäri vuoden",
+        "nb": "Akuttmottak åpent alle dager, døgnet rundt, hele året"
       },
       "url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
@@ -78,7 +79,8 @@
         "cs": "Otevřeno nonstop každý den; běžná ordinační doba Po–Pá 8–18, So 9–15.",
         "sv": "Öppet dygnet runt, alla dagar; ordinarie öppettider mån–fre 8–18, lör 9–15",
         "da": "Åbent døgnet rundt hver dag; almindelig åbningstid man–fre 8–18, lør 9–15",
-        "fi": "Auki ympäri vuorokauden joka päivä; tavalliset aukioloajat ma–pe 8–18, la 9–15"
+        "fi": "Auki ympäri vuorokauden joka päivä; tavalliset aukioloajat ma–pe 8–18, la 9–15",
+        "nb": "Åpent hele døgnet alle dager; ordinære åpningstider man–fre 8–18, lør 9–15"
       },
       "url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
@@ -108,7 +110,8 @@
         "cs": "Nonstop služba pro malá zvířata každý den po celý rok; běžná ordinační doba Po–Pá 7:30–20, So 9–16.",
         "sv": "Jour för smådjur dygnet runt, alla dagar hela året; ordinarie öppettider mån–fre 7.30–20, lör 9–16",
         "da": "Døgnvagt for små dyr hver dag hele året; almindelig åbningstid man–fre 7.30–20, lør 9–16",
-        "fi": "Pieneläinpäivystys 24 h joka päivä ympäri vuoden; vastaanottoaika ma–pe 7.30–20, la 9–16"
+        "fi": "Pieneläinpäivystys 24 h joka päivä ympäri vuoden; vastaanottoaika ma–pe 7.30–20, la 9–16",
+        "nb": "Døgnvakt for små dyr alle dager hele året; vanlig åpningstid man–fre kl. 07.30–20, lør 9–16"
       },
       "url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
@@ -137,7 +140,8 @@
         "cs": "Pohotovostní služba nonstop.",
         "sv": "Akutjour 00–24",
         "da": "Akutvagt 00–24",
-        "fi": "Päivystys 0–24"
+        "fi": "Päivystys 0–24",
+        "nb": "Akuttvakt 00–24"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
@@ -168,7 +172,8 @@
         "cs": "Pohotovostní služba nonstop; ordinační doba 8–18.",
         "sv": "Akutjour 00–24; klinikens öppettider 8–18",
         "da": "Akutvagt 00–24; klinikkens åbningstid 8–18",
-        "fi": "Päivystys 0–24; klinikan aukioloaika 8–18"
+        "fi": "Päivystys 0–24; klinikan aukioloaika 8–18",
+        "nb": "Akuttvakt 00–24; klinikken åpen 8–18"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/?clinic-id=21683",
@@ -198,7 +203,8 @@
         "cs": "Nonstop pohotovostní a telefonická služba.",
         "sv": "Akut- och telefonjour dygnet runt",
         "da": "Akut- og telefonvagt døgnet rundt",
-        "fi": "Päivystys ja puhelinpäivystys 24 h"
+        "fi": "Päivystys ja puhelinpäivystys 24 h",
+        "nb": "Akutt- og vakttelefon hele døgnet"
       },
       "url": "https://www.nmbu.no/aktuelt/tema/veterinaerhogskolen/dyresykehuset-smadyr?page=2",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikk-osteras/akuttvakt/",
@@ -228,7 +234,8 @@
         "cs": "Týdenní rozpis služeb od Pá 16:00 do následujícího Pá 8:00, střídají se kliniky (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); v mnoha týdnech služba NENÍ (říjen–prosinec 2026). Před cestou vždy zavolejte na číslo služby.",
         "sv": "Veckovist jourschema fre 16.00 till nästa fre 08.00, roterande mellan kliniker (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); många veckor har INGEN jour (okt–dec 2026). Ring alltid journumret innan du åker.",
         "da": "Ugentlig vagtplan fre 16.00 til næste fre 08.00, skiftevis mellem klinikker (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); mange uger er der INGEN vagt (okt.–dec. 2026). Ring altid til vagtnummeret, før du kører af sted.",
-        "fi": "Viikon mittainen päivystysvuoro pe 16.00 – seuraavaan pe 8.00, vuorot kiertävät klinikoiden kesken (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); monella viikolla EI ole päivystystä (loka–joulukuu 2026). Soita aina päivystysnumeroon ennen lähtöä."
+        "fi": "Viikon mittainen päivystysvuoro pe 16.00 – seuraavaan pe 8.00, vuorot kiertävät klinikoiden kesken (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); monella viikolla EI ole päivystystä (loka–joulukuu 2026). Soita aina päivystysnumeroon ennen lähtöä.",
+        "nb": "Ukentlig vaktturnus fre 16.00 til neste fre 8.00, som går på rundgang mellom klinikker (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); mange uker har INGEN vakt (okt.–des. 2026). Ring alltid vakttelefonen før du reiser."
       },
       "note": "No small-animal vakt phone published on the page. No night emergency service when no vakt. Bergen kommune news (updated 2026-10-09): long periods without small-animal vakt 9 Oct-19 Dec 2026; new tender answer deadline 10 Nov 2026. Do not use the horse/production-animal numbers for pets."
     },
@@ -256,7 +263,8 @@
         "cs": "Pohotovostní služba pro malá zvířata v oblasti Haugaland.",
         "sv": "Jour för smådjur i Haugaland",
         "da": "Vagt for små dyr i Haugaland",
-        "fi": "Pieneläinpäivystys Haugalandin alueelle"
+        "fi": "Pieneläinpäivystys Haugalandin alueelle",
+        "nb": "Vakttjeneste for små dyr i Haugaland"
       },
       "quote": "Ring smådyrvakta på Haugalandet på 820 90 020",
       "note": "Hours not given."
@@ -285,7 +293,8 @@
         "cs": "Pohotovostní služba nonstop přes Mjøsvakta; partneři Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik.",
         "sv": "Jour dygnet runt via Mjøsvakta; partner: Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik",
         "da": "Vagt døgnet rundt via Mjøsvakta; partnere Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik",
-        "fi": "Ympärivuorokautinen päivystys Mjøsvaktan kautta; yhteistyökumppanit Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik"
+        "fi": "Ympärivuorokautinen päivystys Mjøsvaktan kautta; yhteistyökumppanit Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk, AniCura Gjøvik",
+        "nb": "Vakttjeneste hele døgnet via Mjøsvakta; samarbeidspartnere er Evidensia Lillehammer, Vetsentrum Hamar, Brumunddal Dyreklinikk og AniCura Gjøvik"
       }
     },
     {
@@ -313,7 +322,8 @@
         "cs": "Telefon obsazen každý den do 23:00; později jsou neodkladné případy odesílány do AniCura Dyresykehus Oslo 21 52 53 00.",
         "sv": "Telefonen bemannad till 23.00 varje dag; senare akutfall hänvisas till AniCura Dyresykehus Oslo 21 52 53 00",
         "da": "Telefonen er bemandet til 23.00 hver dag; senere henvises akutte tilfælde til AniCura Dyresykehus Oslo 21 52 53 00",
-        "fi": "Puhelin vastaa joka päivä klo 23 asti; sen jälkeen kiireelliset tapaukset ohjataan AniCura Dyresykehus Osloon, 21 52 53 00"
+        "fi": "Puhelin vastaa joka päivä klo 23 asti; sen jälkeen kiireelliset tapaukset ohjataan AniCura Dyresykehus Osloon, 21 52 53 00",
+        "nb": "Telefon bemannet til kl. 23.00 alle dager; senere hastetilfeller henvises til AniCura Dyresykehus Oslo 21 52 53 00"
       },
       "quote": "Telefonen er bemannet frem til klokken 23:00 alle dager."
     },
@@ -341,7 +351,8 @@
         "cs": "Městská pohotovostní služba pro malá i velká zvířata; v pracovní dny AniCura Dyresykehus Oslo 8:00–23:00; mimo ordinační dobu a o víkendech služba NMBU 820 90 102.",
         "sv": "Kommunal jourtjänst för små och stora djur; vardagar AniCura Dyresykehus Oslo 08.00–23.00; utanför öppettiderna och på helger NMBU-jour 820 90 102",
         "da": "Kommunal vagttjeneste for små og store dyr; hverdage AniCura Dyresykehus Oslo 08.00–23.00; uden for åbningstid/weekend NMBU-vagten 820 90 102",
-        "fi": "Kunnallinen päivystys pienille ja suurille eläimille; arkisin AniCura Dyresykehus Oslo 8.00–23.00; työajan ulkopuolella ja viikonloppuisin NMBU:n päivystys 820 90 102"
+        "fi": "Kunnallinen päivystys pienille ja suurille eläimille; arkisin AniCura Dyresykehus Oslo 8.00–23.00; työajan ulkopuolella ja viikonloppuisin NMBU:n päivystys 820 90 102",
+        "nb": "Kommunal vaktordning for små og store dyr; hverdager AniCura Dyresykehus Oslo 08.00–23.00; utenom åpningstid/helger NMBU-vakt 820 90 102"
       }
     },
     {
@@ -368,7 +379,8 @@
         "cs": "Evidensia Alltid 22 12 00 00 pokrývá Oslo, Trondheim a Kristiansand nonstop; čísla služeb jednotlivých klinik jsou uvedena.",
         "sv": "Evidensia Alltid 22 12 00 00 täcker Oslo, Trondheim och Kristiansand dygnet runt; journummer per klinik anges",
         "da": "Evidensia Alltid 22 12 00 00 dækker Oslo, Trondheim og Kristiansand døgnet rundt; vagtnumre for de enkelte klinikker er opført",
-        "fi": "Evidensia Alltid 22 12 00 00 palvelee Oslossa, Trondheimissa ja Kristiansandissa ympäri vuorokauden; klinikoiden omat päivystysnumerot on lueteltu"
+        "fi": "Evidensia Alltid 22 12 00 00 palvelee Oslossa, Trondheimissa ja Kristiansandissa ympäri vuorokauden; klinikoiden omat päivystysnumerot on lueteltu",
+        "nb": "Evidensia Alltid 22 12 00 00 dekker Oslo, Trondheim og Kristiansand hele døgnet; vakttelefoner for hver klinikk er oppført"
       },
       "note": "Page says the Alltid number is for Oslo, Trondheim and Kristiansand and not tied to one clinic."
     },
@@ -396,7 +408,8 @@
         "cs": "Součást pohotovostní služby pro malá zvířata v Tromsø; nonstop služba každý čtvrtek a každý čtvrtý víkend; Po–St, Pá 8–16, Čt 8–18:30, So 10–13.",
         "sv": "Del av Tromsøs jour för smådjur; jour dygnet runt varje torsdag och var fjärde helg; mån–ons, fre 8–16, tors 8–18.30, lör 10–13",
         "da": "Del af Tromsøs vagt for små dyr; døgnvagt hver torsdag og hver fjerde weekend; man–ons, fre 8–16, tor 8–18.30, lør 10–13",
-        "fi": "Osallistuu Tromssan pieneläinpäivystykseen; ympärivuorokautinen päivystys joka torstai ja joka neljäs viikonloppu; ma–ke, pe 8–16, to 8–18.30, la 10–13"
+        "fi": "Osallistuu Tromssan pieneläinpäivystykseen; ympärivuorokautinen päivystys joka torstai ja joka neljäs viikonloppu; ma–ke, pe 8–16, to 8–18.30, la 10–13",
+        "nb": "Del av smådyrvakten i Tromsø; døgnvakt hver torsdag og hver fjerde helg; man–ons, fre 8–16, tors 8–18.30, lør 10–13"
       },
       "url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
       "source_url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
@@ -426,7 +439,8 @@
         "cs": "Po–Pá 8:00–15:30; mimo ordinační dobu jsou hovory přesměrovány na službu konajícího veterináře.",
         "sv": "Mån–fre 8.00–15.30; utanför öppettiderna vidarekopplas samtal till jourhavande veterinär",
         "da": "Man–fre 8.00–15.30; uden for åbningstid videresendes opkald til dyrlægen i vagt",
-        "fi": "ma–pe 8.00–15.30; työajan ulkopuolella puhelut ohjataan päivystävälle eläinlääkärille"
+        "fi": "ma–pe 8.00–15.30; työajan ulkopuolella puhelut ohjataan päivystävälle eläinlääkärille",
+        "nb": "man–fre 8.00–15.30; utenom åpningstid videresendes samtaler til dyrlegen på vakt"
       },
       "url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/"
@@ -455,7 +469,8 @@
         "cs": "Po, Čt 8:00–18:00; Út, St, Pá 8:00–15:30.",
         "sv": "Mån, tors 08.00–18.00; tis, ons, fre 08.00–15.30",
         "da": "Man, tor 08.00–18.00; tirs, ons, fre 08.00–15.30",
-        "fi": "ma, to 8.00–18.00; ti, ke, pe 8.00–15.30"
+        "fi": "ma, to 8.00–18.00; ti, ke, pe 8.00–15.30",
+        "nb": "Man, tor 08.00–18.00; tir, ons, fre 08.00–15.30"
       },
       "url": "https://evidensia.no/dyreklinikk/harstad-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/harstad-dyresykehus/"
@@ -483,7 +498,8 @@
         "cs": "Pohotovostní služba každý večer a víkend do 22:00.",
         "sv": "Akutjour varje kväll och helg till 22.00",
         "da": "Akutvagt hver aften og weekend til 22.00",
-        "fi": "Päivystys joka ilta ja viikonloppuisin klo 22 asti"
+        "fi": "Päivystys joka ilta ja viikonloppuisin klo 22 asti",
+        "nb": "Akuttvakt hver kveld og helg til kl. 22.00"
       },
       "url": "https://evidensia.no/dyreklinikk/fana/",
       "source_url": "https://evidensia.no/dyreklinikk/fana/akuttvakt",
@@ -513,7 +529,8 @@
         "cs": "Po–St, Pá 8–16, Čt 8–18; mimo ordinační dobu součást pohotovostní služby pro malá zvířata v Bergenu.",
         "sv": "Mån–ons, fre 8–16, tors 8–18; del av Bergens jour för smådjur utanför öppettiderna",
         "da": "Man–ons, fre 8–16, tor 8–18; del af Bergens vagt for små dyr uden for åbningstid",
-        "fi": "ma–ke, pe 8–16, to 8–18; osallistuu Bergenin pieneläinpäivystykseen työajan ulkopuolella"
+        "fi": "ma–ke, pe 8–16, to 8–18; osallistuu Bergenin pieneläinpäivystykseen työajan ulkopuolella",
+        "nb": "man–ons, fre 8–16, tors 8–18; del av dyrlegevakten for smådyr i Bergen utenom åpningstid"
       },
       "url": "https://evidensia.no/dyreklinikk/sandviken/",
       "source_url": "https://evidensia.no/dyreklinikk/sandviken/"
@@ -542,7 +559,8 @@
         "cs": "Po, St–Pá 8:30–16, Út 8:30–21; pohotovostní služba pro malá zvířata 820 90 020.",
         "sv": "Mån, ons–fre 8.30–16, tis 8.30–21; jour för smådjur 820 90 020",
         "da": "Man, ons–fre 8.30–16, tirs 8.30–21; vagt for små dyr 820 90 020",
-        "fi": "ma, ke–pe 8.30–16, ti 8.30–21; pieneläinten päivystys 820 90 020"
+        "fi": "ma, ke–pe 8.30–16, ti 8.30–21; pieneläinten päivystys 820 90 020",
+        "nb": "Man, ons–fre 8.30–16, tir 8.30–21; vakttelefon for små dyr 820 90 020"
       },
       "url": "https://evidensia.no/dyreklinikk/haugaland/",
       "source_url": "https://evidensia.no/dyreklinikk/haugaland/"
@@ -571,7 +589,8 @@
         "cs": "Po–Pá 8–18, So 9–16.",
         "sv": "Mån–fre 8–18, lör 9–16",
         "da": "Man–fre 8–18, lør 9–16",
-        "fi": "ma–pe 8–18, la 9–16"
+        "fi": "ma–pe 8–18, la 9–16",
+        "nb": "man–fre 8–18, lør 9–16"
       },
       "url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
@@ -686,7 +705,8 @@
         "cs": "Pohotovostní služba 8–21 (před cestou zavolejte).",
         "sv": "Akutjour 8–21 (ring innan du kommer)",
         "da": "Akutvagt 8–21 (ring på forhånd)",
-        "fi": "Päivystys klo 8–21 (soita etukäteen)"
+        "fi": "Päivystys klo 8–21 (soita etukäteen)",
+        "nb": "Akuttvakt 8–21 (ring på forhånd)"
       },
       "url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
@@ -714,7 +734,8 @@
         "cs": "Pohotovostní služba 8–19.",
         "sv": "Akutjour 8–19",
         "da": "Akutvagt 8–19",
-        "fi": "Päivystys klo 8–19"
+        "fi": "Päivystys klo 8–19",
+        "nb": "Akuttvakt 8–19"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -741,7 +762,8 @@
         "cs": "Pohotovostní služba 8–15:30.",
         "sv": "Akutjour 8–15.30",
         "da": "Akutvagt 8–15.30",
-        "fi": "Päivystys klo 8–15.30"
+        "fi": "Päivystys klo 8–15.30",
+        "nb": "Akuttvakt 8–15.30"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -770,7 +792,8 @@
         "cs": "Pohotovost Po–Čt 8:15–18:00, Pá 8:15–15:30.",
         "sv": "Akut mån–tors 08.15–18.00, fre 08.15–15.30",
         "da": "Akut man–tor 08.15–18.00, fre 08.15–15.30",
-        "fi": "Päivystys ma–to 8.15–18.00, pe 8.15–15.30"
+        "fi": "Päivystys ma–to 8.15–18.00, pe 8.15–15.30",
+        "nb": "Nødtilfeller man–tors 08.15–18.00, fre 08.15–15.30"
       },
       "url": "https://www.anicura.no/klinikker/dyresykehus-stavanger/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-stavanger/kontakt/"
@@ -797,7 +820,8 @@
         "cs": "Pohotovostní služba 8–19.",
         "sv": "Akutjour 8–19",
         "da": "Akutvagt 8–19",
-        "fi": "Päivystys klo 8–19"
+        "fi": "Päivystys klo 8–19",
+        "nb": "Akuttvakt 8–19"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
@@ -825,7 +849,8 @@
         "cs": "Pohotovostní služba 8–17.",
         "sv": "Akutjour 8–17",
         "da": "Akutvagt 8–17",
-        "fi": "Päivystys klo 8–17"
+        "fi": "Päivystys klo 8–17",
+        "nb": "Akuttvakt 8–17"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -852,7 +877,8 @@
         "cs": "Pohotovostní služba 8–16; zapojena do rozpisu služeb v Bergenu.",
         "sv": "Akutjour 8–16; deltar i Bergens jourschema",
         "da": "Akutvagt 8–16; deltager i Bergens vagtplan",
-        "fi": "Päivystys klo 8–16; osallistuu Bergenin päivystysvuoroihin"
+        "fi": "Päivystys klo 8–16; osallistuu Bergenin päivystysvuoroihin",
+        "nb": "Akuttvakt 8–16; deltar i vaktordningen i Bergen"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -879,7 +905,8 @@
         "cs": "Pohotovostní služba 8–16.",
         "sv": "Akutjour 8–16",
         "da": "Akutvagt 8–16",
-        "fi": "Päivystys klo 8–16"
+        "fi": "Päivystys klo 8–16",
+        "nb": "Akuttvakt 8–16"
       },
       "url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/kontakt/veterinarvakt-bergen/"
@@ -906,7 +933,8 @@
         "cs": "Pohotovostní služba 8–18.",
         "sv": "Akutjour 8–18",
         "da": "Akutvagt 8–18",
-        "fi": "Päivystys klo 8–18"
+        "fi": "Päivystys klo 8–18",
+        "nb": "Akuttvakt 8–18"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -933,7 +961,8 @@
         "cs": "Pohotovostní služba 8–19.",
         "sv": "Akutjour 8–19",
         "da": "Akutvagt 8–19",
-        "fi": "Päivystys klo 8–19"
+        "fi": "Päivystys klo 8–19",
+        "nb": "Akuttvakt 8–19"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -960,7 +989,8 @@
         "cs": "Pohotovostní služba 8–18.",
         "sv": "Akutjour 8–18",
         "da": "Akutvagt 8–18",
-        "fi": "Päivystys klo 8–18"
+        "fi": "Päivystys klo 8–18",
+        "nb": "Akuttvakt 8–18"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -987,7 +1017,8 @@
         "cs": "Pohotovostní služba 8–19.",
         "sv": "Akutjour 8–19",
         "da": "Akutvagt 8–19",
-        "fi": "Päivystys klo 8–19"
+        "fi": "Päivystys klo 8–19",
+        "nb": "Akuttvakt 8–19"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -1014,7 +1045,8 @@
         "cs": "Pohotovostní služba 8–16.",
         "sv": "Akutjour 8–16",
         "da": "Akutvagt 8–16",
-        "fi": "Päivystys klo 8–16"
+        "fi": "Päivystys klo 8–16",
+        "nb": "Akuttvakt 8–16"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -1041,7 +1073,8 @@
         "cs": "Pohotovostní služba 8–16.",
         "sv": "Akutjour 8–16",
         "da": "Akutvagt 8–16",
-        "fi": "Päivystys klo 8–16"
+        "fi": "Päivystys klo 8–16",
+        "nb": "Akuttvakt 8–16"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
@@ -1068,7 +1101,8 @@
         "cs": "Pohotovostní služba 8–18.",
         "sv": "Akutjour 8–18",
         "da": "Akutvagt 8–18",
-        "fi": "Päivystys klo 8–18"
+        "fi": "Päivystys klo 8–18",
+        "nb": "Akuttvakt 8–18"
       },
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"

@@ -66,7 +66,8 @@
         "cs": "Pracovní doba 10:00–17:00, od neděle do pátku. Před cestou zavolejte; číslo 9801912476 je zároveň linka záchranné služby KAT pro zvířata v nouzi.",
         "sv": "Öppet 10.00–17.00, sön–fre. Ring innan du kommer; 9801912476 är också KAT:s räddningslinje för djur i nöd.",
         "da": "Åbningstid 10.00–17.00, søndag til fredag. Ring på forhånd; 9801912476 er også KATs redningslinje for dyr i nød.",
-        "fi": "Aukioloaika 10–17, su–pe. Soita etukäteen; 9801912476 on myös KAT-pelastuslinja hädässä oleville eläimille."
+        "fi": "Aukioloaika 10–17, su–pe. Soita etukäteen; 9801912476 on myös KAT-pelastuslinja hädässä oleville eläimille.",
+        "nb": "Åpningstid 10.00–17.00, søndag–fredag. Ring på forhånd; 9801912476 er også KAT-redningslinjen for dyr i nød."
       }
     },
     {
@@ -90,7 +91,8 @@
         "cs": "Otevřeno denně 8:30–18:30; pohotovostní služby dostupné nonstop. Před cestou zavolejte.",
         "sv": "Öppet dagligen 8.30–18.30; akutvård dygnet runt. Ring innan du kommer.",
         "da": "Åbent hver dag 8.30–18.30; akut hjælp døgnet rundt. Ring på forhånd.",
-        "fi": "Auki päivittäin 8.30–18.30; päivystys ympäri vuorokauden. Soita etukäteen."
+        "fi": "Auki päivittäin 8.30–18.30; päivystys ympäri vuorokauden. Soita etukäteen.",
+        "nb": "Åpent alle dager kl. 08.30–18.30; akuttjeneste tilgjengelig hele døgnet. Ring på forhånd."
       }
     },
     {
@@ -114,7 +116,8 @@
         "cs": "Otevřeno nonstop, 365 dní v roce, včetně pohotovosti. Pouze psi a kočky.",
         "sv": "Öppet dygnet runt, årets alla dagar, med akutvård. Endast hundar och katter.",
         "da": "Åbent døgnet rundt, 365 dage om året, med akut hjælp. Kun hunde og katte.",
-        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa, myös päivystys. Vain koirat ja kissat."
+        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa, myös päivystys. Vain koirat ja kissat.",
+        "nb": "Åpent hele døgnet, 365 dager i året, med akuttjeneste. Kun hunder og katter."
       }
     },
     {
@@ -138,7 +141,8 @@
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
-        "fi": "Auki 24 tuntia, 7 päivää viikossa."
+        "fi": "Auki 24 tuntia, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, sju dager i uken."
       }
     },
     {
@@ -162,7 +166,8 @@
         "cs": "Pohotovostní i běžné služby. Ordinační dobu zjistěte telefonicky před cestou.",
         "sv": "Akut och icke-akut vård. Ring och fråga om öppettider.",
         "da": "Akut og ikke-akut behandling. Ring på forhånd for åbningstider.",
-        "fi": "Päivystys- ja muut palvelut. Soita ja kysy aukioloajat."
+        "fi": "Päivystys- ja muut palvelut. Soita ja kysy aukioloajat.",
+        "nb": "Tjenester for nødtilfeller og andre tilfeller. Ring på forhånd for åpningstider."
       }
     },
     {
@@ -186,7 +191,8 @@
         "cs": "Otevřeno jen několik hodin denně; před cestou zavolejte.",
         "sv": "Öppet bara några timmar om dagen; ring innan du kommer.",
         "da": "Åbent kun nogle få timer om dagen; ring på forhånd.",
-        "fi": "Auki vain muutaman tunnin päivässä; soita etukäteen."
+        "fi": "Auki vain muutaman tunnin päivässä; soita etukäteen.",
+        "nb": "Åpent bare noen få timer om dagen; ring på forhånd."
       }
     },
     {
@@ -210,7 +216,8 @@
         "cs": "Státní odborná nemocnice; provoz od 10:00. Podle posledních zveřejněných informací bez pohotovostní služby.",
         "sv": "Statligt remissjukhus; öppet från 10.00. Ingen akutjour enligt den senast publicerade informationen.",
         "da": "Offentligt henvisningshospital; åbent fra 10.00. Ingen akuttjeneste ifølge de seneste oplysninger.",
-        "fi": "Valtion lähetesairaala; palvelu alkaa klo 10. Viimeisimmän julkaistun tiedon mukaan päivystystä ei ole."
+        "fi": "Valtion lähetesairaala; palvelu alkaa klo 10. Viimeisimmän julkaistun tiedon mukaan päivystystä ei ole.",
+        "nb": "Offentlig henvisningssykehus; tjeneste fra kl. 10.00. Ingen akuttjeneste ifølge siste publiserte opplysninger."
       }
     }
   ],

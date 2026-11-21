@@ -182,7 +182,8 @@
         "cs": "Nonstop, 7 dní v týdnu, včetně svátků. Pohotovost bez objednání.",
         "sv": "Öppet dygnet runt, alla dagar, även helgdagar. Akutfall behöver ingen bokad tid.",
         "da": "Døgnåben, 7 dage om ugen, også på helligdage. Ingen tidsbestilling nødvendig ved akutte tilfælde.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä. Päivystystapauksiin ei tarvita ajanvarausta."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä. Päivystystapauksiin ei tarvita ajanvarausta.",
+        "nb": "Åpent hele døgnet, alle dager i uken, også helligdager. Ingen timebestilling nødvendig for nødtilfeller."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/tveh",
@@ -211,7 +212,8 @@
         "cs": "Nonstop, 7 dní v týdnu. Specializovaná pracoviště mají o svátcích zavřeno.",
         "sv": "Öppet dygnet runt, alla dagar. Specialistvården har stängt vissa helgdagar.",
         "da": "Døgnåben, 7 dage om ugen. Specialafdelinger har lukket på helligdage.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoispalvelut ovat suljettuina pyhäpäivinä."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoispalvelut ovat suljettuina pyhäpäivinä.",
+        "nb": "Åpent hele døgnet, sju dager i uken. Spesialtjenestene har stengt på helligdager."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/movh/clients",
@@ -240,7 +242,8 @@
         "cs": "Pohotovost nonstop, 7 dní v týdnu, včetně svátků.",
         "sv": "Akutvård dygnet runt, alla dagar, även helgdagar.",
         "da": "Akut hjælp døgnet rundt, 7 dage om ugen, også på helligdage.",
-        "fi": "Päivystys ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä."
+        "fi": "Päivystys ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä.",
+        "nb": "Dyrlegevakt hele døgnet, alle dager, også på helligdager."
       },
       "small_animals": true,
       "url": "https://www.vectoronto.com",
@@ -269,7 +272,8 @@
         "cs": "Pohotovost nonstop, 365 dní v roce.",
         "sv": "Akutvård dygnet runt, årets alla dagar.",
         "da": "Akut hjælp døgnet rundt, 365 dage om året.",
-        "fi": "Päivystys ympäri vuorokauden, 365 päivää vuodessa."
+        "fi": "Päivystys ympäri vuorokauden, 365 päivää vuodessa.",
+        "nb": "Dyrlegevakt hele døgnet, 365 dager i året."
       },
       "small_animals": true,
       "url": "https://ctvrc.ca/",
@@ -298,7 +302,8 @@
         "cs": "Pohotovost mimo ordinační dobu v pracovní dny 19:00–8:00; o víkendech a svátcích nonstop.",
         "sv": "Akutjour utanför öppettider vardagar 19–8; dygnet runt på helger och helgdagar.",
         "da": "Akutvagt uden for åbningstid på hverdage 19.00–8.00; døgnåbent i weekender og på helligdage.",
-        "fi": "Päivystys virka-ajan ulkopuolella arkisin klo 19–8; viikonloppuisin ja pyhäpäivinä ympäri vuorokauden."
+        "fi": "Päivystys virka-ajan ulkopuolella arkisin klo 19–8; viikonloppuisin ja pyhäpäivinä ympäri vuorokauden.",
+        "nb": "Vakttjeneste utenfor ordinær åpningstid på hverdager kl. 19–8; døgnåpen i helger og på helligdager."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/westsideon/our-hospital/in-an-emergency",
@@ -326,7 +331,8 @@
         "cs": "Nonstop veterinární nemocnice s pohotovostí.",
         "sv": "Djursjukhus med akutmottagning dygnet runt.",
         "da": "Døgnåbent akut dyrehospital.",
-        "fi": "Eläinten päivystyssairaala ympäri vuorokauden."
+        "fi": "Eläinten päivystyssairaala ympäri vuorokauden.",
+        "nb": "Dyresykehus med akuttmottak hele døgnet."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/secord/our-hospital/in-an-emergency",
@@ -354,7 +360,8 @@
         "cs": "Pohotovostní a specializovaná nemocnice; otevírací dobu zjistíte telefonicky.",
         "sv": "Akut- och specialistdjursjukhus; ring för öppettider.",
         "da": "Akut- og specialhospital; ring for åbningstider.",
-        "fi": "Päivystys- ja erikoissairaala; kysy aukioloajat soittamalla."
+        "fi": "Päivystys- ja erikoissairaala; kysy aukioloajat soittamalla.",
+        "nb": "Akutt- og spesialistsykehus; ring for åpningstider."
       },
       "small_animals": true,
       "source_url": "https://www.clappisonvet.com/contact-us/emergencies",
@@ -382,7 +389,8 @@
         "cs": "Nonstop, 7 dní v týdnu. Specialisté: objednání Po–Pá telefonicky.",
         "sv": "Öppet dygnet runt, alla dagar. Specialistbesök mån–fre per telefon.",
         "da": "Døgnåben, 7 dage om ugen. Tidsbestilling til specialer mandag til fredag telefonisk.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoisalojen ajanvaraus ma–pe puhelimitse."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoisalojen ajanvaraus ma–pe puhelimitse.",
+        "nb": "Åpent hele døgnet, sju dager i uken. Spesialisttimer mandag til fredag på telefon."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/404emerg",
@@ -411,7 +419,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu; otevírací dobu zjistíte telefonicky.",
         "sv": "Akutklinik utanför ordinarie öppettider; ring för öppettider.",
         "da": "Akutklinik uden for almindelig åbningstid; ring for åbningstider.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella; kysy aukioloajat soittamalla."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella; kysy aukioloajat soittamalla.",
+        "nb": "Dyrlegevakt utenfor ordinær åpningstid; ring for å høre åpningstidene."
       },
       "small_animals": true,
       "source_url": "https://www.collegemanorvet.com/contact-us/emergencies",
@@ -439,7 +448,8 @@
         "cs": "Nonstop, 7 dní v týdnu. Odborná vyšetření na doporučení Po–Pá 7:00–18:00.",
         "sv": "Öppet dygnet runt, alla dagar. Remisstjänster mån–fre 7–18.",
         "da": "Døgnåben, 7 dage om ugen. Henvisningsafdeling mandag til fredag 7.00–18.00.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoispalvelut ma–pe 7–18."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoispalvelut ma–pe 7–18.",
+        "nb": "Åpent hele døgnet, sju dager i uken. Henvisningstjenester mandag til fredag kl. 7–18."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/avse",
@@ -468,7 +478,8 @@
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
-        "fi": "Auki 24 tuntia, 7 päivää viikossa."
+        "fi": "Auki 24 tuntia, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, sju dager i uken."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/ottawa",
@@ -496,7 +507,8 @@
         "cs": "Pohotovostní a specializovaná nemocnice mimo ordinační dobu; otevírací dobu zjistíte telefonicky.",
         "sv": "Akut- och specialistdjursjukhus utanför ordinarie öppettider; ring för öppettider.",
         "da": "Akut- og specialhospital uden for almindelig åbningstid; ring for åbningstider.",
-        "fi": "Päivystys- ja erikoissairaala virka-ajan ulkopuolella; kysy aukioloajat soittamalla."
+        "fi": "Päivystys- ja erikoissairaala virka-ajan ulkopuolella; kysy aukioloajat soittamalla.",
+        "nb": "Akutt- og spesialistsykehus utenom åpningstid; ring for åpningstider."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/carproad/our-hospital/in-an-emergency",
@@ -524,7 +536,8 @@
         "cs": "Nonstop, 7 dní v týdnu. Odborná vyšetření na doporučení: otevírací dobu zjistíte telefonicky.",
         "sv": "Öppet dygnet runt, alla dagar. Remisstjänster: ring för öppettider.",
         "da": "Døgnåben, 7 dage om ugen. Henvisningsafdeling: ring for åbningstider.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoispalvelut: kysy aukioloajat soittamalla."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa. Erikoispalvelut: kysy aukioloajat soittamalla.",
+        "nb": "Åpent hele døgnet, sju dager i uken. Henvisningstjenester: ring for åpningstider."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/londonregional",
@@ -553,7 +566,8 @@
         "cs": "Nonstop, 365 dní v roce, včetně svátků.",
         "sv": "Öppet dygnet runt, årets alla dagar, även helgdagar.",
         "da": "Døgnåben 24/7/365, også på helligdage.",
-        "fi": "Auki 24/7/365, myös pyhäpäivinä."
+        "fi": "Auki 24/7/365, myös pyhäpäivinä.",
+        "nb": "Åpent hele døgnet, 365 dager i året, også helligdager."
       },
       "small_animals": true,
       "url": "https://hamiltonevc.ca/",
@@ -582,7 +596,8 @@
         "cs": "Pohotovostní nemocnice a pracoviště pro odeslané pacienty mimo ordinační dobu; otevírací dobu zjistíte telefonicky.",
         "sv": "Akut- och remissdjursjukhus utanför ordinarie öppettider; ring för öppettider.",
         "da": "Akut- og henvisningshospital uden for almindelig åbningstid; ring for åbningstider.",
-        "fi": "Päivystys- ja erikoissairaala virka-ajan ulkopuolella; kysy aukioloajat soittamalla."
+        "fi": "Päivystys- ja erikoissairaala virka-ajan ulkopuolella; kysy aukioloajat soittamalla.",
+        "nb": "Akutt- og henvisningssykehus utenom åpningstid; ring for åpningstider."
       },
       "small_animals": true,
       "source_url": "https://www.clappisonvet.com/contact-us/emergencies",
@@ -610,7 +625,8 @@
         "cs": "Otevřeno v pracovní dny 18:00–8:00, od pátku 18:00 do pondělí 8:00 a ve státní svátky.",
         "sv": "Öppet vardagskvällar och nätter 18–8, från fredag 18 till måndag 8 samt på helgdagar.",
         "da": "Åbent på hverdage 18.00–8.00, fra fredag 18.00 til mandag 8.00 og på helligdage.",
-        "fi": "Auki arkiöisin klo 18–8, perjantaista klo 18 maanantaihin klo 8 sekä juhlapyhäpäivinä."
+        "fi": "Auki arkiöisin klo 18–8, perjantaista klo 18 maanantaihin klo 8 sekä juhlapyhäpäivinä.",
+        "nb": "Åpent hverdagsnetter kl. 18–8, fra fredag kl. 18 til mandag kl. 8 og på offentlige helligdager."
       },
       "small_animals": true,
       "url": "https://web4.lifelearn.com/emergencyvc",
@@ -639,7 +655,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–16:00, v neděli zavřeno. Není to nonstop provoz.",
         "sv": "Mån–fre 8–18, lör 8–16, stängt söndag. Inte en klinik med öppet dygnet runt.",
         "da": "Mandag til fredag 8.00–18.00, lørdag 8.00–16.00, søndag lukket. Ikke en døgnåben klinik.",
-        "fi": "ma–pe 8–18, la 8–16, su suljettu. Ei ympärivuorokautinen klinikka."
+        "fi": "ma–pe 8–18, la 8–16, su suljettu. Ei ympärivuorokautinen klinikka.",
+        "nb": "mandag–fredag 8–18, lørdag 8–16, stengt søndag. Ikke en døgnåpen klinikk."
       },
       "small_animals": true,
       "url": "https://www.kingsdale.com/petcare/vet-emergency",
@@ -667,7 +684,8 @@
         "cs": "Otevřeno večer, o víkendech a svátcích.",
         "sv": "Öppet kvällar, helger och helgdagar.",
         "da": "Åbent om aftenen, i weekender og på helligdage.",
-        "fi": "Auki iltaisin, viikonloppuisin ja pyhäpäivinä."
+        "fi": "Auki iltaisin, viikonloppuisin ja pyhäpäivinä.",
+        "nb": "Åpent kvelder, helger og helligdager."
       },
       "small_animals": true,
       "source_url": "https://web4.lifelearn.com/huntsvilleah/?p=26",
@@ -694,7 +712,8 @@
         "cs": "Pohotovostní klinika mimo ordinační dobu pro oblast Niagara; otevírací dobu zjistíte telefonicky.",
         "sv": "Akutklinik utanför ordinarie öppettider för Niagara-regionen; ring för öppettider.",
         "da": "Akutklinik uden for almindelig åbningstid for Niagara-regionen; ring for åbningstider.",
-        "fi": "Päivystysklinikka virka-ajan ulkopuolella Niagaran alueella; kysy aukioloajat soittamalla."
+        "fi": "Päivystysklinikka virka-ajan ulkopuolella Niagaran alueella; kysy aukioloajat soittamalla.",
+        "nb": "Akuttklinikk utenom åpningstid for Niagara-regionen; ring for åpningstider."
       },
       "small_animals": true,
       "source_url": "https://drtolesvet.com/locations/main-office/",
@@ -722,7 +741,8 @@
         "cs": "Po 8:00–19:00, Út 8:00–18:00, St 8:00–19:00, Čt 8:00–18:00, Pá 8:00–17:00, so 8:00–13:00, v neděli zavřeno. Vyšetření lékařem na objednání; pohotovost mimo ordinační dobu: Niagara Veterinary Emergency Clinic.",
         "sv": "Mån 8–19, tis 8–18, ons 8–19, tors 8–18, fre 8–17, lör 8–13, stängt sön. Veterinärtider efter tidsbokning; akutfall utanför öppettider hänvisas till Niagara Veterinary Emergency Clinic.",
         "da": "Mandag 8–19, tirsdag 8–18, onsdag 8–19, torsdag 8–18, fredag 8–17, lørdag 8–13, søndag lukket. Dyrlægetider efter aftale; akutte tilfælde uden for åbningstid henvises til Niagara Veterinary Emergency Clinic.",
-        "fi": "ma 8–19, ti 8–18, ke 8–19, to 8–18, pe 8–17, la 8–13, su suljettu. Lääkärin vastaanotto ajanvarauksella; virka-ajan ulkopuoliset päivystystapaukset Niagara Veterinary Emergency Clinic -klinikalle."
+        "fi": "ma 8–19, ti 8–18, ke 8–19, to 8–18, pe 8–17, la 8–13, su suljettu. Lääkärin vastaanotto ajanvarauksella; virka-ajan ulkopuoliset päivystystapaukset Niagara Veterinary Emergency Clinic -klinikalle.",
+        "nb": "mandag 8–19, tirsdag 8–18, onsdag 8–19, torsdag 8–18, fredag 8–17, lørdag 8–13, stengt søndag. Dyrlegetimer etter avtale; nødtilfeller utenom åpningstiden henvises til Niagara Veterinary Emergency Clinic."
       },
       "small_animals": true,
       "url": "https://drtolesvet.com/locations/main-office/",
@@ -750,7 +770,8 @@
         "cs": "Po a St 8:00–20:00, Út, Čt a Pá 8:00–17:00, o víkendech zavřeno. Pohotovost mimo ordinační dobu: Huronia Veterinary Emergency Clinic, Barrie.",
         "sv": "Mån och ons 8–20, tis, tors och fre 8–17, stängt helger. Akutfall utanför öppettider: Huronia Veterinary Emergency Clinic, Barrie.",
         "da": "Mandag og onsdag 8.00–20.00, tirsdag, torsdag og fredag 8.00–17.00, lukket i weekender. Akutte tilfælde uden for åbningstid: Huronia Veterinary Emergency Clinic, Barrie.",
-        "fi": "ma ja ke 8–20, ti, to ja pe 8–17, viikonloppuisin suljettu. Virka-ajan ulkopuoliset päivystystapaukset: Huronia Veterinary Emergency Clinic, Barrie."
+        "fi": "ma ja ke 8–20, ti, to ja pe 8–17, viikonloppuisin suljettu. Virka-ajan ulkopuoliset päivystystapaukset: Huronia Veterinary Emergency Clinic, Barrie.",
+        "nb": "mandag og onsdag 8–20, tirsdag, torsdag og fredag 8–17, stengt i helgene. Nødtilfeller utenom åpningstiden: Huronia Veterinary Emergency Clinic, Barrie."
       },
       "small_animals": true,
       "url": "https://www.centennialah.ca/contact-us",
@@ -778,7 +799,8 @@
         "cs": "Po–St a Pá 8:00–17:00, Čt 8:00–19:00, so 8:30–13:00, v neděli zavřeno. Bez pohotovosti mimo ordinační dobu; pohotovostní případy řeší Huronia Veterinary Emergency Clinic, Barrie.",
         "sv": "Mån–ons och fre 8–17, tors 8–19, lör 8.30–13, stängt sön. Ingen jour utanför öppettider; akutfall hänvisas till Huronia Veterinary Emergency Clinic, Barrie.",
         "da": "Mandag til onsdag og fredag 8.00–17.00, torsdag 8.00–19.00, lørdag 8.30–13.00, søndag lukket. Ingen vagt uden for åbningstid; akutte tilfælde henvises til Huronia Veterinary Emergency Clinic, Barrie.",
-        "fi": "ma–ke ja pe 8–17, to 8–19, la 8.30–13, su suljettu. Päivystystä ei ole virka-ajan ulkopuolella; päivystystapaukset Huronia Veterinary Emergency Clinic -klinikalle (Barrie)."
+        "fi": "ma–ke ja pe 8–17, to 8–19, la 8.30–13, su suljettu. Päivystystä ei ole virka-ajan ulkopuolella; päivystystapaukset Huronia Veterinary Emergency Clinic -klinikalle (Barrie).",
+        "nb": "mandag–onsdag og fredag 8–17, torsdag 8–19, lørdag 8.30–13.00, stengt søndag. Ingen vakttjeneste utenom åpningstiden; nødtilfeller henvises til Huronia Veterinary Emergency Clinic, Barrie."
       },
       "small_animals": true,
       "url": "https://web4.lifelearn.com/huntsvilleah/?p=26",
@@ -806,7 +828,8 @@
         "cs": "Po–Pá 9:00–18:00, o víkendech zavřeno. Mimo ordinační dobu: Huronia Veterinary Emergency Clinic, Barrie.",
         "sv": "Mån–fre 9–18, stängt helger. Utanför öppettider: Huronia Veterinary Emergency Clinic, Barrie.",
         "da": "Mandag til fredag 9.00–18.00, lukket i weekender. Uden for åbningstid: Huronia Veterinary Emergency Clinic, Barrie.",
-        "fi": "ma–pe 9–18, viikonloppuisin suljettu. Virka-ajan ulkopuolella: Huronia Veterinary Emergency Clinic, Barrie."
+        "fi": "ma–pe 9–18, viikonloppuisin suljettu. Virka-ajan ulkopuolella: Huronia Veterinary Emergency Clinic, Barrie.",
+        "nb": "mandag–fredag 9–18, stengt i helgene. Utenom åpningstiden: Huronia Veterinary Emergency Clinic, Barrie."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/heritageon/our-hospital/in-an-emergency",
@@ -834,7 +857,8 @@
         "cs": "Po–Pá 8:00–19:00, o víkendech zavřeno. Mimo ordinační dobu: VEC South nebo Willowdale Animal Hospital.",
         "sv": "Mån–fre 8–19, stängt helger. Utanför öppettider: VEC South eller Willowdale Animal Hospital.",
         "da": "Mandag til fredag 8.00–19.00, lukket i weekender. Uden for åbningstid: VEC South eller Willowdale Animal Hospital.",
-        "fi": "ma–pe 8–19, viikonloppuisin suljettu. Virka-ajan ulkopuolella: VEC South tai Willowdale Animal Hospital."
+        "fi": "ma–pe 8–19, viikonloppuisin suljettu. Virka-ajan ulkopuolella: VEC South tai Willowdale Animal Hospital.",
+        "nb": "mandag–fredag 8–19, stengt i helgene. Utenom åpningstiden: VEC South eller Willowdale Animal Hospital."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/secord/our-hospital/in-an-emergency",
@@ -862,7 +886,8 @@
         "cs": "Po–Pá 9:00–19:00, so 9:00–14:00, v neděli zavřeno. Mimo ordinační dobu obraťte se na nonstop pohotovostní nemocnici.",
         "sv": "Mån–fre 9–19, lör 9–14, stängt sön. Utanför öppettider vänd dig till ett djursjukhus med akutmottagning dygnet runt.",
         "da": "Mandag til fredag 9.00–19.00, lørdag 9.00–14.00, søndag lukket. Uden for åbningstid: brug et døgnåbent akut dyrehospital.",
-        "fi": "ma–pe 9–19, la 9–14, su suljettu. Virka-ajan ulkopuolella käytä päivystyssairaalaa, joka on auki ympäri vuorokauden."
+        "fi": "ma–pe 9–19, la 9–14, su suljettu. Virka-ajan ulkopuolella käytä päivystyssairaalaa, joka on auki ympäri vuorokauden.",
+        "nb": "mandag–fredag 9–19, lørdag 9–14, stengt søndag. Utenom åpningstiden kan du bruke et døgnåpent akuttsykehus."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/applecreek/our-hospital/in-an-emergency",
@@ -890,7 +915,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–15:00, v neděli zavřeno.",
         "sv": "Mån–fre 8–18, lör 8–15, stängt sön.",
         "da": "Mandag til fredag 8.00–18.00, lørdag 8.00–15.00, søndag lukket.",
-        "fi": "ma–pe 8–18, la 8–15, su suljettu."
+        "fi": "ma–pe 8–18, la 8–15, su suljettu.",
+        "nb": "mandag–fredag 8–18, lørdag 8–15, stengt søndag."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/burlington/hospital/in-an-emergency",
@@ -918,7 +944,8 @@
         "cs": "Po–Pá 8:00–18:00, so 8:00–15:00, v neděli zavřeno. Akutní případy v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 8–18, lör 8–15, stängt sön. Brådskande fall tas emot under öppettiderna; ring först.",
         "da": "Mandag til fredag 8.00–18.00, lørdag 8.00–15.00, søndag lukket. Akutte tilfælde tages kun imod i åbningstiden; ring først.",
-        "fi": "ma–pe 8–18, la 8–15, su suljettu. Kiireelliset tapaukset otetaan vastaan virka-aikoina; soita ensin."
+        "fi": "ma–pe 8–18, la 8–15, su suljettu. Kiireelliset tapaukset otetaan vastaan virka-aikoina; soita ensin.",
+        "nb": "mandag–fredag 8–18, lørdag 8–15, stengt søndag. Hastetilfeller tas imot i åpningstiden; ring først."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/kingsway/hospital/in-an-emergency",
@@ -945,7 +972,8 @@
         "cs": "Linka pro otravy zvířat, nonstop, 365 dní v roce. Konzultace může být zpoplatněna.",
         "sv": "Giftinformation för djur, nås dygnet runt, årets alla dagar. En konsultationsavgift kan tillkomma.",
         "da": "Giftrådgivning for dyr, åben 24/7, 365 dage om året. Der kan opkræves et konsultationsgebyr.",
-        "fi": "Eläinten myrkytyspäivystys, tavoitettavissa 24/7, 365 päivää vuodessa. Konsultaatiosta voi periä maksun."
+        "fi": "Eläinten myrkytyspäivystys, tavoitettavissa 24/7, 365 päivää vuodessa. Konsultaatiosta voi periä maksun.",
+        "nb": "Giftinformasjon for dyr, tilgjengelig hele døgnet, alle dager i året. Det kan påløpe et konsultasjonsgebyr."
       },
       "small_animals": true,
       "url": "https://www.aspca.org/pet-care/aspca-poison-control",
@@ -973,7 +1001,8 @@
         "cs": "Toxikologické centrum pro zvířata, nonstop. Poplatek za jeden případ: USD 99.",
         "sv": "Giftinformationscentral för djur, nås dygnet runt. En avgift per ärende (USD 99) tillkommer.",
         "da": "Giftrådgivning for dyr, åben 24/7. Der opkræves et gebyr pr. henvendelse (USD 99).",
-        "fi": "Eläinten myrkytystietopalvelu, tavoitettavissa 24/7. Maksu tapausta kohden: 99 USD."
+        "fi": "Eläinten myrkytystietopalvelu, tavoitettavissa 24/7. Maksu tapausta kohden: 99 USD.",
+        "nb": "Giftinformasjon for dyr, tilgjengelig hele døgnet. Det er et gebyr på 99 USD per henvendelse."
       },
       "small_animals": true,
       "url": "https://www.petpoisonhelpline.com/",
@@ -1002,7 +1031,8 @@
         "cs": "Pohotovostní a referenční centrum, nonstop. V naléhavých případech nejdřív zavolejte; online formulář není určen pro pohotovost.",
         "sv": "Akut- och remisscentrum öppet dygnet runt. Vid akutfall, ring först; onlineformuläret är inte till för akutfall.",
         "da": "Døgnåbent akut- og henvisningscenter 24/7. Ring først ved akutte tilfælde; onlineformularen er ikke til akutte tilfælde.",
-        "fi": "Päivystys- ja lähetekeskus auki 24/7. Päivystystapauksessa soita ensin; verkkolomake ei ole tarkoitettu päivystystapauksiin."
+        "fi": "Päivystys- ja lähetekeskus auki 24/7. Päivystystapauksessa soita ensin; verkkolomake ei ole tarkoitettu päivystystapauksiin.",
+        "nb": "Åpent hele døgnet, akutt- og henvisningssenter. Ved nødtilfeller, ring først; nettskjemaet er ikke for nødtilfeller."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/centres/centre-veterinaire-montreal/",
@@ -1031,7 +1061,8 @@
         "cs": "Pohotovostní a referenční centrum, nonstop. V naléhavých případech nejdřív zavolejte; online formulář není určen pro pohotovost.",
         "sv": "Akut- och remisscentrum öppet dygnet runt. Vid akutfall, ring först; onlineformuläret är inte till för akutfall.",
         "da": "Døgnåbent akut- og henvisningscenter 24/7. Ring først ved akutte tilfælde; onlineformularen er ikke til akutte tilfælde.",
-        "fi": "Päivystys- ja lähetekeskus auki 24/7. Päivystystapauksessa soita ensin; verkkolomake ei ole tarkoitettu päivystystapauksiin."
+        "fi": "Päivystys- ja lähetekeskus auki 24/7. Päivystystapauksessa soita ensin; verkkolomake ei ole tarkoitettu päivystystapauksiin.",
+        "nb": "Åpent hele døgnet, akutt- og henvisningssenter. Ved nødtilfeller, ring først; nettskjemaet er ikke for nødtilfeller."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/centres/centre-veterinaire-laval/",
@@ -1060,7 +1091,8 @@
         "cs": "Nonstop. V naléhavých případech volejte centrum.",
         "sv": "Öppet dygnet runt. Vid akutfall, ring centret.",
         "da": "Døgnåben 24/7. Ved akutte tilfælde: ring til centret.",
-        "fi": "Auki 24/7. Hätätapauksissa soita keskukseen."
+        "fi": "Auki 24/7. Hätätapauksissa soita keskukseen.",
+        "nb": "Åpent hele døgnet. Ved nødtilfeller, ring senteret."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/centres/centre-veterinaire-rive-sud/",
@@ -1089,7 +1121,8 @@
         "cs": "Pohotovost nonstop, 365 dní v roce, bez objednání.",
         "sv": "Akutvård dygnet runt, årets alla dagar, ingen tidsbokning behövs.",
         "da": "Akut hjælp 24/7, 365 dage om året, uden tidsbestilling.",
-        "fi": "Päivystys 24/7, 365 päivää vuodessa, ajanvarausta ei tarvita."
+        "fi": "Päivystys 24/7, 365 päivää vuodessa, ajanvarausta ei tarvita.",
+        "nb": "Akuttbehandling hele døgnet, 365 dager i året, ingen timebestilling nødvendig."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/centre/centredmvet-montreal/",
@@ -1118,7 +1151,8 @@
         "cs": "Pohotovost nonstop, 365 dní v roce, bez objednání.",
         "sv": "Akutvård dygnet runt, årets alla dagar, ingen tidsbokning behövs.",
         "da": "Akut hjælp 24/7, 365 dage om året, uden tidsbestilling.",
-        "fi": "Päivystys 24/7, 365 päivää vuodessa, ajanvarausta ei tarvita."
+        "fi": "Päivystys 24/7, 365 päivää vuodessa, ajanvarausta ei tarvita.",
+        "nb": "Akuttbehandling hele døgnet, 365 dager i året, ingen timebestilling nødvendig."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/",
@@ -1147,7 +1181,8 @@
         "cs": "Pohotovost nonstop, 365 dní v roce, bez objednání.",
         "sv": "Akutvård dygnet runt, årets alla dagar, ingen tidsbokning behövs.",
         "da": "Akut hjælp 24/7, 365 dage om året, uden tidsbestilling.",
-        "fi": "Päivystys 24/7, 365 päivää vuodessa, ajanvarausta ei tarvita."
+        "fi": "Päivystys 24/7, 365 päivää vuodessa, ajanvarausta ei tarvita.",
+        "nb": "Akuttbehandling hele døgnet, 365 dager i året, ingen timebestilling nødvendig."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/",
@@ -1176,7 +1211,8 @@
         "cs": "Otevřeno 8:00–24:00. Není to nonstop provoz; akutní péči mimo tuto dobu vyhledejte v jiném nonstop centru (například Centre vétérinaire Daubigny, Québec).",
         "sv": "Öppet 8.00–24.00. Inte öppet dygnet runt; för brådskande vård utanför dessa tider vänd dig till ett annat centrum med öppet dygnet runt (till exempel Centre vétérinaire Daubigny, Québec).",
         "da": "Åbent 8.00 til midnat. Ikke døgnåbent; ved behov for akut hjælp uden for disse tider: kontakt et andet døgnåbent center (f.eks. Centre vétérinaire Daubigny, Québec).",
-        "fi": "Auki klo 8.00–24.00. Ei ole auki ympäri vuorokauden; kiireellisessä tapauksessa näiden aikojen ulkopuolella mene toiseen 24/7-keskukseen (esimerkiksi Centre vétérinaire Daubigny, Québec)."
+        "fi": "Auki klo 8.00–24.00. Ei ole auki ympäri vuorokauden; kiireellisessä tapauksessa näiden aikojen ulkopuolella mene toiseen 24/7-keskukseen (esimerkiksi Centre vétérinaire Daubigny, Québec).",
+        "nb": "Åpent kl. 8.00 til midnatt. Ikke døgnåpent; for akuttbehandling utenom disse tidene, gå til et annet døgnåpent senter (for eksempel Centre vétérinaire Daubigny, Québec)."
       },
       "small_animals": true,
       "url": "https://centredmvet.com/en/",
@@ -1205,7 +1241,8 @@
         "cs": "Pohotovost nonstop, 7 dní v týdnu, bez objednání. Intenzivní péče nonstop. Před léčbou je nutná záloha.",
         "sv": "Akutmottagning öppen dygnet runt, alla dagar, ingen tidsbokning behövs. Intensivvård dygnet runt. Handpenning krävs före behandling.",
         "da": "Akutvagt døgnet rundt, 7 dage om ugen, uden tidsbestilling. Intensivafdeling 24/7. Der kræves et depositum før behandling.",
-        "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa, ajanvarausta ei tarvita. Tehohoito 24/7. Ennakkomaksu vaaditaan ennen hoitoa."
+        "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa, ajanvarausta ei tarvita. Tehohoito 24/7. Ennakkomaksu vaaditaan ennen hoitoa.",
+        "nb": "Akuttjeneste åpen hele døgnet, sju dager i uken, ingen timebestilling nødvendig. Intensivavdeling hele døgnet. Depositum kreves før behandling."
       },
       "small_animals": true,
       "url": "https://www.daubigny.ca/",
@@ -1234,7 +1271,8 @@
         "cs": "Pohotovost a intenzivní péče po celý rok, příjem pohotovostních případů nonstop, 7 dní v týdnu, bez doporučení. Před příjezdem zavolejte.",
         "sv": "Akut- och intensivvård öppen året runt, tar emot akutfall dygnet runt, alla dagar, utan remiss. Ring innan du kommer.",
         "da": "Akut- og intensivafdeling åben hele året, tager imod akutte tilfælde døgnet rundt, 7 dage om ugen, uden henvisning. Ring, inden du kommer.",
-        "fi": "Päivystys ja tehohoito auki ympäri vuoden, päivystystapaukset otetaan vastaan ympäri vuorokauden, 7 päivää viikossa, ilman lähetettä. Soita ennen tuloa."
+        "fi": "Päivystys ja tehohoito auki ympäri vuoden, päivystystapaukset otetaan vastaan ympäri vuorokauden, 7 päivää viikossa, ilman lähetettä. Soita ennen tuloa.",
+        "nb": "Akutt- og intensivtjeneste åpen hele året, tar imot nødtilfeller hele døgnet, sju dager i uken, uten henvisning. Ring før du kommer."
       },
       "small_animals": true,
       "url": "https://chuv.umontreal.ca/le-chuv/hopital-des-animaux-de-compagnie/",
@@ -1263,7 +1301,8 @@
         "cs": "Po–Pá 8:00–21:00, so–ne 9:00–17:00. Mimo otevírací dobu se obraťte na Centre Vétérinaire Rive-Sud.",
         "sv": "Mån–fre 8.00–21.00, lör–sön 9.00–17.00. Utanför öppettiderna kontakta Centre Vétérinaire Rive-Sud.",
         "da": "Man–fre 8.00–21.00, lør–søn 9.00–17.00. Uden for åbningstid: kontakt Centre Vétérinaire Rive-Sud.",
-        "fi": "ma–pe 8–21, la–su 9–17. Aukioloaikojen ulkopuolella ota yhteys Centre Vétérinaire Rive-Sud -klinikkaan."
+        "fi": "ma–pe 8–21, la–su 9–17. Aukioloaikojen ulkopuolella ota yhteys Centre Vétérinaire Rive-Sud -klinikkaan.",
+        "nb": "man–fre 8.00–21.00, lør–søn 9.00–17.00. Utenom åpningstid, kontakt Centre Vétérinaire Rive-Sud."
       },
       "small_animals": true,
       "url": "https://vetetnous.com/en/?p=928",
@@ -1291,7 +1330,8 @@
         "cs": "Po–Pá 9:00–19:00, so 9:00–13:00, v neděli zavřeno. Mimo otevírací dobu se obraťte na Centre Vétérinaire Montréal.",
         "sv": "Mån–fre 9.00–19.00, lör 9.00–13.00, sön stängt. Utanför öppettiderna kontakta Centre Vétérinaire Montréal.",
         "da": "Man–fre 9.00–19.00, lør 9.00–13.00, søn lukket. Uden for åbningstid: kontakt Centre Vétérinaire Montréal.",
-        "fi": "ma–pe 9–19, la 9–13, su suljettu. Aukioloaikojen ulkopuolella ota yhteys Centre Vétérinaire Montréal -klinikkaan."
+        "fi": "ma–pe 9–19, la 9–13, su suljettu. Aukioloaikojen ulkopuolella ota yhteys Centre Vétérinaire Montréal -klinikkaan.",
+        "nb": "man–fre 9.00–19.00, lør 9.00–13.00, søn stengt. Utenom åpningstid, kontakt Centre Vétérinaire Montréal."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/our-veterinarians/clinique-veterinaire-hochelaga/",
@@ -1319,7 +1359,8 @@
         "cs": "Po–Pá 8:00–20:00, so 8:00–15:00, v neděli zavřeno. Mimo otevírací dobu se obraťte na Centre Vétérinaire Rive-Sud.",
         "sv": "Mån–fre 08.00–20.00, lör 08.00–15.00, sön stängt. Utanför öppettiderna kontaktar du Centre Vétérinaire Rive-Sud.",
         "da": "Man–fre 8.00–20.00, lør 8.00–15.00, søn lukket. Uden for åbningstid: kontakt Centre Vétérinaire Rive-Sud.",
-        "fi": "ma–pe 8–20, la 8–15, su suljettu. Aukioloaikojen ulkopuolella ota yhteys Centre Vétérinaire Rive-Sud -klinikkaan."
+        "fi": "ma–pe 8–20, la 8–15, su suljettu. Aukioloaikojen ulkopuolella ota yhteys Centre Vétérinaire Rive-Sud -klinikkaan.",
+        "nb": "man–fre 8.00–20.00, lør 8.00–15.00, søn stengt. Utenom åpningstid, kontakt Centre Vétérinaire Rive-Sud."
       },
       "small_animals": true,
       "url": "https://vetetnous.com/en/?p=3372",
@@ -1349,7 +1390,8 @@
         "cs": "Po–Pá 8:00–21:00, so–ne 9:00–16:00. V naléhavých případech zavolejte na kliniku.",
         "sv": "Mån–fre 08.00–21.00, lör–sön 09.00–16.00. Vid akutfall ringer du kliniken.",
         "da": "Man–fre 8.00–21.00, lør–søn 9.00–16.00. Ved akutte tilfælde ring til klinikken.",
-        "fi": "ma–pe 8–21, la–su 9–16. Päivystystapauksessa soita klinikalle."
+        "fi": "ma–pe 8–21, la–su 9–16. Päivystystapauksessa soita klinikalle.",
+        "nb": "man–fre 8.00–21.00, lør–søn 9.00–16.00. Ved nødtilfeller, ring klinikken."
       }
     },
     {
@@ -1373,7 +1415,8 @@
         "cs": "Po–Pá 8:00–19:30, so 11:00–17:00, v neděli zavřeno (bez veterináře na místě). V naléhavých případech před cestou zavolejte.",
         "sv": "Mån–fre 08.00–19.30, lör 11.00–17.00, sön stängt (ingen veterinär på plats). Ring innan du kommer vid akutfall.",
         "da": "Man–fre 8.00–19.30, lør 11.00–17.00, søn lukket (ingen dyrlæge til stede). Ved akutte tilfælde: ring, inden du kommer.",
-        "fi": "ma–pe 8–19.30, la 11–17, su suljettu (eläinlääkäri ei ole paikalla). Soita ennen tuloa päivystystapauksessa."
+        "fi": "ma–pe 8–19.30, la 11–17, su suljettu (eläinlääkäri ei ole paikalla). Soita ennen tuloa päivystystapauksessa.",
+        "nb": "man–fre 8.00–19.30, lør 11.00–17.00, søn stengt (ingen dyrlege til stede). Ring før du kommer ved nødtilfeller."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/our-veterinarians/hopital-veterinaire-du-boise/",
@@ -1402,7 +1445,8 @@
         "cs": "Nemocnice pouze pro kočky. Otevírací dobu zjistíte telefonicky.",
         "sv": "Djursjukhus enbart för katter. Ring för att få veta öppettiderna.",
         "da": "Kattehospital. Ring for åbningstider.",
-        "fi": "Vain kissoille tarkoitettu sairaala. Kysy aukioloajat soittamalla."
+        "fi": "Vain kissoille tarkoitettu sairaala. Kysy aukioloajat soittamalla.",
+        "nb": "Sykehus kun for katter. Ring for å høre åpningstidene."
       },
       "small_animals": true,
       "url": "https://www.vetetnous.com/en/our-veterinarians/clinique-veterinaire-feline-de-ste-foy/",
@@ -1431,7 +1475,8 @@
         "cs": "Pohotovost nonstop, 7 dní v týdnu. V naléhavých případech volejte přímo nemocnici.",
         "sv": "Akutvård öppen dygnet runt, alla dagar i veckan. Ring djursjukhuset direkt vid akutfall.",
         "da": "Akut hjælp døgnet rundt, 7 dage om ugen. Ring direkte til hospitalet ved akutte tilfælde.",
-        "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa. Soita päivystystapauksissa suoraan sairaalaan."
+        "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa. Soita päivystystapauksissa suoraan sairaalaan.",
+        "nb": "Akuttbehandling åpen hele døgnet, sju dager i uken. Ring sykehuset direkte ved nødtilfeller."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/vancouveremergency",
@@ -1460,7 +1505,8 @@
         "cs": "Nonstop, každý den v roce, s veterinářem a pohotovostním týmem na místě. Specializovaná péče na objednání Po–Pá.",
         "sv": "Öppet dygnet runt, årets alla dagar, med veterinär på plats och akutteam. Specialistvård efter bokad tid mån–fre.",
         "da": "Døgnåben, alle årets dage, med dyrlæge og akutteam på stedet. Specialtilbud efter aftale man–fre.",
-        "fi": "Auki ympäri vuorokauden vuoden jokaisena päivänä, eläinlääkäri ja päivystystiimi paikalla. Erikoispalvelut ajanvarauksella ma–pe."
+        "fi": "Auki ympäri vuorokauden vuoden jokaisena päivänä, eläinlääkäri ja päivystystiimi paikalla. Erikoispalvelut ajanvarauksella ma–pe.",
+        "nb": "Åpent hele døgnet, alle dager i året, med dyrlege og akuttteam på stedet. Spesialtjenester etter timebestilling man–fre."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/centralvictoria",
@@ -1489,7 +1535,8 @@
         "cs": "Pohotovost a akutní péče nonstop, 365 dní v roce: volejte 250-766-3236 a stiskněte 1 pro veterinární tým. Běžná ordinační doba Po–Pá 8:00–19:00, so–ne 9:00–17:00. Ptáci a exotická zvířata: před cestou zavolejte, mohou být odkázáni jinam.",
         "sv": "Akut- och brådskande vård dygnet runt, årets alla dagar: ring 250-766-3236 och tryck 1 för veterinärteamet. Ordinarie öppettider mån–fre 08.00–19.00, lör–sön 09.00–17.00. Fåglar och exotiska djur: ring innan du kommer, de kan hänvisas vidare.",
         "da": "Akut hjælp 24/7/365: ring til 250-766-3236 og tryk 1 for dyrlægeholdet. Almindelig åbningstid man–fre 8.00–19.00, lør–søn 9.00–17.00. Fugle og eksotiske kæledyr: ring på forhånd, de kan blive henvist videre.",
-        "fi": "Päivystys ja kiireellinen hoito 24/7/365: soita 250-766-3236 ja paina 1 yhteyden saamiseksi eläinlääkäritiimiin. Aukioloajat ma–pe 8–19, la–su 9–17. Lintu- ja eksoottisten lemmikkien kohdalla soita etukäteen; ne voidaan ohjata muualle."
+        "fi": "Päivystys ja kiireellinen hoito 24/7/365: soita 250-766-3236 ja paina 1 yhteyden saamiseksi eläinlääkäritiimiin. Aukioloajat ma–pe 8–19, la–su 9–17. Lintu- ja eksoottisten lemmikkien kohdalla soita etukäteen; ne voidaan ohjata muualle.",
+        "nb": "Akutt- og hastebehandling hele døgnet, hele året: ring 250-766-3236 og trykk 1 for dyrlegeteamet. Ordinær åpningstid man–fre 8.00–19.00, lør–søn 9.00–17.00. Fugler og eksotiske kjæledyr: ring på forhånd, de kan bli henvist videre."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/trilake/primary",
@@ -1517,7 +1564,8 @@
         "cs": "Nonstop, 365 dní v roce, pro akutní péči. Bez objednání, po telefonátu nebo na doporučení ošetřujícího veterináře.",
         "sv": "Öppet dygnet runt, årets alla dagar, för brådskande vård. Drop-in, telefon eller remiss från ordinarie veterinär.",
         "da": "Åbent døgnet rundt, 365 dage om året, til akutte tilfælde. Uden tidsbestilling, telefonisk eller efter henvisning fra egen dyrlæge.",
-        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa, kiireelliseen hoitoon. Ilman ajanvarausta, puhelimitse tai oman eläinlääkärin lähetteellä."
+        "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa, kiireelliseen hoitoon. Ilman ajanvarausta, puhelimitse tai oman eläinlääkärin lähetteellä.",
+        "nb": "Åpent hele døgnet, 365 dager i året, for øyeblikkelig hjelp. Uanmeldt oppmøte, telefon eller henvisning fra fastdyrlege."
       },
       "small_animals": true,
       "url": "https://phasesvetemerg.com/",
@@ -1546,7 +1594,8 @@
         "cs": "Není otevřeno 7 dní v týdnu; otevírací dobu si před cestou ověřte telefonicky.",
         "sv": "Har inte öppet alla dagar i veckan; ring och kontrollera öppettiderna innan du kommer.",
         "da": "Ikke åbent alle ugens dage; ring på forhånd for at få bekræftet åbningstider.",
-        "fi": "Ei ole auki joka päivä; tarkista aukioloajat soittamalla etukäteen."
+        "fi": "Ei ole auki joka päivä; tarkista aukioloajat soittamalla etukäteen.",
+        "nb": "Ikke åpent sju dager i uken; ring på forhånd for å sjekke åpningstider."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/shamrock/our-hospital/in-an-emergency",
@@ -1575,7 +1624,8 @@
         "cs": "Po–Pá 8:00–17:30, o státních svátcích zavřeno. Nezisková nemocnice s kompletní péčí, otevřená veřejnosti. BC SPCA Animal Helpline 1-855-622-7722.",
         "sv": "Mån–fre 08.00–17.30, stängt på helgdagar. Ideellt djursjukhus med fullständig service, öppet för allmänheten. BC SPCA Animal Helpline 1-855-622-7722.",
         "da": "Man–fre 8.00–17.30, lukket på helligdage. Almennyttigt dyrehospital med alle ydelser, åbent for alle. BC SPCA Animal Helpline 1-855-622-7722.",
-        "fi": "ma–pe 8–17.30, suljettu lakisääteisinä pyhäpäivinä. Voittoa tavoittelematon, kaikkia palveluja tarjoava sairaala, joka on avoin yleisölle. BC SPCA Animal Helpline 1-855-622-7722."
+        "fi": "ma–pe 8–17.30, suljettu lakisääteisinä pyhäpäivinä. Voittoa tavoittelematon, kaikkia palveluja tarjoava sairaala, joka on avoin yleisölle. BC SPCA Animal Helpline 1-855-622-7722.",
+        "nb": "man–fre 8.00–17.30, stengt på offentlige helligdager. Ideell dyreklinikk med fullt tjenestetilbud, åpen for publikum. BC SPCA Animal Helpline 1-855-622-7722."
       },
       "small_animals": true,
       "url": "https://spca.bc.ca/locations/bcspca-hospital/",
@@ -1604,7 +1654,8 @@
         "cs": "Nemocnice pouze pro kočky. Po–Pá 8:00–18:00, so 8:00–16:00, v neděli zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Djursjukhus enbart för katter. Mån–fre 08.00–18.00, lör 08.00–16.00, sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Kattehospital. Man–fre 8.00–18.00, lør 8.00–16.00, søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "Vain kissoille tarkoitettu sairaala. ma–pe 8–18, la 8–16, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "Vain kissoille tarkoitettu sairaala. ma–pe 8–18, la 8–16, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "Sykehus kun for katter. Man–fre kl. 8.00–18.00, lør kl. 8.00–16.00, søn stengt. Hastebehandling gis kun i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/catsonly",
@@ -1633,7 +1684,8 @@
         "cs": "Po–Pá 8:00–18:00, so 9:00–17:00, v neděli zavřeno; denně zavřeno 13:00–14:00. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 08.00–18.00, lör 09.00–17.00, sön stängt; stängt 13.00–14.00 varje dag. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 8.00–18.00, lør 9.00–17.00, søn lukket; lukket hver dag 13.00–14.00. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 8–18, la 9–17, su suljettu; päivittäin suljettu 13–14. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 8–18, la 9–17, su suljettu; päivittäin suljettu 13–14. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 8.00–18.00, lør 9.00–17.00, søn stengt; stengt 13.00–14.00 hver dag. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/highlands",
@@ -1662,7 +1714,8 @@
         "cs": "Po–Pá 8:00–20:00, so 9:00–17:00, v neděli zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 08.00–20.00, lör 09.00–17.00, sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 8.00–20.00, lør 9.00–17.00, søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 8–20, la 9–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 8–20, la 9–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 8.00–20.00, lør 9.00–17.00, søn stengt. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/lynnvalley",
@@ -1691,7 +1744,8 @@
         "cs": "Po–Út a Pá 8:00–17:00, St–Čt 8:00–18:00, so 8:00–17:00, v neděli zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–tis och fre 08.00–17.00, ons–tors 08.00–18.00, lör 08.00–17.00, sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–tirs og fre 8.00–17.00, ons–tor 8.00–18.00, lør 8.00–17.00, søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma, ti ja pe 8–17, ke–to 8–18, la 8–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma, ti ja pe 8–17, ke–to 8–18, la 8–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–tir og fre 8.00–17.00, ons–tor 8.00–18.00, lør 8.00–17.00, stengt søn. Hastetilfeller tas imot kun i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/comolake",
@@ -1720,7 +1774,8 @@
         "cs": "Po–Pá 9:00–18:00, so 9:00–17:00, v neděli zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 09.00–18.00, lör 09.00–17.00, sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 9.00–18.00, lør 9.00–17.00, søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 9–18, la 9–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 9–18, la 9–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 9.00–18.00, lør 9.00–17.00, søn stengt. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/healingpaws",
@@ -1749,7 +1804,8 @@
         "cs": "Po–Pá 8:00–17:30, so 9:00–17:00 (ordinační doba lékařů v sobotu se liší), v neděli zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 08.00–17.30, lör 09.00–17.00 (läkarschemat på lördagar varierar), sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 8.00–17.30, lør 9.00–17.00 (dyrlægernes lørdagsplan varierer), søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 8–17.30, la 9–17 (lauantain lääkärivuorot vaihtelevat), su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 8–17.30, la 9–17 (lauantain lääkärivuorot vaihtelevat), su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 8.00–17.30, lør 9.00–17.00 (dyrlegeplan på lørdager varierer), søn stengt. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/feltham",
@@ -1778,7 +1834,8 @@
         "cs": "Po, Út, Čt, Pá 9:00–17:00, St 10:00–19:00, o víkendech zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån, tis, tors, fre 09.00–17.00, ons 10.00–19.00, lör–sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man, tirs, tor, fre 9.00–17.00, ons 10.00–19.00, lør–søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma, ti, to ja pe 9–17, ke 10–19, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma, ti, to ja pe 9–17, ke 10–19, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "Man, tir, tor, fre 9.00–17.00, ons 10.00–19.00, lør–søn stengt. Akutte tilfeller tas imot kun i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/centralsaanich",
@@ -1807,7 +1864,8 @@
         "cs": "Po–Pá 7:30–17:30, so 9:00–17:00, v neděli zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 07.30–17.30, lör 09.00–17.00, sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 7.30–17.30, lør 9.00–17.00, søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 7.30–17.30, la 9–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 7.30–17.30, la 9–17, su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "Man–fre 7.30–17.30, lør 9.00–17.00, søn stengt. Akutte tilfeller tas imot kun i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/island",
@@ -1836,7 +1894,8 @@
         "cs": "Po–Pá 8:30–17:30, o víkendech zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 08.30–17.30, lör–sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 8.30–17.30, lør–søn lukket. Akutte tilfælde tages kun imod i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 8.30–17.30, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 8.30–17.30, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 8.30–17.30, lør–søn stengt. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/applecrossbc",
@@ -1865,7 +1924,8 @@
         "cs": "Po–Pá 9:00–17:00, o víkendech zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 09.00–17.00, lör–sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 9.00–17.00, lør–søn lukket. Akutte patienter modtages kun i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 9–17, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 9–17, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 9.00–17.00, lør–søn stengt. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/shamrock",
@@ -1894,7 +1954,8 @@
         "cs": "Po–Pá 8:00–17:00, o víkendech zavřeno. Akutní případy pouze v ordinační době; před cestou zavolejte.",
         "sv": "Mån–fre 08.00–17.00, lör–sön stängt. Akutfall tas emot endast under öppettiderna; ring innan du kommer.",
         "da": "Man–fre 8.00–17.00, lør–søn lukket. Akutte patienter modtages kun i åbningstiden; ring på forhånd.",
-        "fi": "ma–pe 8–17, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen."
+        "fi": "ma–pe 8–17, la–su suljettu. Kiireellisiä tapauksia hoidetaan vain aukioloaikoina; soita etukäteen.",
+        "nb": "man–fre 8.00–17.00, lør–søn stengt. Akutte tilfeller tas kun imot i åpningstiden; ring på forhånd."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/ladysmith",
@@ -1923,7 +1984,8 @@
         "cs": "Po–Čt 8:00–17:00, Pá 8:30–17:00, o víkendech zavřeno. Mimo ordinační dobu klinika odkazuje na nonstop nemocnice ve Victorii.",
         "sv": "Mån–tors 08.00–17.00, fre 08.30–17.00, lör–sön stängt. Utanför öppettiderna hänvisar kliniken till djursjukhus i Victoria som har öppet dygnet runt.",
         "da": "Man–tors 8.00–17.00, fre 8.30–17.00, lør–søn lukket. Uden for åbningstiden henviser klinikken til døgnåbne dyrehospitaler i Victoria.",
-        "fi": "ma–to 8–17, pe 8.30–17, la–su suljettu. Virka-ajan ulkopuolella klinikka ohjaa Victorian 24/7-sairaaloihin."
+        "fi": "ma–to 8–17, pe 8.30–17, la–su suljettu. Virka-ajan ulkopuolella klinikka ohjaa Victorian 24/7-sairaaloihin.",
+        "nb": "man–tor 8.00–17.00, fre 8.30–17.00, stengt lør–søn. Utenom åpningstiden henviser klinikken til døgnåpne sykehus i Victoria."
       },
       "small_animals": true,
       "url": "https://nanaimovet.com/",
@@ -1952,7 +2014,8 @@
         "cs": "Pro pohotovost mimo ordinační dobu volejte 250-757-9911 a řiďte se pokyny; klinika odkazuje pohotovostní případy do Nanaima.",
         "sv": "Ring 250-757-9911 och följ instruktionerna vid akutfall utanför öppettiderna; kliniken hänvisar akutfall till Nanaimo.",
         "da": "Ring på 250-757-9911 og følg vejledningen ved akutte henvendelser uden for åbningstiden; klinikken henviser akutte tilfælde til Nanaimo.",
-        "fi": "Soita 250-757-9911 ja seuraa ohjeita virka-ajan ulkopuolisissa päivystystapauksissa; klinikka ohjaa päivystystapaukset Nanaimoon."
+        "fi": "Soita 250-757-9911 ja seuraa ohjeita virka-ajan ulkopuolisissa päivystystapauksissa; klinikka ohjaa päivystystapaukset Nanaimoon.",
+        "nb": "Ring 250-757-9911 og følg menyvalgene for nødtilfeller utenfor åpningstid; klinikken henviser nødtilfeller til Nanaimo."
       },
       "small_animals": true,
       "url": "https://www.lighthousevet.ca/",
@@ -1981,7 +2044,8 @@
         "cs": "Po 9:00–17:30, Út–Pá 8:30–19:00, so 9:00–17:00, v neděli zavřeno. Mimo ordinační dobu: Central Victoria Veterinary Hospital, 250-475-2495 (nonstop).",
         "sv": "Mån 09.00–17.30, tis–fre 08.30–19.00, lör 09.00–17.00, sön stängt. Utanför öppettiderna: Central Victoria Veterinary Hospital, 250-475-2495 (öppet dygnet runt).",
         "da": "Man 9.00–17.30, tirs–fre 8.30–19.00, lør 9.00–17.00, søn lukket. Uden for åbningstiden: Central Victoria Veterinary Hospital, 250-475-2495 (døgnåbent).",
-        "fi": "ma 9–17.30, ti–pe 8.30–19, la 9–17, su suljettu. Virka-ajan ulkopuolella: Central Victoria Veterinary Hospital, 250-475-2495 (auki 24/7)."
+        "fi": "ma 9–17.30, ti–pe 8.30–19, la 9–17, su suljettu. Virka-ajan ulkopuolella: Central Victoria Veterinary Hospital, 250-475-2495 (auki 24/7).",
+        "nb": "Man 9.00–17.30, tir–fre 8.30–19.00, lør 9.00–17.00, søn stengt. Utenom åpningstid: Central Victoria Veterinary Hospital, 250-475-2495 (åpent hele døgnet)."
       },
       "small_animals": true,
       "url": "https://www.beaconpethospital.ca/",
@@ -2010,7 +2074,8 @@
         "cs": "Nonstop, 7 dní v týdnu, 365 dní v roce. Objednání na doporučení pouze v pracovní dny.",
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar. Remissbesök endast på vardagar.",
         "da": "Døgnåbent, 7 dage om ugen, 365 dage om året. Henvisningstider kun på hverdage.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, 365 päivää vuodessa. Lähetteellä tulevien ajanvaraus vain arkisin."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, 365 päivää vuodessa. Lähetteellä tulevien ajanvaraus vain arkisin.",
+        "nb": "Åpent hele døgnet, alle dager i uken, 365 dager i året. Timeavtaler etter henvisning kun på hverdager."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/care",
@@ -2038,7 +2103,8 @@
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
-        "fi": "Auki 24 tuntia, 7 päivää viikossa."
+        "fi": "Auki 24 tuntia, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, sju dager i uken."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/calgarynorth/specialty",
@@ -2066,7 +2132,8 @@
         "cs": "Pohotovostní provoz je nyní denně 8:00–22:00; mimo tuto dobu CARE Centre nebo Calgary North.",
         "sv": "Akutmottagningen har för närvarande öppet 08.00–22.00 varje dag; utanför öppettiderna vänder du dig till CARE Centre eller Calgary North.",
         "da": "Akutten har i øjeblikket åbent 8.00–22.00 hver dag; uden for åbningstiden henvises til CARE Centre eller Calgary North.",
-        "fi": "Päivystysaika tällä hetkellä päivittäin 8–22; sen jälkeen siirry CARE Centreen tai Calgary Northiin."
+        "fi": "Päivystysaika tällä hetkellä päivittäin 8–22; sen jälkeen siirry CARE Centreen tai Calgary Northiin.",
+        "nb": "Akuttåpningstid for tiden daglig kl. 8.00–22.00; utenom åpningstid gå til CARE Centre eller Calgary North."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/western",
@@ -2095,7 +2162,8 @@
         "cs": "Út 8:00–18:00, St–Čt 8:00–20:00, Pá 8:00–19:00, so 8:00–18:00; v neděli a v pondělí zavřeno. Mimo ordinační dobu obraťte se na nonstop pohotovostní nemocnici (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
         "sv": "Tis 8–18, ons–tors 8–20, fre 8–19, lör 8–18; stängt sön och mån. Utanför öppettiderna går du till ett akutdjursjukhus med öppet dygnet runt (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
         "da": "Tirs 8–18, ons–tors 8–20, fre 8–19, lør 8–18; lukket søn og man. Uden for åbningstiden kan du bruge et døgnåbent akuthospital (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
-        "fi": "ti klo 8–18, ke–to klo 8–20, pe klo 8–19, la klo 8–18; su ja ma suljettu. Virka-ajan ulkopuolella käytä ympärivuorokautista päivystyssairaalaa (CARE Centre 403-520-8387, Calgary North 403-277-0135)."
+        "fi": "ti klo 8–18, ke–to klo 8–20, pe klo 8–19, la klo 8–18; su ja ma suljettu. Virka-ajan ulkopuolella käytä ympärivuorokautista päivystyssairaalaa (CARE Centre 403-520-8387, Calgary North 403-277-0135).",
+        "nb": "Tir 8–18, ons–tor 8–20, fre 8–19, lør 8–18; stengt søn og man. Utenom åpningstid kan du bruke en døgnåpen dyrlegevakt (CARE Centre 403-520-8387, Calgary North 403-277-0135)."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/district/our-hospital/in-an-emergency",
@@ -2122,7 +2190,8 @@
         "cs": "Po–Pá 8:30–17:00; o víkendech zavřeno. Akutní pacienti pouze v ordinační době.",
         "sv": "Mån–fre 08.30–17.00; stängt på helger. Brådskande fall tas emot endast under öppettiderna.",
         "da": "Man–fre 8.30–17.00; lukket i weekenden. Akutte patienter modtages kun i åbningstiden.",
-        "fi": "ma–pe 8.30–17; viikonloppuisin suljettu. Kiireelliset potilaat otetaan vastaan vain virka-aikoina."
+        "fi": "ma–pe 8.30–17; viikonloppuisin suljettu. Kiireelliset potilaat otetaan vastaan vain virka-aikoina.",
+        "nb": "man–fre 8.30–17.00; stengt i helgene. Akutte pasienter tas kun imot i åpningstiden."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/17th/hospital/in-an-emergency",
@@ -2149,7 +2218,8 @@
         "cs": "Pohotovost nonstop, od pondělí do neděle. Specializovaná péče na objednání v pracovní dny.",
         "sv": "Akutmottagning öppen dygnet runt, måndag till söndag. Specialistvård efter bokad tid på vardagar.",
         "da": "Akutmodtagelsen er døgnåben, mandag til søndag. Specialistbehandling efter aftale på hverdage.",
-        "fi": "Päivystys auki ympäri vuorokauden, maanantaista sunnuntaihin. Erikoisalat ajanvarauksella arkisin."
+        "fi": "Päivystys auki ympäri vuorokauden, maanantaista sunnuntaihin. Erikoisalat ajanvarauksella arkisin.",
+        "nb": "Akutt åpent hele døgnet, mandag til søndag. Spesialistbehandling etter timebestilling på hverdager."
       },
       "small_animals": true,
       "url": "https://vcacanada.com/guardian",
@@ -2177,7 +2247,8 @@
         "cs": "Nonstop.",
         "sv": "Öppet dygnet runt, alla dagar i veckan.",
         "da": "Åbent døgnet rundt.",
-        "fi": "Auki 24/7."
+        "fi": "Auki 24/7.",
+        "nb": "Åpent hele døgnet."
       },
       "small_animals": true,
       "source_url": "https://bellerivepethospital.com/emergencies.pml",
@@ -2218,7 +2289,8 @@
         "cs": "Pohotovostní a specializovaná nemocnice. Pohotovostní hodiny si před cestou ověřte telefonicky.",
         "sv": "Akut- och specialistdjursjukhus. Ring och bekräfta akutmottagningens öppettider innan du kommer.",
         "da": "Akut- og specialisthospital. Ring på forhånd for at høre om akuttiderne.",
-        "fi": "Päivystys- ja erikoissairaala. Soita etukäteen ja varmista päivystysajat."
+        "fi": "Päivystys- ja erikoissairaala. Soita etukäteen ja varmista päivystysajat.",
+        "nb": "Akutt- og spesialistsykehus. Ring på forhånd for å bekrefte akuttåpningstid."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/alberta",
@@ -2318,7 +2390,8 @@
         "cs": "Nabízí služby mimo ordinační dobu (zavolejte na kliniku).",
         "sv": "Erbjuder jour utanför öppettiderna (ring kliniken).",
         "da": "Tilbyder hjælp uden for åbningstiden (ring til klinikken).",
-        "fi": "Tarjoaa palveluja virka-ajan ulkopuolella (soita klinikalle)."
+        "fi": "Tarjoaa palveluja virka-ajan ulkopuolella (soita klinikalle).",
+        "nb": "Tilbyr tjenester utenom åpningstid (ring klinikken)."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/alberta",
@@ -2358,7 +2431,8 @@
         "cs": "Po–Pá 8:00–18:00; o víkendech zavřeno.",
         "sv": "Mån–fre 08.00–18.00; stängt på helger.",
         "da": "Man–fre 8.00–18.00; lukket i weekenden.",
-        "fi": "ma–pe 8–18; viikonloppuisin suljettu."
+        "fi": "ma–pe 8–18; viikonloppuisin suljettu.",
+        "nb": "man–fre 8.00–18.00; stengt i helgene."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/whitemud/contact-us",
@@ -2385,7 +2459,8 @@
         "cs": "Pohotovost nonstop včetně státních svátků, 365 dní v roce. Před cestou zavolejte. Od 22:00 do 7:30 může být příjem omezen na život ohrožující případy. Účtují se pohotovostní poplatky.",
         "sv": "Akutvård dygnet runt, även på helgdagar, årets alla dagar. Ring innan du kommer. Mellan 22.00 och 07.30 kan mottagningen begränsas till livshotande fall. Jourtillägg tillkommer.",
         "da": "Akut hjælp døgnet rundt, også på helligdage, 365 dage om året. Ring, før du kommer. Fra 22.00 til 7.30 kan modtagelsen være begrænset til livstruende tilfælde. Der opkræves akuttillæg.",
-        "fi": "Päivystys 24/7 myös lakisääteisinä pyhäpäivinä, 365 päivää vuodessa. Soita ennen tuloa. Klo 22–7.30 vastaanotto voi rajoittua henkeä uhkaaviin tapauksiin. Päivystysmaksu peritään."
+        "fi": "Päivystys 24/7 myös lakisääteisinä pyhäpäivinä, 365 päivää vuodessa. Soita ennen tuloa. Klo 22–7.30 vastaanotto voi rajoittua henkeä uhkaaviin tapauksiin. Päivystysmaksu peritään.",
+        "nb": "Akuttbehandling hele døgnet, også på offentlige helligdager, 365 dager i året. Ring før du kommer. Fra kl. 22 til 7.30 kan mottaket være begrenset til livstruende tilfeller. Akuttgebyr kommer i tillegg."
       },
       "small_animals": true,
       "url": "https://vmc.usask.ca/",
@@ -2414,7 +2489,8 @@
         "cs": "Po–Pá 8:00–18:00; o víkendech zavřeno. Akutní pacienti pouze v ordinační době.",
         "sv": "Mån–fre 08.00–18.00; stängt på helger. Brådskande fall tas emot endast under öppettiderna.",
         "da": "Man–fre 8.00–18.00; lukket i weekenden. Akutte patienter modtages kun i åbningstiden.",
-        "fi": "ma–pe 8–18; viikonloppuisin suljettu. Kiireelliset potilaat otetaan vastaan vain virka-aikoina."
+        "fi": "ma–pe 8–18; viikonloppuisin suljettu. Kiireelliset potilaat otetaan vastaan vain virka-aikoina.",
+        "nb": "man–fre 8.00–18.00; stengt i helgene. Akutte pasienter tas kun imot i åpningstiden."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/lakeview/hospital/in-an-emergency",
@@ -2441,7 +2517,8 @@
         "cs": "Po–St 8:00–18:00, Čt–Pá 8:00–20:00, so 9:00–17:00; v neděli zavřeno. Mimo ordinační dobu: Small Animal Clinic at WCVM, 306-966-7126.",
         "sv": "Mån–ons 8–18, tors–fre 8–20, lör 9–17; stängt sön. Utanför öppettiderna: Small Animal Clinic at WCVM, 306-966-7126.",
         "da": "Man–ons 8–18, tors–fre 8–20, lør 9–17; lukket søn. Uden for åbningstiden: Small Animal Clinic at WCVM, 306-966-7126.",
-        "fi": "ma–ke 8–18, to–pe 8–20, la 9–17; su suljettu. Virka-ajan ulkopuolella: Small Animal Clinic at WCVM, 306-966-7126."
+        "fi": "ma–ke 8–18, to–pe 8–20, la 9–17; su suljettu. Virka-ajan ulkopuolella: Small Animal Clinic at WCVM, 306-966-7126.",
+        "nb": "man–ons 8–18, tor–fre 8–20, lør 9–17; stengt søn. Utenom åpningstiden: Small Animal Clinic ved WCVM, 306-966-7126."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/allwest/our-hospital/in-an-emergency",
@@ -2468,7 +2545,8 @@
         "cs": "Pohotovost a akutní péče mimo ordinační dobu pro oblast Regina; volejte 306-761-1449.",
         "sv": "Akut- och brådskande vård utanför öppettiderna för Regina-området; ring 306-761-1449.",
         "da": "Akut hjælp uden for åbningstiden i Regina-området; ring på 306-761-1449.",
-        "fi": "Päivystys ja kiireellinen hoito virka-ajan ulkopuolella Reginan alueella; soita 306-761-1449."
+        "fi": "Päivystys ja kiireellinen hoito virka-ajan ulkopuolella Reginan alueella; soita 306-761-1449.",
+        "nb": "Akutt- og hastebehandling utenom åpningstid for Regina-området; ring 306-761-1449."
       },
       "small_animals": true,
       "source_url": "https://careport.squarespace.com/emergency-care",
@@ -2496,7 +2574,8 @@
         "cs": "Po–Pá 8:00–18:00, so 9:00–12:00, v neděli zavřeno; pouze na objednání. Mimo ordinační dobu: 306-761-1449.",
         "sv": "Mån–fre 8–18, lör 9–12, stängt sön; endast efter bokning. Utanför öppettiderna: 306-761-1449.",
         "da": "Man–fre 8–18, lør 9–12, lukket søn; kun efter aftale. Uden for åbningstiden: 306-761-1449.",
-        "fi": "ma–pe 8–18, la 9–12, su suljettu; vain ajanvarauksella. Virka-ajan ulkopuolella: 306-761-1449."
+        "fi": "ma–pe 8–18, la 9–12, su suljettu; vain ajanvarauksella. Virka-ajan ulkopuolella: 306-761-1449.",
+        "nb": "man–fre 8–18, lør 9–12, søn stengt; kun etter timebestilling. Utenom åpningstid: 306-761-1449."
       },
       "small_animals": true,
       "source_url": "https://careport.squarespace.com/emergency-care",
@@ -2523,7 +2602,8 @@
         "cs": "Veterinární nemocnice. Pohotovostní hodiny si před cestou ověřte telefonicky.",
         "sv": "Djursjukhus. Ring och bekräfta akutmottagningens öppettider innan du kommer.",
         "da": "Dyrehospital. Ring på forhånd for at høre om akuttiderne.",
-        "fi": "Eläinsairaala. Soita etukäteen ja varmista päivystysajat."
+        "fi": "Eläinsairaala. Soita etukäteen ja varmista päivystysajat.",
+        "nb": "Dyresykehus. Ring på forhånd for å bekrefte åpningstider for akutthjelp."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/manitoba",
@@ -2550,7 +2630,8 @@
         "cs": "Pohotovostní péče o malá zvířata; veterinář a technik jsou k dispozici nonstop.",
         "sv": "Akutvård för smådjur; veterinär och djursjukvårdare i tjänst dygnet runt.",
         "da": "Akut hjælp til små kæledyr; dyrlæge og dyresygeplejerske er altid til stede.",
-        "fi": "Pieneläinten päivystys; eläinlääkäri ja eläinhoitaja paikalla koko ajan."
+        "fi": "Pieneläinten päivystys; eläinlääkäri ja eläinhoitaja paikalla koko ajan.",
+        "nb": "Akuttbehandling for smådyr; dyrlege og dyrepleier på vakt hele tiden."
       },
       "small_animals": true,
       "url": "https://winnipeganimalemergency.ca",
@@ -2579,7 +2660,8 @@
         "cs": "Otevřeno šest dní v týdnu; mimo ordinační dobu volejte 204-452-0911. Nejbližší pohotovost: Winnipeg Animal Emergency Hospital.",
         "sv": "Öppet sex dagar i veckan; utanför öppettiderna ringer du 204-452-0911. Närmaste akutmottagning: Winnipeg Animal Emergency Hospital.",
         "da": "Åbent seks dage om ugen; uden for åbningstiden ring på 204-452-0911. Nærmeste akutklinik: Winnipeg Animal Emergency Hospital.",
-        "fi": "Auki kuutena päivänä viikossa; virka-ajan ulkopuolella soita 204-452-0911. Lähin päivystys: Winnipeg Animal Emergency Hospital."
+        "fi": "Auki kuutena päivänä viikossa; virka-ajan ulkopuolella soita 204-452-0911. Lähin päivystys: Winnipeg Animal Emergency Hospital.",
+        "nb": "Åpent seks dager i uken; utenom åpningstid ring 204-452-0911. Nærmeste dyrlegevakt: Winnipeg Animal Emergency Hospital."
       },
       "small_animals": true,
       "source_url": "https://www.corydonanimalhospital.ca/dog/dog-emergency-vet",
@@ -2606,7 +2688,8 @@
         "cs": "Po–Pá 8:30–17:00; o víkendech zavřeno. V případě potřeby zajišťuje pohotovost mimo ordinační dobu pro svou spádovou oblast.",
         "sv": "Mån–fre 08.30–17.00; stängt på helger. Vid behov tar kliniken emot akutfall utanför öppettiderna inom sitt upptagningsområde.",
         "da": "Man–fre 8.30–17.00; lukket i weekenden. Akut hjælp uden for åbningstiden i sit dækningsområde, hvis det er nødvendigt.",
-        "fi": "ma–pe 8.30–17; viikonloppuisin suljettu. Tarvittaessa päivystys omalle palvelualueelle virka-ajan ulkopuolella."
+        "fi": "ma–pe 8.30–17; viikonloppuisin suljettu. Tarvittaessa päivystys omalle palvelualueelle virka-ajan ulkopuolella.",
+        "nb": "man–fre 8.30–17.00; stengt i helgene. Nødtilfeller utenom åpningstid i klinikkens dekningsområde ved behov."
       },
       "small_animals": true,
       "url": "https://swanvalleyvetclinic.com",
@@ -2659,7 +2742,8 @@
         "cs": "Nabízí služby mimo ordinační dobu (zavolejte na kliniku).",
         "sv": "Erbjuder jour utanför öppettiderna (ring kliniken).",
         "da": "Tilbyder hjælp uden for åbningstiden (ring til klinikken).",
-        "fi": "Tarjoaa palveluja virka-ajan ulkopuolella (soita klinikalle)."
+        "fi": "Tarjoaa palveluja virka-ajan ulkopuolella (soita klinikalle).",
+        "nb": "Tilbyr tjenester utenom åpningstid (ring klinikken)."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/manitoba",
@@ -2687,7 +2771,8 @@
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
-        "fi": "Auki 24 tuntia, 7 päivää viikossa."
+        "fi": "Auki 24 tuntia, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, sju dager i uken."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2715,7 +2800,8 @@
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu.",
         "sv": "Öppet dygnet runt, alla dagar i veckan.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
-        "fi": "Auki 24 tuntia, 7 päivää viikossa."
+        "fi": "Auki 24 tuntia, 7 päivää viikossa.",
+        "nb": "Åpent hele døgnet, sju dager i uken."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2743,7 +2829,8 @@
         "cs": "Pohotovostní klinika, nonstop kromě středy.",
         "sv": "Akutklinik, öppen dygnet runt utom onsdagar.",
         "da": "Akutklinik, åben døgnet rundt undtagen onsdage.",
-        "fi": "Päivystysklinikka, auki ympäri vuorokauden keskiviikkoa lukuun ottamatta."
+        "fi": "Päivystysklinikka, auki ympäri vuorokauden keskiviikkoa lukuun ottamatta.",
+        "nb": "Akuttklinikk, åpen hele døgnet unntatt onsdager."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2771,7 +2858,8 @@
         "cs": "Akutní péče 7 dní v týdnu, 10:00–20:00.",
         "sv": "Brådskande vård alla dagar i veckan, 10.00–20.00.",
         "da": "Akut hjælp 7 dage om ugen, 10.00–20.00.",
-        "fi": "Kiireellinen hoito 7 päivää viikossa klo 10.00–20.00."
+        "fi": "Kiireellinen hoito 7 päivää viikossa klo 10.00–20.00.",
+        "nb": "Hastebehandling alle dager 10.00–20.00."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2798,7 +2886,8 @@
         "cs": "Akutní péče 7 dní v týdnu, 7:00–23:00.",
         "sv": "Brådskande vård alla dagar i veckan, 07.00–23.00.",
         "da": "Akut hjælp 7 dage om ugen, 7.00–23.00.",
-        "fi": "Kiireellinen hoito 7 päivää viikossa klo 7.00–23.00."
+        "fi": "Kiireellinen hoito 7 päivää viikossa klo 7.00–23.00.",
+        "nb": "Hastebehandling alle dager 7.00–23.00."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2825,7 +2914,8 @@
         "cs": "Po–Pá 7:30–20:00, so 9:00–15:00; v neděli zavřeno. Mimo ordinační dobu obraťte se na nonstop pohotovostní nemocnici v Halifaxu nebo Dartmouthu.",
         "sv": "Mån–fre 07.30–20.00, lör 09.00–15.00; stängt sön. Utanför öppettiderna vänder du dig till ett akutdjursjukhus med öppet dygnet runt i Halifax/Dartmouth.",
         "da": "Man–fre 7.30–20.00, lør 9.00–15.00; lukket søn. Uden for åbningstiden kan du bruge et døgnåbent akuthospital i Halifax/Dartmouth.",
-        "fi": "ma–pe 7.30–20, la 9–15; su suljettu. Virka-ajan ulkopuolella käytä Halifaxin tai Dartmouthin päivystyssairaalaa, joka on auki ympäri vuorokauden."
+        "fi": "ma–pe 7.30–20, la 9–15; su suljettu. Virka-ajan ulkopuolella käytä Halifaxin tai Dartmouthin päivystyssairaalaa, joka on auki ympäri vuorokauden.",
+        "nb": "Man–fre 7.30–20.00, lør 9.00–15.00; stengt søn. Utenom åpningstiden bruk et akuttsykehus som er åpent hele døgnet i Halifax/Dartmouth."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/uniacke/our-hospital/in-an-emergency",
@@ -2852,7 +2942,8 @@
         "cs": "Pouze na objednání. Mimo ordinační dobu: videokonzultace s veterinářem přes VetTriage nonstop (poplatek USD 50); pohotovostní případy osobně odkazuje do Metro Animal Emergency Clinic v Dartmouthu.",
         "sv": "Efter bokning. Utanför öppettiderna: videokonsultation med veterinär via VetTriage dygnet runt (avgift USD 50); akutfall som kräver besök på plats hänvisas till Metro Animal Emergency Clinic i Dartmouth.",
         "da": "Efter aftale. Uden for åbningstiden: videokonsultation med en dyrlæge via VetTrust døgnet rundt (gebyr på 50 USD); akutte tilfælde, der skal undersøges personligt, henvises til Metro Animal Emergency Clinic i Dartmouth.",
-        "fi": "Ajanvarauksella. Virka-ajan ulkopuolella videokonsultaatio eläinlääkärin kanssa VetTriagen kautta 24/7 (maksu 50 USD); paikan päällä hoidettavat päivystystapaukset ohjataan Dartmouthissa sijaitsevaan Metro Animal Emergency Clinic -klinikalle."
+        "fi": "Ajanvarauksella. Virka-ajan ulkopuolella videokonsultaatio eläinlääkärin kanssa VetTriagen kautta 24/7 (maksu 50 USD); paikan päällä hoidettavat päivystystapaukset ohjataan Dartmouthissa sijaitsevaan Metro Animal Emergency Clinic -klinikalle.",
+        "nb": "Etter timebestilling. Utenfor åpningstid: videokonsultasjon med dyrlege via VetTriage hele døgnet (gebyr 50 USD); nødtilfeller som krever oppmøte henvises til Metro Animal Emergency Clinic i Dartmouth."
       },
       "small_animals": true,
       "url": "https://www.novascotiaspca.ca",
@@ -2880,7 +2971,8 @@
         "cs": "Akutní a pohotovostní péče o malá zvířata 8:00–23:00, 7 dní v týdnu; nejdřív volejte 902-566-0950. Recepce je obsazena 8:00–23:00.",
         "sv": "Brådskande vård och akutvård för smådjur 08.00–23.00, alla dagar i veckan; ring 902-566-0950 först. Receptionen är bemannad 08.00–23.00.",
         "da": "Akut hjælp til små kæledyr 8–23, 7 dage om ugen; ring først på 902-566-0950. Receptionen er bemandet 8–23.",
-        "fi": "Pieneläinten kiireellinen hoito ja päivystys klo 8–23, 7 päivää viikossa; soita ensin 902-566-0950. Vastaanotto palvelee klo 8–23."
+        "fi": "Pieneläinten kiireellinen hoito ja päivystys klo 8–23, 7 päivää viikossa; soita ensin 902-566-0950. Vastaanotto palvelee klo 8–23.",
+        "nb": "Hastebehandling og akuttbehandling av små dyr kl. 8–23, sju dager i uken; ring 902-566-0950 først. Skranken er bemannet kl. 8–23."
       },
       "small_animals": true,
       "url": "https://vth.upei.ca",
@@ -2909,7 +3001,8 @@
         "cs": "Otevřeno 8:00–19:00, 7 dní v týdnu (od července 2024); pohotovost mimo ordinační dobu zajišťuje společná pohotovostní skupina místních klinik.",
         "sv": "Öppet 08.00–19.00, alla dagar i veckan (sedan juli 2024); akutfall utanför öppettiderna hanteras av en gemensam jourgrupp bestående av lokala kliniker.",
         "da": "Åbent 8.00–19.00, 7 dage om ugen (siden juli 2024); akutte henvendelser uden for åbningstiden varetages af en fælles vagtordning mellem lokale klinikker.",
-        "fi": "Auki klo 8.00–19.00, 7 päivää viikossa (heinäkuusta 2024); virka-ajan ulkopuoliset päivystystapaukset hoitaa paikallisten klinikoiden yhteinen päivystysryhmä."
+        "fi": "Auki klo 8.00–19.00, 7 päivää viikossa (heinäkuusta 2024); virka-ajan ulkopuoliset päivystystapaukset hoitaa paikallisten klinikoiden yhteinen päivystysryhmä.",
+        "nb": "Åpent kl. 8.00–19.00, sju dager i uken (siden juli 2024); nødtilfeller utenom åpningstid håndteres av en felles vaktgruppe av lokale klinikker."
       },
       "small_animals": true,
       "url": "https://vscnl.ca",
@@ -2938,7 +3031,8 @@
         "cs": "Místní kliniky sdílejí pohotovost mimo ordinační dobu; na čísle 709-754-1750 vás spojí se společnou pohotovostní triážní skupinou.",
         "sv": "Lokala kliniker delar på akutjouren utanför öppettiderna; ring 709-754-1750 för att kopplas till den gemensamma akutgruppen för triage.",
         "da": "De lokale klinikker deler akuttjenesteen uden for åbningstiden; ring på 709-754-1750 for at blive stillet om til den fælles akuttriage.",
-        "fi": "Paikalliset klinikat jakavat päivystysvastuun virka-ajan ulkopuolella; soita 709-754-1750, niin sinut yhdistetään yhteiseen päivystysryhmään."
+        "fi": "Paikalliset klinikat jakavat päivystysvastuun virka-ajan ulkopuolella; soita 709-754-1750, niin sinut yhdistetään yhteiseen päivystysryhmään.",
+        "nb": "Lokale klinikker deler akuttdekning utenom åpningstid; ring 709-754-1750 for å bli satt over til den felles akuttvurderingsgruppen."
       },
       "small_animals": true,
       "source_url": "https://avalonanimalhospital.squarespace.com/emergency",
@@ -2966,7 +3060,8 @@
         "cs": "Po–Út 8:00–17:00, St–Čt 8:00–18:00, Pá 8:00–17:00; o víkendech zavřeno. Mimo ordinační dobu volejte stejné číslo, spojí vás se společnou pohotovostní triážní skupinou.",
         "sv": "Mån–tis 8–17, ons–tors 8–18, fre 8–17; stängt på helger. Utanför öppettiderna ringer du samma nummer för den gemensamma akutgruppen för triage.",
         "da": "Man–tirs 8–17, ons–tors 8–18, fre 8–17; lukket i weekenden. Uden for åbningstiden ring på samme nummer for den fælles akuttriage.",
-        "fi": "ma–ti 8–17, ke–to 8–18, pe 8–17; viikonloppuisin suljettu. Virka-ajan ulkopuolella soita samaan numeroon yhteiseen päivystysryhmään."
+        "fi": "ma–ti 8–17, ke–to 8–18, pe 8–17; viikonloppuisin suljettu. Virka-ajan ulkopuolella soita samaan numeroon yhteiseen päivystysryhmään.",
+        "nb": "man–tir 8–17, ons–tor 8–18, fre 8–17; stengt i helgene. Utenom åpningstiden ring samme nummer for den felles akuttvurderingsgruppen."
       },
       "small_animals": true,
       "source_url": "https://avalonanimalhospital.squarespace.com/emergency",
@@ -3018,7 +3113,8 @@
         "cs": "Nabízí služby mimo ordinační dobu (zavolejte na kliniku).",
         "sv": "Erbjuder jour utanför öppettiderna (ring kliniken).",
         "da": "Tilbyder hjælp uden for åbningstiden (ring til klinikken).",
-        "fi": "Tarjoaa palveluja virka-ajan ulkopuolella (soita klinikalle)."
+        "fi": "Tarjoaa palveluja virka-ajan ulkopuolella (soita klinikalle).",
+        "nb": "Tilbyr tjenester utenom åpningstid (ring klinikken)."
       },
       "small_animals": true,
       "source_url": "https://www.vetstrategy.com/our-clinics/newfoundland-and-labrador",
@@ -3046,7 +3142,8 @@
         "cs": "Po–Pá 7:30–17:00. Pro pohotovost nonstop volejte nebo pište SMS (veterinář pro domácí zvířata je v pohotovosti nonstop). Pohotovost u velkých zvířat není zajištěna.",
         "sv": "Mån–fre 07.30–17.00. Ring eller sms:a för akutvård dygnet runt (jourhavande veterinär dygnet runt för sällskapsdjur). Akutfall för stora djur ingår inte.",
         "da": "Man–fre 7.30–17.00. Ring eller send en sms for akut hjælp døgnet rundt (vagthavende dyrlæge døgnet rundt til kæledyr). Akut hjælp til store dyr dækkes ikke.",
-        "fi": "ma–pe 7.30–17. Soita tai lähetä tekstiviesti päivystykseen ympäri vuorokauden (eläinlääkäri päivystää 24 h lemmikkien päivystystapauksissa). Isojen eläinten päivystystä ei ole."
+        "fi": "ma–pe 7.30–17. Soita tai lähetä tekstiviesti päivystykseen ympäri vuorokauden (eläinlääkäri päivystää 24 h lemmikkien päivystystapauksissa). Isojen eläinten päivystystä ei ole.",
+        "nb": "Man–fre 7.30–17.00. Ring eller send SMS for akuttbehandling hele døgnet (dyrlege på vakt hele døgnet for kjæledyr). Nødtilfeller for store dyr dekkes ikke."
       },
       "small_animals": true,
       "url": "https://alpinevet.squarespace.com",
@@ -3075,7 +3172,8 @@
         "cs": "Nonstop, 7 dní v týdnu: pohotovost, akutní péče i příjem bez objednání; běžná vyšetření v ordinační době.",
         "sv": "Öppet dygnet runt, alla dagar i veckan, för akutfall, brådskande vård och drop-in; ordinarie bokade besök under klinikens öppettider.",
         "da": "Åbent døgnet rundt, 7 dage om ugen, til akutte tilfælde og besøg uden tidsbestilling; almindelige konsultationer i klinikkens åbningstid.",
-        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, päivystykseen, kiireelliseen hoitoon ja ilman ajanvarausta; tavalliset vastaanotot klinikan aukioloaikoina."
+        "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, päivystykseen, kiireelliseen hoitoon ja ilman ajanvarausta; tavalliset vastaanotot klinikan aukioloaikoina.",
+        "nb": "Åpent hele døgnet, sju dager i uken for nødtilfeller, akuttbehandling og besøk uten time; ordinære timer i klinikkens åpningstid."
       },
       "small_animals": true,
       "url": "https://www.riverviewanimalhealthcentre.ca/",
@@ -3104,7 +3202,8 @@
         "cs": "Akutní péče bez objednání, 12:00–24:00, 7 dní v týdnu.",
         "sv": "Brådskande vård utan tidsbokning, 12.00–24.00, alla dagar i veckan.",
         "da": "Akut hjælp uden tidsbestilling, 12.00–24.00, 7 dage om ugen.",
-        "fi": "Kiireellinen hoito ilman ajanvarausta klo 12–24, 7 päivää viikossa."
+        "fi": "Kiireellinen hoito ilman ajanvarausta klo 12–24, 7 päivää viikossa.",
+        "nb": "Drop-in hastebehandling alle dager 12–24."
       },
       "small_animals": true,
       "url": "http://monctonurgentcare.ca/",
@@ -3217,7 +3316,8 @@
         "cs": "Běžná ordinační doba Po–Pá 7:30–22:00, so–ne 9:00–21:00; pohotovostní linka mimo ordinační dobu (403) 320-5200.",
         "sv": "Ordinarie öppettider mån–fre 07.30–22.00, lör–sön 09.00–21.00; jourlinje utanför öppettiderna (403) 320-5200.",
         "da": "Almindelig åbningstid man–fre 7.30–22.00, lør–søn 9.00–21.00; akuttelefon uden for åbningstiden (403) 320-5200.",
-        "fi": "Normaalit aukioloajat ma–pe klo 7.30–22.00, la–su klo 9.00–21.00; virka-ajan ulkopuolinen päivystysnumero (403) 320-5200."
+        "fi": "Normaalit aukioloajat ma–pe klo 7.30–22.00, la–su klo 9.00–21.00; virka-ajan ulkopuolinen päivystysnumero (403) 320-5200.",
+        "nb": "Ordinær åpningstid man–fre kl. 7.30–22.00, lør–søn kl. 9.00–21.00; akuttelefon utenom åpningstid (403) 320-5200."
       },
       "small_animals": true,
       "url": "https://www.familypet.ca/",
@@ -3245,7 +3345,8 @@
         "cs": "Pohotovostní a specializovaná nemocnice, nonstop.",
         "sv": "Akut- och specialistdjursjukhus, öppet dygnet runt, alla dagar i veckan.",
         "da": "Akut- og specialisthospital, åbent døgnet rundt.",
-        "fi": "Päivystys- ja erikoissairaala, auki 24/7."
+        "fi": "Päivystys- ja erikoissairaala, auki 24/7.",
+        "nb": "Akutt- og spesialistsykehus, åpent hele døgnet."
       },
       "small_animals": true,
       "url": "https://bbvsh.com/",
@@ -3274,7 +3375,8 @@
         "cs": "Otevřeno 24 hodin denně, 7 dní v týdnu, 365 dní v roce.",
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, 365 dage om året.",
-        "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, 365 päivää vuodessa."
+        "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, 365 päivää vuodessa.",
+        "nb": "Åpent hele døgnet, alle dager i uken, 365 dager i året."
       },
       "small_animals": true,
       "url": "https://animalemerg.com/",
@@ -3303,7 +3405,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Öppet dygnet runt för akutfall.",
         "da": "Åbent døgnet rundt for akutte tilfælde.",
-        "fi": "Auki 24/7 päivystystapauksille."
+        "fi": "Auki 24/7 päivystystapauksille.",
+        "nb": "Åpent hele døgnet for nødtilfeller."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
@@ -3331,7 +3434,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Öppet dygnet runt för akutfall.",
         "da": "Åbent døgnet rundt for akutte tilfælde.",
-        "fi": "Auki 24/7 päivystystapauksille."
+        "fi": "Auki 24/7 päivystystapauksille.",
+        "nb": "Åpent hele døgnet for nødtilfeller."
       },
       "small_animals": true,
       "source_url": "https://www.bowmanvilleveterinaryclinic.com/emergency",
@@ -3359,7 +3463,8 @@
         "cs": "Pohotovost nonstop.",
         "sv": "Öppet dygnet runt för akutfall.",
         "da": "Åbent døgnet rundt for akutte tilfælde.",
-        "fi": "Auki ympäri vuorokauden päivystystapauksille."
+        "fi": "Auki ympäri vuorokauden päivystystapauksille.",
+        "nb": "Åpent hele døgnet for nødtilfeller."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
@@ -3387,7 +3492,8 @@
         "cs": "Noční pohotovostní klinika; otevírací dobu zjistíte telefonicky.",
         "sv": "Akutklinik som har öppet på natten; ring och kontrollera öppettiderna innan du kommer.",
         "da": "Natklinik for akutte tilfælde; ring på forhånd for åbningstider.",
-        "fi": "Yöpäivystysklinikka; kysy aukioloajat soittamalla etukäteen."
+        "fi": "Yöpäivystysklinikka; kysy aukioloajat soittamalla etukäteen.",
+        "nb": "Akuttklinikk på natt; ring på forhånd for åpningstider."
       },
       "small_animals": true,
       "url": "http://www.animalemergencydurham.com",
@@ -3416,7 +3522,8 @@
         "cs": "Po–Pá 8:00–16:30, so 8:00–13:00; pohotovost mimo ordinační dobu řeší Kawartha Veterinary Emergency Clinic, 705-741-5832.",
         "sv": "Mån–fre 8.00–16.30, lör 8.00–13.00; akutfall utanför öppettiderna går till Kawartha Veterinary Emergency Clinic, 705-741-5832.",
         "da": "Man–fre 8.00–16.30, lør 8.00–13.00; akutte tilfælde uden for åbningstiden henvises til Kawartha Veterinary Emergency Clinic, 705-741-5832.",
-        "fi": "ma–pe 8–16.30, la 8–13; virka-ajan ulkopuoliset päivystystapaukset Kawartha Veterinary Emergency Clinic -klinikalle, 705-741-5832."
+        "fi": "ma–pe 8–16.30, la 8–13; virka-ajan ulkopuoliset päivystystapaukset Kawartha Veterinary Emergency Clinic -klinikalle, 705-741-5832.",
+        "nb": "man–fre 8.00–16.30, lør 8.00–13.00; nødtilfeller utenom åpningstid henvises til Kawartha Veterinary Emergency Clinic, 705-741-5832."
       },
       "small_animals": true,
       "url": "https://haliburtonvets.squarespace.com",
@@ -3444,7 +3551,8 @@
         "cs": "Pohotovost pouze v ordinační době; mimo ni využijte nonstop pohotovostní nemocnice Kawartha nebo Belleville.",
         "sv": "Akutfall endast under klinikens öppettider; utanför öppettiderna vänder du dig till akutdjursjukhusen i Kawartha eller Belleville, som har öppet dygnet runt.",
         "da": "Akut hjælp kun i åbningstiden; uden for åbningstiden kan du bruge de døgnåbne akuthospitaler i Kawartha eller Belleville.",
-        "fi": "Päivystys vain klinikan aukioloaikoina; muulloin Kawartha tai Belleville, joiden päivystyssairaalat ovat auki ympäri vuorokauden."
+        "fi": "Päivystys vain klinikan aukioloaikoina; muulloin Kawartha tai Belleville, joiden päivystyssairaalat ovat auki ympäri vuorokauden.",
+        "nb": "Nødtilfeller kun i klinikkens åpningstid; utenom åpningstid, se døgnåpne dyresykehus for akuttbehandling i Kawartha eller Belleville."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
@@ -3483,7 +3591,8 @@
         "cs": "Po–Pá 8:00–18:00; o víkendech zavřeno. V naléhavých případech zavolejte.",
         "sv": "Mån–fre 08.00–18.00; stängt på helger. Ring vid brådskande behov.",
         "da": "Man–fre 8–18; lukket i weekenden. Ring ved akut behov.",
-        "fi": "ma–pe 8–18; viikonloppuisin suljettu. Soita kiireellisissä tapauksissa."
+        "fi": "ma–pe 8–18; viikonloppuisin suljettu. Soita kiireellisissä tapauksissa.",
+        "nb": "Man–fre 8.00–18.00; stengt i helgene. Ring ved akutte behov."
       },
       "small_animals": true,
       "source_url": "https://vcacanada.com/centralsk/contact-us",
@@ -3573,7 +3682,8 @@
         "cs": "Po–Čt 8:00–20:00, Pá 8:00–19:30, so 8:00–13:00, v neděli zavřeno; pohotovost mimo ordinační dobu přes Metro Animal Emergency Clinic, 902-468-0674.",
         "sv": "Mån–tors 08.00–20.00, fre 08.00–19.30, lör 08.00–13.00, stängt sön; akutfall utanför öppettiderna via Metro Animal Emergency Clinic, 902-468-0674.",
         "da": "Man–tors 8–20, fre 8–19.30, lør 8–13, lukket søn; akutte tilfælde uden for åbningstiden via Metro Animal Emergency Clinic, 902-468-0674.",
-        "fi": "ma–to 8–20, pe 8–19.30, la 8–13, su suljettu; virka-ajan ulkopuoliset päivystystapaukset Metro Animal Emergency Clinic -klinikan kautta, 902-468-0674."
+        "fi": "ma–to 8–20, pe 8–19.30, la 8–13, su suljettu; virka-ajan ulkopuoliset päivystystapaukset Metro Animal Emergency Clinic -klinikan kautta, 902-468-0674.",
+        "nb": "man–tor 8.00–20.00, fre 8.00–19.30, lør 8.00–13.00, stengt søn; nødtilfeller utenom åpningstiden via Metro Animal Emergency Clinic, 902-468-0674."
       },
       "small_animals": true,
       "source_url": "https://web4q.lifelearn.com/carnegyah/?p=26",
@@ -3599,7 +3709,8 @@
         "cs": "Zubní péče a pohotovost.",
         "sv": "Tandvård och akutvård.",
         "da": "Tandbehandling og akut hjælp.",
-        "fi": "Hammashoito ja päivystys."
+        "fi": "Hammashoito ja päivystys.",
+        "nb": "Tannbehandling og akuttjenester."
       },
       "small_animals": true,
       "url": "http://horizonveterinaryservices.com",
