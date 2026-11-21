@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "78894b6da3c0e98f0867d8ee6a9ce274544530397d889cd5ef914feac1e5fd22"
+      "sha256": "eeb9c453f648e3873b8d38d51f42c8c2fcce82e17b6d9e97694eae5814e133a8"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "39b14608e2c37b22a9b783f0693a232868fe757a2951514a5f13f86d1962819b"
+      "sha256": "faaf383f3a4cc43b9a77f9ae46c2090d9d92255293211a9f1de757ff2499ce6a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a2532e730d7b40a8e16cbe22dc0333a495b278ecf140043b6dd0d00bca37c13d"
+      "sha256": "befe20f1d62a0823f060e68b28113d990595fa5c3a9e3306fc0151493be44966"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "e0559bec4fb6295a502c7d21ee51c26347691b118e1ff54eb1fa8ed53ec91969"
+      "sha256": "5c4bd17c121e8c61cf8ba8f05a36df3963e9843e652f7625d16233f5291f0aba"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "66d9e0344ee202ed0ad817a3db45c49dab835d2f50d577bf409c48cf6b80f0b7"
+      "sha256": "171f25dc99162bdf798618a37930c08b27199d0f6ef6bfd7500778555de406e0"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "7ee80c2e4be21115e601ad10f0bcb6c6744d6226b5c4c6134cd934c9c291454d"
+      "sha256": "358f63b5da346d36d612608164e97ae92e552baa4aabc3e7a3307fac57114c7f"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "045a94bc215743f1fc9241c7f781c6fc0c1efb8cb0516ef9b20cfb13a1b41387"
+      "sha256": "5982f5f16f4403f51d75e5afdf0cdb4100c15697c88f56e2f5d8ee8cce05273f"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 122,
+      "breed_count": 123,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -75135,6 +75135,641 @@
       ]
     },
     {
+      "id": "neapolitan_mastiff",
+      "species": "dog",
+      "order": 122,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Neapolitan Mastiff",
+        "sl": "Napolitanski mastif"
+      },
+      "slug": {
+        "en": "neapolitan-mastiff",
+        "sl": "napolitanski-mastif"
+      },
+      "synonyms": {
+        "en": [
+          "Mastino Napoletano",
+          "Neo",
+          "Neapolitan"
+        ],
+        "sl": [
+          "napolitanski mastif",
+          "neapeljski mastif",
+          "mastino napoletano"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              65,
+              75
+            ],
+            "female": [
+              60,
+              68
+            ]
+          },
+          "source_ids": [
+            "S993"
+          ],
+          "ref": "neapolitan_mastiff.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              60,
+              70
+            ],
+            "female": [
+              50,
+              60
+            ]
+          },
+          "source_ids": [
+            "S993"
+          ],
+          "ref": "neapolitan_mastiff.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "neapolitan_mastiff.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 197,
+            "group": 2,
+            "section": 2,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S993"
+          ],
+          "ref": "neapolitan_mastiff.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "eyelid_problems",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.eyelids",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.heart_dcm",
+          "confidence": "high"
+        },
+        {
+          "key": "wobbler_syndrome",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.wobbler",
+          "confidence": "high"
+        },
+        {
+          "key": "back_disc_disease",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.back",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S994"
+          ],
+          "ref": "neapolitan_mastiff.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.hypothyroidism",
+          "confidence": "high"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.epilepsy",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S995"
+          ],
+          "ref": "neapolitan_mastiff.health.cancer",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S995"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S996"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S996"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.small_children"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.suitability.rkc_lifespan",
+              "neapolitan_mastiff.lifespan.rkc"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S994",
+              "S995"
+            ],
+            "refs": [
+              "neapolitan_mastiff.health.eyelids",
+              "neapolitan_mastiff.health.breed_watch"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S996"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.drooling"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 74
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 74
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "fold_cleaning",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S994"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S994 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1000"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (senior: see senior_boundary_months — predlog Claude)"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.grooming",
+            "basis_source_ids": [
+              "S994"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.face_fold_cleaning",
+            "basis_source_ids": [
+              "S995"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »daily cleaning« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.neapolitan_mastiff.bathing",
+            "basis_source_ids": [
+              "S996"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): kopanje enkrat na mesec (PetMD »once or twice a month« → spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S994",
+          "S995",
+          "S996",
+          "S1000"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S994"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S994"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S994"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S994"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S994"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S993",
+        "S994",
+        "S995",
+        "S996",
+        "S1000",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -82247,6 +82882,41 @@
       "publisher": "VCA Animal Hospitals",
       "title": "Black Russian Terrier ('Army Dog Turned Family Friend')",
       "url": "https://vcahospitals.com/know-your-pet/black-russian-terrier"
+    },
+    {
+      "id": "S993",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 197 — Mastino Napoletano (Neapolitan Mastiff), EN, 17.12.2015 (official valid standard published 13.11.2015)",
+      "url": "https://fci.be/Nomenclature/Standards/197g02-en.pdf"
+    },
+    {
+      "id": "S994",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Neapolitan Mastiff",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/neapolitan-mastiff/"
+    },
+    {
+      "id": "S995",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Neapolitan Mastiff breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/neapolitan-mastiff"
+    },
+    {
+      "id": "S996",
+      "tier": "B",
+      "publisher": "PetMD — K. Arford, reviewed by B. J. Morrison, DVM (updated 2023-03-16)",
+      "title": "Neapolitan Mastiff",
+      "url": "https://www.petmd.com/dog/breeds/neapolitan-mastiff"
+    },
+    {
+      "id": "S1000",
+      "tier": "A",
+      "publisher": "Veterinary and Animal Science 13:100194 (2021)",
+      "title": "Bell L., Hesketh S. Mastiff breed mortality: A study of owner experience, dog age and longevity. doi:10.1016/j.vas.2021.100194",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8379649"
     },
     {
       "id": "C1",
