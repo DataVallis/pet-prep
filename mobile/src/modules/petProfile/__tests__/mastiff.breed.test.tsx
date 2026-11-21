@@ -70,11 +70,12 @@ describe('M5-R10-45 Mastiff', () => {
   it('is found by its EN / SL names (with and without diacritics)', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     // M5-R10-71: the Bullmastiff's own name contains "mastiff" (substring search) — it is listed after the Mastiff.
-    expect(find('Mastiff')).toEqual(['mastiff', 'bullmastiff']);
+    // M5-R10-132: so does the Neapolitan Mastiff (»napolitanski mastif«) — listed after the Bullmastiff.
+    expect(find('Mastiff')).toEqual(['mastiff', 'bullmastiff', 'neapolitan_mastiff']);
     expect(find('English Mastiff')).toEqual(['mastiff']);
     expect(find('angleški mastif')).toEqual(['mastiff']);
     expect(find('angleski mastif')).toEqual(['mastiff']);
-    expect(find('mastif')).toEqual(['mastiff', 'bullmastiff']);
+    expect(find('mastif')).toEqual(['mastiff', 'bullmastiff', 'neapolitan_mastiff']);
   });
 
   it('shows its chips in the picker, quotes 6.000 / 4.500 steps and confirms as a challenge dog', () => {
