@@ -366,5 +366,31 @@
     "restartFailed": "Ponovni zagon ni uspel. Zaprite aplikacijo in jo znova odprite.",
     "error": "Posodobitev ni bilo mogoče preveriti. Preverite povezavo in poskusite znova.",
     "timeout": "Preverjanje je trajalo predolgo. Poskusite znova pozneje."
+  },
+  "phase2": {
+    "rowTitle": "Dobili smo pravo žival",
+    "rowSubtitle": "V pripravi — povejte nam, kaj bi vam pomagalo",
+    "badge": "V pripravi",
+    "title": "Pripravljamo pomočnika za pravega ljubljenčka",
+    "body": "Ta del je še v pripravi. Povejte nam, kaj bi vam pomagalo, in obvestili vas bomo, ko bo na voljo.",
+    "question": "Koliko bi bili pripravljeni plačati?",
+    "prices": {
+      "free": "Samo brezplačno",
+      "monthly_2_99": "2,99 € na mesec",
+      "monthly_5_99": "5,99 € na mesec"
+    },
+    "notify": "Obvestite me, ko bo na voljo",
+    "emailPlaceholder": "E-poštni naslov",
+    "submit": "Pošlji",
+    "thanksNotify": "Hvala! Obvestili vas bomo.",
+    "thanksPlain": "Hvala za odgovor!",
+    "back": "Nazaj",
+    "errors": {
+      "price_required": "Izberite eno od možnosti.",
+      "email_required": "Vpišite e-poštni naslov, da vas lahko obvestimo.",
+      "email_invalid": "Preverite e-poštni naslov.",
+      "offline": "Ni povezave. Poskusite znova, ko boste spet na spletu.",
+      "failed": "Pošiljanje ni uspelo. Poskusite znova."
+    }
   }
 }

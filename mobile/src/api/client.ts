@@ -52,6 +52,12 @@ export interface UserResponse extends SessionUser {
    * default off). Read by the api wrapper below → `modules/errorReporting`.
    */
   app_error_reports?: boolean;
+  /**
+   * M5-08 (validation plan §4.1): where the parent heard of PetPrep — `null` = not answered yet,
+   * missing = an older server (then the app never asks). Parents only.
+   * HAND-TYPED (M5-08 contract §1): switch to `schema.ts` once the backend ships the field.
+   */
+  acquisition_source?: AcquisitionSource | null;
 }
 
 /** `POST /api/login` response. */
@@ -63,8 +69,35 @@ export interface LoginResponse {
   awaiting_contract?: boolean | null;
 }
 
-/** `POST /api/register` body (M2-10a): parent self-registration. */
-export type RegisterParentRequest = components['schemas']['RegisterParentRequest'];
+/**
+ * M5-08 acquisition source (M5-08 contract §1): the answer to »Kje ste izvedeli za PetPrep?«.
+ * HAND-TYPED — switch to the generated enum in `schema.ts` once the backend PR is merged.
+ */
+export type AcquisitionSource =
+  | 'friend_family'
+  | 'instagram'
+  | 'tiktok'
+  | 'facebook'
+  | 'youtube'
+  | 'school_kindergarten'
+  | 'search'
+  | 'website'
+  | 'ad'
+  | 'other';
+
+/**
+ * M5-08: the two optional fields `POST /api/register`, `POST /api/auth/social` and
+ * `PATCH /api/parent/settings` take. `acquisition_detail` (≤ 60 chars) only with `ad` / `other`.
+ * HAND-TYPED (M5-08 contract §1) — drop once `RegisterParentRequest` / `SocialSignInRequest`
+ * in `schema.ts` carry them.
+ */
+export interface AcquisitionFields {
+  acquisition_source?: AcquisitionSource;
+  acquisition_detail?: string;
+}
+
+/** `POST /api/register` body (M2-10a): parent self-registration (+ M5-08 acquisition fields, hand-typed). */
+export type RegisterParentRequest = components['schemas']['RegisterParentRequest'] & AcquisitionFields;
 
 /**
  * `POST /api/register` 201 body — same shape as `LoginResponse` (parent token, `pet`
@@ -74,7 +107,7 @@ export type RegisterParentRequest = components['schemas']['RegisterParentRequest
 export type RegisterResponse = LoginResponse;
 
 /** `POST /api/auth/social` body (M2-10c): parent sign-in / sign-up with a Google or Apple ID token. */
-export type SocialSignInRequest = components['schemas']['SocialSignInRequest'];
+export type SocialSignInRequest = components['schemas']['SocialSignInRequest'] & AcquisitionFields;
 
 /**
  * `POST /api/auth/social` 200 body — the `POST /api/login` shape + `created` (a new account
@@ -196,6 +229,27 @@ export type GiveTreatResponse = operations['wish.treat']['responses'][200]['cont
 export type ParentWishesResponse = operations['wish.parentIndex']['responses'][200]['content']['application/json'];
 export type DeclineWishResponse = operations['wish.decline']['responses'][200]['content']['application/json'];
 export type RedeemPetItemResponse = operations['wish.redeem']['responses'][200]['content']['application/json'];
+
+/** M5-08 H6: what brought the parent to the dashboard (M5-08 contract §2). HAND-TYPED. */
+export type DashboardOpenTrigger = 'launch' | 'foreground' | 'push';
+
+/** M5-08 H7: the fake door's price answer (M5-08 contract §3, D3 monthly). HAND-TYPED. */
+export type Phase2PriceChoice = 'free' | 'monthly_2_99' | 'monthly_5_99';
+
+/** `POST /api/parent/phase2-interest` body. HAND-TYPED (M5-08 contract §3) — switch to `schema.ts` later. */
+export interface Phase2InterestRequest {
+  price_choice: Phase2PriceChoice;
+  email: string | null;
+  notify: boolean;
+}
+
+/** `POST /api/parent/phase2-interest` 200 body. HAND-TYPED. */
+export interface Phase2InterestResponse {
+  status: 'saved';
+}
+
+/** `PATCH /api/parent/settings` (M5-08 acquisition only) 200 body — read loosely. HAND-TYPED. */
+export type UpdateAcquisitionResponse = Record<string, unknown>;
 
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
 export type ParentDashboardResponse =
@@ -1355,6 +1409,35 @@ export const api = {
 
   /** GET /api/parent/dashboard — pet metrics, traffic light, quiet hours, activities. */
   getParentDashboard: () => apiRequest<ParentDashboardResponse>('/api/parent/dashboard'),
+
+  /**
+   * POST /api/parent/dashboard-opened {trigger} (M5-08 H6) — 204. Fire and forget: the caller
+   * debounces (30 min, `modules/validation/dashboardOpened.ts`), the server keeps ≤ 1 row per
+   * 30 min. Never touches the outage banner. HAND-TYPED path / body (M5-08 contract §2).
+   */
+  reportDashboardOpened: (trigger: DashboardOpenTrigger) =>
+    apiRequest<null>('/api/parent/dashboard-opened', { method: 'POST', body: { trigger }, silentStatus: true }),
+
+  /**
+   * POST /api/parent/phase2-interest/viewed (M5-08 H7) — 204; a tap on »Dobili smo pravo žival«.
+   * Fire and forget. HAND-TYPED (M5-08 contract §3).
+   */
+  reportPhase2Viewed: () => apiRequest<null>('/api/parent/phase2-interest/viewed', { method: 'POST', silentStatus: true }),
+
+  /**
+   * POST /api/parent/phase2-interest (M5-08 H7) — upsert of the parent's answer, 200 `{status}`;
+   * 422 `email_required` when `notify` is true without an e-mail. HAND-TYPED (M5-08 contract §3).
+   */
+  submitPhase2Interest: (body: Phase2InterestRequest) =>
+    apiRequest<Phase2InterestResponse>('/api/parent/phase2-interest', { method: 'POST', body: { ...body } }),
+
+  /**
+   * PATCH /api/parent/settings {acquisition_source, acquisition_detail?} (M5-08) — the late answer of
+   * a parent who signed up before the question existed. The server takes it only while the stored
+   * source is still null (else 200 and ignored). HAND-TYPED (M5-08 contract §1).
+   */
+  updateAcquisitionSource: (body: AcquisitionFields) =>
+    apiRequest<UpdateAcquisitionResponse>('/api/parent/settings', { method: 'PATCH', body: { ...body } }),
 
   /** GET /api/parent/quiet-hours — quiet hours config + the family zone they are read in. */
   getQuietHours: () =>

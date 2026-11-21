@@ -362,5 +362,31 @@
     "restartFailed": "The restart didn't work. Close the app and open it again.",
     "error": "Couldn't check for updates. Check your connection and try again.",
     "timeout": "The check took too long. Please try again later."
+  },
+  "phase2": {
+    "rowTitle": "We got a real pet",
+    "rowSubtitle": "In the works — tell us what would help you",
+    "badge": "In the works",
+    "title": "We're preparing a helper for your real pet",
+    "body": "This part is still in the works. Tell us what would help you, and we'll let you know when it's available.",
+    "question": "How much would you be willing to pay?",
+    "prices": {
+      "free": "Free only",
+      "monthly_2_99": "€2.99 a month",
+      "monthly_5_99": "€5.99 a month"
+    },
+    "notify": "Let me know when it's available",
+    "emailPlaceholder": "E-mail address",
+    "submit": "Send",
+    "thanksNotify": "Thank you! We'll let you know.",
+    "thanksPlain": "Thanks for answering!",
+    "back": "Back",
+    "errors": {
+      "price_required": "Please choose one option.",
+      "email_required": "Enter an e-mail address so we can let you know.",
+      "email_invalid": "Please check the e-mail address.",
+      "offline": "No connection. Try again when you're back online.",
+      "failed": "Couldn't send. Please try again."
+    }
   }
 }

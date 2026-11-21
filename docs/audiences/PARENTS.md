@@ -23,6 +23,11 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
    - Pod 70 točk ali če je kuža pred koncem odšel v zavetišče, certifikata ni: vidite **»Poročilo o izzivu«** s končno oceno in razlogom ter povezavo na 12-tedenski pregled.
    - Otrok certifikat vidi na svojem zaslonu, ko ga ustvarite; prej vidi »Starš ti bo pripravil certifikat.«, pri poročilu samo prijazno »Izziv je končan« — brez ocene. Na certifikatu je samo ime, ki ga vpišete; povezava do PDF-ja je časovno omejena in ni javna.
 
+## Vprašanje ob registraciji in »Dobili smo pravo žival« *(v aplikaciji od 21. 11. 2026 — strežniški del v ločeni posodobitvi, na telefonu še ni preverjeno)*
+- **»Kje ste izvedeli za PetPrep?«** Pri registraciji (z e-pošto ali ob prvi prijavi z Googlom / Apple) lahko izberete, kje ste slišali za nas — prijatelji ali družina, Instagram, TikTok, Facebook, YouTube, vrtec ali šola, iskanje na spletu, spletna stran petprep.si, oglas ali drugo; pri »Oglas« in »Drugo« lahko dopišete kje (ali kodo iz oglasa). Odgovor **ni obvezen** in registracije nikoli ne ustavi. Če ste se registrirali prej, vas aplikacija vpraša **enkrat** s kartico na pregledu; z »Ne zdaj« je ne vidite več. Odgovor nam pove samo, kje nas starši najdejo; o otroku ne sprašujemo ničesar.
+- **»Dobili smo pravo žival«** — vrstica na pregledu pod otroki z oznako **»V pripravi«**. Pomočnik za pravega ljubljenčka je *v pripravi* (še ne obstaja): na zaslonu nam lahko poveste, koliko bi bili zanj pripravljeni plačati (samo brezplačno, 2,99 € ali 5,99 € na mesec), in nas prosite, da vas obvestimo, ko bo na voljo (vaš e-poštni naslov). Nič ni kupljeno in nič se ne zaračuna.
+- Aplikacija nam sporoči tudi, kdaj odprete pregled (največ enkrat na pol ure, brez podatkov o otroku) — tako vemo, ali je pregled za starše koristen.
+
 ## Cela družina *(v aplikaciji od 4. 10. 2026: seznam otrok, več otrok, skupni pes, povabilo drugega starša in pregled po otroku)*
 
 - **Seznam otrok v »Nadzor in družina«** *(od 16. 11. 2026, še ni preverjeno na telefonu)*: »Dodaj otroka« je na vrhu. Vsak otrok je zložen — vidite vzdevek, ljubljenčka, naprave in katere posebne nastavitve so vklopljene; »Več nastavitev« odpre ostale nastavitve in »Izbriši profil«.
