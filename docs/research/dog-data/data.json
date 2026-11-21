@@ -67435,6 +67435,640 @@
       }
     }
   },
+  "neapolitan_mastiff": {
+    "_note": "Added 2026-11-21 (M5-R10-132, unattended run — appended after the Black Russian Terrier: AKC 2024 No. 128 'Neopolitan Mastiff', S174 full-list table recorded 2026-11-20 '127 Black Russian Terrier', '128 Neopolitan Mastiff'). Quotes as returned by the web-fetch tool on 2026-11-21 (after a web search; the tool limits quotes from non-preapproved pages to ~125 characters — longer passages were returned as fragments); paraphrase only in notes, marked '(paraphrase)'. Sources S993–S1001 (reused S10, S11, S14, S24, S35, S45, S92, S174). No health percentages anywhere. FCI-Standard N° 197 (S993, 13.11.2015): Group 2 Section 2.1, Italy, weight males 60–70 / females 50–60 kg. RKC Breeds A–Z page reached (S994, royalkennelclub.com URL from a web search): 'Up to 1 hour per day' → 6,000 steps, 'Once a week' brushing (M5-R13), 'Under 10 years', Breed Watch 'Category 3'. PDSA breed page (S995): '1 hour', 'Under 10 years', skin folds 'daily cleaning' (M5-R14 fold cleaning every day), health conditions. Lifespan: no McMillan 2024 / VetCompass breed median reachable (Dogs Trust table S123 refused; the VetCompass giant-breed study S1001 abstract names no Neapolitan value) → the closest peer-reviewed breed value is the owner-survey mean age at death 8.17 y (Bell & Hesketh 2021, S1000) → senior 74, seeded verified=false (Bernese Mountain Dog precedent, open for David). Not found in Coren's ranking (S35 mirror read 2026-11-21 — the mirror also lacked the Mastiff, so unverified) → learning 1.0, open for David. Purina UK (S998, C) calls the breed brachycephalic — no A/B source does → no breathing chip, in marketing (BVA S92 only flat-faced), open for David. Names: FCI 'Mastino Napoletano', RKC / AKC 'Neapolitan Mastiff', nickname 'Neo'; Slovenian »napolitanski mastif« (Claude — KZS not checked, open for David).",
+    "identity": {
+      "value": "FCI No. 197, Group 2 Section 2.1 (Molossoid breeds, Mastiff type), Italy",
+      "unit": "—",
+      "source_id": "S993",
+      "quote": "Section 2:1 Molossoid breeds, Mastiff type.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 197 (S993): 'FCI-Standard N° 197', 'ORIGIN: Italy.', 'Without working trial.'; standard published 13.11.2015."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S994",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S994); PDSA 'Size | Large' (S995). FCI 50–70 kg (S993) is the Giant class of PetMD S10 (> 100 lb) — used only for the growth end."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            65,
+            75
+          ],
+          "female": [
+            60,
+            68
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S993",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 197 (S993) size at the withers: males 65–75 cm, females 60–68 cm (as returned, paraphrase of the table; no tolerance stated). PDSA 'Average height | 65-75 cm' (S995) — alternative.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                65,
+                75
+              ],
+              "female": [
+                65,
+                75
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S995",
+            "quote": "65-75 cm",
+            "confidence": "high",
+            "notes": "PDSA key fact, one range."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            60,
+            70
+          ],
+          "female": [
+            50,
+            60
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S993",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI-Standard N° 197 (S993): males 60–70 kg, females 50–60 kg (as returned, paraphrase of the table). PDSA (S995) 'Average weight | 50-70 kg' — alternative; PetMD / Hill's 110–150 lb (S996 / S997).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                50,
+                70
+              ],
+              "female": [
+                50,
+                70
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S995",
+            "quote": "50-70 kg",
+            "confidence": "high",
+            "notes": "PDSA key fact, one range."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI 50–70 kg ≈ 110–154 lb (S993) → the Giant class. Hill's (S997, C) 'some take up to 30 months to reach full adult weight' — background."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Neapolitan Mastiff growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S994",
+        "quote": "Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact 'Lifespan' (S994): an upper bound only — no lower bound for the runbook rule; basis of the shorter_lifespan chip."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S995",
+        "quote": "Under 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S995). Same band as the RKC — not exported twice."
+      },
+      "bell_hesketh_2021": {
+        "value": 8.17,
+        "unit": "years (mean age at death, owner survey)",
+        "source_id": "S1000",
+        "quote": "the Neapolitan Mastiff (n31) living the longest at 8.17 years",
+        "confidence": "medium",
+        "notes": "Bell & Hesketh 2021 (S1000, peer-reviewed owner survey of deceased mastiff-type dogs, Europe / North America; ages self-reported, not vet-confirmed): Table 3 'Neapolitan Mastiff | 31 | 8.17' (mean, no median per breed). The closest peer-reviewed breed value → basis of the senior boundary (verified=false, Bernese precedent). Background only — never shown as a statistic in the app."
+      },
+      "petmd": {
+        "value": "7–9",
+        "unit": "years",
+        "source_id": "S996",
+        "quote": "The Neapolitan Mastiff lifespan is just 7–9 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S996, vet-reviewed). Lower bound 7 y → 63 would be an alternative senior boundary (open for David)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the Dogs Trust McMillan 2024 table (S123) was refused by the fetch tool (client error, 2026-11-21); the VetCompass giant-breed study (O'Neill et al. 2026, S1001) is only reachable as an abstract that names no Neapolitan Mastiff value."
+      },
+      "senior_from": {
+        "value": 6.1,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the Bell & Hesketh 2021 mean 8.17 y (S1000) = 6.13 y → round(73.53) = 74 months (verified=false, Claude's suggestion — see proposed_game_parameters.neapolitan_mastiff.senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S1000"
+        ],
+        "months": 74,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S994",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S994) → rule 'up to N' → 60. PDSA 'Minimum exercise (per day) | 1 hour' (S995) agrees; Purina UK (S998, C) 'Enjoys one to two hours of walking a day' — background."
+      },
+      "daily_text": {
+        "value": "around an hour daily as an adult; not over-exercised as a puppy",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "As adult dogs, Neapolitan Mastiffs need around an hour of exercise daily, but shouldn’t be over-exercised as puppies",
+        "confidence": "high",
+        "notes": "PDSA (S995, fragment); the rest of the sentence: bones and joints still developing (paraphrase)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source advises a gap between meals and exercise: PDSA (S995) only says bloat 'most commonly occurs after they have eaten.' (a risk, not an instruction); PetMD (S996) gives feeding advice (two meals, floor bowl) but nothing about exercise → no meal-gap row (runbook M5-R16 needs a verbatim advice quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "steady and loyal, not aggressive; vigilant guard of property and family",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Steady and loyal, not aggressive.",
+        "confidence": "high",
+        "notes": "FCI (S993) also 'Guard dog of property and its inhabitants, always vigilant, intelligent, noble and majestic.'"
+      },
+      "family": {
+        "value": "loves family life",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Neapolitan Mastiffs are loyal, devoted dogs that love family life.",
+        "confidence": "high",
+        "notes": "PDSA (S995)."
+      },
+      "children": {
+        "value": "great with families and children — never left alone with a small child",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "Neapolitan Mastiffs are great with families and children",
+        "confidence": "medium",
+        "notes": "PetMD (S996, fragment; the sentence goes on: 'but they can be wary of strangers and may not get along with other pets.'). Supervision caveat: PetMD FAQ 'shouldn't leave one alone with a small child' (see small_children)."
+      },
+      "small_children": {
+        "value": "not to be left alone with a small child",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "shouldn't leave one alone with a small child",
+        "confidence": "medium",
+        "notes": "PetMD FAQ (S996, fragment) → not_for_small_children (large dog). Purina UK (S998, C) 'not an ideal breed for families with very small children' — background."
+      },
+      "other_pets": {
+        "value": "may not get along with other pets",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "they can be wary of strangers and may not get along with other pets.",
+        "confidence": "medium",
+        "notes": "PetMD (S996) → no other_pets chip. No prey-drive statement in an A/B source (Hill's S997, C: 'low')."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement (Purina UK S998, C: 'Tolerates being alone: 1/5' — background)."
+      },
+      "socialisation": {
+        "value": "early socialisation and positive-reinforcement training",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "Proper socialization and positive-reinforcement training from an early age",
+        "confidence": "high",
+        "notes": "PetMD (S996, fragment); the sentence continues: welcoming of new people, animals and situations (paraphrase)."
+      },
+      "drooling": {
+        "value": "drools a lot",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "They also drool a lot",
+        "confidence": "high",
+        "notes": "PetMD (S996); Dogs NZ (S999) 'a heavy drooler'."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source."
+      }
+    },
+    "health": {
+      "_note": "Conditions named by A/B sources; no percentages or odds here or anywhere in the app.",
+      "breed_watch": {
+        "value": "Category 3",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Category 3",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S994); PDSA (S995) 'Neapolitan Mastiffs are amongst a group of breeds classed as ‘Category Three’ by The Kennel Club.' — visible conformation concerns (welfare rule)."
+      },
+      "eyelids": {
+        "value": "eyelid problems (entropion / ectropion) from excessive facial skin",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Eyelid problems – such as entropion and ectropion – occur in Neapolitan Mastiffs due to excessive skin over the face",
+        "confidence": "high",
+        "notes": "PDSA (S995, fragment): the drooping lids rub and irritate the eye (paraphrase). FCI (S993) disqualifies 'Entropion / ectropion'."
+      },
+      "cherry_eye": {
+        "value": "cherry eye (third eyelid)",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "eversion of the nictitating membrane or ‘third eyelid’ generally occurs in younger dogs",
+        "confidence": "high",
+        "notes": "PDSA (S995, fragment)."
+      },
+      "gdv": {
+        "value": "bloat / gastric dilatation-volvulus (deep-chested breed)",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "occurs in large, deep chested breeds such as Neapolitan Mastiffs.",
+        "confidence": "high",
+        "notes": "PDSA (S995): 'This most commonly occurs after they have eaten.'"
+      },
+      "heart_dcm": {
+        "value": "dilated cardiomyopathy",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Dilated cardiomyopathy – is a degeneration of the muscles of the heart",
+        "confidence": "high",
+        "notes": "PDSA (S995); PetMD (S996) also lists it."
+      },
+      "wobbler": {
+        "value": "Wobbler syndrome (neck)",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Wobbler Syndrome – cervical spondylomyelopathy is a deformity or instability of the bones in the neck",
+        "confidence": "high",
+        "notes": "PDSA (S995, fragment)."
+      },
+      "back": {
+        "value": "back problems (degenerative disc disease)",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Back Problems – Neapolitan Mastiffs can suffer from back problems such as degenerative disc disease",
+        "confidence": "high",
+        "notes": "PDSA (S995, fragment)."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Neapolitan Mastiffs can be more prone to this condition but it can generally be managed with medication.",
+        "confidence": "high",
+        "notes": "PDSA (S995)."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Neapolitan Mastiffs can be more prone to seizures due to epilepsy",
+        "confidence": "high",
+        "notes": "PDSA (S995, fragment)."
+      },
+      "cancer": {
+        "value": "some cancers incl. bone tumours",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Neapolitan Mastiffs can be more prone to some forms of cancer including bone tumours",
+        "confidence": "high",
+        "notes": "PDSA (S995)."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC minimum tests (S994) hip and elbow schemes; PetMD (S996) lists hip and elbow dysplasia."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not found in Coren's ranking: the Wikipedia article mirror (S35, read 2026-11-21 via an IPFS copy — en.wikipedia.org refused) lists no Neapolitan Mastiff, but the mirror also lacked the Mastiff (rank 72, S35 earlier) → unverified, open for David."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "See coren_rank."
+      },
+      "training_notes": {
+        "value": "training needs patience; reward-based",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Training will require patience, but can be achieved using reward-based techniques.",
+        "confidence": "high",
+        "notes": "PDSA (S995)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "×",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "See proposed_game_parameters.neapolitan_mastiff.learning_multiplier."
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, heavy and massive dog with a bulky appearance; body 15 % longer than tall",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Large, heavy and massive dog with a bulky appearance.",
+        "confidence": "high",
+        "notes": "FCI (S993)."
+      },
+      "colours": {
+        "value": [
+          "grey",
+          "black",
+          "brown",
+          "fawn",
+          "deep fawn"
+        ],
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Preferred colours are: grey, lead grey and black, but also brown, fawn and deep fawn (red deer).",
+        "confidence": "high",
+        "notes": "FCI (S993). 'All these colours may be brindled; hazel, dove-grey and isabella shades are tolerated.' — not in the picker (tolerated only). 'Permissible is a little white patch on the chest and/or on the tip of the toes.'; disqualifying: 'Extensive white patches; white markings on the head.' Grey first (the most typical, portrait default)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no colour frequencies; draft weights in breed_appearance.php (verified=false)."
+      },
+      "coat": {
+        "value": "short, hard, dense coat of the same length all over (max 1.5 cm)",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Short and hard, dense, of the same length all over.",
+        "confidence": "high",
+        "notes": "FCI (S993) 'Uniform short length that measures 1.5 cm maximum.'"
+      },
+      "skin": {
+        "value": "thick, abundant, loose skin forming folds and wrinkles on the head; never to the extent that it harms health",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Thick, abundant, and lose all over the body, particularly on the head where it forms numerous folds and wrinkles.",
+        "confidence": "high",
+        "notes": "FCI (S993) — skin must never be 'in abundance to the extent to interfere with the dogs' health and wellbeing.' Welfare (Breed Watch Category 3, S994 / S995): the AI shows moderate folds and tight eyelids."
+      },
+      "eyes": {
+        "value": "set well apart, rather round, never protruding or too deep set",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Set well apart on an equal frontal level; rather round in shape",
+        "confidence": "high",
+        "notes": "FCI (S993) '… but never protruding or too deep set.'"
+      },
+      "ears": {
+        "value": "small, triangular, natural (uncropped)",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "The ears are natural.",
+        "confidence": "high",
+        "notes": "FCI (S993) 'Small in relation to the size of the dog, of triangular shape'."
+      },
+      "nose": {
+        "value": "large; black in black dogs, dark grey in other colours, chestnut in brown dogs",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "black for black subjects, dark grey in dogs of other colours, and chestnut for brown coats.",
+        "confidence": "high",
+        "notes": "FCI (S993)."
+      },
+      "muzzle": {
+        "value": "muzzle a third of the head length; skull to muzzle 2 : 1",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "The ratio skull-muzzle is as 2 to 1.",
+        "confidence": "high",
+        "notes": "FCI (S993) 'The length must be equal to a third of the length of the head.' Not flat-faced in the standard (welfare: the AI shows a clearly visible muzzle and open nostrils)."
+      },
+      "tail": {
+        "value": "broad and thick at the root, reaching the hock, hanging sabre-like at rest; natural",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": "Broad and thick at the root",
+        "confidence": "high",
+        "notes": "FCI (S993): reaches the articulation of the hock, at rest 'hanging and curved in sabre fashion'; absence of tail disqualifies."
+      }
+    },
+    "suitability": {
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact → large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact → brushing 1× a week (M5-R13)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' → sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact → shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Country",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 3",
+        "unit": "—",
+        "source_id": "S994",
+        "quote": "Category 3",
+        "confidence": "high",
+        "notes": "RKC Breed Watch."
+      },
+      "pdsa_grooming": {
+        "value": "brushing once a week; skin folds cleaned daily",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Grooming is minimal, and brushing once a week is generally all that’s needed to keep the coat in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S995)."
+      },
+      "pdsa_skin_folds": {
+        "value": "skin folds cleaned every day",
+        "unit": "—",
+        "source_id": "S995",
+        "quote": "Their skin folds will need daily cleaning.",
+        "confidence": "high",
+        "notes": "PDSA (S995) → fold cleaning every day (M5-R14)."
+      },
+      "petmd_brushing": {
+        "value": "gently brushed a few times each week",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "needs to be gently brushed a few times each week",
+        "confidence": "medium",
+        "notes": "PetMD (S996, fragment) — no number; RKC preferred."
+      },
+      "petmd_bath": {
+        "value": "a bath once or twice a month",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "will need a bath once or twice a month, according to the USNMC.",
+        "confidence": "medium",
+        "notes": "PetMD (S996, fragment) → bath reminder once a month (range → lower bound, M5-R20)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears often",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "Clean their ears often with a dog-specific ear cleaner.",
+        "confidence": "medium",
+        "notes": "PetMD (S996) — no frequency → no ear task."
+      },
+      "petmd_skin": {
+        "value": "skin cleaned regularly",
+        "unit": "—",
+        "source_id": "S996",
+        "quote": "Neapolitan Mastiffs must have their skin cleaned regularly so their wrinkles stay healthy.",
+        "confidence": "medium",
+        "notes": "PetMD (S996) — no frequency (PDSA daily used)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -101058,6 +101692,307 @@
         "confidence": "medium",
         "notes": "FCI standard (S985) as in black_russian_terrier.appearance. Two standard colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (first standard colour, highest weight; weights unsourced); natural tail, natural ears"
+      }
+    },
+    "neapolitan_mastiff": {
+      "_note": "Unattended run M5-R10-132 (2026-11-21): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S994 'Up to 1 hour per day' → 60). Senior boundary 74 = Claude's suggestion (closest rule row: 0.75 × the Bell & Hesketh 2021 mean 8.17 y, S1000; RKC / PDSA 'Under 10 years' has no lower bound; no McMillan 2024 / VetCompass median reachable) → verified=false, open for David. Learning 1.0 (not found in Coren's ranking, S35 mirror — open for David). Built: brushing once a week (RKC 'Once a week', M5-R13), skin-fold cleaning every day (PDSA, M5-R14), bath reminder once a month (PetMD 'once or twice a month', M5-R20), puppy socialisation with the PetMD quote (M5-R17). No meal gap (no advice quote), no ear / nail / tooth / groomer task (no frequency), no heat warning (not flat-faced in an A/B source). No new vocabulary key. Welfare: Breed Watch Category 3 → eyelid_problems; in marketing (BVA S92 advice concerns flat-faced breeds only). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S994",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S994) → rule 'up to N' → 60. PDSA (S995) '1 hour' agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S995",
+            "quote": "1 hour",
+            "notes": "PDSA 'Minimum exercise (per day)' — the same number; RKC preferred."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S994 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S994",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months. PDSA (S995): not over-exercised as puppies (paraphrase) — the cap applies.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 74
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds) — runbook rule. senior 74 = round(0.75 × 8.17 y × 12) — Claude's suggestion (see senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1000"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_7_y": 63
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (senior: see senior_boundary_months — predlog Claude)"
+      },
+      "senior_boundary_months": {
+        "value": 74,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNCONFIRMED suggestion (Claude, waiting for David): RKC / PDSA 'Under 10 years' (S994 / S995) has no lower bound and no McMillan 2024 / VetCompass median is reachable → the closest rule row: 0.75 × the peer-reviewed owner-survey mean 8.17 y (Bell & Hesketh 2021, S1000) × 12 = 73.5 → 74. Alternatives: PetMD lower bound 7 y (S996) → 63; Dogs Trust > 7 y (S14) → 84.",
+        "derived_from": [
+          "S11",
+          "S1000"
+        ],
+        "decision": "predlog Claude 2026-11-21 (najbližja vrstica pravila runbooka, M5-R10-132) — čaka Davida: 74 mesecev (0,75 × 8,17 leta, S1000)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 74
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (senior = Claude's suggestion 74, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 74 — senior: predlog Claude)"
+      },
+      "learning_multiplier": {
+        "value": 1,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not found in Coren's ranking (S35 mirror, unverified — see neapolitan_mastiff.trainability.coren_rank) → unranked rule → 1.0. No individual variation (pedigree). If David finds a rank, the tier rule applies.",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S994",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "neapolitan_mastiff.suitability.rkc_grooming. RKC 'Once a week' (S994) → 1 (runbook »Dog grooming«); PDSA (S995) 'brushing once a week' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S996",
+            "quote": "needs to be gently brushed a few times each week",
+            "notes": "PetMD — no number; not used (RKC preferred)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "face_fold_cleaning": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R14)",
+        "source_id": "S995",
+        "quote": "Their skin folds will need daily cleaning.",
+        "confidence": "high",
+        "notes": "neapolitan_mastiff.suitability.pdsa_skin_folds. 'daily cleaning' → every day (Mastiff precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »daily cleaning« → vsak dan"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R20, never scored)",
+        "source_id": "S996",
+        "quote": "will need a bath once or twice a month, according to the USNMC.",
+        "confidence": "medium",
+        "notes": "neapolitan_mastiff.suitability.petmd_bath. 'once or twice a month' → the lower bound, once a month = every 4 weeks. Ears 'often', skin 'regularly' (PetMD) → no task; no nail / tooth / groomer frequency in a source.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): kopanje enkrat na mesec (PetMD »once or twice a month« → spodnja meja)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S996",
+        "quote": "Proper socialization and positive-reinforcement training from an early age",
+        "confidence": "high",
+        "notes": "neapolitan_mastiff.behaviour.socialisation (PetMD S996, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S996)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-132); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S995"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.family"
+            ],
+            "quote": "S995 'Neapolitan Mastiffs are loyal, devoted dogs that love family life.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S996"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.children"
+            ],
+            "quote": "S996 'Neapolitan Mastiffs are great with families and children' (never alone with a small child → not_for_small_children)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.suitability.rkc_size_of_home"
+            ],
+            "quote": "S994 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S996"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.small_children"
+            ],
+            "quote": "S996 'shouldn't leave one alone with a small child'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.suitability.rkc_lifespan",
+              "neapolitan_mastiff.lifespan.rkc"
+            ],
+            "quote": "S994 'Under 10 years'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S995",
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.health.eyelids",
+              "neapolitan_mastiff.health.breed_watch"
+            ],
+            "quote": "S995 'Eyelid problems – such as entropion and ectropion – occur in Neapolitan Mastiffs due to excessive skin over the face'; S994 Breed Watch 'Category 3'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S994"
+            ],
+            "refs": [
+              "neapolitan_mastiff.suitability.rkc_shedding"
+            ],
+            "quote": "S994 key fact 'Sheds' 'Yes'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S996"
+            ],
+            "refs": [
+              "neapolitan_mastiff.behaviour.drooling"
+            ],
+            "quote": "S996 'They also drool a lot'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PetMD: never alone with a small child → not_for_small_children.",
+          "apartment": "RKC 'Large house' (S994).",
+          "other_pets": "PetMD 'may not get along with other pets'.",
+          "chases_small_pets": "No prey-drive statement in an A/B source.",
+          "experienced_owner": "No A/B quote naming experienced owners.",
+          "brachycephalic_breathing": "Only Purina UK (S998, tier C) calls the breed brachycephalic; the FCI muzzle is a third of the head (S993) → no chip, open for David.",
+          "sensitive_skin / back_spine / heart_and_spine": "PDSA lists back problems and the PetMD skin allergies, but the welfare chip follows the Breed Watch point that the sources name (eyelids, S995) — the rest stays in the register health list.",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (welfare breed — never with exaggerated folds or drooping eyelids, never alone with small children)",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 3 (S994) → eyelid_problems chip. No veterinary association advises against advertising the breed type: BVA S92 concerns flat-faced (brachycephalic) dogs and no A/B source calls the Neapolitan Mastiff flat-faced (only Purina UK, tier C) — open for David.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising this breed type)"
+      },
+      "ai_appearance": {
+        "value": "adult Neapolitan Mastiff, grey: large, heavy, massive dog with a bulky body; short, hard, dense coat; loose skin with moderate folds on the head and a moderate dewlap; tight eyelids, clearly visible muzzle with open nostrils; small natural triangular ears; natural sabre tail",
+        "unit": "—",
+        "source_id": "S993",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Standard colours only (S993): grey, black, brown, fawn, deep fawn; grey = portrait default. Welfare (Category 3): moderate folds, no drooping eyelids.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only, grey portrait, moderate folds (welfare)"
       }
     }
   }

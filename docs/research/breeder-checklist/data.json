@@ -4332,6 +4332,47 @@
         }
       ],
       "notes": "RKC Breeds A–Z page 'Russian Black Terrier' (dog-data S986, 2026-11-20, M5-R10-131): minimum (Good Practice schemes and tests) — genetic diversity (inbreeding_coi), BVA/RKC elbow and hip schemes; Best Practice — DNA HUU, DNA JLPP, prcd-PRA. No new test keys."
+    },
+    "neapolitan_mastiff": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S994",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S994",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S994",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S994",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S994",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page 'Neapolitan Mastiff' (dog-data S994, 2026-11-21, M5-R10-132): minimum (Good Practice schemes and tests) — genetic diversity (inbreeding_coi), BVA/KC elbow and hip schemes; Best Practice — BVA/KC/ISDS eye scheme. No new test keys."
     }
   }
 }
