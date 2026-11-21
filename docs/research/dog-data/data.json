@@ -101799,7 +101799,7 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 74 — senior: predlog Claude)"
       },
       "learning_multiplier": {
-        "value": 1,
+        "value": 1.0,
         "unit": "× mixed-breed learning speed (game)",
         "source_id": null,
         "quote": null,
