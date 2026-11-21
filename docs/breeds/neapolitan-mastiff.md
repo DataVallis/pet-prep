@@ -54,6 +54,7 @@
 
 ## Odprto za Davida
 
+- **Ustavitev zagona (2026-11-21):** CI je dvakrat padel zaradi kode (skupni testi z ročnimi seznami pasem: DavidStageDecisionsTest / TrainingDecisionsTest, nato MastiffBreedTest, ki je trdil, da `neapolitan_mastiff` ni ključ pasme). Vse tri popravke sem potisnil na vejo; po pravilu runbooka PR #1472 ostaja odprt. Ko je `CI OK` zelen: združite, nato portret (§8), barve (§8b) in spletna stran (§9) — prej pasme ne objavljajte na petprep.si.
 - **Meja »starejši« (74 mesecev):** predlog Claude, `verified=false`. RKC / PDSA navajata le »Under 10 years«; mediane McMillan 2024 / VetCompass za pasmo nisem dosegel. Osnova je povprečje 8,17 leta iz ankete lastnikov (Bell & Hesketh 2021, S1000). Alternativi: 63 (PetMD 7 let) ali 84 (Dogs Trust »> 7 let«). Ob ročnem pregledu tabele Dogs Trust / študije VetCompass o velikanskih pasmah (S1001) lahko mejo popravite.
 - **Coren:** Wikipedija ni bila dosegljiva; zrcalna kopija pasme ne navaja, a nima niti angleškega mastifa → 1,0× je nepreverjen. Potrdite.
 - **Kratek gobec:** Purina UK (vir C) pasmo imenuje brahicefalno; standard FCI (S993) navaja gobec tretjino dolžine glave in noben vir A/B pasme ne imenuje ploskoobrazne → brez čipa za dihanje in pasma ostaja v marketingu. Preverite, ali želite čip ali izključitev iz marketinga.
