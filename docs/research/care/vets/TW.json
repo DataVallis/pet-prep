@@ -51,7 +51,8 @@
         "sv": "Räddningsjour dygnet runt för skadade eller herrelösa djur (även via Taipeis medborgarlinje 1999). Ingen veterinärklinik.",
         "da": "Døgnåben redningshotline for tilskadekomne eller herreløse dyr (også via Taipeis borgerhotline 1999). Ikke en dyreklinik.",
         "fi": "Loukkaantuneiden tai kulkueläinten pelastuspuhelin 24 h (myös Taipein kaupungin asukaspuhelimen 1999 kautta). Ei ole eläinlääkäriklinikka.",
-        "nb": "Redningstelefon hele døgnet for skadde eller omstreifende dyr (også via Taipeis innbyggertelefon 1999). Ikke en dyreklinikk."
+        "nb": "Redningstelefon hele døgnet for skadde eller omstreifende dyr (også via Taipeis innbyggertelefon 1999). Ikke en dyreklinikk.",
+        "sl": "24-urna reševalna linija za poškodovane ali potepuške živali (tudi prek taipejske občinske linije 1999). Ni veterinarska klinika."
       }
     },
     {
@@ -77,7 +78,8 @@
         "sv": "Akut- och intensivvårdscentral dygnet runt; akutvård året runt (meddelande inför helger). Ring innan du kommer.",
         "da": "Døgnåbent akut- og intensivcenter; akut hjælp hele året (se meddelelse om helligdage). Ring på forhånd.",
         "fi": "Päivystys- ja tehohoitokeskus 24 h; päivystys ympäri vuoden (huomioi lomailmoitukset). Soita etukäteen.",
-        "nb": "Akutt- og intensivsenter åpent hele døgnet; akuttberedskap hele året (varsel om helligdager). Ring på forhånd."
+        "nb": "Akutt- og intensivsenter åpent hele døgnet; akuttberedskap hele året (varsel om helligdager). Ring på forhånd.",
+        "sl": "24-urni center za nujno in intenzivno oskrbo; nujna pomoč vse leto (obvestilo o praznikih). Vnaprej pokličite."
       }
     },
     {
@@ -103,7 +105,8 @@
         "sv": "Akutvård för katter och hundar dygnet runt. Ring innan du kommer.",
         "da": "Akut hjælp døgnet rundt til katte og hunde. Ring på forhånd.",
         "fi": "Kissojen ja koirien päivystys 24 h. Soita etukäteen.",
-        "nb": "Akuttbehandling av katter og hunder hele døgnet. Ring på forhånd."
+        "nb": "Akuttbehandling av katter og hunder hele døgnet. Ring på forhånd.",
+        "sl": "24-urna nujna pomoč za mačke in pse. Vnaprej pokličite."
       }
     },
     {
@@ -114,11 +117,11 @@
       "address": "台北市萬華區中華路二段2號",
       "phone": "02-23880122",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin lists a 24-hour statement for the CNY period; Line Today lists it as 展望急診動物醫院 in its 24-hour roundup (02-2388-0122). Year-round 24 h not confirmed on own page. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin lists a 24-hour statement for the CNY period; Line Today lists it as 展望急診動物醫院 in its 24-hour roundup (02-2388-0122). Year-round 24 h not confirmed on own page. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -129,7 +132,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -155,7 +159,8 @@
         "sv": "Akutvård dygnet runt. Ring innan du kommer.",
         "da": "Akut hjælp døgnet rundt. Ring på forhånd.",
         "fi": "Päivystys 24 h. Soita etukäteen.",
-        "nb": "Akuttbehandling hele døgnet. Ring på forhånd."
+        "nb": "Akuttbehandling hele døgnet. Ring på forhånd.",
+        "sl": "24-urna nujna pomoč. Vnaprej pokličite."
       }
     },
     {
@@ -166,11 +171,11 @@
       "address": "台北市大同區寧夏路1號",
       "phone": "02-25563320",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2556-3320). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2556-3320). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -181,7 +186,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -192,11 +198,11 @@
       "address": "台北市民生西路249號1樓",
       "phone": "02-25530371",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period only confirmed). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period only confirmed). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -207,7 +213,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -218,11 +225,11 @@
       "address": "台北市士林區忠誠路一段102號",
       "phone": "02-28341119",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2834-1119). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it (02-2834-1119). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -233,7 +240,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -244,11 +252,11 @@
       "address": "台北市中正區羅斯福路四段162號1樓",
       "phone": "02-23632020",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "Independent check 2026-11-11: udn page has no 24H label for this clinic; Royal Canin (different phone 02-23581199, CNY list) says all-day emergency. Conflict, so 24 h not confirmed: downgraded. Phone 02-2363-2020 matches udn and Line Today. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Independent check 2026-11-11: udn page has no 24H label for this clinic; Royal Canin (different phone 02-23581199, CNY list) says all-day emergency. Conflict, so 24 h not confirmed: downgraded. Phone 02-2363-2020 matches udn and Line Today. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -259,7 +267,8 @@
         "sv": "Uppges ha öppet dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -285,7 +294,8 @@
         "sv": "Nattjour för akutfall och slutenvård dygnet runt. Ring innan du kommer.",
         "da": "Akutvagt om natten og indlæggelse døgnet rundt. Ring på forhånd.",
         "fi": "Yöpäivystys ja vuodeosastohoito 24 h. Soita etukäteen.",
-        "nb": "Akuttjeneste natt og døgnåpen innleggelse. Ring på forhånd."
+        "nb": "Akuttjeneste natt og døgnåpen innleggelse. Ring på forhånd.",
+        "sl": "Nočna nujna pomoč in 24-urna bolnišnična oskrba. Vnaprej pokličite."
       }
     },
     {
@@ -311,7 +321,8 @@
         "sv": "Akutsjukhus för katter och hundar; personal på plats dygnet runt för inlagda djur. Ring innan du kommer.",
         "da": "Akuthospital for katte og hunde; personale til stede døgnet rundt hos indlagte kæledyr. Ring på forhånd.",
         "fi": "Kissojen ja koirien päivystyssairaala; henkilökunta paikalla ympäri vuorokauden sairaalahoidossa oleville eläimille. Soita etukäteen.",
-        "nb": "Akuttsykehus for katter og hunder; personell på stedet døgnet rundt for innlagte dyr. Ring på forhånd."
+        "nb": "Akuttsykehus for katter og hunder; personell på stedet døgnet rundt for innlagte dyr. Ring på forhånd.",
+        "sl": "Nujna bolnišnica za mačke in pse; za hospitalizirane bolnike je osebje prisotno ves čas. Vnaprej pokličite."
       }
     },
     {
@@ -322,11 +333,11 @@
       "address": "台北市內湖區舊宗路一段30巷13號1、2樓",
       "phone": "02-87918706",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Line Today roundup lists it; Royal Canin shows 24-hour only from 2/1 (holiday); no explicit year-round 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in 24-hour roundup articles; call to confirm hours.",
+      "note": "Line Today roundup lists it; Royal Canin shows 24-hour only from 2/1 (holiday); no explicit year-round 24 h. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in 24-hour roundup articles; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -337,7 +348,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -348,11 +360,11 @@
       "address": "台北市北投區懷德街6-3號",
       "phone": "02-28939752",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -363,7 +375,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -374,11 +387,11 @@
       "address": "台北市松山區民生東路五段212巷1號",
       "phone": "02-27607639",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Only in Line Today roundup; no label on the entry itself. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -389,7 +402,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -415,7 +429,8 @@
         "sv": "Ring för att bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
         "fi": "Varmista aukioloajat soittamalla.",
-        "nb": "Ring for å bekrefte åpningstidene."
+        "nb": "Ring for å bekrefte åpningstidene.",
+        "sl": "Pokličite in preverite urnik."
       }
     },
     {
@@ -426,11 +441,11 @@
       "address": "新北市林口區忠福路129號",
       "phone": "02-26090119",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -441,7 +456,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -452,11 +468,11 @@
       "address": "新北市中和區中山路三段2號",
       "phone": "02-22263639",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Line Today roundup; Royal Canin 24 h only from 2/2 (holiday). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Line Today roundup; Royal Canin 24 h only from 2/2 (holiday). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -467,7 +483,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -478,11 +495,11 @@
       "address": "新北市新店區安康路二段115-1號",
       "phone": "02-22118890",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -493,7 +510,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -504,11 +522,11 @@
       "address": "新北市中和區中正路639號",
       "phone": "02-22218515",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -519,7 +537,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -530,11 +549,11 @@
       "address": "新北市三重區中正北路23號",
       "phone": "02-89829291",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -545,7 +564,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -556,11 +576,11 @@
       "address": "新北市新莊區幸福路795號",
       "phone": "02-29975827",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Only in Line Today roundup. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -571,7 +591,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -582,11 +603,11 @@
       "address": "桃園市桃園區三民路三段381號",
       "phone": "03-3333816",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today and udn list it (03-333-3816). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today and udn list it (03-333-3816). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -597,7 +618,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -623,7 +645,8 @@
         "sv": "Akut- och intensivvårdscentral dygnet runt. Ring innan du kommer.",
         "da": "Døgnåbent akut- og intensivcenter. Ring på forhånd.",
         "fi": "Päivystys- ja tehohoitokeskus 24 h. Soita etukäteen.",
-        "nb": "Akutt- og intensivsenter åpent hele døgnet. Ring på forhånd."
+        "nb": "Akutt- og intensivsenter åpent hele døgnet. Ring på forhånd.",
+        "sl": "24-urni center za nujno in intenzivno oskrbo. Vnaprej pokličite."
       }
     },
     {
@@ -634,11 +657,11 @@
       "address": "桃園市桃園區民生路495-9號",
       "phone": "03-3363252",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period); Line Today roundup lists it. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -649,7 +672,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -660,11 +684,11 @@
       "address": "桃園市中壢區洽溪路179號",
       "phone": "03-2877119",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -675,7 +699,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -686,11 +711,11 @@
       "address": "桃園市桃園區永安路765巷77號",
       "phone": "03-2717530",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24 h statement with an exception for New Year's Eve before 21:00. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24 h statement with an exception for New Year's Eve before 21:00. Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -701,7 +726,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -712,11 +738,11 @@
       "address": "桃園市中壢區延平路18號",
       "phone": "03-4535740",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://today.line.me/tw/v2/article/vEqe6K",
       "checked": "2026-11-11",
-      "note": "Line Today roundup (address no. 20 there vs 18 on Royal Canin). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "Line Today roundup (address no. 20 there vs 18 on Royal Canin). Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -727,7 +753,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -753,7 +780,8 @@
         "sv": "Akut dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutmodtagelse. Ring på forhånd.",
         "fi": "Päivystys 24 h. Soita etukäteen.",
-        "nb": "Akutt hjelp hele døgnet. Ring på forhånd."
+        "nb": "Akutt hjelp hele døgnet. Ring på forhånd.",
+        "sl": "24-urna nujna pomoč. Vnaprej pokličite."
       }
     },
     {
@@ -779,7 +807,8 @@
         "sv": "Akut dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutmodtagelse. Ring på forhånd.",
         "fi": "Päivystys 24 h. Soita etukäteen.",
-        "nb": "Akutt hjelp hele døgnet. Ring på forhånd."
+        "nb": "Akutt hjelp hele døgnet. Ring på forhånd.",
+        "sl": "24-urna nujna pomoč. Vnaprej pokličite."
       }
     },
     {
@@ -790,11 +819,11 @@
       "address": "台中市北屯區北平路三段75之12號",
       "phone": "04-22385886",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -805,7 +834,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -816,11 +846,11 @@
       "address": "台中市北屯區北祥街8號",
       "phone": "0909-123464",
       "emergency_24h": false,
-      "duty": "Emergency or extended hours reported by clinic roundups, mainly for holiday periods. Call ahead to confirm.",
+      "duty": "Emergency or extended hours, mainly for holiday periods. Call ahead to confirm.",
       "small_animals": true,
       "source_url": "https://www.royalcanin.com/tw/about-us/news/veterinary-clinics-open-during-cny",
       "checked": "2026-11-11",
-      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h.",
+      "note": "Royal Canin: 24-hour statement (CNY period). Independent check 2026-11-11: name, phone and 24-hour statement confirmed on the source_url page; clinic's own site not opened (robots/provenance), so only a secondary page. Orchestrator 2026-11-11: only a holiday-period (CNY) or secondary-roundup 24-h statement, year-round 24 h not confirmed on a page -> set to not 24 h. reported by clinic roundups",
       "duty_i18n": {
         "es": "Urgencias u horario ampliado según recopilaciones de clínicas, sobre todo en periodos festivos. Llama antes para confirmarlo.",
         "it": "Orari di emergenza o prolungati segnalati da elenchi di cliniche, soprattutto nei periodi festivi. Telefonare in anticipo per conferma.",
@@ -831,7 +861,8 @@
         "sv": "Akutöppettider eller förlängda öppettider enligt kliniköversikter, främst under helgperioder. Ring innan du kommer för att bekräfta.",
         "da": "Akut- eller forlængede åbningstider ifølge klinikoversigter, især i helligdagsperioder. Ring på forhånd for at bekræfte.",
         "fi": "Klinikkakoosteissa ilmoitetaan päivystys tai pidennetyt aukioloajat, lähinnä lomakausina. Varmista soittamalla etukäteen.",
-        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte."
+        "nb": "Akutt- eller utvidet åpningstid er rapportert i klinikkoversikter, hovedsakelig i ferieperioder. Ring på forhånd for å bekrefte.",
+        "sl": "Nujna pomoč ali podaljšan urnik, predvsem v prazničnem času. Vnaprej pokličite in preverite."
       }
     },
     {
@@ -857,7 +888,8 @@
         "sv": "Nattjour för akutfall. Ring innan du kommer.",
         "da": "Akutvagt om natten. Ring på forhånd.",
         "fi": "Yöpäivystys. Soita etukäteen.",
-        "nb": "Akuttjeneste natt. Ring på forhånd."
+        "nb": "Akuttjeneste natt. Ring på forhånd.",
+        "sl": "Nočna nujna pomoč. Vnaprej pokličite."
       }
     },
     {
@@ -868,11 +900,11 @@
       "address": "台中市西區五權八街100號",
       "phone": "04-23710496",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn/Line Today roundups list it with no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "udn/Line Today roundups list it with no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -883,7 +915,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -909,7 +942,8 @@
         "sv": "Akut dygnet runt. Ring innan du kommer.",
         "da": "Døgnåben akutmodtagelse. Ring på forhånd.",
         "fi": "Päivystys 24 h. Soita etukäteen.",
-        "nb": "Akutt hjelp hele døgnet. Ring på forhånd."
+        "nb": "Akutt hjelp hele døgnet. Ring på forhånd.",
+        "sl": "24-urna nujna pomoč. Vnaprej pokličite."
       }
     },
     {
@@ -920,11 +954,11 @@
       "address": "高雄市仁武區鳳仁路231號",
       "phone": "07-3740964",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -935,7 +969,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -946,11 +981,11 @@
       "address": "高雄市鼓山區大順一路935號",
       "phone": "07-5503532",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -961,7 +996,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -972,11 +1008,11 @@
       "address": "花蓮縣花蓮市上海街63號",
       "phone": "03-8341853",
       "emergency_24h": false,
-      "duty": "Reported as a 24-hour clinic; call to confirm hours.",
+      "duty": "24-hour clinic; call to confirm hours.",
       "small_animals": true,
       "source_url": "https://health.udn.com/health/story/123122/6910543",
       "checked": "2026-11-11",
-      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours.",
+      "note": "udn roundup, no own 24 h label. Only secondary pages opened (clinic's own site could not be fetched: provenance block); confirm on the clinic's own page. Removed from duty: Listed in a 24-hour roundup article; call to confirm hours. Reported as",
       "duty_i18n": {
         "es": "Según se indica, clínica abierta las 24 horas; llama para confirmar el horario.",
         "it": "Segnalata come clinica aperta 24 ore su 24; chiamare per confermare gli orari.",
@@ -987,7 +1023,8 @@
         "sv": "Uppges vara en klinik som är öppen dygnet runt; ring för att bekräfta öppettiderna.",
         "da": "Oplyses som døgnåben klinik; ring for at bekræfte åbningstiderne.",
         "fi": "Ilmoitettu 24 tunnin klinikaksi; varmista aukioloajat soittamalla.",
-        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene."
+        "nb": "Oppgis å være en døgnåpen klinikk; ring for å bekrefte åpningstidene.",
+        "sl": "24-urna klinika; pokličite in preverite urnik."
       }
     },
     {
@@ -1013,7 +1050,8 @@
         "sv": "Ring för att bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
         "fi": "Varmista aukioloajat soittamalla.",
-        "nb": "Ring for å bekrefte åpningstidene."
+        "nb": "Ring for å bekrefte åpningstidene.",
+        "sl": "Pokličite in preverite urnik."
       }
     },
     {
@@ -1039,7 +1077,8 @@
         "sv": "Ring för att bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
         "fi": "Varmista aukioloajat soittamalla.",
-        "nb": "Ring for å bekrefte åpningstidene."
+        "nb": "Ring for å bekrefte åpningstidene.",
+        "sl": "Pokličite in preverite urnik."
       }
     }
   ],

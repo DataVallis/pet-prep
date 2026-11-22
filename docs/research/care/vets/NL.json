@@ -405,7 +405,8 @@
         "sv": "Öppet hela dygnet alla dagar; akutpatienter dygnet runt, alla veckans dagar.",
         "da": "Åbent hele dagen hver dag; akutte patienter døgnet rundt, 7 dage om ugen.",
         "fi": "Auki koko päivän joka päivä; päivystyspotilaat 24 h, 7 päivää viikossa.",
-        "nb": "Åpent hele dagen, alle dager; akuttpasienter hele døgnet, sju dager i uken."
+        "nb": "Åpent hele dagen, alle dager; akuttpasienter hele døgnet, sju dager i uken.",
+        "sl": "Odprto ves dan, vsak dan; nujni primeri 24 ur na dan, 7 dni v tednu."
       },
       "note": "Located in Amstelveen, named Amsterdam.",
       "small_animals": true,
@@ -934,7 +935,8 @@
         "sv": "Vardagar 08.30–18.00, lör 10.00–14.00 (stängt en lördag av fyra). Utanför öppettid hänvisar de till Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600.",
         "da": "Hverdage 08.30–18.00, lør 10.00–14.00 (lukket én lørdag ud af fire). Uden for åbningstid henvises til Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600.",
         "fi": "Arkisin 8.30–18.00, la 10.00–14.00 (joka neljäs lauantai suljettu). Aukioloaikojen ulkopuolella ohjaa Medisch Centrum voor Dieren Amsterdamiin, 020 - 740 0600.",
-        "nb": "Hverdager 8.30–18.00, lør 10.00–14.00 (stengt én lørdag av fire). Utenom åpningstid henvises til Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600."
+        "nb": "Hverdager 8.30–18.00, lør 10.00–14.00 (stengt én lørdag av fire). Utenom åpningstid henvises til Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600.",
+        "sl": "Delavniki 8.30–18, sob 10–14 (vsako četrto soboto zaprto). Zunaj delovnega časa napotijo na Medisch Centrum voor Dieren Amsterdam, 020 - 740 0600."
       },
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/flevoland/almere/",
@@ -2461,7 +2463,8 @@
         "sv": "Akutfall och utanför öppettiderna: ring 077-3541643, du hänvisas till veterinären eller jourhavande veterinär.",
         "da": "Akutte tilfælde og uden for åbningstid: ring 077-3541643, du henvises til dyrlægen eller dyrlægen i vagt.",
         "fi": "Päivystystapaukset ja aukioloaikojen ulkopuolella: soita 077-3541643, sinut ohjataan eläinlääkärille tai päivystävälle eläinlääkärille.",
-        "nb": "Nødtilfeller og utenom åpningstid: ring 077-3541643, henvises til dyrlegen eller vakthavende dyrlege."
+        "nb": "Nødtilfeller og utenom åpningstid: ring 077-3541643, henvises til dyrlegen eller vakthavende dyrlege.",
+        "sl": "Nujni primeri in zunaj urnika: pokličite 077-3541643, napotijo vas k veterinarju ali dežurnemu veterinarju."
       },
       "small_animals": true,
       "url": "https://dierenkliniek-venlo.com/",
@@ -3183,7 +3186,8 @@
         "sv": "Samtal utanför öppettiderna vidarekopplas automatiskt till jourhavande veterinär (Vorden, på natten därefter EDZ Arnhem). Akut-/jourlinje utanför öppettiderna 0543-512124 (huvudnummer 0543-512385).",
         "da": "Uden for åbningstid videresendes opkald automatisk til dyrlægen i vagt (Vorden, om natten derefter EDZ Arnhem). Akut-/vagttelefon 0543-512124 (hovednummer 0543-512385).",
         "fi": "Aukioloaikojen ulkopuolella puhelut ohjataan automaattisesti päivystävälle eläinlääkärille (Vorden, yöllä EDZ Arnhem). Päivystys-/iltanumero 0543-512124 (päänumero 0543-512385).",
-        "nb": "Utenom åpningstid videresendes samtaler automatisk til vakthavende dyrlege (Vorden, deretter EDZ Arnhem om natten). Akutt-/vakttelefon 0543-512124 (hovednummer 0543-512385)."
+        "nb": "Utenom åpningstid videresendes samtaler automatisk til vakthavende dyrlege (Vorden, deretter EDZ Arnhem om natten). Akutt-/vakttelefon 0543-512124 (hovednummer 0543-512385).",
+        "sl": "Klici zunaj delovnega časa se samodejno preusmerijo na dežurnega veterinarja (Vorden, ponoči EDZ Arnhem). Nujna linija oz. linija zunaj delovnega časa 0543-512124 (glavna številka 0543-512385)."
       },
       "small_animals": true,
       "url": "https://www.dierenkliniekwinterswijk.nl/",

@@ -51,7 +51,8 @@
         "sv": "Undervisningsdjursjukhus, efter bokning: mån–fre 08.00–15.00, ons förlängda kvällstider, lör 09.00–13.00. Ingen akutmottagning för smådjur anges.",
         "da": "Undervisningshospital, efter aftale: man–fre 8.00–15.00, ons forlænget åbningstid om aftenen, lør 9.00–13.00. Ingen akutvagt for små dyr angivet.",
         "fi": "Opetussairaala, ajanvarauksella: ma–pe 8.00–15.00, ke pidennetty aukiolo illalla, la 9.00–13.00. Pieneläinten päivystystä ei ole ilmoitettu.",
-        "nb": "Universitetssykehus, etter timebestilling: man–fre 8.00–15.00, ons utvidet kveldsåpent, lør 9.00–13.00. Ingen akuttilbud for smådyr oppgitt."
+        "nb": "Universitetssykehus, etter timebestilling: man–fre 8.00–15.00, ons utvidet kveldsåpent, lør 9.00–13.00. Ingen akuttilbud for smådyr oppgitt.",
+        "sl": "Učna bolnišnica, po naročilu: pon–pet 8–15, sre podaljšan večerni čas, sob 9–13. Nujna služba za male ljubljenčke ni navedena."
       }
     },
     {
@@ -75,7 +76,8 @@
         "sv": "Mån–fre 08.00–18.00, lör 09.00–14.00. Utanför öppettiderna och vid akutfall: +1 868 688 8281.",
         "da": "man–fre 8.00–18.00, lør 9.00–14.00. Uden for åbningstid og ved akutte tilfælde: +1 868 688 8281.",
         "fi": "ma–pe 8.00–18.00, la 9.00–14.00. Päivystys ja apu aukioloajan ulkopuolella: +1 868 688 8281.",
-        "nb": "man–fre 8.00–18.00, lør 9.00–14.00. Utenom åpningstid og ved nødtilfeller: +1 868 688 8281."
+        "nb": "man–fre 8.00–18.00, lør 9.00–14.00. Utenom åpningstid og ved nødtilfeller: +1 868 688 8281.",
+        "sl": "Pon–pet 8–18, sob 9–14. Zunaj delovnega časa in nujni primeri: +1 868 688 8281."
       }
     },
     {
@@ -112,7 +114,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 725 2548.",
         "da": "Akut og uden for åbningstid: +1 868 725 2548.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 725 2548.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 725 2548."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 725 2548.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 725 2548."
       }
     },
     {
@@ -136,7 +139,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 759 3161.",
         "da": "Akut og uden for åbningstid: +1 868 759 3161.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 759 3161.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 759 3161."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 759 3161.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 759 3161."
       }
     },
     {
@@ -160,7 +164,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 310 1227.",
         "da": "Akut og uden for åbningstid: +1 868 310 1227.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 310 1227.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 310 1227."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 310 1227.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 310 1227."
       }
     },
     {
@@ -184,7 +189,8 @@
         "sv": "Mån–fre 08.00–16.45, lör 09.00–12.45, sön och helgdagar 09.00–10.45. WhatsApp +1 868 376 3427.",
         "da": "man–fre 8.00–16.45, lør 9.00–12.45, søn og helligdage 9.00–10.45. WhatsApp +1 868 376 3427.",
         "fi": "ma–pe 8.00–16.45, la 9.00–12.45, su ja pyhäpäivinä 9.00–10.45. WhatsApp +1 868 376 3427.",
-        "nb": "man–fre 8.00–16.45, lør 9.00–12.45, søn og helligdager 9.00–10.45. WhatsApp +1 868 376 3427."
+        "nb": "man–fre 8.00–16.45, lør 9.00–12.45, søn og helligdager 9.00–10.45. WhatsApp +1 868 376 3427.",
+        "sl": "Pon–pet 8–16.45, sob 9–12.45, ned in prazniki 9–10.45. WhatsApp +1 868 376 3427."
       }
     },
     {
@@ -208,7 +214,8 @@
         "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder.",
         "da": "Akut og uden for åbningstid kun for eksisterende kunder.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella vain nykyisille asiakkaille.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder."
+        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder.",
+        "sl": "Zunaj delovnega časa in nujni primeri samo za obstoječe stranke."
       }
     },
     {
@@ -232,7 +239,8 @@
         "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder: +1 868 715 3555.",
         "da": "Akut og uden for åbningstid kun for eksisterende kunder: +1 868 715 3555.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella vain nykyisille asiakkaille: +1 868 715 3555.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder: +1 868 715 3555."
+        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder: +1 868 715 3555.",
+        "sl": "Zunaj delovnega časa in nujni primeri samo za obstoječe stranke: +1 868 715 3555."
       }
     },
     {
@@ -256,7 +264,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 353 3412.",
         "da": "Akut og uden for åbningstid: +1 868 353 3412.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 353 3412.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 353 3412."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 353 3412.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 353 3412."
       }
     },
     {
@@ -280,7 +289,8 @@
         "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder: +1 868 701 4288.",
         "da": "Akut og uden for åbningstid kun for eksisterende kunder: +1 868 701 4288.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella vain nykyisille asiakkaille: +1 868 701 4288.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder: +1 868 701 4288."
+        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder: +1 868 701 4288.",
+        "sl": "Zunaj delovnega časa in nujni primeri samo za obstoječe stranke: +1 868 701 4288."
       }
     },
     {
@@ -304,7 +314,8 @@
         "sv": "Akutfall: +1 868 360 4802.",
         "da": "Akut: +1 868 360 4802.",
         "fi": "Päivystys: +1 868 360 4802.",
-        "nb": "Nødtilfeller: +1 868 360 4802."
+        "nb": "Nødtilfeller: +1 868 360 4802.",
+        "sl": "Nujni primeri: +1 868 360 4802."
       }
     },
     {
@@ -341,7 +352,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 333 1010.",
         "da": "Akut og uden for åbningstid: +1 868 333 1010.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 333 1010.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 333 1010."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 333 1010.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 333 1010."
       }
     },
     {
@@ -365,7 +377,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 342 5928.",
         "da": "Akut og uden for åbningstid: +1 868 342 5928.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 342 5928.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 342 5928."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 342 5928.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 342 5928."
       }
     },
     {
@@ -402,7 +415,8 @@
         "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder.",
         "da": "Akut og uden for åbningstid kun for eksisterende kunder.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella vain nykyisille asiakkaille.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder."
+        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder.",
+        "sl": "Zunaj delovnega časa in nujni primeri samo za obstoječe stranke."
       }
     },
     {
@@ -426,7 +440,8 @@
         "sv": "Utanför öppettiderna och vid akutfall endast för befintliga kunder.",
         "da": "Akut og uden for åbningstid kun for eksisterende kunder.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella vain nykyisille asiakkaille.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder."
+        "nb": "Vakt utenom åpningstid og nødtilfeller kun for eksisterende kunder.",
+        "sl": "Zunaj delovnega časa in nujni primeri samo za obstoječe stranke."
       }
     },
     {
@@ -450,7 +465,8 @@
         "sv": "Utanför öppettiderna och vid akutfall: +1 868 276 1706.",
         "da": "Akut og uden for åbningstid: +1 868 276 1706.",
         "fi": "Päivystys ja apu aukioloajan ulkopuolella: +1 868 276 1706.",
-        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 276 1706."
+        "nb": "Vakt utenom åpningstid og nødtilfeller: +1 868 276 1706.",
+        "sl": "Zunaj delovnega časa in nujni primeri: +1 868 276 1706."
       }
     }
   ],

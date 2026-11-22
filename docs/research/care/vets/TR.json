@@ -924,7 +924,8 @@
         "sv": "Service dygnet runt; ring innan du kommer",
         "da": "Åben døgnet rundt; ring på forhånd",
         "fi": "Palvelu ympäri vuorokauden (24/7); soita etukäteen",
-        "nb": "Døgnåpen tjeneste (sju dager i uken, hele døgnet); ring på forhånd"
+        "nb": "Døgnåpen tjeneste (sju dager i uken, hele døgnet); ring på forhånd",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; vnaprej pokličite"
       },
       "small_animals": true,
       "url": "https://www.veticana.com/",
@@ -1237,7 +1238,8 @@
         "sv": "Mån–lör 10.00–23.00; akutstöd nattetid och på helger",
         "da": "man–lør 10.00–23.00; akut hjælp om natten og i weekenden",
         "fi": "ma–la 10.00–23.00; päivystystuki öisin ja viikonloppuisin",
-        "nb": "man–lør 10.00–23.00; akuttstøtte natt og helg"
+        "nb": "man–lør 10.00–23.00; akuttstøtte natt og helg",
+        "sl": "Pon–sob 10–23; nujna pomoč ponoči in ob koncih tedna"
       },
       "small_animals": true,
       "url": "https://www.vetix.com.tr/",
@@ -1512,7 +1514,8 @@
         "sv": "Akutstöd dygnet runt; ring innan du kommer",
         "da": "Akut hjælp døgnet rundt; ring på forhånd",
         "fi": "Päivystystuki 24/7; soita etukäteen",
-        "nb": "Akuttilbud hele døgnet, alle dager; ring på forhånd"
+        "nb": "Akuttilbud hele døgnet, alle dager; ring på forhånd",
+        "sl": "Nujna pomoč 24/7; vnaprej pokličite"
       },
       "small_animals": true,
       "url": "https://bambiveteriner.com/",
@@ -1898,7 +1901,8 @@
         "sv": "Öppettider 09.00–20.00; även akutmottagning dygnet runt.",
         "da": "Åbningstid 09.00–20.00; også akutvagt døgnet rundt.",
         "fi": "Aukioloaika 9.00–20.00; lisäksi päivystys 24 h.",
-        "nb": "Åpningstid kl. 09.00–20.00; også akuttjeneste hele døgnet."
+        "nb": "Åpningstid kl. 09.00–20.00; også akuttjeneste hele døgnet.",
+        "sl": "Delovni čas 9–20; tudi nujna služba 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://maviankaveteriner.com/",
@@ -1989,7 +1993,8 @@
         "sv": "Telefonstöd dygnet runt: +90 542 213 66 36.",
         "da": "Hjælpetelefon døgnet rundt: +90 542 213 66 36.",
         "fi": "Tukipuhelin 24/7: +90 542 213 66 36.",
-        "nb": "Støttetelefon hele døgnet: +90 542 213 66 36."
+        "nb": "Støttetelefon hele døgnet: +90 542 213 66 36.",
+        "sl": "Telefonska linija 24/7: +90 542 213 66 36."
       },
       "small_animals": true,
       "url": "https://www.antalyaveterinerklinigi.com/",
@@ -2646,7 +2651,8 @@
         "sv": "Akutmottagning; ring innan du kommer",
         "da": "Akutvagt; ring på forhånd",
         "fi": "Päivystyspalvelu; soita etukäteen",
-        "nb": "Dyrlegevakt; ring på forhånd"
+        "nb": "Dyrlegevakt; ring på forhånd",
+        "sl": "Nujna služba; vnaprej pokličite"
       },
       "small_animals": true,
       "url": "https://fethiyevetpati.com/",
@@ -3221,7 +3227,8 @@
         "sv": "Ring för att bekräfta öppettiderna",
         "da": "Ring for at få bekræftet åbningstiderne",
         "fi": "Varmista aukioloajat soittamalla",
-        "nb": "Ring for å bekrefte åpningstidene"
+        "nb": "Ring for å bekrefte åpningstidene",
+        "sl": "Za potrditev delovnega časa pokličite"
       },
       "small_animals": true,
       "url": "https://isikveterinerlik.com/",
@@ -3626,7 +3633,8 @@
         "sv": "Mån–lör 09.00–20.00, sön 09.00–19.00; akutvård dygnet runt, ring innan du kommer",
         "da": "man–lør 09.00–20.00, søn 09.00–19.00; akut hjælp døgnet rundt, ring på forhånd",
         "fi": "ma–la 9.00–20.00, su 9.00–19.00; päivystys 24/7, soita etukäteen",
-        "nb": "man–lør 9.00–20.00, søn 9.00–19.00; akuttbehandling hele døgnet, ring på forhånd"
+        "nb": "man–lør 9.00–20.00, søn 9.00–19.00; akuttbehandling hele døgnet, ring på forhånd",
+        "sl": "Pon–sob 9–20, ned 9–19; nujna pomoč 24/7, vnaprej pokličite"
       },
       "small_animals": true,
       "url": "https://izmitacilveteriner.com/",
@@ -3780,7 +3788,8 @@
         "sv": "Öppenvårdsklinik vardagar 08.30–17.00; akutmottagning dygnet runt",
         "da": "Ambulatorium på hverdage 08.30–17.00; akutvagt døgnet rundt",
         "fi": "Vastaanotto arkisin 8.30–17.00; päivystys 24/7",
-        "nb": "Poliklinikk på hverdager kl. 08.30–17.00; akuttjeneste hele døgnet, alle dager"
+        "nb": "Poliklinikk på hverdager kl. 08.30–17.00; akuttjeneste hele døgnet, alle dager",
+        "sl": "Ambulanta ob delavnikih 8.30–17; nujna služba 24/7"
       },
       "small_animals": true,
       "url": "https://hayvanhastanesi.selcuk.edu.tr/",
@@ -3811,7 +3820,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan",
         "da": "Døgnåben, alle ugens dage",
         "fi": "Auki 24 h, 7 vrk viikossa",
-        "nb": "Åpent hele døgnet, alle dager i uken"
+        "nb": "Åpent hele døgnet, alle dager i uken",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
       },
       "small_animals": true,
       "url": "https://www.ikonyumvet.com/konya-veteriner",
@@ -3841,7 +3851,8 @@
         "sv": "Akutmottagning dygnet runt",
         "da": "Akutservice døgnet rundt",
         "fi": "Päivystys 24/7",
-        "nb": "Akuttjeneste hele døgnet"
+        "nb": "Akuttjeneste hele døgnet",
+        "sl": "Nujna služba 24/7"
       },
       "small_animals": true,
       "url": "https://www.notaveterinerkonya.com.tr/",
@@ -3871,7 +3882,8 @@
         "sv": "Mån–fre 09.00–19.00, lör 09.00–15.00, söndag stängt",
         "da": "man–fre 09.00–19.00, lør 09.00–15.00, lukket om søndagen",
         "fi": "ma–pe 9.00–19.00, la 9.00–15.00, su suljettu",
-        "nb": "Man–fre 09.00–19.00, lør 09.00–15.00, stengt søndag"
+        "nb": "Man–fre 09.00–19.00, lør 09.00–15.00, stengt søndag",
+        "sl": "Pon–pet 9–19, sob 9–15, ned zaprto"
       },
       "small_animals": true,
       "url": "https://piveterinerklinigi.com/",
@@ -3901,7 +3913,8 @@
         "sv": "Mån–lör 09.00–19.00, söndag stängt",
         "da": "man–lør 09.00–19.00, lukket om søndagen",
         "fi": "ma–la 9.00–19.00, su suljettu",
-        "nb": "man–lør 9.00–19.00, stengt søndag"
+        "nb": "man–lør 9.00–19.00, stengt søndag",
+        "sl": "Pon–sob 9–19, ned zaprto"
       },
       "small_animals": true,
       "url": "https://www.familyavet.com.tr/",
@@ -3931,7 +3944,8 @@
         "sv": "Vardagar 09.00–20.00, helger 10.00–19.00",
         "da": "Hverdage 09.00–20.00, weekend 10.00–19.00",
         "fi": "Arkisin 9.00–20.00, viikonloppuisin 10.00–19.00",
-        "nb": "Hverdager 9.00–20.00, helger 10.00–19.00"
+        "nb": "Hverdager 9.00–20.00, helger 10.00–19.00",
+        "sl": "Ob delavnikih 9–20, ob koncih tedna 10–19"
       },
       "small_animals": true,
       "url": "https://naturavet.kolay.vet/",
@@ -3961,7 +3975,8 @@
         "sv": "Dagligen 10.00–19.00",
         "da": "Dagligt 10.00–19.00",
         "fi": "Joka päivä 10.00–19.00",
-        "nb": "Alle dager 10.00–19.00"
+        "nb": "Alle dager 10.00–19.00",
+        "sl": "Vsak dan 10–19"
       },
       "small_animals": true,
       "url": "https://atanvet.kolay.vet/",
@@ -4018,7 +4033,8 @@
         "sv": "Öppet dygnet runt; tidsbokning önskas",
         "da": "Døgnåben; helst med tidsbestilling",
         "fi": "Auki 24/7; ajanvarausta pyydetään",
-        "nb": "Åpent hele døgnet; time bestilles på forhånd"
+        "nb": "Åpent hele døgnet; time bestilles på forhånd",
+        "sl": "Odprto 24/7; potrebno je naročilo"
       },
       "small_animals": true,
       "url": "https://www.petamicaveteriner.com/",
@@ -4063,7 +4079,8 @@
         "sv": "Nåbar via telefon dygnet runt, alla dagar i veckan; akutlinje +90 533 159 26 00",
         "da": "Kan kontaktes på telefon døgnet rundt, alle ugens dage; akutlinje +90 533 159 26 00",
         "fi": "Tavoitettavissa puhelimitse 24 h, 7 vrk viikossa; päivystysnumero +90 533 159 26 00",
-        "nb": "Nås på telefon hele døgnet, sju dager i uken; vakttelefon +90 533 159 26 00"
+        "nb": "Nås på telefon hele døgnet, sju dager i uken; vakttelefon +90 533 159 26 00",
+        "sl": "Po telefonu dosegljivi 24 ur na dan, 7 dni v tednu; nujna številka +90 533 159 26 00"
       },
       "small_animals": true,
       "url": "https://www.vetinternational.com.tr/iletisim/",
@@ -4094,7 +4111,8 @@
         "sv": "Mån–lör 09.30–18.00",
         "da": "man–lør 09.30–18.00",
         "fi": "ma–la 9.30–18.00",
-        "nb": "man–lør 9.30–18.00"
+        "nb": "man–lør 9.30–18.00",
+        "sl": "Pon–sob 9.30–18"
       },
       "small_animals": true,
       "url": "https://www.asvetkusadasi.com/",
@@ -4137,7 +4155,8 @@
         "sv": "Mån–lör 10.00–18.30, söndag stängt",
         "da": "man–lør 10.00–18.30, lukket om søndagen",
         "fi": "ma–la 10.00–18.30, su suljettu",
-        "nb": "man–lør 10.00–18.30, stengt søndag"
+        "nb": "man–lør 10.00–18.30, stengt søndag",
+        "sl": "Pon–sob 10–18.30, ned zaprto"
       },
       "small_animals": true,
       "url": "https://www.ozgencvet.com.tr/contact",
@@ -4167,7 +4186,8 @@
         "sv": "Mån–lör 09.00–19.00, sön 13.00–19.00",
         "da": "man–lør 09.00–19.00, søn 13.00–19.00",
         "fi": "ma–la 9.00–19.00, su 13.00–19.00",
-        "nb": "man–lør 9.00–19.00, søn 13.00–19.00"
+        "nb": "man–lør 9.00–19.00, søn 13.00–19.00",
+        "sl": "Pon–sob 9–19, ned 13–19"
       },
       "small_animals": true,
       "url": "https://riva-veteriner-klinigi.vercel.app/",
@@ -4196,7 +4216,8 @@
         "sv": "Mån–lör 09.00–19.00, sön 10.00–17.00",
         "da": "man–lør 09.00–19.00, søn 10.00–17.00",
         "fi": "ma–la 9.00–19.00, su 10.00–17.00",
-        "nb": "man–lør 9.00–19.00, søn 10.00–17.00"
+        "nb": "man–lør 9.00–19.00, søn 10.00–17.00",
+        "sl": "Pon–sob 9–19, ned 10–17"
       },
       "small_animals": true,
       "url": "https://petiteveteriner.com/",
@@ -4254,7 +4275,8 @@
         "sv": "Dagligen 09.00–19.00",
         "da": "Dagligt 09.00–19.00",
         "fi": "Joka päivä 9.00–19.00",
-        "nb": "Alle dager 09.00–19.00"
+        "nb": "Alle dager 09.00–19.00",
+        "sl": "Vsak dan 9–19"
       },
       "small_animals": true,
       "url": "https://akkentgaziantepdamlaveteriner.kolay.vet/",
@@ -4284,7 +4306,8 @@
         "sv": "Mån–lör 09.00–18.00",
         "da": "man–lør 09.00–18.00",
         "fi": "ma–la 9.00–18.00",
-        "nb": "man–lør 9.00–18.00"
+        "nb": "man–lør 9.00–18.00",
+        "sl": "Pon–sob 9–18"
       },
       "small_animals": true,
       "url": "https://www.trabzonveteriner.com/",

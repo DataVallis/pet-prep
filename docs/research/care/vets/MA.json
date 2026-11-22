@@ -47,7 +47,7 @@
       "address": "7 Rue de Provence, Casablanca 20250",
       "phone": "+212 648-596650",
       "emergency_24h": true,
-      "duty": "Emergency service advertised 24 hours a day, 7 days a week.",
+      "duty": "Emergency service 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "fr": "Service d’urgence annoncé 24 h/24, 7 j/7.",
         "es": "Servicio de urgencias anunciado las 24 horas, los 7 días de la semana.",
@@ -59,12 +59,13 @@
         "sv": "Akuttjänst som marknadsförs dygnet runt, alla veckans dagar.",
         "da": "Annonceret akutservice døgnet rundt, 7 dage om ugen.",
         "fi": "Päivystys ilmoitetusti ympäri vuorokauden, 7 päivää viikossa.",
-        "nb": "Akuttjeneste annonseres som åpen hele døgnet, sju dager i uken."
+        "nb": "Akuttjeneste annonseres som åpen hele døgnet, sju dager i uken.",
+        "sl": "Nujna služba 24 ur na dan, 7 dni v tednu."
       },
       "small_animals": true,
       "url": "https://veterinairecasablanca.ma/",
       "source_url": "https://veterinairecasablanca.ma/",
-      "note": "Home page says 'Urgences Vétérinaires 24/7'. Second domain cliniqueveterinairecasablnca.ma/contact (same address and phone) says 'Urgences 24h/24 - 7j/7' but lists inconsistent consultation hours (Mon-Fri 9-19 vs 8-19).",
+      "note": "Home page says 'Urgences Vétérinaires 24/7'. Second domain cliniqueveterinairecasablnca.ma/contact (same address and phone) says 'Urgences 24h/24 - 7j/7' but lists inconsistent consultation hours (Mon-Fri 9-19 vs 8-19). advertised",
       "checked": "2026-11-10"
     },
     {
@@ -87,7 +88,8 @@
         "sv": "Öppet dygnet runt, alla veckans dagar, även helgdagar.",
         "da": "Åbent døgnet rundt, 7 dage om ugen, også helligdage.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä.",
-        "nb": "Åpent hele døgnet, alle dager i uken, offentlige helligdager inkludert."
+        "nb": "Åpent hele døgnet, alle dager i uken, offentlige helligdager inkludert.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih."
       },
       "small_animals": true,
       "url": "https://cliniqueveterinairesoleil.com/",
@@ -115,7 +117,8 @@
         "sv": "Konsultationer mån–fre 9.00–19.00, lör 9.00–16.00; akutfall dygnet runt, alla veckans dagar.",
         "da": "Konsultationer man–fre 9.00–19.00, lør 9.00–16.00; akutte tilfælde døgnet rundt, 7 dage om ugen.",
         "fi": "Vastaanotto ma–pe 9.00–19.00, la 9.00–16.00; päivystys ympäri vuorokauden, 7 päivää viikossa.",
-        "nb": "Konsultasjoner man–fre kl. 9.00–19.00, lør kl. 9.00–16.00; nødtilfeller hele døgnet, sju dager i uken."
+        "nb": "Konsultasjoner man–fre kl. 9.00–19.00, lør kl. 9.00–16.00; nødtilfeller hele døgnet, sju dager i uken.",
+        "sl": "Pregledi pon–pet 9–19, sob 9–16; nujni primeri 24 ur na dan, 7 dni v tednu."
       },
       "small_animals": true,
       "url": "https://www.hermitagevets.com/",
@@ -143,7 +146,8 @@
         "sv": "Öppet dygnet runt, alla veckans dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa.",
-        "nb": "Åpent hele døgnet, alle dager i uken."
+        "nb": "Åpent hele døgnet, alle dager i uken.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu."
       },
       "small_animals": true,
       "url": "https://www.veterinaireideal.com/",
@@ -171,7 +175,8 @@
         "sv": "Mån–fre 9.00–19.00, lör 9.00–14.00; separat akutnummer 06 61 49 26 18.",
         "da": "Man–fre 9.00–19.00, lør 9.00–14.00; særskilt akutnummer 06 61 49 26 18.",
         "fi": "ma–pe 9.00–19.00, la 9.00–14.00; erillinen päivystysnumero 06 61 49 26 18.",
-        "nb": "man–fre 9.00–19.00, lør 9.00–14.00; eget nødnummer 06 61 49 26 18."
+        "nb": "man–fre 9.00–19.00, lør 9.00–14.00; eget nødnummer 06 61 49 26 18.",
+        "sl": "Pon–pet 9–19, sob 9–14; ločena številka za nujne primere 06 61 49 26 18."
       },
       "small_animals": true,
       "url": "https://sites.google.com/view/clinique-veterinaire-maarif/accueil",
@@ -199,7 +204,8 @@
         "sv": "Öppet alla dagar 9.00–21.00; nås via telefon eller WhatsApp vid kritiska situationer under dessa tider.",
         "da": "Åbent dagligt 9.00–21.00; kan træffes pr. telefon eller WhatsApp ved kritiske situationer i dette tidsrum.",
         "fi": "Auki päivittäin 9.00–21.00; kriittisissä tilanteissa tavoitettavissa puhelimitse tai WhatsAppilla näinä aikoina.",
-        "nb": "Åpent alle dager kl. 09.00–21.00; kan nås på telefon eller WhatsApp ved kritiske situasjoner i dette tidsrommet."
+        "nb": "Åpent alle dager kl. 09.00–21.00; kan nås på telefon eller WhatsApp ved kritiske situasjoner i dette tidsrommet.",
+        "sl": "Odprto vsak dan 9–21; v tem času so za kritične primere dosegljivi po telefonu ali WhatsAppu."
       },
       "small_animals": true,
       "url": "https://www.vetsocrate.ma/",
@@ -214,7 +220,7 @@
       "region": "Marrakech-Safi",
       "address": "Next to Quick Targa, Marrakech",
       "emergency_24h": true,
-      "duty": "Emergency care advertised 24/7.",
+      "duty": "Emergency care 24/7.",
       "duty_i18n": {
         "fr": "Urgences annoncées 24 h/24, 7 j/7.",
         "es": "Urgencias anunciadas 24/7.",
@@ -226,12 +232,13 @@
         "sv": "Akutvård som marknadsförs dygnet runt.",
         "da": "Annonceret akuthjælp døgnet rundt.",
         "fi": "Päivystys ilmoitetusti 24/7.",
-        "nb": "Akuttbehandling annonseres som tilgjengelig hele døgnet."
+        "nb": "Akuttbehandling annonseres som tilgjengelig hele døgnet.",
+        "sl": "Nujna pomoč 24/7."
       },
       "small_animals": true,
       "url": "https://cvt.ma/",
       "source_url": "https://cvt.ma/",
-      "note": "Page: 'urgences vétérinaires 24/7'. Says the clinic moved next to Quick Targa; no street address, phone or hours on the page (url only).",
+      "note": "Page: 'urgences vétérinaires 24/7'. Says the clinic moved next to Quick Targa; no street address, phone or hours on the page (url only). advertised",
       "checked": "2026-11-10"
     },
     {
@@ -254,7 +261,8 @@
         "sv": "Mån–fre 9.00–13.00 och 15.00–19.00; akutfall utanför öppettid dygnet runt, alla veckans dagar, per telefon (även 06 61 72 99 28).",
         "da": "Man–fre 9.00–13.00 og 15.00–19.00; akutte tilfælde uden for åbningstid døgnet rundt, 7 dage om ugen, pr. telefon (også 06 61 72 99 28).",
         "fi": "ma–pe 9.00–13.00 ja 15.00–19.00; päivystys aukioloaikojen ulkopuolella ympäri vuorokauden, 7 päivää viikossa puhelimitse (myös 06 61 72 99 28).",
-        "nb": "man–fre 9.00–13.00 og 15.00–19.00; nødtilfeller utenom åpningstid hele døgnet, alle dager, på telefon (også 06 61 72 99 28)."
+        "nb": "man–fre 9.00–13.00 og 15.00–19.00; nødtilfeller utenom åpningstid hele døgnet, alle dager, på telefon (også 06 61 72 99 28).",
+        "sl": "Pon–pet 9–13 in 15–19; nujni primeri zunaj delovnega časa 24 ur na dan, 7 dni v tednu po telefonu (tudi 06 61 72 99 28)."
       },
       "small_animals": true,
       "url": "https://cvy.ma/",
@@ -270,7 +278,7 @@
       "address": "30 Boulevard Abdelkrim Al Khattabi, Marrakech",
       "phone": "+212 654 052 904",
       "emergency_24h": true,
-      "duty": "Mon-Fri about 9:00-19:00, Sat morning; emergencies advertised 24/7.",
+      "duty": "Mon-Fri about 9:00-19:00, Sat morning; emergencies 24/7.",
       "duty_i18n": {
         "fr": "Lun.–ven. environ 9 h–19 h, sam. le matin ; urgences annoncées 24 h/24, 7 j/7.",
         "es": "Lun–vie 9:00–19:00 h aprox., sáb por la mañana; urgencias anunciadas 24/7.",
@@ -282,12 +290,13 @@
         "sv": "Mån–fre ca 9.00–19.00, lör förmiddag; akutfall marknadsförs dygnet runt.",
         "da": "Man–fre ca. 9.00–19.00, lør formiddag; annonceret akuthjælp døgnet rundt.",
         "fi": "ma–pe noin 9.00–19.00, la aamupäivällä; päivystys ilmoitetusti 24/7.",
-        "nb": "man–fre ca. 9.00–19.00, lør formiddag; akuttjeneste hele døgnet annonseres."
+        "nb": "man–fre ca. 9.00–19.00, lør formiddag; akuttjeneste hele døgnet annonseres.",
+        "sl": "Pon–pet približno 9–19, sob dopoldne; nujna pomoč 24/7."
       },
       "small_animals": true,
       "url": "https://agafayvetpractice.wixsite.com/anix",
       "source_url": "https://agafayvetpractice.wixsite.com/anix",
-      "note": "Contact section: 'Urgences : 24/24 7/7'; homepage only says after-hours emergency service; hours differ between sections. Page does not name species (images show rabbit/pets).",
+      "note": "Contact section: 'Urgences : 24/24 7/7'; homepage only says after-hours emergency service; hours differ between sections. Page does not name species (images show rabbit/pets). advertised",
       "checked": "2026-11-10"
     },
     {
@@ -310,7 +319,8 @@
         "sv": "Mån–lör 9.00–20.00; akutfall tas emot till 03.00.",
         "da": "Man–lør 9.00–20.00; akutte tilfælde håndteres til kl. 3.00 om natten.",
         "fi": "ma–la 9.00–20.00; päivystystapaukset hoidetaan klo 3.00 asti.",
-        "nb": "man–lør 9.00–20.00; nødtilfeller behandles til kl. 03.00 om natten."
+        "nb": "man–lør 9.00–20.00; nødtilfeller behandles til kl. 03.00 om natten.",
+        "sl": "Pon–sob 9–20; nujne primere obravnavajo do 3. ure zjutraj."
       },
       "small_animals": true,
       "url": "https://vetezzaytoune.com/",
@@ -325,7 +335,7 @@
       "region": "Tanger-Tétouan-Al Hoceïma",
       "phone": "+212 663-813802",
       "emergency_24h": true,
-      "duty": "Emergency service advertised 24/7, every day of the week.",
+      "duty": "Emergency service 24/7, every day of the week.",
       "duty_i18n": {
         "fr": "Service d’urgence annoncé 24 h/24, tous les jours de la semaine.",
         "es": "Servicio de urgencias anunciado 24/7, todos los días de la semana.",
@@ -337,12 +347,13 @@
         "sv": "Akuttjänst som marknadsförs dygnet runt, alla veckans dagar.",
         "da": "Annonceret akutservice døgnet rundt, alle ugens dage.",
         "fi": "Päivystys ilmoitetusti 24/7, viikon jokaisena päivänä.",
-        "nb": "Akuttjeneste annonseres som åpen hele døgnet, alle ukens dager."
+        "nb": "Akuttjeneste annonseres som åpen hele døgnet, alle ukens dager.",
+        "sl": "Nujna služba 24/7, vsak dan v tednu."
       },
       "small_animals": true,
       "url": "https://veterinairegibraltar.com/",
       "source_url": "https://veterinairegibraltar.com/",
-      "note": "Page heading 'Une urgence 24/7', 'service d'urgence 7 jours sur 7'. City-centre clinic; no address or hours given. Species not named.",
+      "note": "Page heading 'Une urgence 24/7', 'service d'urgence 7 jours sur 7'. City-centre clinic; no address or hours given. Species not named. advertised",
       "checked": "2026-11-10"
     },
     {
@@ -365,7 +376,8 @@
         "sv": "Mån–fre 9.30–12.30 och 15.30–18.30, lör 9.30–13.00; hembesök per telefon.",
         "da": "Man–fre 9.30–12.30 og 15.30–18.30, lør 9.30–13.00; hjemmebesøg pr. telefon.",
         "fi": "ma–pe 9.30–12.30 ja 15.30–18.30, la 9.30–13.00; kotikäynnit puhelimitse.",
-        "nb": "man–fre 9.30–12.30 og 15.30–18.30, lør 9.30–13.00; hjemmebesøk etter telefonavtale."
+        "nb": "man–fre 9.30–12.30 og 15.30–18.30, lør 9.30–13.00; hjemmebesøk etter telefonavtale.",
+        "sl": "Pon–pet 9.30–12.30 in 15.30–18.30, sob 9.30–13; obiski na domu po telefonskem dogovoru."
       },
       "small_animals": true,
       "url": "https://www.veterinaireagadir.com/",
@@ -393,7 +405,8 @@
         "sv": "Mån–fre 9.00–13.00 och 15.00–19.00, lör 9.00–14.00.",
         "da": "Man–fre 9.00–13.00 og 15.00–19.00, lør 9.00–14.00.",
         "fi": "ma–pe 9.00–13.00 ja 15.00–19.00, la 9.00–14.00.",
-        "nb": "man–fre 9.00–13.00 og 15.00–19.00, lør 9.00–14.00."
+        "nb": "man–fre 9.00–13.00 og 15.00–19.00, lør 9.00–14.00.",
+        "sl": "Pon–pet 9–13 in 15–19, sob 9–14."
       },
       "small_animals": true,
       "url": "https://vetcareagadir.lovable.app/",
@@ -421,7 +434,8 @@
         "sv": "Konsultationer alla dagar 9.00–18.00; akuttjänst 18.00–09.00; öppet dygnet runt, alla veckans dagar.",
         "da": "Konsultationer dagligt 9.00–18.00; akutservice 18.00–9.00; åbent døgnet rundt, 7 dage om ugen.",
         "fi": "Vastaanotto päivittäin 9.00–18.00; päivystys 18.00–9.00; auki ympäri vuorokauden, 7 päivää viikossa.",
-        "nb": "Konsultasjoner alle dager kl. 9.00–18.00; akuttjeneste kl. 18.00–9.00; åpent hele døgnet, sju dager i uken."
+        "nb": "Konsultasjoner alle dager kl. 9.00–18.00; akuttjeneste kl. 18.00–9.00; åpent hele døgnet, sju dager i uken.",
+        "sl": "Pregledi vsak dan 9–18; nujna služba 18–9; odprto 24 ur na dan, 7 dni v tednu."
       },
       "small_animals": true,
       "url": "https://vetchampsdecourse.com/",
@@ -449,7 +463,8 @@
         "sv": "Mån–fre 9.00–18.00, lör 9.00–14.00.",
         "da": "Man–fre 9.00–18.00, lør 9.00–14.00.",
         "fi": "ma–pe 9.00–18.00, la 9.00–14.00.",
-        "nb": "man–fre 9.00–18.00, lør 9.00–14.00."
+        "nb": "man–fre 9.00–18.00, lør 9.00–14.00.",
+        "sl": "Pon–pet 9–18, sob 9–14."
       },
       "small_animals": true,
       "url": "https://veterinaire-rabat.com/",
@@ -476,7 +491,8 @@
         "sv": "Akutvård för livshotande fall; ring innan du kommer.",
         "da": "Akut hjælp ved livstruende tilfælde; ring på forhånd.",
         "fi": "Kiireellinen hoito hengenvaarallisissa tapauksissa; soita etukäteen.",
-        "nb": "Hastebehandling ved livstruende tilfeller; ring på forhånd."
+        "nb": "Hastebehandling ved livstruende tilfeller; ring på forhånd.",
+        "sl": "Nujna oskrba za življenjsko nevarne primere; vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://mimosa.ma/",
@@ -506,7 +522,7 @@
       "address": "Plateau Bureau 1, Résidence Yasmin, Al Mansour, Avenue Imam Ali, Kénitra",
       "phone": "+212 76 635-7160",
       "emergency_24h": true,
-      "duty": "Mon-Fri 9:00-17:00, Sat 10:00-17:00; emergency care advertised 24 hours a day, 7 days a week.",
+      "duty": "Mon-Fri 9:00-17:00, Sat 10:00-17:00; emergency care 24 hours a day, 7 days a week.",
       "duty_i18n": {
         "fr": "Lun.–ven. 9 h–17 h, sam. 10 h–17 h ; urgences annoncées 24 h/24, 7 j/7.",
         "es": "Lun–vie 9:00–17:00 h, sáb 10:00–17:00 h; urgencias anunciadas las 24 horas, los 7 días de la semana.",
@@ -518,12 +534,13 @@
         "sv": "Mån–fre 9.00–17.00, lör 10.00–17.00; akutvård marknadsförs dygnet runt, alla veckans dagar.",
         "da": "Man–fre 9.00–17.00, lør 10.00–17.00; annonceret akuthjælp døgnet rundt, 7 dage om ugen.",
         "fi": "ma–pe 9.00–17.00, la 10.00–17.00; päivystys ilmoitetusti ympäri vuorokauden, 7 päivää viikossa.",
-        "nb": "man–fre 9.00–17.00, lør 10.00–17.00; akuttbehandling markedsføres hele døgnet, alle dager."
+        "nb": "man–fre 9.00–17.00, lør 10.00–17.00; akuttbehandling markedsføres hele døgnet, alle dager.",
+        "sl": "Pon–pet 9–17, sob 10–17; nujna pomoč 24 ur na dan, 7 dni v tednu."
       },
       "small_animals": true,
       "url": "https://veterinaire-villehaute.com/",
       "source_url": "https://veterinaire-villehaute.com/",
-      "note": "Page: 'Soin d'urgence 24h/24 et 7j/7'. Phone as printed on the page. Dogs, cats, NAC.",
+      "note": "Page: 'Soin d'urgence 24h/24 et 7j/7'. Phone as printed on the page. Dogs, cats, NAC. advertised",
       "checked": "2026-11-10"
     },
     {
@@ -546,7 +563,8 @@
         "sv": "Mån–lör 9.30–19.00.",
         "da": "Man–lør 9.30–19.00.",
         "fi": "ma–la 9.30–19.00.",
-        "nb": "man–lør 9.30–19.00."
+        "nb": "man–lør 9.30–19.00.",
+        "sl": "Pon–sob 9.30–19."
       },
       "small_animals": true,
       "url": "https://petcare.ma/",
@@ -590,7 +608,8 @@
         "sv": "Separat akutnummer 06 61 56 16 10.",
         "da": "Særskilt akutnummer 06 61 56 16 10.",
         "fi": "Erillinen päivystysnumero 06 61 56 16 10.",
-        "nb": "Eget akuttnummer 06 61 56 16 10."
+        "nb": "Eget akuttnummer 06 61 56 16 10.",
+        "sl": "Ločena številka za nujne primere 06 61 56 16 10."
       }
     }
   ],

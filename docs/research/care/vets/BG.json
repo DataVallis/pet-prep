@@ -54,7 +54,8 @@
         "sv": "Öppet varje dag 08.00–22.00; akutfall tas emot under dessa tider, inga nya patienter efter 22.00. Slutenvårdsavdelning dygnet runt för inlagda djur.",
         "da": "Åbent dagligt 08.00–22.00; akutte tilfælde tages imod i dette tidsrum, ingen nye patienter efter 22.00. Døgnafdeling for indlagte dyr.",
         "fi": "Auki päivittäin 8–22; päivystystapauksia otetaan vastaan näinä aikoina, uusia potilaita ei oteta klo 22 jälkeen. Vuodeosasto sairaalahoidossa oleville eläimille ympäri vuorokauden.",
-        "nb": "Åpent daglig 08.00–22.00; nødtilfeller tas imot i disse åpningstidene, ingen nye pasienter etter 22.00. Døgnåpen sengepost for innlagte dyr."
+        "nb": "Åpent daglig 08.00–22.00; nødtilfeller tas imot i disse åpningstidene, ingen nye pasienter etter 22.00. Døgnåpen sengepost for innlagte dyr.",
+        "sl": "Odprto vsak dan 8–22; nujne primere sprejemajo v tem času, po 22. uri novih pacientov ne sprejemajo. 24-urni stacionar za hospitalizirane živali."
       }
     },
     {
@@ -77,7 +78,8 @@
         "sv": "Öppet tis–lör 09.30–19.00; stängt sön och mån.",
         "da": "Åbent tirsdag–lørdag 09.30–19.00; lukket søndag og mandag.",
         "fi": "Auki ti–la 9.30–19; su ja ma suljettu.",
-        "nb": "Åpent tir–lør 09.30–19.00; stengt søndag og mandag."
+        "nb": "Åpent tir–lør 09.30–19.00; stengt søndag og mandag.",
+        "sl": "Odprto tor–sob 9.30–19; ob nedeljah in ponedeljkih zaprto."
       }
     }
   ],

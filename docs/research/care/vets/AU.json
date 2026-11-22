@@ -161,7 +161,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar. Akutfall behöver ingen bokad tid.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ingen tidsbestilling.",
         "fi": "Auki 24 tuntia vuorokaudessa, 365 päivää vuodessa. Päivystyspotilaat eivät tarvitse ajanvarausta.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke timebestilling."
+        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke timebestilling.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno."
       },
       "small_animals": true,
       "url": "https://www.sydney.edu.au/vet-hospital/emergency/sydney-emergency.html",
@@ -191,7 +192,8 @@
         "sv": "Mån–fre 8–18. Ingen akutvård för smådjur dygnet runt; använd ett djursjukhus med öppet dygnet runt utanför öppettiderna.",
         "da": "Mandag til fredag 8–18. Ingen akuthjælp til smådyr døgnet rundt; brug et døgnåbent dyrehospital uden for åbningstid.",
         "fi": "ma–pe 8–18. Ei 24 tunnin pieneläinpäivystystä; käytä virka-ajan ulkopuolella 24 tunnin sairaalaa.",
-        "nb": "mandag–fredag 8–18. Ingen døgnåpen akuttbehandling for små kjæledyr; bruk et døgnåpent sykehus utenom åpningstiden."
+        "nb": "mandag–fredag 8–18. Ingen døgnåpen akuttbehandling for små kjæledyr; bruk et døgnåpent sykehus utenom åpningstiden.",
+        "sl": "Pon–pet 8–18. Nujne pomoči za male živali ni 24 ur na dan; zunaj delovnega časa obiščite bolnišnico, ki dela 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://www.sydney.edu.au/vet-hospital/about-us/contact-us.html",
@@ -221,7 +223,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar. Ingen bokning behövs vid akutfall; fallen triageras vid ankomst.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ikke booking; de triageres ved ankomst.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystystapauksissa ajanvarausta ei tarvita; potilaat arvioidaan kiireellisyysjärjestykseen saapuessa.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Ingen timebestilling nødvendig for nødtilfeller; pasientene vurderes og prioriteres ved ankomst."
+        "nb": "Åpent hele døgnet, 365 dager i året. Ingen timebestilling nødvendig for nødtilfeller; pasientene vurderes og prioriteres ved ankomst.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno; ob prihodu se primeri razvrstijo po nujnosti."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/sydney/",
@@ -251,7 +254,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar. Ingen bokning behövs vid akutfall.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ikke booking.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystystapauksissa ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Ingen bestilling nødvendig for nødtilfeller."
+        "nb": "Åpent hele døgnet, 365 dager i året. Ingen bestilling nødvendig for nødtilfeller.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/alexandria/",
@@ -281,7 +285,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar, även helger och helgdagar. Ingen bokad tid behövs vid akutfall.",
         "da": "Åbent døgnet rundt, 365 dage om året, også i weekender og på helligdage. Akutte tilfælde behøver ingen tidsbestilling.",
         "fi": "Auki 24 tuntia vuorokaudessa, 365 päivää vuodessa, myös viikonloppuisin ja pyhäpäivinä. Päivystystapauksissa ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, 365 dager i året, også helger og offentlige helligdager. Ingen timebestilling nødvendig for nødtilfeller."
+        "nb": "Åpent hele døgnet, 365 dager i året, også helger og offentlige helligdager. Ingen timebestilling nødvendig for nødtilfeller.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu, tudi ob koncih tedna in praznikih. Za nujne primere naročanje ni potrebno."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/northern-beaches/",
@@ -311,7 +316,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar. Akutfall är välkomna utan bokad tid.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde er velkomne uden tidsbestilling.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystyspotilaat ovat tervetulleita ilman ajanvarausta.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller tas imot uten timebestilling."
+        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller tas imot uten timebestilling.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Nujni primeri so dobrodošli brez naročanja."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/central-coast/",
@@ -341,7 +347,8 @@
         "sv": "Akutvård dygnet runt.",
         "da": "Akuthjælp døgnet rundt.",
         "fi": "24 tunnin päivystys.",
-        "nb": "Akuttbehandling hele døgnet."
+        "nb": "Akuttbehandling hele døgnet.",
+        "sl": "Nujna pomoč 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://sashvets.com/locations/sydney/",
@@ -371,7 +378,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar. Specialistbesök efter remiss, mån–fre 8–18.",
         "da": "Åbent døgnet rundt, alle ugens dage, også på helligdage. Specialistkonsultationer efter henvisning, man–fre 8–18.",
         "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, myös pyhäpäivinä. Erikoislääkärin vastaanotto lähetteellä ma–pe 8–18.",
-        "nb": "Åpent hele døgnet, alle dager i uken, også offentlige helligdager. Spesialistkonsultasjoner etter henvisning, man–fre 8–18."
+        "nb": "Åpent hele døgnet, alle dager i uken, også offentlige helligdager. Spesialistkonsultasjoner etter henvisning, man–fre 8–18.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih. Specialistični pregledi z napotnico: pon–pet 8–18."
       },
       "small_animals": true,
       "url": "https://emergencyvet.com.au/our-network/arh-home/arh-homebush.html",
@@ -401,7 +409,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, hele året.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, vuoden jokaisena päivänä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året."
+        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, vse dni v letu."
       },
       "small_animals": true,
       "url": "https://emergencyvet.com.au/our-network/arh-home/arh-gosford.html",
@@ -431,7 +440,8 @@
         "sv": "Öppet dygnet runt lördag och söndag samt efter stängning mån–fre, även helgdagar. Ring innan du kommer för att få veta öppettiderna på vardagar.",
         "da": "Åbent døgnet rundt lørdag og søndag samt uden for åbningstid mandag til fredag, også på helligdage. Ring på forhånd for åbningstider på hverdage.",
         "fi": "Auki 24 tuntia la ja su sekä virka-ajan ulkopuolella ma–pe, myös pyhäpäivinä. Soita etukäteen ja kysy arkien aukioloajat.",
-        "nb": "Åpent hele døgnet lørdag og søndag, og utenom åpningstid mandag til fredag, også offentlige helligdager. Ring på forhånd for åpningstider på hverdager."
+        "nb": "Åpent hele døgnet lørdag og søndag, og utenom åpningstid mandag til fredag, også offentlige helligdager. Ring på forhånd for åpningstider på hverdager.",
+        "sl": "Odprto 24 ur na dan ob sobotah in nedeljah ter zunaj delovnega časa med tednom, tudi ob praznikih. Delovni čas med tednom preverite s klicem."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/clinic/arh-wollongong.html",
@@ -461,7 +471,8 @@
         "sv": "Öppet för akutfall dygnet runt. Ring innan du kommer med ditt djur.",
         "da": "Åbent døgnet rundt for akutte tilfælde. Ring venligst, inden du kommer med dit kæledyr.",
         "fi": "Auki 24/7 päivystystapauksille. Soita ennen kuin tuot lemmikin.",
-        "nb": "Åpent hele døgnet for nødtilfeller. Ring før du tar med kjæledyret."
+        "nb": "Åpent hele døgnet for nødtilfeller. Ring før du tar med kjæledyret.",
+        "sl": "Nujna pomoč 24/7. Pred prihodom pokličite."
       },
       "small_animals": true,
       "url": "https://arecvet.com.au/",
@@ -491,7 +502,8 @@
         "sv": "Specialist- och akutdjursjukhus i Sutherland Shire. Ring innan du kommer för att bekräfta öppettiderna.",
         "da": "Special- og akuthospital i Sutherland Shire. Ring på forhånd for at bekræfte åbningstiderne.",
         "fi": "Erikois- ja päivystyssairaala Sutherland Shiressa. Varmista aukioloajat soittamalla etukäteen.",
-        "nb": "Spesialist- og akuttsykehus i Sutherland Shire. Ring på forhånd for å bekrefte åpningstidene."
+        "nb": "Spesialist- og akuttsykehus i Sutherland Shire. Ring på forhånd for å bekrefte åpningstidene.",
+        "sl": "Specialistična in nujna bolnišnica v okrožju Sutherland Shire. Delovni čas preverite po telefonu."
       },
       "small_animals": true,
       "url": "https://www.theleader.com.au/story/6794828/24-hour-vet-clinic-opens-at-miranda/",
@@ -521,7 +533,8 @@
         "sv": "Akutservice dygnet runt på Sydneys norra sida.",
         "da": "Åbent for akutte tilfælde døgnet rundt på Sydneys nordside.",
         "fi": "Päivystys auki 24/7 Sydneyn pohjoisosassa.",
-        "nb": "Åpent hele døgnet, akuttjeneste på nordsiden av Sydney."
+        "nb": "Åpent hele døgnet, akuttjeneste på nordsiden av Sydney.",
+        "sl": "Nujna pomoč 24/7 na severni strani Sydneyja."
       },
       "small_animals": true,
       "url": "https://nevs.net.au",
@@ -551,7 +564,8 @@
         "sv": "Öppet alla dagar 7.30–19. Inte ett djursjukhus med öppet dygnet runt; utanför öppettiderna, vänd dig till NEVS Terrey Hills eller SASH.",
         "da": "Åbent alle 7 dage 7.30–19.00. Ikke et døgnåbent hospital; uden for åbningstid brug NEVS Terrey Hills eller SASH.",
         "fi": "Auki 7 päivää viikossa, 7.30–19. Ei ole 24 tunnin sairaala; virka-ajan ulkopuolella: NEVS Terrey Hills tai SASH.",
-        "nb": "Åpent sju dager, kl. 7.30–19. Ikke et døgnåpent sykehus; utenom åpningstid bruk NEVS Terrey Hills eller SASH."
+        "nb": "Åpent sju dager, kl. 7.30–19. Ikke et døgnåpent sykehus; utenom åpningstid bruk NEVS Terrey Hills eller SASH.",
+        "sl": "Odprto 7 dni v tednu, 7.30–19. Ni 24-urna bolnišnica; zunaj delovnega časa obiščite NEVS Terrey Hills ali SASH."
       },
       "small_animals": true,
       "url": "https://www.sydneyanimalhospitals.com.au/locations/northern-beaches/emergency-vet",
@@ -581,7 +595,8 @@
         "sv": "Mån–fre 8–19, lör 8.30–16. Stängt sön och helgdagar. Inte ett djursjukhus med öppet dygnet runt.",
         "da": "Mandag til fredag 8–19, lørdag 8.30–16. Lukket søndage og helligdage. Ikke et døgnåbent hospital.",
         "fi": "ma–pe 8–19, la 8.30–16. su ja pyhäpäivinä suljettu. Ei ole 24 tunnin sairaala.",
-        "nb": "mandag–fredag 8–19, lørdag 8.30–16.00. Stengt søndager og på helligdager. Ikke et døgnåpent sykehus."
+        "nb": "mandag–fredag 8–19, lørdag 8.30–16.00. Stengt søndager og på helligdager. Ikke et døgnåpent sykehus.",
+        "sl": "Pon–pet 8–19, sob 8.30–16. Ob nedeljah in praznikih zaprto. Ni 24-urna bolnišnica."
       },
       "small_animals": true,
       "url": "https://www.sydneyanimalhospitals.com.au/locations/northern-beaches/emergency-vet",
@@ -611,7 +626,8 @@
         "sv": "Mån–tis 8–18, ons–fre 8–20, lör–sön 8–16. Utanför öppettiderna: ring innan du kommer och åk till en akutmottagning med öppet dygnet runt.",
         "da": "Man–tir 8–18, ons–fre 8–20, lør–søn 8–16. Uden for åbningstid ring på forhånd og kør til et døgnåbent akuthospital.",
         "fi": "ma–ti 8–18, ke–pe 8–20, la–su 8–16. Virka-ajan ulkopuolella soita etukäteen ja mene 24 tunnin päivystyskeskukseen.",
-        "nb": "man–tir 8–18, ons–fre 8–20, lør–søn 8–16. Utenom åpningstiden: ring på forhånd og dra til et akuttsenter som har åpent hele døgnet."
+        "nb": "man–tir 8–18, ons–fre 8–20, lør–søn 8–16. Utenom åpningstiden: ring på forhånd og dra til et akuttsenter som har åpent hele døgnet.",
+        "sl": "Pon–tor 8–18, sre–pet 8–20, sob–ned 8–16. Zunaj delovnega časa vnaprej pokličite in obiščite nujni center, ki dela 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://cardiffvethospital.com.au/emergency-vet-newcastle/",
@@ -641,7 +657,8 @@
         "sv": "Utanför öppettiderna: ring kliniken först; akutfall hänvisas till en akutmottagning med öppet dygnet runt.",
         "da": "Uden for åbningstid ring først til klinikken; akutte tilfælde henvises til et døgnåbent akuthospital.",
         "fi": "Virka-ajan ulkopuolella soita ensin klinikalle; päivystystapaukset ohjataan 24 tunnin päivystyskeskukseen.",
-        "nb": "Utenom åpningstid: ring klinikken først; nødtilfeller henvises til akuttsenter åpent hele døgnet."
+        "nb": "Utenom åpningstid: ring klinikken først; nødtilfeller henvises til akuttsenter åpent hele døgnet.",
+        "sl": "Zunaj delovnega časa najprej pokličite kliniko; nujne primere napotijo v center za nujno pomoč, ki dela 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://brunkerroadvets.com.au/information/after-hours-emergency-service/",
@@ -670,7 +687,8 @@
         "sv": "Giftlinje för djur dygnet runt för djurägare i Australien. Konsultationsavgift tillkommer (från AUD 79).",
         "da": "Giftrådgivning for dyr døgnet rundt til australske kæledyrsejere. Der opkræves et konsultationsgebyr (fra AUD 79).",
         "fi": "Eläinten myrkytysneuvontapuhelin 24/7 australialaisille lemmikinomistajille. Neuvonta on maksullista (alkaen 79 AUD).",
-        "nb": "Giftinformasjon for kjæledyr hele døgnet for australske kjæledyreiere. Konsultasjonsavgift gjelder (fra 79 AUD)."
+        "nb": "Giftinformasjon for kjæledyr hele døgnet for australske kjæledyreiere. Konsultasjonsavgift gjelder (fra 79 AUD).",
+        "sl": "Telefonska linija za zastrupitve živali 24/7 za lastnike ljubljenčkov v Avstraliji. Svetovanje je plačljivo (od 79 AUD)."
       },
       "small_animals": true,
       "url": "https://www.animalpoisons.com.au/",
@@ -700,7 +718,8 @@
         "sv": "Akutdjursjukhus utanför ordinarie öppettider. Öppet mån–fre 18–7, dygnet runt på helger; helgdagarnas öppettider varierar, så ring innan du kommer.",
         "da": "Akuthospital uden for almindelig åbningstid. Åbent mandag til fredag 18–7, døgnet rundt i weekenden; åbningstider på helligdage varierer, så ring på forhånd.",
         "fi": "Päivystyssairaala virka-ajan ulkopuolella. Aukiolo: ma–pe 18–7, viikonloppuisin auki 24 tuntia; pyhäpäivien aukioloajat vaihtelevat, joten soita etukäteen.",
-        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid. Åpningstider: mandag–fredag kl. 18–7, åpent hele døgnet i helgene; åpningstidene på helligdager varierer, så ring på forhånd."
+        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid. Åpningstider: mandag–fredag kl. 18–7, åpent hele døgnet i helgene; åpningstidene på helligdager varierer, så ring på forhånd.",
+        "sl": "Nujna bolnišnica zunaj delovnega časa. Delovni čas: pon–pet 18–7, ob koncih tedna 24 ur na dan; ob praznikih se čas razlikuje, zato vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/clinic/ARH_Baulkham_Hills.html",
@@ -730,7 +749,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, hele året.",
         "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, vuoden jokaisena päivänä.",
-        "nb": "Åpent hele døgnet, alle dager i uken, hver dag hele året."
+        "nb": "Åpent hele døgnet, alle dager i uken, hver dag hele året.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, vse dni v letu."
       },
       "small_animals": true,
       "url": "https://www.emergencyvet.com.au/our-network/arh-home/arh-minchinbury.html",
@@ -761,7 +781,8 @@
         "sv": "Mån–fre 8–18, lör 8.30–12, stängt sön och helgdagar. Utanför öppettiderna: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
         "da": "Man–fre 8–18, lør 8.30–12, lukket søndag og helligdage. Uden for åbningstid: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
         "fi": "ma–pe 8–18, la 8.30–12, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
-        "nb": "man–fre 8–18, lør 8.30–12, stengt søndag og offentlige helligdager. Utenom åpningstid: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356."
+        "nb": "man–fre 8–18, lør 8.30–12, stengt søndag og offentlige helligdager. Utenom åpningstid: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356.",
+        "sl": "Pon–pet 8–18, sob 8.30–12, ned in prazniki zaprto. Zunaj delovnega časa: Coffs District Combined Veterinary After-Hours Emergency Service, 02 6699 3356."
       },
       "small_animals": true,
       "url": "https://coffsharbourvet.com.au/services/",
@@ -791,7 +812,8 @@
         "sv": "Mån–lör 8–11.30 och 15–17.30. Sön och utanför öppettiderna vid akutfall eller efter bokning; ring och lyssna på det inspelade meddelandet.",
         "da": "Man–lør 8–11.30 og 15–17.30. Søndage og uden for åbningstid ved akutte tilfælde eller efter aftale; ring og lyt til den indtalte besked.",
         "fi": "ma–la 8–11.30 ja 15–17.30. Sunnuntaisin ja virka-ajan ulkopuolella päivystystapauksissa tai ajanvarauksella; soita ja kuuntele nauhoitettu viesti.",
-        "nb": "man–lør 8.00–11.30 og 15.00–17.30. Søndager og utenom åpningstiden for nødtilfeller eller etter avtale; ring og lytt til den innspilte meldingen."
+        "nb": "man–lør 8.00–11.30 og 15.00–17.30. Søndager og utenom åpningstiden for nødtilfeller eller etter avtale; ring og lytt til den innspilte meldingen.",
+        "sl": "Pon–sob 8–11.30 in 15–17.30. Ob nedeljah in zunaj delovnega časa za nujne primere ali po naročilu; pokličite in poslušajte posneto sporočilo."
       },
       "small_animals": true,
       "url": "https://www.blueandwhitevet.com.au/contact",
@@ -821,7 +843,8 @@
         "sv": "Mån–fre 8.30–17.30, lör 8.30–12, stängt sön. Det finns akutservice utanför öppettiderna; ring kliniken.",
         "da": "Man–fre 8.30–17.30, lør 8.30–12, lukket søndag. Akuttjeneste uden for åbningstid; ring til klinikken.",
         "fi": "ma–pe 8.30–17.30, la 8.30–12, su suljettu. Päivystyspalvelu virka-ajan ulkopuolella; soita klinikalle.",
-        "nb": "man–fre 8.30–17.30, lør 8.30–12, stengt søndag. Akuttjeneste utenom åpningstid tilgjengelig; ring klinikken."
+        "nb": "man–fre 8.30–17.30, lør 8.30–12, stengt søndag. Akuttjeneste utenom åpningstid tilgjengelig; ring klinikken.",
+        "sl": "Pon–pet 8.30–17.30, sob 8.30–12, ned zaprto. Nujna pomoč zunaj delovnega časa je na voljo; pokličite kliniko."
       },
       "small_animals": true,
       "url": "https://mooneevet.com.au/",
@@ -851,7 +874,8 @@
         "sv": "Mån–fre 8–17, stängt helger och helgdagar. Akutfall under öppettiderna: ring innan du kommer. Utanför öppettiderna kontakta närmaste akutmottagning.",
         "da": "Man–fre 8–17, lukket weekender og helligdage. Akutte tilfælde i åbningstiden: ring på forhånd. Uden for åbningstid kontakt nærmeste akuthospital.",
         "fi": "ma–pe 8–17, viikonloppuisin ja pyhäpäivinä suljettu. Päivystystapaukset aukioloaikoina: soita etukäteen. Virka-ajan ulkopuolella ota yhteys lähimpään päivystyskeskukseen.",
-        "nb": "man–fre 8–17, stengt i helger og på offentlige helligdager. Nødtilfeller i åpningstiden: ring på forhånd. Utenom åpningstid, kontakt nærmeste nødsenter."
+        "nb": "man–fre 8–17, stengt i helger og på offentlige helligdager. Nødtilfeller i åpningstiden: ring på forhånd. Utenom åpningstid, kontakt nærmeste nødsenter.",
+        "sl": "Pon–pet 8–17, ob koncih tedna in praznikih zaprto. Nujni primeri v delovnem času: vnaprej pokličite. Zunaj delovnega časa se obrnite na najbližji nujni center."
       },
       "small_animals": true,
       "url": "https://www.oxleyhighwayvet.com.au/emergency-vet",
@@ -881,7 +905,8 @@
         "sv": "Mån–fre 8–18, lör 8–12.",
         "da": "Man–fre 8–18, lør 8–12.",
         "fi": "ma–pe 8–18, la 8–12.",
-        "nb": "man–fre 8–18, lør 8–12."
+        "nb": "man–fre 8–18, lør 8–12.",
+        "sl": "Pon–pet 8–18, sob 8–12."
       },
       "small_animals": true,
       "url": "https://www.portvet.com.au/",
@@ -911,7 +936,8 @@
         "sv": "Mån–fre 8–17.30, lör 9–12, stängt sön och helgdagar. Akutfall under öppettiderna: ring innan du kommer.",
         "da": "Man–fre 8–17.30, lør 9–12, lukket søndag og helligdage. Akutte tilfælde i åbningstiden: ring på forhånd.",
         "fi": "ma–pe 8–17.30, la 9–12, su ja pyhäpäivinä suljettu. Päivystystapaukset aukioloaikoina: soita etukäteen.",
-        "nb": "man–fre 8–17.30, lør 9–12, stengt søndag og offentlige helligdager. Nødtilfeller i åpningstiden: ring på forhånd."
+        "nb": "man–fre 8–17.30, lør 9–12, stengt søndag og offentlige helligdager. Nødtilfeller i åpningstiden: ring på forhånd.",
+        "sl": "Pon–pet 8–17.30, sob 9–12, ned in prazniki zaprto. Nujni primeri v delovnem času: vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://www.eastportvet.com/vetchat-call-service-for-veterinary-emergencies/",
@@ -941,7 +967,8 @@
         "sv": "Mån–fre 8.30–17, lör 8.30–11. Akutfall utanför öppettiderna: ring jourhavande veterinär; jourtillägg tillkommer.",
         "da": "Man–fre 8.30–17, lør 8.30–11. Akutte tilfælde uden for åbningstid: ring til vagtdyrlægen; der gælder et tillæg uden for åbningstid.",
         "fi": "ma–pe 8.30–17, la 8.30–11. Päivystys aukioloaikojen ulkopuolella: soita päivystävälle eläinlääkärille; peritään päivystysmaksu.",
-        "nb": "man–fre 8.30–17, lør 8.30–11. Nødtilfeller utenom åpningstid: ring dyrlegen på vakt; tillegg for behandling utenom åpningstid."
+        "nb": "man–fre 8.30–17, lør 8.30–11. Nødtilfeller utenom åpningstid: ring dyrlegen på vakt; tillegg for behandling utenom åpningstid.",
+        "sl": "Pon–pet 8.30–17, sob 8.30–11. Nujni primeri zunaj delovnega časa: pokličite dežurnega veterinarja; zaračuna se doplačilo za delo zunaj delovnega časa."
       },
       "small_animals": true,
       "url": "https://wauchopevets.com.au/contact/",
@@ -971,7 +998,8 @@
         "sv": "Akutservice dygnet runt: ring kliniken och lyssna på det inspelade meddelandet för att nå jourhavande veterinär. Bokade tider mån–fre 8.30–17.30, lör 8.30–12.",
         "da": "Akuttjeneste døgnet rundt: ring til klinikken og lyt til den indtalte besked for at komme i kontakt med vagtdyrlægen. Konsultationer efter aftale man–fre 8.30–17.30, lør 8.30–12.",
         "fi": "24 tunnin päivystys: soita vastaanotolle ja kuuntele nauhoite, niin tavoitat päivystävän eläinlääkärin. Vastaanotto ajanvarauksella ma–pe 8.30–17.30, la 8.30–12.",
-        "nb": "Akuttjeneste hele døgnet: ring praksisen og lytt til telefonsvareren for å nå dyrlegen på vakt. Konsultasjoner etter timebestilling man–fre kl. 08.30–17.30, lør kl. 08.30–12.00."
+        "nb": "Akuttjeneste hele døgnet: ring praksisen og lytt til telefonsvareren for å nå dyrlegen på vakt. Konsultasjoner etter timebestilling man–fre kl. 08.30–17.30, lør kl. 08.30–12.00.",
+        "sl": "Nujna pomoč 24 ur na dan: pokličite ordinacijo in poslušajte posneto sporočilo, da pridete do dežurnega veterinarja. Pregledi po naročilu pon–pet 8.30–17.30, sob 8.30–12."
       },
       "small_animals": true,
       "url": "https://www.tamworthvet.com.au/contact-us",
@@ -1002,7 +1030,8 @@
         "sv": "Mån–fre 8–18, lör 9–13, stängt sön. Utanför öppettiderna: 0409 487 486.",
         "da": "Man–fre 8–18, lør 9–13, lukket søndag. Uden for åbningstid: 0409 487 486.",
         "fi": "ma–pe 8–18, la 9–13, su suljettu. Virka-ajan ulkopuolella: 0409 487 486.",
-        "nb": "man–fre 8–18, lør 9–13, stengt søndag. Utenom åpningstid: 0409 487 486."
+        "nb": "man–fre 8–18, lør 9–13, stengt søndag. Utenom åpningstid: 0409 487 486.",
+        "sl": "Pon–pet 8–18, sob 9–13, ned zaprto. Zunaj delovnega časa: 0409 487 486."
       },
       "small_animals": true,
       "url": "https://www.goonoovet.com.au/",
@@ -1032,7 +1061,8 @@
         "sv": "Service utanför öppettiderna dygnet runt med veterinär i jour, årets 365 dagar. Öppettider mån–fre 8.30–17.30, lör 8.30–12.",
         "da": "Vagttjeneste døgnet rundt med dyrlæge på vagt, 365 dage om året. Åbningstider man–fre 8.30–17.30, lør 8.30–12.",
         "fi": "24/7-päivystys virka-ajan ulkopuolella, eläinlääkäri päivystää 365 päivää vuodessa. Aukioloajat ma–pe 8.30–17.30, la 8.30–12.",
-        "nb": "Vakttjeneste utenom åpningstid hele døgnet med dyrlege på vakt, 365 dager i året. Åpningstid man–fre kl. 08.30–17.30, lør kl. 08.30–12.00."
+        "nb": "Vakttjeneste utenom åpningstid hele døgnet med dyrlege på vakt, 365 dager i året. Åpningstid man–fre kl. 08.30–17.30, lør kl. 08.30–12.00.",
+        "sl": "Dežurna služba z veterinarjem 24/7, 365 dni v letu. Delovni čas: pon–pet 8.30–17.30, sob 8.30–12."
       },
       "small_animals": true,
       "url": "https://orangevet.com.au/",
@@ -1063,7 +1093,8 @@
         "sv": "Mån, tis, tors, fre 8.30–18, ons 8.30–17, lör 8.30–11. Klinikens nummer besvaras dygnet runt av jourhavande veterinär vid brådskande fall.",
         "da": "Man, tir, tor, fre 8.30–18, ons 8.30–17, lør 8.30–11. Klinikkens nummer besvares døgnet rundt af vagtdyrlægen ved akutte tilfælde.",
         "fi": "ma, ti, to, pe 8.30–18, ke 8.30–17, la 8.30–11. Klinikan numeroon vastaa 24 tuntia vuorokaudessa päivystävä eläinlääkäri kiireellisissä tapauksissa.",
-        "nb": "Man, tir, tor, fre 8.30–18, ons 8.30–17, lør 8.30–11. Klinikkens nummer besvares hele døgnet av dyrlegen på vakt ved hastetilfeller."
+        "nb": "Man, tir, tor, fre 8.30–18, ons 8.30–17, lør 8.30–11. Klinikkens nummer besvares hele døgnet av dyrlegen på vakt ved hastetilfeller.",
+        "sl": "Pon, tor, čet, pet 8.30–18, sre 8.30–17, sob 8.30–11. Na številko klinike 24 ur na dan odgovarja dežurni veterinar za nujne primere."
       },
       "small_animals": true,
       "url": "https://mulberrylanevet.com.au/",
@@ -1093,7 +1124,8 @@
         "sv": "Mån–fre 8.30–17.30, lör 9–16, sön 11–15, stängt helgdagar. Akutfall utanför öppettiderna: ring klinikens nummer.",
         "da": "Man–fre 8.30–17.30, lør 9–16, søn 11–15, lukket på helligdage. Akutte tilfælde uden for åbningstid: ring til klinikkens nummer.",
         "fi": "ma–pe 8.30–17.30, la 9–16, su 11–15, pyhäpäivinä suljettu. Päivystystapaukset virka-ajan ulkopuolella: soita klinikan numeroon.",
-        "nb": "man–fre 8.30–17.30, lør 9–16, søn 11–15, stengt på offentlige helligdager. Nødtilfeller utenom åpningstid: ring klinikkens nummer."
+        "nb": "man–fre 8.30–17.30, lør 9–16, søn 11–15, stengt på offentlige helligdager. Nødtilfeller utenom åpningstid: ring klinikkens nummer.",
+        "sl": "Pon–pet 8.30–17.30, sob 9–16, ned 11–15, ob praznikih zaprto. Nujni primeri zunaj delovnega časa: pokličite na številko klinike."
       },
       "small_animals": true,
       "url": "https://www.canobolasvet.com/contact-us.pml",
@@ -1123,7 +1155,8 @@
         "sv": "Mån–fre 8.30–17.30, stängt helger och helgdagar. Utanför öppettiderna hänvisar kliniken akutfall till ARH Homebush, (02) 9758 8666.",
         "da": "Man–fre 8.30–17.30, lukket weekender og helligdage. Uden for åbningstid henviser klinikken akutte tilfælde til ARH Homebush, (02) 9758 8666.",
         "fi": "ma–pe 8.30–17.30, viikonloppuisin ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella klinikka ohjaa päivystystapaukset: ARH Homebush, (02) 9758 8666.",
-        "nb": "man–fre 8.30–17.30, stengt i helger og på offentlige helligdager. Utenom åpningstid henviser klinikken nødtilfeller til ARH Homebush, (02) 9758 8666."
+        "nb": "man–fre 8.30–17.30, stengt i helger og på offentlige helligdager. Utenom åpningstid henviser klinikken nødtilfeller til ARH Homebush, (02) 9758 8666.",
+        "sl": "Pon–pet 8.30–17.30, ob koncih tedna in praznikih zaprto. Zunaj delovnega časa klinika nujne primere napoti v ARH Homebush, (02) 9758 8666."
       },
       "small_animals": true,
       "url": "https://bathurstvethospital.com.au/emergency-vet/",
@@ -1153,7 +1186,8 @@
         "sv": "Mån–fre 8.30–18, lör 9–17.30, stängt sön. Samtal utanför öppettiderna tas emot på samma nummer.",
         "da": "Man–fre 8.30–18, lør 9–17.30, lukket søndag. Opkald uden for åbningstid besvares på samme nummer.",
         "fi": "ma–pe 8.30–18, la 9–17.30, su suljettu. Puhelut virka-ajan ulkopuolella samaan numeroon.",
-        "nb": "man–fre 8.30–18, lør 9–17.30, stengt søndag. Telefonhenvendelser utenom åpningstid på samme nummer."
+        "nb": "man–fre 8.30–18, lør 9–17.30, stengt søndag. Telefonhenvendelser utenom åpningstid på samme nummer.",
+        "sl": "Pon–pet 8.30–18, sob 9–17.30, ned zaprto. Klici zunaj delovnega časa na isto številko."
       },
       "small_animals": true,
       "url": "https://www.stewartstreetvet.com.au/",
@@ -1183,7 +1217,8 @@
         "sv": "Veterinärvård dygnet runt, årets alla dagar, via jourtjänsten. Öppettider mån–fre 8–18, lör 8–12.",
         "da": "Dyrlægehjælp døgnet rundt hele året via vagttjenesten. Åbningstider man–fre 8–18, lør 8–12.",
         "fi": "Eläinlääkärin hoitoa 24/7 vuoden jokaisena päivänä päivystyspalvelun kautta. Aukioloajat ma–pe 8–18, la 8–12.",
-        "nb": "Dyrlegehjelp tilgjengelig hele døgnet, alle dager i året, via vakttjenesten. Åpningstid man–fre 8–18, lør 8–12."
+        "nb": "Dyrlegehjelp tilgjengelig hele døgnet, alle dager i året, via vakttjenesten. Åpningstid man–fre 8–18, lør 8–12.",
+        "sl": "Veterinarska oskrba 24/7 vse dni v letu prek dežurne službe. Delovni čas: pon–pet 8–18, sob 8–12."
       },
       "small_animals": true,
       "url": "https://www.waggavet.com.au/",
@@ -1214,7 +1249,8 @@
         "sv": "Akutdjursjukhus med personal dygnet runt, årets alla dagar.",
         "da": "Akuthospital med bemanding døgnet rundt hele året.",
         "fi": "24 tunnin päivystyssairaala, henkilökunta on paikalla ympäri vuorokauden vuoden jokaisena päivänä.",
-        "nb": "Akuttsykehus bemannet hele døgnet, alle dager i året."
+        "nb": "Akuttsykehus bemannet hele døgnet, alle dager i året.",
+        "sl": "Nujna bolnišnica 24 ur na dan, osebje je prisotno nepretrgoma vse dni v letu."
       },
       "small_animals": true,
       "url": "https://www.lakerdvet.com.au/",
@@ -1245,7 +1281,8 @@
         "sv": "Vardagar 8–18. Akutfall när som helst: ring 02 6041 2522 (veterinär i jour till 22 för befintliga kunder). Efter 22 är närmaste klinik med öppet dygnet runt Lake Road Veterinary Clinic i Wagga Wagga.",
         "da": "Hverdage 8–18. Akutte tilfælde til enhver tid: ring på 02 6041 2522 (vagtdyrlæge til kl. 22 for eksisterende kunder). Efter kl. 22 er nærmeste døgnåbne klinik Lake Road Veterinary Clinic i Wagga Wagga.",
         "fi": "Arkisin 8–18. Päivystystapauksissa milloin tahansa: soita 02 6041 2522 (päivystävä eläinlääkäri tavoitettavissa klo 22 asti nykyisille asiakkaille). Klo 22 jälkeen lähin ympärivuorokautinen klinikka on Lake Road Veterinary Clinic Wagga Waggassa.",
-        "nb": "Hverdager 8–18. Nødtilfeller når som helst: ring 02 6041 2522 (dyrlege på vakt etter stengetid til kl. 22 for eksisterende kunder). Etter kl. 22 er nærmeste døgnåpne klinikk Lake Road Veterinary Clinic i Wagga Wagga."
+        "nb": "Hverdager 8–18. Nødtilfeller når som helst: ring 02 6041 2522 (dyrlege på vakt etter stengetid til kl. 22 for eksisterende kunder). Etter kl. 22 er nærmeste døgnåpne klinikk Lake Road Veterinary Clinic i Wagga Wagga.",
+        "sl": "Ob delavnikih 8–18. Nujni primeri kadar koli: pokličite 02 6041 2522 (dežurni veterinar do 22. ure za obstoječe stranke). Po 22. uri je najbližja klinika, ki dela 24 ur na dan, Lake Road Veterinary Clinic v Wagga Wagga."
       },
       "small_animals": true,
       "url": "https://familyvet.com.au/clinics/",
@@ -1275,7 +1312,8 @@
         "sv": "Mån–fre 8–18, lör 9–13. Begränsad jour på kvällar; vid andra tider är närmaste akutdjursjukhus med öppet dygnet runt Lake Road Veterinary Centre i Wagga Wagga.",
         "da": "Man–fre 8–18, lør 9–13. Begrænset vagtdækning om aftenen; ved andre tider er nærmeste døgnåbne akuthospital Lake Road Veterinary Centre i Wagga Wagga.",
         "fi": "ma–pe 8–18, la 9–13. Rajoitettu iltapäivystys; muina aikoina lähin 24/7-päivystyssairaala on Lake Road Veterinary Centre (Wagga Wagga).",
-        "nb": "man–fre 8–18, lør 9–13. Begrenset kveldsberedskap; til andre tider er nærmeste døgnåpne akuttsykehus Lake Road Veterinary Centre i Wagga Wagga."
+        "nb": "man–fre 8–18, lør 9–13. Begrenset kveldsberedskap; til andre tider er nærmeste døgnåpne akuttsykehus Lake Road Veterinary Centre i Wagga Wagga.",
+        "sl": "Pon–pet 8–18, sob 9–13. Omejeno dežurstvo zvečer; ob drugih urah je najbližja nujna bolnišnica 24/7 Lake Road Veterinary Centre v Wagga Wagga."
       },
       "small_animals": true,
       "url": "https://alburyanimalhospital.com.au/about-us/",
@@ -1305,7 +1343,8 @@
         "sv": "Akutfall utanför öppettiderna: ring klinikens nummer för att nå triageteamet.",
         "da": "Akutte tilfælde uden for åbningstid: ring til klinikkens nummer for at få fat i vagtens triageteam.",
         "fi": "Päivystys virka-ajan ulkopuolella: soita klinikan numeroon, niin sinut yhdistetään kiireellisyysarvion tekevään päivystystiimiin.",
-        "nb": "Nødtilfeller utenom åpningstid: ring klinikkens nummer for å nå triageteamet utenom åpningstid."
+        "nb": "Nødtilfeller utenom åpningstid: ring klinikkens nummer for å nå triageteamet utenom åpningstid.",
+        "sl": "Nujni primeri zunaj delovnega časa: pokličite na številko klinike in oglasila se vam bo ekipa za triažo."
       },
       "small_animals": true,
       "url": "https://dubbo.furlifevet.com.au/",
@@ -1335,7 +1374,8 @@
         "sv": "Mån–fre 8–18, lör 8.30–12.30, stängt sön. Veterinärservice utanför öppettiderna för akutfall som inte kan vänta; ring kliniken.",
         "da": "Man–fre 8–18, lør 8.30–12.30, lukket søndag. Dyrlægevagt uden for åbningstid til akutte tilfælde, der ikke kan vente; ring til klinikken.",
         "fi": "ma–pe 8–18, la 8.30–12.30, su suljettu. Päivystävä eläinlääkäri virka-ajan ulkopuolella tapauksiin, jotka eivät voi odottaa; soita klinikalle.",
-        "nb": "man–fre 8–18, lør 8.30–12.30, stengt søndag. Dyrlegetjeneste utenom åpningstid tilgjengelig for nødtilfeller som ikke kan vente; ring klinikken."
+        "nb": "man–fre 8–18, lør 8.30–12.30, stengt søndag. Dyrlegetjeneste utenom åpningstid tilgjengelig for nødtilfeller som ikke kan vente; ring klinikken.",
+        "sl": "Pon–pet 8–18, sob 8.30–12.30, ned zaprto. Za nujne primere, ki ne morejo čakati, je zunaj delovnega časa na voljo veterinarska služba; pokličite kliniko."
       },
       "small_animals": true,
       "url": "https://www.petmedicalcentre.com.au/",
@@ -1365,7 +1405,8 @@
         "sv": "Mån–fre 8.30–18, lör 8.30–13. Ingen service utanför öppettiderna; vid akutfall kontakta Orana Veterinary Services eller en annan klinik.",
         "da": "Man–fre 8.30–18, lør 8.30–13. Ingen vagttjeneste uden for åbningstid; ved akutte tilfælde kontakt Orana Veterinary Services eller en anden klinik.",
         "fi": "ma–pe 8.30–18, la 8.30–13. Ei päivystystä virka-ajan ulkopuolella; päivystystapauksissa ota yhteys Orana Veterinary Services -klinikkaan tai toiseen klinikkaan.",
-        "nb": "man–fre 8.30–18, lør 8.30–13. Ingen tjeneste utenom åpningstid; ved nødtilfeller, kontakt Orana Veterinary Services eller en annen klinikk."
+        "nb": "man–fre 8.30–18, lør 8.30–13. Ingen tjeneste utenom åpningstid; ved nødtilfeller, kontakt Orana Veterinary Services eller en annen klinikk.",
+        "sl": "Pon–pet 8.30–18, sob 8.30–13. Zunaj delovnega časa dežurne službe ni; za nujne primere se obrnite na Orana Veterinary Services ali drugo kliniko."
       },
       "small_animals": true,
       "url": "https://www.dmvs.com.au/contact-us",
@@ -1395,7 +1436,8 @@
         "sv": "Akutfall utanför öppettiderna: ring klinikens nummer för att nå triageteamet.",
         "da": "Akutte tilfælde uden for åbningstid: ring til klinikkens nummer for at få fat i vagtens triageteam.",
         "fi": "Päivystys virka-ajan ulkopuolella: soita klinikan numeroon, niin sinut yhdistetään kiireellisyysarvion tekevään päivystystiimiin.",
-        "nb": "Nødtilfeller utenom åpningstid: ring klinikkens nummer for å nå triageteamet utenom åpningstid."
+        "nb": "Nødtilfeller utenom åpningstid: ring klinikkens nummer for å nå triageteamet utenom åpningstid.",
+        "sl": "Nujni primeri zunaj delovnega časa: pokličite na številko klinike, kjer se vam bo oglasila ekipa za triažo."
       },
       "small_animals": true,
       "url": "https://northhillvet.com.au/",
@@ -1425,7 +1467,8 @@
         "sv": "Öppet för akutfall dygnet runt. Öppettider mån–fre 8–18, lör 9–12, stängt sön.",
         "da": "Åbent døgnet rundt for akutte tilfælde. Åbningstider man–fre 8–18, lør 9–12, lukket søndag.",
         "fi": "Auki 24/7 päivystystapauksille. Aukioloajat ma–pe 8–18, la 9–12, su suljettu.",
-        "nb": "Åpent hele døgnet for nødtilfeller. Åpningstider man–fre kl. 8–18, lør kl. 9–12, stengt søndag."
+        "nb": "Åpent hele døgnet for nødtilfeller. Åpningstider man–fre kl. 8–18, lør kl. 9–12, stengt søndag.",
+        "sl": "Nujna pomoč 24/7. Delovni čas: pon–pet 8–18, sob 9–12, ned zaprto."
       },
       "small_animals": true,
       "url": "https://www.newenglandvetservices.com.au/",
@@ -1456,7 +1499,8 @@
         "sv": "Mån–fre 8–17, lör 8–12, stängt sön och helgdagar. Utanför öppettiderna: North Coast Emergency Vets, (02) 7255 4095.",
         "da": "Man–fre 8–17, lør 8–12, lukket søndag og helligdage. Uden for åbningstid: North Coast Emergency Vets, (02) 7255 4095.",
         "fi": "ma–pe 8–17, la 8–12, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella: North Coast Emergency Vets, (02) 7255 4095.",
-        "nb": "man–fre 8–17, lør 8–12, stengt søndag og offentlige helligdager. Utenom åpningstid: North Coast Emergency Vets, (02) 7255 4095."
+        "nb": "man–fre 8–17, lør 8–12, stengt søndag og offentlige helligdager. Utenom åpningstid: North Coast Emergency Vets, (02) 7255 4095.",
+        "sl": "Pon–pet 8–17, sob 8–12, ned in prazniki zaprto. Zunaj delovnega časa: North Coast Emergency Vets, (02) 7255 4095."
       },
       "small_animals": true,
       "url": "https://myvetbyronbay.com.au/",
@@ -1485,7 +1529,8 @@
         "sv": "Tar hand om de flesta akutfall under öppettiderna, bland annat fästingförlamning, trafikolyckor och ormbett. Utanför öppettiderna: Animal Emergency Service eller North Coast Emergency Vets.",
         "da": "Håndterer de fleste akutte tilfælde i åbningstiden, bl.a. flåtlammelse, trafikulykker og slangebid. Uden for åbningstid: Animal Emergency Service eller North Coast Emergency Vets.",
         "fi": "Hoitaa useimmat päivystystapaukset aukioloaikoina, myös puutiaishalvauksen, tieliikenneonnettomuudet ja käärmeenpurennat. Virka-ajan ulkopuolella: Animal Emergency Service tai North Coast Emergency Vets.",
-        "nb": "Håndterer de fleste nødtilfeller i åpningstiden, blant annet flåttlammelse, trafikkulykker og slangebitt. Utenom åpningstid: Animal Emergency Service eller North Coast Emergency Vets."
+        "nb": "Håndterer de fleste nødtilfeller i åpningstiden, blant annet flåttlammelse, trafikkulykker og slangebitt. Utenom åpningstid: Animal Emergency Service eller North Coast Emergency Vets.",
+        "sl": "V delovnem času oskrbi večino nujnih primerov, tudi paralizo zaradi klopov, prometne nesreče in kačje ugrize. Zunaj delovnega časa: Animal Emergency Service ali North Coast Emergency Vets."
       },
       "small_animals": true,
       "url": "https://byronbayvet.com.au/",
@@ -1515,7 +1560,8 @@
         "sv": "Akutveterinär för Northern Rivers. Öppettiderna varierar per dag (dygnet runt lör, sön och mån, kortare tider tis–fre); ring innan du åker.",
         "da": "Akut dyrlæge for Northern Rivers. Åbningstiderne varierer fra dag til dag (døgnet rundt lørdag, søndag og mandag, kortere åbningstid tirsdag til fredag); ring, før du kører.",
         "fi": "Päivystävä eläinlääkäri Northern Riversin alueelle. Aukioloajat vaihtelevat päivittäin (la, su ja ma 24 tuntia, ti–pe lyhyemmät ajat); soita ennen lähtöä.",
-        "nb": "Dyrlegevakt for Northern Rivers. Åpningstidene varierer fra dag til dag (hele døgnet lørdag, søndag og mandag, kortere tider tirsdag til fredag); ring før du reiser."
+        "nb": "Dyrlegevakt for Northern Rivers. Åpningstidene varierer fra dag til dag (hele døgnet lørdag, søndag og mandag, kortere tider tirsdag til fredag); ring før du reiser.",
+        "sl": "Nujna veterinarska pomoč za Northern Rivers. Delovni čas se po dnevih razlikuje (ob sobotah, nedeljah in ponedeljkih 24 ur na dan, od torka do petka krajši); pred potjo pokličite."
       },
       "small_animals": true,
       "url": "https://animalemergencyservice.com.au/aes_location/animal-emergency-service-north-coast/",
@@ -1545,7 +1591,8 @@
         "sv": "Mån–tors 7–19, fre 7–17, lör 8–12, sön endast akutfall. Jourtjänst utanför dessa tider.",
         "da": "Man–tor 7–19, fre 7–17, lør 8–12, søndag kun akutte tilfælde. Vagttjeneste uden for disse tider.",
         "fi": "ma–to 7–19, pe 7–17, la 8–12, su vain päivystys. Päivystys näiden aikojen ulkopuolella.",
-        "nb": "man–tor 7.00–19.00, fre 7.00–17.00, lør 8.00–12.00, søndag kun nødtilfeller. Vakttjeneste utenom disse tidene."
+        "nb": "man–tor 7.00–19.00, fre 7.00–17.00, lør 8.00–12.00, søndag kun nødtilfeller. Vakttjeneste utenom disse tidene.",
+        "sl": "Pon–čet 7–19, pet 7–17, sob 8–12, ned samo nujni primeri. Zunaj tega časa je na voljo dežurna služba."
       },
       "small_animals": true,
       "url": "https://ballinacoastvets.com.au/",
@@ -1575,7 +1622,8 @@
         "sv": "Tillgänglig dygnet runt för akutfall utanför öppettiderna på klinikens nummer. Öppettider mån–fre 8.30–18, lör 8.30–12.30, stängt sön.",
         "da": "Døgnet rundt til akutte tilfælde uden for åbningstid på klinikkens nummer. Åbningstider man–fre 8.30–18, lør 8.30–12.30, lukket søndag.",
         "fi": "Tavoitettavissa 24/7 päivystystapauksiin virka-ajan ulkopuolella klinikan numerossa. Aukioloajat ma–pe 8.30–18, la 8.30–12.30, su suljettu.",
-        "nb": "Tilgjengelig hele døgnet for nødtilfeller utenfor ordinær åpningstid på klinikkens nummer. Åpningstider man–fre kl. 8.30–18, lør kl. 8.30–12.30, stengt søndag."
+        "nb": "Tilgjengelig hele døgnet for nødtilfeller utenfor ordinær åpningstid på klinikkens nummer. Åpningstider man–fre kl. 8.30–18, lør kl. 8.30–12.30, stengt søndag.",
+        "sl": "Nujna pomoč 24/7 zunaj delovnega časa na številki klinike. Delovni čas: pon–pet 8.30–18, sob 8.30–12.30, ned zaprto."
       },
       "small_animals": true,
       "url": "https://lismorevet.com.au/",
@@ -1606,7 +1654,8 @@
         "sv": "Mån–fre 8–18, lör 9–16, sön 9–13 (lunchstängt 13–14 mån–lör). Utanför öppettiderna: ring kliniken så kopplas du till jourtelefonen.",
         "da": "Man–fre 8–18, lør 9–16, søn 9–13 (frokostlukket 13–14 man–lør). Uden for åbningstid: ring til klinikken for at blive stillet videre til vagttelefonen.",
         "fi": "ma–pe 8–18, la 9–16, su 9–13 (lounastauko 13–14 ma–la). Virka-ajan ulkopuolella soita klinikalle, niin sinut ohjataan päivystyspuhelimeen.",
-        "nb": "man–fre 8–18, lør 9–16, søn 9–13 (lunsjstengt 13–14 man–lør). Utenom åpningstid: ring klinikken for å bli satt over til mobilen utenom åpningstid."
+        "nb": "man–fre 8–18, lør 9–16, søn 9–13 (lunsjstengt 13–14 man–lør). Utenom åpningstid: ring klinikken for å bli satt over til mobilen utenom åpningstid.",
+        "sl": "Pon–pet 8–18, sob 9–16, ned 9–13 (odmor 13–14 od ponedeljka do sobote). Zunaj delovnega časa pokličite kliniko, da vas povežejo z dežurnim mobilnim telefonom."
       },
       "small_animals": true,
       "url": "https://www.northnowravet.com.au/",
@@ -1636,7 +1685,8 @@
         "sv": "Mån–fre 8–17.30 (stängt 13–14), stängt helger. Utanför öppettiderna: ring kliniken så kopplas du till jourtelefonen.",
         "da": "Man–fre 8–17.30 (lukket 13–14), lukket weekender. Uden for åbningstid: ring til klinikken for at blive stillet videre til vagttelefonen.",
         "fi": "ma–pe 8–17.30 (suljettu 13–14), viikonloppuisin suljettu. Virka-ajan ulkopuolella soita klinikalle, niin sinut ohjataan päivystyspuhelimeen.",
-        "nb": "man–fre 8–17.30 (stengt 13–14), stengt i helgene. Utenom åpningstid: ring klinikken for å bli satt over til mobilen utenom åpningstid."
+        "nb": "man–fre 8–17.30 (stengt 13–14), stengt i helgene. Utenom åpningstid: ring klinikken for å bli satt over til mobilen utenom åpningstid.",
+        "sl": "Pon–pet 8–17.30 (odmor 13–14), ob koncih tedna zaprto. Zunaj delovnega časa pokličite kliniko, da vas povežejo z dežurnim mobilnim telefonom."
       },
       "small_animals": true,
       "url": "https://www.northnowravet.com.au/",
@@ -1666,7 +1716,8 @@
         "sv": "Jourtjänsten hjälper vid akutfall dygnet runt; ring 02 4421 3133. Klinikens öppettider mån–fre 8–18, helgbokningar 9–13.",
         "da": "Vagttjenesten hjælper døgnet rundt i akutte tilfælde; ring 02 4421 3133. Klinikkens åbningstider man–fre 8–18, weekendtider efter aftale 9–13.",
         "fi": "Päivystys virka-ajan ulkopuolella 24/7; soita 02 4421 3133. Klinikka ma–pe 8–18, viikonloppuisin ajanvaraus 9–13.",
-        "nb": "Vakttjenesten gir hjelp hele døgnet, alle dager, i nødtilfeller; ring 02 4421 3133. Klinikkens åpningstid man–fre kl. 8–18, timebestilling i helgene kl. 9–13."
+        "nb": "Vakttjenesten gir hjelp hele døgnet, alle dager, i nødtilfeller; ring 02 4421 3133. Klinikkens åpningstid man–fre kl. 8–18, timebestilling i helgene kl. 9–13.",
+        "sl": "Služba zunaj delovnega časa nudi pomoč 24/7 v nujnih primerih; pokličite 02 4421 3133. Delovni čas klinike: pon–pet 8–18, ob koncih tedna po naročilu 9–13."
       },
       "small_animals": true,
       "url": "https://bomaderryvets.com.au/",
@@ -1697,7 +1748,8 @@
         "sv": "Vardagar 8–18, lör 8.30–14, sön 14–17 (endast akutfall), helgdagar 15–17 (endast akutfall).",
         "da": "Hverdage 8–18, lør 8.30–14, søn 14–17 (kun akutte tilfælde), helligdage 15–17 (kun akutte tilfælde).",
         "fi": "Arkisin 8–18, la 8.30–14, su 14–17 (vain päivystystapaukset), pyhäpäivinä 15–17 (vain päivystystapaukset).",
-        "nb": "Hverdager 8–18, lør 8.30–14, søn 14–17 (kun nødtilfeller), helligdager 15–17 (kun nødtilfeller)."
+        "nb": "Hverdager 8–18, lør 8.30–14, søn 14–17 (kun nødtilfeller), helligdager 15–17 (kun nødtilfeller).",
+        "sl": "Ob delavnikih 8–18, sob 8.30–14, ned 14–17 (samo nujni primeri), ob praznikih 15–17 (samo nujni primeri)."
       },
       "small_animals": true,
       "url": "http://westqueanbeyanvet.com.au/",
@@ -1726,7 +1778,8 @@
         "sv": "Mån–fre 8–18.30, lör 8–12, stängt sön.",
         "da": "Man–fre 8–18.30, lør 8–12, lukket søndag.",
         "fi": "ma–pe 8–18.30, la 8–12, su suljettu.",
-        "nb": "man–fre 8–18.30, lør 8–12, stengt søndag."
+        "nb": "man–fre 8–18.30, lør 8–12, stengt søndag.",
+        "sl": "Pon–pet 8–18.30, sob 8–12, ned zaprto."
       },
       "small_animals": true,
       "url": "https://queanbeyanvet.com.au/",
@@ -1756,7 +1809,8 @@
         "sv": "Vardagar 9–17.30, lör 9–11, stängt sön. Akutservice utanför öppettiderna för klinikens kunder via telefonsvarartjänst; du kan hänvisas till en akutmottagning i Newcastle.",
         "da": "Hverdage 9–17.30, lør 9–11, lukket søndag. Akuttjeneste uden for åbningstid for klinikkens kunder via telefonservice; kan henvises til et akuthospital i Newcastle.",
         "fi": "Arkisin 9–17.30, la 9–11, su suljettu. Klinikan asiakkaiden päivystyspalvelu virka-ajan ulkopuolella vastaajapalvelun kautta; voidaan ohjata Newcastlen päivystyskeskukseen.",
-        "nb": "Hverdager 9–17.30, lør 9–11, stengt søndag. Akuttjeneste utenom åpningstid for klinikkens kunder via telefonsvarertjeneste; kan henvises til et akuttsenter i Newcastle."
+        "nb": "Hverdager 9–17.30, lør 9–11, stengt søndag. Akuttjeneste utenom åpningstid for klinikkens kunder via telefonsvarertjeneste; kan henvises til et akuttsenter i Newcastle.",
+        "sl": "Ob delavnikih 9–17.30, sob 9–11, ned zaprto. Nujna služba zunaj delovnega časa za stranke klinike prek telefonskega odzivnika; lahko vas napotijo v nujni center v Newcastlu."
       },
       "small_animals": true,
       "url": "https://www.raymondterraceveterinaryclinic.com.au/",
@@ -1786,7 +1840,8 @@
         "sv": "Mån, tis, ons, fre 8–17, lör 8–12; stängt tors, sön och helgdagar.",
         "da": "Man, tir, ons, fre 8–17, lør 8–12; lukket torsdag, søndag og helligdage.",
         "fi": "ma, ti, ke, pe 8–17, la 8–12; to, su ja pyhäpäivinä suljettu.",
-        "nb": "Man, tir, ons, fre 8–17, lør 8–12; stengt torsdag, søndag og helligdager."
+        "nb": "Man, tir, ons, fre 8–17, lør 8–12; stengt torsdag, søndag og helligdager.",
+        "sl": "Pon, tor, sre, pet 8–17, sob 8–12; čet, ned in prazniki zaprto."
       },
       "small_animals": true,
       "url": "https://www.golfcoursevets.com.au/",
@@ -1816,7 +1871,8 @@
         "sv": "Mån–fre 8.30–17.30, lör 8.30–12.30. Akutfall utanför öppettiderna: veterinär i jour via klinikens nummer (mot tillägg) eller Animal Emergency Services 07 5530 6370.",
         "da": "Man–fre 8.30–17.30, lør 8.30–12.30. Akutte tilfælde uden for åbningstid: vagtdyrlæge via klinikkens nummer (tillæg), eller Animal Emergency Services 07 5530 6370.",
         "fi": "ma–pe 8.30–17.30, la 8.30–12.30. Päivystystapaukset virka-ajan ulkopuolella: päivystävä eläinlääkäri klinikan numerossa (lisämaksu) tai Animal Emergency Services 07 5530 6370.",
-        "nb": "man–fre 8.30–17.30, lør 8.30–12.30. Nødtilfeller utenom åpningstid: dyrlege på vakt via klinikkens nummer (tillegg), eller Animal Emergency Services 07 5530 6370."
+        "nb": "man–fre 8.30–17.30, lør 8.30–12.30. Nødtilfeller utenom åpningstid: dyrlege på vakt via klinikkens nummer (tillegg), eller Animal Emergency Services 07 5530 6370.",
+        "sl": "Pon–pet 8.30–17.30, sob 8.30–12.30. Nujni primeri zunaj delovnega časa: dežurni veterinar prek številke klinike (doplačilo) ali Animal Emergency Services 07 5530 6370."
       },
       "small_animals": true,
       "url": "https://murwillumbahvet.com.au/",
@@ -1846,7 +1902,8 @@
         "sv": "Utanför öppettiderna: ring Newcastle Animal Referral and Emergency Centre på 02 4957 7106.",
         "da": "Uden for åbningstid: ring til Newcastle Animal Referral and Emergency Centre på 02 4957 7106.",
         "fi": "Virka-ajan ulkopuolella soita numeroon 02 4957 7106 (Newcastle Animal Referral and Emergency Centre).",
-        "nb": "Utenom åpningstid: ring Newcastle Animal Referral and Emergency Centre på 02 4957 7106."
+        "nb": "Utenom åpningstid: ring Newcastle Animal Referral and Emergency Centre på 02 4957 7106.",
+        "sl": "Zunaj delovnega časa pokličite Newcastle Animal Referral and Emergency Centre na 02 4957 7106."
       },
       "small_animals": true,
       "url": "https://www.lakevet.com.au/",
@@ -1876,7 +1933,8 @@
         "sv": "Efter bokning. Utanför öppettiderna: ring Charlestown (02 4943 6066) eller Belmont (02 4945 9677).",
         "da": "Efter aftale. Uden for åbningstid: ring til Charlestown (02 4943 6066) eller Belmont (02 4945 9677).",
         "fi": "Ajanvarauksella. Virka-ajan ulkopuolella soita: Charlestown (02 4943 6066) tai Belmont (02 4945 9677).",
-        "nb": "Etter timebestilling. Utenfor åpningstid: ring Charlestown (02 4943 6066) eller Belmont (02 4945 9677)."
+        "nb": "Etter timebestilling. Utenfor åpningstid: ring Charlestown (02 4943 6066) eller Belmont (02 4945 9677).",
+        "sl": "Po naročilu. Zunaj delovnega časa pokličite Charlestown (02 4943 6066) ali Belmont (02 4945 9677)."
       },
       "small_animals": true,
       "url": "https://www.lakevet.com.au/",
@@ -1906,7 +1964,8 @@
         "sv": "Vardagar 8–18, lör 8–12. Ring först vid akutfall; vissa fall hänvisas till akutmottagningen i Newcastle (Broadmeadow).",
         "da": "Hverdage 8–18, lør 8–12. Ring først ved akutte tilfælde; nogle tilfælde henvises til akuthospitalet i Newcastle i Broadmeadow.",
         "fi": "Arkisin 8–18, la 8–12. Soita päivystystapauksissa ensin; osa tapauksista ohjataan Broadmeadowissa sijaitsevaan Newcastlen päivystyskeskukseen.",
-        "nb": "Hverdager 8–18, lør 8–12. Ring først ved nødtilfeller; enkelte tilfeller henvises til akuttsenteret i Newcastle i Broadmeadow."
+        "nb": "Hverdager 8–18, lør 8–12. Ring først ved nødtilfeller; enkelte tilfeller henvises til akuttsenteret i Newcastle i Broadmeadow.",
+        "sl": "Ob delavnikih 8–18, sob 8–12. Za nujne primere najprej pokličite; nekatere primere napotijo v newcastelski nujni center v Broadmeadowu."
       },
       "small_animals": true,
       "url": "https://charlestownvet.com.au/",
@@ -1936,7 +1995,8 @@
         "sv": "Öppet alla dagar. När det är stängt får du akutvård hos AREC i Newcastle och SASH Tuggerah.",
         "da": "Åbent alle 7 dage. Når der er lukket, sørger AREC i Newcastle og SASH Tuggerah for akuthjælp.",
         "fi": "Auki 7 päivää viikossa. Sulkemisaikoina päivystyshoitoa tarjoavat AREC (Newcastle) ja SASH Tuggerah.",
-        "nb": "Åpent sju dager. Når det er stengt, ivaretas akuttbehandlingen av AREC i Newcastle og SASH Tuggerah."
+        "nb": "Åpent sju dager. Når det er stengt, ivaretas akuttbehandlingen av AREC i Newcastle og SASH Tuggerah.",
+        "sl": "Odprto 7 dni v tednu. Ko je zaprto, nujno oskrbo nudita AREC v Newcastlu in SASH Tuggerah."
       },
       "small_animals": true,
       "url": "https://merewethervets.com.au/",
@@ -1970,7 +2030,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets 365 dagar. Ingen bokad tid behövs.",
         "da": "Åbent døgnet rundt, alle ugens dage, 365 dage om året. Ingen tidsbestilling nødvendig.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, 365 päivää vuodessa. Ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, sju dager i uken, 365 dager i året. Ingen timebestilling nødvendig."
+        "nb": "Åpent hele døgnet, sju dager i uken, 365 dager i året. Ingen timebestilling nødvendig.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, 365 dni v letu. Naročanje ni potrebno."
       }
     },
     {
@@ -1999,7 +2060,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, hele året.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, vuoden jokaisena päivänä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året."
+        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, vse dni v letu."
       }
     },
     {
@@ -2028,7 +2090,8 @@
         "sv": "Akut- och intensivvård dygnet runt, årets 365 dagar.",
         "da": "Akut- og intensivbehandling døgnet rundt, 365 dage om året.",
         "fi": "Päivystys ja tehohoito 24 tuntia vuorokaudessa, 365 päivää vuodessa.",
-        "nb": "Akutt- og intensivbehandling hele døgnet, 365 dager i året."
+        "nb": "Akutt- og intensivbehandling hele døgnet, 365 dager i året.",
+        "sl": "Nujna pomoč in intenzivna oskrba 24 ur na dan, 365 dni v letu."
       }
     },
     {
@@ -2057,7 +2120,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar, även helgdagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, hele året, også på helligdage.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, vuoden jokaisena päivänä, myös pyhäpäivinä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året, også helligdager."
+        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året, også helligdager.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, vse dni v letu, tudi ob praznikih."
       }
     },
     {
@@ -2086,7 +2150,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets alla dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, hele året.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, vuoden jokaisena päivänä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året."
+        "nb": "Åpent hele døgnet, sju dager i uken, alle dager i året.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, vse dni v letu."
       }
     },
     {
@@ -2115,7 +2180,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar. Ingen remiss eller bokning behövs vid akutfall.",
         "da": "Åbent døgnet rundt, alle ugens dage, også på helligdage. Ingen henvisning eller booking nødvendig ved akutte tilfælde.",
         "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, myös pyhäpäivinä. Päivystystapauksissa ei tarvita lähetettä eikä ajanvarausta.",
-        "nb": "Åpent hele døgnet, alle dager i uken, også offentlige helligdager. Ingen henvisning eller timebestilling nødvendig for nødtilfeller."
+        "nb": "Åpent hele døgnet, alle dager i uken, også offentlige helligdager. Ingen henvisning eller timebestilling nødvendig for nødtilfeller.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih. Za nujne primere napotnica ali naročanje nista potrebna."
       }
     },
     {
@@ -2144,7 +2210,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, også på helligdage.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, myös pyhäpäivinä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, også helligdager."
+        "nb": "Åpent hele døgnet, sju dager i uken, også helligdager.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih."
       }
     },
     {
@@ -2173,7 +2240,8 @@
         "sv": "Akutservice som har öppet dygnet runt, årets 365 dagar. Bokade tider för allmänpraktik och specialist mån–fre 8–18, lör 9–13.",
         "da": "Akuttjeneste har åbent døgnet rundt, 365 dage om året. Tid hos praktiserende dyrlæge og specialist man–fre 8–18, lør 9–13.",
         "fi": "Päivystys auki 24/7, 365 päivää vuodessa. Yleis- ja erikoislääkärin vastaanotto ajanvarauksella ma–pe 8–18, la 9–13.",
-        "nb": "Akuttjeneste åpen hele døgnet, 365 dager i året. Timer hos allmenndyrlege og spesialist man–fre kl. 8–18, lør kl. 9–13."
+        "nb": "Akuttjeneste åpen hele døgnet, 365 dager i året. Timer hos allmenndyrlege og spesialist man–fre kl. 8–18, lør kl. 9–13.",
+        "sl": "Nujna služba odprta 24/7, 365 dni v letu. Pregledi pri splošnem in specialističnem veterinarju: pon–pet 8–18, sob 9–13."
       }
     },
     {
@@ -2202,7 +2270,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa.",
-        "nb": "Åpent hele døgnet, sju dager i uken."
+        "nb": "Åpent hele døgnet, sju dager i uken.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu."
       }
     },
     {
@@ -2231,7 +2300,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets 365 dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, 365 dage om året.",
         "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, 365 päivää vuodessa.",
-        "nb": "Åpent hele døgnet, alle dager i uken, 365 dager i året."
+        "nb": "Åpent hele døgnet, alle dager i uken, 365 dager i året.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, 365 dni v letu."
       }
     },
     {
@@ -2260,7 +2330,8 @@
         "sv": "Öppet dygnet runt, även helgdagar. Ingen bokad tid behövs; ring innan du kommer om möjligt.",
         "da": "Åbent døgnet rundt, også på helligdage. Ingen tidsbestilling nødvendig; ring på forhånd, hvis det er muligt.",
         "fi": "Auki 24/7, myös pyhäpäivinä. Ajanvarausta ei tarvita; soita etukäteen, jos mahdollista.",
-        "nb": "Åpent hele døgnet, også helligdager. Ingen timebestilling nødvendig; ring på forhånd om mulig."
+        "nb": "Åpent hele døgnet, også helligdager. Ingen timebestilling nødvendig; ring på forhånd om mulig.",
+        "sl": "Odprto 24/7, tudi ob praznikih. Naročanje ni potrebno; če je mogoče, vnaprej pokličite."
       }
     },
     {
@@ -2289,7 +2360,8 @@
         "sv": "Akutdjursjukhus med öppet dygnet runt, alla dagar i veckan. Ingen remiss eller bokad tid behövs vid akutfall.",
         "da": "Akuthospital, åbent døgnet rundt, alle ugens dage. Ingen henvisning eller tidsbestilling nødvendig ved akutte tilfælde.",
         "fi": "Päivystyssairaala auki ympäri vuorokauden, 7 päivää viikossa. Päivystystapauksissa ei tarvita lähetettä eikä ajanvarausta.",
-        "nb": "Akuttsykehus åpent hele døgnet, sju dager i uken. Ingen henvisning eller timebestilling nødvendig ved nødtilfeller."
+        "nb": "Akuttsykehus åpent hele døgnet, sju dager i uken. Ingen henvisning eller timebestilling nødvendig ved nødtilfeller.",
+        "sl": "Nujna bolnišnica odprta 24 ur na dan, 7 dni v tednu. Za nujne primere napotnica ali naročanje nista potrebna."
       }
     },
     {
@@ -2318,7 +2390,8 @@
         "sv": "Öppet för akutfall dygnet runt; ingen bokad tid behövs.",
         "da": "Åbent døgnet rundt for akutte tilfælde; ingen tidsbestilling nødvendig.",
         "fi": "Auki 24/7 päivystystapauksille; ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet for nødtilfeller; ingen timebestilling nødvendig."
+        "nb": "Åpent hele døgnet for nødtilfeller; ingen timebestilling nødvendig.",
+        "sl": "Nujna pomoč 24/7; naročanje ni potrebno."
       }
     },
     {
@@ -2346,7 +2419,8 @@
         "sv": "Akutvård dygnet runt, årets 365 dagar. Ingen bokad tid behövs; ring innan du kommer.",
         "da": "Akuthjælp døgnet rundt, 365 dage om året. Ingen tidsbestilling nødvendig; ring på forhånd.",
         "fi": "Päivystys auki 24 tuntia vuorokaudessa, 365 päivää vuodessa. Ajanvarausta ei tarvita; soita etukäteen.",
-        "nb": "Akuttbehandling tilgjengelig hele døgnet, 365 dager i året. Ingen timebestilling nødvendig; ring på forhånd."
+        "nb": "Akuttbehandling tilgjengelig hele døgnet, 365 dager i året. Ingen timebestilling nødvendig; ring på forhånd.",
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu. Naročanje ni potrebno; vnaprej pokličite."
       }
     },
     {
@@ -2375,7 +2449,8 @@
         "sv": "Akutklinik utanför ordinarie öppettider: vardagar 7–9 och 17–24, helger 7–24. Ring innan du kommer.",
         "da": "Akutklinik uden for almindelig åbningstid: hverdage 7–9 og 17–24, weekender 7–24. Ring på forhånd.",
         "fi": "Päivystysklinikka virka-ajan ulkopuolella: arkisin 7–9 ja 17–24, viikonloppuisin 7–24. Soita etukäteen.",
-        "nb": "Dyrlegevakt utenfor ordinær åpningstid: hverdager kl. 7–9 og 17–24, helger kl. 7–24. Ring på forhånd."
+        "nb": "Dyrlegevakt utenfor ordinær åpningstid: hverdager kl. 7–9 og 17–24, helger kl. 7–24. Ring på forhånd.",
+        "sl": "Nujna klinika zunaj delovnega časa: delavniki 7–9 in 17–24, ob koncih tedna 7–24. Vnaprej pokličite."
       }
     },
     {
@@ -2404,7 +2479,8 @@
         "sv": "Akutfall tas emot alla dagar 8–22, även helgdagar; ordinarie besök mån–lör 8–19.",
         "da": "Akutte tilfælde modtages 8–22 alle dage, også på helligdage; almindelige konsultationer man–lør 8–19.",
         "fi": "Päivystystapauksia otetaan vastaan joka päivä 8–22, myös pyhäpäivinä; tavallinen vastaanotto ma–la 8–19.",
-        "nb": "Nødtilfeller tas imot 8–22 alle dager, også helligdager; ordinære konsultasjoner man–lør 8–19."
+        "nb": "Nødtilfeller tas imot 8–22 alle dager, også helligdager; ordinære konsultasjoner man–lør 8–19.",
+        "sl": "Nujni primeri vsak dan 8–22, tudi ob praznikih; redni pregledi pon–sob 8–19."
       }
     },
     {
@@ -2433,7 +2509,8 @@
         "sv": "Akutservice för helger och helgdagar: öppet dygnet runt från fredag 18 till måndag 8 samt på helgdagar. Ring för att bekräfta.",
         "da": "Akuttjeneste i weekender og på helligdage: åbent døgnet rundt fra fredag kl. 18 til mandag kl. 8 og på helligdage. Ring for at bekræfte.",
         "fi": "Päivystys viikonloppuisin ja pyhäpäivinä: auki ympäri vuorokauden pe klo 18 – ma klo 8 sekä pyhäpäivinä. Varmista soittamalla.",
-        "nb": "Akuttjeneste i helger og på helligdager: åpent hele døgnet fra fredag kl. 18 til mandag kl. 8 og på helligdager. Ring for å bekrefte."
+        "nb": "Akuttjeneste i helger og på helligdager: åpent hele døgnet fra fredag kl. 18 til mandag kl. 8 og på helligdager. Ring for å bekrefte.",
+        "sl": "Nujna služba ob koncih tedna in praznikih: odprto 24 ur na dan od petka ob 18. uri do ponedeljka ob 8. uri ter ob praznikih. Za potrditev pokličite."
       }
     },
     {
@@ -2462,7 +2539,8 @@
         "sv": "Mån–fre 8.30–18, lör 9–12.30. Utanför öppettiderna ring samma nummer; med stöd av Bendigo Combined Clinics akutservice dygnet runt.",
         "da": "Man–fre 8.30–18, lør 9–12.30. Uden for åbningstid ring til samme nummer; understøttet af Bendigo Combined Clinics' akuttjeneste døgnet rundt.",
         "fi": "ma–pe 8.30–18, la 9–12.30. Virka-ajan ulkopuolella soita samaan numeroon; tukena Bendigo Combined Clinics -klinikoiden 24 tunnin päivystys.",
-        "nb": "man–fre 8.30–18, lør 9–12.30. Utenom åpningstid ring samme nummer; støttet av Bendigo Combined Clinics' døgnåpne akuttjeneste."
+        "nb": "man–fre 8.30–18, lør 9–12.30. Utenom åpningstid ring samme nummer; støttet av Bendigo Combined Clinics' døgnåpne akuttjeneste.",
+        "sl": "Pon–pet 8.30–18, sob 9–12.30. Zunaj delovnega časa pokličite isto številko; podpira jo nujna služba Bendigo Combined Clinics, ki dela 24 ur na dan."
       }
     },
     {
@@ -2491,7 +2569,8 @@
         "sv": "Mån–tors 9–18, fre 9–17, lör 9–12. Vid akutfall utanför dessa tider ring 1800 387 543.",
         "da": "Man–tor 9–18, fre 9–17, lør 9–12. Ved akutte tilfælde uden for disse tider ring 1800 387 543.",
         "fi": "ma–to 9–18, pe 9–17, la 9–12. Päivystystapauksissa näiden aikojen ulkopuolella soita 1800 387 543.",
-        "nb": "man–tor 9.00–18.00, fre 9.00–17.00, lør 9.00–12.00. Ved nødtilfeller utenom disse tidene ring 1800 387 543."
+        "nb": "man–tor 9.00–18.00, fre 9.00–17.00, lør 9.00–12.00. Ved nødtilfeller utenom disse tidene ring 1800 387 543.",
+        "sl": "Pon–čet 9–18, pet 9–17, sob 9–12. Za nujne primere zunaj tega časa pokličite 1800 387 543."
       }
     },
     {
@@ -2520,7 +2599,8 @@
         "sv": "Triage utanför öppettider vardagar 18–24, helger och helgdagar 8–24 (registrerade kunder; andra är välkomna om deras klinik saknar jour). Vård dygnet runt via akutdjursjukhus i Melbourne.",
         "da": "Triage uden for åbningstid hverdage 18–24, weekender og helligdage 8–24 (registrerede kunder; andre er velkomne, hvis deres klinik ikke har vagtdækning). Pleje døgnet rundt via akuthospitaler i Melbourne.",
         "fi": "Kiireellisyysarvio virka-ajan ulkopuolella arkisin 18–24, viikonloppuisin ja pyhäpäivinä 8–24 (rekisteröidyt asiakkaat; muutkin tervetulleita, jos oman klinikan päivystystä ei ole). 24/7-hoito Melbournen päivystyssairaaloissa.",
-        "nb": "Vurdering av akutte tilfeller utenfor ordinær åpningstid hverdager kl. 18–24, helger og helligdager kl. 8–24 (for registrerte kunder; andre er velkomne hvis deres egen klinikk ikke har vakt). Hele døgnet via akuttsykehusene i Melbourne."
+        "nb": "Vurdering av akutte tilfeller utenfor ordinær åpningstid hverdager kl. 18–24, helger og helligdager kl. 8–24 (for registrerte kunder; andre er velkomne hvis deres egen klinikk ikke har vakt). Hele døgnet via akuttsykehusene i Melbourne.",
+        "sl": "Nujno razvrščanje zunaj delovnega časa: delavniki 18–24, ob koncih tedna in praznikih 8–24 (za registrirane stranke; drugi dobrodošli, če njihova klinika nima dežurstva). Oskrba 24/7 prek nujnih bolnišnic v Melbournu."
       }
     },
     {
@@ -2549,7 +2629,8 @@
         "sv": "Mån–fre 8–18; akutlinje utanför öppettiderna 18–8 på samma nummer.",
         "da": "Man–fre 8–18; akuttelefon uden for åbningstid 18–8 på samme nummer.",
         "fi": "ma–pe 8–18; päivystysnumero klo 18–8 samassa numerossa.",
-        "nb": "man–fre 8–18; vakttelefon for nødtilfeller 18–8 på samme nummer."
+        "nb": "man–fre 8–18; vakttelefon for nødtilfeller 18–8 på samme nummer.",
+        "sl": "Pon–pet 8–18; nujna telefonska linija zunaj delovnega časa 18–8 na isti številki."
       }
     },
     {
@@ -2578,7 +2659,8 @@
         "sv": "Tis och tors 9–19, övriga vardagar 9–17. Närmaste akutveterinär med öppet dygnet runt är Greencross Vet Hospital Werribee.",
         "da": "Tir og tor 9–19, øvrige hverdage 9–17. Nærmeste døgnåbne akutte dyrlæge er Greencross Vet Hospital Werribee.",
         "fi": "ti ja to 9–19, muina arkipäivinä 9–17. Lähin 24/7-päivystys on Greencross Vet Hospital Werribee.",
-        "nb": "Tir og tor 9–19, øvrige hverdager 9–17. Nærmeste døgnåpne dyrlegevakt er Greencross Vet Hospital Werribee."
+        "nb": "Tir og tor 9–19, øvrige hverdager 9–17. Nærmeste døgnåpne dyrlegevakt er Greencross Vet Hospital Werribee.",
+        "sl": "Tor in čet 9–19, ostale delavnike 9–17. Najbližji nujni veterinar, ki dela 24/7, je Greencross Vet Hospital Werribee."
       }
     },
     {
@@ -2607,7 +2689,8 @@
         "sv": "Mån–tors 8–19.30, fre 8–18, lör 8–12, sön 9–12. Akutservice dygnet runt per telefon på samma nummer.",
         "da": "Man–tor 8–19.30, fre 8–18, lør 8–12, søn 9–12. Akuttjeneste døgnet rundt pr. telefon på samme nummer.",
         "fi": "ma–to 8–19.30, pe 8–18, la 8–12, su 9–12. 24 tunnin päivystys puhelimitse samassa numerossa.",
-        "nb": "man–tor 8.00–19.30, fre 8.00–18.00, lør 8.00–12.00, søn 9.00–12.00. Akuttjeneste hele døgnet på telefon, samme nummer."
+        "nb": "man–tor 8.00–19.30, fre 8.00–18.00, lør 8.00–12.00, søn 9.00–12.00. Akuttjeneste hele døgnet på telefon, samme nummer.",
+        "sl": "Pon–čet 8–19.30, pet 8–18, sob 8–12, ned 9–12. Nujna služba 24 ur na dan po telefonu na isti številki."
       }
     },
     {
@@ -2636,7 +2719,8 @@
         "sv": "Dagtidsbesök; stöd utanför öppettiderna via Warrnambool Veterinary Clinic.",
         "da": "Konsultationer i dagtimerne; hjælp uden for åbningstid via Warrnambool Veterinary Clinic.",
         "fi": "Päiväaikainen vastaanotto; virka-ajan ulkopuolinen tuki: Warrnambool Veterinary Clinic.",
-        "nb": "Konsultasjoner på dagtid; vakttjeneste utenom åpningstid via Warrnambool Veterinary Clinic."
+        "nb": "Konsultasjoner på dagtid; vakttjeneste utenom åpningstid via Warrnambool Veterinary Clinic.",
+        "sl": "Pregledi čez dan; zunaj delovnega časa pomoč nudi Warrnambool Veterinary Clinic."
       }
     },
     {
@@ -2665,7 +2749,8 @@
         "sv": "Mån–fre 9–18.30, lör 9–13. Ring kliniken för vägledning utanför öppettiderna.",
         "da": "Man–fre 9–18.30, lør 9–13. Ring til klinikken for vejledning uden for åbningstid.",
         "fi": "ma–pe 9–18.30, la 9–13. Soita klinikalle ja kysy ohjeita virka-ajan ulkopuolelle.",
-        "nb": "man–fre 9.00–18.30, lør 9.00–13.00. Ring klinikken for veiledning utenom åpningstiden."
+        "nb": "man–fre 9.00–18.30, lør 9.00–13.00. Ring klinikken for veiledning utenom åpningstiden.",
+        "sl": "Pon–pet 9–18.30, sob 9–13. Za nasvet zunaj delovnega časa pokličite kliniko."
       }
     },
     {
@@ -2694,7 +2779,8 @@
         "sv": "Mån–fre 9–17.30, lör 9–12.",
         "da": "Man–fre 9–17.30, lør 9–12.",
         "fi": "ma–pe 9–17.30, la 9–12.",
-        "nb": "man–fre 9.00–17.30, lør 9.00–12.00."
+        "nb": "man–fre 9.00–17.30, lør 9.00–12.00.",
+        "sl": "Pon–pet 9–17.30, sob 9–12."
       }
     },
     {
@@ -2723,7 +2809,8 @@
         "sv": "Mån–fre 8.30–18, lör 8.30–12. Utanför öppettiderna: AEC Frankston (03 9770 5555) eller Peninsula Vet Emergency (03 5979 9600).",
         "da": "Man–fre 8.30–18, lør 8.30–12. Uden for åbningstid: AEC Frankston (03 9770 5555) eller Peninsula Vet Emergency (03 5979 9600).",
         "fi": "ma–pe 8.30–18, la 8.30–12. Virka-ajan ulkopuolella: AEC Frankston (03 9770 5555) tai Peninsula Vet Emergency (03 5979 9600).",
-        "nb": "man–fre 8.30–18, lør 8.30–12. Utenom åpningstid: AEC Frankston (03 9770 5555) eller Peninsula Vet Emergency (03 5979 9600)."
+        "nb": "man–fre 8.30–18, lør 8.30–12. Utenom åpningstid: AEC Frankston (03 9770 5555) eller Peninsula Vet Emergency (03 5979 9600).",
+        "sl": "Pon–pet 8.30–18, sob 8.30–12. Zunaj delovnega časa: AEC Frankston (03 9770 5555) ali Peninsula Vet Emergency (03 5979 9600)."
       }
     },
     {
@@ -2752,7 +2839,8 @@
         "sv": "Dagklinik; för vård dygnet runt se Peninsula Vet Emergency & Referral Hospital.",
         "da": "Dagklinik; for pleje døgnet rundt se Peninsula Vet Emergency & Referral Hospital.",
         "fi": "Päiväklinikka; 24 tunnin hoitoa tarjoaa Peninsula Vet Emergency & Referral Hospital.",
-        "nb": "Dagklinikk; se Peninsula Vet Emergency & Referral Hospital for døgnåpen behandling."
+        "nb": "Dagklinikk; se Peninsula Vet Emergency & Referral Hospital for døgnåpen behandling.",
+        "sl": "Dnevna klinika; za oskrbo 24 ur na dan obiščite Peninsula Vet Emergency & Referral Hospital."
       }
     },
     {
@@ -2781,7 +2869,8 @@
         "sv": "Dagklinik; för vård dygnet runt se Peninsula Vet Emergency & Referral Hospital.",
         "da": "Dagklinik; for pleje døgnet rundt se Peninsula Vet Emergency & Referral Hospital.",
         "fi": "Päiväklinikka; 24 tunnin hoitoa tarjoaa Peninsula Vet Emergency & Referral Hospital.",
-        "nb": "Dagklinikk; se Peninsula Vet Emergency & Referral Hospital for døgnåpen behandling."
+        "nb": "Dagklinikk; se Peninsula Vet Emergency & Referral Hospital for døgnåpen behandling.",
+        "sl": "Dnevna klinika; za oskrbo 24 ur na dan obiščite Peninsula Vet Emergency & Referral Hospital."
       }
     },
     {
@@ -2810,7 +2899,8 @@
         "sv": "Dagklinik; för vård dygnet runt se Peninsula Vet Emergency & Referral Hospital.",
         "da": "Dagklinik; for pleje døgnet rundt se Peninsula Vet Emergency & Referral Hospital.",
         "fi": "Päiväklinikka; 24 tunnin hoitoa tarjoaa Peninsula Vet Emergency & Referral Hospital.",
-        "nb": "Dagklinikk; se Peninsula Vet Emergency & Referral Hospital for døgnåpen behandling."
+        "nb": "Dagklinikk; se Peninsula Vet Emergency & Referral Hospital for døgnåpen behandling.",
+        "sl": "Dnevna klinika; za oskrbo 24 ur na dan obiščite Peninsula Vet Emergency & Referral Hospital."
       }
     },
     {
@@ -2839,7 +2929,8 @@
         "sv": "Djursjukhus för remisser mån–fre 8–20, lör 8–12. Akutfall utanför öppettiderna går till Southpaws Malvern (dygnet runt).",
         "da": "Henvisningshospital man–fre 8–20, lør 8–12. Akutte tilfælde uden for åbningstid henvises til Southpaws Malvern (døgnet rundt).",
         "fi": "Erikoissairaala ma–pe 8–20, la 8–12. Päivystystapaukset virka-ajan ulkopuolella ohjataan Southpaws Malvern -klinikalle (24/7).",
-        "nb": "Henvisningssykehus man–fre kl. 8–20, lør 8–12. Nødtilfeller utenom åpningstid henvises til Southpaws Malvern (hele døgnet)."
+        "nb": "Henvisningssykehus man–fre kl. 8–20, lør 8–12. Nødtilfeller utenom åpningstid henvises til Southpaws Malvern (hele døgnet).",
+        "sl": "Napotitvena bolnišnica pon–pet 8–20, sob 8–12. Nujne primere zunaj delovnega časa napotijo v Southpaws Malvern (24/7)."
       }
     },
     {
@@ -2868,7 +2959,8 @@
         "sv": "Mån–fre 8.30–17.30, lör 8.30–12. Akutservice utanför öppettiderna på samma nummer för befintliga kunder; kan hänvisa till en annan akutmottagning när det är fullt.",
         "da": "Man–fre 8.30–17.30, lør 8.30–12. Akuttjeneste uden for åbningstid på samme nummer for eksisterende kunder; kan henvise til et andet akuthospital, når der er fuldt.",
         "fi": "ma–pe 8.30–17.30, la 8.30–12. Päivystyspalvelu virka-ajan ulkopuolella samassa numerossa nykyisille asiakkaille; voi ohjata toiseen päivystyskeskukseen, jos paikat ovat täynnä.",
-        "nb": "man–fre 8.30–17.30, lør 8.30–12. Akuttjeneste utenom åpningstid på samme nummer for eksisterende klienter; kan henvise til et annet nødsenter ved full kapasitet."
+        "nb": "man–fre 8.30–17.30, lør 8.30–12. Akuttjeneste utenom åpningstid på samme nummer for eksisterende klienter; kan henvise til et annet nødsenter ved full kapasitet.",
+        "sl": "Pon–pet 8.30–17.30, sob 8.30–12. Nujna služba zunaj delovnega časa je dosegljiva na isti številki za obstoječe stranke; ob polni zasedenosti lahko napotijo v drug nujni center."
       }
     },
     {
@@ -2897,7 +2989,8 @@
         "sv": "Mån–fre 8–17/18, lör 8.30–12. Akutfall på helger och helgdagar hänvisas till Gippsland Pet Emergency (Warragul).",
         "da": "Man–fre 8–17/18, lør 8.30–12. Akutte tilfælde i weekender og på helligdage omdirigeres til Gippsland Pet Emergency (Warragul).",
         "fi": "ma–pe 8–17/18, la 8.30–12. Viikonlopun ja pyhäpäivien päivystystapaukset ohjataan Gippsland Pet Emergency -klinikalle (Warragul).",
-        "nb": "man–fre 8–17/18, lør 8.30–12. Nødtilfeller i helger og på helligdager henvises til Gippsland Pet Emergency (Warragul)."
+        "nb": "man–fre 8–17/18, lør 8.30–12. Nødtilfeller i helger og på helligdager henvises til Gippsland Pet Emergency (Warragul).",
+        "sl": "Pon–pet 8–17/18, sob 8.30–12. Nujne primere ob koncih tedna in praznikih preusmerijo v Gippsland Pet Emergency (Warragul)."
       }
     },
     {
@@ -2926,7 +3019,8 @@
         "sv": "Mån–fre 8.30–17.30, lör 9–12. Akutservice utanför öppettiderna per telefon, som delas med Main St Vets.",
         "da": "Man–fre 8.30–17.30, lør 9–12. Telefonisk akuthjælp uden for åbningstid, delt med Main St Vets.",
         "fi": "ma–pe 8.30–17.30, la 9–12. Päivystys puhelimitse virka-ajan ulkopuolella, jaettu Main St Vets -klinikan kanssa.",
-        "nb": "man–fre 8.30–17.30, lør 9–12. Nødtelefon utenom åpningstid, delt med Main St Vets."
+        "nb": "man–fre 8.30–17.30, lør 9–12. Nødtelefon utenom åpningstid, delt med Main St Vets.",
+        "sl": "Pon–pet 8.30–17.30, sob 9–12. Nujna telefonska pomoč zunaj delovnega časa, skupna z Main St Vets."
       }
     },
     {
@@ -2955,7 +3049,8 @@
         "sv": "Mån–fre 8.30–18, lör 9–12. Akuttriage utanför öppettiderna per telefon på samma nummer.",
         "da": "Man–fre 8.30–18, lør 9–12. Telefonisk akuttriage uden for åbningstid på samme nummer.",
         "fi": "ma–pe 8.30–18, la 9–12. Päivystyksen kiireellisyysarvio puhelimitse virka-ajan ulkopuolella samassa numerossa.",
-        "nb": "man–fre 8.30–18, lør 9–12. Telefonvurdering av nødtilfeller utenom åpningstid på samme nummer."
+        "nb": "man–fre 8.30–18, lør 9–12. Telefonvurdering av nødtilfeller utenom åpningstid på samme nummer.",
+        "sl": "Pon–pet 8.30–18, sob 9–12. Nujno telefonsko razvrščanje zunaj delovnega časa na isti številki."
       }
     },
     {
@@ -2984,7 +3079,8 @@
         "sv": "Mån–fre 8.30–18, lör 9–12. Akutråd utanför öppettiderna via telefontjänsten VETCHAT.",
         "da": "Man–fre 8.30–18, lør 9–12. Akutrådgivning uden for åbningstid via telefontjenesten VETCHAT.",
         "fi": "ma–pe 8.30–18, la 9–12. Päivystysneuvonta virka-ajan ulkopuolella VETCHAT-puhelinpalvelun kautta.",
-        "nb": "man–fre 8.30–18, lør 9–12. Råd ved nødtilfeller utenom åpningstid via telefontjenesten VETCHAT."
+        "nb": "man–fre 8.30–18, lør 9–12. Råd ved nødtilfeller utenom åpningstid via telefontjenesten VETCHAT.",
+        "sl": "Pon–pet 8.30–18, sob 9–12. Nujni nasvet zunaj delovnega časa prek telefonske službe VETCHAT."
       }
     },
     {
@@ -3013,7 +3109,8 @@
         "sv": "Mån, tis, tors, fre 8.30–17.30, lör 9–13. Veterinär i jour dygnet runt på samma nummer (främst för befintliga kunder; inte en klinik med öppet dygnet runt).",
         "da": "Man, tir, tor, fre 8.30–17.30, lør 9–13. Dyrlæge på vagt døgnet rundt på samme nummer (primært for eksisterende kunder; ikke et døgnåbent hospital).",
         "fi": "ma, ti, to, pe 8.30–17.30, la 9–13. Eläinlääkäri päivystää 24/7 samassa numerossa (lähinnä nykyisille asiakkaille; ei ole ympärivuorokautinen klinikka).",
-        "nb": "Man, tir, tor, fre 8.30–17.30, lør 9–13. Dyrlege på vakt hele døgnet på samme nummer (hovedsakelig for eksisterende kunder; ikke en døgnåpen klinikk)."
+        "nb": "Man, tir, tor, fre 8.30–17.30, lør 9–13. Dyrlege på vakt hele døgnet på samme nummer (hovedsakelig for eksisterende kunder; ikke en døgnåpen klinikk).",
+        "sl": "Pon, tor, čet, pet 8.30–17.30, sob 9–13. Veterinar je dosegljiv 24/7 na isti številki (predvsem za obstoječe stranke; ni klinika, odprta 24 ur na dan)."
       }
     },
     {
@@ -3042,7 +3139,8 @@
         "sv": "Mån–fre 8–20. Akutnummer 0419 353 965.",
         "da": "Man–fre 8–20. Akutnummer 0419 353 965.",
         "fi": "ma–pe 8–20. Päivystysnumero 0419 353 965.",
-        "nb": "man–fre 8–20. Nødnummer 0419 353 965."
+        "nb": "man–fre 8–20. Nødnummer 0419 353 965.",
+        "sl": "Pon–pet 8–20. Številka za nujne primere 0419 353 965."
       }
     },
     {
@@ -3070,7 +3168,8 @@
         "sv": "Mån–fre 8.30–18, lör 9–12. Akutnummer utanför öppettiderna 0417 529 462.",
         "da": "Man–fre 8.30–18, lør 9–12. Akut uden for åbningstid 0417 529 462.",
         "fi": "ma–pe 8.30–18, la 9–12. Päivystys virka-ajan ulkopuolella 0417 529 462.",
-        "nb": "man–fre 8.30–18, lør 9–12. Nødtelefon utenom åpningstid 0417 529 462."
+        "nb": "man–fre 8.30–18, lør 9–12. Nødtelefon utenom åpningstid 0417 529 462.",
+        "sl": "Pon–pet 8.30–18, sob 9–12. Nujni primeri zunaj delovnega časa: 0417 529 462."
       }
     },
     {
@@ -3099,7 +3198,8 @@
         "sv": "Mån 8–18, tis–fre 8.30–18, lör 8.30–13. Veterinär i jour för råd och brådskande vård utanför öppettiderna via klinikens nummer.",
         "da": "Man 8–18, tir–fre 8.30–18, lør 8.30–13. Vagtdyrlæge til rådgivning og akut hjælp uden for åbningstid via klinikkens nummer.",
         "fi": "ma 8–18, ti–pe 8.30–18, la 8.30–13. Päivystävä eläinlääkäri antaa neuvoja ja kiireellistä hoitoa virka-ajan ulkopuolella klinikan numerossa.",
-        "nb": "Man 8–18, tir–fre 8.30–18, lør 8.30–13. Dyrlege på vakt for råd og hastebehandling utenom åpningstid via klinikkens nummer."
+        "nb": "Man 8–18, tir–fre 8.30–18, lør 8.30–13. Dyrlege på vakt for råd og hastebehandling utenom åpningstid via klinikkens nummer.",
+        "sl": "Pon 8–18, tor–pet 8.30–18, sob 8.30–13. Dežurni veterinar za nasvete zunaj delovnega časa in nujno oskrbo prek številke klinike."
       }
     },
     {
@@ -3127,7 +3227,8 @@
         "sv": "Mån–fre 8.30–17.30. Vid akutfall utanför öppettiderna ring kliniken.",
         "da": "Man–fre 8.30–17.30. Ved akutte tilfælde uden for åbningstid ring til klinikken.",
         "fi": "ma–pe 8.30–17.30. Päivystystapauksissa virka-ajan ulkopuolella soita klinikalle.",
-        "nb": "man–fre 8.30–17.30. Ring klinikken ved nødtilfeller utenom åpningstid."
+        "nb": "man–fre 8.30–17.30. Ring klinikken ved nødtilfeller utenom åpningstid.",
+        "sl": "Pon–pet 8.30–17.30. Za nujne primere zunaj delovnega časa pokličite kliniko."
       }
     },
     {
@@ -3156,7 +3257,8 @@
         "sv": "Akutfall utanför öppettiderna hanteras av telefonteamet Vetriage via klinikens nummer.",
         "da": "Akutte tilfælde uden for åbningstid håndteres af telefonteamet Vetriage via klinikkens nummer.",
         "fi": "Virka-ajan ulkopuolella päivystystapaukset hoitaa Vetriage-puhelintiimi klinikan numeron kautta.",
-        "nb": "Nødtilfeller utenom åpningstid håndteres av telefonteamet i Vetriage via klinikkens nummer."
+        "nb": "Nødtilfeller utenom åpningstid håndteres av telefonteamet i Vetriage via klinikkens nummer.",
+        "sl": "Nujne primere zunaj delovnega časa obravnava telefonska ekipa Vetriage prek številke klinike."
       }
     },
     {
@@ -3185,7 +3287,8 @@
         "sv": "Mån–fre 8–18, lör 9–12. Akutjour dygnet runt, alla dagar i veckan, för smådjur och stora djur på samma nummer.",
         "da": "Man–fre 8–18, lør 9–12. Akutvagt døgnet rundt, alle ugens dage, for små og store dyr på samme nummer.",
         "fi": "ma–pe 8–18, la 9–12. 24 tunnin päivystys 7 päivää viikossa pien- ja suurille eläimille samassa numerossa.",
-        "nb": "man–fre 8–18, lør 9–12. Akuttjeneste med dyrlege på vakt hele døgnet, alle dager, for små og store dyr på samme nummer."
+        "nb": "man–fre 8–18, lør 9–12. Akuttjeneste med dyrlege på vakt hele døgnet, alle dager, for små og store dyr på samme nummer.",
+        "sl": "Pon–pet 8–18, sob 9–12. Nujna dežurna služba za male in velike živali 24 ur na dan, 7 dni v tednu, na isti številki."
       }
     },
     {
@@ -3214,7 +3317,8 @@
         "sv": "Mån–fre 8–18; akut- och intensivvårdsteam i jour utanför dessa tider.",
         "da": "Man–fre 8–18; akut- og intensivteam på vagt uden for disse tider.",
         "fi": "ma–pe 8–18; päivystys- ja tehohoitotiimi päivystää näiden aikojen ulkopuolella.",
-        "nb": "man–fre 8–18; akutt- og intensivteamet har vakt utenom disse tidene."
+        "nb": "man–fre 8–18; akutt- og intensivteamet har vakt utenom disse tidene.",
+        "sl": "Pon–pet 8–18; zunaj tega časa je na voljo dežurna ekipa za nujno in intenzivno oskrbo."
       }
     },
     {
@@ -3243,7 +3347,8 @@
         "sv": "Mån–fre 8–18. Utanför dessa tider hänvisas djurägare till ett akutdjursjukhus.",
         "da": "Man–fre 8–18. Uden for disse tider henvises ejere til et akuthospital.",
         "fi": "ma–pe 8–18. Näiden aikojen ulkopuolella omistajat ohjataan päivystyssairaalaan.",
-        "nb": "man–fre 8–18. Utenom åpningstid henvises eierne til et akuttsykehus."
+        "nb": "man–fre 8–18. Utenom åpningstid henvises eierne til et akuttsykehus.",
+        "sl": "Pon–pet 8–18. Zunaj tega časa lastnike napotijo v nujno bolnišnico."
       }
     },
     {
@@ -3272,7 +3377,8 @@
         "sv": "Mån–fre 8.30–17.30.",
         "da": "Man–fre 8.30–17.30.",
         "fi": "ma–pe 8.30–17.30.",
-        "nb": "man–fre 8.30–17.30."
+        "nb": "man–fre 8.30–17.30.",
+        "sl": "Pon–pet 8.30–17.30."
       }
     },
     {
@@ -3301,7 +3407,8 @@
         "sv": "Mån–fre 8–18.30, lör 8.30–12.30. Utanför öppettiderna: Geelong Animal Emergency (03 5222 2139).",
         "da": "Man–fre 8–18.30, lør 8.30–12.30. Uden for åbningstid: Geelong Animal Emergency (03 5222 2139).",
         "fi": "ma–pe 8–18.30, la 8.30–12.30. Virka-ajan ulkopuolella: Geelong Animal Emergency (03 5222 2139).",
-        "nb": "man–fre 8–18.30, lør 8.30–12.30. Utenom åpningstid: Geelong Animal Emergency (03 5222 2139)."
+        "nb": "man–fre 8–18.30, lør 8.30–12.30. Utenom åpningstid: Geelong Animal Emergency (03 5222 2139).",
+        "sl": "Pon–pet 8–18.30, sob 8.30–12.30. Zunaj delovnega časa: Geelong Animal Emergency (03 5222 2139)."
       }
     },
     {
@@ -3330,7 +3437,8 @@
         "sv": "Mån–fre 8–19, lör 8–16, sön 10–16. Ring för information om tider utanför öppettiderna.",
         "da": "Man–fre 8–19, lør 8–16, søn 10–16. Ring for oplysninger om hjælp uden for åbningstid.",
         "fi": "ma–pe 8–19, la 8–16, su 10–16. Soita ja kysy tiedot virka-ajan ulkopuolisesta palvelusta.",
-        "nb": "man–fre 8–19, lør 8–16, søn 10–16. Ring for informasjon om tider utenom åpningstid."
+        "nb": "man–fre 8–19, lør 8–16, søn 10–16. Ring for informasjon om tider utenom åpningstid.",
+        "sl": "Pon–pet 8–19, sob 8–16, ned 10–16. Za podatke o delu zunaj delovnega časa pokličite."
       }
     },
     {
@@ -3358,7 +3466,8 @@
         "sv": "Mån–fre 8–18, lör 8–13. Utanför öppettiderna: Geelong Animal Emergency (03 5222 2139).",
         "da": "Man–fre 8–18, lør 8–13. Uden for åbningstid: Geelong Animal Emergency (03 5222 2139).",
         "fi": "ma–pe 8–18, la 8–13. Virka-ajan ulkopuolella: Geelong Animal Emergency (03 5222 2139).",
-        "nb": "man–fre 8–18, lør 8–13. Utenom åpningstid: Geelong Animal Emergency (03 5222 2139)."
+        "nb": "man–fre 8–18, lør 8–13. Utenom åpningstid: Geelong Animal Emergency (03 5222 2139).",
+        "sl": "Pon–pet 8–18, sob 8–13. Zunaj delovnega časa: Geelong Animal Emergency (03 5222 2139)."
       }
     },
     {
@@ -3386,7 +3495,8 @@
         "sv": "Mån–fre 8–18, lör 9–13. Akutfall utanför öppettiderna: Advanced Vetcare Kew.",
         "da": "Man–fre 8–18, lør 9–13. Akutte tilfælde uden for åbningstid: Advanced Vetcare Kew.",
         "fi": "ma–pe 8–18, la 9–13. Päivystys virka-ajan ulkopuolella: Advanced Vetcare Kew.",
-        "nb": "man–fre 8–18, lør 9–13. Nødtilfeller utenom åpningstid: Advanced Vetcare Kew."
+        "nb": "man–fre 8–18, lør 9–13. Nødtilfeller utenom åpningstid: Advanced Vetcare Kew.",
+        "sl": "Pon–pet 8–18, sob 9–13. Nujni primeri zunaj delovnega časa: Advanced Vetcare Kew."
       }
     },
     {
@@ -3415,7 +3525,8 @@
         "sv": "Mån–tors 8–20, fre 8–18, lör 9–15. Utanför öppettiderna: VRH Dandenong (1300 385 874) eller Casey Pet Emergency (03 8790 1625).",
         "da": "Man–tor 8–20, fre 8–18, lør 9–15. Uden for åbningstid: VRH Dandenong (1300 385 874) eller Casey Pet Emergency (03 8790 1625).",
         "fi": "ma–to 8–20, pe 8–18, la 9–15. Virka-ajan ulkopuolella: VRH Dandenong (1300 385 874) tai Casey Pet Emergency (03 8790 1625).",
-        "nb": "man–tor 8.00–20.00, fre 8.00–18.00, lør 9.00–15.00. Utenom åpningstiden: VRH Dandenong (1300 385 874) eller Casey Pet Emergency (03 8790 1625)."
+        "nb": "man–tor 8.00–20.00, fre 8.00–18.00, lør 9.00–15.00. Utenom åpningstiden: VRH Dandenong (1300 385 874) eller Casey Pet Emergency (03 8790 1625).",
+        "sl": "Pon–čet 8–20, pet 8–18, sob 9–15. Zunaj delovnega časa: VRH Dandenong (1300 385 874) ali Casey Pet Emergency (03 8790 1625)."
       }
     },
     {
@@ -3444,7 +3555,8 @@
         "sv": "Mån–fre 8–18, lör 8–12. Akutfall under öppettiderna tas emot utan bokning.",
         "da": "Man–fre 8–18, lør 8–12. Akutte tilfælde i åbningstiden tages imod uden booking.",
         "fi": "ma–pe 8–18, la 8–12. Päivystystapaukset aukioloaikoina ilman ajanvarausta.",
-        "nb": "man–fre 8–18, lør 8–12. Nødtilfeller i åpningstiden tas imot uten timebestilling."
+        "nb": "man–fre 8–18, lør 8–12. Nødtilfeller i åpningstiden tas imot uten timebestilling.",
+        "sl": "Pon–pet 8–18, sob 8–12. Nujne primere v delovnem času sprejemajo brez naročanja."
       }
     },
     {
@@ -3473,7 +3585,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar. Akutfall behöver ingen bokning.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ikke booking.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystyspotilaat eivät tarvitse ajanvarausta.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke bestilling."
+        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke bestilling.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno."
       }
     },
     {
@@ -3502,7 +3615,8 @@
         "sv": "Öppet dygnet runt, årets 365 dagar. Akutfall behöver ingen bokning.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ikke booking.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystyspotilaat eivät tarvitse ajanvarausta.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke bestilling."
+        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke bestilling.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno."
       }
     },
     {
@@ -3531,7 +3645,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, årets 365 dagar. Ingen bokad tid behövs.",
         "da": "Åbent døgnet rundt, alle ugens dage, 365 dage om året. Ingen tidsbestilling nødvendig.",
         "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa, 365 päivää vuodessa. Ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, alle dager i uken, 365 dager i året. Ingen timebestilling nødvendig."
+        "nb": "Åpent hele døgnet, alle dager i uken, 365 dager i året. Ingen timebestilling nødvendig.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, 365 dni v letu. Naročanje ni potrebno."
       }
     },
     {
@@ -3560,7 +3675,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, også på helligdage.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, myös pyhäpäivinä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, også helligdager."
+        "nb": "Åpent hele døgnet, sju dager i uken, også helligdager.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih."
       }
     },
     {
@@ -3589,7 +3705,8 @@
         "sv": "Akutvård som har öppet dygnet runt, årets 365 dagar. Specialistbesök efter remiss, måndag–fredag 8–18.",
         "da": "Akuthjælp har åbent døgnet rundt, 365 dage om året. Specialistkonsultationer efter henvisning, mandag til fredag 8–18.",
         "fi": "Päivystys auki 24 tuntia vuorokaudessa, 365 päivää vuodessa. Erikoislääkärin vastaanotto lähetteellä ma–pe 8–18.",
-        "nb": "Akuttbehandling åpen hele døgnet, 365 dager i året. Spesialistkonsultasjoner etter henvisning, mandag til fredag kl. 8–18."
+        "nb": "Akuttbehandling åpen hele døgnet, 365 dager i året. Spesialistkonsultasjoner etter henvisning, mandag til fredag kl. 8–18.",
+        "sl": "Nujna pomoč odprta 24 ur na dan, 365 dni v letu. Specialistični pregledi z napotnico: pon–pet 8–18."
       }
     },
     {
@@ -3618,7 +3735,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan, även helgdagar.",
         "da": "Åbent døgnet rundt, alle ugens dage, også på helligdage.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, myös pyhäpäivinä.",
-        "nb": "Åpent hele døgnet, sju dager i uken, også helligdager."
+        "nb": "Åpent hele døgnet, sju dager i uken, også helligdager.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih."
       }
     },
     {
@@ -3647,7 +3765,8 @@
         "sv": "Akut- och intensivvård som har öppet dygnet runt, alla dagar i veckan. Allmänpraktik och remisser efter bokning på vardagar.",
         "da": "Akut- og intensivbehandling har åbent døgnet rundt, alle ugens dage. Almen praksis og henvisninger efter aftale på hverdage.",
         "fi": "Päivystys ja tehohoito auki ympäri vuorokauden, 7 päivää viikossa. Yleisvastaanotto ja lähetepotilaat ajanvarauksella arkisin.",
-        "nb": "Akutt- og intensivbehandling åpen hele døgnet, sju dager i uken. Allmennpraksis og henvisninger etter timebestilling på hverdager."
+        "nb": "Akutt- og intensivbehandling åpen hele døgnet, sju dager i uken. Allmennpraksis og henvisninger etter timebestilling på hverdager.",
+        "sl": "Nujna pomoč in intenzivna oskrba odprti 24 ur na dan, 7 dni v tednu. Splošna in napotna ambulanta po naročilu ob delavnikih."
       }
     },
     {
@@ -3676,7 +3795,8 @@
         "sv": "Öppet dygnet runt, alla dagar i veckan. Du är välkommen utan tidsbokning.",
         "da": "Åbent døgnet rundt, alle ugens dage. Du er velkommen uden tidsbestilling.",
         "fi": "Auki 24 tuntia vuorokaudessa, 7 päivää viikossa. Ilman ajanvarausta tulevat potilaat ovat tervetulleita.",
-        "nb": "Åpent hele døgnet, alle dager i uken. Du er velkommen uten avtale."
+        "nb": "Åpent hele døgnet, alle dager i uken. Du er velkommen uten avtale.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu. Dobrodošli brez naročanja."
       }
     },
     {
@@ -3705,7 +3825,8 @@
         "sv": "Akutdjursjukhus utanför ordinarie öppettider: måndag–fredag över natten (24–8) och från 18; öppet dygnet runt på helger och helgdagar.",
         "da": "Akuthospital uden for almindelig åbningstid: mandag til fredag natten over (0–8) og fra 18; åbent døgnet rundt i weekender og på helligdage.",
         "fi": "Päivystyssairaala virka-ajan ulkopuolella: ma–pe yöllä (0–8) ja klo 18 alkaen; viikonloppuisin ja pyhäpäivinä auki 24 tuntia.",
-        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid: mandag–fredag natt (kl. 0–8) og fra kl. 18; åpent hele døgnet i helger og på helligdager."
+        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid: mandag–fredag natt (kl. 0–8) og fra kl. 18; åpent hele døgnet i helger og på helligdager.",
+        "sl": "Nujna bolnišnica zunaj delovnega časa: pon–pet čez noč (0–8) in od 18 naprej; ob koncih tedna in praznikih odprto 24 ur na dan."
       }
     },
     {
@@ -3734,7 +3855,8 @@
         "sv": "Akutdjursjukhus utanför ordinarie öppettider: vardagar över natten och från 18; öppet dygnet runt på helger och helgdagar.",
         "da": "Akuthospital uden for almindelig åbningstid: hverdage natten over og fra 18; åbent døgnet rundt i weekender og på helligdage.",
         "fi": "Päivystyssairaala virka-ajan ulkopuolella: arkisin yöllä ja klo 18 alkaen; viikonloppuisin ja pyhäpäivinä auki 24 tuntia.",
-        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid: hverdager natt og fra kl. 18; åpent hele døgnet i helger og på helligdager."
+        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid: hverdager natt og fra kl. 18; åpent hele døgnet i helger og på helligdager.",
+        "sl": "Nujna bolnišnica zunaj delovnega časa: ob delavnikih čez noč in od 18. ure naprej; ob koncih tedna in praznikih odprto 24 ur na dan."
       }
     },
     {
@@ -3763,7 +3885,8 @@
         "sv": "Akutdjursjukhus utanför ordinarie öppettider: vardagar över natten och från 18; öppet dygnet runt på helger och helgdagar.",
         "da": "Akuthospital uden for almindelig åbningstid: hverdage natten over og fra 18; åbent døgnet rundt i weekender og på helligdage.",
         "fi": "Päivystyssairaala virka-ajan ulkopuolella: arkisin yöllä ja klo 18 alkaen; viikonloppuisin ja pyhäpäivinä auki 24 tuntia.",
-        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid: hverdager natt og fra kl. 18; åpent hele døgnet i helger og på helligdager."
+        "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid: hverdager natt og fra kl. 18; åpent hele døgnet i helger og på helligdager.",
+        "sl": "Nujna bolnišnica zunaj delovnega časa: med tednom čez noč in od 18 naprej; ob koncih tedna in praznikih odprto 24 ur na dan."
       }
     },
     {
@@ -3792,7 +3915,8 @@
         "sv": "Akutservice utanför ordinarie öppettider: måndag–fredag nätter 18–8; öppet dygnet runt på helger och helgdagar.",
         "da": "Akuttjeneste uden for almindelig åbningstid: mandag til fredag om natten 18–8; åbent døgnet rundt i weekender og på helligdage.",
         "fi": "Päivystys virka-ajan ulkopuolella: ma–pe öisin 18–8; viikonloppuisin ja pyhäpäivinä auki 24 tuntia.",
-        "nb": "Vakttjeneste utenfor ordinær åpningstid: mandag–fredag natt kl. 18–8; åpen hele døgnet i helger og på helligdager."
+        "nb": "Vakttjeneste utenfor ordinær åpningstid: mandag–fredag natt kl. 18–8; åpen hele døgnet i helger og på helligdager.",
+        "sl": "Nujna služba zunaj delovnega časa: pon–pet ponoči 18–8; ob koncih tedna in praznikih odprto 24 ur na dan."
       }
     },
     {
@@ -3821,7 +3945,8 @@
         "sv": "Universitetsdjursjukhus för smådjur med akutservice för området mellan Ipswich och Toowoomba; ring innan du kommer för aktuella öppettider.",
         "da": "Universitetshospital for smådyr med akuttjeneste for området fra Ipswich til Toowoomba; ring på forhånd for aktuelle åbningstider.",
         "fi": "Yliopiston pieneläinsairaala, jolla on päivystys Ipswichin ja Toowoomban väliselle alueelle; tarkista ajankohtaiset aukioloajat soittamalla.",
-        "nb": "Universitetssykehus for smådyr med akuttjeneste for området Ipswich–Toowoomba; ring på forhånd for gjeldende åpningstider."
+        "nb": "Universitetssykehus for smådyr med akuttjeneste for området Ipswich–Toowoomba; ring på forhånd for gjeldende åpningstider.",
+        "sl": "Univerzitetna bolnišnica za male živali z nujno službo za območje od Ipswicha do Toowoombe; za aktualni delovni čas vnaprej pokličite."
       }
     },
     {
@@ -3850,7 +3975,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–13; stängt sön och helgdagar. Utanför öppettiderna hänvisas akutfall till REDVets Toowoomba.",
         "da": "Mandag til fredag 8–18, lørdag 8–13; lukket søndage og helligdage. Uden for åbningstid henviser klinikken akutte tilfælde til REDVets Toowoomba.",
         "fi": "ma–pe 8–18, la 8–13; su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella ohjaa päivystystapaukset REDVets Toowoomba -klinikalle.",
-        "nb": "mandag–fredag 8–18, lørdag 8–13; stengt søndager og på helligdager. Utenom åpningstiden henviser klinikken nødtilfeller til REDVets Toowoomba."
+        "nb": "mandag–fredag 8–18, lørdag 8–13; stengt søndager og på helligdager. Utenom åpningstiden henviser klinikken nødtilfeller til REDVets Toowoomba.",
+        "sl": "Pon–pet 8–18, sob 8–13; ob nedeljah in praznikih zaprto. Zunaj delovnega časa nujne primere napoti v REDVets Toowoomba."
       }
     },
     {
@@ -3879,7 +4005,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–12, söndag 9–11. Akutfall utanför öppettiderna dygnet runt per telefon (extra avgifter tillkommer); inga hembesök utanför öppettiderna.",
         "da": "Mandag til fredag 8–18, lørdag 8–12, søndag 9–11. Akutte tilfælde uden for åbningstid døgnet rundt pr. telefon (der gælder yderligere gebyrer); ingen hjemmebesøg uden for åbningstid.",
         "fi": "ma–pe 8–18, la 8–12, su 9–11. Päivystys virka-ajan ulkopuolella 24/7 puhelimitse (lisämaksuja); ei kotikäyntejä virka-ajan ulkopuolella.",
-        "nb": "mandag–fredag 8–18, lørdag 8–12, søndag 9–11. Nødtilfeller utenom åpningstiden hele døgnet på telefon (med tilleggsavgift); ingen hjemmebesøk utenom åpningstiden."
+        "nb": "mandag–fredag 8–18, lørdag 8–12, søndag 9–11. Nødtilfeller utenom åpningstiden hele døgnet på telefon (med tilleggsavgift); ingen hjemmebesøk utenom åpningstiden.",
+        "sl": "Pon–pet 8–18, sob 8–12, ned 9–11. Nujna telefonska pomoč zunaj delovnega časa 24/7 (zaračunajo se dodatni stroški); hišnih obiskov zunaj delovnega časa ni."
       }
     },
     {
@@ -3908,7 +4035,8 @@
         "sv": "Måndag–fredag 8–17, lördag 8–12; stängt sön och helgdagar.",
         "da": "Mandag til fredag 8–17, lørdag 8–12; lukket søndage og helligdage.",
         "fi": "ma–pe 8–17, la 8–12; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–17, lørdag 8–12; stengt søndager og på helligdager."
+        "nb": "mandag–fredag 8–17, lørdag 8–12; stengt søndager og på helligdager.",
+        "sl": "Pon–pet 8–17, sob 8–12; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -3937,7 +4065,8 @@
         "sv": "Måndag–fredag 7–17, lördag 8–13; stängt sön och helgdagar. Akutjour utanför öppettiderna årets alla dagar, som delas med andra kliniker i Hervey Bay.",
         "da": "Mandag til fredag 7–17, lørdag 8–13; lukket søndage og helligdage. Akutvagt uden for åbningstid hele året, delt med andre klinikker i Hervey Bay.",
         "fi": "ma–pe 7–17, la 8–13; su ja pyhäpäivinä suljettu. Päivystys virka-ajan ulkopuolella vuoden jokaisena päivänä, jaettu muiden Hervey Bayn klinikoiden kanssa.",
-        "nb": "mandag–fredag 7–17, lørdag 8–13; stengt søndager og på helligdager. Vakttjeneste for nødtilfeller utenom åpningstiden alle dager hele året, delt med andre klinikker i Hervey Bay."
+        "nb": "mandag–fredag 7–17, lørdag 8–13; stengt søndager og på helligdager. Vakttjeneste for nødtilfeller utenom åpningstiden alle dager hele året, delt med andre klinikker i Hervey Bay.",
+        "sl": "Pon–pet 7–17, sob 8–13; ob nedeljah in praznikih zaprto. Nujno dežurstvo zunaj delovnega časa vse dni v letu, skupno z drugimi klinikami v Hervey Bayu."
       }
     },
     {
@@ -3966,7 +4095,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–13; stängt sön. Ring receptionen om akutfall.",
         "da": "Mandag til fredag 8–18, lørdag 8–13; lukket søndag. Ring til receptionen angående akutte tilfælde.",
         "fi": "ma–pe 8–18, la 8–13; su suljettu. Kysy päivystystapauksista vastaanotosta.",
-        "nb": "mandag–fredag 8–18, lørdag 8–13; stengt søndag. Ring resepsjonen ved nødtilfeller."
+        "nb": "mandag–fredag 8–18, lørdag 8–13; stengt søndag. Ring resepsjonen ved nødtilfeller.",
+        "sl": "Pon–pet 8–18, sob 8–13; ned zaprto. O nujnih primerih se pogovorite z recepcijo."
       }
     },
     {
@@ -3995,7 +4125,8 @@
         "sv": "Måndag–fredag 9–18, lördag 9–11; stängt sön. För akut veterinärvård dygnet runt, ring kliniken.",
         "da": "Mandag til fredag 9–18, lørdag 9–11; lukket søndag. Ring til klinikken for akut dyrlægehjælp døgnet rundt.",
         "fi": "ma–pe 9–18, la 9–11; su suljettu. Päivystävä eläinlääkäri 24/7: soita klinikalle.",
-        "nb": "mandag–fredag 9–18, lørdag 9–11; stengt søndag. For akutt dyrlegehjelp hele døgnet, ring klinikken."
+        "nb": "mandag–fredag 9–18, lørdag 9–11; stengt søndag. For akutt dyrlegehjelp hele døgnet, ring klinikken.",
+        "sl": "Pon–pet 9–18, sob 9–11; ned zaprto. Za nujno veterinarsko pomoč 24/7 pokličite kliniko."
       }
     },
     {
@@ -4024,7 +4155,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–12; stängt sön.",
         "da": "Mandag til fredag 8–18, lørdag 8–12; lukket søndag.",
         "fi": "ma–pe 8–18, la 8–12; su suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–12; stengt søndag."
+        "nb": "mandag–fredag 8–18, lørdag 8–12; stengt søndag.",
+        "sl": "Pon–pet 8–18, sob 8–12; ned zaprto."
       }
     },
     {
@@ -4053,7 +4185,8 @@
         "sv": "Öppettider vardagar och lördagar; ring för aktuella tider.",
         "da": "Åbent på hverdage og lørdage; ring for aktuelle tider.",
         "fi": "Auki arkisin ja lauantaisin; soita ja kysy ajankohtaiset ajat.",
-        "nb": "Åpningstider på hverdager og lørdag; ring for gjeldende tider."
+        "nb": "Åpningstider på hverdager og lørdag; ring for gjeldende tider.",
+        "sl": "Delovni čas med tednom in ob sobotah: za aktualni čas pokličite."
       }
     },
     {
@@ -4082,7 +4215,8 @@
         "sv": "Måndag–fredag 7.30–18.30; lördag, söndag och helgdagar 8.30–13.",
         "da": "Mandag til fredag 7.30–18.30; lørdag, søndag og helligdage 8.30–13.",
         "fi": "ma–pe 7.30–18.30; la, su ja pyhäpäivinä 8.30–13.",
-        "nb": "mandag–fredag 7.30–18.30; lørdag, søndag og helligdager 8.30–13."
+        "nb": "mandag–fredag 7.30–18.30; lørdag, søndag og helligdager 8.30–13.",
+        "sl": "Pon–pet 7.30–18.30; sob, ned in prazniki 8.30–13."
       }
     },
     {
@@ -4111,7 +4245,8 @@
         "sv": "Måndag–fredag 9–17, lördag 8.30–12.",
         "da": "Mandag til fredag 9–17, lørdag 8.30–12.",
         "fi": "ma–pe 9–17, la 8.30–12.",
-        "nb": "mandag–fredag 9–17, lørdag 8.30–12.00."
+        "nb": "mandag–fredag 9–17, lørdag 8.30–12.00.",
+        "sl": "Pon–pet 9–17, sob 8.30–12."
       }
     },
     {
@@ -4140,7 +4275,8 @@
         "sv": "Öppet måndag–fredag till 18 och lördag till 12; stängt sön. Akutfall utanför öppettiderna hänvisas till Emergency Vets 24/7 i Manunda.",
         "da": "Åbent mandag til fredag til kl. 18 og lørdag til kl. 12; lukket søndag. Akutte tilfælde uden for åbningstid henvises til Emergency Vets 24/7 i Manunda.",
         "fi": "Auki ma–pe klo 18 asti ja la puoleenpäivään; su suljettu. Päivystystapaukset virka-ajan ulkopuolella ohjataan Manundassa sijaitsevaan Emergency Vets 24/7 -klinikkaan.",
-        "nb": "Åpent mandag til fredag til kl. 18 og lørdag til kl. 12; stengt søndag. Nødtilfeller utenom åpningstid henvises til Emergency Vets 24/7 i Manunda."
+        "nb": "Åpent mandag til fredag til kl. 18 og lørdag til kl. 12; stengt søndag. Nødtilfeller utenom åpningstid henvises til Emergency Vets 24/7 i Manunda.",
+        "sl": "Odprto pon–pet do 18 in sob do 12; ned zaprto. Nujne primere zunaj delovnega časa napotijo v Emergency Vets 24/7 v Manundi."
       }
     },
     {
@@ -4169,7 +4305,8 @@
         "sv": "Måndag–fredag cirka 8–17.30, lördag 8–14; stängt sön. Ring för att bekräfta.",
         "da": "Mandag til fredag ca. 8–17.30, lørdag 8–14; lukket søndag. Ring for at bekræfte.",
         "fi": "ma–pe noin 8–17.30, la 8–14; su suljettu. Varmista soittamalla.",
-        "nb": "mandag–fredag ca. 8–17.30, lørdag 8–14; stengt søndag. Ring for å bekrefte."
+        "nb": "mandag–fredag ca. 8–17.30, lørdag 8–14; stengt søndag. Ring for å bekrefte.",
+        "sl": "Pon–pet približno 8–17.30, sob 8–14; ned zaprto. Za potrditev pokličite."
       }
     },
     {
@@ -4198,7 +4335,8 @@
         "sv": "Måndag–fredag 8.30–18, lördag 8.30–12. Akutsamtal utanför öppettiderna till kliniken; betjänar även området kring Port Douglas.",
         "da": "Mandag til fredag 8.30–18, lørdag 8.30–12. Akutte opkald uden for åbningstid til klinikken; dækker også Port Douglas-området.",
         "fi": "ma–pe 8.30–18, la 8.30–12. Päivystyspuhelut klinikalle virka-ajan ulkopuolella; palvelee myös Port Douglas -aluetta.",
-        "nb": "mandag–fredag 8.30–18.00, lørdag 8.30–12.00. Ring klinikken ved nødtilfeller utenom åpningstiden; dekker også Port Douglas-området."
+        "nb": "mandag–fredag 8.30–18.00, lørdag 8.30–12.00. Ring klinikken ved nødtilfeller utenom åpningstiden; dekker også Port Douglas-området.",
+        "sl": "Pon–pet 8.30–18, sob 8.30–12. Za nujne primere zunaj delovnega časa pokličite kliniko; oskrbuje tudi območje Port Douglas."
       }
     },
     {
@@ -4226,7 +4364,8 @@
         "sv": "Måndag–fredag 8.30–17; lördagsmottagning i Kuranda. Akutsamtal utanför öppettiderna till kliniken.",
         "da": "Mandag til fredag 8.30–17; lørdag i Kuranda. Akutte opkald uden for åbningstid til klinikken.",
         "fi": "ma–pe 8.30–17; lauantaisin palvelut Kurandassa. Päivystyspuhelut klinikalle virka-ajan ulkopuolella.",
-        "nb": "mandag–fredag 8.30–17.00; lørdagstjenester i Kuranda. Ring klinikken ved nødtilfeller utenom åpningstiden."
+        "nb": "mandag–fredag 8.30–17.00; lørdagstjenester i Kuranda. Ring klinikken ved nødtilfeller utenom åpningstiden.",
+        "sl": "Pon–pet 8.30–17; ob sobotah storitve v Kurandi. Za nujne primere zunaj delovnega časa pokličite kliniko."
       }
     },
     {
@@ -4255,7 +4394,8 @@
         "sv": "Måndag–fredag 8–18; stängt helger och helgdagar.",
         "da": "Mandag til fredag 8–18; lukket weekender og helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18; stengt i helger og på helligdager."
+        "nb": "mandag–fredag 8–18; stengt i helger og på helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -4283,7 +4423,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–16; stängt sön och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 8–16; lukket søndage og helligdage.",
         "fi": "ma–pe 8–18, la 8–16; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–16; stengt søndager og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 8–16; stengt søndager og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–16; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4312,7 +4453,8 @@
         "sv": "Måndag–lördag 8–18; stängt sön. Vid akutfall ring JCU Vet.",
         "da": "Mandag til lørdag 8–18; lukket søndag. Ved akutte tilfælde ring til JCU Vet.",
         "fi": "ma–la 8–18; su suljettu. Päivystystapauksissa soita JCU Vet -klinikalle.",
-        "nb": "mandag–lørdag 8–18; stengt søndag. Ved nødtilfeller ring JCU Vet."
+        "nb": "mandag–lørdag 8–18; stengt søndag. Ved nødtilfeller ring JCU Vet.",
+        "sl": "Pon–sob 8–18; ned zaprto. Za nujne primere pokličite JCU Vet."
       }
     },
     {
@@ -4341,7 +4483,8 @@
         "sv": "Måndag–fredag 8–18; lördag växelvis 8–15 / 18 (ring för att bekräfta); stängt sön.",
         "da": "Mandag til fredag 8–18; lørdag skiftevis 8–15 eller 8–18 (ring for at bekræfte); lukket søndag.",
         "fi": "ma–pe 8–18; la vuorotellen 8–15 / 18 (varmista soittamalla); su suljettu.",
-        "nb": "mandag–fredag 8–18; lørdag vekselvis 8–15 / 18 (ring for å bekrefte); stengt søndag."
+        "nb": "mandag–fredag 8–18; lørdag vekselvis 8–15 / 18 (ring for å bekrefte); stengt søndag.",
+        "sl": "Pon–pet 8–18; ob sobotah izmenično 8–15 / 18 (za potrditev pokličite); ned zaprto."
       }
     },
     {
@@ -4369,7 +4512,8 @@
         "sv": "Måndag–torsdag 7–19, fredag 7–18, lördag 8–17; stängt sön. Utanför öppettiderna hänvisar kliniken till UQ VETS Small Animal Hospital.",
         "da": "Mandag til torsdag 7–19, fredag 7–18, lørdag 8–17; lukket søndag. Uden for åbningstid henviser klinikken til UQ VETS Small Animal Hospital.",
         "fi": "ma–to 7–19, pe 7–18, la 8–17; su suljettu. Virka-ajan ulkopuolella klinikka ohjaa UQ VETS Small Animal Hospital -sairaalaan.",
-        "nb": "mandag–torsdag 7–19, fredag 7–18, lørdag 8–17; stengt søndag. Utenom åpningstiden henviser klinikken til UQ VETS Small Animal Hospital."
+        "nb": "mandag–torsdag 7–19, fredag 7–18, lørdag 8–17; stengt søndag. Utenom åpningstiden henviser klinikken til UQ VETS Small Animal Hospital.",
+        "sl": "Pon–čet 7–19, pet 7–18, sob 8–17; ned zaprto. Zunaj delovnega časa klinika napoti v UQ VETS Small Animal Hospital."
       }
     },
     {
@@ -4397,7 +4541,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–17; stängt sön. Utanför öppettiderna hänvisar kliniken till UQ VETS Small Animal Hospital.",
         "da": "Mandag til fredag 8–18, lørdag 8–17; lukket søndag. Uden for åbningstid henviser klinikken til UQ VETS Small Animal Hospital.",
         "fi": "ma–pe 8–18, la 8–17; su suljettu. Virka-ajan ulkopuolella klinikka ohjaa UQ VETS Small Animal Hospital -sairaalaan.",
-        "nb": "mandag–fredag 8–18, lørdag 8–17; stengt søndag. Utenom åpningstiden henviser klinikken til UQ VETS Small Animal Hospital."
+        "nb": "mandag–fredag 8–18, lørdag 8–17; stengt søndag. Utenom åpningstiden henviser klinikken til UQ VETS Small Animal Hospital.",
+        "sl": "Pon–pet 8–18, sob 8–17; ned zaprto. Zunaj delovnega časa klinika napoti v UQ VETS Small Animal Hospital."
       }
     },
     {
@@ -4425,7 +4570,8 @@
         "sv": "Måndag–fredag 8–18, lördag 8–13; stängt sön och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 8–13; lukket søndag og helligdage.",
         "fi": "ma–pe 8–18, la 8–13; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–13; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 8–13; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–13; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4454,7 +4600,8 @@
         "sv": "Vardagar 9–17 (fem dagar i veckan från och med 9 november 2026); ring för att bekräfta.",
         "da": "Hverdage 9–17 (fem dage om ugen fra 9. november 2026); ring for at bekræfte.",
         "fi": "Arkisin 9–17 (viisi päivää viikossa 9. marraskuuta 2026 alkaen); varmista soittamalla.",
-        "nb": "Hverdager 9–17 (fem dager i uken fra 9. november 2026); ring for å bekrefte."
+        "nb": "Hverdager 9–17 (fem dager i uken fra 9. november 2026); ring for å bekrefte.",
+        "sl": "Ob delavnikih 9–17 (od 9. novembra 2026 pet dni v tednu); za potrditev pokličite."
       }
     },
     {
@@ -4482,7 +4629,8 @@
         "sv": "Mån–fre 8–18, lör 8–16; stängt söndagar och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 8–16; lukket søndag og helligdage.",
         "fi": "ma–pe 8–18, la 8–16; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–16; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 8–16; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–16; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4510,7 +4658,8 @@
         "sv": "Mån–fre 8–18; lördagar efter tidsbokning; stängt söndagar och helgdagar.",
         "da": "Mandag til fredag 8–18; lørdage efter aftale; lukket søndage og helligdage.",
         "fi": "ma–pe 8–18; la ajanvarauksella; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18; lørdag etter avtale; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18; lørdag etter avtale; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18; ob sobotah po naročilu; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4539,7 +4688,8 @@
         "sv": "Akutvård mån–fre 17–23 och helger 8–18; allmänklinik mån–fre 8–18, lör 8–12.30. Inte ett djursjukhus med öppet dygnet runt.",
         "da": "Hastebehandling mandag til fredag 17–23 og weekender 8–18; praktiserende dyrlæge mandag til fredag 8–18, lørdag 8–12.30. Ikke et døgnåbent hospital.",
         "fi": "Kiireellinen hoito ma–pe 17–23 ja viikonloppuisin 8–18; yleisvastaanotto ma–pe 8–18, la 8–12.30. Ei ole ympärivuorokautinen sairaala.",
-        "nb": "Hastebehandling man–fre 17–23 og i helgene 8–18; allmennklinikk man–fre 8–18, lør 8.00–12.30. Ikke et døgnåpent sykehus."
+        "nb": "Hastebehandling man–fre 17–23 og i helgene 8–18; allmennklinikk man–fre 8–18, lør 8.00–12.30. Ikke et døgnåpent sykehus.",
+        "sl": "Nujna oskrba pon–pet 17–23 in ob koncih tedna 8–18; splošna ambulanta pon–pet 8–18, sob 8–12.30. Ni 24-urna bolnišnica."
       }
     },
     {
@@ -4567,7 +4717,8 @@
         "sv": "Mån–fre 8–18, lör 7.30–12.30; stängt söndagar och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 7.30–12.30; lukket søndag og helligdage.",
         "fi": "ma–pe 8–18, la 7.30–12.30; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 7.30–12.30; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 7.30–12.30; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 7.30–12.30; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4596,7 +4747,8 @@
         "sv": "Mån–fre 8–18, lör 8–14; stängt söndagar och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 8–14; lukket søndag og helligdage.",
         "fi": "ma–pe 8–18, la 8–14; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–14; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 8–14; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–14; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4624,7 +4776,8 @@
         "sv": "Mån–fre 8–18, lör 8–17; stängt söndagar och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 8–17; lukket søndag og helligdage.",
         "fi": "ma–pe 8–18, la 8–17; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–17; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 8–17; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–17; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4652,7 +4805,8 @@
         "sv": "Mån–fre 8–18; stängt helger och helgdagar.",
         "da": "Mandag til fredag 8–18; lukket weekender og helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18; stengt i helger og på helligdager."
+        "nb": "mandag–fredag 8–18; stengt i helger og på helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -4680,7 +4834,8 @@
         "sv": "Mån–fre 8–18; stängt helger och helgdagar.",
         "da": "Mandag til fredag 8–18; lukket weekender og helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18; stengt i helger og på helligdager."
+        "nb": "mandag–fredag 8–18; stengt i helger og på helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -4708,7 +4863,8 @@
         "sv": "Mån–fre 8–18, lör 8–17; stängt söndagar och helgdagar.",
         "da": "Mandag til fredag 8–18, lørdag 8–17; lukket søndag og helligdage.",
         "fi": "ma–pe 8–18, la 8–17; su ja pyhäpäivinä suljettu.",
-        "nb": "mandag–fredag 8–18, lørdag 8–17; stengt søndag og på helligdager."
+        "nb": "mandag–fredag 8–18, lørdag 8–17; stengt søndag og på helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–17; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -4736,7 +4892,8 @@
         "sv": "Mån–fre 7–20, lör 8–18; stängt helgdagar. Akutfall: AEC Woolloongabba 07 3456 0500.",
         "da": "Mandag til fredag 7–20, lørdag 8–18; lukket på helligdage. Akutte tilfælde: AEC Woolloongabba 07 3456 0500.",
         "fi": "ma–pe 7–20, la 8–18; pyhäpäivinä suljettu. Päivystys: AEC Woolloongabba 07 3456 0500.",
-        "nb": "mandag–fredag 7–20, lørdag 8–18; stengt på helligdager. Nødtilfeller: AEC Woolloongabba 07 3456 0500."
+        "nb": "mandag–fredag 7–20, lørdag 8–18; stengt på helligdager. Nødtilfeller: AEC Woolloongabba 07 3456 0500.",
+        "sl": "Pon–pet 7–20, sob 8–18; ob praznikih zaprto. Nujni primeri: AEC Woolloongabba 07 3456 0500."
       }
     },
     {
@@ -4764,7 +4921,8 @@
         "sv": "Mån–fre 7.30–18, lör 8–13.",
         "da": "Mandag til fredag 7.30–18, lørdag 8–13.",
         "fi": "ma–pe 7.30–18, la 8–13.",
-        "nb": "mandag–fredag 7.30–18.00, lørdag 8–13."
+        "nb": "mandag–fredag 7.30–18.00, lørdag 8–13.",
+        "sl": "Pon–pet 7.30–18, sob 8–13."
       }
     },
     {
@@ -4792,7 +4950,8 @@
         "sv": "Mån–fre 7.30–18.30, lör 8–15.",
         "da": "Mandag til fredag 7.30–18.30, lørdag 8–15.",
         "fi": "ma–pe 7.30–18.30, la 8–15.",
-        "nb": "mandag–fredag 7.30–18.30, lørdag 8–15."
+        "nb": "mandag–fredag 7.30–18.30, lørdag 8–15.",
+        "sl": "Pon–pet 7.30–18.30, sob 8–15."
       }
     },
     {
@@ -4820,7 +4979,8 @@
         "sv": "Mån–fre 7–18, lör 8–17.",
         "da": "Mandag til fredag 7–18, lørdag 8–17.",
         "fi": "ma–pe 7–18, la 8–17.",
-        "nb": "mandag–fredag 7–18, lørdag 8–17."
+        "nb": "mandag–fredag 7–18, lørdag 8–17.",
+        "sl": "Pon–pet 7–18, sob 8–17."
       }
     },
     {
@@ -4848,7 +5008,8 @@
         "sv": "Mån–fre 7.30–20, lör 7.30–17.",
         "da": "Mandag til fredag 7.30–20, lørdag 7.30–17.",
         "fi": "ma–pe 7.30–20, la 7.30–17.",
-        "nb": "mandag–fredag 7.30–20.00, lørdag 7.30–17.00."
+        "nb": "mandag–fredag 7.30–20.00, lørdag 7.30–17.00.",
+        "sl": "Pon–pet 7.30–20, sob 7.30–17."
       }
     },
     {
@@ -4876,7 +5037,8 @@
         "sv": "Mån–fre 7.30–19, lör 8.30–16.",
         "da": "Mandag til fredag 7.30–19, lørdag 8.30–16.",
         "fi": "ma–pe 7.30–19, la 8.30–16.",
-        "nb": "mandag–fredag 7.30–19.00, lørdag 8.30–16.00."
+        "nb": "mandag–fredag 7.30–19.00, lørdag 8.30–16.00.",
+        "sl": "Pon–pet 7.30–19, sob 8.30–16."
       }
     },
     {
@@ -4904,7 +5066,8 @@
         "sv": "Mån–fre 8–18, lör 8–12.",
         "da": "Mandag til fredag 8–18, lørdag 8–12.",
         "fi": "ma–pe 8–18, la 8–12.",
-        "nb": "mandag–fredag 8–18, lørdag 8–12."
+        "nb": "mandag–fredag 8–18, lørdag 8–12.",
+        "sl": "Pon–pet 8–18, sob 8–12."
       }
     },
     {
@@ -4933,7 +5096,8 @@
         "sv": "Akutmottagning öppen dygnet runt, alla dagar. Allmänklinik mån–fre 8–18, lör 8–13.",
         "da": "Akut har åbent døgnet rundt, alle ugens dage. Praktiserende dyrlæge man–fre 8–18, lør 8–13.",
         "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa. Yleisvastaanotto ma–pe 8–18, la 8–13.",
-        "nb": "Akutt åpent hele døgnet, sju dager i uken. Allmennklinikk man–fre kl. 8–18, lør kl. 8–13."
+        "nb": "Akutt åpent hele døgnet, sju dager i uken. Allmennklinikk man–fre kl. 8–18, lør kl. 8–13.",
+        "sl": "Nujna pomoč odprta 24 ur na dan, 7 dni v tednu. Splošna ambulanta pon–pet 8–18, sob 8–13."
       }
     },
     {
@@ -4962,7 +5126,8 @@
         "sv": "Öppet dygnet runt, årets alla dagar. Akutfall behöver ingen bokad tid.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ingen tidsbestilling.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystystapauksissa ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke timebestilling."
+        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke timebestilling.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno."
       }
     },
     {
@@ -4991,7 +5156,8 @@
         "sv": "Akutvård för smådjur dygnet runt, alla dagar. Ring innan du kommer.",
         "da": "Akuthjælp til smådyr døgnet rundt, alle ugens dage. Ring venligst, før du kører.",
         "fi": "Pieneläinten päivystys ympäri vuorokauden, 7 päivää viikossa. Soita ennen lähtöä.",
-        "nb": "Akuttbehandling av små dyr hele døgnet, sju dager i uken. Ring før du reiser."
+        "nb": "Akuttbehandling av små dyr hele døgnet, sju dager i uken. Ring før du reiser.",
+        "sl": "Nujna pomoč za male živali 24 ur na dan, 7 dni v tednu. Pred potjo pokličite."
       }
     },
     {
@@ -5020,7 +5186,8 @@
         "sv": "Akutmottagning öppen dygnet runt, alla dagar. Primärvård och remisser vardagar 8–18.",
         "da": "Akutafdeling åben døgnet rundt, alle dage. Almindelig behandling og henvisninger hverdage 8.00–18.00.",
         "fi": "Päivystys auki ympäri vuorokauden joka päivä. Yleisvastaanotto ja lähetepotilaat arkisin 8–18.",
-        "nb": "Akutt åpent hele døgnet, alle dager. Primærbehandling og henvisninger hverdager kl. 8–18."
+        "nb": "Akutt åpent hele døgnet, alle dager. Primærbehandling og henvisninger hverdager kl. 8–18.",
+        "sl": "Nujna pomoč odprta 24 ur na dan, vsak dan. Osnovna oskrba in napotitve ob delavnikih 8–18."
       }
     },
     {
@@ -5049,7 +5216,8 @@
         "sv": "Öppet dygnet runt, årets alla dagar. Ingen tidsbokning krävs.",
         "da": "Åbent døgnet rundt, alle ugens dage, 365 dage om året. Ingen tidsbestilling nødvendig.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, 365 päivää vuodessa. Ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, sju dager i uken, 365 dager i året. Ingen timebestilling nødvendig."
+        "nb": "Åpent hele døgnet, sju dager i uken, 365 dager i året. Ingen timebestilling nødvendig.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, 365 dni v letu. Naročanje ni potrebno."
       }
     },
     {
@@ -5078,7 +5246,8 @@
         "sv": "Öppet dygnet runt, årets alla dagar. Ingen tidsbokning krävs.",
         "da": "Åbent døgnet rundt, alle ugens dage, 365 dage om året. Ingen tidsbestilling nødvendig.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa, 365 päivää vuodessa. Ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, sju dager i uken, 365 dager i året. Ingen timebestilling nødvendig."
+        "nb": "Åpent hele døgnet, sju dager i uken, 365 dager i året. Ingen timebestilling nødvendig.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, 365 dni v letu. Naročanje ni potrebno."
       }
     },
     {
@@ -5107,7 +5276,8 @@
         "sv": "Öppet dygnet runt, årets alla dagar. Akutfall behöver ingen bokad tid.",
         "da": "Åbent døgnet rundt, 365 dage om året. Akutte tilfælde behøver ingen tidsbestilling.",
         "fi": "Auki 24 tuntia, 365 päivää vuodessa. Päivystystapauksissa ajanvarausta ei tarvita.",
-        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke timebestilling."
+        "nb": "Åpent hele døgnet, 365 dager i året. Nødtilfeller trenger ikke timebestilling.",
+        "sl": "Odprto 24 ur na dan, 365 dni v letu. Za nujne primere naročanje ni potrebno."
       }
     },
     {
@@ -5136,7 +5306,8 @@
         "sv": "Akutjour dygnet runt; ring direkt. Mottagning mån–fre 8–18, lör 9–12.",
         "da": "Akutvagt døgnet rundt; ring med det samme. Konsultationer man–fre 8.00–18.00, lør 9.00–12.00.",
         "fi": "24 tunnin päivystys; soita heti. Vastaanotto ma–pe 8–18, la 9–12.",
-        "nb": "Akuttjeneste hele døgnet; ring umiddelbart. Konsultasjoner man–fre kl. 08.00–18.00, lør kl. 09.00–12.00."
+        "nb": "Akuttjeneste hele døgnet; ring umiddelbart. Konsultasjoner man–fre kl. 08.00–18.00, lør kl. 09.00–12.00.",
+        "sl": "Nujna služba 24 ur na dan; pokličite takoj. Pregledi pon–pet 8–18, sob 9–12."
       }
     },
     {
@@ -5165,7 +5336,8 @@
         "sv": "Akutmottagning öppen dygnet runt, årets alla dagar, även helgdagar.",
         "da": "Akut åbent døgnet rundt, 7 dage om ugen, alle årets dage, også på helligdage.",
         "fi": "Päivystys auki ympäri vuorokauden, 7 päivää viikossa, vuoden jokaisena päivänä, myös pyhäpäivinä.",
-        "nb": "Akutt åpent hele døgnet, sju dager i uken, alle dager i året, også helligdager."
+        "nb": "Akutt åpent hele døgnet, sju dager i uken, alle dager i året, også helligdager.",
+        "sl": "Nujna pomoč odprta 24 ur na dan, 7 dni v tednu, vse dni v letu, tudi ob praznikih."
       }
     },
     {
@@ -5194,7 +5366,8 @@
         "sv": "Öppet utanför ordinarie öppettider på vardagar och dygnet runt på helger. Just nu stängt för allmänheten mån–fre 7–16; ring innan du kommer.",
         "da": "Åbent uden for almindelig åbningstid på hverdage og døgnet rundt i weekenden. I øjeblikket lukket for publikum man–fre 7.00–16.00; ring på forhånd.",
         "fi": "Auki arkisin virka-ajan ulkopuolella ja ympäri vuorokauden viikonloppuisin. Toistaiseksi suljettu yleisöltä ma–pe klo 7–16; soita etukäteen.",
-        "nb": "Åpent utenom ordinær åpningstid på hverdager og hele døgnet i helgene. Foreløpig stengt for publikum man–fre kl. 7–16; ring på forhånd."
+        "nb": "Åpent utenom ordinær åpningstid på hverdager og hele døgnet i helgene. Foreløpig stengt for publikum man–fre kl. 7–16; ring på forhånd.",
+        "sl": "Zunaj delovnega časa odprto med tednom, ob koncih tedna 24 ur na dan. Trenutno za javnost zaprto pon–pet 7–16; vnaprej pokličite."
       }
     },
     {
@@ -5223,7 +5396,8 @@
         "sv": "Öppet utanför ordinarie öppettider på vardagar (00–8 och 18–24) och dygnet runt på helger och helgdagar. Ingen tidsbokning behövs.",
         "da": "Åbent uden for almindelig åbningstid på hverdage (midnat–8.00 og 18.00–midnat) og døgnet rundt i weekender og på helligdage. Ingen tidsbestilling nødvendig.",
         "fi": "Auki arkisin virka-ajan ulkopuolella (0–8 ja 18–24) sekä ympäri vuorokauden viikonloppuisin ja pyhäpäivinä. Ajanvarausta ei tarvita.",
-        "nb": "Åpent utenom ordinær åpningstid på hverdager (midnatt–kl. 8 og kl. 18–midnatt) og hele døgnet i helger og på helligdager. Ingen timebestilling nødvendig."
+        "nb": "Åpent utenom ordinær åpningstid på hverdager (midnatt–kl. 8 og kl. 18–midnatt) og hele døgnet i helger og på helligdager. Ingen timebestilling nødvendig.",
+        "sl": "Zunaj delovnega časa odprto med tednom (0–8 in 18–24) ter 24 ur na dan ob koncih tedna in praznikih. Naročanje ni potrebno."
       }
     },
     {
@@ -5252,7 +5426,8 @@
         "sv": "Akutvård på helger och helgdagar, öppet fredag 17 till måndag 8. Ring först.",
         "da": "Akut hjælp i weekender og på helligdage, åbent fredag 17.00 til mandag 8.00. Ring først.",
         "fi": "Päivystys viikonloppuisin ja pyhäpäivinä, auki pe klo 17 – ma klo 8. Soita ensin.",
-        "nb": "Akutthjelp i helger og på helligdager, åpent fra fredag 17 til mandag 8. Ring først."
+        "nb": "Akutthjelp i helger og på helligdager, åpent fra fredag 17 til mandag 8. Ring først.",
+        "sl": "Nujna oskrba ob koncih tedna in praznikih, odprto od petka 17 do ponedeljka 8. Najprej pokličite."
       }
     },
     {
@@ -5281,7 +5456,8 @@
         "sv": "Mån–fre 7–19, lör–sön 8–13. Akutvård utanför öppettider för befintliga kunder; öppet dygnet runt på helgdagar.",
         "da": "Man–fre 7.00–19.00, lør–søn 8.00–13.00. Akut hjælp uden for åbningstid til eksisterende kunder; døgnåbent på helligdage.",
         "fi": "ma–pe 7–19, la–su 8–13. Päivystys virka-ajan ulkopuolella nykyisille asiakkaille; pyhäpäivinä auki 24 tuntia.",
-        "nb": "Man–fre 7–19, lør–søn 8–13. Akuttbehandling utenom åpningstiden for eksisterende kunder; åpent hele døgnet på helligdager."
+        "nb": "Man–fre 7–19, lør–søn 8–13. Akuttbehandling utenom åpningstiden for eksisterende kunder; åpent hele døgnet på helligdager.",
+        "sl": "Pon–pet 7–19, sob–ned 8–13. Nujna oskrba zunaj delovnega časa za obstoječe stranke; ob praznikih odprto 24 ur na dan."
       }
     },
     {
@@ -5310,7 +5486,8 @@
         "sv": "Mån–fre 8–17.30, lör 9–12. Akutjour dygnet runt per telefon på samma nummer.",
         "da": "Man–fre 8.00–17.30, lør 9.00–12.00. Akutvagt døgnet rundt på telefon, samme nummer.",
         "fi": "ma–pe 8–17.30, la 9–12. 24 tunnin päivystys puhelimitse samassa numerossa.",
-        "nb": "Man–fre 8.00–17.30, lør 9.00–12.00. Akuttjeneste hele døgnet på telefon på samme nummer."
+        "nb": "Man–fre 8.00–17.30, lør 9.00–12.00. Akuttjeneste hele døgnet på telefon på samme nummer.",
+        "sl": "Pon–pet 8–17.30, sob 9–12. Telefonska nujna služba 24 ur na dan na isti številki."
       }
     },
     {
@@ -5339,7 +5516,8 @@
         "sv": "Mån–fre 8–17.30, lör 9–12, sön endast akutfall. Akutjour dygnet runt på samma nummer.",
         "da": "Man–fre 8.00–17.30, lør 9.00–12.00, søn kun akutte tilfælde. Akutvagt døgnet rundt på samme nummer.",
         "fi": "ma–pe 8–17.30, la 9–12, su vain päivystystapaukset. 24 tunnin päivystys samassa numerossa.",
-        "nb": "Man–fre 8.00–17.30, lør 9.00–12.00, søn kun nødtilfeller. Akuttjeneste hele døgnet på samme nummer."
+        "nb": "Man–fre 8.00–17.30, lør 9.00–12.00, søn kun nødtilfeller. Akuttjeneste hele døgnet på samme nummer.",
+        "sl": "Pon–pet 8–17.30, sob 9–12, ned samo nujni primeri. Nujna služba 24 ur na dan na isti številki."
       }
     },
     {
@@ -5368,7 +5546,8 @@
         "sv": "Mån–fre 8–18, lör 8–16, sön och helgdagar endast akutfall. Full akutjour utanför öppettider: 0428 810 596.",
         "da": "Man–fre 8.00–18.00, lør 8.00–16.00, søn og helligdage kun akut. Fuld akutvagt uden for åbningstid: 0428 810 596.",
         "fi": "ma–pe 8–18, la 8–16, su ja pyhäpäivinä vain päivystys. Täysi päivystyspalvelu virka-ajan ulkopuolella: 0428 810 596.",
-        "nb": "Man–fre 8.00–18.00, lør 8.00–16.00, søn og helligdager kun nødtilfeller. Full akuttjeneste utenom åpningstiden: 0428 810 596."
+        "nb": "Man–fre 8.00–18.00, lør 8.00–16.00, søn og helligdager kun nødtilfeller. Full akuttjeneste utenom åpningstiden: 0428 810 596.",
+        "sl": "Pon–pet 8–18, sob 8–16, ned in prazniki samo nujni primeri. Celovita nujna služba zunaj delovnega časa: 0428 810 596."
       }
     },
     {
@@ -5396,7 +5575,8 @@
         "sv": "Mån–fre 8–18, lör 9–14, sön stängt. Utanför öppettider: ring kliniken så kopplas du vidare till jourkliniken.",
         "da": "Man–fre 8.00–18.00, lør 9.00–14.00, søn lukket. Uden for åbningstid: ring til klinikken, så bliver du stillet videre til vagtklinikken.",
         "fi": "ma–pe 8–18, la 9–14, su suljettu. Virka-ajan ulkopuolella soita klinikalle, niin sinut yhdistetään päivystävälle klinikalle.",
-        "nb": "Man–fre 8.00–18.00, lør 9.00–14.00, søn stengt. Utenom åpningstiden: ring klinikken, så blir du satt over til vaktklinikken."
+        "nb": "Man–fre 8.00–18.00, lør 9.00–14.00, søn stengt. Utenom åpningstiden: ring klinikken, så blir du satt over til vaktklinikken.",
+        "sl": "Pon–pet 8–18, sob 9–14, ned zaprto. Zunaj delovnega časa pokličite kliniko in povezali vas bodo z dežurno kliniko."
       }
     },
     {
@@ -5425,7 +5605,8 @@
         "sv": "Mån–fre cirka 8–18.30, lör 8–14. Det finns akutjour; ring kliniken.",
         "da": "Man–fre ca. 8.00–18.30, lør 8.00–14.00. Akutvagt tilgængelig; ring til klinikken.",
         "fi": "ma–pe noin 8–18.30, la 8–14. Päivystyspalvelu saatavilla; soita klinikalle.",
-        "nb": "man–fre ca. 8.00–18.30, lør 8.00–14.00. Akuttjeneste tilgjengelig; ring klinikken."
+        "nb": "man–fre ca. 8.00–18.30, lør 8.00–14.00. Akuttjeneste tilgjengelig; ring klinikken.",
+        "sl": "Pon–pet približno 8–18.30, sob 8–14. Nujna služba je na voljo; pokličite kliniko."
       }
     },
     {
@@ -5453,7 +5634,8 @@
         "sv": "Mån–fre 8–19, lör 9–13. Ingen jour utanför öppettider; vänd dig till ett djursjukhus med akutmottagning.",
         "da": "Man–fre 8.00–19.00, lør 9.00–13.00. Ingen vagt uden for åbningstid; brug et akut dyrehospital.",
         "fi": "ma–pe 8–19, la 9–13. Ei päivystystä virka-ajan ulkopuolella; käytä päivystyssairaalaa.",
-        "nb": "Man–fre 8.00–19.00, lør 9.00–13.00. Ingen vakt utenom åpningstiden; bruk et akuttsykehus."
+        "nb": "Man–fre 8.00–19.00, lør 9.00–13.00. Ingen vakt utenom åpningstiden; bruk et akuttsykehus.",
+        "sl": "Pon–pet 8–19, sob 9–13. Zunaj delovnega časa ni dežurstva; obiščite nujno bolnišnico."
       }
     },
     {
@@ -5482,7 +5664,8 @@
         "sv": "Ring kliniken för mottagningstider.",
         "da": "Ring til klinikken for konsultationstider.",
         "fi": "Soita klinikalle ja kysy vastaanottoajat.",
-        "nb": "Ring klinikken for å høre konsultasjonstidene."
+        "nb": "Ring klinikken for å høre konsultasjonstidene.",
+        "sl": "Za delovni čas pokličite kliniko."
       }
     },
     {
@@ -5511,7 +5694,8 @@
         "sv": "Ring kliniken för mottagningstider.",
         "da": "Ring til klinikken for konsultationstider.",
         "fi": "Soita klinikalle ja kysy vastaanottoajat.",
-        "nb": "Ring klinikken for å høre konsultasjonstidene."
+        "nb": "Ring klinikken for å høre konsultasjonstidene.",
+        "sl": "Za delovni čas pokličite kliniko."
       }
     },
     {
@@ -5540,7 +5724,8 @@
         "sv": "Ring kliniken för mottagningstider.",
         "da": "Ring til klinikken for konsultationstider.",
         "fi": "Soita klinikalle ja kysy vastaanottoajat.",
-        "nb": "Ring klinikken for å høre konsultasjonstidene."
+        "nb": "Ring klinikken for å høre konsultasjonstidene.",
+        "sl": "Za delovni čas pokličite kliniko."
       }
     },
     {
@@ -5569,7 +5754,8 @@
         "sv": "Ring kliniken för mottagningstider.",
         "da": "Ring til klinikken for konsultationstider.",
         "fi": "Soita klinikalle ja kysy vastaanottoajat.",
-        "nb": "Ring klinikken for å høre konsultasjonstidene."
+        "nb": "Ring klinikken for å høre konsultasjonstidene.",
+        "sl": "Za delovni čas pokličite kliniko."
       }
     },
     {
@@ -5598,7 +5784,8 @@
         "sv": "Mån–fre 8.30–17.30, lör 8.30–11.30. Akutvård utanför öppettider; ring innan du kommer.",
         "da": "Man–fre 8.30–17.30, lør 8.30–11.30. Akutvagt uden for åbningstid; ring, inden du kommer.",
         "fi": "ma–pe 8.30–17.30, la 8.30–11.30. Päivystyspalvelu aukioloaikojen ulkopuolella; soita ennen tuloa.",
-        "nb": "man–fre 8.30–17.30, lør 8.30–11.30. Akuttjeneste utenom åpningstid; ring før du kommer."
+        "nb": "man–fre 8.30–17.30, lør 8.30–11.30. Akuttjeneste utenom åpningstid; ring før du kommer.",
+        "sl": "Pon–pet 8.30–17.30, sob 8.30–11.30. Nujna pomoč zunaj delovnega časa; pred prihodom pokličite."
       }
     },
     {
@@ -5627,7 +5814,8 @@
         "sv": "Mån–fre 8–18, lör 8–17.",
         "da": "Man–fre 8.00–18.00, lør 8.00–17.00.",
         "fi": "ma–pe 8–18, la 8–17.",
-        "nb": "Man–fre 8.00–18.00, lør 8.00–17.00."
+        "nb": "Man–fre 8.00–18.00, lør 8.00–17.00.",
+        "sl": "Pon–pet 8–18, sob 8–17."
       }
     },
     {
@@ -5656,7 +5844,8 @@
         "sv": "Mån–ons och fre 8.30–17.30, tors 8.30–19, lör 8.30–14.30.",
         "da": "Man–ons og fre 8.30–17.30, tor 8.30–19.00, lør 8.30–14.30.",
         "fi": "ma–ke ja pe 8.30–17.30, to 8.30–19, la 8.30–14.30.",
-        "nb": "man–ons og fre 8.30–17.30, tor 8.30–19.00, lør 8.30–14.30."
+        "nb": "man–ons og fre 8.30–17.30, tor 8.30–19.00, lør 8.30–14.30.",
+        "sl": "Pon–sre in pet 8.30–17.30, čet 8.30–19, sob 8.30–14.30."
       }
     },
     {
@@ -5685,7 +5874,8 @@
         "sv": "Mån–fre 8–19, lör 9–12.",
         "da": "Man–fre 8.00–19.00, lør 9.00–12.00.",
         "fi": "ma–pe 8–19, la 9–12.",
-        "nb": "Man–fre 8.00–19.00, lør 9.00–12.00."
+        "nb": "Man–fre 8.00–19.00, lør 9.00–12.00.",
+        "sl": "Pon–pet 8–19, sob 9–12."
       }
     },
     {
@@ -5714,7 +5904,8 @@
         "sv": "Mån–ons och fre 8–18.30, tors 8–17.30, lör 8–15.",
         "da": "Man–ons og fre 8.00–18.30, tor 8.00–17.30, lør 8.00–15.00.",
         "fi": "ma–ke ja pe 8–18.30, to 8–17.30, la 8–15.",
-        "nb": "man–ons og fre 8.00–18.30, tor 8.00–17.30, lør 8.00–15.00."
+        "nb": "man–ons og fre 8.00–18.30, tor 8.00–17.30, lør 8.00–15.00.",
+        "sl": "Pon–sre in pet 8–18.30, čet 8–17.30, sob 8–15."
       }
     },
     {
@@ -5743,7 +5934,8 @@
         "sv": "Mån–fre 8–18, lör 8.30–12, sön stängt.",
         "da": "Man–fre 8.00–18.00, lør 8.30–12.00, søn lukket.",
         "fi": "ma–pe 8–18, la 8.30–12, su suljettu.",
-        "nb": "Man–fre 8.00–18.00, lør 8.30–12.00, søn stengt."
+        "nb": "Man–fre 8.00–18.00, lør 8.30–12.00, søn stengt.",
+        "sl": "Pon–pet 8–18, sob 8.30–12, ned zaprto."
       }
     },
     {
@@ -5772,7 +5964,8 @@
         "sv": "Öppet utanför ordinarie öppettider och på helger; ring innan du kommer eftersom tiderna kan ändras med kort varsel.",
         "da": "Åbent uden for almindelig åbningstid og i weekender; ring på forhånd, da tiderne kan ændre sig med kort varsel.",
         "fi": "Auki virka-ajan ulkopuolella ja viikonloppuisin; soita etukäteen, sillä aukioloajat voivat muuttua lyhyellä varoitusajalla.",
-        "nb": "Åpent utenom ordinær åpningstid og i helgene; ring på forhånd, siden åpningstidene kan endres med kort varsel."
+        "nb": "Åpent utenom ordinær åpningstid og i helgene; ring på forhånd, siden åpningstidene kan endres med kort varsel.",
+        "sl": "Odprto zunaj delovnega časa in ob koncih tedna; vnaprej pokličite, ker se čas lahko brez najave spremeni."
       }
     },
     {
@@ -5801,7 +5994,8 @@
         "sv": "Mån–fre 8–18; stängt helger och helgdagar.",
         "da": "Man–fre 8.00–18.00; lukket i weekender og på helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager."
+        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -5830,7 +6024,8 @@
         "sv": "Mån–fre 8–18; stängt helger och helgdagar.",
         "da": "Man–fre 8.00–18.00; lukket i weekender og på helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager."
+        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -5859,7 +6054,8 @@
         "sv": "Mån–fre 7.30–18, lör 8.30–13; stängt sön och helgdagar.",
         "da": "Man–fre 7.30–18.00, lør 8.30–13.00; lukket søn og helligdage.",
         "fi": "ma–pe 7.30–18, la 8.30–13; su ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 7.30–18.00, lør 8.30–13.00; stengt søn og helligdager."
+        "nb": "Man–fre 7.30–18.00, lør 8.30–13.00; stengt søn og helligdager.",
+        "sl": "Pon–pet 7.30–18, sob 8.30–13; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -5888,7 +6084,8 @@
         "sv": "Mån–fre 8–18, lör 8–17; stängt sön och helgdagar.",
         "da": "Man–fre 8.00–18.00, lør 8.00–17.00; lukket søn og helligdage.",
         "fi": "ma–pe 8–18, la 8–17; su ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00, lør 8.00–17.00; stengt søn og helligdager."
+        "nb": "Man–fre 8.00–18.00, lør 8.00–17.00; stengt søn og helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–17; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -5917,7 +6114,8 @@
         "sv": "Mån–fre 8–18; stängt helger och helgdagar.",
         "da": "Man–fre 8.00–18.00; lukket i weekender og på helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager."
+        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -5946,7 +6144,8 @@
         "sv": "Mån–fre 8–18, lör 8–12; stängt sön och helgdagar.",
         "da": "Man–fre 8.00–18.00, lør 8.00–12.00; lukket søn og helligdage.",
         "fi": "ma–pe 8–18, la 8–12; su ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00, lør 8.00–12.00; stengt søn og helligdager."
+        "nb": "Man–fre 8.00–18.00, lør 8.00–12.00; stengt søn og helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–12; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -5975,7 +6174,8 @@
         "sv": "Mån–fre 8–18, lör 8–16.30; stängt sön och helgdagar.",
         "da": "Man–fre 8.00–18.00, lør 8.00–16.30; lukket søn og helligdage.",
         "fi": "ma–pe 8–18, la 8–16.30; su ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00, lør 8.00–16.30; stengt søn og helligdager."
+        "nb": "Man–fre 8.00–18.00, lør 8.00–16.30; stengt søn og helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–16.30; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -6004,7 +6204,8 @@
         "sv": "Mån–fre 8–18, lör 8–17; stängt sön och helgdagar.",
         "da": "Man–fre 8.00–18.00, lør 8.00–17.00; lukket søn og helligdage.",
         "fi": "ma–pe 8–18, la 8–17; su ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00, lør 8.00–17.00; stengt søn og helligdager."
+        "nb": "Man–fre 8.00–18.00, lør 8.00–17.00; stengt søn og helligdager.",
+        "sl": "Pon–pet 8–18, sob 8–17; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -6033,7 +6234,8 @@
         "sv": "Mån–fre cirka 8.30–18.30 (tis varierar); stängt helger och helgdagar. Ingen jour utanför öppettider; vänd dig till ett djursjukhus med akutmottagning.",
         "da": "Man–fre ca. 8.30–18.30 (tirsdag varierer); lukket i weekender og på helligdage. Ingen vagt uden for åbningstid; brug et akut dyrehospital.",
         "fi": "ma–pe noin 8.30–18.30 (ti vaihtelee); viikonloppuisin ja pyhäpäivinä suljettu. Ei päivystystä virka-ajan ulkopuolella; käytä päivystyssairaalaa.",
-        "nb": "man–fre ca. 8.30–18.30 (tirsdag varierer); stengt i helger og på helligdager. Ingen vakttjeneste utenom åpningstiden; bruk et dyresykehus med akuttberedskap."
+        "nb": "man–fre ca. 8.30–18.30 (tirsdag varierer); stengt i helger og på helligdager. Ingen vakttjeneste utenom åpningstiden; bruk et dyresykehus med akuttberedskap.",
+        "sl": "Pon–pet približno 8.30–18.30 (ob torkih se razlikuje); ob koncih tedna in praznikih zaprto. Zunaj delovnega časa ni dežurstva; obiščite nujno bolnišnico."
       }
     },
     {
@@ -6062,7 +6264,8 @@
         "sv": "Ring för öppettider. Mån–tors: ring kliniken för bedömning; från fredag kväll till måndag morgon vänd dig till Animal Emergency Hospital Launceston (03 6310 8499).",
         "da": "Ring for åbningstider. Man–tor: ring til klinikken for visitation; fra fredag aften til mandag morgen: brug Animal Emergency Hospital Launceston (03 6310 8499).",
         "fi": "Soita ja kysy aukioloajat. Arkisin ma–to soita klinikalle kiireellisyysarviota varten; perjantai-illasta maanantaiaamuun käytä päivystyssairaalaa Animal Emergency Hospital Launceston (03 6310 8499).",
-        "nb": "Ring for å høre åpningstidene. Man–tor ring klinikken for vurdering av hastegrad; fra fredag kveld til mandag morgen bruk Animal Emergency Hospital Launceston (03 6310 8499)."
+        "nb": "Ring for å høre åpningstidene. Man–tor ring klinikken for vurdering av hastegrad; fra fredag kveld til mandag morgen bruk Animal Emergency Hospital Launceston (03 6310 8499).",
+        "sl": "Za delovni čas pokličite. Med tednom pon–čet pokličite kliniko za presojo nujnosti; od petka zvečer do ponedeljka zjutraj obiščite Animal Emergency Hospital Launceston (03 6310 8499)."
       }
     },
     {
@@ -6090,7 +6293,8 @@
         "sv": "Mån–fre 8–18, lör 9–14. Utanför öppettider: Animal Emergency Service Hobart 1300 302 912.",
         "da": "Man–fre 8.00–18.00, lør 9.00–14.00. Uden for åbningstid: Animal Emergency Service Hobart 1300 302 912.",
         "fi": "ma–pe 8–18, la 9–14. Virka-ajan ulkopuolella: Animal Emergency Service Hobart 1300 302 912.",
-        "nb": "Man–fre 8.00–18.00, lør 9.00–14.00. Utenom åpningstiden: Animal Emergency Service Hobart 1300 302 912."
+        "nb": "Man–fre 8.00–18.00, lør 9.00–14.00. Utenom åpningstiden: Animal Emergency Service Hobart 1300 302 912.",
+        "sl": "Pon–pet 8–18, sob 9–14. Zunaj delovnega časa: Animal Emergency Service Hobart 1300 302 912."
       }
     },
     {
@@ -6119,7 +6323,8 @@
         "sv": "Mån–fre 8–18, lör 8.30–12.30, sön stängt. Akutfall utanför öppettider: 1300 302 912.",
         "da": "Man–fre 8.00–18.00, lør 8.30–12.30, søn lukket. Akutte tilfælde uden for åbningstid: 1300 302 912.",
         "fi": "ma–pe 8–18, la 8.30–12.30, su suljettu. Päivystys virka-ajan ulkopuolella: 1300 302 912.",
-        "nb": "Man–fre 8.00–18.00, lør 8.30–12.30, søn stengt. Nødtilfeller utenom åpningstiden: 1300 302 912."
+        "nb": "Man–fre 8.00–18.00, lør 8.30–12.30, søn stengt. Nødtilfeller utenom åpningstiden: 1300 302 912.",
+        "sl": "Pon–pet 8–18, sob 8.30–12.30, ned zaprto. Nujni primeri zunaj delovnega časa: 1300 302 912."
       }
     },
     {
@@ -6148,7 +6353,8 @@
         "sv": "Mån–fre 8–18.30, lör 9–13.",
         "da": "Man–fre 8.00–18.30, lør 9.00–13.00.",
         "fi": "ma–pe 8–18.30, la 9–13.",
-        "nb": "Man–fre 8.00–18.30, lør 9.00–13.00."
+        "nb": "Man–fre 8.00–18.30, lør 9.00–13.00.",
+        "sl": "Pon–pet 8–18.30, sob 9–13."
       }
     },
     {
@@ -6176,7 +6382,8 @@
         "sv": "Mån–fre 8–18, lör 9–13; stängt sön och helgdagar.",
         "da": "Man–fre 8.00–18.00, lør 9.00–13.00; lukket søn og helligdage.",
         "fi": "ma–pe 8–18, la 9–13; su ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00, lør 9.00–13.00; stengt søn og helligdager."
+        "nb": "Man–fre 8.00–18.00, lør 9.00–13.00; stengt søn og helligdager.",
+        "sl": "Pon–pet 8–18, sob 9–13; ob nedeljah in praznikih zaprto."
       }
     },
     {
@@ -6204,7 +6411,8 @@
         "sv": "Mån–fre 8–18; stängt helger och helgdagar.",
         "da": "Man–fre 8.00–18.00; lukket i weekender og på helligdage.",
         "fi": "ma–pe 8–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager."
+        "nb": "Man–fre 8.00–18.00; stengt i helger og helligdager.",
+        "sl": "Pon–pet 8–18; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -6233,7 +6441,8 @@
         "sv": "Mån–fre 9–17; stängt helger och helgdagar.",
         "da": "Man–fre 9.00–17.00; lukket i weekender og på helligdage.",
         "fi": "ma–pe 9–17; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "man–fre 9–17; stengt i helger og på offentlige helligdager."
+        "nb": "man–fre 9–17; stengt i helger og på offentlige helligdager.",
+        "sl": "Pon–pet 9–17; ob koncih tedna in praznikih zaprto."
       }
     },
     {
@@ -6262,7 +6471,8 @@
         "sv": "Mån–fre 8–19, lör 8–14. Ingen jour på djursjukhuset utanför öppettider.",
         "da": "Man–fre 8.00–19.00, lør 8.00–14.00. Ingen vagt på hospitalet uden for åbningstid.",
         "fi": "ma–pe 8–19, la 8–14. Sairaalassa ei ole päivystystä virka-ajan ulkopuolella.",
-        "nb": "Man–fre 8.00–19.00, lør 8.00–14.00. Ingen vakttjeneste ved sykehuset utenom åpningstiden."
+        "nb": "Man–fre 8.00–19.00, lør 8.00–14.00. Ingen vakttjeneste ved sykehuset utenom åpningstiden.",
+        "sl": "Pon–pet 8–19, sob 8–14. Bolnišnica zunaj delovnega časa ne dela."
       }
     },
     {
@@ -6290,7 +6500,8 @@
         "sv": "Mån–fre 8.30–18; stängt helger och helgdagar.",
         "da": "Man–fre 8.30–18.00; lukket i weekender og på helligdage.",
         "fi": "ma–pe 8.30–18; viikonloppuisin ja pyhäpäivinä suljettu.",
-        "nb": "man–fre 8.30–18.00; stengt i helger og på offentlige helligdager."
+        "nb": "man–fre 8.30–18.00; stengt i helger og på offentlige helligdager.",
+        "sl": "Pon–pet 8.30–18; ob koncih tedna in praznikih zaprto."
       }
     }
   ],
