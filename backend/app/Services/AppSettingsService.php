@@ -255,15 +255,15 @@ class AppSettingsService
 
     /**
      * The validation-signals switch (VALIDATION_PLAN §4, David 2026-11-22), cached like the cats
-     * switch. No env override.
+     * switch. No env override. `$fresh` reads the row itself (no cache) — the admin page.
      *
      * @return array{mode: ValidationSignalsMode, test_parent_ids: list<int>}
      */
-    public function storedValidationSignals(): array
+    public function storedValidationSignals(bool $fresh = false): array
     {
+        $read = fn (): array => AppSetting::find(self::VALIDATION_SIGNALS_KEY)?->value ?? [];
         /** @var array{mode?: string, test_parent_ids?: list<int|string>} $value */
-        $value = Cache::remember(self::cacheKey(self::VALIDATION_SIGNALS_KEY), self::CACHE_TTL_SECONDS,
-            fn (): array => AppSetting::find(self::VALIDATION_SIGNALS_KEY)?->value ?? []);
+        $value = $fresh ? $read() : Cache::remember(self::cacheKey(self::VALIDATION_SIGNALS_KEY), self::CACHE_TTL_SECONDS, $read);
 
         return [
             'mode' => ValidationSignalsMode::tryFrom((string) ($value['mode'] ?? '')) ?? ValidationSignalsMode::Off,

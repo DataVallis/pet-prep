@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use App\Enums\Phase2PriceChoice;
-use App\Models\Phase2Interest;
 use App\Models\User;
 use App\Services\Validation\Phase2InterestService;
 use App\Services\Validation\ValidationSignals;
@@ -35,7 +34,7 @@ class Phase2InterestRequest extends FormRequest
 
     /**
      * David 2026-11-22: while the admin switch »Validation signals« is off for this family, only a
-     * withdrawal (`notify: false` from a parent who already has a row) may pass — anything else is
+     * withdrawal (`notify: false` from a parent who already submitted an answer) may pass — anything else is
      * 422 `feature_unavailable` before validation, nothing stored. Non-parents fall through to
      * authorize() (403).
      */
@@ -116,24 +115,29 @@ class Phase2InterestRequest extends FormRequest
         return is_string($price) ? Phase2PriceChoice::from($price) : null;
     }
 
-    /** `notify: false` from a parent who already has a phase2_interests row (switch off). */
+    /**
+     * `notify: false` from a parent who already SUBMITTED an answer (switch off, QA #1499 M1): a
+     * viewed-only row is no answer, so it does not open the gate.
+     */
     private function isRowWithdrawal(User $user): bool
     {
-        $notify = filter_var($this->input('notify'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
-
-        return $this->has('notify') && $notify === false && Phase2Interest::where('user_id', $user->id)->exists();
+        return $this->sendsNotifyFalse() && app(Phase2InterestService::class)->hasAnswer($user);
     }
 
-    /** `{notify: false}` without a price from a parent who already has a stored answer. */
-    private function isWithdrawal(): bool
+    /**
+     * A pure withdrawal: `{notify: false}` WITHOUT a price from a parent who already submitted an
+     * answer (any switch mode). The controller then only withdraws the consent (`withdraw()`).
+     */
+    public function isWithdrawal(): bool
     {
-        if ($this->has('price_choice') || ! $this->has('notify')) {
-            return false;
-        }
-        $notify = filter_var($this->input('notify'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
-
-        return $notify === false && $this->user() !== null
+        return ! $this->has('price_choice') && $this->sendsNotifyFalse() && $this->user() !== null
             && app(Phase2InterestService::class)->hasAnswer($this->user());
+    }
+
+    private function sendsNotifyFalse(): bool
+    {
+        return $this->has('notify')
+            && filter_var($this->input('notify'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) === false;
     }
 
     public function notify(): bool

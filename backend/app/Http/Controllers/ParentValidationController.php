@@ -76,16 +76,23 @@ class ParentValidationController extends Controller
      *
      * While the admin switch »Validation signals« is off for this family:
      * 422 `{message, code: feature_unavailable}` and nothing stored — except a
-     * withdrawal (`notify: false` from a parent who already has a row), which
-     * always works (the price is then kept as stored).
+     * withdrawal (`notify: false` from a parent who already submitted an
+     * answer), which always works. A withdrawal changes only the consent: the
+     * price, `submitted_at` and the view times stay as stored.
      *
      * POST /api/parent/phase2-interest
      */
     public function phase2Submit(Phase2InterestRequest $request): JsonResponse
     {
-        $enabled = $this->signals->enabledFor($request->user());
-        // Switch off: only a withdrawal reaches here (Phase2InterestRequest) — it keeps the stored price.
-        $this->phase2->submit($request->user(), $enabled ? $request->priceChoice() : null, $enabled && $request->notify(), $enabled ? $request->email() : null);
+        // A withdrawal only forgets the consent (submitted_at, price, views untouched): while the
+        // switch is off (only a withdrawal gets past Phase2InterestRequest) or for a pure
+        // `{notify: false}` without a price. Anything else is a (new) answer: submit() stamps
+        // submitted_at again — the parent answered anew.
+        if (! $this->signals->enabledFor($request->user()) || $request->isWithdrawal()) {
+            $this->phase2->withdraw($request->user());
+        } else {
+            $this->phase2->submit($request->user(), $request->priceChoice(), $request->notify(), $request->email());
+        }
 
         return response()->json([
             /** @var 'saved' */

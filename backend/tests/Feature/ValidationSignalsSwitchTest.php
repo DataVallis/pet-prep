@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\FamilyRole;
 use App\Enums\Phase2PriceChoice;
 use App\Enums\ValidationSignalsMode;
 use App\Filament\Pages\FeatureSwitches;
@@ -7,10 +8,13 @@ use App\Http\Middleware\SetAdminLocale;
 use App\Models\AppSetting;
 use App\Models\AppSettingChange;
 use App\Models\EmailContact;
+use App\Models\FamilyMember;
 use App\Models\ParentDashboardOpen;
 use App\Models\Phase2Interest;
 use App\Models\User;
 use App\Services\AppSettingsService;
+use App\Services\FamilyInviteService;
+use App\Services\Funnel\FunnelService;
 use App\Services\Validation\ValidationSignals;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Testing\TestResponse;
@@ -127,12 +131,28 @@ describe('modes × endpoints', function () {
     it('test families: a second parent of a listed family is on too; a child never is', function () {
         $tester = User::factory()->parent()->create();
         $child = User::factory()->child()->create(['parent_id' => $tester->id]);
+        // A second parent joins the tester's family (not on the list themselves).
+        $second = User::factory()->parent()->create();
+        $code = app(FamilyInviteService::class)->createInvite($tester)['code'];
+        app(FamilyInviteService::class)->joinFamily($second, $code);
+        $second->refresh();
+        $outsider = User::factory()->parent()->create();
         vssSet(ValidationSignalsMode::TestFamilies, [$tester->id]);
 
-        expect(app(ValidationSignals::class)->enabledFor($tester))->toBeTrue()
+        expect(FamilyMember::where('user_id', $second->id)->value('family_id'))->toBe($tester->family->id)
+            ->and(FamilyMember::where('user_id', $second->id)->value('role'))->toBe(FamilyRole::Parent)
+            ->and(app(ValidationSignals::class)->enabledFor($tester))->toBeTrue()
+            ->and(app(ValidationSignals::class)->enabledFor($second))->toBeTrue()
             ->and(app(ValidationSignals::class)->enabledFor($tester->family))->toBeTrue()
+            ->and(app(ValidationSignals::class)->enabledFor($outsider))->toBeFalse()
             ->and(app(ValidationSignals::class)->enabledFor($child))->toBeFalse()
             ->and(app(ValidationSignals::class)->enabledFor(null))->toBeFalse();
+
+        vssAs($second);
+        getJson('/api/user')->assertOk()->assertJsonPath('validation_signals', true);
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('validation_signals', true);
+        postJson('/api/parent/dashboard-opened')->assertNoContent();
+        expect(ParentDashboardOpen::where('user_id', $second->id)->count())->toBe(1);
 
         vssAs($child);
         getJson('/api/user')->assertOk()->assertJsonPath('validation_signals', false);
@@ -157,8 +177,10 @@ describe('withdrawal and switching off', function () {
         vssAs($parent);
         postJson('/api/parent/phase2-interest', ['price_choice' => 'monthly_2_99', 'notify' => true, 'email' => 'mama@example.com'])->assertOk();
         expect(EmailContact::count())->toBe(1);
+        $before = Phase2Interest::sole()->only(['submitted_at', 'first_viewed_at', 'last_viewed_at']);
 
         vssSet(ValidationSignalsMode::Off);
+        $this->travel(3)->hours();
         vssAs($parent);
 
         // A new answer is refused …
@@ -170,10 +192,43 @@ describe('withdrawal and switching off', function () {
         $row = Phase2Interest::sole();
         expect($row->notify)->toBeFalse()
             ->and($row->price_choice)->toBe(Phase2PriceChoice::Monthly299)
+            // QA #1499 M1: a withdrawal is no new answer — submitted_at and the view times stay.
+            ->and($row->only(['submitted_at', 'first_viewed_at', 'last_viewed_at']))->toEqual($before)
             ->and(EmailContact::count())->toBe(0);
         getJson('/api/parent/dashboard')->assertOk()
             ->assertJsonPath('validation_signals', false)
             ->assertJsonPath('phase2_interest', ['submitted' => true, 'notify' => false, 'price_choice' => 'monthly_2_99']);
+    });
+
+    it('refuses a viewed-only row while off: no answer is created (QA #1499 M1)', function () {
+        $parent = User::factory()->parent()->create();
+        vssSet(ValidationSignalsMode::TestFamilies, [$parent->id]);
+        vssAs($parent);
+        postJson('/api/parent/phase2-interest/viewed')->assertNoContent(); // tapped, never answered
+
+        vssSet(ValidationSignalsMode::Off);
+        vssAs($parent);
+        postJson('/api/parent/phase2-interest', ['price_choice' => 'free', 'notify' => false])
+            ->assertUnprocessable()->assertJsonPath('code', 'feature_unavailable');
+        postJson('/api/parent/phase2-interest', ['notify' => false])
+            ->assertUnprocessable()->assertJsonPath('code', 'feature_unavailable');
+
+        $row = Phase2Interest::sole();
+        expect($row->submitted_at)->toBeNull()
+            ->and($row->price_choice)->toBeNull()
+            ->and(app(FunnelService::class)->phase2(12)['submitted'])->toBe(0);
+    });
+
+    it('applies the timezone of a PATCH while off and ignores only the acquisition answer', function () {
+        $parent = User::factory()->parent()->create();
+        vssAs($parent);
+
+        patchJson('/api/parent/settings', ['timezone' => 'Europe/Berlin', 'acquisition_source' => 'ad'])->assertOk()
+            ->assertJsonPath('settings.timezone', 'Europe/Berlin')
+            ->assertJsonPath('settings.acquisition_source', null);
+
+        expect($parent->fresh()->family->timezone)->toBe('Europe/Berlin')
+            ->and($parent->fresh()->acquisition_source)->toBeNull();
     });
 
     it('keeps the stored data when switched off and stops new writes', function () {

@@ -94,8 +94,8 @@ class FeatureSwitches extends Page implements HasForms
             'gift_vouchers' => $settings->giftVouchers(fresh: true),
             'promise_kit' => $settings->promiseKit(fresh: true),
             'partner_inquiries' => $settings->partnerInquiries(fresh: true),
-            'validation_signals_mode' => $settings->storedValidationSignals()['mode']->value,
-            'validation_signals_test_parent_ids' => array_map('strval', $settings->storedValidationSignals()['test_parent_ids']),
+            'validation_signals_mode' => $settings->storedValidationSignals(fresh: true)['mode']->value,
+            'validation_signals_test_parent_ids' => array_map('strval', $settings->storedValidationSignals(fresh: true)['test_parent_ids']),
         ]);
     }
 
@@ -299,7 +299,7 @@ class FeatureSwitches extends Page implements HasForms
         $signalsIds = array_values($data['validation_signals_test_parent_ids'] ?? []);
         $newSignalsIds = array_values(array_unique(array_map('intval', $signalsIds)));
         sort($newSignalsIds);
-        $storedSignals = $settings->storedValidationSignals();
+        $storedSignals = $settings->storedValidationSignals(fresh: true);
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -361,7 +361,7 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_partner_inquiries', ['state' => $settings->partnerInquiries(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
-            .' · '.__('admin.features.saved_body_validation_signals', ['mode' => $settings->validationSignalsMode()->label()]))->success()->send();
+            .' · '.__('admin.features.saved_body_validation_signals', ['mode' => $settings->storedValidationSignals(fresh: true)['mode']->label()]))->success()->send();
     }
 
     /**

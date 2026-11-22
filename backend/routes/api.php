@@ -99,6 +99,10 @@ Route::get('shop/downloads/{order}/{locale}', [ShopController::class, 'download'
 Route::get('shop/sample/{locale}', [ShopController::class, 'sample'])
     ->middleware(['signed', 'throttle:shop-order'])->where('locale', '[a-z]{2}')->name('shop.sample');
 
+// David 2026-11-22: public product switches for the signed-out app (booleans only), 60 / min per IP.
+Route::get('app-features', [AppFeaturesController::class, 'show'])
+    ->middleware('throttle:app-features');
+
 // M6-S03: partner inquiry form of petprep.si/partners. Public; per-IP throttle (5 / hour);
 // 503 while the superadmin switch »Partner inquiries« is off.
 Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
@@ -107,10 +111,6 @@ Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
 // M6-S09: EVERY e-mail left on petprep.si (newsletter / early access; calculator, quiz, forms) with
 // consent, source, page and targeting context → email_contacts + email_signups. Public; per-IP
 // throttle (20 / hour); 204; no e-mail is sent, no IP stored.
-// David 2026-11-22: public product switches for the signed-out app (booleans only), 60 / min per IP.
-Route::get('app-features', [AppFeaturesController::class, 'show'])
-    ->middleware('throttle:app-features');
-
 Route::post('email-signups', [EmailSignupController::class, 'store'])
     ->middleware('throttle:email-signups');
 
