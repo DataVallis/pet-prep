@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "fc6160ba2b8a30a367716d90c93b74e4354e8e93de08cda51061f6a5a0fc105c"
+      "sha256": "e4ab3b032b1abb9cbdac55396d0760c2ab0b57a3f5b04640f9c19b9ed542749f"
     }
   },
   "suitability_vocabulary": {
@@ -30936,7 +30936,26 @@
         "file": "dalmatian.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-spotted",
+            "label": {
+              "en": "Black-spotted",
+              "sl": "Črno pikast"
+            },
+            "file": "dog/dalmatian.webp",
+            "default": true
+          },
+          {
+            "key": "liver-spotted",
+            "label": {
+              "en": "Liver-spotted",
+              "sl": "Rjavo pikast"
+            },
+            "file": "dog/dalmatian--liver-spotted.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -31525,7 +31544,26 @@
         "file": "australian-cattle-dog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue-speckled",
+            "label": {
+              "en": "Blue speckled",
+              "sl": "Modro pegast"
+            },
+            "file": "dog/australian-cattle-dog.webp",
+            "default": true
+          },
+          {
+            "key": "red-speckle",
+            "label": {
+              "en": "Red speckle",
+              "sl": "Rdeče pegast"
+            },
+            "file": "dog/australian-cattle-dog--red-speckle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -32081,7 +32119,58 @@
         "file": "whippet.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/whippet.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/whippet--brindle.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/whippet--black.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder (siv)"
+            },
+            "file": "dog/whippet--blue.webp"
+          },
+          {
+            "key": "fawn-white",
+            "label": {
+              "en": "Fawn and white",
+              "sl": "Plavo rjav z belo"
+            },
+            "file": "dog/whippet--fawn-white.webp"
+          },
+          {
+            "key": "brindle-white",
+            "label": {
+              "en": "Brindle and white",
+              "sl": "Tigrasto-bel"
+            },
+            "file": "dog/whippet--brindle-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -32643,7 +32732,50 @@
         "file": "wirehaired-pointing-griffon.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "steel-grey-liver",
+            "label": {
+              "en": "Steel grey with liver",
+              "sl": "Jekleno siv z jetrno rjavimi lisami"
+            },
+            "file": "dog/wirehaired-pointing-griffon.webp",
+            "default": true
+          },
+          {
+            "key": "liver-roan",
+            "label": {
+              "en": "Liver roan",
+              "sl": "Jetrni roan"
+            },
+            "file": "dog/wirehaired-pointing-griffon--liver-roan.webp"
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Jetrno rjav"
+            },
+            "file": "dog/wirehaired-pointing-griffon--liver.webp"
+          },
+          {
+            "key": "liver-white",
+            "label": {
+              "en": "Liver and white",
+              "sl": "Jetrno-bel"
+            },
+            "file": "dog/wirehaired-pointing-griffon--liver-white.webp"
+          },
+          {
+            "key": "orange-white",
+            "label": {
+              "en": "Orange and white",
+              "sl": "Oranžno-bel"
+            },
+            "file": "dog/wirehaired-pointing-griffon--orange-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -33221,7 +33353,34 @@
         "file": "chesapeake-bay-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/chesapeake-bay-retriever.webp",
+            "default": true
+          },
+          {
+            "key": "sedge",
+            "label": {
+              "en": "Sedge",
+              "sl": "Rdečkasto zlat"
+            },
+            "file": "dog/chesapeake-bay-retriever--sedge.webp"
+          },
+          {
+            "key": "deadgrass",
+            "label": {
+              "en": "Deadgrass",
+              "sl": "Barve suhe trave"
+            },
+            "file": "dog/chesapeake-bay-retriever--deadgrass.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -33838,7 +33997,26 @@
         "file": "samoyed.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/samoyed.webp",
+            "default": true
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Krem"
+            },
+            "file": "dog/samoyed--cream.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -34378,7 +34556,34 @@
         "file": "scottish-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/scottish-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/scottish-terrier--brindle.webp"
+          },
+          {
+            "key": "wheaten",
+            "label": {
+              "en": "Wheaten",
+              "sl": "Pšenično rumen"
+            },
+            "file": "dog/scottish-terrier--wheaten.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -35005,7 +35210,26 @@
         "file": "weimaraner.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "silver-grey",
+            "label": {
+              "en": "Silver grey",
+              "sl": "Srebrno siv"
+            },
+            "file": "dog/weimaraner.webp",
+            "default": true
+          },
+          {
+            "key": "roe-grey",
+            "label": {
+              "en": "Roe grey",
+              "sl": "Srnje siv"
+            },
+            "file": "dog/weimaraner--roe-grey.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -35561,7 +35785,66 @@
         "file": "italian-greyhound.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Rumenorjav"
+            },
+            "file": "dog/italian-greyhound.webp",
+            "default": true
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue grey",
+              "sl": "Modrosiv"
+            },
+            "file": "dog/italian-greyhound--blue.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/italian-greyhound--black.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/italian-greyhound--cream.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/italian-greyhound--red.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/italian-greyhound--white.webp"
+          },
+          {
+            "key": "fawn-white",
+            "label": {
+              "en": "Fawn and white",
+              "sl": "Rumenorjavo-bel"
+            },
+            "file": "dog/italian-greyhound--fawn-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -36184,7 +36467,26 @@
         "file": "giant-schnauzer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/giant-schnauzer.webp",
+            "default": true
+          },
+          {
+            "key": "pepper-salt",
+            "label": {
+              "en": "Pepper and salt",
+              "sl": "Poper in sol"
+            },
+            "file": "dog/giant-schnauzer--pepper-salt.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -36818,7 +37120,34 @@
         "file": "bloodhound.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Rjav s črnim sedlom"
+            },
+            "file": "dog/bloodhound.webp",
+            "default": true
+          },
+          {
+            "key": "liver-tan",
+            "label": {
+              "en": "Liver and tan",
+              "sl": "Jetrno-rjav"
+            },
+            "file": "dog/bloodhound--liver-tan.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/bloodhound--red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

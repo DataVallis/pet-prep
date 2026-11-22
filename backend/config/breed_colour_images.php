@@ -274,6 +274,65 @@ return [
         'landseer' => 'dogs/newfoundland--landseer.webp',
         'brown' => 'dogs/newfoundland--brown.webp',
     ],
+    'dalmatian' => [
+        'black-spotted' => 'dogs/dalmatian.webp',
+        'liver-spotted' => 'dogs/dalmatian--liver-spotted.webp',
+    ],
+    'australian_cattle_dog' => [
+        'blue-speckled' => 'dogs/australian-cattle-dog.webp',
+        'red-speckle' => 'dogs/australian-cattle-dog--red-speckle.webp',
+    ],
+    'whippet' => [
+        'fawn' => 'dogs/whippet.webp',
+        'brindle' => 'dogs/whippet--brindle.webp',
+        'black' => 'dogs/whippet--black.webp',
+        'blue' => 'dogs/whippet--blue.webp',
+        'fawn-white' => 'dogs/whippet--fawn-white.webp',
+        'brindle-white' => 'dogs/whippet--brindle-white.webp',
+    ],
+    'wirehaired_pointing_griffon' => [
+        'steel-grey-liver' => 'dogs/wirehaired-pointing-griffon.webp',
+        'liver-roan' => 'dogs/wirehaired-pointing-griffon--liver-roan.webp',
+        'liver' => 'dogs/wirehaired-pointing-griffon--liver.webp',
+        'liver-white' => 'dogs/wirehaired-pointing-griffon--liver-white.webp',
+        'orange-white' => 'dogs/wirehaired-pointing-griffon--orange-white.webp',
+    ],
+    'chesapeake_bay_retriever' => [
+        'brown' => 'dogs/chesapeake-bay-retriever.webp',
+        'sedge' => 'dogs/chesapeake-bay-retriever--sedge.webp',
+        'deadgrass' => 'dogs/chesapeake-bay-retriever--deadgrass.webp',
+    ],
+    'samoyed' => [
+        'white' => 'dogs/samoyed.webp',
+        'cream' => 'dogs/samoyed--cream.webp',
+    ],
+    'scottish_terrier' => [
+        'black' => 'dogs/scottish-terrier.webp',
+        'brindle' => 'dogs/scottish-terrier--brindle.webp',
+        'wheaten' => 'dogs/scottish-terrier--wheaten.webp',
+    ],
+    'weimaraner' => [
+        'silver-grey' => 'dogs/weimaraner.webp',
+        'roe-grey' => 'dogs/weimaraner--roe-grey.webp',
+    ],
+    'italian_greyhound' => [
+        'fawn' => 'dogs/italian-greyhound.webp',
+        'blue' => 'dogs/italian-greyhound--blue.webp',
+        'black' => 'dogs/italian-greyhound--black.webp',
+        'cream' => 'dogs/italian-greyhound--cream.webp',
+        'red' => 'dogs/italian-greyhound--red.webp',
+        'white' => 'dogs/italian-greyhound--white.webp',
+        'fawn-white' => 'dogs/italian-greyhound--fawn-white.webp',
+    ],
+    'giant_schnauzer' => [
+        'black' => 'dogs/giant-schnauzer.webp',
+        'pepper-salt' => 'dogs/giant-schnauzer--pepper-salt.webp',
+    ],
+    'bloodhound' => [
+        'black-tan' => 'dogs/bloodhound.webp',
+        'liver-tan' => 'dogs/bloodhound--liver-tan.webp',
+        'red' => 'dogs/bloodhound--red.webp',
+    ],
     'soft_coated_wheaten_terrier' => [
         'wheaten' => 'dogs/soft-coated-wheaten-terrier.webp',
     ],
