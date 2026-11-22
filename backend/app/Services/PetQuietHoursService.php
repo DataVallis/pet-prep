@@ -36,19 +36,25 @@ class PetQuietHoursService
      * Give the pet its own schedule, or — `$values` null — make it follow
      * the family's quiet hours again.
      *
-     * @param  array<string, mixed>|null  $values  school_start, school_end, bedtime_start, bedtime_end ("HH:MM" | null), is_active
+     * `school_days` (David 2026-11-22) is optional in $values: missing keeps
+     * the pet's stored days (old apps never send it); a pet that followed the
+     * family until now gets the default Monday–Friday.
+     *
+     * @param  array<string, mixed>|null  $values  school_start, school_end, bedtime_start, bedtime_end ("HH:MM" | null), is_active, school_days?
      */
     public function change(User $parent, Pet $pet, ?array $values): Pet
     {
-        $new = $values === null ? null : QuietHours::normaliseValues($values);
-
-        $changed = DB::transaction(function () use ($parent, $pet, $new): Pet {
+        $changed = DB::transaction(function () use ($parent, $pet, $values): Pet {
             $family = Family::whereKey($pet->family_id)->lockForUpdate()->firstOrFail();
             /** @var Pet $locked */
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
             $locked->setRelation('family', $family);
 
             $old = $locked->ownQuietHoursValues();
+            if ($values !== null && ! array_key_exists('school_days', $values)) {
+                $values['school_days'] = $old['school_days'] ?? QuietHours::DEFAULT_SCHOOL_DAYS;
+            }
+            $new = $values === null ? null : QuietHours::normaliseValues($values);
             if ($old === $new) {
                 return $locked; // nothing to do
             }
@@ -77,7 +83,7 @@ class PetQuietHoursService
      * `$family` = the family's schedule already loaded by the caller (one query for a
      * whole family list — QA #1259 m6); null → loaded here when needed.
      *
-     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, follows_family: bool}
+     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, school_days: list<int>, follows_family: bool}
      */
     public static function payloadFor(Pet $pet, ?QuietHours $family = null): array
     {

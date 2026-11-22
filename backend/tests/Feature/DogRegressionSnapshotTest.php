@@ -173,8 +173,10 @@ it('keeps 2.5 days of two dogs (profiled puppy + legacy collie) identical to the
     // Family A: profiled mutt puppy, behaviour + training, quiet hours 21–07 + school 08–13.
     $parentA = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $childA = User::factory()->child()->create(['parent_id' => $parentA->id, 'name' => 'Ana']);
+    // School every day (QH_SCHOOL_EVERY_DAY): the snapshot was recorded when the school window
+    // applied on weekends too (2026-10-24 is a Saturday) — kept byte for byte.
     setQuietHours(['parent_id' => $parentA->id, 'school_start' => '08:00', 'school_end' => '13:00',
-        'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        'bedtime_start' => '21:00', 'bedtime_end' => '07:00'] + QH_SCHOOL_EVERY_DAY);
     $puppy = Pet::factory()->mutt()->create([
         'user_id' => $childA->id, 'born_at' => now(), 'arrival_age_months' => 2, 'origin' => 'bought',
         'behaviour_events_enabled' => true, 'training_enabled' => true,

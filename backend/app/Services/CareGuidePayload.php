@@ -41,7 +41,7 @@ final class CareGuidePayload
      * @param  array{hold_hours: int}|null  $takeOut
      * @param  array{refill_below: int, min_gap_minutes: int}|null  $water
      * @param  array{per_week: int}|null  $grooming
-     * @param  array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}  $sleep
+     * @param  array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}  $sleep
      * @param  array{sessions_per_day: int, min_gap_minutes: int}|null  $play
      * @param  array{scoop_within_hours: float|int, change_every_days: int}|null  $litter
      * @param  list<array{task: string, actor: string, times: int, period_days: int}>  $careTasks
@@ -144,7 +144,7 @@ final class CareGuidePayload
     }
 
     /**
-     * @return array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}
+     * @return array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}
      */
     private static function sleepOf(QuietHours $quiet): array
     {
@@ -156,9 +156,12 @@ final class CareGuidePayload
             return ['start' => substr($start, 0, 5), 'end' => substr($end, 0, 5)];
         };
 
+        // David 2026-11-22: the school window applies only on its days; no day = no window.
+        $school = $quiet->schoolDays() === [] ? null : $window($quiet->school_start, $quiet->school_end);
+
         return [
             'night' => $window($quiet->bedtime_start, $quiet->bedtime_end),
-            'school' => $window($quiet->school_start, $quiet->school_end),
+            'school' => $school === null ? null : $school + ['days' => $quiet->schoolDays()],
         ];
     }
 
@@ -168,7 +171,7 @@ final class CareGuidePayload
     }
 
     /**
-     * @return array{species: 'dog'|'cat', life_stage: 'puppy'|'young'|'adult'|'senior'|null, meals: array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}, steps: array{goal: int, exercise_minutes: int|null}|null, take_out: array{hold_hours: int}|null, water: array{refill_below: int, min_gap_minutes: int}|null, grooming: array{per_week: int}|null, sleep: array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}, play: array{sessions_per_day: int, min_gap_minutes: int}|null, litter: array{scoop_within_hours: float|int, change_every_days: int}|null, scratching: bool, clean_within_hours: int, digestion_gap_minutes: int|null, care_tasks: list<array{task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim'|'groomer_visit'|'bath', actor: 'child'|'parent', times: int, period_days: int}>, walk_heat: array{months: list<int>, from: string, to: string}|null}
+     * @return array{species: 'dog'|'cat', life_stage: 'puppy'|'young'|'adult'|'senior'|null, meals: array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}, steps: array{goal: int, exercise_minutes: int|null}|null, take_out: array{hold_hours: int}|null, water: array{refill_below: int, min_gap_minutes: int}|null, grooming: array{per_week: int}|null, sleep: array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}, play: array{sessions_per_day: int, min_gap_minutes: int}|null, litter: array{scoop_within_hours: float|int, change_every_days: int}|null, scratching: bool, clean_within_hours: int, digestion_gap_minutes: int|null, care_tasks: list<array{task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim'|'groomer_visit'|'bath', actor: 'child'|'parent', times: int, period_days: int}>, walk_heat: array{months: list<int>, from: string, to: string}|null}
      */
     public function toArray(): array
     {
@@ -215,7 +218,7 @@ final class CareGuidePayload
              * The pet's quiet hours (own or the family's) = when it sleeps (pet-local "HH:MM"); a
              * window is null when not set or quiet hours are off.
              *
-             * @var array{night: array{start: string, end: string}|null, school: array{start: string, end: string}|null}
+             * @var array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}
              */
             'sleep' => $this->sleep,
             /**

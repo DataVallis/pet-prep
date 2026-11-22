@@ -98,7 +98,8 @@ class FamilyService
     /**
      * Every family has quiet hours (fix/quiet-hours-default, 2026-10-08):
      * the first parent who joins a family without a row creates
-     * QuietHours::DEFAULTS (night 21:00–07:00, active). Insert only — an
+     * QuietHours::DEFAULTS (night 21:00–07:00, active, school days Mon–Fri —
+     * jsonb, so encoded for this raw insert). Insert only — an
      * existing family row (or a legacy row of this parent, parent_id is
      * unique) is never touched. ON CONFLICT DO NOTHING keeps a concurrent
      * insert from aborting the caller's transaction. A family without any
@@ -112,6 +113,7 @@ class FamilyService
 
         $now = now();
         DB::table('quiet_hours')->insertOrIgnore(array_merge(QuietHours::DEFAULTS, [
+            'school_days' => json_encode(QuietHours::DEFAULTS['school_days']),
             'parent_id' => $parent->id,
             'family_id' => $family->id,
             'created_at' => $now,

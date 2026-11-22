@@ -48,6 +48,10 @@ class QuietHoursController extends Controller
     /**
      * Create or update the quiet hours configuration for the authenticated parent.
      *
+     * Optional `school_days` (David 2026-11-22): the ISO weekdays (1 = Monday …
+     * 7 = Sunday) on which the school window applies, `[]` = none; missing =
+     * keep the stored days. Invalid → 422 `reason: school_days_invalid`.
+     *
      * PUT /api/parent/quiet-hours
      */
     public function update(UpdateQuietHoursRequest $request): JsonResponse
@@ -89,7 +93,13 @@ class QuietHoursController extends Controller
                 'bedtime_start',
                 'bedtime_end',
                 'is_active',
+                // David 2026-11-22: optional — missing keeps the stored days (old apps);
+                // a new row gets the default Monday–Friday (column / model default).
+                'school_days',
             ]);
+            if (array_key_exists('school_days', $values)) {
+                $values['school_days'] = QuietHours::normaliseSchoolDays($values['school_days']);
+            }
 
             $existing = QuietHours::where('family_id', $family->id)->lockForUpdate()->first()
                 // A row this parent created without a family (old code during
@@ -125,6 +135,8 @@ class QuietHoursController extends Controller
             'bedtime_start' => $quietHours->bedtime_start ? substr($quietHours->bedtime_start, 0, 5) : null,
             'bedtime_end' => $quietHours->bedtime_end ? substr($quietHours->bedtime_end, 0, 5) : null,
             'is_active' => $quietHours->is_active,
+            // ISO weekdays 1 (Mon) … 7 (Sun) on which the school window applies (David 2026-11-22).
+            'school_days' => $quietHours->schoolDays(),
             // false = the defaults apply but no parent has saved them yet.
             'saved' => (bool) $quietHours->exists,
         ];

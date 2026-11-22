@@ -2653,7 +2653,7 @@ sequenceDiagram
 
 ## Quiet hours per pet + 12 / 24 h clock (David 2026-11-16)
 
-Which schedule a rule reads, and how a change takes effect. Every rule (decay ×0.1, sleep, pushes, messes, parent-covered meals, puppy morning rule, routines, care tasks, games / school) goes through `Pet::quietHours()`.
+Which schedule a rule reads, how the school window's days are checked (David 2026-11-22), and how a change takes effect. Every rule (decay ×0.1, sleep, pushes, messes, parent-covered meals, puppy morning rule, routines, care tasks, games / school) goes through `Pet::quietHours()`.
 
 ```mermaid
 flowchart TD
@@ -2667,6 +2667,15 @@ flowchart TD
   FAM --> RI
   DEF --> RI
   L["RoutineLedgerService::loadInputs (batch)"] -->|same order| RI
+  RI --> W["isQuietNow(t) on the pet's clock"]
+  W --> BT{"inside bedtime?"}
+  BT -- yes --> QUIET[quiet]
+  BT -- no --> SW{"inside school window?"}
+  SW -- no --> NORMAL[not quiet]
+  SW -- yes --> SD{"pet-local ISO weekday of t in school_days?<br/>(default 1–5 = Mon–Fri, [] = never — David 2026-11-22)"}
+  SD -- yes --> QUIET
+  SD -- no --> NORMAL
+  W -.-> NB["nextBoundaryAfter: bedtime + school times (none when school_days = []),<br/>+ every local midnight when school applies on some days but not all"]
 ```
 
 ```mermaid
@@ -2675,8 +2684,8 @@ sequenceDiagram
   participant API as PUT /api/parent/pets/{pet}/quiet-hours
   participant S as PetQuietHoursService
   participant DB as PostgreSQL
-  P->>API: {quiet_hours: {school_start…, is_active}} or {quiet_hours: null}
-  API->>API: UpdatePetQuietHoursRequest (H:i) · PetPolicy@changeQuietHours (else 403)
+  P->>API: {quiet_hours: {school_start…, is_active, school_days?}} or {quiet_hours: null}
+  API->>API: UpdatePetQuietHoursRequest (H:i, school_days 1..7 else 422 school_days_invalid) · PetPolicy@changeQuietHours (else 403)
   API->>S: change(parent, pet, values|null)
   S->>DB: BEGIN · families FOR UPDATE · pets FOR UPDATE
   alt same value

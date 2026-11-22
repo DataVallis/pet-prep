@@ -117,7 +117,7 @@
 **Zgrajeno (M5-T02, 21. 10. 2026) — kanonična tabela.** Odloča strežnik (zastavice `can_*` v stanju otroka); aplikacija ima eno tabelo (`mobile/src/modules/childPet/actionRules.ts`), ki zastavice samo prebere in doda razlog spanja (z uro bujenja) ali zaklepa.
 
 **Stanja:**
-- **Spi** = tihe ure ljubljenčka — njegove lastne ali, če jih nima, tihe ure družine (David 16. 11. 2026; noč, privzeto 21:00–07:00, in neobvezno šolsko okno), po uri ljubljenčka. Zbudi se ob koncu tihih ur (šola, ki se nadaljuje v noč ali obratno, šteje kot eno spanje). Ena definicija na strežniku (`PetSleepService`); stanje otroka in `PetUpdated` imata `sleep: {asleep, until}`.
+- **Spi** = tihe ure ljubljenčka — njegove lastne ali, če jih nima, tihe ure družine (David 16. 11. 2026; noč, privzeto 21:00–07:00, in neobvezno šolsko okno — samo na izbrane dneve, privzeto pon–pet, David 22. 11. 2026), po uri ljubljenčka. Zbudi se ob koncu tihih ur (šola, ki se nadaljuje v noč ali obratno, šteje kot eno spanje). Ena definicija na strežniku (`PetSleepService`); stanje otroka in `PetUpdated` imata `sleep: {asleep, until}`.
 - **Tihe ure** = isti trenutki kot spanje (upad ×0,1, obroke pokrije starš, brez obvestil).
 - **Bolan** = obisk pri veterinarju (zaklep do `lock.until`).
 - **Na sprehodu** = odprt zaslon sprehoda pokrije HUD (drugega se takrat ne da pritisniti).

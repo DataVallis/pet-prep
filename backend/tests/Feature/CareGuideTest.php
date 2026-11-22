@@ -109,7 +109,7 @@ describe('dog', function () {
             ])
             ->and($guide['grooming'])->toBe(['per_week' => app(CatChoreService::class)->groomingGoalOn($pet, $today)])
             ->and($guide['grooming']['per_week'])->toBeGreaterThan(0)
-            ->and($guide['sleep'])->toBe(['night' => ['start' => '21:00', 'end' => '07:00'], 'school' => ['start' => '08:00', 'end' => '13:00']])
+            ->and($guide['sleep'])->toBe(['night' => ['start' => '21:00', 'end' => '07:00'], 'school' => ['start' => '08:00', 'end' => '13:00', 'days' => [1, 2, 3, 4, 5]]])
             ->and($guide['take_out'])->toBeNull() // not a puppy
             ->and($guide['play'])->toBeNull()
             ->and($guide['litter'])->toBeNull()
@@ -239,7 +239,7 @@ describe('parent dashboard (M5-T05b)', function () {
             ->and($parentGuide)->toBe(cgGuide($child))
             ->and($parentGuide['take_out']['hold_hours'])->toBe(app(BehaviourEventService::class)->holdHoursOn($pet->fresh(), $pet->fresh()->localDate(now())))
             ->and($parentGuide['meals']['by_parent'])->toBeGreaterThanOrEqual(0)
-            ->and($parentGuide['sleep']['school'])->toBe(['start' => '08:00', 'end' => '13:00']);
+            ->and($parentGuide['sleep']['school'])->toBe(['start' => '08:00', 'end' => '13:00', 'days' => [1, 2, 3, 4, 5]]);
     });
 
     it('gives the parent exactly the child guide of a cat', function () {

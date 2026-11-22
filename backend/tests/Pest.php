@@ -198,6 +198,14 @@ function disableHygieneEvents(Pet $pet): Pet
  * every family got a default row (fix/quiet-hours-default, 2026-10-08).
  * Pass `parent_id` and/or `family_id` like the old create() call.
  */
+/**
+ * School window on all seven days (David 2026-11-22: the default is Mon–Fri).
+ * For fixtures written when the school window applied every day whose subject
+ * is not the weekday rule (DST nights, illness, scheduling, snapshots) — spread
+ * into setQuietHours([... ] + QH_SCHOOL_EVERY_DAY).
+ */
+const QH_SCHOOL_EVERY_DAY = ['school_days' => [1, 2, 3, 4, 5, 6, 7]];
+
 function setQuietHours(array $attributes): QuietHours
 {
     $familyId = $attributes['family_id']

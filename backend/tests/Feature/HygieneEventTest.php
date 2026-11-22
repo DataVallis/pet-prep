@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Event;
 const HY_SCHOOL_AND_BED = [
     'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
     'school_start' => '08:00', 'school_end' => '13:00',
-];
+] + QH_SCHOOL_EVERY_DAY; // the 200-day scan includes weekends
 
 /**
  * A Ljubljana family; the pet is created at the current test time.

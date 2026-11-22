@@ -247,7 +247,7 @@ describe('EscalationService - illness state', function () {
             'school_start' => '00:00',
             'school_end' => '23:59',
             'is_active' => true,
-        ]);
+        ] + QH_SCHOOL_EVERY_DAY); // no fixed clock: must be quiet on any weekday
 
         $pet = Pet::factory()->create([
             'user_id' => $child->id,

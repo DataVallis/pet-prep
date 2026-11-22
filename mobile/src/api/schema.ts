@@ -2227,7 +2227,11 @@ export interface paths {
         get: operations["quietHours.show"];
         /**
          * Create or update the quiet hours configuration for the authenticated parent
-         * @description PUT /api/parent/quiet-hours
+         * @description Optional `school_days` (David 2026-11-22): the ISO weekdays (1 = Monday …
+         *     7 = Sunday) on which the school window applies, `[]` = none; missing =
+         *     keep the stored days. Invalid → 422 `reason: school_days_invalid`.
+         *
+         *     PUT /api/parent/quiet-hours
          */
         put: operations["quietHours.update"];
         post?: never;
@@ -4077,8 +4081,11 @@ export interface components {
          * @description PUT /api/parent/pets/{pet}/quiet-hours (David 2026-11-16, quiet hours per
          *     pet). Body `{"quiet_hours": {"school_start": "08:00", "school_end":
          *     "13:00", "bedtime_start": "20:00", "bedtime_end": "07:00", "is_active":
-         *     true}}` = the pet's own schedule (times "HH:MM" or null, the same rules as
-         *     the family's PUT /api/parent/quiet-hours); `{"quiet_hours": null}` = follow
+         *     true, "school_days": [1, 2, 3, 4, 5]}}` = the pet's own schedule (times
+         *     "HH:MM" or null, the same rules as the family's PUT /api/parent/quiet-hours;
+         *     `school_days` optional — missing keeps the pet's stored days, a pet that
+         *     followed the family gets Monday–Friday; invalid → 422
+         *     `school_days_invalid`); `{"quiet_hours": null}` = follow
          *     the family's quiet hours again. Authorized by PetPolicy::changeQuietHours
          *     (a parent of the pet's family; another family's pet or a child → 403).
          */
@@ -4090,6 +4097,8 @@ export interface components {
                 bedtime_start: string | null;
                 bedtime_end: string | null;
                 is_active: boolean;
+                /** @description David 2026-11-22: optional (old apps never send it — keep the stored days). */
+                school_days?: number[];
             } | null;
         };
         /**
@@ -4113,6 +4122,8 @@ export interface components {
             is_active?: boolean;
             /** @description Optional family timezone (IANA), saved on the parent (M1-03). */
             timezone?: string;
+            /** @description Optional ISO weekdays 1 (Mon) … 7 (Sun) of the school window (David 2026-11-22); missing = keep the stored days. */
+            school_days?: number[];
         };
         /**
          * UpdateTimeFormatRequest
@@ -5840,6 +5851,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -6431,6 +6443,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -6901,6 +6914,7 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            school_days: number[];
                             follows_family: boolean;
                         };
                         quiet_hours_follow_family: boolean;
@@ -7492,6 +7506,7 @@ export interface operations {
                                 school: {
                                     start: string;
                                     end: string;
+                                    days: number[];
                                 } | null;
                             };
                             /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -7983,6 +7998,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -8574,6 +8590,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -9063,6 +9080,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -9654,6 +9672,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -10143,6 +10162,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -10734,6 +10754,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -11223,6 +11244,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -11814,6 +11836,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -12303,6 +12326,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -12894,6 +12918,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -13387,6 +13412,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -13978,6 +14004,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -14471,6 +14498,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -15062,6 +15090,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -15555,6 +15584,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -16146,6 +16176,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -16639,6 +16670,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -17230,6 +17262,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -17723,6 +17756,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -18314,6 +18348,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -18803,6 +18838,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -19394,6 +19430,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -19883,6 +19920,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -20474,6 +20512,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -20967,6 +21006,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -21558,6 +21598,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -22047,6 +22088,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -22638,6 +22680,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -23131,6 +23174,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -23722,6 +23766,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -24211,6 +24256,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -24802,6 +24848,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -25295,6 +25342,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -25886,6 +25934,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -26379,6 +26428,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -26970,6 +27020,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -27463,6 +27514,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -28054,6 +28106,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -28547,6 +28600,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -29138,6 +29192,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -29631,6 +29686,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -30222,6 +30278,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -31331,6 +31388,8 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            /** @description ISO weekdays 1 (Mon) … 7 (Sun) of the school window (David 2026-11-22). */
+                            school_days: number[];
                             /** @description false = QuietHours::DEFAULTS apply, no stored row yet. */
                             saved: boolean;
                         } | null;
@@ -31384,6 +31443,7 @@ export interface operations {
                                     bedtime_start: string | null;
                                     bedtime_end: string | null;
                                     is_active: boolean;
+                                    school_days: number[];
                                     follows_family: boolean;
                                 };
                                 /** @description True when the pet follows the family's quiet hours (»kot družina«). */
@@ -31795,6 +31855,7 @@ export interface operations {
                                         school: {
                                             start: string;
                                             end: string;
+                                            days: number[];
                                         } | null;
                                     };
                                     /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -31970,6 +32031,10 @@ export interface operations {
                         pet: null;
                         /** @constant */
                         traffic_light: "green";
+                        /**
+                         * @description The family's quiet hours row (all columns) + `saved`; `school_days` = ISO weekdays
+                         *     of the school window (David 2026-11-22). Null while the family has no child.
+                         */
                         quiet_hours: {
                             id: number;
                             parent_id: number;
@@ -31978,9 +32043,8 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
-                            /** Format: date-time */
+                            school_days: number[];
                             created_at: string | null;
-                            /** Format: date-time */
                             updated_at: string | null;
                             family_id: number | null;
                             saved: boolean;
@@ -32021,6 +32085,7 @@ export interface operations {
                                     bedtime_start: string | null;
                                     bedtime_end: string | null;
                                     is_active: boolean;
+                                    school_days: number[];
                                     follows_family: boolean;
                                 };
                                 /** @description True when the pet follows the family's quiet hours (»kot družina«). */
@@ -32432,6 +32497,7 @@ export interface operations {
                                         school: {
                                             start: string;
                                             end: string;
+                                            days: number[];
                                         } | null;
                                     };
                                     /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -33257,6 +33323,7 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            school_days: number[];
                             follows_family: boolean;
                         };
                         /** @description True = the pet follows the family's quiet hours (`pets.own_quiet_hours` null). */
@@ -33329,6 +33396,8 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            /** @description ISO weekdays 1 (Mon) … 7 (Sun) on which the school window applies (David 2026-11-22). */
+                            school_days: number[];
                             /** @description false = the defaults apply but no parent has saved them yet. */
                             saved: boolean;
                         };
@@ -33379,6 +33448,8 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            /** @description ISO weekdays 1 (Mon) … 7 (Sun) on which the school window applies (David 2026-11-22). */
+                            school_days: number[];
                             /** @description false = the defaults apply but no parent has saved them yet. */
                             saved: boolean;
                         };
@@ -34434,6 +34505,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -35025,6 +35097,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
@@ -35496,6 +35569,7 @@ export interface operations {
                                 bedtime_start: string | null;
                                 bedtime_end: string | null;
                                 is_active: boolean;
+                                school_days: number[];
                                 follows_family: boolean;
                             };
                             quiet_hours_follow_family: boolean;
@@ -36087,6 +36161,7 @@ export interface operations {
                                     school: {
                                         start: string;
                                         end: string;
+                                        days: number[];
                                     } | null;
                                 };
                                 /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
