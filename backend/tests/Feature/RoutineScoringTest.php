@@ -925,7 +925,8 @@ describe('GET /api/parent/dashboard (M2-05)', function () {
 
         // M6-W01: + 1 constant query for `wishes_open_count`. M6-W03: + 1 `pet_items` read per media
         // payload the dashboard builds for the pet (3; owned items → `media.items`) — constant, not per day.
-        expect($challenge)->toBe($week)->toBeLessThanOrEqual(64);
+        // David 2026-11-22: + 1 `app_settings` read for `validation_signals` (cached 60 s) — constant.
+        expect($challenge)->toBe($week)->toBeLessThanOrEqual(65);
     });
 
     it('never shows another family', function () {
