@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `neapolitan_mastiff` (viri S993–S1001; ponovno S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: RKC (S994) |
 | Izvor | FCI št. 197, skupina 2, sekcija 2.1 (molosi, tip doge), Italija (S993) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 128. mesto »Neopolitan Mastiff« (S174, zapisano 2026-11-20 v vrstici 131: »127 Black Russian Terrier«, »128 Neopolitan Mastiff«) |
-| PR-ji | pet-prep #1472 (pasma, združen `9c52953`) · portret pet-prep (zagon `breed-portraits.yml` 45000094366, sprejet v prvem poskusu) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-neapolitan-mastiff` |
+| PR-ji | pet-prep #1472 (pasma, združen `9c52953`) · portret pet-prep (zagon `breed-portraits.yml` 45000094366, sprejet v prvem poskusu; PR #1497) · barvne različice pet-prep (zagon `breed-portraits.yml` 45000966417, 4/4 odobril Claude) · spletna stran: pet-prep-website `feat/register-neapolitan-mastiff` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 74. meseca — meja čaka Davida; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-132 | 2026-11-21 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-21 |
 | Čiščenje kožnih gub vsak dan (otrok); opomnik za kopanje enkrat na mesec (starši) | 🛠 | 💶 izziv | M5-R14 / R20 | 2026-11-21 |
-| Barve (izbirnik: 5 barv — siv, črn, mahagonij, plav, temno plav) | 🛠 | 💶 izziv | M5-R21 | 2026-11-21 |
+| Barve (izbirnik: 5 barv; fotografije za vse — siv (portret), črn, mahagonij, plav, temno plav) | 🛠 | 💶 izziv | M5-R21 | 2026-11-22 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), siv, zmerne gube, tesne veke, odprte nosnice, naravna ušesa in rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-22 |
 | Stran na petprep.si (`/animals/dogs/neapolitan-mastiff`, `/sl/zivali/psi/napolitanski-mastif`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -53,6 +53,8 @@
 **Kako povedati** — starši: »Napolitanski mastif je zvest in miren družinski velikan, a zahteva vsakodnevno čiščenje gub, veliko hišo in previdnost ob majhnih otrocih. V PetPrepu boste videli, ali vaš otrok to zmore 12 tednov.« · otroci: »Napolitanski mastif ima kožo v gubah kot velik mehak plašč — vsak dan mu očistiš gubice in greš z njim na sprehod.« · vlagatelji / partnerji: »123. pasma psa, ki jo je samodejni nočni zagon sam izbral po javni lestvici AKC in dodal z viri — ključne podatke s strani Royal Kennel Club in PDSA, telesne mere iz standarda FCI; kjer vir manjka (meja starosti), je vrednost označena kot predlog za človeka.«
 
 ## Odprto za Davida
+
+- **Barvne različice:** črn, mahagonij, plav in temno plav je 2026-11-22 odobril Claude — isti pes, poza in ozadje kot portret, spremenjena le barva dlake; temno plav je vidno temnejši in bolj rdečkast od plavega; nobena barva ne čaka Davida.
 
 - ~~**Ustavitev zagona (2026-11-21):**~~ rešeno 2026-11-22: CI je bil po popravkih skupnih testov zelen, David je naročil dokončanje — PR #1472 združen (`9c52953`), nato portret, barve in spletna stran.
 - **Meja »starejši« (74 mesecev):** predlog Claude, `verified=false`. RKC / PDSA navajata le »Under 10 years«; mediane McMillan 2024 / VetCompass za pasmo nisem dosegel. Osnova je povprečje 8,17 leta iz ankete lastnikov (Bell & Hesketh 2021, S1000). Alternativi: 63 (PetMD 7 let) ali 84 (Dogs Trust »> 7 let«). Ob ročnem pregledu tabele Dogs Trust / študije VetCompass o velikanskih pasmah (S1001) lahko mejo popravite.

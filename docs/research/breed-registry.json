@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "8d9f98944ad5f179541976818a4f69f1259628dcecf28be47a2878d1f2ab8a01"
+      "sha256": "fc6160ba2b8a30a367716d90c93b74e4354e8e93de08cda51061f6a5a0fc105c"
     }
   },
   "suitability_vocabulary": {
@@ -75708,7 +75708,50 @@
         "file": "neapolitan-mastiff.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey",
+              "sl": "Siv"
+            },
+            "file": "dog/neapolitan-mastiff.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/neapolitan-mastiff--black.webp"
+          },
+          {
+            "key": "mahogany",
+            "label": {
+              "en": "Mahogany",
+              "sl": "Mahagonij"
+            },
+            "file": "dog/neapolitan-mastiff--mahogany.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plav"
+            },
+            "file": "dog/neapolitan-mastiff--fawn.webp"
+          },
+          {
+            "key": "deep-fawn",
+            "label": {
+              "en": "Deep fawn",
+              "sl": "Temno plav"
+            },
+            "file": "dog/neapolitan-mastiff--deep-fawn.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
