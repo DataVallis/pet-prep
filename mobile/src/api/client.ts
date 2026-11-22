@@ -183,7 +183,10 @@ export type UpdatePetTimezoneResponse =
 /** PUT /api/parent/pets/{pet}/quiet-hours (quiet hours per pet, David 2026-11-16). */
 export type UpdatePetQuietHoursResponse =
   operations['petQuietHours.update']['responses'][200]['content']['application/json'];
-/** Body of PUT /api/parent/pets/{pet}/quiet-hours: own schedule, or null = follow the family. */
+/**
+ * Body of PUT /api/parent/pets/{pet}/quiet-hours: own schedule (with optional `school_days`,
+ * ISO weekdays 1..7 — SCHOOL_DAYS.md), or null = follow the family.
+ */
 export type UpdatePetQuietHoursRequest = components['schemas']['UpdatePetQuietHoursRequest'];
 /** PUT /api/user/time-format (12 / 24 h, David 2026-11-16). */
 export type UpdateTimeFormatResponse = operations['timeFormat.update']['responses'][200]['content']['application/json'];

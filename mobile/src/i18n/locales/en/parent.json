@@ -260,7 +260,30 @@
     "summaryBedtime": "Bedtime {{range}}",
     "summaryNone": "no times set",
     "groupOn": "{{group}}: on",
-    "groupOff": "{{group}}: off"
+    "groupOff": "{{group}}: off",
+    "schoolDays": "School days",
+    "schoolDaysHint": "School applies only on the selected days. Bedtime applies every day.",
+    "summarySchoolDays": "School {{range}} ({{days}})",
+    "weekdays": {
+      "short": {
+        "1": "Mon",
+        "2": "Tue",
+        "3": "Wed",
+        "4": "Thu",
+        "5": "Fri",
+        "6": "Sat",
+        "7": "Sun"
+      },
+      "long": {
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday",
+        "7": "Sunday"
+      }
+    }
   },
   "familyZone": {
     "title": "Family time zone",

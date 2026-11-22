@@ -264,7 +264,30 @@
     "summaryBedtime": "Spanje {{range}}",
     "summaryNone": "brez časov",
     "groupOn": "{{group}}: vklopljeno",
-    "groupOff": "{{group}}: izklopljeno"
+    "groupOff": "{{group}}: izklopljeno",
+    "schoolDays": "Šolski dnevi",
+    "schoolDaysHint": "Šola velja samo izbrane dni. Nočno spanje velja vsak dan.",
+    "summarySchoolDays": "Šola {{range}} ({{days}})",
+    "weekdays": {
+      "short": {
+        "1": "Po",
+        "2": "To",
+        "3": "Sr",
+        "4": "Če",
+        "5": "Pe",
+        "6": "So",
+        "7": "Ne"
+      },
+      "long": {
+        "1": "ponedeljek",
+        "2": "torek",
+        "3": "sreda",
+        "4": "četrtek",
+        "5": "petek",
+        "6": "sobota",
+        "7": "nedelja"
+      }
+    }
   },
   "familyZone": {
     "title": "Časovni pas družine",

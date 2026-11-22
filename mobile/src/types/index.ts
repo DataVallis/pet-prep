@@ -190,4 +190,9 @@ export interface QuietHours {
   is_active: boolean;
   /** false = the server applies its defaults, no parent saved them yet; absent on older servers. */
   saved?: boolean;
+  /**
+   * ISO weekdays 1..7 the school window applies on (default Mon–Fri; SCHOOL_DAYS.md);
+   * absent on older servers.
+   */
+  school_days?: number[];
 }
