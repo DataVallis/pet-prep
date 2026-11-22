@@ -169,6 +169,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-22 (mobile, `fix/quiet-hours-school-days-app`)
+- School days in quiet hours, app part (contract `SCHOOL_DAYS_CONTRACT`, David »Starš izbere dneve«): 7 day chips »Po … Ne« (default Mon–Fri) under the school window in Nadzor → Tihe ure and pet »Lastne ure«; saves `school_days`, older server → chips hidden, field never sent. Debt: `school_days` HAND-TYPED in `types/index.ts` + `api/client.ts` until schema.ts regenerates after the backend PR. Not on a device.
+
 ### 2026-11-22 (mobile, `feat/M5-08-validation-signals-app-v4`, #1502)
 - App part of the validation signals (supersedes #1479 / #1486 / #1500 after QA) on the generated types, behind the admin switch »Validation signals« (default off): card, Phase-2 row and H6 only for switched-on families, sign-up picker only in »Everyone«, withdrawal of a submitted answer always reachable, a refetch that turns the switch on never counts as an open. Not on a device.
 

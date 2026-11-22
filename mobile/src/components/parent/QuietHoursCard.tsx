@@ -20,7 +20,7 @@ import { ApiError } from '@/api/client';
 import { useQuietHours, useUpdateQuietHours } from '@/hooks/queries/useParentQueries';
 import { Card, ErrorBanner, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import QuietHoursForm from '@/components/parent/QuietHoursForm';
-import { DEFAULT_QUIET_TIMES, type QuietTimes } from '@/modules/quietHours/quietHours';
+import { DEFAULT_QUIET_TIMES, quietTimesOf, readSchoolDays, type QuietTimes } from '@/modules/quietHours/quietHours';
 import { palette } from '@/theme';
 import { strings } from '@/i18n/strings';
 import { currentLanguage } from '@/i18n';
@@ -68,25 +68,20 @@ export default function QuietHoursCard({ familyZone = null, perPetZones = false 
   // typing is only replaced by a deliberate refetch (e.g. after joining a family).
   useEffect(() => {
     if (query.data) {
-      const { school_start, school_end, bedtime_start, bedtime_end, is_active } = query.data;
-      setTimes({ school_start, school_end, bedtime_start, bedtime_end, is_active });
+      const { school_start, school_end, bedtime_start, bedtime_end, is_active, school_days } = query.data;
+      // No `school_days` (older server) → null: chips hidden, the field is never sent.
+      setTimes({ school_start, school_end, bedtime_start, bedtime_end, is_active, school_days: readSchoolDays(school_days) });
     }
   }, [query.data]);
 
-  const set = (field: keyof Times, value: string | boolean) => {
+  const setActive = (value: boolean) => {
     setMessage(null);
-    setTimes((prev) => ({ ...prev, [field]: value }));
+    setTimes((prev) => ({ ...prev, is_active: value }));
   };
 
   const save = () => {
     update.mutate(
-      {
-        school_start: times.school_start,
-        school_end: times.school_end,
-        bedtime_start: times.bedtime_start,
-        bedtime_end: times.bedtime_end,
-        is_active: times.is_active,
-      },
+      quietTimesOf(times),
       {
         onSuccess: () => setMessage({ text: () => S.saved, isError: false }),
         onError: (err) => setMessage({ text: () => err instanceof ApiError ? S.saveError : S.offline, isError: true }),
@@ -102,7 +97,7 @@ export default function QuietHoursCard({ familyZone = null, perPetZones = false 
             <Text style={styles.muted}>{S.active}</Text>
             <Switch
               value={times.is_active}
-              onValueChange={(v) => set('is_active', v)}
+              onValueChange={setActive}
               trackColor={{ false: C.track, true: palette.mintDeep }}
               accessibilityLabel={S.active}
             />

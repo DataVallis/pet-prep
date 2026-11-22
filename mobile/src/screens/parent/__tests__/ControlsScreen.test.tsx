@@ -362,6 +362,121 @@ describe('ControlsScreen — quiet hours per pet + time format (David 2026-11-16
   });
 });
 
+describe('ControlsScreen — school days in quiet hours (David 2026-11-22)', () => {
+  const updatePetQuietHours = api.updatePetQuietHours as jest.Mock;
+  const WEEK = ['Po', 'To', 'Sr', 'Če', 'Pe', 'So', 'Ne'];
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    updatePetQuietHours.mockResolvedValue({ pet_id: 7, quiet_hours: null, quiet_hours_follow_family: false });
+  });
+
+  it('family: 7 toggle chips under the school window (Mon–Fri on), toggles and saves sorted ISO days', async () => {
+    (api.getQuietHours as jest.Mock).mockResolvedValue({
+      quiet_hours: { id: 1, school_start: '08:00', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, saved: true, school_days: [1, 2, 3, 4, 5] },
+      timezone: 'Europe/Ljubljana',
+    });
+    updateQuietHours.mockResolvedValueOnce({
+      message: 'ok',
+      quiet_hours: { id: 1, school_start: '08:00', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, saved: true, school_days: [2, 3, 4, 5, 7] },
+    });
+    renderControls();
+    await flush();
+
+    expect(screen.getByTestId('qh-days-hint')).toHaveTextContent('Šola velja samo izbrane dni. Nočno spanje velja vsak dan.');
+    WEEK.forEach((short, i) => {
+      const chip = screen.getByTestId(`qh-days-${i + 1}`);
+      expect(chip).toHaveTextContent(short);
+      expect(chip.props.accessibilityRole).toBe('togglebutton');
+      expect(chip.props.accessibilityState).toEqual({ checked: i < 5 });
+    });
+    expect(screen.getByLabelText('nedelja')).toBeTruthy();
+
+    fireEvent.press(screen.getByTestId('qh-days-7')); // Sunday on
+    fireEvent.press(screen.getByTestId('qh-days-1')); // Monday off
+    expect(screen.getByTestId('qh-days-7').props.accessibilityState).toEqual({ checked: true });
+    expect(screen.getByTestId('qh-days-1').props.accessibilityState).toEqual({ checked: false });
+    fireEvent.press(screen.getByTestId('qh-save'));
+    await flush();
+    expect(updateQuietHours).toHaveBeenCalledWith({
+      school_start: '08:00',
+      school_end: '13:00',
+      bedtime_start: '21:00',
+      bedtime_end: '07:00',
+      is_active: true,
+      school_days: [2, 3, 4, 5, 7],
+    });
+    expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.saved);
+  });
+
+  it('family: an empty set is saved as []; no chips while school is off', async () => {
+    (api.getQuietHours as jest.Mock).mockResolvedValue({
+      quiet_hours: { id: 1, school_start: '08:00', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, saved: true, school_days: [6] },
+    });
+    updateQuietHours.mockResolvedValueOnce({ message: 'ok', quiet_hours: { id: 1, school_start: '08:00', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, school_days: [] } });
+    renderControls();
+    await flush();
+
+    fireEvent.press(screen.getByTestId('qh-days-6'));
+    fireEvent.press(screen.getByTestId('qh-save'));
+    await flush();
+    expect(updateQuietHours).toHaveBeenCalledWith(expect.objectContaining({ school_days: [] }));
+
+    fireEvent(screen.getByTestId('qh-school-switch'), 'valueChange', false);
+    expect(screen.queryByTestId('qh-days')).toBeNull();
+  });
+
+  it('family: an older server (no school_days) shows no chips and never gets the field', async () => {
+    (api.getQuietHours as jest.Mock).mockResolvedValue({
+      quiet_hours: { id: 1, school_start: '08:00', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true },
+    });
+    updateQuietHours.mockResolvedValueOnce({ message: 'ok', quiet_hours: { id: 1, school_start: '08:00', school_end: '13:00', bedtime_start: '21:00', bedtime_end: '07:00', is_active: true } });
+    renderControls();
+    await flush();
+
+    expect(screen.getByTestId('qh-school-start-value')).toHaveTextContent('8:00');
+    expect(screen.queryByTestId('qh-days')).toBeNull();
+    fireEvent.press(screen.getByTestId('qh-save'));
+    await flush();
+    expect(updateQuietHours.mock.calls[0][0]).not.toHaveProperty('school_days');
+  });
+
+  it('pet »Lastne ure«: chips prefilled from the pet, saved with that pet only', async () => {
+    (api.getQuietHours as jest.Mock).mockResolvedValue({
+      quiet_hours: { id: 1, school_start: null, school_end: null, bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, saved: true, school_days: [1, 2, 3, 4, 5] },
+    });
+    // HAND-TYPED: the dashboard pet's `quiet_hours` in schema.ts has no `school_days` yet.
+    const ownHours = { school_start: '08:00', school_end: '13:00', bedtime_start: '20:00', bedtime_end: '06:30', is_active: true, follows_family: false, school_days: [1, 2, 3] };
+    const family = familyFromDashboard(
+      makeScoredDashboard([makeScoredChild()], [
+        makeFamilyPet({
+          id: 7,
+          quiet_hours: ownHours,
+          quiet_hours_follow_family: false,
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    renderControls(family);
+    await flush();
+
+    expect(screen.getByTestId('pqh-7-days-hint')).toHaveTextContent('Šola velja samo izbrane dni. Nočno spanje velja vsak dan.');
+    expect(screen.getByTestId('pqh-7-days-3').props.accessibilityState).toEqual({ checked: true });
+    expect(screen.getByTestId('pqh-7-days-4').props.accessibilityState).toEqual({ checked: false });
+    fireEvent.press(screen.getByTestId('pqh-7-days-6'));
+    fireEvent.press(screen.getByTestId('pqh-7-save'));
+    await flush();
+    expect(updatePetQuietHours).toHaveBeenCalledWith(7, {
+      school_start: '08:00',
+      school_end: '13:00',
+      bedtime_start: '20:00',
+      bedtime_end: '06:30',
+      is_active: true,
+      school_days: [1, 2, 3, 6],
+    });
+    expect(updateQuietHours).not.toHaveBeenCalled();
+  });
+});
+
 describe('ControlsScreen — quiet hours show server truth (fix/quiet-hours-default)', () => {
   beforeEach(() => {
     jest.clearAllMocks();

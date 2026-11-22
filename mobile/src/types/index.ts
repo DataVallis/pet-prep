@@ -190,4 +190,9 @@ export interface QuietHours {
   is_active: boolean;
   /** false = the server applies its defaults, no parent saved them yet; absent on older servers. */
   saved?: boolean;
+  /**
+   * HAND-TYPED (fix/quiet-hours-school-days, contract 2026-11-22) until schema.ts has it:
+   * ISO weekdays 1..7 the school window applies on (default Mon–Fri); absent on older servers.
+   */
+  school_days?: number[];
 }

@@ -4,6 +4,8 @@
  * No typing: each group has an on / off switch (off = no window, null times) and each
  * time is a field that opens the alarm-clock wheels (`TimeWheelPicker`). Values stay
  * "HH:MM" data; the field shows them with `clockText` (12 / 24 h).
+ * Under the school times: 7 weekday toggle chips (David 2026-11-22, `SchoolDayChips`) —
+ * hidden while school is off and for an older server (`school_days: null`).
  */
 
 import { useState } from 'react';
@@ -16,7 +18,13 @@ import { palette, radius, MIN_TOUCH } from '@/theme';
 import { t } from '@/i18n';
 import { clockText, useTimeFormat } from '@/modules/time/clock';
 import { strings } from '@/i18n/strings';
-import type { QuietTimes } from '@/modules/quietHours/quietHours';
+import {
+  ISO_WEEKDAYS,
+  toggleSchoolDay,
+  weekdayLong,
+  weekdayShort,
+  type QuietTimes,
+} from '@/modules/quietHours/quietHours';
 
 const S = strings('parent', 'quietHours');
 
@@ -56,6 +64,45 @@ export function TimeField({ label, value, open, onToggle, testID }: TimeFieldPro
           {text}
         </Text>
       </Pressable>
+    </View>
+  );
+}
+
+interface SchoolDayChipsProps {
+  days: readonly number[];
+  onChange: (next: number[]) => void;
+  testID: string;
+}
+
+/**
+ * »Po To Sr Če Pe So Ne« — each chip is a toggle (`togglebutton`, `checked`) that a screen
+ * reader announces with the full day name. Chips wrap and grow with large text.
+ */
+export function SchoolDayChips({ days, onChange, testID }: SchoolDayChipsProps) {
+  return (
+    <View style={styles.days}>
+      <Text style={styles.fieldLabel}>{S.schoolDays}</Text>
+      <View style={styles.chips} accessibilityLabel={S.schoolDays} testID={testID}>
+        {ISO_WEEKDAYS.map((day) => {
+          const on = days.includes(day);
+          return (
+            <Pressable
+              key={day}
+              onPress={() => onChange(toggleSchoolDay(days, day))}
+              style={({ pressed }) => [styles.chip, on && styles.chipOn, pressed && styles.pressed]}
+              accessibilityRole="togglebutton"
+              accessibilityLabel={weekdayLong(day)}
+              accessibilityState={{ checked: on }}
+              testID={`${testID}-${day}`}
+            >
+              <Text style={[styles.chipText, on && styles.chipTextOn]}>{weekdayShort(day)}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <Text style={styles.hint} testID={`${testID}-hint`}>
+        {S.schoolDaysHint}
+      </Text>
     </View>
   );
 }
@@ -124,6 +171,13 @@ export default function QuietHoursForm({ value, onChange, testID, showActive = f
                 />
               ) : null,
             )}
+            {group === 'school' && value.school_days !== null && (
+              <SchoolDayChips
+                days={value.school_days}
+                onChange={(next) => onChange({ ...value, school_days: next })}
+                testID={`${testID}-days`}
+              />
+            )}
           </>
         )}
       </View>
@@ -170,5 +224,22 @@ const styles = StyleSheet.create({
   fieldOpen: { borderColor: C.accent },
   fieldLabel: { fontSize: 12, color: C.muted },
   fieldValue: { fontSize: 17, fontWeight: '700', color: C.text },
+  days: { gap: 6 },
+  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  chip: {
+    minWidth: MIN_TOUCH,
+    minHeight: MIN_TOUCH,
+    paddingHorizontal: 8,
+    borderRadius: radius.button,
+    borderWidth: 1,
+    borderColor: C.border,
+    backgroundColor: C.bg,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  chipOn: { backgroundColor: C.accent, borderColor: C.accent },
+  chipText: { fontSize: 14, fontWeight: '700', color: C.text },
+  chipTextOn: { color: C.card },
+  hint: { fontSize: 12, color: C.muted, lineHeight: 17 },
   pressed: { opacity: 0.85 },
 });
