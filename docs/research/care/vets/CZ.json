@@ -905,7 +905,8 @@
         "sv": "Ring för att bekräfta öppettider och akutservice.",
         "da": "Ring for at få bekræftet åbningstider og akuttjeneste.",
         "fi": "Soita ja varmista aukioloajat ja päivystys.",
-        "nb": "Ring for å bekrefte åpningstidene og vakttjenesten."
+        "nb": "Ring for å bekrefte åpningstidene og vakttjenesten.",
+        "sl": "Za potrditev delovnega časa in nujne službe pokličite."
       },
       "small_animals": true,
       "url": "https://veterinaruzodol.cz/",
@@ -1928,7 +1929,8 @@
         "sv": "Ring för att bekräfta tider och akutservice.",
         "da": "Ring for at få bekræftet åbningstider og akuttjeneste.",
         "fi": "Soita ja varmista aukioloajat ja päivystys.",
-        "nb": "Ring for å bekrefte åpningstidene og vakttjenesten."
+        "nb": "Ring for å bekrefte åpningstidene og vakttjenesten.",
+        "sl": "Za potrditev delovnega časa in nujne službe pokličite."
       },
       "small_animals": true,
       "url": "https://www.veterinakolin.cz/",
@@ -2003,7 +2005,8 @@
         "sv": "Ring för att bekräfta öppettider och akutservice. Har även en praktik i Litvínov (inga tidsbokningar).",
         "da": "Ring for at bekræfte åbningstider og akutvagt. Har også en klinik i Litvínov (ingen tidsbestilling).",
         "fi": "Soita ja varmista aukioloajat ja päivystys. Toimipiste myös Litvínovissa (ei ajanvarausta).",
-        "nb": "Ring for å bekrefte åpningstidene og vakttjenesten. Har også en praksis i Litvínov (uten timebestilling)."
+        "nb": "Ring for å bekrefte åpningstidene og vakttjenesten. Har også en praksis i Litvínov (uten timebestilling).",
+        "sl": "Za potrditev delovnega časa in nujne službe pokličite. Ima tudi ordinacijo v Litvínovu (brez naročanja)."
       },
       "small_animals": true,
       "url": "https://www.veterinamost.cz/",
@@ -2235,7 +2238,8 @@
         "sv": "Mån–fre 8.30–17.00, lör 9.00–11.30; akuttelefon (Pohotovost) +420 602 743 813; frågelinje +420 775 935 080.",
         "da": "man–fre 8.30–17.00, lør 9.00–11.30; akuttelefon (Pohotovost) +420 602 743 813; spørgelinje +420 775 935 080.",
         "fi": "ma–pe klo 8.30–17.00, la klo 9.00–11.30; Pohotovost-puhelin +420 602 743 813; neuvontapuhelin +420 775 935 080.",
-        "nb": "man–fre 8.30–17.00, lør 9.00–11.30; vakttelefon (Pohotovost) +420 602 743 813; spørsmålstelefon +420 775 935 080."
+        "nb": "man–fre 8.30–17.00, lør 9.00–11.30; vakttelefon (Pohotovost) +420 602 743 813; spørsmålstelefon +420 775 935 080.",
+        "sl": "Pon–pet 8.30–17, sob 9–11.30; nujna številka (pohotovost) +420 602 743 813; številka za vprašanja +420 775 935 080."
       },
       "small_animals": true,
       "url": "https://herriovet.cz/",

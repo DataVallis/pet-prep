@@ -52,12 +52,12 @@
       "address": "Avenue des Flamands, Albion",
       "phone": "+230 5701 3873",
       "emergency_24h": true,
-      "duty": "Advertised as open 24/7 at the Albion clinic. Call ahead for emergencies.",
+      "duty": "Open 24/7 at the Albion clinic. Call ahead for emergencies.",
       "small_animals": true,
       "url": "https://veterinaire.mu/",
       "source_url": "https://veterinaire.mu/about-us/",
       "checked": "2026-11-12",
-      "note": "About page heading: 'Happy to Welcome You at Veterinaire.mu Albion 24/7 and Triolet'. Contact page phones 57013873 / 57070166 / 2385345. Homepage repeats 'Veterinary Care 24/7'. No hours listed. Emergency line 5778 0888 only from 2023 press article (La Gazette Mag) and it is the Triolet number on the contact page.",
+      "note": "About page heading: 'Happy to Welcome You at Veterinaire.mu Albion 24/7 and Triolet'. Contact page phones 57013873 / 57070166 / 2385345. Homepage repeats 'Veterinary Care 24/7'. No hours listed. Emergency line 5778 0888 only from 2023 press article (La Gazette Mag) and it is the Triolet number on the contact page. Advertised as",
       "duty_i18n": {
         "it": "Dichiarato aperto 24 ore su 24, 7 giorni su 7 nella clinica di Albion. Per le emergenze chiamare prima.",
         "pt": "Anunciado como aberto 24 h/24, 7 dias por semana, na clínica de Albion. Liga antes para urgências.",
@@ -67,7 +67,8 @@
         "sv": "Marknadsförs som öppet dygnet runt på kliniken i Albion. Ring innan du kommer vid akutfall.",
         "da": "Annonceret som døgnåben på Albion-klinikken. Ring på forhånd ved akutte tilfælde.",
         "fi": "Ilmoitetusti auki 24/7 Albionin klinikalla. Soita etukäteen päivystystapauksissa.",
-        "nb": "Markedsføres som åpen hele døgnet ved klinikken i Albion. Ring på forhånd ved nødtilfeller."
+        "nb": "Markedsføres som åpen hele døgnet ved klinikken i Albion. Ring på forhånd ved nødtilfeller.",
+        "sl": "Odprto 24/7 v kliniki Albion. Za nujne primere vnaprej pokličite."
       }
     },
     {
@@ -93,7 +94,8 @@
         "sv": "Ring kliniken för öppettider och akutfall.",
         "da": "Ring til klinikken for åbningstider og akutte tilfælde.",
         "fi": "Soita klinikalle ja kysy aukioloajat ja päivystys.",
-        "nb": "Ring klinikken for å høre åpningstider og vakt for nødtilfeller."
+        "nb": "Ring klinikken for å høre åpningstider og vakt for nødtilfeller.",
+        "sl": "Za urnik in nujne primere pokličite kliniko."
       }
     },
     {
@@ -102,12 +104,12 @@
       "city": "Grand Baie",
       "region": "Riviere du Rempart",
       "emergency_24h": false,
-      "duty": "Site title says 24/7 veterinary clinics in Mauritius, but no per-clinic 24 h statement; call the clinic to confirm.",
+      "duty": "Call the clinic to confirm hours.",
       "small_animals": true,
       "url": "https://vetmania.mu/?lang=en",
       "source_url": "https://vetmania.mu/?lang=en",
       "checked": "2026-11-12",
-      "note": "Independent check 2026-11-12: vetmania.mu lists Grand Baie among its towns and titles itself 'Cliniques veterinaires 24/7 a l'ile Maurice' but shows no per-clinic address, phone or hours; address and phone removed (they came only from a 2023 press article). Not marked 24 h.",
+      "note": "Independent check 2026-11-12: vetmania.mu lists Grand Baie among its towns and titles itself 'Cliniques veterinaires 24/7 a l'ile Maurice' but shows no per-clinic address, phone or hours; address and phone removed (they came only from a 2023 press article). Not marked 24 h. Site title says 24/7 veterinary clinics in Mauritius, but no per-clinic 24 h statement",
       "duty_i18n": {
         "it": "Il titolo del sito indica cliniche veterinarie 24 ore su 24, 7 giorni su 7 a Mauritius, ma nessuna clinica dichiara l'apertura h24; telefonare alla clinica per conferma.",
         "pt": "O título do site refere clínicas veterinárias abertas 24 h/24, 7 dias por semana, nas Maurícias, mas sem indicação de 24 horas por clínica; liga para a clínica para confirmar.",
@@ -117,7 +119,8 @@
         "sv": "Webbplatsens titel anger veterinärkliniker dygnet runt på Mauritius, men inga uppgifter om öppet dygnet runt för de enskilda klinikerna; ring kliniken för att bekräfta.",
         "da": "Hjemmesidens titel nævner dyreklinikker med døgnåbent på Mauritius, men der er ingen oplysning om døgnåbent for den enkelte klinik; ring til klinikken for at bekræfte.",
         "fi": "Sivuston otsikon mukaan Mauritiuksella on 24/7-eläinklinikoita, mutta yksittäisistä klinikoista ei ole mainintaa 24 tunnin palvelusta; varmista soittamalla klinikalle.",
-        "nb": "Nettstedets tittel nevner døgnåpne dyreklinikker på Mauritius, men det er ingen opplysning om døgnåpent for den enkelte klinikk; ring klinikken for å bekrefte."
+        "nb": "Nettstedets tittel nevner døgnåpne dyreklinikker på Mauritius, men det er ingen opplysning om døgnåpent for den enkelte klinikk; ring klinikken for å bekrefte.",
+        "sl": "Za urnik pokličite kliniko."
       }
     },
     {
@@ -141,7 +144,8 @@
         "sv": "Ring kliniken för öppettider.",
         "da": "Ring til klinikken for åbningstider.",
         "fi": "Soita klinikalle ja kysy aukioloajat.",
-        "nb": "Ring klinikken for å høre åpningstidene."
+        "nb": "Ring klinikken for å høre åpningstidene.",
+        "sl": "Za urnik pokličite kliniko."
       }
     },
     {
@@ -152,12 +156,12 @@
       "address": "Impasse Montocchio, Lees Street, Curepipe",
       "phone": "+230 5252 2444",
       "emergency_24h": false,
-      "duty": "Open Mon-Fri 9am-9pm, Sat 9am-6pm, Sun and public holidays 9am-noon. Emergency line +230 5947 2244 (page: emergencies 9am-9pm).",
+      "duty": "Open Mon-Fri 9am-9pm, Sat 9am-6pm, Sun and public holidays 9am-noon. Emergency line +230 5947 2244.",
       "small_animals": true,
       "url": "https://www.vetocareclinic.mu/",
       "source_url": "https://www.vetocareclinic.mu/",
       "checked": "2026-11-12",
-      "note": "Page says 'Emergency ... available 24/7' in the services list but 'For any emergencies between 9am to 9pm' in the contact note - conflicting, so emergency_24h false. Other phone 675 22 44.",
+      "note": "Page says 'Emergency ... available 24/7' in the services list but 'For any emergencies between 9am to 9pm' in the contact note - conflicting, so emergency_24h false. Other phone 675 22 44. (page: emergencies 9am-9pm)",
       "duty_i18n": {
         "it": "Aperto lun–ven 9:00–21:00, sab 9:00–18:00, dom e festivi 9:00–12:00. Linea di emergenza +230 5947 2244 (sulla pagina: emergenze 9:00–21:00).",
         "pt": "Aberto de segunda a sexta 9h00–21h00, sábado 9h00–18h00, domingo e feriados 9h00–12h00. Linha de urgência +230 5947 2244 (na página: urgências 9h00–21h00).",
@@ -167,7 +171,8 @@
         "sv": "Öppet mån–fre 9–21, lör 9–18, sön och helgdagar 9–12. Akutlinje +230 5947 2244 (sidan: akutfall 9–21).",
         "da": "Åbent man–fre 9.00–21.00, lør 9.00–18.00, søn og helligdage 9.00–12.00. Akuttelefon +230 5947 2244 (ifølge siden: akutte tilfælde 9.00–21.00).",
         "fi": "Auki ma–pe 9–21, la 9–18, su ja pyhäpäivinä 9–12. Päivystysnumero +230 5947 2244 (sivun mukaan päivystys 9–21).",
-        "nb": "Åpent man–fre kl. 9–21, lør kl. 9–18, søn og helligdager kl. 9–12. Akuttlinje +230 5947 2244 (nettsiden: nødtilfeller kl. 9–21)."
+        "nb": "Åpent man–fre kl. 9–21, lør kl. 9–18, søn og helligdager kl. 9–12. Akuttlinje +230 5947 2244 (nettsiden: nødtilfeller kl. 9–21).",
+        "sl": "Odprto pon–pet 9–21, sob 9–18, ned in prazniki 9–12. Nujna linija +230 5947 2244."
       }
     },
     {
@@ -193,7 +198,8 @@
         "sv": "Öppet mån–fre 13–19, lör 9–15, stängt söndagar och helgdagar.",
         "da": "Åbent man–fre 13.00–19.00, lør 9.00–15.00, lukket søndage og helligdage.",
         "fi": "Auki ma–pe 13–19, la 9–15, su ja pyhäpäivinä suljettu.",
-        "nb": "Åpent man–fre kl. 13–19, lør kl. 9–15, stengt søndager og helligdager."
+        "nb": "Åpent man–fre kl. 13–19, lør kl. 9–15, stengt søndager og helligdager.",
+        "sl": "Odprto pon–pet 13–19, sob 9–15, ned in prazniki zaprto."
       }
     },
     {
@@ -219,7 +225,8 @@
         "sv": "Öppet alla dagar, ungefär 8–21; inneliggande vård dygnet runt och akuta hembesök erbjuds. Ring innan du kommer.",
         "da": "Åbent dagligt, ca. 8.00–21.00; indlæggelse døgnet rundt og akutte hjemmebesøg tilbydes. Ring på forhånd.",
         "fi": "Auki päivittäin, noin 8–21; vuodeosastohoito 24/7 ja päivystyskotikäynnit tarjolla. Soita etukäteen.",
-        "nb": "Åpent alle dager, ca. kl. 8–21; innleggelse hele døgnet og akutte hjemmebesøk tilbys. Ring på forhånd."
+        "nb": "Åpent alle dager, ca. kl. 8–21; innleggelse hele døgnet og akutte hjemmebesøk tilbys. Ring på forhånd.",
+        "sl": "Odprto vsak dan, približno 8–21; nudijo bolnišnično oskrbo 24/7 in nujne obiske na domu. Vnaprej pokličite."
       }
     },
     {
@@ -244,7 +251,8 @@
         "sv": "Öppet alla dagar, veterinärer tillgängliga 7–21. Akutfall: +230 5736 2402.",
         "da": "Åbent alle dage, læger til stede 7.00–21.00. Akutte tilfælde: +230 5736 2402.",
         "fi": "Auki joka päivä, lääkärit tavattavissa 7–21. Päivystys: +230 5736 2402.",
-        "nb": "Åpent alle dager, dyrleger er tilgjengelige kl. 7–21. Nødtilfeller: +230 5736 2402."
+        "nb": "Åpent alle dager, dyrleger er tilgjengelige kl. 7–21. Nødtilfeller: +230 5736 2402.",
+        "sl": "Odprto vsak dan, zdravniki so na voljo 7–21. Nujni primeri: +230 5736 2402."
       }
     }
   ],

@@ -1778,7 +1778,8 @@
         "sv": "Mån–fre 08.00–12.00 och 13.30–18.30, lör 08.00–12.00. Akuttider: vardagar 12.00–13.30 och 18.00–21.00, lördagar 12.00–17.00, söndagar och helgdagar 08.00–17.00.",
         "da": "Man–fre 08.00–12.00 og 13.30–18.30, lør 08.00–12.00. Akuttider: hverdage 12.00–13.30 og 18.00–21.00, lørdage 12.00–17.00, søndage og helligdage 08.00–17.00.",
         "fi": "ma–pe klo 8.00–12.00 ja 13.30–18.30, la klo 8.00–12.00. Päivystysajat: arkisin klo 12.00–13.30 ja 18.00–21.00, lauantaisin klo 12.00–17.00, sunnuntaisin ja pyhäpäivinä klo 8.00–17.00.",
-        "nb": "Man–fre 08.00–12.00 og 13.30–18.30, lør 08.00–12.00. Åpningstider for nødtilfeller: hverdager 12.00–13.30 og 18.00–21.00, lørdager 12.00–17.00, søndager og helligdager 08.00–17.00."
+        "nb": "Man–fre 08.00–12.00 og 13.30–18.30, lør 08.00–12.00. Åpningstider for nødtilfeller: hverdager 12.00–13.30 og 18.00–21.00, lørdager 12.00–17.00, søndager og helligdager 08.00–17.00.",
+        "sl": "Pon–pet 8–12 in 13.30–18.30, sob 8–12. Nujni sprejem: ob delavnikih 12–13.30 in 18–21, ob sobotah 12–17, ob nedeljah in praznikih 8–17."
       },
       "small_animals": true,
       "url": "https://www.vetvissigen.ch/",
@@ -2012,7 +2013,7 @@
       "small_animals": true,
       "url": "https://www.delemont.ch/fr/Vivre-a-Delemont/Urgences/Urgences.html",
       "source_url": "https://www.delemont.ch/fr/Vivre-a-Delemont/Urgences/Urgences.html",
-      "note": "Checked 2026-11-04 on the municipal emergency-numbers page ('Vétérinaire de garde'); no hours, no 24h wording, no practice named. Removed from duty: Duty veterinarian number published by the city of Delémont for out-of-hours cases.",
+      "note": "Checked 2026-11-04 on the municipal emergency-numbers page ('Vétérinaire de garde'); no hours, no 24h wording, no practice named. Removed from duty: Duty veterinarian number published by the city of Delémont for out-of-hours cases. from the city of Delémont (source mention)",
       "checked": "2026-11-04",
       "duty_i18n": {
         "es": "Número del veterinario de guardia para casos fuera de horario, desde la ciudad de Delémont.",
@@ -2024,7 +2025,8 @@
         "sv": "Nummer till jourhavande veterinär för fall utanför öppettiderna, för staden Delémont.",
         "da": "Nummer til vagthavende dyrlæge uden for åbningstiden, fra byen Delémont.",
         "fi": "Päivystävän eläinlääkärin numero aukioloaikojen ulkopuolisiin tapauksiin, Delémontin kaupungista.",
-        "nb": "Vakthavende dyrlege for saker utenom åpningstid, fra byen Delémont."
+        "nb": "Vakthavende dyrlege for saker utenom åpningstid, fra byen Delémont.",
+        "sl": "Številka dežurnega veterinarja za primere zunaj delovnega časa, ki jo objavlja mesto Delémont."
       }
     },
     {
@@ -3186,7 +3188,8 @@
         "sv": "Flera veterinärer delar på helgjouren från lördag 10.00 till måndag 07.00; den aktuella jourlistan uppdateras varje lördag.",
         "da": "Flere dyrlæger deler weekendvagten fra lørdag 10.00 til mandag 07.00; den aktuelle vagtliste opdateres hver lørdag.",
         "fi": "Useat eläinlääkärit jakavat viikonloppupäivystyksen lauantaista klo 10.00 maanantaihin klo 7.00; ajankohtainen päivystysluettelo päivitetään joka lauantai.",
-        "nb": "Flere dyrleger deler helgevakten fra lørdag kl. 10.00 til mandag kl. 7.00; gjeldende vaktliste oppdateres hver lørdag."
+        "nb": "Flere dyrleger deler helgevakten fra lørdag kl. 10.00 til mandag kl. 7.00; gjeldende vaktliste oppdateres hver lørdag.",
+        "sl": "Več veterinarjev si deli vikend dežurstvo od sobote ob 10. uri do ponedeljka ob 7. uri; trenutni seznam dežurnih se posodablja vsako soboto."
       },
       "small_animals": true,
       "url": "https://www.vetj.ch/de-de/19-service-de-garde/41-veterinaire-garde-intro-fr.html",

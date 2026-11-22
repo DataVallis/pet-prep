@@ -59,7 +59,8 @@
         "sv": "Sön–tors 9.00–17.00, lör 9.00–14.00; stängt på helgdagar. Behandlar hundar, katter, fåglar, kaniner och sköldpaddor; akuta samtal via den mobila veterinärtjänsten.",
         "da": "Søn–tor 9.00–17.00, lør 9.00–14.00; lukket på helligdage. Behandler hunde, katte, fugle, kaniner og skildpadder; akutte opkald via den mobile dyrlægetjeneste.",
         "fi": "su–to 9–17, la 9–14; suljettu pyhäpäivinä. Hoitaa koiria, kissoja, lintuja, kaneja ja kilpikonnia; päivystyskäynnit liikkuvan eläinlääkäripalvelun kautta.",
-        "nb": "Søn–tor kl. 9.00–17.00, lør kl. 9.00–14.00; stengt på helligdager. Behandler hunder, katter, fugler, kaniner og skilpadder; akuttanrop via ambulerende tjeneste."
+        "nb": "Søn–tor kl. 9.00–17.00, lør kl. 9.00–14.00; stengt på helligdager. Behandler hunder, katter, fugler, kaniner og skilpadder; akuttanrop via ambulerende tjeneste.",
+        "sl": "Ned–čet 9–17, sob 9–14; ob javnih praznikih zaprto. Zdravijo pse, mačke, ptice, zajce in želve; nujni klici prek mobilne službe."
       }
     },
     {
@@ -82,7 +83,8 @@
         "sv": "Djursjukhus för smådjur som drivs av Chattogram Veterinary and Animal Sciences University; ring innan du kommer för att få veta öppettiderna.",
         "da": "Dyrehospital for små kæledyr drevet af Chattogram Veterinary and Animal Sciences University; ring på forhånd for åbningstider.",
         "fi": "Chattogramin eläinlääke- ja eläintieteiden yliopiston ylläpitämä pieneläinsairaala; kysy aukioloajat soittamalla etukäteen.",
-        "nb": "Kjæledyrsykehus for små dyr drevet av Chattogram Veterinary and Animal Sciences University; ring på forhånd for åpningstider."
+        "nb": "Kjæledyrsykehus for små dyr drevet av Chattogram Veterinary and Animal Sciences University; ring på forhånd for åpningstider.",
+        "sl": "Bolnišnica za male živali, ki jo vodi Chattogram Veterinary and Animal Sciences University; delovni čas preverite z vnaprejšnjim klicem."
       }
     },
     {
@@ -105,7 +107,8 @@
         "sv": "Universitetsdjursjukhus för sällskapsdjur och tamdjur; ring för öppettider.",
         "da": "Universitetsdyrehospital for kæledyr og husdyr; ring for åbningstider.",
         "fi": "Yliopiston opetussairaala lemmikeille ja kotieläimille; kysy aukioloajat soittamalla.",
-        "nb": "Undervisningssykehus for kjæledyr og husdyr; ring for åpningstider."
+        "nb": "Undervisningssykehus for kjæledyr og husdyr; ring for åpningstider.",
+        "sl": "Univerzitetna učna bolnišnica za ljubljenčke in domače živali; za delovni čas pokličite."
       }
     },
     {
@@ -127,7 +130,8 @@
         "sv": "Privat djursjukhus med djurdagis i Uttara.",
         "da": "Privat dyrehospital og dagpleje i Uttara.",
         "fi": "Yksityinen eläinsairaala ja lemmikkien päivähoito Uttarassa.",
-        "nb": "Privat dyresykehus og dagpleie i Uttara."
+        "nb": "Privat dyresykehus og dagpleie i Uttara.",
+        "sl": "Zasebna bolnišnica in dnevno varstvo za ljubljenčke v Uttari."
       }
     },
     {
@@ -150,7 +154,8 @@
         "sv": "Öppet dygnet runt, alla dagar, med akutjour, hembesök samt tidsbokning per telefon eller online.",
         "da": "Døgnåben med akutvagt, hjemmebesøg og tidsbestilling på telefon eller online.",
         "fi": "Auki 24/7: päivystys, kotikäynnit sekä puhelin- tai verkkovastaanotot.",
-        "nb": "Døgnåpent med akuttjeneste, hjemmebesøk og time via telefon eller nett."
+        "nb": "Døgnåpent med akuttjeneste, hjemmebesøk og time via telefon eller nett.",
+        "sl": "Deluje 24/7 z nujno službo, obiski na domu ter naročanjem po telefonu ali spletu."
       }
     }
   ],

@@ -54,7 +54,8 @@
         "sv": "Vård dygnet runt vid alla akutfall; ring innan du kommer.",
         "da": "Akut hjælp døgnet rundt ved alle akutte tilfælde; ring på forhånd.",
         "fi": "Hoitoa ympäri vuorokauden kaikissa päivystystapauksissa; soita etukäteen.",
-        "nb": "Døgnpleie ved alle nødtilfeller; ring på forhånd."
+        "nb": "Døgnpleie ved alle nødtilfeller; ring på forhånd.",
+        "sl": "24-urna oskrba za vse nujne primere; vnaprej pokličite."
       }
     },
     {
@@ -77,7 +78,8 @@
         "sv": "Öppet mån–fre 8.00–19.00 och lör 8.00–15.00; akutvård dygnet runt.",
         "da": "Åbent man–fre 8.00–19.00 og lør 8.00–15.00; akut hjælp døgnet rundt.",
         "fi": "Auki ma–pe 8–19 ja la 8–15; kiireellistä hoitoa ympäri vuorokauden.",
-        "nb": "Åpent man–fre 8.00–19.00 og lør 8.00–15.00; akuttbehandling tilgjengelig hele døgnet."
+        "nb": "Åpent man–fre 8.00–19.00 og lør 8.00–15.00; akuttbehandling tilgjengelig hele døgnet.",
+        "sl": "Odprto pon–pet 8–19 in sob 8–15; nujna pomoč na voljo 24 ur na dan."
       }
     },
     {
@@ -100,7 +102,8 @@
         "sv": "Öppet varje dag 8.00–19.00.",
         "da": "Åbent dagligt 8.00–19.00.",
         "fi": "Auki päivittäin 8–19.",
-        "nb": "Åpent alle dager kl. 08.00–19.00."
+        "nb": "Åpent alle dager kl. 08.00–19.00.",
+        "sl": "Odprto vsak dan 8–19."
       }
     },
     {
@@ -123,7 +126,8 @@
         "sv": "Öppet mån–lör 8.00–20.00, sön och helgdagar 8.00–13.00.",
         "da": "Åbent man–lør 8.00–20.00, søn og helligdage 8.00–13.00.",
         "fi": "Auki ma–la 8–20, su ja pyhäpäivinä 8–13.",
-        "nb": "Åpent man–lør 8.00–20.00, søn og helligdager 8.00–13.00."
+        "nb": "Åpent man–lør 8.00–20.00, søn og helligdager 8.00–13.00.",
+        "sl": "Odprto pon–sob 8–20, ned in prazniki 8–13."
       }
     }
   ],

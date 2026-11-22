@@ -43,7 +43,8 @@
         "sv": "Inlagda djur övervakas dygnet runt.",
         "da": "Indlagte kæledyr overvåges døgnet rundt.",
         "fi": "Sairaalahoidossa olevia lemmikkejä valvotaan 24 tuntia.",
-        "nb": "Innlagte kjæledyr overvåkes hele døgnet."
+        "nb": "Innlagte kjæledyr overvåkes hele døgnet.",
+        "sl": "Hospitalizirani ljubljenčki so pod nadzorom 24 ur na dan."
       }
     },
     {
@@ -70,7 +71,8 @@
         "sv": "mån–fre 7.00–18.00, lör 9.00–15.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom.",
         "da": "man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje uden for åbningstiden til vejledning ved akutte symptomer.",
         "fi": "ma–pe klo 7.00–18.00, la klo 9.00–15.00. Aukioloaikojen ulkopuolinen puhelinnumero kiireellisten oireiden neuvontaan.",
-        "nb": "Man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje utenom åpningstiden for veiledning ved akutte symptomer."
+        "nb": "Man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje utenom åpningstiden for veiledning ved akutte symptomer.",
+        "sl": "Pon–pet 7–18, sob 9–15. Telefonska linija zunaj delovnega časa za nujno svetovanje o simptomih."
       }
     },
     {
@@ -97,7 +99,8 @@
         "sv": "mån–fre 7.00–18.00, lör 9.00–15.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom.",
         "da": "man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje uden for åbningstiden til vejledning ved akutte symptomer.",
         "fi": "ma–pe klo 7.00–18.00, la klo 9.00–15.00. Aukioloaikojen ulkopuolinen puhelinnumero kiireellisten oireiden neuvontaan.",
-        "nb": "Man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje utenom åpningstiden for veiledning ved akutte symptomer."
+        "nb": "Man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje utenom åpningstiden for veiledning ved akutte symptomer.",
+        "sl": "Pon–pet 7–18, sob 9–15. Telefonska linija zunaj delovnega časa za nujno svetovanje o simptomih."
       }
     },
     {
@@ -124,7 +127,8 @@
         "sv": "mån–fre 8.00–17.00. Telefonlinje utanför öppettid för vägledning vid akuta symtom.",
         "da": "man–fre 8.00–17.00. Telefonlinje uden for åbningstiden til vejledning ved akutte symptomer.",
         "fi": "ma–pe klo 8.00–17.00. Aukioloaikojen ulkopuolinen puhelinnumero kiireellisten oireiden neuvontaan.",
-        "nb": "man–fre 8.00–17.00. Telefonlinje utenom åpningstid for veiledning ved akutte symptomer."
+        "nb": "man–fre 8.00–17.00. Telefonlinje utenom åpningstid for veiledning ved akutte symptomer.",
+        "sl": "Pon–pet 8–17. Telefonska linija zunaj delovnega časa za nujno svetovanje o simptomih."
       }
     },
     {
@@ -151,7 +155,8 @@
         "sv": "mån–fre 9.00–18.00, lör 9.00–14.00, stängt söndagar och helgdagar. Jourtelefon dygnet runt, årets alla dagar, endast för registrerade patienter.",
         "da": "man–fre 9.00–18.00, lør 9.00–14.00, lukket søn og helligdage. Akuttelefon døgnet rundt kun for registrerede patienter.",
         "fi": "ma–pe klo 9.00–18.00, la klo 9.00–14.00, suljettu sunnuntaisin ja pyhäpäivinä. 24/7 päivystyspuhelin vain rekisteröidyille potilaille.",
-        "nb": "man–fre 9.00–18.00, lør 9.00–14.00, stengt søndager og helligdager. Vakttelefon hele døgnet, alle dager, kun for registrerte pasienter."
+        "nb": "man–fre 9.00–18.00, lør 9.00–14.00, stengt søndager og helligdager. Vakttelefon hele døgnet, alle dager, kun for registrerte pasienter.",
+        "sl": "Pon–pet 9–18, sob 9–14, ob nedeljah in praznikih zaprto. Nujna telefonska linija 24/7 samo za registrirane paciente."
       }
     }
   ],

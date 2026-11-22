@@ -47,7 +47,8 @@
         "sv": "Universitetets undervisningssjukhus, öppet dygnet runt, alla dagar i veckan, med akut- och intensivvård.",
         "da": "Universitetets undervisningshospital, åbent døgnet rundt, 7 dage om ugen, med akut- og intensivafdeling.",
         "fi": "Yliopiston opetussairaala, auki ympäri vuorokauden 7 päivää viikossa, päivystys ja tehohoito.",
-        "nb": "Undervisningssykehus, åpent hele døgnet, sju dager i uken, med akutt- og intensivbehandling."
+        "nb": "Undervisningssykehus, åpent hele døgnet, sju dager i uken, med akutt- og intensivbehandling.",
+        "sl": "Univerzitetna učna bolnišnica, odprta 24 ur na dan, 7 dni v tednu, z nujno in intenzivno oskrbo."
       }
     },
     {
@@ -73,7 +74,8 @@
         "sv": "Akutlinje öppen dygnet runt, alla dagar, även helgdagar, vid filialerna DHA och Lake City. Filialen UVAS 09.00–03.00, filialen UET 12.00–22.00.",
         "da": "Akuttelefon døgnet rundt, 7 dage om ugen, også på helligdage, på afdelingerne DHA og Lake City. Afdelingen UVAS 09.00–03.00, afdelingen UET 12.00–22.00.",
         "fi": "Päivystyslinja auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä, DHA:n ja Lake Cityn toimipisteissä. UVAS-toimipiste 9.00–3.00, UET-toimipiste 12.00–22.00.",
-        "nb": "Akuttelefon åpen hele døgnet, sju dager i uken, også helligdager, ved avdelingene DHA og Lake City. Avdeling UVAS kl. 9.00–3.00, avdeling UET kl. 12.00–22.00."
+        "nb": "Akuttelefon åpen hele døgnet, sju dager i uken, også helligdager, ved avdelingene DHA og Lake City. Avdeling UVAS kl. 9.00–3.00, avdeling UET kl. 12.00–22.00.",
+        "sl": "Nujna linija odprta 24 ur na dan, 7 dni v tednu, tudi ob praznikih, v poslovalnicah DHA in Lake City. Poslovalnica UVAS 9–3, poslovalnica UET 12–22."
       }
     },
     {
@@ -99,7 +101,8 @@
         "sv": "Öppet måndag–söndag dygnet runt; akutvård dygnet runt.",
         "da": "Åbent mandag til søndag døgnet rundt; akut hjælp døgnet rundt.",
         "fi": "Auki joka päivä ympäri vuorokauden; päivystys 24/7.",
-        "nb": "Åpent mandag til søndag døgnet rundt; akuttbehandling hele døgnet."
+        "nb": "Åpent mandag til søndag døgnet rundt; akuttbehandling hele døgnet.",
+        "sl": "Odprto od ponedeljka do nedelje ves čas; nujna pomoč 24/7."
       }
     },
     {
@@ -124,7 +127,8 @@
         "sv": "Öppet dygnet runt med övervakning av inlagda djur dygnet runt.",
         "da": "Åbent døgnet rundt med døgnovervågning af indlagte dyr.",
         "fi": "Auki 24/7, sairaalahoidossa olevia lemmikkejä valvotaan ympäri vuorokauden.",
-        "nb": "Åpent hele døgnet, med døgnovervåking av innlagte kjæledyr."
+        "nb": "Åpent hele døgnet, med døgnovervåking av innlagte kjæledyr.",
+        "sl": "Odprto 24/7 z neprekinjenim nadzorom hospitaliziranih ljubljenčkov."
       }
     },
     {
@@ -149,7 +153,8 @@
         "sv": "Öppet dygnet runt, Airport Road. Bokning via WhatsApp.",
         "da": "Åbent døgnet rundt, Airport Road. Tidsbestilling via WhatsApp.",
         "fi": "Auki 24/7, Airport Road. Ajanvaraus WhatsAppilla.",
-        "nb": "Åpent hele døgnet, Airport Road. Timebestilling via WhatsApp."
+        "nb": "Åpent hele døgnet, Airport Road. Timebestilling via WhatsApp.",
+        "sl": "Odprto 24/7, Airport Road. Naročanje prek WhatsAppa."
       }
     },
     {
@@ -175,7 +180,8 @@
         "sv": "Öppet dagligen 11.00–23.00; akutfall dygnet runt. Mobil 0306 7997887.",
         "da": "Åbent hver dag 11.00–23.00; akutte tilfælde døgnet rundt. Mobil 0306 7997887.",
         "fi": "Auki päivittäin 11.00–23.00; päivystystapaukset 24/7. Matkapuhelin 0306 7997887.",
-        "nb": "Åpent alle dager kl. 11.00–23.00; nødtilfeller hele døgnet, alle dager. Mobil 0306 7997887."
+        "nb": "Åpent alle dager kl. 11.00–23.00; nødtilfeller hele døgnet, alle dager. Mobil 0306 7997887.",
+        "sl": "Odprto vsak dan 11–23; nujni primeri 24/7. Mobilni telefon 0306 7997887."
       }
     },
     {
@@ -201,7 +207,8 @@
         "sv": "Mottagning 10.00–22.00 dagligen; akutfall dygnet runt, ring när som helst.",
         "da": "Ambulant 10.00–22.00 hver dag; akut døgnet rundt, ring når som helst.",
         "fi": "Avovastaanotto päivittäin 10.00–22.00; päivystys 24/7, soita milloin tahansa.",
-        "nb": "Poliklinikk kl. 10.00–22.00 daglig; akutt hele døgnet, ring når som helst."
+        "nb": "Poliklinikk kl. 10.00–22.00 daglig; akutt hele døgnet, ring når som helst.",
+        "sl": "Ambulanta 10–22 vsak dan; nujna pomoč 24/7, pokličite kadar koli."
       }
     },
     {
@@ -227,7 +234,8 @@
         "sv": "Öppet dygnet runt. Även 0304 534 9999, 051 2653157.",
         "da": "Åbent døgnet rundt. Også 0304 534 9999, 051 2653157.",
         "fi": "Auki ympäri vuorokauden, 24/7. Myös 0304 534 9999, 051 2653157.",
-        "nb": "Åpent døgnet rundt, alle dager. Også 0304 534 9999, 051 2653157."
+        "nb": "Åpent døgnet rundt, alle dager. Også 0304 534 9999, 051 2653157.",
+        "sl": "Odprto ves čas, 24/7. Tudi 0304 534 9999, 051 2653157."
       }
     },
     {
@@ -252,7 +260,8 @@
         "sv": "Akut djurvård dygnet runt, akutteam i beredskap. Även 051 5148545.",
         "da": "Akut dyrehjælp døgnet rundt, akutteam i beredskab. Også 051 5148545.",
         "fi": "Lemmikkien päivystys 24/7, päivystystiimi valmiudessa. Myös 051 5148545.",
-        "nb": "Akuttpleie for kjæledyr hele døgnet, akuttteam i beredskap. Også 051 5148545."
+        "nb": "Akuttpleie for kjæledyr hele døgnet, akuttteam i beredskap. Også 051 5148545.",
+        "sl": "Nujna oskrba ljubljenčkov 24/7, nujna ekipa je v pripravljenosti. Tudi 051 5148545."
       }
     },
     {
@@ -277,7 +286,8 @@
         "sv": "Öppet dagligen 09.30–21.00; akutlinje 0315 9596162, tidsbokning 0333 1904310.",
         "da": "Åbent hver dag 9.30–21.00; akuttelefon 0315 9596162, tidsbestilling 0333 1904310.",
         "fi": "Auki päivittäin 9.30–21.00; päivystyslinja 0315 9596162, ajanvaraus 0333 1904310.",
-        "nb": "Åpent alle dager kl. 09.30–21.00; akuttlinje 0315 9596162, timebestilling 0333 1904310."
+        "nb": "Åpent alle dager kl. 09.30–21.00; akuttlinje 0315 9596162, timebestilling 0333 1904310.",
+        "sl": "Odprto vsak dan 9.30–21; nujna številka 0315 9596162, naročanje 0333 1904310."
       }
     },
     {
@@ -302,7 +312,8 @@
         "sv": "Öppet dagligen från ca 11.00 till 23.30; akutstöd erbjuds, ring innan du kommer. Även 0320 8285086.",
         "da": "Åbent hver dag fra ca. 11.00 til 23.30; akut hjælp tilbydes, ring på forhånd. Også 0320 8285086.",
         "fi": "Auki päivittäin noin 11.00–23.30; päivystysapua tarjolla, soita etukäteen. Myös 0320 8285086.",
-        "nb": "Åpent alle dager fra ca. kl. 11.00 til 23.30; akuttjeneste tilbys, ring på forhånd. Også 0320 8285086."
+        "nb": "Åpent alle dager fra ca. kl. 11.00 til 23.30; akuttjeneste tilbys, ring på forhånd. Også 0320 8285086.",
+        "sl": "Odprto vsak dan od približno 11 do 23.30; nujna pomoč na voljo, vnaprej pokličite. Tudi 0320 8285086."
       }
     },
     {
@@ -327,7 +338,8 @@
         "sv": "Öppet dagligen 12.00–24.00. Även +92 304 0738738.",
         "da": "Åbent hver dag fra middag til midnat. Også +92 304 0738738.",
         "fi": "Auki päivittäin klo 12–24. Myös +92 304 0738738.",
-        "nb": "Åpent alle dager fra kl. 12 til midnatt. Også +92 304 0738738."
+        "nb": "Åpent alle dager fra kl. 12 til midnatt. Også +92 304 0738738.",
+        "sl": "Odprto vsak dan od poldneva do polnoči. Tudi +92 304 0738738."
       }
     },
     {
@@ -353,7 +365,8 @@
         "sv": "Öppet dygnet runt, med akutberedskap dygnet runt.",
         "da": "Døgnåben, med akut hjælp døgnet rundt.",
         "fi": "Auki ympäri vuorokauden, päivystys 24/7.",
-        "nb": "Åpent hele døgnet, med akuttberedskap hele døgnet."
+        "nb": "Åpent hele døgnet, med akuttberedskap hele døgnet.",
+        "sl": "Odprto 24 ur na dan, nujna pomoč na voljo 24/7."
       }
     },
     {
@@ -379,7 +392,8 @@
         "sv": "Rutinvård dagligen 11.00–21.00; akutstöd dygnet runt.",
         "da": "Almindelig behandling hver dag 11.00–21.00; akut hjælp døgnet rundt.",
         "fi": "Perushoito päivittäin 11.00–21.00; päivystysapua saatavilla 24/7.",
-        "nb": "Ordinær behandling alle dager kl. 11.00–21.00; akuttbistand hele døgnet."
+        "nb": "Ordinær behandling alle dager kl. 11.00–21.00; akuttbistand hele døgnet.",
+        "sl": "Redna oskrba vsak dan 11–21; nujna pomoč na voljo 24/7."
       }
     },
     {
@@ -404,7 +418,8 @@
         "sv": "Öppet dagligen 15.00–22.00. Går att nå via WhatsApp.",
         "da": "Åbent hver dag 15.00–22.00. Kan kontaktes på WhatsApp.",
         "fi": "Auki päivittäin klo 15–22. WhatsApp käytössä.",
-        "nb": "Åpent alle dager kl. 15.00–22.00. WhatsApp tilgjengelig."
+        "nb": "Åpent alle dager kl. 15.00–22.00. WhatsApp tilgjengelig.",
+        "sl": "Odprto vsak dan 15–22. Na voljo WhatsApp."
       }
     },
     {
@@ -429,7 +444,8 @@
         "sv": "Mån–fre 08.00–18.00, lör 08.00–16.00; akutjour dygnet runt.",
         "da": "Man–fre 8.00–18.00, lør 8.00–16.00; akuttjeneste døgnet rundt.",
         "fi": "ma–pe 8.00–18.00, la 8.00–16.00; päivystys ympäri vuorokauden.",
-        "nb": "man–fre 8.00–18.00, lør 8.00–16.00; akuttjeneste hele døgnet."
+        "nb": "man–fre 8.00–18.00, lør 8.00–16.00; akuttjeneste hele døgnet.",
+        "sl": "Pon–pet 8–18, sob 8–16; nujna služba na voljo ves čas."
       }
     },
     {
@@ -440,12 +456,12 @@
       "address": "Basti Talab Moza Sultan Pur Hummar, Sher Shah, Multan",
       "phone": "+92 302 7504102",
       "emergency_24h": true,
-      "duty": "Mon-Fri 8:00-20:00, Sat 9:00-20:00, closed Sunday; emergency support for pets and livestock advertised 24/7 (also +92 315 6300087).",
+      "duty": "Mon-Fri 8:00-20:00, Sat 9:00-20:00, closed Sunday; emergency support for pets and livestock 24/7 (also +92 315 6300087).",
       "small_animals": true,
       "url": "https://aghavetclinic.com/",
       "source_url": "https://aghavetclinic.com/",
       "checked": "2026-11-13",
-      "note": "Opened own site; 24/7 emergency claim conflicts with Sunday closed in regular hours. Small animal diagnostics, emergency treatment and surgery plus large animals.",
+      "note": "Opened own site; 24/7 emergency claim conflicts with Sunday closed in regular hours. Small animal diagnostics, emergency treatment and surgery plus large animals. advertised 24/7",
       "quote": "Reliable 24/7 emergency veterinary support for pets and livestock in Multan.",
       "duty_i18n": {
         "pt": "Segunda a sexta 8h00–20h00, sábado 9h00–20h00, fechado ao domingo; apoio de urgência para animais de estimação e gado anunciado 24 h/24, 7 dias por semana (também +92 315 6300087).",
@@ -455,7 +471,8 @@
         "sv": "Mån–fre 08.00–20.00, lör 09.00–20.00, stängt sön; akutstöd för sällskapsdjur och lantbruksdjur marknadsförs dygnet runt (även +92 315 6300087).",
         "da": "Man–fre 8.00–20.00, lør 9.00–20.00, lukket søndag; akut hjælp til kæledyr og husdyr oplyses som døgnåben (også +92 315 6300087).",
         "fi": "ma–pe 8.00–20.00, la 9.00–20.00, su suljettu; päivystysapu lemmikeille ja tuotantoeläimille ilmoitettu 24/7 (myös +92 315 6300087).",
-        "nb": "man–fre 8.00–20.00, lør 9.00–20.00, stengt søndag; akuttjeneste for kjæledyr og husdyr markedsføres hele døgnet, alle dager (også +92 315 6300087)."
+        "nb": "man–fre 8.00–20.00, lør 9.00–20.00, stengt søndag; akuttjeneste for kjæledyr og husdyr markedsføres hele døgnet, alle dager (også +92 315 6300087).",
+        "sl": "Pon–pet 8–20, sob 9–20, ned zaprto; nujna pomoč za ljubljenčke in živino 24/7 (tudi +92 315 6300087)."
       }
     },
     {
@@ -479,7 +496,8 @@
         "sv": "Öppet dagligen, Hayatabad Phase 3.",
         "da": "Åbent hver dag, Hayatabad Phase 3.",
         "fi": "Auki päivittäin, Hayatabad Phase 3.",
-        "nb": "Åpent alle dager, Hayatabad Phase 3."
+        "nb": "Åpent alle dager, Hayatabad Phase 3.",
+        "sl": "Odprto vsak dan, Hayatabad Phase 3."
       }
     }
   ],

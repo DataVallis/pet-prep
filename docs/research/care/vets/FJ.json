@@ -42,18 +42,19 @@
       "address": "Makoi, Suva",
       "phone": "+679 939 7319",
       "emergency_24h": true,
-      "duty": "Mobile pet clinic with home visits and emergency care, stated as available 24/7 across Suva, Nausori, Navua and Pacific Harbour.",
+      "duty": "Mobile pet clinic with home visits and emergency care, available 24/7 across Suva, Nausori, Navua and Pacific Harbour.",
       "small_animals": true,
       "url": "https://www.govetclinic.com/",
       "source_url": "https://www.govetclinic.com/",
       "checked": "2026-11-16",
-      "note": "Second phone +679 788 7319. 24/7 is the clinic's own claim on its site.",
+      "note": "Second phone +679 788 7319. 24/7 is the clinic's own claim on its site. stated as available",
       "duty_i18n": {
         "cs": "Pojízdná klinika pro domácí zvířata s návštěvami doma a pohotovostní péčí, uváděná jako dostupná nonstop v oblasti Suva, Nausori, Navua a Pacific Harbour.",
         "sv": "Mobil djurklinik med hembesök och akutvård, uppges vara tillgänglig dygnet runt i Suva, Nausori, Navua och Pacific Harbour.",
         "da": "Mobil dyreklinik med hjemmebesøg og akut hjælp, oplyst som tilgængelig døgnet rundt i Suva, Nausori, Navua og Pacific Harbour.",
         "fi": "Liikkuva lemmikkiklinikka kotikäynneillä ja päivystyksellä, ilmoituksen mukaan ympäri vuorokauden alueella: Suva, Nausori, Navua ja Pacific Harbour.",
-        "nb": "Mobil dyreklinikk med hjemmebesøk og akuttbehandling, oppgitt som tilgjengelig hele døgnet i Suva, Nausori, Navua og Pacific Harbour."
+        "nb": "Mobil dyreklinikk med hjemmebesøk og akuttbehandling, oppgitt som tilgjengelig hele døgnet i Suva, Nausori, Navua og Pacific Harbour.",
+        "sl": "Mobilna ambulanta z obiski na domu in nujno oskrbo, na voljo 24/7 v Suvi, Nausoriju, Navui in Pacific Harbourju."
       }
     },
     {
@@ -75,7 +76,8 @@
         "sv": "Öppet mån–lör 8.00–16.30. Akutfall utanför öppettider endast 17.00–22.00, via sms till 992 2634.",
         "da": "Åbent mandag til lørdag 8.00–16.30. Akutte tilfælde uden for åbningstiden kun 17.00–22.00 pr. sms til 992 2634.",
         "fi": "Auki ma–la 8.00–16.30. Vain päivystystapaukset virka-ajan jälkeen klo 17.00–22.00 tekstiviestillä numeroon 992 2634.",
-        "nb": "Åpent mandag til lørdag 8.00–16.30. Kun nødtilfeller utenom åpningstid, 17.00–22.00, via tekstmelding til 992 2634."
+        "nb": "Åpent mandag til lørdag 8.00–16.30. Kun nødtilfeller utenom åpningstid, 17.00–22.00, via tekstmelding til 992 2634.",
+        "sl": "Odprto pon–sob 8–16.30. Nujni primeri zunaj delovnega časa samo 17–22, s sporočilom SMS na 992 2634."
       }
     },
     {
@@ -96,7 +98,8 @@
         "sv": "Öppet mån–lör 8.30–17.00, stängt söndagar. Akut- och jourlinje på samma nummer, besvaras i mån av möjlighet (ingen tjänst dygnet runt).",
         "da": "Åbent mandag til lørdag 8.30–17.00, søndag lukket. Akut- og aftenlinje på samme nummer, besvares efter bedste evne (ikke døgnåben).",
         "fi": "Auki ma–la 8.30–17.00, su suljettu. Päivystys- ja virka-ajan ulkopuolinen linja samassa numerossa; puheluihin vastataan mahdollisuuksien mukaan (ei ympärivuorokautinen palvelu).",
-        "nb": "Åpent mandag til lørdag 8.30–17.00, stengt søndag. Akutt- og vaktlinje utenom åpningstid på samme nummer, besvares så langt det er mulig (ikke en døgnåpen tjeneste)."
+        "nb": "Åpent mandag til lørdag 8.30–17.00, stengt søndag. Akutt- og vaktlinje utenom åpningstid på samme nummer, besvares så langt det er mulig (ikke en døgnåpen tjeneste).",
+        "sl": "Odprto pon–sob 8.30–17, ned zaprto. Nujna linija zunaj delovnega časa je na isti številki; na klice odgovarjajo po svojih zmožnostih (ni 24-urna služba)."
       }
     },
     {
@@ -117,7 +120,8 @@
         "sv": "Öppet tis–lör 8.30–17.00; stängt sön och mån.",
         "da": "Åbent tirsdag til lørdag 8.30–17.00; lukket søndag og mandag.",
         "fi": "Auki ti–la 8.30–17.00; su ja ma suljettu.",
-        "nb": "Åpent tirsdag til lørdag 8.30–17.00; stengt søndag og mandag."
+        "nb": "Åpent tirsdag til lørdag 8.30–17.00; stengt søndag og mandag.",
+        "sl": "Odprto tor–sob 8.30–17; ned in pon zaprto."
       }
     },
     {
@@ -138,7 +142,8 @@
         "sv": "Öppet tis–fre 8.00–17.00 och lör 8.00–13.00; stängt sön och mån.",
         "da": "Åbent tirsdag til fredag 8.00–17.00 og lørdag 8.00–13.00; lukket søndag og mandag.",
         "fi": "Auki ti–pe 8.00–17.00 ja la 8.00–13.00; su ja ma suljettu.",
-        "nb": "Åpent tirsdag til fredag 8.00–17.00 og lørdag 8.00–13.00; stengt søndag og mandag."
+        "nb": "Åpent tirsdag til fredag 8.00–17.00 og lørdag 8.00–13.00; stengt søndag og mandag.",
+        "sl": "Odprto tor–pet 8–17 in sob 8–13; ned in pon zaprto."
       }
     },
     {
@@ -159,7 +164,8 @@
         "sv": "Öppet tis–fre 8.30–17.00 och lör 8.00–13.00; stängt sön och mån.",
         "da": "Åbent tirsdag til fredag 8.30–17.00 og lørdag 8.00–13.00; lukket søndag og mandag.",
         "fi": "Auki ti–pe 8.30–17.00 ja la 8.00–13.00; su ja ma suljettu.",
-        "nb": "Åpent tirsdag til fredag 8.30–17.00 og lørdag 8.00–13.00; stengt søndag og mandag."
+        "nb": "Åpent tirsdag til fredag 8.30–17.00 og lørdag 8.00–13.00; stengt søndag og mandag.",
+        "sl": "Odprto tor–pet 8.30–17 in sob 8–13; ned in pon zaprto."
       }
     },
     {
@@ -179,7 +185,8 @@
         "sv": "Djurhem och veterinärklinik, öppet tis–lör 8.00–17.00. Ring för att boka tid.",
         "da": "Dyreinternat og dyreklinik, åbent tirsdag til lørdag 8.00–17.00. Ring for at bestille tid.",
         "fi": "Eläinten turvakoti ja eläinlääkäriklinikka, auki ti–la 8.00–17.00. Soita ja varaa aika.",
-        "nb": "Dyrevern og dyreklinikk, åpen tirsdag til lørdag kl. 8.00–17.00. Ring for å bestille time."
+        "nb": "Dyrevern og dyreklinikk, åpen tirsdag til lørdag kl. 8.00–17.00. Ring for å bestille time.",
+        "sl": "Zavetišče za reševanje in veterinarska ambulanta, odprta tor–sob 8–17. Naročite se po telefonu."
       }
     }
   ],

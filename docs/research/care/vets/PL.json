@@ -260,7 +260,8 @@
         "sv": "Dagjour mån–fre 09.00–23.00, lör–sön 10.00–18.00; även dygnet runt.",
         "da": "Dagvagt man–fre 9.00–23.00, lør–søn 10.00–18.00; også døgnet rundt.",
         "fi": "Päiväpäivystys ma–pe 9.00–23.00, la–su 10.00–18.00; myös ympärivuorokautinen.",
-        "nb": "Dagvakt man–fre 9.00–23.00, lør–søn 10.00–18.00; også åpent hele døgnet."
+        "nb": "Dagvakt man–fre 9.00–23.00, lør–søn 10.00–18.00; også åpent hele døgnet.",
+        "sl": "Dnevna dežurna služba pon–pet 9–23, sob–ned 10–18; tudi 24 ur na dan."
       },
       "url": "https://www.pulsvet.pl/",
       "source_url": "https://www.pulsvet.pl/",
@@ -354,7 +355,8 @@
         "sv": "Mån–tors 08.00–24.00; fre–sön dygnet runt.",
         "da": "Man–tor 8.00–24.00; fre–søn døgnet rundt.",
         "fi": "ma–to 8.00–24.00; pe–su ympäri vuorokauden.",
-        "nb": "man–tor 8.00–24.00; fre–søn hele døgnet."
+        "nb": "man–tor 8.00–24.00; fre–søn hele døgnet.",
+        "sl": "Pon–čet 8–24; pet–ned 24 ur na dan."
       },
       "url": "https://oiomvet.pl/",
       "source_url": "https://oiomvet.pl/",

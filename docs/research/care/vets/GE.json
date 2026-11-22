@@ -55,13 +55,13 @@
       "city": "Kutaisi",
       "region": "Imereti",
       "emergency_24h": true,
-      "duty": "Emergency help advertised as available 24/7 (Georgian-language site). Call ahead.",
+      "duty": "Emergency help available 24/7. Call ahead.",
       "small_animals": true,
       "url": "https://g-vet.ge/",
       "source_url": "https://g-vet.ge/",
       "checked": "2026-11-11",
       "quote": "სასწრაფო დახმარება 24/7",
-      "note": "Only the og:description was readable; no address, phone, hours or species obtained. Phone-less, listed on url. Species unknown; small_animals assumed from a general vet clinic, verify.",
+      "note": "Only the og:description was readable; no address, phone, hours or species obtained. Phone-less, listed on url. Species unknown; small_animals assumed from a general vet clinic, verify. advertised as available 24/7 (Georgian-language site)",
       "duty_i18n": {
         "es": "Urgencias anunciadas 24/7 (web en georgiano). Llama antes.",
         "it": "Pronto soccorso indicato come disponibile 24 ore su 24, 7 giorni su 7 (sito in lingua georgiana). Telefonare in anticipo.",
@@ -72,7 +72,8 @@
         "sv": "Akuthjälp anges finnas dygnet runt (webbplats på georgiska). Ring innan du kommer.",
         "da": "Akut hjælp annonceres som tilgængelig døgnet rundt (georgisksproget hjemmeside). Ring på forhånd.",
         "fi": "Päivystysapua ilmoitetaan olevan saatavilla 24/7 (georgiankielinen sivusto). Soita etukäteen.",
-        "nb": "Akutthjelp annonseres som tilgjengelig hele døgnet (nettsted på georgisk). Ring på forhånd."
+        "nb": "Akutthjelp annonseres som tilgjengelig hele døgnet (nettsted på georgisk). Ring på forhånd.",
+        "sl": "Nujna pomoč 24/7. Vnaprej pokličite."
       }
     },
     {
@@ -99,7 +100,8 @@
         "sv": "Öppet dagligen 10.00–20.00; ring innan du kommer vid akutfall. Djursjukhus för hundar och katter med kattavdelning.",
         "da": "Åbent 10.00–20.00 hver dag; ring på forhånd ved akut sygdom. Hospital for hunde og katte med en afdeling for katte.",
         "fi": "Auki päivittäin 10.00–20.00; päivystystapauksissa soita etukäteen. Koira- ja kissasairaala, jossa on kissaosasto.",
-        "nb": "Åpent 10.00–20.00 daglig; ring på forhånd ved nødtilfeller. Sykehus for hunder og katter med kattavdeling."
+        "nb": "Åpent 10.00–20.00 daglig; ring på forhånd ved nødtilfeller. Sykehus for hunder og katter med kattavdeling.",
+        "sl": "Odprto vsak dan 10–20; za nujne primere vnaprej pokličite. Bolnišnica za pse in mačke z oddelkom za mačke."
       }
     },
     {
@@ -126,7 +128,8 @@
         "sv": "Öppet dagligen 10.00–19.00.",
         "da": "Åbent hver dag 10.00–19.00.",
         "fi": "Auki päivittäin 10.00–19.00.",
-        "nb": "Åpent alle dager kl. 10.00–19.00."
+        "nb": "Åpent alle dager kl. 10.00–19.00.",
+        "sl": "Odprto vsak dan 10–19."
       }
     },
     {
@@ -153,7 +156,8 @@
         "sv": "Öppet dagligen 11.00–20.00. Hundar och katter.",
         "da": "Åbent hver dag 11.00–20.00. Hunde og katte.",
         "fi": "Auki päivittäin 11.00–20.00. Koirat ja kissat.",
-        "nb": "Åpent alle dager kl. 11.00–20.00. Hunder og katter."
+        "nb": "Åpent alle dager kl. 11.00–20.00. Hunder og katter.",
+        "sl": "Odprto vsak dan 11–20. Psi in mačke."
       }
     },
     {
@@ -164,12 +168,12 @@
       "address": "67 Kostava St, Saburtalo, Tbilisi",
       "phone": "233 43 01",
       "emergency_24h": false,
-      "duty": "Reported to be a 24-hour clinic; confirm by phone before travelling.",
+      "duty": "24-hour clinic; confirm by phone before travelling.",
       "small_animals": true,
       "url": "https://www.zooplaza.ge",
       "source_url": "https://www.yell.ge/company.php?lan=eng&id=106824",
       "checked": "2026-11-11",
-      "note": "Own site zooplaza.ge could not be fetched (provenance block). Only directories (yell.ge, petstory.ge) say '24-hour clinic'; yell.ge page re-checked 2026-11-11: name, address and phones match, no closure comment seen on the fetched page (earlier note of a user closure comment not reproduced). Other phones: 236 32 04, 599 520 558. Not marked 24 h per rules (aggregator only). Removed from duty: Listed as a 24-hour clinic by directories; confirm by phone before travelling.",
+      "note": "Own site zooplaza.ge could not be fetched (provenance block). Only directories (yell.ge, petstory.ge) say '24-hour clinic'; yell.ge page re-checked 2026-11-11: name, address and phones match, no closure comment seen on the fetched page (earlier note of a user closure comment not reproduced). Other phones: 236 32 04, 599 520 558. Not marked 24 h per rules (aggregator only). Removed from duty: Listed as a 24-hour clinic by directories; confirm by phone before travelling. Reported to be a 24-hour clinic",
       "duty_i18n": {
         "es": "Según se indica, clínica 24 horas; confirma por teléfono antes de ir.",
         "it": "Risulta una clinica aperta 24 ore su 24; confermare per telefono prima di mettersi in viaggio.",
@@ -180,7 +184,8 @@
         "sv": "Uppges ha öppet dygnet runt; bekräfta per telefon innan du åker.",
         "da": "Skal efter sigende være en døgnåben klinik; bekræft telefonisk, før du kører derhen.",
         "fi": "Ilmoituksen mukaan ympärivuorokautinen klinikka; varmista puhelimitse ennen lähtöä.",
-        "nb": "Oppgis å være en døgnåpen klinikk; bekreft på telefon før du reiser."
+        "nb": "Oppgis å være en døgnåpen klinikk; bekreft på telefon før du reiser.",
+        "sl": "24-urna ambulanta; pred potjo potrdite po telefonu."
       }
     },
     {
@@ -191,12 +196,12 @@
       "address": "18 Zhiuli Shartava St, Tbilisi",
       "phone": "+995 511 20 66 40",
       "emergency_24h": false,
-      "duty": "Reported to be open 24 hours daily; confirm by phone before travelling.",
+      "duty": "Open 24 hours daily; confirm by phone before travelling.",
       "small_animals": true,
       "url": "https://www.facebook.com/vetmedicalclinic/",
       "source_url": "https://madloba.info/en/tbilisi/veterinarnye-kliniki/vetmedi/",
       "checked": "2026-11-11",
-      "note": "Only aggregator (Madloba) says 'open 24 hours Mon-Sun'; no own website found, Facebook cannot be fetched. Candidate 24 h clinic - verify. Removed from duty: Listed by directories as open 24 hours daily; confirm by phone before travelling.",
+      "note": "Only aggregator (Madloba) says 'open 24 hours Mon-Sun'; no own website found, Facebook cannot be fetched. Candidate 24 h clinic - verify. Removed from duty: Listed by directories as open 24 hours daily; confirm by phone before travelling. Reported to be open 24 hours daily",
       "duty_i18n": {
         "es": "Según se indica, abierto las 24 horas todos los días; confirma por teléfono antes de ir.",
         "it": "Risulta aperta 24 ore su 24 tutti i giorni; confermare per telefono prima di mettersi in viaggio.",
@@ -207,7 +212,8 @@
         "sv": "Uppges ha öppet dygnet runt varje dag; bekräfta per telefon innan du åker.",
         "da": "Skal efter sigende have åbent døgnet rundt hver dag; bekræft telefonisk, før du kører derhen.",
         "fi": "Ilmoituksen mukaan auki ympäri vuorokauden päivittäin; varmista puhelimitse ennen lähtöä.",
-        "nb": "Oppgis å være åpen hele døgnet, alle dager; bekreft på telefon før du reiser."
+        "nb": "Oppgis å være åpen hele døgnet, alle dager; bekreft på telefon før du reiser.",
+        "sl": "Odprto 24 ur na dan, vsak dan; pred potjo potrdite po telefonu."
       }
     },
     {
@@ -234,7 +240,8 @@
         "sv": "Efter bokad tid: mån–fre 10.00–18.00, sön 11.00–16.00, lör stängt. Hembesök. Hundar, katter, kaniner, marsvin, gnagare.",
         "da": "Efter aftale: man–fre 10.00–18.00, søn 11.00–16.00, lør lukket. Hjemmebesøg. Hunde, katte, kaniner, marsvin, gnavere.",
         "fi": "Ajanvarauksella: ma–pe 10.00–18.00, su 11.00–16.00, la suljettu. Kotikäynnit. Koirat, kissat, kanit, marsut, jyrsijät.",
-        "nb": "Etter timebestilling: man–fre kl. 10.00–18.00, søn kl. 11.00–16.00, lør stengt. Hjemmebesøk. Hunder, katter, kaniner, marsvin, gnagere."
+        "nb": "Etter timebestilling: man–fre kl. 10.00–18.00, søn kl. 11.00–16.00, lør stengt. Hjemmebesøk. Hunder, katter, kaniner, marsvin, gnagere.",
+        "sl": "Po naročilu: pon–pet 10–18, ned 11–16, ob sobotah zaprto. Obiski na domu. Psi, mačke, zajci, morski prašički, glodavci."
       }
     }
   ],

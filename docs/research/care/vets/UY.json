@@ -62,7 +62,8 @@
         "sv": "Akutmottagning tillgänglig dygnet runt; ring akutlinjen.",
         "da": "Akutvagt døgnet rundt; ring til akuttelefonen.",
         "fi": "Päivystys saatavilla 24 h; soita päivystysnumeroon.",
-        "nb": "Akuttjeneste tilgjengelig hele døgnet; ring akuttelefonen."
+        "nb": "Akuttjeneste tilgjengelig hele døgnet; ring akuttelefonen.",
+        "sl": "Nujna služba na voljo 24 ur na dan; pokličite nujno številko."
       }
     },
     {
@@ -89,7 +90,8 @@
         "sv": "Akuta hembesök dygnet runt; ordinarie öppettider tisdag–söndag 09.00–16.00.",
         "da": "Akutte hjemmebesøg døgnet rundt; almindelige åbningstider tirsdag til søndag 9.00–16.00.",
         "fi": "Päivystyskotikäynnit 24 h; normaali aukioloaika ti–su 9.00–16.00.",
-        "nb": "Akutte hjemmebesøk hele døgnet; ordinær åpningstid tirsdag til søndag kl. 9.00–16.00."
+        "nb": "Akutte hjemmebesøk hele døgnet; ordinær åpningstid tirsdag til søndag kl. 9.00–16.00.",
+        "sl": "Nujni obiski na domu 24 ur na dan; redni čas tor–ned 9–16."
       }
     },
     {
@@ -116,7 +118,8 @@
         "sv": "Akutmottagning dygnet runt; ordinarie öppettider måndag–lördag 09.00–20.00.",
         "da": "Akutvagt døgnet rundt; almindelige åbningstider mandag til lørdag 9.00–20.00.",
         "fi": "Päivystys 24 h; normaali aukioloaika ma–la 9.00–20.00.",
-        "nb": "Akuttjeneste hele døgnet; ordinær åpningstid mandag til lørdag kl. 9.00–20.00."
+        "nb": "Akuttjeneste hele døgnet; ordinær åpningstid mandag til lørdag kl. 9.00–20.00.",
+        "sl": "Nujna služba 24 ur na dan; redni čas pon–sob 9–20."
       }
     },
     {
@@ -143,7 +146,8 @@
         "sv": "Akutlinje dygnet runt; klinikens öppettider måndag–fredag 10.00–20.00, lördag 10.00–15.00.",
         "da": "Akuttelefon døgnet rundt; klinikkens åbningstider mandag til fredag 10.00–20.00, lørdag 10.00–15.00.",
         "fi": "Päivystyspuhelin 24 h; klinikan aukioloaika ma–pe 10.00–20.00, la 10.00–15.00.",
-        "nb": "Akuttelefon hele døgnet; klinikken åpen mandag til fredag kl. 10.00–20.00, lørdag kl. 10.00–15.00."
+        "nb": "Akuttelefon hele døgnet; klinikken åpen mandag til fredag kl. 10.00–20.00, lørdag kl. 10.00–15.00.",
+        "sl": "Nujna številka 24 ur na dan; delovni čas ambulante pon–pet 10–20, sob 10–15."
       }
     },
     {
@@ -170,7 +174,8 @@
         "sv": "Öppet dagligen 09.00–21.00; akuta hembesök dygnet runt (avgift tillkommer, ring 091 404 141 och säg att du är medlem i Veterinaria Lacucha).",
         "da": "Åbent hver dag 9.00–21.00; akutte hjemmebesøg døgnet rundt (mod betaling, ring på 091 404 141 og sig, at du er medlem af Veterinaria Lacucha).",
         "fi": "Auki joka päivä 9.00–21.00; päivystyskotikäynnit 24 h (maksullinen, soita 091 404 141 ja kerro olevasi Veterinaria Lacuchan jäsen).",
-        "nb": "Åpent alle dager kl. 09.00–21.00; akutte hjemmebesøk hele døgnet (mot gebyr, ring 091 404 141 og si at du er medlem av Veterinaria Lacucha)."
+        "nb": "Åpent alle dager kl. 09.00–21.00; akutte hjemmebesøk hele døgnet (mot gebyr, ring 091 404 141 og si at du er medlem av Veterinaria Lacucha).",
+        "sl": "Odprto vsak dan 9–21; nujni obiski na domu 24 ur na dan (z doplačilom, pokličite 091 404 141 in povejte, da ste član Veterinaria Lacucha)."
       }
     },
     {
@@ -197,7 +202,8 @@
         "sv": "Akutmottagning dygnet runt, 365 dagar om året; butikens öppettider måndag–fredag 09.00–20.00, lördag 10.00–20.00, söndag 12.00–20.00.",
         "da": "Akutvagt døgnet rundt, 365 dage om året; butikkens åbningstider mandag til fredag 9.00–20.00, lørdag 10.00–20.00, søndag 12.00–20.00.",
         "fi": "Päivystys 24 h, 365 päivää vuodessa; kaupan aukioloajat ma–pe 9.00–20.00, la 10.00–20.00, su 12.00–20.00.",
-        "nb": "Akuttjeneste hele døgnet, 365 dager i året; butikkens åpningstid mandag til fredag kl. 9.00–20.00, lørdag kl. 10.00–20.00, søndag kl. 12.00–20.00."
+        "nb": "Akuttjeneste hele døgnet, 365 dager i året; butikkens åpningstid mandag til fredag kl. 9.00–20.00, lørdag kl. 10.00–20.00, søndag kl. 12.00–20.00.",
+        "sl": "Nujna služba 24 ur na dan, 365 dni v letu; delovni čas trgovine pon–pet 9–20, sob 10–20, ned 12–20."
       }
     },
     {
@@ -223,7 +229,8 @@
         "sv": "Akutmottagning dygnet runt, 365 dagar om året (ring akutlinjen).",
         "da": "Akutvagt døgnet rundt, 365 dage om året (ring til akuttelefonen).",
         "fi": "Päivystys 24 h, 365 päivää vuodessa (soita päivystysnumeroon).",
-        "nb": "Akuttjeneste hele døgnet, 365 dager i året (ring akuttelefonen)."
+        "nb": "Akuttjeneste hele døgnet, 365 dager i året (ring akuttelefonen).",
+        "sl": "Nujna služba 24 ur na dan, 365 dni v letu (pokličite nujno številko)."
       }
     },
     {
@@ -249,7 +256,8 @@
         "sv": "Akutmottagning dygnet runt, 365 dagar om året (ring akutlinjen).",
         "da": "Akutvagt døgnet rundt, 365 dage om året (ring til akuttelefonen).",
         "fi": "Päivystys 24 h, 365 päivää vuodessa (soita päivystysnumeroon).",
-        "nb": "Akuttjeneste hele døgnet, 365 dager i året (ring akuttelefonen)."
+        "nb": "Akuttjeneste hele døgnet, 365 dager i året (ring akuttelefonen).",
+        "sl": "Nujna služba 24 ur na dan, 365 dni v letu (pokličite nujno številko)."
       }
     },
     {
@@ -276,7 +284,8 @@
         "sv": "Akutfall och slutenvård dygnet runt, alla dagar i veckan; mottagning måndag–fredag 09.30–19.00, lördag 09.00–14.00.",
         "da": "Akut hjælp og indlæggelse døgnet rundt, 7 dage om ugen; konsultationer mandag til fredag 9.30–19.00, lørdag 9.00–14.00.",
         "fi": "Päivystys ja sairaalahoito 24 h, 7 vrk viikossa; vastaanotto ma–pe 9.30–19.00, la 9.00–14.00.",
-        "nb": "Nødtilfeller og innleggelse hele døgnet, sju dager i uken; konsultasjoner mandag til fredag 9.30–19.00, lørdag 9.00–14.00."
+        "nb": "Nødtilfeller og innleggelse hele døgnet, sju dager i uken; konsultasjoner mandag til fredag 9.30–19.00, lørdag 9.00–14.00.",
+        "sl": "Nujni primeri in hospitalizacija 24 ur na dan, 7 dni v tednu; pregledi pon–pet 9.30–19, sob 9–14."
       }
     },
     {
@@ -303,7 +312,8 @@
         "sv": "Måndag–lördag 10.00–19.00; söndagar endast akutfall. Akutlinje (endast samtal), ring innan du kommer.",
         "da": "Mandag til lørdag 10.00–19.00; søndag kun akutte tilfælde. Akuttelefon (kun opkald), ring på forhånd.",
         "fi": "ma–la 10.00–19.00; sunnuntaisin vain päivystys. Päivystysnumero (vain puhelut), soita etukäteen.",
-        "nb": "mandag–lørdag 10.00–19.00; søndag kun nødtilfeller. Nødtelefon (kun samtaler), ring på forhånd."
+        "nb": "mandag–lørdag 10.00–19.00; søndag kun nødtilfeller. Nødtelefon (kun samtaler), ring på forhånd.",
+        "sl": "Pon–sob 10–19; ob nedeljah samo nujni primeri. Nujna številka (samo klici), vnaprej pokličite."
       }
     },
     {
@@ -330,7 +340,8 @@
         "sv": "Akutfall tas emot dygnet runt, alla dagar i veckan; ordinarie öppettider måndag–fredag 08.30–12.30 och 15.00–18.00, lördag 16.00–18.00.",
         "da": "Akut hjælp døgnet rundt, 7 dage om ugen; almindelige åbningstider mandag til fredag 8.30–12.30 og 15.00–18.00, lørdag 16.00–18.00.",
         "fi": "Päivystys 24 h, 7 vrk viikossa; normaali aukioloaika ma–pe 8.30–12.30 ja 15.00–18.00, la 16.00–18.00.",
-        "nb": "Nødtilfeller hele døgnet, sju dager i uken; ordinær åpningstid mandag til fredag 8.30–12.30 og 15.00–18.00, lørdag 16.00–18.00."
+        "nb": "Nødtilfeller hele døgnet, sju dager i uken; ordinær åpningstid mandag til fredag 8.30–12.30 og 15.00–18.00, lørdag 16.00–18.00.",
+        "sl": "Nujni primeri 24 ur na dan, 7 dni v tednu; redni čas pon–pet 8.30–12.30 in 15–18, sob 16–18."
       }
     },
     {
@@ -357,7 +368,8 @@
         "sv": "Smådjursklinik med akutlinje; måndag–fredag 07.00–12.00 och 14.00–18.00, lördag 07.00–12.00; ring innan du kommer.",
         "da": "Smådyrsklinik med akuttelefon; mandag til fredag 7.00–12.00 og 14.00–18.00, lørdag 7.00–12.00; ring på forhånd.",
         "fi": "Pieneläinklinikka ja päivystysnumero; ma–pe 7.00–12.00 ja 14.00–18.00, la 7.00–12.00; soita etukäteen.",
-        "nb": "Smådyrklinikk med akuttelefon; mandag til fredag kl. 7.00–12.00 og 14.00–18.00, lørdag kl. 7.00–12.00; ring på forhånd."
+        "nb": "Smådyrklinikk med akuttelefon; mandag til fredag kl. 7.00–12.00 og 14.00–18.00, lørdag kl. 7.00–12.00; ring på forhånd.",
+        "sl": "Ambulanta za male živali z nujno številko; pon–pet 7–12 in 14–18, sob 7–12; vnaprej pokličite."
       }
     },
     {
@@ -383,7 +395,8 @@
         "sv": "Måndag–fredag 07.00–12.00 och 14.00–18.30, lördag 07.00–12.00 (eftermiddagstiderna ändras något på sommaren).",
         "da": "Mandag til fredag 7.00–12.00 og 14.00–18.30, lørdag 7.00–12.00 (om sommeren flytter eftermiddagstiderne sig lidt).",
         "fi": "ma–pe 7.00–12.00 ja 14.00–18.30, la 7.00–12.00 (kesällä iltapäivän aukioloajat vaihtelevat hieman).",
-        "nb": "mandag–fredag 7.00–12.00 og 14.00–18.30, lørdag 7.00–12.00 (ettermiddagstidene om sommeren forskyves litt)."
+        "nb": "mandag–fredag 7.00–12.00 og 14.00–18.30, lørdag 7.00–12.00 (ettermiddagstidene om sommeren forskyves litt).",
+        "sl": "Pon–pet 7–12 in 14–18.30, sob 7–12 (poleti se popoldanski čas rahlo spremeni)."
       }
     },
     {
@@ -410,7 +423,8 @@
         "sv": "Ring innan du kommer.",
         "da": "Ring på forhånd.",
         "fi": "Soita etukäteen.",
-        "nb": "Ring på forhånd."
+        "nb": "Ring på forhånd.",
+        "sl": "Vnaprej pokličite."
       }
     },
     {
@@ -437,7 +451,8 @@
         "sv": "Måndag–fredag 09.00–13.00 och 15.00–19.00, lördag 09.00–13.00; ring innan du kommer.",
         "da": "Mandag til fredag 9.00–13.00 og 15.00–19.00, lørdag 9.00–13.00; ring på forhånd.",
         "fi": "ma–pe 9.00–13.00 ja 15.00–19.00, la 9.00–13.00; soita etukäteen.",
-        "nb": "mandag–fredag 9.00–13.00 og 15.00–19.00, lørdag 9.00–13.00; ring på forhånd."
+        "nb": "mandag–fredag 9.00–13.00 og 15.00–19.00, lørdag 9.00–13.00; ring på forhånd.",
+        "sl": "Pon–pet 9–13 in 15–19, sob 9–13; vnaprej pokličite."
       }
     },
     {
@@ -463,7 +478,8 @@
         "sv": "Kommunal akutjour dygnet runt för djur som skadats på allmän väg samt för vilda eller exotiska djur; inte en allmän klinik. WhatsApp 099 019 500 dagligen 06.00–24.00.",
         "da": "Kommunal akutvagt døgnet rundt for dyr, der er kommet til skade på offentlig vej, og for vilde eller eksotiske dyr; ikke en almindelig klinik. WhatsApp 099 019 500 hver dag 6.00–24.00.",
         "fi": "Kunnallinen päivystys 24 h yleisillä teillä loukkaantuneille sekä villeille ja eksoottisille eläimille; ei yleisklinikka. WhatsApp 099 019 500 joka päivä 6.00–24.00.",
-        "nb": "Kommunal døgnåpen akuttjeneste for dyr skadet på offentlig vei og for ville eller eksotiske dyr; ikke en vanlig dyreklinikk. WhatsApp 099 019 500 daglig 6.00–24.00."
+        "nb": "Kommunal døgnåpen akuttjeneste for dyr skadet på offentlig vei og for ville eller eksotiske dyr; ikke en vanlig dyreklinikk. WhatsApp 099 019 500 daglig 6.00–24.00.",
+        "sl": "Občinska nujna služba 24 ur na dan za živali, poškodovane na javnih cestah, ter za divje in eksotične živali; ni splošna ambulanta. WhatsApp 099 019 500 vsak dan 6–24."
       }
     },
     {
@@ -490,7 +506,8 @@
         "sv": "Akutvård dygnet runt; dagtidsmottagning till 20.00 måndag–lördag.",
         "da": "Akut hjælp døgnet rundt; dagkonsultationer til kl. 20.00 mandag til lørdag.",
         "fi": "Päivystys ympäri vuorokauden; päiväsaikaan vastaanotto ma–la klo 20 asti.",
-        "nb": "Akuttbehandling hele døgnet; dagkonsultasjoner til kl. 20.00 mandag til lørdag."
+        "nb": "Akuttbehandling hele døgnet; dagkonsultasjoner til kl. 20.00 mandag til lørdag.",
+        "sl": "Nujna oskrba 24 ur na dan; dnevni pregledi do 20. ure od ponedeljka do sobote."
       }
     }
   ],

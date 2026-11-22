@@ -67,12 +67,12 @@
       "address": "14 Azatutyan Ave, Yerevan 0014",
       "phone": "+374 10 209966",
       "emergency_24h": false,
-      "duty": "Open 9:00-24:00 daily; phone line advertised as 24/7. Call ahead at night.",
+      "duty": "Open 9:00-24:00 daily; phone line 24/7. Call ahead at night.",
       "small_animals": true,
       "url": "https://vetexpert.am/",
       "source_url": "https://vetexpert.am/",
       "checked": "2026-11-12",
-      "note": "Own page says both 'working hours 9:00-24:00, 7 days' and 'Clinic provides 24-hour admission of patients' plus '24/7 phone number (010) 209966'. Mobile numbers +374 96 209966, +374 95 209060. HayWiki (not a source) says night care is basic stabilisation only. Checked 2026-11-12: page hours 9:00-24:00 contradict the 24-hour admission claim, so not listed as 24 h.",
+      "note": "Own page says both 'working hours 9:00-24:00, 7 days' and 'Clinic provides 24-hour admission of patients' plus '24/7 phone number (010) 209966'. Mobile numbers +374 96 209966, +374 95 209060. HayWiki (not a source) says night care is basic stabilisation only. Checked 2026-11-12: page hours 9:00-24:00 contradict the 24-hour admission claim, so not listed as 24 h. advertised as",
       "duty_i18n": {
         "es": "Abierto todos los días 9:00–24:00 h; línea telefónica disponible las 24 horas. Llama antes por la noche.",
         "it": "Aperto 9:00–24:00 tutti i giorni; linea telefonica indicata come attiva 24 ore su 24. Di notte telefonare in anticipo.",
@@ -83,7 +83,8 @@
         "sv": "Öppet alla dagar 9.00–24.00; telefonlinjen uppges vara öppen dygnet runt. Ring innan du kommer på natten.",
         "da": "Åbent dagligt 9.00–24.00; telefonen er angiveligt bemandet døgnet rundt. Ring på forhånd om natten.",
         "fi": "Auki päivittäin 9–24; puhelin vastaa ilmoituksen mukaan 24/7. Soita yöllä etukäteen.",
-        "nb": "Åpent 9.00–24.00 hver dag; telefonlinjen er oppgitt å være åpen hele døgnet. Ring på forhånd om natten."
+        "nb": "Åpent 9.00–24.00 hver dag; telefonlinjen er oppgitt å være åpen hele døgnet. Ring på forhånd om natten.",
+        "sl": "Odprto vsak dan 9–24; telefonska linija 24/7. Ponoči vnaprej pokličite."
       }
     },
     {
@@ -93,12 +94,12 @@
       "region": "Yerevan",
       "phone": "+374 55 561254",
       "emergency_24h": true,
-      "duty": "Mobile vet with house calls in Yerevan and up to 30 km around; advertised as open 24/7 with an emergency vet available.",
+      "duty": "Mobile vet with house calls in Yerevan and up to 30 km around; open 24/7 with an emergency vet available.",
       "small_animals": true,
       "url": "https://imvet.am/en/",
       "source_url": "https://imvet.am/en/",
       "checked": "2026-11-12",
-      "note": "English page: 'Open 24/7 - Emergency Vet Available'. Second phone +374 91 561258. No street address (house-call service). Russian page has no 24/7 claim.",
+      "note": "English page: 'Open 24/7 - Emergency Vet Available'. Second phone +374 91 561258. No street address (house-call service). Russian page has no 24/7 claim. advertised as",
       "duty_i18n": {
         "es": "Veterinario a domicilio en Yerevan y hasta 30 km a la redonda; anuncia atención las 24 horas con veterinario de urgencias.",
         "it": "Veterinario mobile con visite a domicilio a Yerevan e fino a 30 km intorno; indicato come aperto 24 ore su 24, 7 giorni su 7, con veterinario di guardia per le urgenze.",
@@ -109,7 +110,8 @@
         "sv": "Mobil veterinär med hembesök i Jerevan och upp till 30 km runt staden; uppges ha öppet dygnet runt med jourhavande veterinär.",
         "da": "Mobil dyrlæge med hjemmebesøg i Yerevan og op til 30 km omkring byen; oplyser at have åbent døgnet rundt med en akut dyrlæge til rådighed.",
         "fi": "Liikkuva eläinlääkäri tekee kotikäyntejä Yerevanissa ja 30 km:n säteellä; ilmoituksen mukaan auki 24/7 ja päivystävä eläinlääkäri tavoitettavissa.",
-        "nb": "Mobil dyrlege med hjemmebesøk i Jerevan og inntil 30 km rundt; oppgitt som døgnåpen med dyrlegevakt tilgjengelig."
+        "nb": "Mobil dyrlege med hjemmebesøk i Jerevan og inntil 30 km rundt; oppgitt som døgnåpen med dyrlegevakt tilgjengelig.",
+        "sl": "Mobilni veterinar z obiski na domu v Erevanu in do 30 km naokoli; odprto 24/7, nujni veterinar na voljo."
       }
     },
     {
@@ -120,12 +122,12 @@
       "address": "112/2 Avet Avetisyan St, Yerevan",
       "phone": "+374 99 404070",
       "emergency_24h": true,
-      "duty": "Advertises 24/7 veterinary help and an animal ambulance on +374 99 404070. Call ahead.",
+      "duty": "24/7 veterinary help and an animal ambulance on +374 99 404070. Call ahead.",
       "small_animals": true,
       "url": "https://joli.am/clinics/",
       "source_url": "https://joli.am/clinics/",
       "checked": "2026-11-12",
-      "note": "Own pages say '24/7 veterinary help. Call our animal ambulance any time.' and '24/7 - Emergency & ambulance'. Locations page lists the Avetisyan branch as both 24/7 and 10:00-22:00 (conflicting); general hours Mon-Sun 10:00-20:00. Other number +374 33 300404.",
+      "note": "Own pages say '24/7 veterinary help. Call our animal ambulance any time.' and '24/7 - Emergency & ambulance'. Locations page lists the Avetisyan branch as both 24/7 and 10:00-22:00 (conflicting); general hours Mon-Sun 10:00-20:00. Other number +374 33 300404. Advertises",
       "duty_i18n": {
         "es": "Anuncia atención veterinaria las 24 horas y ambulancia para mascotas en el +374 99 404070. Llama antes.",
         "it": "Indica assistenza veterinaria 24 ore su 24, 7 giorni su 7 e ambulanza per animali al +374 99 404070. Telefonare in anticipo.",
@@ -136,7 +138,8 @@
         "sv": "Uppger sig erbjuda veterinärhjälp och djurambulans dygnet runt på +374 99 404070. Ring innan du kommer.",
         "da": "Tilbyder dyrlægehjælp og dyreambulance døgnet rundt på +374 99 404070. Ring på forhånd.",
         "fi": "Ilmoittaa tarjoavansa eläinlääkäriapua 24/7 ja eläinambulanssin numerossa +374 99 404070. Soita etukäteen.",
-        "nb": "Markedsfører dyrlegehjelp og dyreambulanse hele døgnet på +374 99 404070. Ring på forhånd."
+        "nb": "Markedsfører dyrlegehjelp og dyreambulanse hele døgnet på +374 99 404070. Ring på forhånd.",
+        "sl": "Veterinarska pomoč 24/7 in reševalno vozilo za živali na +374 99 404070. Vnaprej pokličite."
       }
     },
     {
@@ -163,7 +166,8 @@
         "sv": "Öppet alla dagar 10.00–22.00.",
         "da": "Åbent dagligt 10.00–22.00.",
         "fi": "Auki päivittäin 10–22.",
-        "nb": "Åpent 10.00–22.00 daglig."
+        "nb": "Åpent 10.00–22.00 daglig.",
+        "sl": "Odprto vsak dan 10–22."
       }
     },
     {
@@ -190,7 +194,8 @@
         "sv": "Mån–lör 10.00–20.00, sön 9.00–12.00.",
         "da": "Man–lør 10.00–20.00, søn 9.00–12.00.",
         "fi": "ma–la 10–20, su 9–12.",
-        "nb": "man–lør 10.00–20.00, søn 9.00–12.00."
+        "nb": "man–lør 10.00–20.00, søn 9.00–12.00.",
+        "sl": "Pon–sob 10–20, ned 9–12."
       }
     },
     {
@@ -229,7 +234,8 @@
         "sv": "Tis–lör 11.00–19.00; stängt sön och mån.",
         "da": "Tir–lør 11.00–19.00; lukket søndag og mandag.",
         "fi": "ti–la 11–19; su ja ma suljettu.",
-        "nb": "Tir–lør 11.00–19.00; stengt søn og man."
+        "nb": "Tir–lør 11.00–19.00; stengt søn og man.",
+        "sl": "Tor–sob 11–19; ob nedeljah in ponedeljkih zaprto."
       }
     }
   ],
