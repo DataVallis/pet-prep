@@ -326,6 +326,8 @@ describe('ControlsScreen — quiet hours per pet + time format (David 2026-11-16
       bedtime_start: '21:00',
       bedtime_end: '07:00',
       is_active: true,
+      // The family hours (prefill) carry the server's school days since #1513.
+      school_days: [1, 2, 3, 4, 5],
     });
     expect(updateQuietHours).not.toHaveBeenCalled();
   });
@@ -445,7 +447,6 @@ describe('ControlsScreen — school days in quiet hours (David 2026-11-22)', () 
     (api.getQuietHours as jest.Mock).mockResolvedValue({
       quiet_hours: { id: 1, school_start: null, school_end: null, bedtime_start: '21:00', bedtime_end: '07:00', is_active: true, saved: true, school_days: [1, 2, 3, 4, 5] },
     });
-    // HAND-TYPED: the dashboard pet's `quiet_hours` in schema.ts has no `school_days` yet.
     const ownHours = { school_start: '08:00', school_end: '13:00', bedtime_start: '20:00', bedtime_end: '06:30', is_active: true, follows_family: false, school_days: [1, 2, 3] };
     const family = familyFromDashboard(
       makeScoredDashboard([makeScoredChild()], [

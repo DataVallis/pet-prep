@@ -184,15 +184,10 @@ export type UpdatePetTimezoneResponse =
 export type UpdatePetQuietHoursResponse =
   operations['petQuietHours.update']['responses'][200]['content']['application/json'];
 /**
- * Body of PUT /api/parent/pets/{pet}/quiet-hours: own schedule, or null = follow the family.
- * HAND-TYPED `school_days` (fix/quiet-hours-school-days, contract 2026-11-22): optional ISO
- * weekdays 1..7 of the school window — drop the intersection once schema.ts has the field.
+ * Body of PUT /api/parent/pets/{pet}/quiet-hours: own schedule (with optional `school_days`,
+ * ISO weekdays 1..7 — SCHOOL_DAYS.md), or null = follow the family.
  */
-export type UpdatePetQuietHoursRequest = {
-  quiet_hours:
-    | (NonNullable<components['schemas']['UpdatePetQuietHoursRequest']['quiet_hours']> & { school_days?: number[] })
-    | null;
-};
+export type UpdatePetQuietHoursRequest = components['schemas']['UpdatePetQuietHoursRequest'];
 /** PUT /api/user/time-format (12 / 24 h, David 2026-11-16). */
 export type UpdateTimeFormatResponse = operations['timeFormat.update']['responses'][200]['content']['application/json'];
 /**
