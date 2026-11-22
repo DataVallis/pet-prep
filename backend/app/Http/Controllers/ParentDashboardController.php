@@ -73,6 +73,7 @@ class ParentDashboardController extends Controller
                 'family' => null,
                 'wishes_open_count' => 0,
                 'phase2_interest' => $this->phase2Interest($parent),
+                /** @var bool */
                 'validation_signals' => app(ValidationSignals::class)->enabledFor($parent),
             ], 200);
         }
@@ -98,6 +99,7 @@ class ParentDashboardController extends Controller
                 // M6-W01 »Želje«: open wishes of all children, all pets of the family.
                 'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),
                 'phase2_interest' => $this->phase2Interest($parent),
+                /** @var bool */
                 'validation_signals' => app(ValidationSignals::class)->enabledFor($family),
             ], 200);
         }
@@ -162,6 +164,7 @@ class ParentDashboardController extends Controller
             'phase2_interest' => $this->phase2Interest($parent),
             // David 2026-11-22: the admin switch »Validation signals« is on for this family (show
             // »Dobili smo pravo žival«, count opens). `phase2_interest` is reported in every mode.
+            /** @var bool */
             'validation_signals' => app(ValidationSignals::class)->enabledFor($family),
         ], 200);
     }

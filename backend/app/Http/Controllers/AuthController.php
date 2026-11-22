@@ -295,6 +295,7 @@ class AuthController extends Controller
             // David 2026-11-22: the admin switch »Validation signals« is on for this parent's
             // family — only then may the app show the acquisition question, count dashboard opens
             // and show »Dobili smo pravo žival«. Always false for a child.
+            /** @var bool */
             'validation_signals' => app(ValidationSignals::class)->enabledFor($user),
         ], 200);
     }
