@@ -53,12 +53,30 @@ export class DashboardOpenReporter {
 /** One mounted parent app: turns mount / foreground / push events into at most one debounced report. */
 export class DashboardOpenSignal {
   private pending: unknown = null;
+  /** Admin switch »Validation signals« for this family: null = not known yet (dashboard still loading). */
+  private enabled: boolean | null = null;
+  /** An open that happened while the switch was still unknown — sent only if it resolves to on. */
+  private deferred: DashboardOpenTrigger | null = null;
 
   constructor(
     private readonly userId: number,
     private readonly reporter: DashboardOpenReporter,
     private readonly deps: Pick<OpenSignalDeps, 'setTimer' | 'clearTimer'>,
   ) {}
+
+  /**
+   * QA #1500 m4: the switch as the app knows it. Only the FIRST resolution (null → true) may send an open
+   * that waited for it (the launch of this mount); a later flip (a refetch turning it on) never sends a
+   * `launch` — the next real foreground / push does.
+   */
+  setEnabled(next: boolean | null): void {
+    const before = this.enabled;
+    this.enabled = next;
+    if (before !== null || next === null) return;
+    const waiting = this.deferred;
+    this.deferred = null;
+    if (next && waiting !== null) this.reporter.report(this.userId, waiting);
+  }
 
   /** The parent app mounted (cold launch, sign-in, back from a child profile). */
   mounted(pushPending: boolean): void {
@@ -74,7 +92,7 @@ export class DashboardOpenSignal {
   /** A tapped push routed to the parent dashboard. */
   push(): void {
     this.cancel();
-    this.reporter.report(this.userId, 'push');
+    this.emit('push');
   }
 
   dispose(): void {
@@ -85,8 +103,17 @@ export class DashboardOpenSignal {
     if (this.pending !== null) return;
     this.pending = this.deps.setTimer(() => {
       this.pending = null;
-      this.reporter.report(this.userId, trigger);
+      this.emit(trigger);
     }, OPEN_GRACE_MS);
+  }
+
+  /** On → report; still unknown → wait for the switch (a push wins over a waiting launch); off → nothing. */
+  private emit(trigger: DashboardOpenTrigger): void {
+    if (this.enabled === true) {
+      this.reporter.report(this.userId, trigger);
+    } else if (this.enabled === null) {
+      if (this.deferred === null || trigger === 'push') this.deferred = trigger;
+    }
   }
 
   private cancel(): void {

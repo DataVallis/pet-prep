@@ -25,9 +25,16 @@ export function resetDashboardOpenedForTests(): void {
   reporter.reset();
 }
 
-export function useDashboardOpenedSignal(userId: number | null): void {
+/**
+ * `userId` = the signed-in parent (the hook stays mounted per parent); `enabled` = the admin switch
+ * »Validation signals« for the family (null while unknown). The switch only gates SENDING — a refetch
+ * that turns it on never counts as an open (QA #1500 m4).
+ */
+export function useDashboardOpenedSignal(userId: number | null, enabled: boolean | null): void {
   const pushTarget = useAppStore((s) => s.pushTarget);
   const signalRef = useRef<DashboardOpenSignal | null>(null);
+  const enabledRef = useRef(enabled);
+  enabledRef.current = enabled;
 
   useEffect(() => {
     if (userId === null) return undefined;
@@ -36,6 +43,7 @@ export function useDashboardOpenedSignal(userId: number | null): void {
       clearTimer: (handle) => clearTimeout(handle as ReturnType<typeof setTimeout>),
     });
     signalRef.current = signal;
+    signal.setEnabled(enabledRef.current);
     signal.mounted(useAppStore.getState().pushTarget !== null);
 
     // QA #1479 m3: iOS often goes background → inactive → active. The flag survives `inactive` and is
@@ -55,6 +63,10 @@ export function useDashboardOpenedSignal(userId: number | null): void {
       signalRef.current = null;
     };
   }, [userId]);
+
+  useEffect(() => {
+    signalRef.current?.setEnabled(enabled);
+  }, [enabled]);
 
   // A tapped push (set by `routePushTap`, cleared by the dashboard once routed).
   const hadPush = useRef(pushTarget !== null);

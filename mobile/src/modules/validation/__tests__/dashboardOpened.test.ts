@@ -12,7 +12,11 @@ function setup(send: (t: DashboardOpenTrigger) => Promise<unknown> = () => Promi
     now: () => Date.now(),
   });
   const timers = { setTimer: (fn: () => void, ms: number) => setTimeout(fn, ms), clearTimer: (h: unknown) => clearTimeout(h as ReturnType<typeof setTimeout>) };
-  const signal = (userId = 1) => new DashboardOpenSignal(userId, reporter, timers);
+  const signal = (userId = 1, enabled: boolean | null = true) => {
+    const sig = new DashboardOpenSignal(userId, reporter, timers);
+    sig.setEnabled(enabled);
+    return sig;
+  };
   return { sent, reporter, signal };
 }
 
@@ -100,6 +104,26 @@ describe('H6 dashboard-opened signal', () => {
     s.mounted(false);
     s.dispose();
     jest.advanceTimersByTime(OPEN_GRACE_MS * 2);
+    expect(sent).toEqual([]);
+  });
+
+  it('switch unknown: the open waits; a push wins over a waiting launch; null → on sends it once', () => {
+    const { sent, signal } = setup();
+    const s = signal(1, null);
+    s.mounted(false);
+    jest.advanceTimersByTime(OPEN_GRACE_MS);
+    s.push();
+    expect(sent).toEqual([]);
+    s.setEnabled(true);
+    expect(sent).toEqual(['push']);
+  });
+
+  it('switch off → on later never sends the earlier open', () => {
+    const { sent, signal } = setup();
+    const s = signal(1, false);
+    s.mounted(false);
+    jest.advanceTimersByTime(OPEN_GRACE_MS);
+    s.setEnabled(true);
     expect(sent).toEqual([]);
   });
 });

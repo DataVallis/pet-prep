@@ -157,8 +157,9 @@ export default function ParentDashboardScreen() {
   const dashboardFlag = readDashboardValidationFlag(dashboard.data);
   const account = useParentAccount(parentId !== null && needsUserValidationFlag(dashboard.data !== undefined, dashboardFlag));
   const signalsOn = parentId !== null && validationSignalsOn(dashboardFlag, readUserValidationFlag(account.data));
-  // H6 only while the switch is on (off → nothing sent).
-  useDashboardOpenedSignal(signalsOn ? parentId : null);
+  // H6: mounted per parent; the switch only gates sending (unknown while loading → a launch waits for it).
+  const signalsKnown = dashboard.data !== undefined && (dashboardFlag !== null || account.isFetched);
+  useDashboardOpenedSignal(parentId, signalsKnown ? signalsOn : null);
   // M5-08 H7: null on an older server → no »Dobili smo pravo žival« row.
   const phase2 = readPhase2Interest(dashboard.data);
   // Off → hidden, except the thank-you row for a parent with a live »Obvestite me« (GDPR withdrawal).

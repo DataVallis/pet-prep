@@ -257,6 +257,20 @@ describe('admin switch »Validation signals«', () => {
     expect(m.reportDashboardOpened).toHaveBeenCalledTimes(1);
   });
 
+  it('QA #1500 m4: a refetch that turns the switch on shows the entries but sends no `launch`', async () => {
+    m.getParentDashboard.mockResolvedValue({ ...plain(), validation_signals: false, phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    const { client } = renderWithQuery(<ParentDashboardScreen />);
+    expect(await screen.findByTestId('child-card-2')).toBeTruthy();
+    await flush(OPEN_GRACE_MS + 50);
+    m.getParentDashboard.mockResolvedValue({ ...on(), phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    await act(async () => {
+      await client.refetchQueries();
+    });
+    await flush(OPEN_GRACE_MS + 50);
+    expect(screen.getByTestId('dashboard-phase2')).toBeTruthy();
+    expect(m.reportDashboardOpened).not.toHaveBeenCalled();
+  });
+
   it('withdrawal while off: the thank-you row stays, no »viewed«, »Ne obveščajte me več« works', async () => {
     m.getParentDashboard.mockResolvedValue({
       ...plain(),
