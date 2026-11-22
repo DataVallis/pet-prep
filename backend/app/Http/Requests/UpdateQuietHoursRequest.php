@@ -36,7 +36,7 @@ class UpdateQuietHoursRequest extends FormRequest
      */
     public function rules(): array
     {
-        return $this->schoolDaysRules('school_days') + [
+        return [
             'school_start' => ['nullable', 'string', 'date_format:H:i'],
             'school_end' => ['nullable', 'string', 'date_format:H:i'],
             'bedtime_start' => ['nullable', 'string', 'date_format:H:i'],
@@ -44,7 +44,7 @@ class UpdateQuietHoursRequest extends FormRequest
             'is_active' => ['boolean'],
             // Optional family timezone (IANA), saved on the parent (M1-03).
             'timezone' => ['sometimes', 'string', 'timezone:all'],
-        ];
+        ] + $this->schoolDaysRules('school_days');
     }
 
     /**
