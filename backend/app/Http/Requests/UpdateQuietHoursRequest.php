@@ -3,12 +3,15 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Concerns\NormalizesTimezoneInput;
+use App\Http\Requests\Concerns\ValidatesSchoolDays;
 use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateQuietHoursRequest extends FormRequest
 {
     use NormalizesTimezoneInput;
+    use ValidatesSchoolDays;
 
     /**
      * Device aliases (Etc/UTC, Asia/Calcutta, …) → canonical IANA name (PR #25).
@@ -33,7 +36,7 @@ class UpdateQuietHoursRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        return $this->schoolDaysRules('school_days') + [
             'school_start' => ['nullable', 'string', 'date_format:H:i'],
             'school_end' => ['nullable', 'string', 'date_format:H:i'],
             'bedtime_start' => ['nullable', 'string', 'date_format:H:i'],
@@ -42,6 +45,17 @@ class UpdateQuietHoursRequest extends FormRequest
             // Optional family timezone (IANA), saved on the parent (M1-03).
             'timezone' => ['sometimes', 'string', 'timezone:all'],
         ];
+    }
+
+    /**
+     * Invalid `school_days` → 422 `reason: school_days_invalid`; any other
+     * error keeps the standard validation body.
+     */
+    protected function failedValidation(ValidatorContract $validator): void
+    {
+        $this->failOnSchoolDays($validator, 'school_days');
+
+        parent::failedValidation($validator);
     }
 
     /**

@@ -138,7 +138,7 @@ it('dashboard and child state show the effective schedule and whether it is the 
         ->and($pets[$f['other']->id]['quiet_hours_follow_family'])->toBeTrue()
         ->and($pets[$f['other']->id]['quiet_hours'])->toBe([
             'school_start' => null, 'school_end' => null, 'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
-            'is_active' => true, 'follows_family' => true,
+            'is_active' => true, 'school_days' => [1, 2, 3, 4, 5], 'follows_family' => true,
         ]);
 
     actingAs($f['kid1'], 'sanctum');
@@ -174,14 +174,14 @@ it('a family change never moves a pet with its own hours; null follows the famil
         ->and(Pet::find($f['own']->id)->quietHours()->isPetOwn())->toBeFalse();
 });
 
-it('the old family endpoint keeps its exact shape (old apps)', function () {
+it('the old family endpoint keeps its shape (old apps) — only `school_days` added (David 2026-11-22)', function () {
     $f = pqhFamily();
     pqhPut($f['parent'], $f['own'], PQH_SCHOOL)->assertOk();
 
     actingAs($f['parent'], 'sanctum');
     $get = getJson('/api/parent/quiet-hours')->assertOk()->json();
     expect(array_keys($get))->toBe(['quiet_hours', 'timezone'])
-        ->and(array_keys($get['quiet_hours']))->toBe(['id', 'school_start', 'school_end', 'bedtime_start', 'bedtime_end', 'is_active', 'saved'])
+        ->and(array_keys($get['quiet_hours']))->toBe(['id', 'school_start', 'school_end', 'bedtime_start', 'bedtime_end', 'is_active', 'school_days', 'saved'])
         ->and($get['quiet_hours']['bedtime_start'])->toBe('21:00');
 
     $put = putJson('/api/parent/quiet-hours', ['bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true])->assertOk()->json();
@@ -216,7 +216,7 @@ it('refuses an empty or partial schedule (422) — nothing is wiped (QA #1259 M5
     pqhPut($f['parent'], $f['own'], ['is_active' => 'yes'] + PQH_SCHOOL)->assertUnprocessable()
         ->assertJsonValidationErrors('quiet_hours.is_active');
 
-    expect(Pet::find($f['own']->id)->ownQuietHoursValues())->toBe(PQH_SCHOOL);
+    expect(Pet::find($f['own']->id)->ownQuietHoursValues())->toBe(PQH_SCHOOL + ['school_days' => [1, 2, 3, 4, 5]]);
 
     // Every key present, windows null = a pet with no quiet windows (allowed, like the family editor).
     $none = ['school_start' => null, 'school_end' => null, 'bedtime_start' => null, 'bedtime_end' => null, 'is_active' => true];
@@ -318,7 +318,7 @@ it('GDPR export lists the pet\'s own hours; deleting the pet takes them along', 
 
     $export = app(AccountExportService::class)->exportFor($f['parent']);
     $pets = collect($export['pets'])->keyBy('id');
-    expect($pets[$f['own']->id]['own_quiet_hours'])->toBe(PQH_SCHOOL)
+    expect($pets[$f['own']->id]['own_quiet_hours'])->toBe(PQH_SCHOOL + ['school_days' => [1, 2, 3, 4, 5]])
         ->and($pets[$f['own']->id]['quiet_hours_follow_family'])->toBeFalse()
         ->and($pets[$f['other']->id]['own_quiet_hours'])->toBeNull()
         ->and($pets[$f['other']->id]['quiet_hours_follow_family'])->toBeTrue();

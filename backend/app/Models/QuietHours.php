@@ -20,6 +20,10 @@ class QuietHours extends Model
      * backfilled families without a row, and the in-code fallback when no
      * row can exist (family without a parent). The parent app shows the same
      * values. Change it here only, together with PRODUCT_SPEC §5.
+     *
+     * `school_days` (David 2026-11-22, »Starš izbere dneve«): the ISO weekdays
+     * (1 = Monday … 7 = Sunday) on which the school window applies, on the
+     * pet's own clock; default Monday–Friday. Bedtime applies every day.
      */
     public const DEFAULTS = [
         'school_start' => null,
@@ -27,6 +31,26 @@ class QuietHours extends Model
         'bedtime_start' => '21:00',
         'bedtime_end' => '07:00',
         'is_active' => true,
+        'school_days' => self::DEFAULT_SCHOOL_DAYS,
+    ];
+
+    /**
+     * The school window's days when nothing was chosen (David 2026-11-22):
+     * Monday–Friday. Also the value of a family row created without it, of a
+     * pet's own schedule stored before 2026-11-22 (key missing) and of the
+     * backfill migration `2027_05_01_120000_add_school_days_to_quiet_hours`.
+     */
+    public const DEFAULT_SCHOOL_DAYS = [1, 2, 3, 4, 5];
+
+    /**
+     * A new family row starts with the default days (the column default in
+     * the database says the same; this keeps an unsaved / just-created model
+     * in step without a re-read).
+     *
+     * @var array<string, mixed>
+     */
+    protected $attributes = [
+        'school_days' => '[1,2,3,4,5]',
     ];
 
     /**
@@ -47,14 +71,48 @@ class QuietHours extends Model
     /**
      * The keys of one schedule (family row or a pet's own, `pets.own_quiet_hours`).
      */
-    public const SCHEDULE_KEYS = ['school_start', 'school_end', 'bedtime_start', 'bedtime_end', 'is_active'];
+    public const SCHEDULE_KEYS = ['school_start', 'school_end', 'bedtime_start', 'bedtime_end', 'is_active', 'school_days'];
+
+    /**
+     * A day set as stored / sent: distinct ISO weekdays 1..7, sorted; anything
+     * that is not such a list (null, a missing key, garbage from an old row)
+     * is the default Monday–Friday. `[]` stays `[]` = no school window on any
+     * day. Input is validated before (422 `school_days_invalid`); this only
+     * makes the stored value canonical.
+     *
+     * @return list<int>
+     */
+    public static function normaliseSchoolDays(mixed $days): array
+    {
+        if (is_string($days)) {
+            $days = json_decode($days, true);
+        }
+        if (! is_array($days)) {
+            return self::DEFAULT_SCHOOL_DAYS;
+        }
+
+        $clean = [];
+        foreach ($days as $day) {
+            if (is_int($day) || (is_string($day) && ctype_digit($day))) {
+                $day = (int) $day;
+                if ($day >= 1 && $day <= 7) {
+                    $clean[$day] = $day;
+                }
+            }
+        }
+        ksort($clean);
+
+        return array_values($clean);
+    }
 
     /**
      * A schedule as stored / sent: times "HH:MM" (seconds stripped) or null,
-     * is_active bool (missing = true). The one normalisation for pet rows.
+     * is_active bool (missing = true), school_days a sorted day list (missing
+     * = Monday–Friday — pet schedules stored before 2026-11-22 have no key).
+     * The one normalisation for pet rows.
      *
      * @param  array<string, mixed>  $values
-     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool}
+     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, school_days: list<int>}
      */
     public static function normaliseValues(array $values): array
     {
@@ -66,6 +124,7 @@ class QuietHours extends Model
             'bedtime_start' => $time($values['bedtime_start'] ?? null),
             'bedtime_end' => $time($values['bedtime_end'] ?? null),
             'is_active' => array_key_exists('is_active', $values) ? (bool) $values['is_active'] : true,
+            'school_days' => self::normaliseSchoolDays($values['school_days'] ?? null),
         ];
     }
 
@@ -130,6 +189,7 @@ class QuietHours extends Model
         'bedtime_start',
         'bedtime_end',
         'is_active',
+        'school_days',
     ];
 
     /**
@@ -141,7 +201,52 @@ class QuietHours extends Model
     {
         return [
             'is_active' => 'boolean',
+            'school_days' => 'array',
         ];
+    }
+
+    /**
+     * The ISO weekdays (1 = Monday … 7 = Sunday) on which the school window
+     * applies (David 2026-11-22), canonical — never null.
+     *
+     * @return list<int>
+     */
+    public function schoolDays(): array
+    {
+        // Hot path (every isQuietNow() of a decay walk): decode once per raw value.
+        $raw = $this->getAttributes()['school_days'] ?? null;
+        $key = is_string($raw) ? $raw : json_encode($raw);
+        if ($this->schoolDaysCache === null || $this->schoolDaysCache[0] !== $key) {
+            $this->schoolDaysCache = [$key, self::normaliseSchoolDays($raw)];
+        }
+
+        return $this->schoolDaysCache[1];
+    }
+
+    /** @var array{0: string|false, 1: list<int>}|null memo of schoolDays() */
+    private ?array $schoolDaysCache = null;
+
+    /**
+     * True when the school window is in force on the pet-local date of
+     * $local (its ISO weekday is one of schoolDays()). School windows are
+     * read on the date of the instant — the weekday of »now« on the pet's
+     * clock, also for a window that wraps midnight.
+     */
+    private function isSchoolDay(CarbonInterface $local): bool
+    {
+        return in_array((int) $local->isoWeekday(), $this->schoolDays(), true);
+    }
+
+    /**
+     * True when the day set can switch the school window on or off at a
+     * local midnight: a school window exists and applies on some days but
+     * not on all seven.
+     */
+    private function schoolDependsOnDay(): bool
+    {
+        $days = count($this->schoolDays());
+
+        return $this->school_start && $this->school_end && $days > 0 && $days < 7;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -226,6 +331,13 @@ class QuietHours extends Model
      * On DST days the windows follow the local clock: 22:00–06:00 lasts 9 real
      * hours on the night clocks go back and 7 on the night they go forward.
      *
+     * The school window counts only on the selected weekdays (`school_days`,
+     * David 2026-11-22 — default Monday–Friday) of the local date; bedtime
+     * counts every day. This is the ONE place the weekday is checked: every
+     * consumer (decay ×0.1 segments, sleep, pushes, messes, parent-covered
+     * meals, routines, games …) reads quiet time through this method,
+     * nextBoundaryAfter() and segmentsBetween().
+     *
      * @param  CarbonInterface|null  $now  The moment to check (any timezone; defaults to now).
      */
     public function isQuietNow($now = null): bool
@@ -237,8 +349,8 @@ class QuietHours extends Model
         $local = Carbon::instance($now ?? now())->setTimezone($this->timezone());
         $currentTime = $local->format('H:i');
 
-        // Check school hours
-        if ($this->isWithinTimeRange($currentTime, $this->school_start, $this->school_end)) {
+        // Check school hours — only on the selected weekdays (David 2026-11-22)
+        if ($this->isWithinTimeRange($currentTime, $this->school_start, $this->school_end) && $this->isSchoolDay($local)) {
             return true;
         }
 
@@ -260,11 +372,26 @@ class QuietHours extends Model
      * jumps, which can cross a boundary). This is exact on DST days: a
      * boundary inside the spring-forward gap (02:00–03:00) takes effect at
      * the jump, and one inside the fall-back hour occurs twice.
+     *
+     * School days (David 2026-11-22): with no school day the school times are
+     * no boundary at all; when the window applies on some days but not all,
+     * every local midnight is a boundary too (a new day can switch the school
+     * window on or off). A boundary may leave the state unchanged (Saturday
+     * 08:00) — every caller re-reads isQuietNow() at it.
      */
     public function nextBoundaryAfter(CarbonInterface $time): ?CarbonInterface
     {
+        $times = [$this->bedtime_start, $this->bedtime_end];
+        if ($this->schoolDays() !== []) {
+            $times[] = $this->school_start;
+            $times[] = $this->school_end;
+        }
+        if ($this->schoolDependsOnDay()) {
+            $times[] = '00:00';
+        }
+
         $boundaries = [];
-        foreach ([$this->school_start, $this->school_end, $this->bedtime_start, $this->bedtime_end] as $boundary) {
+        foreach ($times as $boundary) {
             if ($boundary) {
                 $boundaries[] = array_map('intval', explode(':', substr($boundary, 0, 5)));
             }

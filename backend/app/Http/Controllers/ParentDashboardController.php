@@ -322,6 +322,8 @@ class ParentDashboardController extends Controller
             'bedtime_start' => $quietHours->bedtime_start,
             'bedtime_end' => $quietHours->bedtime_end,
             'is_active' => $quietHours->is_active,
+            // ISO weekdays 1 (Mon) … 7 (Sun) of the school window (David 2026-11-22).
+            'school_days' => $quietHours->schoolDays(),
             // false = QuietHours::DEFAULTS apply, no stored row yet.
             'saved' => (bool) $quietHours->exists,
         ] : null;
