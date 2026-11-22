@@ -3,10 +3,11 @@
  * use them — missing client IDs or a binary without the native module hide the buttons
  * (the e-mail form stays as before); Apple never on Android.
  */
-import { render, screen, waitFor } from '@testing-library/react-native';
+import { screen, waitFor } from '@testing-library/react-native';
 
 import { setSocialProbesForTests } from '@/modules/auth/socialSdk';
 import { SOCIAL_STRINGS } from '@/modules/auth/socialSignIn';
+import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import ParentLoginScreen from '@/screens/ParentLoginScreen';
 import ParentSignupScreen from '@/screens/ParentSignupScreen';
 
@@ -32,20 +33,20 @@ describe('parent auth screens — social buttons', () => {
 
   it('no Google client IDs in this build (Jest env has none) and no native modules → only the e-mail form', async () => {
     setSocialProbesForTests({ google: () => false, apple: () => false, crypto: () => false });
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     await waitFor(() => expect(screen.queryByTestId('parent-login-social')).toBeNull());
     expect(screen.queryByText(SOCIAL_STRINGS.google)).toBeNull();
   });
 
   it('native Google module present but client IDs missing → still no Google button', async () => {
     setSocialProbesForTests({ google: () => true, apple: () => false, crypto: () => false });
-    render(<ParentSignupScreen onBack={jest.fn()} onLogin={jest.fn()} />);
+    renderWithQuery(<ParentSignupScreen onBack={jest.fn()} onLogin={jest.fn()} />);
     await waitFor(() => expect(screen.queryByTestId('signup-social')).toBeNull());
   });
 
   it('iOS with Apple available → the Apple block appears above the e-mail form (Google still hidden without IDs)', async () => {
     setSocialProbesForTests({ google: () => true, apple: () => true, crypto: () => true });
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     expect(await screen.findByTestId('parent-login-social-apple')).toBeTruthy();
     expect(screen.queryByTestId('parent-login-social-google')).toBeNull();
     expect(screen.getByText(SOCIAL_STRINGS.divider)).toBeTruthy();

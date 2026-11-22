@@ -68,6 +68,16 @@ describe('signupBody', () => {
     });
   });
 
+  it('M5-08: adds the optional acquisition answer; nothing picked = no fields', () => {
+    expect(signupBody(valid, 'iPhone', undefined)).not.toHaveProperty('acquisition_source');
+    expect(signupBody(valid, 'iPhone', undefined, { source: 'tiktok', detail: 'ignored' })).toMatchObject({ acquisition_source: 'tiktok' });
+    expect(signupBody(valid, 'iPhone', undefined, { source: 'tiktok', detail: 'ignored' })).not.toHaveProperty('acquisition_detail');
+    expect(signupBody(valid, 'iPhone', undefined, { source: 'ad', detail: ' KODA1 ' })).toMatchObject({
+      acquisition_source: 'ad',
+      acquisition_detail: 'KODA1',
+    });
+  });
+
   it('leaves the timezone out when the device has none (server default)', () => {
     expect(signupBody(valid, 'iPhone', undefined)).not.toHaveProperty('timezone');
   });

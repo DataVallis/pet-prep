@@ -12,6 +12,7 @@ import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
 import { resetZoneSuggestionForTests, setZoneSuggestionStoreForTests } from '@/modules/familyZone/zoneSuggestionPrefs';
 import { setPhoneZoneForTests } from '@/modules/familyZone/familyZone';
 import { applyTimeFormat, setDeviceHour12ForTests } from '@/modules/time/clock';
+import { resetAcquisitionPrefsForTests, setAcquisitionPrefsStoreForTests } from '@/modules/validation/acquisitionPrefs';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -35,4 +36,7 @@ beforeEach(() => {
   // David 2026-11-16: 24 h phone, `auto` choice — the clock texts tests assert stay "7:00".
   applyTimeFormat('auto');
   setDeviceHour12ForTests(false);
+  // M5-08: the acquisition card's »done« ids are a device store (fresh, empty per test).
+  setAcquisitionPrefsStoreForTests({ getItemAsync: async () => null, setItemAsync: async () => undefined });
+  resetAcquisitionPrefsForTests();
 });

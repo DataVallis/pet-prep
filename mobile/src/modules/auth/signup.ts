@@ -19,6 +19,8 @@ import {
 } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
 import { saveSignInMethod } from '@/modules/session/signInMethod';
+import { acquisitionFields, EMPTY_ACQUISITION, type AcquisitionChoice } from '@/modules/validation/acquisition';
+import { markAcquisitionPromptDone } from '@/modules/validation/acquisitionPrefs';
 import { currentLanguage, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -119,12 +121,14 @@ export function deviceTimezone(): string | undefined {
   }
 }
 
-/** `POST /api/register` body from a validated form. */
+/** `POST /api/register` body from a validated form (+ the optional M5-08 acquisition answer). */
 export function signupBody(
   form: SignupForm,
   deviceName: string,
   /** Usually `deviceTimezone()`; undefined → the server uses Europe/Ljubljana. */
   timezone: string | undefined,
+  /** The picker's answer; null = the picker was not shown (admin switch not »All«) → no fields. */
+  acquisition: AcquisitionChoice | null = null,
 ): RegisterParentRequest {
   const body: RegisterParentRequest = {
     name: normalizeName(form.name),
@@ -135,7 +139,8 @@ export function signupBody(
     device_name: deviceName,
   };
   if (timezone !== undefined) body.timezone = timezone;
-  return body;
+  // M5-08: never required — nothing picked = the fields are left out (the server stores null).
+  return { ...body, ...acquisitionFields(acquisition ?? EMPTY_ACQUISITION) };
 }
 
 export interface SignupFailure {
@@ -227,7 +232,11 @@ export function mapSignupError(err: unknown): SignupFailure {
  * empty state offers "Dodaj otroka". Throws what `api.register` throws (map it with
  * `mapSignupError`).
  */
-export async function performSignup(body: RegisterParentRequest): Promise<SignInPayload> {
+export async function performSignup(
+  body: RegisterParentRequest,
+  /** M5-08: the sign-up showed »Kje ste izvedeli za PetPrep?« (then the dashboard card never asks again). */
+  options: { askedAcquisition?: boolean } = {},
+): Promise<SignInPayload> {
   let response: RegisterResponse;
   try {
     response = await api.register(body);
@@ -240,6 +249,8 @@ export async function performSignup(body: RegisterParentRequest): Promise<SignIn
     response = await api.register(withoutTimezone);
   }
   await saveAuthToken(response.token);
+  // M5-08: only when the parent saw the question here — otherwise the dashboard card may still ask once.
+  if (options.askedAcquisition === true) void markAcquisitionPromptDone(response.user.id);
   // M2-10c: an e-mail account confirms deletions with its password.
   await saveSignInMethod('password');
   return {

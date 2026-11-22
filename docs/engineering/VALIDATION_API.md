@@ -1,6 +1,6 @@
 # Validation plan — API contract (VALIDATION_PLAN §4.1, §4.4; H6, H7) — agreed 2026-11-21
 
-> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21, #1484; behind the admin switch of §0 since `feat/M5-08-validation-signals-switch`, 2026-11-22, default off); app: in preparation (mobile PR follows). Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
+> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21, #1484; behind the admin switch of §0 since `feat/M5-08-validation-signals-switch`, 2026-11-22, default off); app built 2026-11-22 (#1502, `feat/M5-08-validation-signals-app-v4`; supersedes #1479 / #1486 / #1500 after QA) and follows the same switch — off = no card, no Phase-2 row, no H6 call, no sign-up picker; a parent with a submitted answer and a live »Obvestite me« keeps the thank-you row for the withdrawal. Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
 
 David's decisions 2026-11-21:
 - (D1) The nightly breed / language runs keep running; the validation freeze does not apply to them.
