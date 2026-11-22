@@ -130,6 +130,7 @@ return [
     'american_hairless_terrier' => 'American Hairless Terrier',
     'tibetan_spaniel' => 'Tibetan Spaniel',
     'black_russian_terrier' => 'Black Russian Terrier',
+    'neapolitan_mastiff' => 'Neapolitan Mastiff',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

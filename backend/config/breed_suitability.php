@@ -3090,5 +3090,31 @@ return [
                 ['tag' => 'not_for_small_children', 'source_ids' => ['S990'], 'refs' => ['black_russian_terrier.behaviour.older_children']],
             ],
         ],
+
+        // M5-R10-132 Neapolitan Mastiff (data.json proposed_game_parameters.neapolitan_mastiff.suitability_tags; S994, S995,
+        // S996), runbook rules. Welfare rule: RKC Breed Watch Category 3 (S994) + PDSA eyelid problems (S995) → eyelid_problems;
+        // in marketing. No new vocabulary key. Never hypoallergenic.
+        'neapolitan_mastiff' => [
+            'suits' => [
+                // S995 "Neapolitan Mastiffs are loyal, devoted dogs that love family life."
+                ['tag' => 'family_pet', 'source_ids' => ['S995'], 'refs' => ['neapolitan_mastiff.behaviour.family']],
+                // S996 "Neapolitan Mastiffs are great with families and children" (never alone with a small child — data.json)
+                ['tag' => 'children', 'source_ids' => ['S996'], 'refs' => ['neapolitan_mastiff.behaviour.children']],
+                // S994 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S994'], 'refs' => ['neapolitan_mastiff.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S996 "shouldn't leave one alone with a small child"
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S996'], 'refs' => ['neapolitan_mastiff.behaviour.small_children']],
+                // S994 "Lifespan: Under 10 years"
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S994'], 'refs' => ['neapolitan_mastiff.suitability.rkc_lifespan', 'neapolitan_mastiff.lifespan.rkc']],
+                // Welfare rule: S995 eyelid problems "due to excessive skin over the face"; S994 Breed Watch "Category 3".
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S995', 'S994'], 'refs' => ['neapolitan_mastiff.health.eyelids', 'neapolitan_mastiff.health.breed_watch']],
+                // S994 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S994'], 'refs' => ['neapolitan_mastiff.suitability.rkc_shedding']],
+                // S996 "They also drool a lot"
+                ['tag' => 'drools', 'source_ids' => ['S996'], 'refs' => ['neapolitan_mastiff.behaviour.drooling']],
+            ],
+        ],
     ],
 ];
