@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "2d6f206d3b5774257b96ef103d67946877c6dd2fe48d776ec75e442a91a3c3f3"
+      "sha256": "a315748c8cb2d5214d1ba5908ff946740fc583671144753d6b3f01c5360b7c73"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -75138,7 +75138,7 @@
       "id": "neapolitan_mastiff",
       "species": "dog",
       "order": 122,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Neapolitan Mastiff",
         "sl": "Napolitanski mastif"
