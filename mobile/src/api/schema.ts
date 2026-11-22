@@ -1957,8 +1957,9 @@ export interface paths {
          *     stays (»Ne obveščajte me več«). 200 `{status: "saved"}`
          * @description While the admin switch »Validation signals« is off for this family:
          *     422 `{message, code: feature_unavailable}` and nothing stored — except a
-         *     withdrawal (`notify: false` from a parent who already has a row), which
-         *     always works (the price is then kept as stored).
+         *     withdrawal (`notify: false` from a parent who already submitted an
+         *     answer), which always works. A withdrawal changes only the consent: the
+         *     price, `submitted_at` and the view times stay as stored.
          *
          *     POST /api/parent/phase2-interest
          */
