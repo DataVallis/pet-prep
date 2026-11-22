@@ -169,6 +169,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-22 (claude.ai chat, docs only, `docs/business-credits-accelerators-lessons`)
+- Three new business docs (research with David, no code): `docs/business/STARTUP_CREDITS.md` (fal.ai Startup Program application **submitted 22. 11.**, re-apply earliest ~22. 2. 2027; idea: pre-generate + QC all shared looks, spec not written), `ACCELERATORS.md` (YC pending; 500 Global Eurasia after the first paying families), `DUOLINGO_ROVER_LESSONS.md` (15 proposals — Claude's, David has not decided — plus funnel / subscription simulations).
+
 ### 2026-11-22 (mobile, `feat/M5-08-validation-signals-app-v4`, #1502)
 - App part of the validation signals (supersedes #1479 / #1486 / #1500 after QA) on the generated types, behind the admin switch »Validation signals« (default off): card, Phase-2 row and H6 only for switched-on families, sign-up picker only in »Everyone«, withdrawal of a submitted answer always reachable, a refetch that turns the switch on never counts as an open. Not on a device.
 
