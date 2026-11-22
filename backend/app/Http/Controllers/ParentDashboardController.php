@@ -91,6 +91,12 @@ class ParentDashboardController extends Controller
                 'timezone' => $family->timezone,
                 'pet' => null,
                 'traffic_light' => 'green',
+                /**
+                 * The family's quiet hours row (all columns) + `saved`; `school_days` = ISO weekdays
+                 * of the school window (David 2026-11-22). Null while the family has no child.
+                 *
+                 * @var array{id: int, parent_id: int, school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, school_days: list<int>, created_at: string|null, updated_at: string|null, family_id: int|null, saved: bool}|null
+                 */
                 'quiet_hours' => $hasChildren
                     ? array_merge($quietHours->withoutRelations()->toArray(), ['saved' => (bool) $quietHours->exists])
                     : null,

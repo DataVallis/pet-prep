@@ -44,7 +44,10 @@ class UpdateQuietHoursRequest extends FormRequest
             'is_active' => ['boolean'],
             // Optional family timezone (IANA), saved on the parent (M1-03).
             'timezone' => ['sometimes', 'string', 'timezone:all'],
-        ] + $this->schoolDaysRules('school_days');
+            // Optional ISO weekdays 1 (Mon) … 7 (Sun) of the school window (David 2026-11-22); missing = keep the stored days.
+            'school_days' => $this->schoolDaysListRules(),
+            'school_days.*' => $this->schoolDayItemRules(),
+        ];
     }
 
     /**

@@ -18,24 +18,33 @@ trait ValidatesSchoolDays
     public const REASON_SCHOOL_DAYS_INVALID = 'school_days_invalid';
 
     /**
-     * @return array<string, list<mixed>>
+     * Rules of the list itself (`school_days`).
+     *
+     * @return list<mixed>
      */
-    protected function schoolDaysRules(string $field): array
+    protected function schoolDaysListRules(): array
+    {
+        return ['sometimes', 'present', 'array', 'list', 'max:7'];
+    }
+
+    /**
+     * Rules of each entry (`school_days.*`): a JSON integer only ("1" or 1.0 is
+     * not a day) — explicit so it never depends on the framework's
+     * `integer:strict` support; `integer` stays so `between` compares numbers.
+     *
+     * @return list<mixed>
+     */
+    protected function schoolDayItemRules(): array
     {
         return [
-            $field => ['sometimes', 'present', 'array', 'list', 'max:7'],
-            // A JSON integer only ("1" or 1.0 is not a day); explicit so it never depends on
-            // the framework's `integer:strict` support.
-            $field.'.*' => [
-                function (string $attribute, mixed $value, Closure $fail): void {
-                    if (! is_int($value)) {
-                        $fail('Each school day must be an integer 1..7.');
-                    }
-                },
-                'integer',
-                'between:1,7',
-                'distinct:strict',
-            ],
+            function (string $attribute, mixed $value, Closure $fail): void {
+                if (! is_int($value)) {
+                    $fail('Each school day must be an integer 1..7.');
+                }
+            },
+            'integer',
+            'between:1,7',
+            'distinct:strict',
         ];
     }
 

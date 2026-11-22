@@ -52,8 +52,8 @@ class UpdatePetQuietHoursRequest extends FormRequest
             'quiet_hours.bedtime_end' => [$notObject, 'present', 'nullable', 'string', 'date_format:H:i'],
             'quiet_hours.is_active' => [$notObject, 'required', 'boolean'],
             // David 2026-11-22: optional (old apps never send it — keep the stored days).
-            'quiet_hours.school_days' => [$notObject, ...$this->schoolDaysRules('quiet_hours.school_days')['quiet_hours.school_days']],
-            'quiet_hours.school_days.*' => [$notObject, ...$this->schoolDaysRules('quiet_hours.school_days')['quiet_hours.school_days.*']],
+            'quiet_hours.school_days' => [$notObject, ...$this->schoolDaysListRules()],
+            'quiet_hours.school_days.*' => [$notObject, ...$this->schoolDayItemRules()],
         ];
     }
 
