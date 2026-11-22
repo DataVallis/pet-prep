@@ -345,6 +345,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M6-S10 **Job za sinhronizacijo e-naslovov v Klaviyo** (David 17. 11. 2026: »v ozadju naredili en job, ki bo te maile shranjeval v klaviyo oz drugega ponudnika po potrebi«) — queued job, ki stike z `provider_synced_at` NULL ali `last_seen_at > provider_synced_at` (in brez `unsubscribed_at`) pošlje v Klaviyo s segmenti iz `email_signups` (vir, namen, pasma, jezik, UTM) in nastavi `provider_synced_at`; odjava iz Klavyja → `unsubscribed_at`. **Še ni zgrajen** — stolpca v `email_contacts` sta samo oznaki zanj; do takrat ročni uvoz iz CSV v administraciji.
 
 ## Po MVP (backlog)
+- **Album dosežkov (nalepke)** (David 22. 11. 2026, ideja po peaksters.pro; *načrt*, specifikacija `docs/product/ACHIEVEMENTS_SPEC.md`): nalepke praznujejo učenje in rast ljubljenčka, nikoli osnovne skrbi; brez nizov, nakupov in vpliva na oceno. Gradnja po 8. tednu validacije ali kot test v valu 2 (odloči David, spec §8).
 - **#walkyourpet galerija z Instagrama** (David 15. 11. 2026, odobreno; načrt `brand/WALKYOURPET.md` §Galerija z Instagrama): objave z #walkyourpet, ki označijo @petprep.si, gredo v moderirano vrsto v adminu in se na /walkyourpet prikažejo šele po odobritvi. Pred gradnjo: Meta aplikacija in povezan profesionalni račun (HANDOFF §1b).
 
 - ~~**Nadgradnja brezplačne živali v 12-tedenski izziv** (David 9. 10. 2026: *ne zdaj, kasneje*)~~ → premaknjeno v **M6-U** zgoraj (David 10. 11. 2026, `docs/product/FREE_PET_UPGRADE_SPEC.md`)
