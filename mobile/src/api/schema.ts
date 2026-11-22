@@ -106,6 +106,31 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/app-features": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Switches for the signed-out app. `validation_signals_signup`: may the
+         *     sign-up screen (e-mail and Google / Apple) show »Kje ste izvedeli za
+         *     PetPrep?« — true only while the admin switch »Validation signals« is
+         *     »Everyone« (the server ignores the answer otherwise). Signed-in parents
+         *     read `validation_signals` from `GET /api/user` instead. Cached ≈ 60 s on
+         *     the server. Throttled 60 / min per IP
+         * @description GET /api/app-features
+         */
+        get: operations["appFeatures.show"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/login": {
         parameters: {
             query?: never;
@@ -170,7 +195,9 @@ export interface paths {
          *     - Optional `acquisition_source` (»Kje ste izvedeli za PetPrep?«,
          *       VALIDATION_PLAN §4.1) + `acquisition_detail` (kept only with `other` /
          *       `ad`, ≤ 60 characters): an unknown value is stored as null and never
-         *       fails the sign-up.
+         *       fails the sign-up. Stored only while the admin switch »Validation
+         *       signals« is »Everyone« (`GET /api/app-features`
+         *       `validation_signals_signup`); otherwise ignored.
          *
          *     POST /api/register
          */
@@ -1853,6 +1880,8 @@ export interface paths {
          *       unknown value is ignored too (never a 422). `detail` is kept only with
          *       `other` / `ad`, trimmed, at most 60 characters.
          *     - `timezone` is required only when the body carries no acquisition field.
+         *     - The answer is ignored (200) while the admin switch »Validation
+         *       signals« is off for this parent's family.
          *     - Order: the answer is stored FIRST, then the timezone — a 422
          *       `timezone_change_too_soon` still keeps a stored answer.
          *
@@ -1874,7 +1903,9 @@ export interface paths {
          * The parent dashboard gained focus (after a cold start, a return to the
          *     foreground or a push tap — `trigger`, optional). The server keeps at
          *     most one open per parent per 30 minutes; a call inside that window is
-         *     accepted and ignored. Always 204. Throttled 30 / min per parent
+         *     accepted and ignored. Always 204. Throttled 30 / min per parent.
+         *     While the admin switch »Validation signals« is off for this family:
+         *     204 and nothing stored
          * @description POST /api/parent/dashboard-opened
          */
         post: operations["parentValidation.dashboardOpened"];
@@ -1895,7 +1926,8 @@ export interface paths {
         put?: never;
         /**
          * The parent tapped »Dobili smo pravo žival«: the first tap is stored,
-         *     later taps update the last one. 204
+         *     later taps update the last one. 204. While the admin switch
+         *     »Validation signals« is off for this family: 204 and nothing stored
          * @description POST /api/parent/phase2-interest/viewed
          */
         post: operations["parentValidation.phase2Viewed"];
@@ -1923,7 +1955,12 @@ export interface paths {
          *     parent's address (`email` is then ignored). **Withdrawal:** a parent who
          *     already answered may send only `{notify: false}` — the stored price
          *     stays (»Ne obveščajte me več«). 200 `{status: "saved"}`
-         * @description POST /api/parent/phase2-interest
+         * @description While the admin switch »Validation signals« is off for this family:
+         *     422 `{message, code: feature_unavailable}` and nothing stored — except a
+         *     withdrawal (`notify: false` from a parent who already has a row), which
+         *     always works (the price is then kept as stored).
+         *
+         *     POST /api/parent/phase2-interest
          */
         post: operations["parentValidation.phase2Submit"];
         delete?: never;
@@ -4279,6 +4316,27 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "appFeatures.show": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        validation_signals_signup: boolean;
+                    };
+                };
+            };
+        };
+    };
     "auth.login": {
         parameters: {
             query?: never;
@@ -4485,6 +4543,7 @@ export interface operations {
                          * @enum {string|null}
                          */
                         acquisition_source: "friend_family" | "instagram" | "tiktok" | "facebook" | "youtube" | "school_kindergarten" | "search" | "website" | "ad" | "other" | null;
+                        validation_signals: boolean;
                     };
                 };
             };
@@ -31902,6 +31961,7 @@ export interface operations {
                             /** @enum {string|null} */
                             price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
                         };
+                        validation_signals: boolean;
                     } | {
                         /** @enum {string} */
                         message: "No active pet session found." | "No child profile paired yet.";
@@ -32534,6 +32594,7 @@ export interface operations {
                             /** @enum {string|null} */
                             price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
                         };
+                        validation_signals: boolean;
                     } | {
                         /** @constant */
                         message: "No child profile paired yet.";
@@ -32552,6 +32613,7 @@ export interface operations {
                             /** @enum {string|null} */
                             price_choice: "free" | "monthly_2_99" | "monthly_5_99" | null;
                         };
+                        validation_signals: boolean;
                     };
                 };
             };
