@@ -403,7 +403,7 @@
       "address": "Industrigatan 18, 386 32 Färjestaden",
       "phone": "010-122 94 20",
       "emergency_24h": false,
-      "duty": "Vet reachable by phone around the clock on 010-122 94 20; call to confirm the line covers small animals.",
+      "duty": "Vet reachable by phone around the clock on 010-122 94 20.",
       "duty_i18n": {
         "hr": "Veterinar dostupan telefonom danonoćno na 010-122 94 20; nazovi i provjeri pokriva li linija male životinje.",
         "de": "Tierarzt rund um die Uhr telefonisch erreichbar unter 010-122 94 20; bitte anrufen und nachfragen, ob die Nummer auch für Kleintiere gilt.",
@@ -417,13 +417,14 @@
         "sv": "Veterinär nås per telefon dygnet runt på 010-122 94 20; ring och kontrollera att linjen gäller smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt på 010-122 94 20; ring for at bekræfte, at linjen dækker små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden numerosta 010-122 94 20; varmista soittamalla, että numero kattaa pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt på 010-122 94 20; ring for å bekrefte at linjen dekker smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt på 010-122 94 20; ring for å bekrefte at linjen dekker smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan na 010-122 94 20."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
       "checked": "2026-11-03",
-      "note": "Holiday island Öland. Phone on-call line, species of the 24-h line not stated; no rota table published. Page says a vet can be reached around the clock by phone on 010-122 94 20 but does not state that the round-the-clock line covers small animals (small-animal clinic on Öland is listed separately). Not counted as 24 h. Unclear on source whether the line covers small animals.",
+      "note": "Holiday island Öland. Phone on-call line, species of the 24-h line not stated; no rota table published. Page says a vet can be reached around the clock by phone on 010-122 94 20 but does not state that the round-the-clock line covers small animals (small-animal clinic on Öland is listed separately). Not counted as 24 h. Unclear on source whether the line covers small animals. call to confirm the line covers small animals",
       "quote": "Veterinär nås dygnet runt på telefon 010-122 94 20."
     },
     {
@@ -1284,7 +1285,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/skelleftea",
@@ -1315,7 +1317,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in druge male živali."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/vannas",
@@ -1346,7 +1349,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1377,7 +1381,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1438,7 +1443,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/pitea",
@@ -1469,7 +1475,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1500,7 +1507,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in druge male živali."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/alvsbyn",
@@ -1531,7 +1539,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1562,7 +1571,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/jamtlands-lan/hede",
@@ -1593,7 +1603,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/mora",
@@ -1624,7 +1635,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1655,7 +1667,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in druge male živali."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/nykoping",
@@ -1686,7 +1699,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1717,7 +1731,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1748,7 +1763,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1779,7 +1795,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/fjardhundra",
@@ -1810,7 +1827,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in druge male živali."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1841,7 +1859,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1872,7 +1891,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1903,7 +1923,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/sjobo-osterlen",
@@ -1934,7 +1955,8 @@
         "sv": "En veterinär nås per telefon dygnet runt för akut sjuka djur (jour i beredskap, inget bemannat djursjukhus med öppet dygnet runt); själva kliniken är bara öppen på vardagar. Hundar, katter och andra smådjur.",
         "da": "Dyrlæge kan kontaktes telefonisk døgnet rundt ved akut syge dyr (vagt i beredskab, ikke et hospital med 24-timers bemanding); selve klinikken er kun åben på hverdage. Hunde, katte og andre små dyr.",
         "fi": "Eläinlääkäri tavoitettavissa puhelimitse ympäri vuorokauden akuutisti sairaille eläimille (varallaolo, ei miehitetty 24 h:n sairaala); klinikka itse auki vain arkisin. Koirat, kissat ja muut pieneläimet.",
-        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr."
+        "nb": "Dyrlege kan nås på telefon døgnet rundt for akutt syke dyr (beredskapsvakt, ikke et bemannet døgnåpent sykehus); selve klinikken er kun åpen på hverdager. Hunder, katter og andre smådyr.",
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne ljubljenčke (dežurna pripravljenost, ni bolnišnica z osebjem 24 ur na dan); sama ambulanta je odprta samo ob delavnikih. Psi, mačke in drugi mali ljubljenčki."
       },
       "note": "Species 'listed' on source page.",
       "small_animals": true,
@@ -1965,7 +1987,8 @@
         "sv": "Mån–fre 07.30–12.00 och 13.00–16.30; inget akutnummer utanför öppettiderna.",
         "da": "Man–fre 07.30–12.00 og 13.00–16.30; intet akutnummer uden for åbningstid.",
         "fi": "ma–pe 7.30–12 ja 13–16.30; ei päivystysnumeroa virka-ajan ulkopuolella.",
-        "nb": "Man–fre 07.30–12.00 og 13.00–16.30; ingen nødtelefon utenom åpningstiden."
+        "nb": "Man–fre 07.30–12.00 og 13.00–16.30; ingen nødtelefon utenom åpningstiden.",
+        "sl": "Pon–pet 7.30–12 in 13–16.30; številke za nujne primere zunaj delovnega časa ni."
       },
       "note": "'On the page' (per source).",
       "small_animals": true,
@@ -2175,7 +2198,8 @@
         "sv": "Akutmottagning mån–tors 07.30–21.00, fre 07.30–18.00; inga akuttider på helgen.",
         "da": "Akutmodtagelse man–tors 07.30–21.00, fre 07.30–18.00; ingen akutåbning i weekenden.",
         "fi": "Päivystysvastaanotto ma–to 7.30–21, pe 7.30–18; ei viikonloppupäivystystä.",
-        "nb": "Akuttmottak man–tor kl. 7.30–21.00, fre kl. 7.30–18.00; ingen akuttåpningstid i helgen."
+        "nb": "Akuttmottak man–tor kl. 7.30–21.00, fre kl. 7.30–18.00; ingen akuttåpningstid i helgen.",
+        "sl": "Sprejem za nujne primere pon–čet 7.30–21, pet 7.30–18; ob koncih tedna ni nujnega sprejema."
       },
       "note": "'On the page' (per source).",
       "small_animals": true,

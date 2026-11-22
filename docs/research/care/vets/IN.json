@@ -68,7 +68,8 @@
         "sv": "OPD 8–13 på arbetsdagar (8–11.30 på helgdagar). Akut- och intensivvårdsenheten för stora och små djur är öppen dygnet runt.",
         "da": "Ambulatorium 8.00–13.00 på hverdage (8.00–11.30 på helligdage). Akut- og intensivafdelingen for store og små dyr har åbent døgnet rundt.",
         "fi": "OPD 8.00–13.00 työpäivinä (8.00–11.30 pyhinä). Suur- ja pieneläinten päivystys- ja tehohoitoyksikkö toimii ympäri vuorokauden.",
-        "nb": "Poliklinikk (OPD) 8.00–13.00 på arbeidsdager (8.00–11.30 på helligdager). Akutt- og intensivavdelingen for store og små dyr er åpen hele døgnet."
+        "nb": "Poliklinikk (OPD) 8.00–13.00 på arbeidsdager (8.00–11.30 på helligdager). Akutt- og intensivavdelingen for store og små dyr er åpen hele døgnet.",
+        "sl": "Ambulanta 8–13 ob delavnikih (8–11.30 ob praznikih). Enota za nujno in intenzivno oskrbo za velike in male živali deluje 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://tanuvas.ac.in/",
@@ -96,7 +97,8 @@
         "sv": "OPD mån–fre 8–13; lör, sön och statliga helgdagar 8–11.30.",
         "da": "Ambulatorium man–fre 8.00–13.00; lørdag, søndag og offentlige helligdage 8.00–11.30.",
         "fi": "OPD ma–pe 8.00–13.00; la, su ja valtion pyhinä 8.00–11.30.",
-        "nb": "Poliklinikk (OPD) man–fre 8.00–13.00; lørdag, søndag og offentlige helligdager 8.00–11.30."
+        "nb": "Poliklinikk (OPD) man–fre 8.00–13.00; lørdag, søndag og offentlige helligdager 8.00–11.30.",
+        "sl": "Ambulanta pon–pet 8–13; sob, ned in državni prazniki 8–11.30."
       },
       "small_animals": true,
       "url": "https://tanuvas.ac.in/dc_vuph_mmc.php",
@@ -123,7 +125,8 @@
         "sv": "OPD 9–12 och 14–16; kvällsklinik 16–22 på arbetsdagar (13–21 på helgdagar), telefon +91 94470 30801.",
         "da": "Ambulatorium 9.00–12.00 og 14.00–16.00; aftenklinik 16.00–22.00 på hverdage (13.00–21.00 på helligdage), tlf. +91 94470 30801.",
         "fi": "OPD 9.00–12.00 ja 14.00–16.00; iltaklinikka 16.00–22.00 työpäivinä (13.00–21.00 pyhinä), puhelin +91 94470 30801.",
-        "nb": "Poliklinikk (OPD) 9.00–12.00 og 14.00–16.00; kveldsklinikk 16.00–22.00 på arbeidsdager (13.00–21.00 på helligdager), telefon +91 94470 30801."
+        "nb": "Poliklinikk (OPD) 9.00–12.00 og 14.00–16.00; kveldsklinikk 16.00–22.00 på arbeidsdager (13.00–21.00 på helligdager), telefon +91 94470 30801.",
+        "sl": "Ambulanta 9–12 in 14–16; večerna ambulanta 16–22 ob delavnikih (13–21 ob praznikih), telefon +91 94470 30801."
       },
       "small_animals": true,
       "url": "https://www.kvasu.ac.in/uvh-tvcc-mannuthy",
@@ -151,7 +154,8 @@
         "sv": "Smådjursklinik OPD 9.30–12.30 alla dagar, även helgdagar.",
         "da": "Smådyrsklinik, ambulatorium 9.30–12.30 alle dage, også helligdage.",
         "fi": "Pieneläinklinikan OPD 9.30–12.30 joka päivä pyhät mukaan lukien.",
-        "nb": "Smådyrklinikk, poliklinikk kl. 9.30–12.30 alle dager, også helligdager."
+        "nb": "Smådyrklinikk, poliklinikk kl. 9.30–12.30 alle dager, også helligdager.",
+        "sl": "Ambulanta za male živali 9.30–12.30 vse dni, tudi ob praznikih."
       },
       "small_animals": true,
       "url": "https://new.gadvasu.in/en/department/401023321/teaching-veterinary-clinical-complex",
@@ -178,7 +182,8 @@
         "sv": "Öppenvård 9–12; akutbehandling finns till 16.",
         "da": "Ambulatorium 9.00–12.00; akut behandling til kl. 16.00.",
         "fi": "Poliklinikka 9.00–12.00; päivystyshoito saatavilla klo 16.00 asti.",
-        "nb": "Poliklinikk kl. 9.00–12.00; akuttbehandling tilgjengelig til kl. 16.00."
+        "nb": "Poliklinikk kl. 9.00–12.00; akuttbehandling tilgjengelig til kl. 16.00.",
+        "sl": "Ambulanta 9–12; nujna oskrba do 16."
       },
       "small_animals": true,
       "url": "https://pvnrtvu.ac.in/?p=2124",
@@ -204,7 +209,8 @@
         "sv": "Erbjuder akut djurhälsovård dygnet runt; Referral Veterinary Polyclinic har akutservice dygnet runt för kritiskt sjuka patienter.",
         "da": "Tilbyder akutberedskab for dyr døgnet rundt; henvisningspolyklinikken har akutberedskab døgnet rundt for kritisk syge patienter.",
         "fi": "Tarjoaa eläinten päivystyspalveluja 24/7; Referral Veterinary Polyclinicissa on 24/7-päivystys kriittisesti sairaille potilaille.",
-        "nb": "Tilbyr akuttbehandling av dyr hele døgnet; Referral Veterinary Polyclinic har akuttjeneste hele døgnet for kritisk syke pasienter."
+        "nb": "Tilbyr akuttbehandling av dyr hele døgnet; Referral Veterinary Polyclinic har akuttjeneste hele døgnet for kritisk syke pasienter.",
+        "sl": "Nujna veterinarska pomoč 24/7; napotna veterinarska poliklinika ima nujno službo 24/7 za kritično bolne paciente."
       },
       "small_animals": true,
       "url": "https://ivri.nic.in/academics/TVCC.aspx",
@@ -232,7 +238,8 @@
         "sv": "Öppet dygnet runt, alla veckans dagar; akut- och intensivvård dygnet runt. Ring på vägen.",
         "da": "Åbent døgnet rundt, 7 dage om ugen; akut- og intensivbehandling døgnet rundt. Ring i forvejen, når du er på vej.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa; päivystys ja tehohoito ympäri vuorokauden. Soita etukäteen matkalla.",
-        "nb": "Åpent hele døgnet, sju dager i uken; akutt- og intensivbehandling døgnet rundt. Ring på forhånd på veien."
+        "nb": "Åpent hele døgnet, sju dager i uken; akutt- og intensivbehandling døgnet rundt. Ring på forhånd på veien.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; nujna in intenzivna oskrba neprekinjeno. Pokličite med potjo."
       },
       "small_animals": true,
       "url": "https://sahmumbai.com/",
@@ -260,7 +267,8 @@
         "sv": "Öppet dygnet runt för akutfall och intensivvård.",
         "da": "Åbent døgnet rundt for akutte tilfælde og intensivbehandling.",
         "fi": "Auki 24x7 päivystykseen ja tehohoitoon.",
-        "nb": "Åpent hele døgnet, alle dager, for nødtilfeller og intensivbehandling."
+        "nb": "Åpent hele døgnet, alle dager, for nødtilfeller og intensivbehandling.",
+        "sl": "Odprto 24/7 za nujne primere in intenzivno oskrbo."
       },
       "small_animals": true,
       "url": "https://zigly.com/",
@@ -288,7 +296,8 @@
         "sv": "Multispecialiserat djursjukhus öppet dygnet runt.",
         "da": "Døgnåbent dyrehospital med mange specialer.",
         "fi": "Auki 24x7, monialainen lemmikkisairaala.",
-        "nb": "Åpent hele døgnet, sju dager i uken; dyresykehus med mange spesialiteter."
+        "nb": "Åpent hele døgnet, sju dager i uken; dyresykehus med mange spesialiteter.",
+        "sl": "Večspecialistična bolnišnica za male živali, odprta 24/7."
       },
       "small_animals": true,
       "url": "https://zigly.com/",
@@ -316,7 +325,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -344,7 +354,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -372,7 +383,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -400,7 +412,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -428,7 +441,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -456,7 +470,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -484,7 +499,8 @@
         "sv": "Öppet dygnet runt för akutfall hos sällskapsdjur. Akuthjälplinje +91 80627 44111.",
         "da": "Åbent døgnet rundt ved akutte tilfælde hos kæledyr. Akuttelefon +91 80627 44111.",
         "fi": "Auki 24/7 lemmikkien päivystystapauksiin. Päivystysnumero +91 80627 44111.",
-        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111."
+        "nb": "Åpent hele døgnet for nødtilfeller hos kjæledyr. Akuttlinje +91 80627 44111.",
+        "sl": "Odprto 24/7 za nujne primere. Nujna številka +91 80627 44111."
       },
       "small_animals": true,
       "url": "https://crown.vet/",
@@ -512,7 +528,8 @@
         "sv": "Öppet dygnet runt, alla dagar, för akutfall och inläggning.",
         "da": "Åbent døgnet rundt, hver dag, for akutte tilfælde og indlæggelse.",
         "fi": "Auki ympäri vuorokauden joka päivä päivystykseen ja sairaalahoitoon.",
-        "nb": "Åpent hele døgnet, alle dager, for nødtilfeller og innleggelse."
+        "nb": "Åpent hele døgnet, alle dager, for nødtilfeller og innleggelse.",
+        "sl": "Odprto 24 ur na dan, vse dni, za nujne primere in hospitalizacijo."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -540,7 +557,8 @@
         "sv": "Ring och bekräfta tiderna; akutfall tas emot först. Utanför klinikens öppettider har djursjukhuset i Domlur i Bengaluru öppet dygnet runt.",
         "da": "Ring for at bekræfte åbningstiderne; akutte tilfælde tages først. Uden for klinikkens åbningstid har hospitalet i Domlur i Bengaluru åbent døgnet rundt.",
         "fi": "Soita ja varmista aukioloajat; päivystystapaukset otetaan ensin. Klinikan aukioloaikojen ulkopuolella Domlurin sairaala Bengalurussa on auki ympäri vuorokauden.",
-        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet."
+        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet.",
+        "sl": "Pokličite in preverite delovni čas; nujne primere obravnavajo prednostno. Zunaj delovnega časa ambulante je bolnišnica Domlur v Bengaluruju odprta 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -568,7 +586,8 @@
         "sv": "Ring och bekräfta tiderna; akutfall tas emot först. Utanför klinikens öppettider har djursjukhuset i Domlur i Bengaluru öppet dygnet runt.",
         "da": "Ring for at bekræfte åbningstiderne; akutte tilfælde tages først. Uden for klinikkens åbningstid har hospitalet i Domlur i Bengaluru åbent døgnet rundt.",
         "fi": "Soita ja varmista aukioloajat; päivystystapaukset otetaan ensin. Klinikan aukioloaikojen ulkopuolella Domlurin sairaala Bengalurussa on auki ympäri vuorokauden.",
-        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet."
+        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet.",
+        "sl": "Pokličite in preverite delovni čas; nujne primere obravnavajo prednostno. Zunaj delovnega časa ambulante je bolnišnica Domlur v Bengaluruju odprta 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -596,7 +615,8 @@
         "sv": "Ring och bekräfta tiderna; akutfall tas emot först. Utanför klinikens öppettider har djursjukhuset i Domlur i Bengaluru öppet dygnet runt.",
         "da": "Ring for at bekræfte åbningstiderne; akutte tilfælde tages først. Uden for klinikkens åbningstid har hospitalet i Domlur i Bengaluru åbent døgnet rundt.",
         "fi": "Soita ja varmista aukioloajat; päivystystapaukset otetaan ensin. Klinikan aukioloaikojen ulkopuolella Domlurin sairaala Bengalurussa on auki ympäri vuorokauden.",
-        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet."
+        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet.",
+        "sl": "Pokličite in preverite delovni čas; nujni primeri so obravnavani prvi. Zunaj delovnega časa ambulante je bolnišnica Domlur v Bengaluruju odprta 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -624,7 +644,8 @@
         "sv": "Ring och bekräfta tiderna; akutfall tas emot först. Utanför klinikens öppettider har djursjukhuset i Domlur i Bengaluru öppet dygnet runt.",
         "da": "Ring for at bekræfte åbningstiderne; akutte tilfælde tages først. Uden for klinikkens åbningstid har hospitalet i Domlur i Bengaluru åbent døgnet rundt.",
         "fi": "Soita ja varmista aukioloajat; päivystystapaukset otetaan ensin. Klinikan aukioloaikojen ulkopuolella Domlurin sairaala Bengalurussa on auki ympäri vuorokauden.",
-        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet."
+        "nb": "Ring for å bekrefte tidene; nødtilfeller tas først. Utenfor klinikkens åpningstid er sykehuset i Domlur i Bengaluru åpent hele døgnet.",
+        "sl": "Pokličite in preverite delovni čas; nujne primere obravnavajo najprej. Zunaj delovnega časa ambulante je bolnišnica Domlur v Bengaluruju odprta 24 ur na dan."
       },
       "small_animals": true,
       "url": "https://cessnalifeline.com/",
@@ -652,7 +673,8 @@
         "sv": "Öppet dygnet runt, även helger och helgdagar; akut- och intensivvårdsenhet.",
         "da": "Åbent døgnet rundt, også weekender og helligdage; akut- og intensivafdeling.",
         "fi": "Auki 24/7, viikonloput ja pyhät mukaan lukien; päivystys- ja tehohoitoyksikkö.",
-        "nb": "Åpent hele døgnet, også i helger og på helligdager; akutt- og intensivavdeling."
+        "nb": "Åpent hele døgnet, også i helger og på helligdager; akutt- og intensivavdeling.",
+        "sl": "Odprto 24/7, tudi ob koncih tedna in praznikih; enota za nujno in intenzivno oskrbo."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -680,7 +702,8 @@
         "sv": "Öppet dygnet runt, även helger och helgdagar.",
         "da": "Åbent døgnet rundt, også weekender og helligdage.",
         "fi": "Auki 24/7, viikonloput ja pyhät mukaan lukien.",
-        "nb": "Åpent hele døgnet, også i helger og på helligdager."
+        "nb": "Åpent hele døgnet, også i helger og på helligdager.",
+        "sl": "Odprto 24/7, tudi ob koncih tedna in praznikih."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -708,7 +731,8 @@
         "sv": "Öppet 9–21.",
         "da": "Åbent 9.00–21.00.",
         "fi": "Auki 9.00–21.00.",
-        "nb": "Åpent 9.00–21.00."
+        "nb": "Åpent 9.00–21.00.",
+        "sl": "Odprto 9–21."
       },
       "small_animals": true,
       "url": "https://sevenoakspet.in/",
@@ -736,7 +760,8 @@
         "sv": "Öppet dygnet runt, alla dagar, även helgdagar.",
         "da": "Åbent døgnet rundt, alle dage, også helligdage.",
         "fi": "Auki 24/7, kaikkina päivinä pyhät mukaan lukien.",
-        "nb": "Åpent hele døgnet, alle dager, også helligdager."
+        "nb": "Åpent hele døgnet, alle dager, også helligdager.",
+        "sl": "Odprto 24/7, vse dni, tudi ob praznikih."
       },
       "small_animals": true,
       "url": "https://www.littleangelspetclinic.com/",
@@ -764,7 +789,8 @@
         "sv": "Akutvård dygnet runt; ring filialen.",
         "da": "Akut hjælp døgnet rundt; ring til afdelingen.",
         "fi": "Päivystys 24/7; soita toimipisteeseen.",
-        "nb": "Akuttbehandling hele døgnet; ring filialen."
+        "nb": "Akuttbehandling hele døgnet; ring filialen.",
+        "sl": "Nujna pomoč 24/7; pokličite podružnico."
       },
       "small_animals": true,
       "url": "https://drpet.co.in/",
@@ -792,7 +818,8 @@
         "sv": "Öppet dagligen 9–21; akutvård under öppettiderna, ring innan du kommer vid brådskande fall.",
         "da": "Åbent dagligt 9.00–21.00; akut hjælp i åbningstiden, ring i forvejen ved hastesager.",
         "fi": "Auki päivittäin 9.00–21.00; päivystyshoito aukioloaikoina, kiireellisissä tapauksissa soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–21.00; akuttbehandling i åpningstiden, ring på forhånd ved hastetilfeller."
+        "nb": "Åpent alle dager kl. 09.00–21.00; akuttbehandling i åpningstiden, ring på forhånd ved hastetilfeller.",
+        "sl": "Odprto vsak dan 9–21; nujna pomoč v delovnem času, za nujne primere vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://www.skspethospital.com/",
@@ -808,7 +835,7 @@
       "address": "139, Balaji Nagar, Thudiyalur, Coimbatore 641034",
       "phone": "+91 93428 93438",
       "emergency_24h": false,
-      "duty": "Open daily 9:00-22:00; emergency services and ambulance advertised around the clock, call ahead.",
+      "duty": "Open daily 9:00-22:00; emergency services and ambulance around the clock, call ahead.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 9 h–22 h ; services d’urgences et ambulance annoncés 24 h/24, appelez avant de venir.",
         "es": "Abierto todos los días de 9:00 a 22:00 h; anuncia urgencias y ambulancia las 24 horas, llama antes.",
@@ -820,13 +847,14 @@
         "sv": "Öppet dagligen 9–22; akutservice och ambulans annonseras dygnet runt, ring innan du kommer.",
         "da": "Åbent dagligt 9.00–22.00; akutservice og ambulance oplyses at være tilgængelige døgnet rundt, ring i forvejen.",
         "fi": "Auki päivittäin 9.00–22.00; päivystystä ja ambulanssia mainostetaan ympäri vuorokauden, soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–22.00; akuttjeneste og ambulanse annonseres døgnet rundt, ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–22.00; akuttjeneste og ambulanse annonseres døgnet rundt, ring på forhånd.",
+        "sl": "Odprto vsak dan 9–22; nujna pomoč in reševalno vozilo neprekinjeno, vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://www.lifecarevet.com/",
       "source_url": "https://www.lifecarevet.com/",
       "checked": "2026-11-10",
-      "note": "Meta description says '24/7 emergency services' and ambulance 'round the clock' but listed hours are 9-22, so emergency_24h left false (conflicting)."
+      "note": "Meta description says '24/7 emergency services' and ambulance 'round the clock' but listed hours are 9-22, so emergency_24h left false (conflicting). advertised"
     },
     {
       "kind": "clinic",
@@ -848,7 +876,8 @@
         "sv": "Öppet dygnet runt, alla veckans dagar; akut- och intensivvård dygnet runt.",
         "da": "Åbent døgnet rundt, alle ugens dage; akut- og intensivbehandling døgnet rundt.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa; päivystys ja tehohoito 24x7.",
-        "nb": "Åpent hele døgnet, sju dager i uken; akutt- og intensivbehandling hele døgnet."
+        "nb": "Åpent hele døgnet, sju dager i uken; akutt- og intensivbehandling hele døgnet.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; nujna in intenzivna oskrba 24/7."
       },
       "small_animals": true,
       "url": "https://pupsnkitspethospital.com/",
@@ -876,7 +905,8 @@
         "sv": "Öppet dagligen 9.30–20.30; akutservice dygnet runt. Andra linjen +91 99984 72105.",
         "da": "Åbent 9.30–20.30 dagligt; akutservice døgnet rundt. Anden linje +91 99984 72105.",
         "fi": "Auki päivittäin 9.30–20.30; päivystys 24x7. Toinen numero +91 99984 72105.",
-        "nb": "Åpent 9.30–20.30 hver dag; akuttjeneste hele døgnet, sju dager i uken. Ekstra linje +91 99984 72105."
+        "nb": "Åpent 9.30–20.30 hver dag; akuttjeneste hele døgnet, sju dager i uken. Ekstra linje +91 99984 72105.",
+        "sl": "Odprto vsak dan 9.30–20.30; nujna služba 24/7. Druga številka +91 99984 72105."
       },
       "small_animals": true,
       "url": "https://imperialvethospital.com/",
@@ -892,7 +922,7 @@
       "address": "20-21, Ground Floor, Amrapali, near Domino's Pizza, beside Vakil Bridge, Ambli-Bopal Road junction, Ahmedabad 380058",
       "phone": "+91 98246 26711",
       "emergency_24h": false,
-      "duty": "Open 9:00-20:00 (Sunday 9:00-13:00). Emergency services advertised 365 days; call ahead.",
+      "duty": "Open 9:00-20:00 (Sunday 9:00-13:00). Emergency services 365 days; call ahead.",
       "duty_i18n": {
         "fr": "Ouvert 9 h–20 h (dimanche 9 h–13 h). Urgences annoncées 365 jours par an ; appelez avant de venir.",
         "es": "Abierto de 9:00 a 20:00 h (domingo de 9:00 a 13:00 h). Anuncia urgencias los 365 días; llama antes.",
@@ -904,13 +934,14 @@
         "sv": "Öppet 9–20 (söndag 9–13). Akutservice annonseras alla 365 dagar; ring innan du kommer.",
         "da": "Åbent 9.00–20.00 (søn 9.00–13.00). Akutservice oplyses at være tilgængelig 365 dage om året; ring i forvejen.",
         "fi": "Auki 9.00–20.00 (su 9.00–13.00). Päivystystä mainostetaan 365 päivänä; soita etukäteen.",
-        "nb": "Åpent 9.00–20.00 (søndag 9.00–13.00). Akuttjenester annonseres 365 dager i året; ring på forhånd."
+        "nb": "Åpent 9.00–20.00 (søndag 9.00–13.00). Akuttjenester annonseres 365 dager i året; ring på forhånd.",
+        "sl": "Odprto 9–20 (ned 9–13). Nujna pomoč 365 dni v letu; vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://www.petsandpawsindia.com/",
       "source_url": "https://www.petsandpawsindia.com/",
       "checked": "2026-11-10",
-      "note": "Homepage says '365 Days - 24/7 Emergency Services Available' without saying which branch; branch hours are daytime, so false. Other branches: Naroda, Thaltej, Gandhinagar, Udaipur (not listed)."
+      "note": "Homepage says '365 Days - 24/7 Emergency Services Available' without saying which branch; branch hours are daytime, so false. Other branches: Naroda, Thaltej, Gandhinagar, Udaipur (not listed). advertised"
     },
     {
       "kind": "clinic",
@@ -932,7 +963,8 @@
         "sv": "Öppet dygnet runt; akutlinjen besvaras av en person dygnet runt.",
         "da": "Åbent døgnet rundt; akuttelefonen besvares af et menneske døgnet rundt.",
         "fi": "Auki 24/7; päivystysnumeroon vastaa ihminen ympäri vuorokauden.",
-        "nb": "Åpent hele døgnet; akuttlinjen besvares av en person døgnet rundt."
+        "nb": "Åpent hele døgnet; akuttlinjen besvares av en person døgnet rundt.",
+        "sl": "Odprto 24/7; na nujni številki se ves čas oglasi oseba."
       },
       "small_animals": true,
       "url": "https://supervetz.in/",
@@ -960,7 +992,8 @@
         "sv": "Öppet dygnet runt, alla veckans dagar.",
         "da": "Åbent døgnet rundt, alle ugens dage.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa.",
-        "nb": "Åpent hele døgnet, alle dager i uken."
+        "nb": "Åpent hele døgnet, alle dager i uken.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu."
       },
       "small_animals": true,
       "url": "https://cochinpetspecialities.com/",
@@ -976,12 +1009,12 @@
       "address": "Eroor Road, Sharipady, Tripunithura, Kochi 682306",
       "phone": "+91 99619 33999",
       "emergency_24h": false,
-      "duty": "Hours 9:00-21:00; 24/7 emergency line and ambulance advertised, call ahead.",
+      "duty": "Hours 9:00-21:00; 24/7 emergency line and ambulance, call ahead.",
       "small_animals": true,
       "url": "https://www.felican.in/",
       "source_url": "https://www.felican.in/contact",
       "checked": "2026-11-10",
-      "note": "Contact page labels Tripunithura '24/7' and also '09 AM - 09 PM' plus '24X7 Emergency Care & Ambulance'; conflicting, so false until confirmed by phone. Other branches: Muvattupuzha, Thoppumpady. Removed from duty: Hours listed 9:00-21:00; 24/7 emergency line and ambulance advertised, call ahead.",
+      "note": "Contact page labels Tripunithura '24/7' and also '09 AM - 09 PM' plus '24X7 Emergency Care & Ambulance'; conflicting, so false until confirmed by phone. Other branches: Muvattupuzha, Thoppumpady. Removed from duty: Hours listed 9:00-21:00; 24/7 emergency line and ambulance advertised, call ahead. advertised",
       "duty_i18n": {
         "es": "Horario de 9:00 a 21:00 h; anuncia línea de urgencias 24/7 y ambulancia, llama antes.",
         "it": "Orari 9:00–21:00; linea di emergenza e ambulanza 24 ore su 24, 7 giorni su 7 dichiarate, telefonare in anticipo.",
@@ -992,7 +1025,8 @@
         "sv": "Öppettider 9–21; akutlinje och ambulans dygnet runt annonseras, ring innan du kommer.",
         "da": "Åbningstid 9.00–21.00; akuttelefon og ambulance oplyses at være døgnåbne, ring i forvejen.",
         "fi": "Aukioloajat 9.00–21.00; 24/7-päivystysnumeroa ja ambulanssia mainostetaan, soita etukäteen.",
-        "nb": "Åpent kl. 9.00–21.00; akuttelefon og ambulanse hele døgnet oppgitt, ring på forhånd."
+        "nb": "Åpent kl. 9.00–21.00; akuttelefon og ambulanse hele døgnet oppgitt, ring på forhånd.",
+        "sl": "Delovni čas 9–21; nujna številka in reševalno vozilo 24/7, vnaprej pokličite."
       }
     },
     {
@@ -1015,7 +1049,8 @@
         "sv": "Akutservice och djurambulans dygnet runt.",
         "da": "Akutservice og dyreambulance døgnet rundt.",
         "fi": "Päivystys 24/7 ja lemmikkiambulanssi.",
-        "nb": "Akuttjeneste og dyreambulanse hele døgnet."
+        "nb": "Akuttjeneste og dyreambulanse hele døgnet.",
+        "sl": "Nujna služba in reševalno vozilo za ljubljenčke 24/7."
       },
       "small_animals": true,
       "url": "https://vetbrospethospital.com/",
@@ -1043,7 +1078,8 @@
         "sv": "Akutservice dygnet runt.",
         "da": "Akutservice døgnet rundt.",
         "fi": "Päivystys 24x7.",
-        "nb": "Akuttjeneste hele døgnet."
+        "nb": "Akuttjeneste hele døgnet.",
+        "sl": "Nujna služba 24/7."
       },
       "small_animals": true,
       "url": "https://www.sukhdapethospital.com/",
@@ -1070,7 +1106,8 @@
         "sv": "Akutvård dygnet runt, även nätter, helger och helgdagar.",
         "da": "Akut hjælp døgnet rundt, også om natten, i weekender og på helligdage.",
         "fi": "Päivystys ympäri vuorokauden, myös öisin, viikonloppuisin ja pyhinä.",
-        "nb": "Akuttbehandling hele døgnet, også om natten, i helger og på helligdager."
+        "nb": "Akuttbehandling hele døgnet, også om natten, i helger og på helligdager.",
+        "sl": "Nujna oskrba 24 ur na dan, tudi ponoči, ob koncih tedna in praznikih."
       },
       "small_animals": true,
       "url": "https://www.vet24animalhospital.com/",
@@ -1098,7 +1135,8 @@
         "sv": "OPD 9–21; akutvård dygnet runt.",
         "da": "Ambulatorium 9.00–21.00; akut døgnet rundt.",
         "fi": "OPD 9.00–21.00; päivystys 24x7.",
-        "nb": "Poliklinikk (OPD) 9.00–21.00; akuttjeneste hele døgnet."
+        "nb": "Poliklinikk (OPD) 9.00–21.00; akuttjeneste hele døgnet.",
+        "sl": "Ambulanta 9–21; nujna pomoč 24/7."
       },
       "small_animals": true,
       "url": "https://primevets.in/",
@@ -1114,7 +1152,7 @@
       "address": "No. 143, Ground Floor, Phase 7, Sector 61, Sahibzada Ajit Singh Nagar 160062",
       "phone": "+91 98789 87863",
       "emergency_24h": false,
-      "duty": "Open daily 9:30-20:00; emergency support line advertised, call ahead.",
+      "duty": "Open daily 9:30-20:00; emergency support line, call ahead.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 9 h 30–20 h ; ligne d’assistance d’urgence annoncée, appelez avant de venir.",
         "es": "Abierto todos los días de 9:30 a 20:00 h; anuncia línea de ayuda de urgencias, llama antes.",
@@ -1126,13 +1164,14 @@
         "sv": "Öppet dagligen 9.30–20; akutstödlinje annonseras, ring innan du kommer.",
         "da": "Åbent dagligt 9.30–20.00; akuttelefon oplyses, ring i forvejen.",
         "fi": "Auki päivittäin 9.30–20.00; päivystystukinumeroa mainostetaan, soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.30–20.00; akuttlinje annonseres, ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.30–20.00; akuttlinje annonseres, ring på forhånd.",
+        "sl": "Odprto vsak dan 9.30–20; telefonska podpora za nujne primere, vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://thesmallanimalmohali.com/",
       "source_url": "https://thesmallanimalmohali.com/",
       "checked": "2026-11-10",
-      "note": "Page shows '24/7 Emergency Support' label but hours 9:30-20:00 and no explicit open-24-h statement."
+      "note": "Page shows '24/7 Emergency Support' label but hours 9:30-20:00 and no explicit open-24-h statement. advertised"
     },
     {
       "kind": "clinic",
@@ -1142,7 +1181,7 @@
       "address": "#1155, Sector 21B, Chandigarh",
       "phone": "+91 97805 27267",
       "emergency_24h": true,
-      "duty": "Advertised open 24/7. Emergency helplines 9317711155, 9780527267, 8288818220.",
+      "duty": "Open 24/7. Emergency helplines 9317711155, 9780527267, 8288818220.",
       "duty_i18n": {
         "fr": "Annoncé ouvert 24 h/24, 7 j/7. Lignes d’urgences : 9317711155, 9780527267, 8288818220.",
         "es": "Se anuncia abierto 24/7. Líneas de urgencias 9317711155, 9780527267, 8288818220.",
@@ -1154,13 +1193,14 @@
         "sv": "Annonseras som öppet dygnet runt. Akuthjälplinjer 9317711155, 9780527267, 8288818220.",
         "da": "Oplyses at have åbent døgnet rundt. Akuttelefoner 9317711155, 9780527267, 8288818220.",
         "fi": "Mainostetaan auki 24/7. Päivystysnumerot 9317711155, 9780527267, 8288818220.",
-        "nb": "Markedsføres som åpen hele døgnet. Akuttelefoner 9317711155, 9780527267, 8288818220."
+        "nb": "Markedsføres som åpen hele døgnet. Akuttelefoner 9317711155, 9780527267, 8288818220.",
+        "sl": "Odprto 24/7. Nujne številke 9317711155, 9780527267, 8288818220."
       },
       "small_animals": true,
       "url": "https://www.petsmarthospitals.com/",
       "source_url": "https://www.petsmarthospitals.com/",
       "checked": "2026-11-10",
-      "note": "Page says the hospital is 'open 24/7', no branch-specific hours; other branches (Sector 21 Pet Mall Bay, Manimajra) not listed. Footer has placeholder contact data. petsmarthospitals.com helpline numbers are on the same page."
+      "note": "Page says the hospital is 'open 24/7', no branch-specific hours; other branches (Sector 21 Pet Mall Bay, Manimajra) not listed. Footer has placeholder contact data. petsmarthospitals.com helpline numbers are on the same page. Advertised"
     },
     {
       "kind": "clinic",
@@ -1182,7 +1222,8 @@
         "sv": "Service dygnet runt utan uppehåll.",
         "da": "Døgnservice døgnet rundt.",
         "fi": "Palvelu keskeytyksettä 24/7.",
-        "nb": "Døgnåpen tjeneste, alle dager."
+        "nb": "Døgnåpen tjeneste, alle dager.",
+        "sl": "Neprekinjeno 24/7."
       },
       "small_animals": true,
       "url": "https://animalveterinaryhospital.in/",
@@ -1210,7 +1251,8 @@
         "sv": "Öppet måndag–lördag 9–18.",
         "da": "Åbent mandag til lørdag 9.00–18.00.",
         "fi": "Auki maanantaista lauantaihin 9.00–18.00.",
-        "nb": "Åpent mandag til lørdag 9.00–18.00."
+        "nb": "Åpent mandag til lørdag 9.00–18.00.",
+        "sl": "Odprto pon–sob 9–18."
       },
       "small_animals": true,
       "url": "https://papaslifeline.com/",
@@ -1238,7 +1280,8 @@
         "sv": "Öppet dagligen 9–23.",
         "da": "Åbent dagligt 9.00–23.00.",
         "fi": "Auki päivittäin 9.00–23.00.",
-        "nb": "Åpent alle dager kl. 09.00–23.00."
+        "nb": "Åpent alle dager kl. 09.00–23.00.",
+        "sl": "Odprto vsak dan 9–23."
       },
       "small_animals": true,
       "url": "https://cupabangalore.org/",
@@ -1254,7 +1297,7 @@
       "address": "Beside Foodex and Jack Frost, Bank Street, Muralinagar, Madhavadhara, Visakhapatnam 530007",
       "phone": "+91 63017 12955",
       "emergency_24h": false,
-      "duty": "Hours Monday to Friday 9:00-18:00; says it is available for emergencies 24/7, call ahead.",
+      "duty": "Hours Monday to Friday 9:00-18:00; available for emergencies 24/7, call ahead.",
       "duty_i18n": {
         "fr": "Horaires : du lundi au vendredi 9 h–18 h ; indique être disponible pour les urgences 24 h/24, 7 j/7, appelez avant de venir.",
         "es": "Horario de lunes a viernes de 9:00 a 18:00 h; dice estar disponible para urgencias 24/7, llama antes.",
@@ -1266,13 +1309,14 @@
         "sv": "Öppettider måndag–fredag 9–18; uppges vara tillgängligt för akutfall dygnet runt, ring innan du kommer.",
         "da": "Åbent mandag til fredag 9.00–18.00; oplyser at være tilgængelig for akutte tilfælde døgnet rundt, ring i forvejen.",
         "fi": "Aukioloajat ma–pe 9.00–18.00; kertoo olevansa käytettävissä päivystystapauksiin 24/7, soita etukäteen.",
-        "nb": "Åpent mandag til fredag kl. 9.00–18.00; oppgir at de er tilgjengelige for nødtilfeller hele døgnet, ring på forhånd."
+        "nb": "Åpent mandag til fredag kl. 9.00–18.00; oppgir at de er tilgjengelige for nødtilfeller hele døgnet, ring på forhånd.",
+        "sl": "Delovni čas pon–pet 9–18; za nujne primere na voljo 24/7, vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://mypetclinicvizag.com/",
       "source_url": "https://mypetclinicvizag.com/emergency-pet-clinic-service-in-vizag/",
       "checked": "2026-11-10",
-      "note": "Emergency page: 'we are available for 24/7 in Vizag' but hours Mon-Fri 9-18; conflicting, false until confirmed by phone."
+      "note": "Emergency page: 'we are available for 24/7 in Vizag' but hours Mon-Fri 9-18; conflicting, false until confirmed by phone. says it is"
     },
     {
       "kind": "clinic",
@@ -1294,7 +1338,8 @@
         "sv": "Öppet 9–20 för vanliga besök; öppet dygnet runt för akutfall. Akuthjälplinje +91 91931 00911.",
         "da": "Åbent 9.00–20.00 til almindelige besøg; åbent døgnet rundt for akutte tilfælde. Akuttelefon +91 91931 00911.",
         "fi": "Auki 9.00–20.00 yleisiin käynteihin; päivystykseen auki 24x7. Päivystysnumero +91 91931 00911.",
-        "nb": "Åpent 9.00–20.00 for vanlige besøk; åpent hele døgnet, sju dager i uken, for nødtilfeller. Akuttlinje +91 91931 00911."
+        "nb": "Åpent 9.00–20.00 for vanlige besøk; åpent hele døgnet, sju dager i uken, for nødtilfeller. Akuttlinje +91 91931 00911.",
+        "sl": "Odprto 9–20 za redne obiske; 24/7 za nujne primere. Nujna številka +91 91931 00911."
       },
       "small_animals": true,
       "url": "https://evavets.com/",
@@ -1322,7 +1367,8 @@
         "sv": "OPD 11–17; IPD-inskrivning 10–18. Ring eller använd WhatsApp vid akutfall.",
         "da": "Ambulatorium 11.00–17.00; indlæggelse 10.00–18.00. Ring eller skriv på WhatsApp ved akutte tilfælde.",
         "fi": "OPD 11.00–17.00; IPD-sisäänotto 10.00–18.00. Päivystystapauksissa soita tai laita WhatsApp-viesti.",
-        "nb": "Poliklinikk (OPD) 11.00–17.00; innleggelse (IPD) 10.00–18.00. Ring eller send WhatsApp ved nødtilfeller."
+        "nb": "Poliklinikk (OPD) 11.00–17.00; innleggelse (IPD) 10.00–18.00. Ring eller send WhatsApp ved nødtilfeller.",
+        "sl": "Ambulanta 11–17; sprejem na hospitalizacijo 10–18. Za nujne primere pokličite ali pišite na WhatsApp."
       },
       "small_animals": true,
       "url": "https://raahatanimalhospital.org/",
@@ -1350,7 +1396,8 @@
         "sv": "Akut djurbehandling dygnet runt, dag som natt.",
         "da": "Akut behandling af kæledyr døgnet rundt, dag og nat.",
         "fi": "Lemmikkien päivystyshoito 24x7, päivin ja öin.",
-        "nb": "Akutt behandling av kjæledyr hele døgnet, dag eller natt."
+        "nb": "Akutt behandling av kjæledyr hele døgnet, dag eller natt.",
+        "sl": "Nujna oskrba 24/7, podnevi in ponoči."
       },
       "small_animals": true,
       "url": "https://www.sspetcare.com/",
@@ -1366,7 +1413,7 @@
       "address": "Khasra no. 1009, Raj Nagar Extension Road, near UCO Bank, Ghaziabad 201003",
       "phone": "09211915444",
       "emergency_24h": false,
-      "duty": "Open daily 10:00-20:00; 24/7 emergency services advertised, call ahead.",
+      "duty": "Open daily 10:00-20:00; 24/7 emergency services, call ahead.",
       "duty_i18n": {
         "fr": "Ouvert tous les jours 10 h–20 h ; urgences annoncées 24 h/24, 7 j/7, appelez avant de venir.",
         "es": "Abierto todos los días de 10:00 a 20:00 h; anuncia urgencias 24/7, llama antes.",
@@ -1378,13 +1425,14 @@
         "sv": "Öppet dagligen 10–20; akutservice dygnet runt annonseras, ring innan du kommer.",
         "da": "Åbent dagligt 10.00–20.00; akutservice oplyses at være døgnåben, ring i forvejen.",
         "fi": "Auki päivittäin 10.00–20.00; 24/7-päivystystä mainostetaan, soita etukäteen.",
-        "nb": "Åpent alle dager kl. 10.00–20.00; akuttjeneste hele døgnet, alle dager, annonseres; ring på forhånd."
+        "nb": "Åpent alle dager kl. 10.00–20.00; akuttjeneste hele døgnet, alle dager, annonseres; ring på forhånd.",
+        "sl": "Odprto vsak dan 10–20; nujna pomoč 24/7, vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://drsinghpetcaremaxpet.com/",
       "source_url": "https://drsinghpetcaremaxpet.com/",
       "checked": "2026-11-10",
-      "note": "Services text '24/7 emergency veterinary services' conflicts with listed hours 10-20; false until confirmed by phone. Second number 0120-5044855."
+      "note": "Services text '24/7 emergency veterinary services' conflicts with listed hours 10-20; false until confirmed by phone. Second number 0120-5044855. advertised"
     },
     {
       "kind": "clinic",
@@ -1394,7 +1442,7 @@
       "address": "SB-06, Sector 117, Noida",
       "phone": "+91 72238 47355",
       "emergency_24h": false,
-      "duty": "Mon-Fri 10:30-20:30, Sat-Sun 10:00-21:00; emergency help advertised 24x7, call ahead.",
+      "duty": "Mon-Fri 10:30-20:30, Sat-Sun 10:00-21:00; emergency help 24x7, call ahead.",
       "duty_i18n": {
         "fr": "Lun.–ven. 10 h 30–20 h 30, sam.–dim. 10 h–21 h ; aide d’urgence annoncée 24 h/24, 7 j/7, appelez avant de venir.",
         "es": "De lunes a viernes de 10:30 a 20:30 h, sábado y domingo de 10:00 a 21:00 h; anuncia ayuda de urgencias 24/7, llama antes.",
@@ -1406,13 +1454,14 @@
         "sv": "Mån–fre 10.30–20.30, lör–sön 10–21; akuthjälp dygnet runt annonseras, ring innan du kommer.",
         "da": "Man–fre 10.30–20.30, lør–søn 10.00–21.00; akut hjælp oplyses at være tilgængelig døgnet rundt, ring i forvejen.",
         "fi": "ma–pe 10.30–20.30, la–su 10.00–21.00; päivystysapua mainostetaan 24x7, soita etukäteen.",
-        "nb": "Man–fre 10.30–20.30, lør–søn 10.00–21.00; akutthjelp oppgis hele døgnet, ring på forhånd."
+        "nb": "Man–fre 10.30–20.30, lør–søn 10.00–21.00; akutthjelp oppgis hele døgnet, ring på forhånd.",
+        "sl": "Pon–pet 10.30–20.30, sob–ned 10–21; nujna pomoč 24/7, vnaprej pokličite."
       },
       "small_animals": true,
       "url": "https://pawcentric.in/",
       "source_url": "https://pawcentric.in/about-pet-doctor-clinic-near-me-noida",
       "checked": "2026-11-10",
-      "note": "Hours table says 'Emergency: Open 24X7' but another note says emergency 21:00-10:00; address differs between header (SB-06) and footer (SB-07), meta title says Sector 122. Conflicting, so false."
+      "note": "Hours table says 'Emergency: Open 24X7' but another note says emergency 21:00-10:00; address differs between header (SB-06) and footer (SB-07), meta title says Sector 122. Conflicting, so false. advertised"
     }
   ],
   "notes": "India: 49 entries, 29 marked 24 h. No official clinic registry exists to cross-check: the Veterinary Council of India and state vet councils register individual practitioners (Indian Veterinary Council Act 1984), not clinics, so 24-h clinics were found via their own sites and university hospital pages. No official duty rota found (no Notdienst-style system). No animal poison information line found: AIIMS National Poisons Information Centre (1800 116 117) and CMC Vellore poison centre (1800 425 1213) were opened but serve humans and do not say they take animal calls, so not listed as poison_line. Skipped (robots disallowed or unusable): anihealpetvet.com (Jaipur 24/7), sanchuanimalhospital.com contact page (Sanchu 24x7 Bengaluru/Chennai/Coimbatore), barksandmeowspetclinic.com (Coimbatore). Not opened/usable: Max Vets (Delhi/Gurugram, maxvets.com returned empty pages), Friendicoes SECA (night clinic suspended per own site; contact page failed), BSPCA Parel hospital (no own site found; news only), Fairy Tails Goa (only a press page, no phone), Goa Dog Foundation clinics (page failed), Delhi government 24x7 hospital (only a blog), KVAFSU Hebbal vet hospital (no clinic page), Tritails/Cadovet (no address or phone), PetHouse Lucknow/Chandigarh pages (no local clinic), vetic.in/practo/justdial aggregators ignored. Cities still missing or thin: Goa, Surat, Nagpur, Lucknow, Bhopal, Patna, Guwahati, Bhubaneswar, Kochi beyond two, Mumbai beyond Tata/Crown/Cessna, Delhi beyond Zigly/Crown, Gurugram, Bengaluru 24 h beyond Cessna/Crown, Kolkata beyond Pups & Kits, Pune beyond Crown, Hyderabad beyond Seven Oaks/Crown."

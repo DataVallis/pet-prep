@@ -42,6 +42,10 @@ class AuthController extends Controller
      *   stored as `terms_accepted_at`.
      * - No e-mail verification yet (M2-10b). Throttled: 5 / min and
      *   20 / hour per IP (429 with `Retry-After`).
+     * - Optional `acquisition_source` (»Kje ste izvedeli za PetPrep?«,
+     *   VALIDATION_PLAN §4.1) + `acquisition_detail` (kept only with `other` /
+     *   `ad`, ≤ 60 characters): an unknown value is stored as null and never
+     *   fails the sign-up.
      *
      * POST /api/register
      */
@@ -54,6 +58,7 @@ class AuthController extends Controller
                 $request->plainPassword(),
                 $request->familyTimezone(),
                 $request->deviceName(),
+                $request->acquisitionAnswer(),
             );
         } catch (EmailTakenException $e) {
             // Concurrent sign-up with the same address won the race.
@@ -113,6 +118,10 @@ class AuthController extends Controller
      * unreachable). Validation errors are the usual 422 `errors`. Children
      * never use this (PIN only). Throttled: 10 / min and 30 / hour per IP.
      *
+     * Optional `acquisition_source` / `acquisition_detail` (as at
+     * `POST /api/register`) are stored only when this call creates the
+     * account; for an existing account they are ignored.
+     *
      * POST /api/auth/social
      *
      * @throws SocialAuthException
@@ -128,6 +137,7 @@ class AuthController extends Controller
             $request->familyTimezone(),
             $request->displayName(),
             $request->deviceName(),
+            $request->acquisitionAnswer(),
         );
 
         $user = $result->user;
@@ -269,6 +279,14 @@ class AuthController extends Controller
              * @var 'auto'|'24h'|'12h'
              */
             'time_format' => $user->timeFormat()->value,
+            /**
+             * VALIDATION_PLAN §4.1: the parent's answer to »Kje ste izvedeli za PetPrep?«
+             * (null = not answered yet → the app may offer the question once, via
+             * PATCH /api/parent/settings). Always null for a child.
+             *
+             * @var 'friend_family'|'instagram'|'tiktok'|'facebook'|'youtube'|'school_kindergarten'|'search'|'website'|'ad'|'other'|null
+             */
+            'acquisition_source' => $user->isParent() ? $user->acquisition_source : null,
         ], 200);
     }
 

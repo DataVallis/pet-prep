@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Enums\SocialProvider;
+use App\Http\Requests\Concerns\AcceptsAcquisitionSource;
 use App\Http\Requests\Concerns\NormalizesTimezoneInput;
 use App\Support\RequestLocale;
 use Illuminate\Foundation\Http\FormRequest;
@@ -15,6 +16,7 @@ use Illuminate\Validation\Rule;
  */
 class SocialSignInRequest extends FormRequest
 {
+    use AcceptsAcquisitionSource;
     use NormalizesTimezoneInput;
 
     public const MAX_ID_TOKEN_LENGTH = 4096;
@@ -29,6 +31,9 @@ class SocialSignInRequest extends FormRequest
         // Device aliases (Etc/UTC, Asia/Calcutta …) → canonical name; unknown
         // but valid → default (logged), as at POST /api/register.
         $this->normalizeTimezoneInput('timezone', fallbackToDefault: true);
+
+        // VALIDATION_PLAN §4.1: used only when this call creates the account; never a 422.
+        $this->prepareAcquisitionInput();
     }
 
     /**
@@ -54,6 +59,7 @@ class SocialSignInRequest extends FormRequest
             // follow Accept-Language.
             'locale' => ['nullable', 'string', Rule::in(RequestLocale::supported())],
             'device_name' => ['nullable', 'string', 'max:255'],
+            ...$this->acquisitionRules(),
         ];
     }
 

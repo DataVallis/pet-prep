@@ -55,7 +55,8 @@
         "sv": "Akut hjälplinje dygnet runt: ring gratisnumret 153 och välj anknytning 22; personalen bedömer fallet och hänvisar dig till lämplig veterinärhjälp. Jourkliniker utanför öppettid turas om mellan Gozo samt norra och södra Malta, varje natt 20–8 samt söndagar och helgdagar.",
         "da": "Akuttelefon døgnet rundt, 7 dage om ugen: ring gratis på 153 og vælg lokalnummer 22; personalet vurderer sagen og henviser dig til passende dyrlægehjælp. Akutklinikker uden for åbningstid har vagt på skift i Gozo, det nordlige og det sydlige Malta, hver nat 20.00–8.00 samt søndage og helligdage.",
         "fi": "Päivystyksen neuvontapuhelin 24/7: soita maksuttomaan numeroon 153 ja valitse alanumero 22; henkilökunta arvioi tapauksen ja ohjaa sinut sopivan eläinlääkärin luo. Aukioloaikojen ulkopuoliset päivystysklinikat vuorottelevat Gozon sekä Maltan pohjois- ja eteläosan välillä, öisin klo 20–8 sekä sunnuntaisin ja pyhäpäivinä.",
-        "nb": "Akuttelefon hele døgnet: ring gratisnummeret 153 og velg internnummer 22; personalet vurderer saken og henviser deg til passende dyrlegehjelp. Akuttklinikker utenom åpningstid går på rundgang mellom Gozo, nord og sør på Malta, hver natt kl. 20–08 og på søndager/helligdager."
+        "nb": "Akuttelefon hele døgnet: ring gratisnummeret 153 og velg internnummer 22; personalet vurderer saken og henviser deg til passende dyrlegehjelp. Akuttklinikker utenom åpningstid går på rundgang mellom Gozo, nord og sør på Malta, hver natt kl. 20–08 og på søndager/helligdager.",
+        "sl": "Nujna linija 24/7: pokličite brezplačno številko 153 in izberite interno 22; osebje oceni primer in vas napoti k ustrezni veterinarski pomoči. Nujne klinike zunaj delovnega časa se izmenjujejo po Gozu ter severnem in južnem delu Malte, vsako noč 20–8 ter ob nedeljah in praznikih."
       },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
@@ -86,7 +87,8 @@
         "sv": "Jourklinik utanför öppettid, 20–8; ring först hjälplinjen 153, anknytning 22.",
         "da": "Akutklinik uden for åbningstid, 20.00–8.00; ring først til hjælpelinjen 153, lokalnummer 22.",
         "fi": "Päivystysklinikka aukioloaikojen ulkopuolella 20–8; soita ensin neuvontapuhelimeen 153, alanumero 22.",
-        "nb": "Dyrlegevakt utenom åpningstid, kl. 20–08; ring først hjelpelinjen 153, internnummer 22."
+        "nb": "Dyrlegevakt utenom åpningstid, kl. 20–08; ring først hjelpelinjen 153, internnummer 22.",
+        "sl": "Nujna klinika zunaj delovnega časa, 20–8; najprej pokličite telefonsko linijo 153, notranja številka 22."
       },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",
@@ -115,7 +117,8 @@
         "sv": "Gozo: på söndagar och helgdagar kör en beredskapstransport små husdjur vid verkliga akutfall till en klinik på Malta; ring först den nationella akutlinjen.",
         "da": "Gozo: søndage og helligdage kører en transport i beredskab små kæledyr til en klinik på Malta i reelle akutte tilfælde; ring først til det nationale akutnummer.",
         "fi": "Gozo: sunnuntaisin ja pyhäpäivinä varakuljetus vie pienet lemmikit todellisissa hätätilanteissa klinikalle Maltalle; soita ensin kansalliseen päivystysnumeroon.",
-        "nb": "Gozo: på søndager og helligdager bringer en beredskapstransport små kjæledyr ved reelle nødtilfeller til en klinikk på Malta; ring først det nasjonale nødnummeret."
+        "nb": "Gozo: på søndager og helligdager bringer en beredskapstransport små kjæledyr ved reelle nødtilfeller til en klinikk på Malta; ring først det nasjonale nødnummeret.",
+        "sl": "Gozo: ob nedeljah in praznikih dežurni prevoz v resnih nujnih primerih odpelje male ljubljenčke v kliniko na Malti; najprej pokličite državno nujno številko."
       },
       "small_animals": true,
       "url": "https://vsc.gov.mt/?p=970",

@@ -51,7 +51,8 @@
         "sv": "Veterinärklinik öppen dygnet runt (24/7), inklusive intensivvård.",
         "da": "Dyreklinik åben døgnet rundt, også med intensivafdeling.",
         "fi": "Eläinklinikka auki ympäri vuorokauden (24/7), myös tehohoito.",
-        "nb": "Dyreklinikk åpen døgnet rundt, alle dager, inkludert intensivavdeling."
+        "nb": "Dyreklinikk åpen døgnet rundt, alle dager, inkludert intensivavdeling.",
+        "sl": "Veterinarska klinika odprta 24 ur na dan (24/7), vključno z intenzivno nego."
       }
     },
     {
@@ -78,7 +79,8 @@
         "sv": "Öppet dygnet runt, alla veckans dagar, på filialen i Buiucani.",
         "da": "Åbent døgnet rundt, 7 dage om ugen, på afdelingen i Buiucani.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa Buiucanin toimipisteessä.",
-        "nb": "Åpent hele døgnet, alle dager i uken ved avdelingen i Buiucani."
+        "nb": "Åpent hele døgnet, alle dager i uken ved avdelingen i Buiucani.",
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, v enoti Buiucani."
       }
     },
     {
@@ -105,7 +107,8 @@
         "sv": "Mån–fre 09.00–17.00, lör 09.00–13.00, sön stängt. Mobil: (067) 32-32-11.",
         "da": "Man–fre 9.00–17.00, lør 9.00–13.00, søn lukket. Mobil: (067) 32-32-11.",
         "fi": "ma–pe 9.00–17.00, la 9.00–13.00, su suljettu. Matkapuhelin: (067) 32-32-11.",
-        "nb": "Man–fre 09.00–17.00, lør 09.00–13.00, søn stengt. Mobil: (067) 32-32-11."
+        "nb": "Man–fre 09.00–17.00, lør 09.00–13.00, søn stengt. Mobil: (067) 32-32-11.",
+        "sl": "Pon–pet 9–17, sob 9–13, ned zaprto. Mobilna številka: (067) 32-32-11."
       }
     },
     {
@@ -132,7 +135,8 @@
         "sv": "Bokad tid rekommenderas. Övriga telefonnummer: +373 79 588 317, +373 69 130 317.",
         "da": "Tidsbestilling anbefales. Andre telefonnumre: +373 79 588 317, +373 69 130 317.",
         "fi": "Ajanvaraus suositeltava. Muut puhelinnumerot: +373 79 588 317, +373 69 130 317.",
-        "nb": "Timebestilling anbefales. Andre telefonnumre: +373 79 588 317, +373 69 130 317."
+        "nb": "Timebestilling anbefales. Andre telefonnumre: +373 79 588 317, +373 69 130 317.",
+        "sl": "Priporočamo naročanje. Druge številke: +373 79 588 317, +373 69 130 317."
       }
     },
     {
@@ -159,7 +163,8 @@
         "sv": "Mån–lör 09.00–18.00, söndag stängt. Akutfall tas emot först under öppettid; ring innan du kommer. Mobil/WhatsApp/Viber: +373 60 694 388.",
         "da": "Man–lør 9.00–18.00, søndag lukket. Akutte tilfælde tages først i åbningstiden; ring, før du kommer. Mobil/WhatsApp/Viber: +373 60 694 388.",
         "fi": "ma–la 9.00–18.00, su suljettu. Päivystyspotilaat otetaan vastaan ensin aukioloaikoina; soita ennen tuloa. Matkapuhelin/WhatsApp/Viber: +373 60 694 388.",
-        "nb": "man–lør 9.00–18.00, stengt søndag. Nødtilfeller tas først i åpningstiden; ring før du kommer. Mobil/WhatsApp/Viber: +373 60 694 388."
+        "nb": "man–lør 9.00–18.00, stengt søndag. Nødtilfeller tas først i åpningstiden; ring før du kommer. Mobil/WhatsApp/Viber: +373 60 694 388.",
+        "sl": "Pon–sob 9–18, ned zaprto. Nujni primeri so med delovnim časom obravnavani prednostno; pokličite, preden pridete. Mobilna številka/WhatsApp/Viber: +373 60 694 388."
       }
     },
     {
@@ -186,7 +191,8 @@
         "sv": "Akutvård erbjuds; ring innan du kommer för att höra om det finns plats. Filialer finns i Botanica, Centru, Codru, Telecentru, Durlești, Sângera och Ialoveni.",
         "da": "Tilbyder akuthjælp; ring på forhånd for at høre, om der er ledige tider. Afdelinger i Botanica, Centru, Codru, Telecentru, Durlești, Sângera og Ialoveni.",
         "fi": "Päivystys tarjolla; kysy saatavuutta soittamalla etukäteen. Toimipisteet: Botanica, Centru, Codru, Telecentru, Durlești, Sângera ja Ialoveni.",
-        "nb": "Akuttbehandling tilbys; ring på forhånd for tilgjengelighet. Avdelinger i Botanica, Centru, Codru, Telecentru, Durlești, Sângera og Ialoveni."
+        "nb": "Akuttbehandling tilbys; ring på forhånd for tilgjengelighet. Avdelinger i Botanica, Centru, Codru, Telecentru, Durlești, Sângera og Ialoveni.",
+        "sl": "Nujna oskrba na voljo; razpoložljivost preverite s klicem vnaprej. Enote v Botanici, Centru, Codruju, Telecentru, Durlești, Sângeri in Ialoveniju."
       }
     }
   ],

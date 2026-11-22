@@ -128,7 +128,8 @@
         "sv": "Akut, kirurgi och inläggning dygnet runt, alla dagar; linje dygnet runt +63 956 308 6855, även +63 32 425 9197.",
         "da": "Akut, operation og indlæggelse døgnet rundt hver dag; døgnlinje +63 956 308 6855, også +63 32 425 9197.",
         "fi": "Päivystys, leikkaukset ja osastohoito ympäri vuorokauden joka päivä; 24/7-numero +63 956 308 6855, myös +63 32 425 9197.",
-        "nb": "Akutt, kirurgi og innleggelse hele døgnet, hver dag; vakttelefon hele døgnet +63 956 308 6855, også +63 32 425 9197."
+        "nb": "Akutt, kirurgi og innleggelse hele døgnet, hver dag; vakttelefon hele døgnet +63 956 308 6855, også +63 32 425 9197.",
+        "sl": "Nujna pomoč, kirurgija in bolnišnična oskrba 24 ur na dan; linija 24 ur na dan +63 956 308 6855, tudi +63 32 425 9197."
       }
     },
     {
@@ -155,7 +156,8 @@
         "sv": "Konsultationer och besök utan tidsbokning mån–lör 08.00–20.00, sön 09.00–17.00; vid akutfall dygnet runt vänd dig till sjukhuset i Banilad.",
         "da": "Konsultationer og uanmeldte besøg man–lør 8.00–20.00, søn 9.00–17.00; ved akutte tilfælde døgnet rundt henvend dig til hospitalet i Banilad.",
         "fi": "Vastaanotto ja ajanvarauksettomat käynnit ma–la 8.00–20.00, su 9.00–17.00; ympärivuorokautisessa päivystyksessä käytä Baniladin sairaalaa.",
-        "nb": "Konsultasjoner og oppmøte uten timebestilling man–lør kl. 8.00–20.00, søn kl. 9.00–17.00; for nødtilfeller hele døgnet bruk sykehuset i Banilad."
+        "nb": "Konsultasjoner og oppmøte uten timebestilling man–lør kl. 8.00–20.00, søn kl. 9.00–17.00; for nødtilfeller hele døgnet bruk sykehuset i Banilad.",
+        "sl": "Pregledi in sprejem brez naročanja pon–sob 8–20, ned 9–17; za nujne primere 24 ur na dan obiščite bolnišnico Banilad."
       }
     },
     {
@@ -182,7 +184,8 @@
         "sv": "Konsultationer och besök utan tidsbokning mån–lör 08.00–20.00, sön 09.00–17.00; vid akutfall dygnet runt vänd dig till sjukhuset i Banilad.",
         "da": "Konsultationer og uanmeldte besøg man–lør 8.00–20.00, søn 9.00–17.00; ved akutte tilfælde døgnet rundt henvend dig til hospitalet i Banilad.",
         "fi": "Vastaanotto ja ajanvarauksettomat käynnit ma–la 8.00–20.00, su 9.00–17.00; ympärivuorokautisessa päivystyksessä käytä Baniladin sairaalaa.",
-        "nb": "Konsultasjoner og oppmøte uten timebestilling man–lør kl. 8.00–20.00, søn kl. 9.00–17.00; for nødtilfeller hele døgnet bruk sykehuset i Banilad."
+        "nb": "Konsultasjoner og oppmøte uten timebestilling man–lør kl. 8.00–20.00, søn kl. 9.00–17.00; for nødtilfeller hele døgnet bruk sykehuset i Banilad.",
+        "sl": "Pregledi in obiski brez naročanja pon–sob 8–20, ned 9–17; za nujne primere 24 ur na dan obiščite bolnišnico Banilad."
       }
     },
     {
@@ -209,7 +212,8 @@
         "sv": "Öppet mån–sön 08.00–17.00; ring innan du kommer.",
         "da": "Åbent man–søn 8.00–17.00; ring på forhånd.",
         "fi": "Auki joka päivä 8.00–17.00; soita etukäteen.",
-        "nb": "Åpent man–søn 8.00–17.00; ring på forhånd."
+        "nb": "Åpent man–søn 8.00–17.00; ring på forhånd.",
+        "sl": "Odprto pon–ned 8–17; vnaprej pokličite."
       }
     },
     {
@@ -236,7 +240,8 @@
         "sv": "Öppet mån–lör 09.00–18.00; ring innan du kommer om du vill komma på söndag.",
         "da": "Åbent man–lør 9.00–18.00; ring på forhånd, hvis du vil komme en søndag.",
         "fi": "Auki ma–la 9.00–18.00; sunnuntaisin soita etukäteen.",
-        "nb": "Åpent man–lør 9.00–18.00; ring på forhånd for søndager."
+        "nb": "Åpent man–lør 9.00–18.00; ring på forhånd for søndager.",
+        "sl": "Odprto pon–sob 9–18; za nedelje vnaprej pokličite."
       }
     },
     {
@@ -263,7 +268,8 @@
         "sv": "Öppet mån–lör 09.00–18.00; ring innan du kommer om du vill komma på söndag.",
         "da": "Åbent man–lør 9.00–18.00; ring på forhånd, hvis du vil komme en søndag.",
         "fi": "Auki ma–la 9.00–18.00; sunnuntaisin soita etukäteen.",
-        "nb": "Åpent man–lør 9.00–18.00; ring på forhånd for søndager."
+        "nb": "Åpent man–lør 9.00–18.00; ring på forhånd for søndager.",
+        "sl": "Odprto pon–sob 9–18; za nedelje vnaprej pokličite."
       }
     },
     {
@@ -289,7 +295,8 @@
         "sv": "Öppet mån–lör 09.00–18.00; stängt på söndagar.",
         "da": "Åbent man–lør 9.00–18.00; lukket om søndagen.",
         "fi": "Auki ma–la 9.00–18.00; su suljettu.",
-        "nb": "Åpent man–lør 9.00–18.00; stengt søndager."
+        "nb": "Åpent man–lør 9.00–18.00; stengt søndager.",
+        "sl": "Odprto pon–sob 9–18; ob nedeljah zaprto."
       }
     },
     {
@@ -315,7 +322,8 @@
         "sv": "Öppet mån–lör 08.00–17.00; stängt på söndagar; telefonnummer finns på webbplatsen.",
         "da": "Åbent man–lør 8.00–17.00; lukket om søndagen; se telefonnummer på hjemmesiden.",
         "fi": "Auki ma–la 8.00–17.00; su suljettu; puhelinnumero verkkosivuilla.",
-        "nb": "Åpent man–lør 8.00–17.00; stengt søndager; se nettsiden for telefonnummer."
+        "nb": "Åpent man–lør 8.00–17.00; stengt søndager; se nettsiden for telefonnummer.",
+        "sl": "Odprto pon–sob 8–17; ob nedeljah zaprto; telefon je na spletni strani."
       }
     },
     {
@@ -341,7 +349,8 @@
         "sv": "Jour dygnet runt för kunder; besökstider 09.30–20.30; ring innan du kommer.",
         "da": "Akutvagt døgnet rundt for kunder; besøgstid 9.30–20.30; ring på forhånd.",
         "fi": "Asiakkaille päivystys ympäri vuorokauden; vastaanottoaika 9.30–20.30; soita etukäteen.",
-        "nb": "Akuttvakt for kunder hele døgnet; besøkstid kl. 09.30–20.30; ring på forhånd."
+        "nb": "Akuttvakt for kunder hele døgnet; besøkstid kl. 09.30–20.30; ring på forhånd.",
+        "sl": "Dežurna nujna služba 24 ur na dan za stranke; čas obiskov 9.30–20.30; vnaprej pokličite."
       }
     },
     {
@@ -366,7 +375,8 @@
         "sv": "Marknadsför akutvård dygnet runt; allmänna öppettider mån–lör 08.00–20.00, sön 09.00–17.00; uppgifter om filialer via kontaktformulär eller e-post pethubvetclinic@gmail.com.",
         "da": "Reklamerer med akut hjælp døgnet rundt; almindelig åbningstid man–lør 8.00–20.00, søn 9.00–17.00; oplysninger om afdelinger via kontaktformular eller e-mail pethubvetclinic@gmail.com.",
         "fi": "Mainostaa päivystystä 24/7; yleiset aukioloajat ma–la 8.00–20.00, su 9.00–17.00; toimipisteiden tiedot yhteydenottolomakkeella tai sähköpostilla pethubvetclinic@gmail.com.",
-        "nb": "Markedsfører akuttbehandling hele døgnet; generell åpningstid man–lør kl. 08.00–20.00, søn kl. 09.00–17.00; opplysninger om filialer via henvendelsesskjema eller e-post pethubvetclinic@gmail.com."
+        "nb": "Markedsfører akuttbehandling hele døgnet; generell åpningstid man–lør kl. 08.00–20.00, søn kl. 09.00–17.00; opplysninger om filialer via henvendelsesskjema eller e-post pethubvetclinic@gmail.com.",
+        "sl": "Nujna pomoč 24 ur na dan; redni čas pon–sob 8–20, ned 9–17; podatke o poslovalnici dobite prek obrazca za povpraševanje ali na pethubvetclinic@gmail.com."
       }
     },
     {
@@ -391,7 +401,8 @@
         "sv": "Koncernen marknadsför akuttjänster; kontakta din närmaste filial för att bekräfta öppettiderna.",
         "da": "Gruppen reklamerer med akut hjælp; kontakt din nærmeste afdeling for at få åbningstiderne bekræftet.",
         "fi": "Ketju mainostaa päivystyspalveluita; varmista aukioloajat lähimmästä toimipisteestä.",
-        "nb": "Gruppen oppgir akuttjeneste; kontakt nærmeste avdeling for å bekrefte åpningstider."
+        "nb": "Gruppen oppgir akuttjeneste; kontakt nærmeste avdeling for å bekrefte åpningstider.",
+        "sl": "Skupina oglašuje nujno pomoč; delovni čas preverite pri najbližji poslovalnici."
       }
     },
     {
@@ -418,7 +429,8 @@
         "sv": "Öppet dagligen 09.00–19.00; tar emot akutfall utanför öppettiderna under natten; ring innan du kommer.",
         "da": "Åbent hver dag 9.00–19.00; modtager akutte tilfælde natten over; ring på forhånd.",
         "fi": "Auki päivittäin 9.00–19.00; ottaa vastaan päivystystapauksia myös yöllä; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–19.00; tar imot nødtilfeller utenom åpningstid over natten; ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–19.00; tar imot nødtilfeller utenom åpningstid over natten; ring på forhånd.",
+        "sl": "Odprto vsak dan 9–19; nujne primere sprejema tudi ponoči; vnaprej pokličite."
       }
     },
     {
@@ -444,7 +456,8 @@
         "sv": "Öppet dagligen 09.00–19.00; ring innan du kommer.",
         "da": "Åbent hver dag 9.00–19.00; ring på forhånd.",
         "fi": "Auki päivittäin 9.00–19.00; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
+        "sl": "Odprto vsak dan 9–19; vnaprej pokličite."
       }
     },
     {
@@ -470,7 +483,8 @@
         "sv": "Öppet dagligen 09.00–19.00; ring innan du kommer.",
         "da": "Åbent hver dag 9.00–19.00; ring på forhånd.",
         "fi": "Auki päivittäin 9.00–19.00; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
+        "sl": "Odprto vsak dan 9–19; vnaprej pokličite."
       }
     },
     {
@@ -496,7 +510,8 @@
         "sv": "Öppet dagligen 09.00–19.00; ring innan du kommer.",
         "da": "Åbent hver dag 9.00–19.00; ring på forhånd.",
         "fi": "Auki päivittäin 9.00–19.00; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
+        "sl": "Odprto vsak dan 9–19; vnaprej pokličite."
       }
     },
     {
@@ -522,7 +537,8 @@
         "sv": "Öppet dagligen 09.00–19.00; ring innan du kommer.",
         "da": "Åbent hver dag 9.00–19.00; ring på forhånd.",
         "fi": "Auki päivittäin 9.00–19.00; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
+        "sl": "Odprto vsak dan 9–19; vnaprej pokličite."
       }
     },
     {
@@ -549,7 +565,8 @@
         "sv": "Öppet dagligen 10.00–19.00; ring innan du kommer.",
         "da": "Åbent hver dag 10.00–19.00; ring på forhånd.",
         "fi": "Auki päivittäin 10.00–19.00; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd."
+        "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd.",
+        "sl": "Odprto vsak dan 10–19; vnaprej pokličite."
       }
     },
     {
@@ -576,7 +593,8 @@
         "sv": "Öppet dagligen 09.00–19.00; ring innan du kommer.",
         "da": "Åbent hver dag 9.00–19.00; ring på forhånd.",
         "fi": "Auki päivittäin 9.00–19.00; soita etukäteen.",
-        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd."
+        "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
+        "sl": "Odprto vsak dan 9–19; vnaprej pokličite."
       }
     },
     {
@@ -603,7 +621,8 @@
         "sv": "Tidsbokning per telefon eller via sjukhusets Facebook-sida.",
         "da": "Tidsbestilling pr. telefon eller via hospitalets Facebook-side.",
         "fi": "Ajanvaraus puhelimitse tai sairaalan Facebook-sivun kautta.",
-        "nb": "Timebestilling på telefon eller via sykehusets Facebook-side."
+        "nb": "Timebestilling på telefon eller via sykehusets Facebook-side.",
+        "sl": "Naročanje po telefonu ali prek bolnišnične strani na Facebooku."
       }
     },
     {
@@ -629,7 +648,8 @@
         "sv": "Ordinarie kontorstider; ring innan du kommer.",
         "da": "Almindelig kontortid; ring på forhånd.",
         "fi": "Tavalliset toimistoajat; soita etukäteen.",
-        "nb": "Vanlig drift i kontortiden; ring på forhånd."
+        "nb": "Vanlig drift i kontortiden; ring på forhånd.",
+        "sl": "Redni delovni čas; vnaprej pokličite."
       }
     },
     {
@@ -656,7 +676,8 @@
         "sv": "Öppet mån–lör 08.00–17.00, även helgdagar; ring innan du kommer.",
         "da": "Åbent man–lør 8.00–17.00, også helligdage; ring på forhånd.",
         "fi": "Auki ma–la 8.00–17.00, myös pyhäpäivinä; soita etukäteen.",
-        "nb": "Åpent man–lør 8.00–17.00, også helligdager; ring på forhånd."
+        "nb": "Åpent man–lør 8.00–17.00, også helligdager; ring på forhånd.",
+        "sl": "Odprto pon–sob 8–17, tudi ob praznikih; vnaprej pokličite."
       }
     },
     {
@@ -683,7 +704,8 @@
         "sv": "Statlig myndighet öppen mån–fre 08.00–17.00; registrering, vaccination och program för kastrering/sterilisering, inte ett akutsjukhus.",
         "da": "Offentligt kontor, åbent man–fre 8.00–17.00; registrering, vaccination og programmer for sterilisation/kastration, ikke et akuthospital.",
         "fi": "Viranomaistoimisto, auki ma–pe 8.00–17.00; rekisteröinti, rokotukset sekä sterilointi- ja kastrointiohjelmat; ei ole päivystyssairaala.",
-        "nb": "Offentlig kontor åpent man–fre 8.00–17.00; registrering, vaksinasjon og programmer for sterilisering/kastrering, ikke et akuttsykehus."
+        "nb": "Offentlig kontor åpent man–fre 8.00–17.00; registrering, vaksinasjon og programmer for sterilisering/kastrering, ikke et akuttsykehus.",
+        "sl": "Državni urad, odprt pon–pet 8–17; registracija, cepljenje in programi sterilizacije/kastracije; ni bolnišnica za nujne primere."
       }
     },
     {
@@ -710,7 +732,8 @@
         "sv": "Statlig myndighet öppen 08.00–17.00; inte ett akutsjukhus.",
         "da": "Offentligt kontor, åbent 8.00–17.00; ikke et akuthospital.",
         "fi": "Viranomaistoimisto, auki 8.00–17.00; ei ole päivystyssairaala.",
-        "nb": "Offentlig kontor åpent 8.00–17.00; ikke et akuttsykehus."
+        "nb": "Offentlig kontor åpent 8.00–17.00; ikke et akuttsykehus.",
+        "sl": "Državni urad, odprt 8–17; ni nujna bolnišnica."
       }
     },
     {
@@ -737,7 +760,8 @@
         "sv": "Ring filialen för aktuella öppettider och hur akutfall hanteras utanför öppettiderna.",
         "da": "Ring til afdelingen for aktuelle åbningstider og vagtordning uden for åbningstid.",
         "fi": "Soita toimipisteeseen ja kysy ajankohtaiset aukioloajat sekä päivystysjärjestelyt virka-ajan ulkopuolella.",
-        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid."
+        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
+        "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico."
       }
     },
     {
@@ -764,7 +788,8 @@
         "sv": "Ring filialen för aktuella öppettider och jourtjänst utanför öppettiderna.",
         "da": "Ring til afdelingen for aktuelle åbningstider og vagtordning uden for åbningstid.",
         "fi": "Soita toimipisteeseen ja kysy ajankohtaiset aukioloajat sekä päivystysjärjestelyt virka-ajan ulkopuolella.",
-        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid."
+        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
+        "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico."
       }
     },
     {
@@ -791,7 +816,8 @@
         "sv": "Ring filialen för aktuella öppettider och jourtjänst utanför öppettiderna.",
         "da": "Ring til afdelingen for aktuelle åbningstider og vagtordning uden for åbningstid.",
         "fi": "Soita toimipisteeseen ja kysy ajankohtaiset aukioloajat sekä päivystysjärjestelyt virka-ajan ulkopuolella.",
-        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid."
+        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
+        "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico."
       }
     },
     {
@@ -818,7 +844,8 @@
         "sv": "Ring filialen för aktuella öppettider och jourtjänst utanför öppettiderna.",
         "da": "Ring til afdelingen for aktuelle åbningstider og vagtordning uden for åbningstid.",
         "fi": "Soita toimipisteeseen ja kysy ajankohtaiset aukioloajat sekä päivystysjärjestelyt virka-ajan ulkopuolella.",
-        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid."
+        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
+        "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico."
       }
     },
     {
@@ -845,7 +872,8 @@
         "sv": "Ring filialen för aktuella öppettider och jourtjänst utanför öppettiderna.",
         "da": "Ring til afdelingen for aktuelle åbningstider og vagtordning uden for åbningstid.",
         "fi": "Soita toimipisteeseen ja kysy ajankohtaiset aukioloajat sekä päivystysjärjestelyt virka-ajan ulkopuolella.",
-        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid."
+        "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
+        "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico."
       }
     },
     {
@@ -872,7 +900,8 @@
         "sv": "Endast katter. Öppet dagligen 08.00–20.00; akutfall tas emot till 23.00.",
         "da": "Kun katte. Åbent hver dag 8.00–20.00; akutte tilfælde modtages til 23.00.",
         "fi": "Vain kissoille. Auki päivittäin 8.00–20.00; päivystystapaukset otetaan vastaan klo 23 asti.",
-        "nb": "Kun katter. Åpent alle dager kl. 8.00–20.00; nødtilfeller tas imot til kl. 23.00."
+        "nb": "Kun katter. Åpent alle dager kl. 8.00–20.00; nødtilfeller tas imot til kl. 23.00.",
+        "sl": "Samo mačke. Odprto vsak dan 8–20; nujni primeri do 23."
       }
     },
     {
@@ -899,7 +928,8 @@
         "sv": "Endast katter. Öppet sön–fre 09.00–20.00, lör 08.00–20.00; akutfall tas emot till 21.00.",
         "da": "Kun katte. Åbent søn–fre 9.00–20.00, lør 8.00–20.00; akutte tilfælde modtages til 21.00.",
         "fi": "Vain kissoille. Auki su–pe 9.00–20.00, la 8.00–20.00; päivystystapaukset otetaan vastaan klo 21 asti.",
-        "nb": "Kun katter. Åpent søn–fre kl. 9.00–20.00, lør kl. 8.00–20.00; nødtilfeller tas imot til kl. 21.00."
+        "nb": "Kun katter. Åpent søn–fre kl. 9.00–20.00, lør kl. 8.00–20.00; nødtilfeller tas imot til kl. 21.00.",
+        "sl": "Samo mačke. Ned–pet 9–20, sob 8–20; nujni primeri do 21."
       }
     },
     {
@@ -926,7 +956,8 @@
         "sv": "Endast katter. Öppet dagligen 09.00–19.00; 18.00–19.00 reserverat för akuta fall.",
         "da": "Kun katte. Åbent hver dag 9.00–19.00; 18.00–19.00 er forbeholdt akutte tilfælde.",
         "fi": "Vain kissoille. Auki päivittäin 9.00–19.00; klo 18.00–19.00 varattu päivystystapauksille.",
-        "nb": "Kun katter. Åpent alle dager kl. 9.00–19.00; kl. 18.00–19.00 er forbeholdt nødtilfeller."
+        "nb": "Kun katter. Åpent alle dager kl. 9.00–19.00; kl. 18.00–19.00 er forbeholdt nødtilfeller.",
+        "sl": "Samo mačke. Odprto vsak dan 9–19; čas 18–19 je namenjen nujnim primerom."
       }
     },
     {
@@ -953,7 +984,8 @@
         "sv": "Normalt öppet dagligen 09.00–18.00; stängt på långfredagen; ring innan du kommer.",
         "da": "Normalt åbent hver dag 9.00–18.00; lukket langfredag; ring på forhånd.",
         "fi": "Yleensä auki päivittäin 9.00–18.00; suljettu pitkäperjantaina; soita etukäteen.",
-        "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd."
+        "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd.",
+        "sl": "Običajno odprto vsak dan 9–18; na veliki petek zaprto; vnaprej pokličite."
       }
     },
     {
@@ -980,7 +1012,8 @@
         "sv": "Normalt öppet dagligen 09.00–18.00; stängt på långfredagen; ring innan du kommer.",
         "da": "Normalt åbent hver dag 9.00–18.00; lukket langfredag; ring på forhånd.",
         "fi": "Yleensä auki päivittäin 9.00–18.00; suljettu pitkäperjantaina; soita etukäteen.",
-        "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd."
+        "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd.",
+        "sl": "Običajno odprto vsak dan 9–18; na veliki petek zaprto; vnaprej pokličite."
       }
     },
     {
@@ -1007,7 +1040,8 @@
         "sv": "Normalt öppet dagligen 09.00–18.00; stängt på långfredagen; ring innan du kommer.",
         "da": "Normalt åbent hver dag 9.00–18.00; lukket langfredag; ring på forhånd.",
         "fi": "Yleensä auki päivittäin 9.00–18.00; suljettu pitkäperjantaina; soita etukäteen.",
-        "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd."
+        "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd.",
+        "sl": "Običajno odprto vsak dan 9–18; na veliki petek zaprto; vnaprej pokličite."
       }
     },
     {
@@ -1034,7 +1068,8 @@
         "sv": "Ring och fråga om öppettider.",
         "da": "Ring for at høre om åbningstiderne.",
         "fi": "Soita etukäteen ja kysy aukioloajat",
-        "nb": "Ring på forhånd for å høre åpningstidene."
+        "nb": "Ring på forhånd for å høre åpningstidene.",
+        "sl": "Za delovni čas vnaprej pokličite."
       }
     },
     {
@@ -1061,7 +1096,8 @@
         "sv": "Öppet dagligen 09.00–24.00; besök utan tidsbokning och akutfall tas emot under öppettiderna, jourtillägg 21.00–24.00; akutlinje +63 2 8459 7100.",
         "da": "Åbent hver dag 9.00–24.00; uanmeldte og akutte tilfælde modtages i åbningstiden, tillæg uden for åbningstid 21.00–24.00; akuttelefon +63 2 8459 7100.",
         "fi": "Auki päivittäin 9.00–24.00; ilman ajanvarausta tulevat ja päivystystapaukset otetaan vastaan aukioloaikoina, lisämaksu klo 21.00–24.00; kiireellisen hoidon puhelin +63 2 8459 7100.",
-        "nb": "Åpent alle dager kl. 09.00–24.00; pasienter uten time og nødtilfeller tas imot i åpningstiden, tillegg utenom ordinær tid 21.00–24.00; hastetelefon +63 2 8459 7100."
+        "nb": "Åpent alle dager kl. 09.00–24.00; pasienter uten time og nødtilfeller tas imot i åpningstiden, tillegg utenom ordinær tid 21.00–24.00; hastetelefon +63 2 8459 7100.",
+        "sl": "Odprto vsak dan 9–24; sprejem brez naročanja in nujni primeri v delovnem času, doplačilo od 21 do 24; linija za nujno oskrbo +63 2 8459 7100."
       }
     },
     {
@@ -1088,7 +1124,8 @@
         "sv": "Statlig myndighet; inte ett akutsjukhus; ring innan du kommer.",
         "da": "Offentligt kontor; ikke et akuthospital; ring på forhånd.",
         "fi": "Viranomaistoimisto; ei ole päivystyssairaala; soita etukäteen.",
-        "nb": "Offentlig kontor; ikke et akuttsykehus; ring på forhånd."
+        "nb": "Offentlig kontor; ikke et akuttsykehus; ring på forhånd.",
+        "sl": "Državni urad; ni bolnišnica za nujne primere; vnaprej pokličite."
       }
     },
     {
@@ -1115,7 +1152,8 @@
         "sv": "Statlig myndighet; inte ett akutsjukhus; ring innan du kommer.",
         "da": "Offentligt kontor; ikke et akuthospital; ring på forhånd.",
         "fi": "Viranomaistoimisto; ei ole päivystyssairaala; soita etukäteen.",
-        "nb": "Offentlig kontor; ikke et akuttsykehus; ring på forhånd."
+        "nb": "Offentlig kontor; ikke et akuttsykehus; ring på forhånd.",
+        "sl": "Državni urad; ni nujna bolnišnica; vnaprej pokličite."
       }
     }
   ],

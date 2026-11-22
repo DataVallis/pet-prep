@@ -57,7 +57,8 @@
         "sv": "Öppet dagligen 10.00–19.00; för akutfall öppet 24 h, 7 dagar i veckan på samma nummer.",
         "da": "Åbent dagligt 10.00–19.00; ved akutte tilfælde åbent døgnet rundt, 7 dage om ugen, på samme nummer.",
         "fi": "Auki päivittäin 10.00–19.00; hätätapauksille auki 24 h, 7 päivää viikossa samassa numerossa.",
-        "nb": "Åpent alle dager kl. 10.00–19.00; ved nødtilfeller åpent hele døgnet, sju dager i uken, på samme nummer."
+        "nb": "Åpent alle dager kl. 10.00–19.00; ved nødtilfeller åpent hele døgnet, sju dager i uken, på samme nummer.",
+        "sl": "Odprto vsak dan 10–19; za nujno pomoč je na isti številki odprto 24 ur na dan, 7 dni v tednu."
       }
     },
     {
@@ -83,7 +84,8 @@
         "sv": "Öppet dagligen 10.00–19.00; ring innan du kommer vid akutfall.",
         "da": "Åbent dagligt 10.00–19.00; ring på forhånd ved akutte tilfælde.",
         "fi": "Auki päivittäin 10.00–19.00; hätätapauksissa soita etukäteen.",
-        "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd ved nødtilfeller."
+        "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd ved nødtilfeller.",
+        "sl": "Odprto vsak dan 10–19; za nujno pomoč vnaprej pokličite."
       }
     },
     {
@@ -109,7 +111,8 @@
         "sv": "Öppet dagligen 10.00–19.00; ring innan du kommer vid akutfall.",
         "da": "Åbent dagligt 10.00–19.00; ring på forhånd ved akutte tilfælde.",
         "fi": "Auki päivittäin 10.00–19.00; hätätapauksissa soita etukäteen.",
-        "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd ved nødtilfeller."
+        "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd ved nødtilfeller.",
+        "sl": "Odprto vsak dan 10–19; za nujno pomoč vnaprej pokličite."
       }
     },
     {
@@ -134,7 +137,8 @@
         "sv": "Drop-in välkomnas; även klinik i Busia. Ring eller skriv på WhatsApp i förväg vid akutfall.",
         "da": "Uanmeldte besøg er velkomne; også klinik i Busia. Ring eller skriv på WhatsApp på forhånd ved akutte tilfælde.",
         "fi": "Ilman ajanvarausta tervetuloa; myös klinikka Busiassa. Hätätapauksissa soita tai lähetä WhatsApp-viesti etukäteen.",
-        "nb": "Drop-in velkommen; også klinikk i Busia. Ring eller send melding på WhatsApp på forhånd ved nødtilfeller."
+        "nb": "Drop-in velkommen; også klinikk i Busia. Ring eller send melding på WhatsApp på forhånd ved nødtilfeller.",
+        "sl": "Sprejem brez naročanja; klinika je tudi v Busii. Za nujno pomoč vnaprej pokličite ali pišite na WhatsApp."
       }
     },
     {
@@ -160,7 +164,8 @@
         "sv": "Mån–fre 08.00–18.00; söndagar endast akutfall; extra akutavgift utanför öppettid.",
         "da": "Man–fre 8.00–18.00; søndag kun akutte tilfælde; ekstra akuttillæg uden for åbningstid.",
         "fi": "ma–pe 8.00–18.00; sunnuntaisin vain päivystys; aukioloajan ulkopuolella päivystyslisä.",
-        "nb": "Man–fre 08.00–18.00; søndager kun nødtilfeller; tilleggsgebyr for nødtilfeller utenom åpningstiden."
+        "nb": "Man–fre 08.00–18.00; søndager kun nødtilfeller; tilleggsgebyr for nødtilfeller utenom åpningstiden.",
+        "sl": "Pon–pet 8–18; ob nedeljah samo nujna pomoč; za nujno pomoč zunaj delovnega časa velja doplačilo."
       }
     },
     {
@@ -185,7 +190,8 @@
         "sv": "Smådjursavdelning vid undervisningssjukhuset; ring innan du kommer för öppettider.",
         "da": "Universitetshospitalets afdeling for små dyr; ring på forhånd for åbningstider.",
         "fi": "Opetussairaalan pieneläinosasto; kysy aukioloajat soittamalla etukäteen.",
-        "nb": "Smådyravdeling ved universitetssykehus; ring på forhånd for åpningstider."
+        "nb": "Smådyravdeling ved universitetssykehus; ring på forhånd for åpningstider.",
+        "sl": "Oddelek za male živali v univerzitetni bolnišnici; za odpiralni čas vnaprej pokličite."
       }
     }
   ],

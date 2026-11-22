@@ -52,7 +52,8 @@
         "sv": "Akutvård dygnet runt, 365 dagar om året inklusive helgdagar: +502 2375 8700. Öppenvårdskonsultationer 7.00–18.00; akuttider från 18.00. Ambulans endast dagtid.",
         "da": "Akut døgnåbent, 365 dage om året inkl. helligdage: +502 2375 8700. Ambulante konsultationer 7.00–18.00; akutvagt fra 18.00. Ambulance kun om dagen.",
         "fi": "Päivystys 24 h, 365 päivää vuodessa myös pyhinä: +502 2375 8700. Vastaanotto 7.00–18.00; päivystys klo 18.00 alkaen. Ambulanssi vain päivisin.",
-        "nb": "Akuttbehandling hele døgnet, 365 dager i året, også på helligdager: +502 2375 8700. Poliklinikk kl. 07.00–18.00; akuttåpent fra kl. 18.00. Ambulanse kun på dagtid."
+        "nb": "Akuttbehandling hele døgnet, 365 dager i året, også på helligdager: +502 2375 8700. Poliklinikk kl. 07.00–18.00; akuttåpent fra kl. 18.00. Ambulanse kun på dagtid.",
+        "sl": "Nujna oskrba 24 ur na dan, 365 dni v letu, tudi ob praznikih: +502 2375 8700. Ambulantni pregledi 7–18; čas nujne pomoči od 18. Reševalno vozilo samo podnevi."
       }
     },
     {
@@ -78,7 +79,8 @@
         "sv": "Brådskande veterinärfall tas emot när som helst. Telefon/WhatsApp +502 4363 4958, även +502 2394 9324. Ring för att bekräfta.",
         "da": "Akutte dyrlægetilfælde behandles på alle tider af døgnet. Telefon/WhatsApp +502 4363 4958, også +502 2394 9324. Ring for at bekræfte.",
         "fi": "Kiireelliset eläinlääkintätapaukset hoidetaan mihin aikaan tahansa. Puhelin/WhatsApp +502 4363 4958, myös +502 2394 9324. Varmista soittamalla.",
-        "nb": "Hastetilfeller hos dyr tas imot når som helst på døgnet. Telefon/WhatsApp +502 4363 4958, også +502 2394 9324. Ring for å bekrefte."
+        "nb": "Hastetilfeller hos dyr tas imot når som helst på døgnet. Telefon/WhatsApp +502 4363 4958, også +502 2394 9324. Ring for å bekrefte.",
+        "sl": "Nujni veterinarski primeri se sprejemajo ob vsaki uri. Telefon/WhatsApp +502 4363 4958, tudi +502 2394 9324. Za potrditev pokličite."
       }
     },
     {
@@ -89,11 +91,11 @@
       "address": "Avenida Mariscal, Diagonal 17, 15-26, Zona 11, Colonia Mariscal",
       "phone": "+502 5480 8888",
       "emergency_24h": true,
-      "duty": "Listed as 24/7 with emergency services. Call ahead: +502 5480 8888.",
+      "duty": "Emergency services 24/7. Call ahead: +502 5480 8888.",
       "small_animals": true,
       "source_url": "https://veitguatemala.com/SOS.html",
       "checked": "2026-11-13",
-      "note": "Only source is the Vet IT SOS list (third-party page); the hospital's own site was not found. Name on the list contains '24/7'. Pharmacy 7:00-19:00. Verify in independent check.",
+      "note": "Only source is the Vet IT SOS list (third-party page); the hospital's own site was not found. Name on the list contains '24/7'. Pharmacy 7:00-19:00. Verify in independent check. Listed as 24/7",
       "quote": "Hospital de Mascotas Mariscal 24/7",
       "duty_i18n": {
         "pt": "Indicado como 24 h/24, 7 dias por semana, com serviço de urgências. Liga antes: +502 5480 8888.",
@@ -103,7 +105,8 @@
         "sv": "Anges ha akutservice dygnet runt. Ring innan du kommer: +502 5480 8888.",
         "da": "Angivet som døgnåben med akutberedskab. Ring på forhånd: +502 5480 8888.",
         "fi": "Ilmoituksen mukaan auki 24/7, päivystyspalvelut tarjolla. Soita etukäteen: +502 5480 8888.",
-        "nb": "Oppgitt som døgnåpen med akuttjeneste. Ring på forhånd: +502 5480 8888."
+        "nb": "Oppgitt som døgnåpen med akuttjeneste. Ring på forhånd: +502 5480 8888.",
+        "sl": "Nujna pomoč 24 ur na dan. Vnaprej pokličite: +502 5480 8888."
       }
     },
     {
@@ -114,11 +117,11 @@
       "address": "18 Avenida 19-39, Zona 10, Guatemala City",
       "phone": "+502 2215 2777",
       "emergency_24h": true,
-      "duty": "Emergency service listed as 24/7. Call ahead: +502 2215 2777.",
+      "duty": "Emergency service 24/7. Call ahead: +502 2215 2777.",
       "small_animals": true,
       "source_url": "https://veitguatemala.com/SOS.html",
       "checked": "2026-11-13",
-      "note": "Only source is the Vet IT SOS list (third-party page); own site not found. Text 'Emergencias 24/7'. Verify in independent check.",
+      "note": "Only source is the Vet IT SOS list (third-party page); own site not found. Text 'Emergencias 24/7'. Verify in independent check. Listed as 24/7",
       "quote": "Emergencias 24/7",
       "duty_i18n": {
         "pt": "Serviço de urgências indicado como 24 h/24, 7 dias por semana. Liga antes: +502 2215 2777.",
@@ -128,7 +131,8 @@
         "sv": "Akutservice anges finnas dygnet runt. Ring innan du kommer: +502 2215 2777.",
         "da": "Akutberedskab angivet som døgnåbent. Ring på forhånd: +502 2215 2777.",
         "fi": "Päivystys ilmoituksen mukaan 24/7. Soita etukäteen: +502 2215 2777.",
-        "nb": "Akuttjeneste oppført som døgnåpen. Ring på forhånd: +502 2215 2777."
+        "nb": "Akuttjeneste oppført som døgnåpen. Ring på forhånd: +502 2215 2777.",
+        "sl": "Nujna pomoč 24 ur na dan. Vnaprej pokličite: +502 2215 2777."
       }
     },
     {
@@ -153,7 +157,8 @@
         "sv": "Öppet dagligen 7.00–19.00; akutfall tas emot utan tidsbokning under dessa tider. WhatsApp +502 5106 4444. Vid akutfall på natten hänvisar kliniken till ett djursjukhus med nattöppet.",
         "da": "Åbent dagligt 7.00–19.00; akutte patienter tages imod uden tidsbestilling i dette tidsrum. WhatsApp +502 5106 4444. Ved akutte tilfælde om natten henviser klinikken til et døgnåbent dyrehospital.",
         "fi": "Auki päivittäin 7.00–19.00; päivystystapaukset otetaan vastaan ilman ajanvarausta näinä aikoina. WhatsApp +502 5106 4444. Yöpäivystystapauksissa klinikka ohjaa eläinsairaalaan, joka päivystää öisin.",
-        "nb": "Åpent alle dager kl. 07.00–19.00; nødtilfeller tas imot uten timebestilling i dette tidsrommet. WhatsApp +502 5106 4444. Ved nødtilfeller om natten henviser klinikken til et nattåpent dyresykehus."
+        "nb": "Åpent alle dager kl. 07.00–19.00; nødtilfeller tas imot uten timebestilling i dette tidsrommet. WhatsApp +502 5106 4444. Ved nødtilfeller om natten henviser klinikken til et nattåpent dyresykehus.",
+        "sl": "Odprto vsak dan 7–19; v tem času se nujni primeri sprejemajo brez naročanja. WhatsApp +502 5106 4444. Za nočne nujne primere ambulanta napoti v nočno veterinarsko bolnišnico."
       }
     },
     {
@@ -178,7 +183,8 @@
         "sv": "Mån–fre 8.00–17.00, lör 7.00–14.00. WhatsApp +502 3040 8152.",
         "da": "Man–fre 8.00–17.00, lør 7.00–14.00. WhatsApp +502 3040 8152.",
         "fi": "ma–pe 8.00–17.00, la 7.00–14.00. WhatsApp +502 3040 8152.",
-        "nb": "man–fre 8.00–17.00, lør 7.00–14.00. WhatsApp +502 3040 8152."
+        "nb": "man–fre 8.00–17.00, lør 7.00–14.00. WhatsApp +502 3040 8152.",
+        "sl": "Pon–pet 8–17, sob 7–14. WhatsApp +502 3040 8152."
       }
     }
   ],

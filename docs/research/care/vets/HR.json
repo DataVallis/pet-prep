@@ -1685,7 +1685,8 @@
         "sv": "Ring och bekräfta öppettiderna.",
         "da": "Ring for at få bekræftet åbningstider.",
         "fi": "Varmista aukioloajat soittamalla.",
-        "nb": "Ring for å bekrefte åpningstidene."
+        "nb": "Ring for å bekrefte åpningstidene.",
+        "sl": "Delovni čas preverite s klicem."
       },
       "small_animals": true,
       "url": "https://ljubimac.net/",
@@ -1952,7 +1953,8 @@
         "sv": "Jourhavande veterinär dygnet runt på 091 511 5092.",
         "da": "Vagthavende dyrlæge døgnet rundt på 091 511 5092.",
         "fi": "Päivystävä eläinlääkäri ympäri vuorokauden numerossa 091 511 5092.",
-        "nb": "Vakthavende dyrlege hele døgnet på 091 511 5092."
+        "nb": "Vakthavende dyrlege hele døgnet på 091 511 5092.",
+        "sl": "Dežurni veterinar 24 ur na dan na 091 511 5092."
       },
       "small_animals": true,
       "url": "https://veterinarskaambulantabokanjac.hr/",
@@ -1981,7 +1983,8 @@
         "sv": "Tidsbokning per telefon; ring och bekräfta öppettiderna.",
         "da": "Tidsbestilling pr. telefon; ring for at bekræfte åbningstiden.",
         "fi": "Ajanvaraus puhelimitse; varmista aukioloajat soittamalla.",
-        "nb": "Timebestilling på telefon; ring for å bekrefte åpningstidene."
+        "nb": "Timebestilling på telefon; ring for å bekrefte åpningstidene.",
+        "sl": "Naročanje po telefonu; delovni čas preverite s klicem."
       },
       "small_animals": true,
       "url": "https://www.veterina-zilic.hr/",
@@ -2034,7 +2037,8 @@
         "sv": "Jourtelefon 099 700 3737 (dygnet runt).",
         "da": "Vagttelefon 099 700 3737 (døgnet rundt).",
         "fi": "Päivystyspuhelin 099 700 3737 (0–24).",
-        "nb": "Vakttelefon 099 700 3737 (hele døgnet)."
+        "nb": "Vakttelefon 099 700 3737 (hele døgnet).",
+        "sl": "Dežurna številka 099 700 3737 (24 ur na dan)."
       },
       "url": "http://www.veterinar-vodice.com",
       "source_url": "https://www.grad-vodice.hr/informacije/vazni-telefonski-brojevi",
@@ -2287,7 +2291,8 @@
         "sv": "Smådjursklinik mån–fre 07.00–14.30, lör 07.00–12.00 (eller mån–fre 07.30–19.00 med paus 16.30–17.30, lör 07.00–13.00). Jourhavande veterinär dygnet runt, alla dagar.",
         "da": "Klinik for smådyr man–fre 07.00–14.30, lør 07.00–12.00 (eller man–fre 07.30–19.00 med pause 16.30–17.30, lør 07.00–13.00). Vagthavende dyrlæge døgnet rundt.",
         "fi": "Pieneläinklinikka ma–pe 7.00–14.30, la 7.00–12.00 (tai ma–pe 7.30–19.00, tauko 16.30–17.30, la 7.00–13.00). Päivystävä eläinlääkäri 24/7.",
-        "nb": "Smådyrklinikk man–fre kl. 7.00–14.30, lør kl. 7.00–12.00 (eller man–fre kl. 7.30–19.00 med pause kl. 16.30–17.30, lør kl. 7.00–13.00). Vakthavende dyrlege hele døgnet."
+        "nb": "Smådyrklinikk man–fre kl. 7.00–14.30, lør kl. 7.00–12.00 (eller man–fre kl. 7.30–19.00 med pause kl. 16.30–17.30, lør kl. 7.00–13.00). Vakthavende dyrlege hele døgnet.",
+        "sl": "Ambulanta za male živali pon–pet 7–14.30, sob 7–12 (ali pon–pet 7.30–19 z odmorom 16.30–17.30, sob 7–13). Dežurni veterinar 24/7."
       },
       "small_animals": true,
       "url": "https://www.vs-krapina.hr/",
@@ -2317,7 +2322,8 @@
         "sv": "Jour dygnet runt för akutfall: ring klinikens nummer så ger telefonsvararen den jourhavande veterinärens mobilnummer.",
         "da": "Vagt døgnet rundt ved akutte tilfælde: ring til klinikkens nummer, så oplyser telefonsvareren den vagthavende dyrlæges mobil.",
         "fi": "Päivystys 0–24: soita klinikan numeroon, niin vastaaja kertoo päivystävän eläinlääkärin matkapuhelinnumeron.",
-        "nb": "Døgnvakt for nødtilfeller: ring klinikkens nummer, så oppgir telefonsvareren mobilnummeret til dyrlegen på vakt."
+        "nb": "Døgnvakt for nødtilfeller: ring klinikkens nummer, så oppgir telefonsvareren mobilnummeret til dyrlegen på vakt.",
+        "sl": "Dežurstvo 24 ur na dan za nujne primere: pokličite številko ambulante in telefonski odzivnik vam posreduje mobilno številko dežurnega veterinarja."
       },
       "small_animals": true,
       "url": "https://veterinarska-pozega.hr/",
@@ -2347,7 +2353,8 @@
         "sv": "Akutfall och utanför öppettiderna: 060 606 777 (jourhavande veterinär för sällskapsdjur).",
         "da": "Akut og uden for åbningstid: 060 606 777 (vagthavende dyrlæge for kæledyr).",
         "fi": "Päivystys ja aukioloaikojen ulkopuolella: 060 606 777 (lemmikkien päivystävä eläinlääkäri).",
-        "nb": "Nødtilfeller og vakttjeneste utenom åpningstid: 060 606 777 (vakthavende dyrlege for kjæledyr)."
+        "nb": "Nødtilfeller og vakttjeneste utenom åpningstid: 060 606 777 (vakthavende dyrlege for kjæledyr).",
+        "sl": "Nujni primeri in zunaj delovnega časa: 060 606 777 (dežurni veterinar za ljubljenčke)."
       },
       "url": "https://vs-djakovo.hr/",
       "source_url": "https://vs-djakovo.hr/kontakt/",
@@ -2399,7 +2406,8 @@
         "sv": "Information om djurhemmet och adoption: mån–lör 7–11, tis och tors eftermiddagar.",
         "da": "Information om internatet og adoption: man–lør 7–11, tirs og tors om eftermiddagen.",
         "fi": "Tietoa turvakodista ja adoptiosta: ma–la 7–11, ti ja to iltapäivisin.",
-        "nb": "Informasjon om dyrevernet og adopsjon: man–lør kl. 7–11, tir og tor ettermiddag."
+        "nb": "Informasjon om dyrevernet og adopsjon: man–lør kl. 7–11, tir og tor ettermiddag.",
+        "sl": "Informacije o zavetišču in posvojitvah: pon–sob 7–11, tor in čet popoldne."
       },
       "url": "http://veterinarskastanicasisak.yolasite.com/",
       "source_url": "https://sisak.hr/info-centar-za-izgubljene-i-napustene-zivotinje/",

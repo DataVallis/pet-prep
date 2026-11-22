@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "531b1f495b91d5d533ce596ee9df12d398ed2b12f5d120f8ae4d69efbeda7a78"
+      "sha256": "2d6f206d3b5774257b96ef103d67946877c6dd2fe48d776ec75e442a91a3c3f3"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
