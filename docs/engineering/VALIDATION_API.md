@@ -1,12 +1,26 @@
 # Validation plan — API contract (VALIDATION_PLAN §4.1, §4.4; H6, H7) — agreed 2026-11-21
 
-> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21; supersedes #1480 after QA); app: in preparation (mobile PR follows). Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
+> **Status:** backend built (`feat/M5-08-validation-signals-v2`, 2026-11-21, #1484; behind the admin switch of §0 since `feat/M5-08-validation-signals-switch`, 2026-11-22, default off); app: in preparation (mobile PR follows). Contract additions of 2026-11-21 (coordinator, needed by the app) are marked *(addition)*, the QA #1480 changes *(QA)*; what the implementation decided where the contract was silent is in §4.
 
 David's decisions 2026-11-21:
 - (D1) The nightly breed / language runs keep running; the validation freeze does not apply to them.
 - (D2) The acquisition source is a question at sign-up: »Kje ste izvedeli za PetPrep?« Use exactly this wording; David corrected the grammar.
 - (D3) The fake door price options are monthly: free / 2,99 € / 5,99 €.
 - (D4) The parent survey goes by e-mail, not in the app. That is a separate PR, built later; it is not part of this contract.
+
+## 0. Admin switch »Validation signals« / »Validacijski signali« (David 2026-11-22)
+Everything in §1–§3 runs behind an admin switch so David can test it in production before the privacy policy names these data. Default **off**; »Vsi« / »Everyone« only after the privacy policy is updated.
+- **Where:** `/admin` → *Feature switches* / *Funkcije* → section »Validation signals«. Modes: **Off** (default, no row) · **Only test families** (pick parent accounts by e-mail; a family is on when any of its parents is listed) · **Everyone**. Stored as `app_settings.validation_signals` = `{mode: off|test_families|everyone, test_parent_ids: list<int>}`, every save audited in `app_setting_changes` (shown on the page), cached 60 s (a save forgets the cache; switching off stops new writes within ≈ 60 s on every container). One decision point: `App\Services\Validation\ValidationSignals::enabledFor(User|Family|null)` (a child or nobody → false) and `signupEnabled()` (mode Everyone only).
+- **The app reads:**
+  - `GET /api/user` → `validation_signals: bool` — on for this parent's family (always false for a child). Only then show the acquisition question (the app's once-only card on the parent dashboard, saved through `PATCH /api/parent/settings`), send `dashboard-opened` and show »Dobili smo pravo žival«.
+  - `GET /api/parent/dashboard` → top-level `validation_signals: bool` (the same, for the family). `phase2_interest` is reported in every mode (a parent who answered while on can still see »Hvala« and withdraw).
+  - **New public** `GET /api/app-features` (no auth, throttle 60 / min per IP) → `{ "validation_signals_signup": bool }` — show the picker on the sign-up screen (e-mail and Google / Apple) only when true (= mode Everyone; a brand-new account is never a test family). There was no unauthenticated endpoint the app calls before sign-up, so this tiny one was added.
+- **Server enforcement while the switch is off for the caller's family** (old or modified apps store nothing):
+  - `POST /api/register` / `POST /api/auth/social` (new account): the acquisition fields are stored only in mode Everyone, otherwise ignored (sign-up unaffected).
+  - `PATCH /api/parent/settings`: the acquisition fields are ignored (200; a timezone in the same call still applies).
+  - `POST /api/parent/dashboard-opened` and `POST /api/parent/phase2-interest/viewed`: 204, no row.
+  - `POST /api/parent/phase2-interest`: **422 `{message, code: "feature_unavailable"}`**, nothing stored — except a **withdrawal** (`notify: false`) from a parent who already submitted an answer (`submitted_at` set — a viewed-only row is no answer and gets 422 too): always allowed (consent withdrawal must always work). It only forgets this parent's signup and sets `notify` false (`Phase2InterestService::withdraw()`); any price sent along is ignored, and the stored price, `submitted_at` and the view times stay untouched (QA #1499 M1).
+  - Stored data stay in every mode; `/admin/funnel` is unchanged.
 
 ## 1. Acquisition source (H1–H4 per channel)
 - `POST /api/register` and `POST /api/auth/social` take two new optional fields. On social sign-in they are used only when the call creates a new account; for an existing account they are ignored.
@@ -44,7 +58,7 @@ David's decisions 2026-11-21:
   ```
 
   - `email` is required when `notify` is true. Without one: 422 `email_required`. The app prefills the account e-mail. *(QA)* When `notify` is false, `email` is ignored (`exclude_unless:notify,true`).
-  - *(QA, B1 — withdrawal »Ne obveščajte me več«)* A parent who already answered may send only `{ "notify": false }` (no `price_choice`): the stored price stays, `notify` becomes false and this parent's own signup is removed from the e-mail store. Without an earlier answer `price_choice` is still required (422).
+  - *(QA, B1 — withdrawal »Ne obveščajte me več«)* A parent who already answered may send only `{ "notify": false }` (no `price_choice`): the stored price stays, **`submitted_at` and the view times stay too** (QA #1499 M1 — a withdrawal is no new answer; a body WITH a price is a new answer and stamps `submitted_at` again), `notify` becomes false and this parent's own signup is removed from the e-mail store. Without an earlier answer `price_choice` is still required (422).
 - New table `phase2_interests`: `user_id` (unique), `family_id`, `first_viewed_at`, `last_viewed_at`, `price_choice`, `notify`, `submitted_at`, *(QA, M4)* `email_signup_id` (this parent's own signup row in the e-mail store; no FK).
 - When `notify` is true, the e-mail goes into the unified e-mail store. Reuse `email_contacts` + `email_signups` from M6-S09 / #1418 with source `app_phase2`; do not add a parallel store.
 - `GET /api/parent/dashboard` adds a top-level `phase2_interest` field: *(addition / QA)* `{ "submitted": bool, "notify": bool, "price_choice": "free" | "monthly_2_99" | "monthly_5_99" | null }` (of the requesting parent), so the app shows »Hvala« instead of the form — `notify` false → a plain thank-you (without »Obvestili vas bomo«); `notify` true → the app can offer »Ne obveščajte me več«.

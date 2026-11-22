@@ -16,6 +16,7 @@ use App\Services\Auth\SocialSignInService;
 use App\Services\Auth\SocialTokenVerifier;
 use App\Services\ChildProfileService;
 use App\Services\ParentRegistrationService;
+use App\Services\Validation\ValidationSignals;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -45,7 +46,9 @@ class AuthController extends Controller
      * - Optional `acquisition_source` (»Kje ste izvedeli za PetPrep?«,
      *   VALIDATION_PLAN §4.1) + `acquisition_detail` (kept only with `other` /
      *   `ad`, ≤ 60 characters): an unknown value is stored as null and never
-     *   fails the sign-up.
+     *   fails the sign-up. Stored only while the admin switch »Validation
+     *   signals« is »Everyone« (`GET /api/app-features`
+     *   `validation_signals_signup`); otherwise ignored.
      *
      * POST /api/register
      */
@@ -58,7 +61,8 @@ class AuthController extends Controller
                 $request->plainPassword(),
                 $request->familyTimezone(),
                 $request->deviceName(),
-                $request->acquisitionAnswer(),
+                // David 2026-11-22: stored only while the »Validation signals« switch is `everyone`.
+                app(ValidationSignals::class)->signupEnabled() ? $request->acquisitionAnswer() : null,
             );
         } catch (EmailTakenException $e) {
             // Concurrent sign-up with the same address won the race.
@@ -137,7 +141,8 @@ class AuthController extends Controller
             $request->familyTimezone(),
             $request->displayName(),
             $request->deviceName(),
-            $request->acquisitionAnswer(),
+            // David 2026-11-22: stored only while the »Validation signals« switch is `everyone`.
+            app(ValidationSignals::class)->signupEnabled() ? $request->acquisitionAnswer() : null,
         );
 
         $user = $result->user;
@@ -287,6 +292,11 @@ class AuthController extends Controller
              * @var 'friend_family'|'instagram'|'tiktok'|'facebook'|'youtube'|'school_kindergarten'|'search'|'website'|'ad'|'other'|null
              */
             'acquisition_source' => $user->isParent() ? $user->acquisition_source : null,
+            // David 2026-11-22: the admin switch »Validation signals« is on for this parent's
+            // family — only then may the app show the acquisition question, count dashboard opens
+            // and show »Dobili smo pravo žival«. Always false for a child.
+            /** @var bool */
+            'validation_signals' => app(ValidationSignals::class)->enabledFor($user),
         ], 200);
     }
 

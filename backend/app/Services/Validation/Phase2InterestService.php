@@ -59,10 +59,30 @@ class Phase2InterestService
         });
     }
 
-    /** May this parent send `{notify: false}` without a price (a withdrawal of an earlier answer)? */
+    /** Has this parent SUBMITTED an answer (a viewed-only row is none)? Gate of every withdrawal. */
     public function hasAnswer(User $parent): bool
     {
-        return Phase2Interest::where('user_id', $parent->id)->whereNotNull('price_choice')->exists();
+        return Phase2Interest::where('user_id', $parent->id)->whereNotNull('submitted_at')->exists();
+    }
+
+    /**
+     * »Ne obveščajte me več« (QA #1499 M1): forget THIS parent's `app_phase2` signup and set
+     * `notify` false — nothing else. The price, `submitted_at` and the view timestamps stay as
+     * they are, so a withdrawal never counts as a new answer (funnel H7). Allowed in every switch
+     * mode; a parent without a submitted answer has nothing to withdraw (no-op).
+     */
+    public function withdraw(User $parent): void
+    {
+        DB::transaction(function () use ($parent): void {
+            $row = Phase2Interest::where('user_id', $parent->id)->whereNotNull('submitted_at')->lockForUpdate()->first();
+            if ($row === null) {
+                return;
+            }
+            $this->forgetSignup($row->email_signup_id);
+            $row->email_signup_id = null;
+            $row->notify = false;
+            $row->save();
+        });
     }
 
     /**

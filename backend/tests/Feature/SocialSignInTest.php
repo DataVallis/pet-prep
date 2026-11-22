@@ -700,6 +700,10 @@ describe('RsaJwt', function () {
 });
 
 describe('POST /api/auth/social — acquisition source (VALIDATION_PLAN §4.1)', function () {
+    beforeEach(function () {
+        useValidationSignals('everyone');
+    });
+
     it('stores the answer when the call creates the account (detail only for other / ad)', function () {
         ssGoogle(['acquisition_source' => 'ad', 'acquisition_detail' => ' IG-JESEN '])->assertOk()->assertJsonPath('created', true);
 
@@ -721,5 +725,23 @@ describe('POST /api/auth/social — acquisition source (VALIDATION_PLAN §4.1)',
 
         expect(User::sole()->acquisition_source)->toBeNull()
             ->and(User::sole()->acquisition_detail)->toBeNull();
+    });
+});
+
+describe('POST /api/auth/social — acquisition source behind the admin switch (David 2026-11-22)', function () {
+    it('ignores the answer while the switch is off (default)', function () {
+        ssGoogle(['acquisition_source' => 'ad', 'acquisition_detail' => 'IG-JESEN'])->assertOk()->assertJsonPath('created', true);
+
+        expect(User::sole()->acquisition_source)->toBeNull()
+            ->and(User::sole()->acquisition_detail)->toBeNull();
+    });
+
+    it('ignores the answer in test-families mode (a new account is never on the list)', function () {
+        $tester = User::factory()->parent()->create(['email' => 'tester@example.com']);
+        useValidationSignals('test_families', [$tester->id]);
+
+        ssGoogle(['acquisition_source' => 'instagram'])->assertOk()->assertJsonPath('created', true);
+
+        expect(User::where('email', 'ana.novak@gmail.com')->value('acquisition_source'))->toBeNull();
     });
 });

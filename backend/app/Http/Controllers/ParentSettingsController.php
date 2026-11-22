@@ -7,6 +7,7 @@ use App\Http\Requests\PatchParentSettingsRequest;
 use App\Http\Requests\UpdateParentSettingsRequest;
 use App\Services\FamilySettingsService;
 use App\Services\Validation\AcquisitionSourceService;
+use App\Services\Validation\ValidationSignals;
 use Illuminate\Http\JsonResponse;
 
 class ParentSettingsController extends Controller
@@ -53,6 +54,8 @@ class ParentSettingsController extends Controller
      *   unknown value is ignored too (never a 422). `detail` is kept only with
      *   `other` / `ad`, trimmed, at most 60 characters.
      * - `timezone` is required only when the body carries no acquisition field.
+     * - The answer is ignored (200) while the admin switch »Validation
+     *   signals« is off for this parent's family.
      * - Order: the answer is stored FIRST, then the timezone — a 422
      *   `timezone_change_too_soon` still keeps a stored answer.
      *
@@ -61,7 +64,9 @@ class ParentSettingsController extends Controller
     public function patch(PatchParentSettingsRequest $request): JsonResponse
     {
         // The answer first: a timezone refused by the 24 h cooldown (422) must not lose it.
-        $parent = $this->acquisition->recordOnce($request->user(), $request->acquisitionAnswer());
+        // Ignored (still 200) while the »Validation signals« switch is off for this family.
+        $answer = app(ValidationSignals::class)->enabledFor($request->user()) ? $request->acquisitionAnswer() : null;
+        $parent = $this->acquisition->recordOnce($request->user(), $answer);
 
         if ($request->has('timezone')) {
             try {

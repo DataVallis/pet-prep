@@ -351,6 +351,15 @@ class AppServiceProvider extends ServiceProvider
                 ->by('account-export:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
         });
 
+        // David 2026-11-22: GET /api/app-features (public booleans) — 60 / min per IP.
+        RateLimiter::for('app-features', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perMinute(60)->by('app-features:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
         // VALIDATION_PLAN §4.1 / §4.4 (David 2026-11-21): dashboard opens 30 / min per parent
         // (the server keeps ≤ 1 row per 30 min anyway); the Phase-2 fake door 10 / min per parent.
         RateLimiter::for('dashboard-opens', function (Request $request) {

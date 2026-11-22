@@ -4,6 +4,7 @@ namespace App\Filament\Pages;
 
 use App\Enums\CatsAvailability;
 use App\Enums\UserRole;
+use App\Enums\ValidationSignalsMode;
 use App\Models\AppSettingChange;
 use App\Models\User;
 use App\Services\AppSettingsService;
@@ -93,6 +94,8 @@ class FeatureSwitches extends Page implements HasForms
             'gift_vouchers' => $settings->giftVouchers(fresh: true),
             'promise_kit' => $settings->promiseKit(fresh: true),
             'partner_inquiries' => $settings->partnerInquiries(fresh: true),
+            'validation_signals_mode' => $settings->storedValidationSignals(fresh: true)['mode']->value,
+            'validation_signals_test_parent_ids' => array_map('strval', $settings->storedValidationSignals(fresh: true)['test_parent_ids']),
         ]);
     }
 
@@ -127,6 +130,29 @@ class FeatureSwitches extends Page implements HasForms
                         Placeholder::make('cats_help')
                             ->hiddenLabel()
                             ->content(new HtmlString(__('admin.features.help'))),
+                    ]),
+                // VALIDATION_PLAN §4 (David 2026-11-22): test the validation signals in production
+                // behind this switch, default off; »Vsi« only after the privacy policy is updated.
+                Section::make(__('admin.features.validation_signals_section'))
+                    ->description(__('admin.features.validation_signals_description'))
+                    ->schema([
+                        Radio::make('validation_signals_mode')
+                            ->label(__('admin.features.validation_signals_mode'))
+                            ->options(collect(ValidationSignalsMode::cases())->mapWithKeys(fn (ValidationSignalsMode $m): array => [$m->value => $m->label()])->all())
+                            ->in(array_map(fn (ValidationSignalsMode $m): string => $m->value, ValidationSignalsMode::cases()))
+                            ->required()
+                            ->live(),
+                        Select::make('validation_signals_test_parent_ids')
+                            ->label(__('admin.features.test_parents'))
+                            ->multiple()
+                            ->searchable()
+                            ->getSearchResultsUsing(fn (string $search): array => self::parentsMatching($search))
+                            ->getOptionLabelsUsing(fn (array $values): array => self::parentLabels($values))
+                            ->required(fn (Get $get): bool => $get('validation_signals_mode') === ValidationSignalsMode::TestFamilies->value)
+                            ->helperText(__('admin.features.test_parents_help')),
+                        Placeholder::make('validation_signals_help')
+                            ->hiddenLabel()
+                            ->content(new HtmlString(__('admin.features.validation_signals_help'))),
                     ]),
                 // M5-R21 (David 2026-10-14): unique vs shared AI media of paid breeds.
                 Section::make(__('admin.features.media_section'))
@@ -268,6 +294,12 @@ class FeatureSwitches extends Page implements HasForms
         $giftVouchers = (bool) ($data['gift_vouchers'] ?? false);
         $promiseKit = (bool) ($data['promise_kit'] ?? false);
         $partnerInquiries = (bool) ($data['partner_inquiries'] ?? true);
+        $signalsMode = ValidationSignalsMode::tryFrom((string) ($data['validation_signals_mode'] ?? '')) ?? ValidationSignalsMode::Off;
+        /** @var list<int|string> $signalsIds */
+        $signalsIds = array_values($data['validation_signals_test_parent_ids'] ?? []);
+        $newSignalsIds = array_values(array_unique(array_map('intval', $signalsIds)));
+        sort($newSignalsIds);
+        $storedSignals = $settings->storedValidationSignals(fresh: true);
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -306,6 +338,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($partnerInquiries !== $settings->partnerInquiries(fresh: true)) {
                 $settings->updatePartnerInquiries($this->admin(), $partnerInquiries);
             }
+            if ($signalsMode !== $storedSignals['mode'] || $newSignalsIds !== $storedSignals['test_parent_ids']) {
+                $settings->updateValidationSignals($this->admin(), $signalsMode, $signalsIds);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -325,7 +360,8 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_quality_clip_ai', ['state' => $settings->qualityClipAi() ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
-            .' · '.__('admin.features.saved_body_partner_inquiries', ['state' => $settings->partnerInquiries(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
+            .' · '.__('admin.features.saved_body_partner_inquiries', ['state' => $settings->partnerInquiries(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
+            .' · '.__('admin.features.saved_body_validation_signals', ['mode' => $settings->storedValidationSignals(fresh: true)['mode']->label()]))->success()->send();
     }
 
     /**
@@ -334,7 +370,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY, AppSettingsService::GIFT_VOUCHERS_KEY, AppSettingsService::PROMISE_KIT_KEY, AppSettingsService::PARTNER_INQUIRIES_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::FRUGAL_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY, AppSettingsService::APP_ERROR_REPORTS_KEY, AppSettingsService::VIDEO_COMPRESSION_KEY, AppSettingsService::GIFT_VOUCHERS_KEY, AppSettingsService::PROMISE_KIT_KEY, AppSettingsService::PARTNER_INQUIRIES_KEY, AppSettingsService::VALIDATION_SIGNALS_KEY])
             ->latest('id')->limit(20)->get();
     }
 

@@ -37,6 +37,11 @@ use function Pest\Laravel\putJson;
 |
 */
 
+beforeEach(function () {
+    // The signals themselves; the admin switch modes are in ValidationSignalsSwitchTest.
+    useValidationSignals('everyone');
+});
+
 function vsAt(string $utc): void
 {
     Carbon::setTestNow(Carbon::parse($utc, 'UTC'));
@@ -415,11 +420,15 @@ describe('POST /api/parent/phase2-interest', function () {
         postJson('/api/parent/phase2-interest', ['notify' => false])->assertUnprocessable()->assertJsonValidationErrors('price_choice');
 
         postJson('/api/parent/phase2-interest', ['price_choice' => 'monthly_2_99', 'notify' => true, 'email' => 'mama@example.com'])->assertOk();
+        $submittedAt = Phase2Interest::sole()->submitted_at;
+        $this->travel(2)->hours();
         // `email` is ignored when notify is false (exclude_unless), even an invalid one.
         postJson('/api/parent/phase2-interest', ['notify' => false, 'email' => 'not an address'])->assertOk()->assertExactJson(['status' => 'saved']);
 
         $row = Phase2Interest::sole();
         expect($row->price_choice?->value)->toBe('monthly_2_99')
+            // QA #1499 M1: a pure withdrawal is no new answer — submitted_at stays.
+            ->and($row->submitted_at->equalTo($submittedAt))->toBeTrue()
             ->and($row->notify)->toBeFalse()
             ->and($row->email_signup_id)->toBeNull()
             ->and(EmailContact::count())->toBe(0);

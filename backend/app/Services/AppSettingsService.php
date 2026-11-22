@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\CatsAvailability;
 use App\Enums\FamilyRole;
 use App\Enums\UserRole;
+use App\Enums\ValidationSignalsMode;
 use App\Jobs\ResumeStateMedia;
 use App\Models\AiBudgetAlert;
 use App\Models\AppSetting;
@@ -28,6 +29,10 @@ use InvalidArgumentException;
  * (`petprep.cats_enabled`) stays as a backwards-compatible override meaning
  * `everyone`. Reads are cached for CACHE_TTL_SECONDS (shared cache store →
  * every PHP container) and the cache is forgotten after every save.
+ *
+ * `validation_signals` (VALIDATION_PLAN §4, David 2026-11-22) = the same shape as
+ * `cats_availability` ({mode, test_parent_ids}), no env override; read through
+ * Validation\ValidationSignals.
  *
  * `ai_budget` (M4-07b, David 2026-10-14: raise the AI budget in /admin, not
  * in the server .env) = {daily_usd: float|null, monthly_usd: float|null}.
@@ -72,6 +77,9 @@ use InvalidArgumentException;
 class AppSettingsService
 {
     public const CATS_KEY = 'cats_availability';
+
+    /** VALIDATION_PLAN §4 (David 2026-11-22): {mode: off|test_families|everyone, test_parent_ids: list<int>}. No row → off. */
+    public const VALIDATION_SIGNALS_KEY = 'validation_signals';
 
     public const AI_BUDGET_KEY = 'ai_budget';
 
@@ -207,7 +215,14 @@ class AppSettingsService
 
     public function isTestFamily(Family $family): bool
     {
-        $ids = $this->storedCats()['test_parent_ids'];
+        return $this->familyHasParentIn($family, $this->storedCats()['test_parent_ids']);
+    }
+
+    /**
+     * @param  list<int>  $ids
+     */
+    private function familyHasParentIn(Family $family, array $ids): bool
+    {
         if ($ids === []) {
             return false;
         }
@@ -236,6 +251,61 @@ class AppSettingsService
         }
 
         $this->store($actor, self::CATS_KEY, ['mode' => $mode->value, 'test_parent_ids' => $ids]);
+    }
+
+    /**
+     * The validation-signals switch (VALIDATION_PLAN §4, David 2026-11-22), cached like the cats
+     * switch. No env override. `$fresh` reads the row itself (no cache) — the admin page.
+     *
+     * @return array{mode: ValidationSignalsMode, test_parent_ids: list<int>}
+     */
+    public function storedValidationSignals(bool $fresh = false): array
+    {
+        $read = fn (): array => AppSetting::find(self::VALIDATION_SIGNALS_KEY)?->value ?? [];
+        /** @var array{mode?: string, test_parent_ids?: list<int|string>} $value */
+        $value = $fresh ? $read() : Cache::remember(self::cacheKey(self::VALIDATION_SIGNALS_KEY), self::CACHE_TTL_SECONDS, $read);
+
+        return [
+            'mode' => ValidationSignalsMode::tryFrom((string) ($value['mode'] ?? '')) ?? ValidationSignalsMode::Off,
+            'test_parent_ids' => array_values(array_map('intval', $value['test_parent_ids'] ?? [])),
+        ];
+    }
+
+    public function validationSignalsMode(): ValidationSignalsMode
+    {
+        return $this->storedValidationSignals()['mode'];
+    }
+
+    /** On for this family (a test family = any of its parents is listed)? */
+    public function validationSignalsEnabledForFamily(?Family $family): bool
+    {
+        $stored = $this->storedValidationSignals();
+
+        return match ($stored['mode']) {
+            ValidationSignalsMode::Everyone => true,
+            ValidationSignalsMode::Off => false,
+            ValidationSignalsMode::TestFamilies => $family !== null && $this->familyHasParentIn($family, $stored['test_parent_ids']),
+        };
+    }
+
+    /**
+     * Save the validation-signals switch (superadmin), audit it and bust the cache.
+     *
+     * @param  list<int|string>  $testParentIds  parent users; anything else is refused
+     *
+     * @throws InvalidArgumentException a listed id is not a parent account
+     */
+    public function updateValidationSignals(User $actor, ValidationSignalsMode $mode, array $testParentIds): void
+    {
+        $ids = array_values(array_unique(array_map('intval', $testParentIds)));
+        sort($ids);
+
+        $parents = User::whereIn('id', $ids)->where('role', UserRole::Parent->value)->count();
+        if ($parents !== count($ids)) {
+            throw new InvalidArgumentException('Test families can only be picked by parent accounts.');
+        }
+
+        $this->store($actor, self::VALIDATION_SIGNALS_KEY, ['mode' => $mode->value, 'test_parent_ids' => $ids]);
     }
 
     /**

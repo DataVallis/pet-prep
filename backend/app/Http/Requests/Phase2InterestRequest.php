@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Enums\Phase2PriceChoice;
 use App\Models\User;
 use App\Services\Validation\Phase2InterestService;
+use App\Services\Validation\ValidationSignals;
 use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -24,13 +25,30 @@ class Phase2InterestRequest extends FormRequest
 
     public const CODE_EMAIL_INVALID = 'email_invalid';
 
+    public const CODE_FEATURE_UNAVAILABLE = 'feature_unavailable';
+
     public function authorize(): bool
     {
         return $this->user()?->can('manageFamily', User::class) ?? false;
     }
 
+    /**
+     * David 2026-11-22: while the admin switch »Validation signals« is off for this family, only a
+     * withdrawal (`notify: false` from a parent who already submitted an answer) may pass — anything else is
+     * 422 `feature_unavailable` before validation, nothing stored. Non-parents fall through to
+     * authorize() (403).
+     */
     protected function prepareForValidation(): void
     {
+        $user = $this->user();
+        if ($user instanceof User && $user->can('manageFamily', User::class)
+            && ! app(ValidationSignals::class)->enabledFor($user) && ! $this->isRowWithdrawal($user)) {
+            throw new HttpResponseException(response()->json([
+                'message' => 'This feature is not available.',
+                'code' => self::CODE_FEATURE_UNAVAILABLE,
+            ], 422));
+        }
+
         $email = $this->input('email');
         if (is_string($email)) {
             $email = trim($email);
@@ -97,16 +115,29 @@ class Phase2InterestRequest extends FormRequest
         return is_string($price) ? Phase2PriceChoice::from($price) : null;
     }
 
-    /** `{notify: false}` without a price from a parent who already has a stored answer. */
-    private function isWithdrawal(): bool
+    /**
+     * `notify: false` from a parent who already SUBMITTED an answer (switch off, QA #1499 M1): a
+     * viewed-only row is no answer, so it does not open the gate.
+     */
+    private function isRowWithdrawal(User $user): bool
     {
-        if ($this->has('price_choice') || ! $this->has('notify')) {
-            return false;
-        }
-        $notify = filter_var($this->input('notify'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
+        return $this->sendsNotifyFalse() && app(Phase2InterestService::class)->hasAnswer($user);
+    }
 
-        return $notify === false && $this->user() !== null
+    /**
+     * A pure withdrawal: `{notify: false}` WITHOUT a price from a parent who already submitted an
+     * answer (any switch mode). The controller then only withdraws the consent (`withdraw()`).
+     */
+    public function isWithdrawal(): bool
+    {
+        return ! $this->has('price_choice') && $this->sendsNotifyFalse() && $this->user() !== null
             && app(Phase2InterestService::class)->hasAnswer($this->user());
+    }
+
+    private function sendsNotifyFalse(): bool
+    {
+        return $this->has('notify')
+            && filter_var($this->input('notify'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) === false;
     }
 
     public function notify(): bool

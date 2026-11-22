@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AppErrorController;
+use App\Http\Controllers\AppFeaturesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
@@ -97,6 +98,10 @@ Route::get('shop/downloads/{order}/{locale}', [ShopController::class, 'download'
     ->middleware(['signed', 'throttle:shop-order'])->where(['order' => '[0-9]+', 'locale' => '[a-z]{2}'])->name('shop.download');
 Route::get('shop/sample/{locale}', [ShopController::class, 'sample'])
     ->middleware(['signed', 'throttle:shop-order'])->where('locale', '[a-z]{2}')->name('shop.sample');
+
+// David 2026-11-22: public product switches for the signed-out app (booleans only), 60 / min per IP.
+Route::get('app-features', [AppFeaturesController::class, 'show'])
+    ->middleware('throttle:app-features');
 
 // M6-S03: partner inquiry form of petprep.si/partners. Public; per-IP throttle (5 / hour);
 // 503 while the superadmin switch »Partner inquiries« is off.
