@@ -42,6 +42,7 @@ describe('H7 fake door', () => {
   it('maps 422 email_required and other failures', () => {
     expect(mapPhase2Error(new ApiError('x', 422, { message: 'x', code: 'email_required' }))).toBe('email_required');
     expect(mapPhase2Error(new ApiError('x', 422, { message: 'x', errors: { email: ['bad'] } }))).toBe('email_invalid');
+    expect(mapPhase2Error(new ApiError('x', 422, { message: 'x', code: 'feature_unavailable' }))).toBe('unavailable');
     expect(mapPhase2Error(new ApiError('x', 500, null))).toBe('failed');
     expect(mapPhase2Error(new TypeError('Network request failed'))).toBe('offline');
   });

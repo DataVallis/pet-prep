@@ -8,6 +8,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import {
   api,
   type AcquisitionFields,
+  type AppFeaturesResponse,
   type Phase2InterestRequest,
   type Phase2InterestResponse,
   type UpdateAcquisitionResponse,
@@ -15,8 +16,27 @@ import {
 } from '@/api/client';
 import { parentDashboardKey } from '@/modules/family/live';
 import { readPhase2Interest } from '@/modules/validation/phase2';
+import { signupPickerVisible } from '@/modules/validation/gate';
 
-/** `GET /api/user` of the signed-in parent (only read for `acquisition_source`). */
+/** Public app features (sign-up picker flag). Fetched once per app run; a failure hides the picker. */
+export const appFeaturesKey = ['app', 'features'] as const;
+
+/** `GET /api/app-features` — bounded, no retries (the sign-up never waits for it). */
+export function useAppFeatures() {
+  return useQuery<AppFeaturesResponse>({
+    queryKey: appFeaturesKey,
+    queryFn: () => api.getAppFeatures(),
+    staleTime: 5 * 60_000,
+    retry: false,
+  });
+}
+
+/** »Kje ste izvedeli za PetPrep?« at sign-up — only with an explicit `validation_signals_signup: true`. */
+export function useSignupPickerVisible(): boolean {
+  return signupPickerVisible(useAppFeatures().data);
+}
+
+/** `GET /api/user` of the signed-in parent (`acquisition_source`, `validation_signals`). */
 export const parentAccountKey = ['parent', 'account'] as const;
 
 /** Read once per session; `enabled` false once the card can never show (dismissed on this phone). */

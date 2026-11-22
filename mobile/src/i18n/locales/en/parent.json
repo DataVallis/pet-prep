@@ -386,6 +386,7 @@
       "price_required": "Please choose one option.",
       "email_required": "Enter an e-mail address so we can let you know.",
       "email_invalid": "Please check the e-mail address.",
+      "unavailable": "This part isn't available right now. Please try again later.",
       "offline": "No connection. Try again when you're back online.",
       "failed": "Couldn't send. Please try again."
     }

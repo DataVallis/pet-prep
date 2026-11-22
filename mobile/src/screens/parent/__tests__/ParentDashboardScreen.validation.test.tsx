@@ -1,4 +1,7 @@
-/** M5-08: H6 dashboard-opened signal, the once-only acquisition card and the H7 fake door. */
+/**
+ * M5-08: H6 dashboard-opened signal, the once-only acquisition card and the H7 fake door — and the admin
+ * switch »Validation signals« that gates them (`validation_signals`, dashboard first, then GET /api/user).
+ */
 import { act, fireEvent, screen } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
@@ -35,6 +38,8 @@ const m = api as unknown as Record<
   jest.Mock
 >;
 const PET7 = makeFamilyPet({ id: 7, caretakers: [{ child_id: 2, contract_signed: true }] });
+/** The family has the switch on (test family or mode All). */
+const on = () => ({ ...makeScoredDashboard([makeScoredChild()], [PET7]), validation_signals: true });
 const PARENT = { id: 11, name: 'Ana', email: 'ana@example.com', role: 'parent' as const };
 
 jest.setTimeout(20_000);
@@ -56,7 +61,7 @@ beforeEach(async () => {
 
 describe('H6 dashboard-opened', () => {
   it('reports one `launch` on mount, never from refetches', async () => {
-    m.getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    m.getParentDashboard.mockResolvedValue(on());
     const { client } = renderWithQuery(<ParentDashboardScreen />);
     await flush(OPEN_GRACE_MS + 50);
     expect(m.reportDashboardOpened).toHaveBeenCalledTimes(1);
@@ -73,7 +78,7 @@ describe('acquisition card', () => {
   it('shown when the server says null; »Shrani« sends the answer once', async () => {
     m.getUser.mockResolvedValue({ ...PARENT, pet: null, acquisition_source: null });
     m.updateAcquisitionSource.mockResolvedValue({});
-    m.getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    m.getParentDashboard.mockResolvedValue(on());
     renderWithQuery(<ParentDashboardScreen />);
     expect(await screen.findByTestId('acquisition-card')).toBeTruthy();
     expect(screen.getByText('Kje ste izvedeli za PetPrep?')).toBeTruthy();
@@ -88,7 +93,7 @@ describe('acquisition card', () => {
 
   it('hidden for an older server (no field) and after »Ne zdaj«', async () => {
     m.getUser.mockResolvedValue({ ...PARENT, pet: null });
-    m.getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    m.getParentDashboard.mockResolvedValue(on());
     const first = renderWithQuery(<ParentDashboardScreen />);
     await flush(50);
     expect(screen.queryByTestId('acquisition-card')).toBeNull();
@@ -105,7 +110,7 @@ describe('acquisition card', () => {
   it('never asks a parent who already saw the question at sign-up on this phone', async () => {
     await markAcquisitionPromptDone(PARENT.id);
     m.getUser.mockResolvedValue({ ...PARENT, pet: null, acquisition_source: null });
-    m.getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    m.getParentDashboard.mockResolvedValue(on());
     renderWithQuery(<ParentDashboardScreen />);
     await flush(50);
     expect(screen.queryByTestId('acquisition-card')).toBeNull();
@@ -114,10 +119,10 @@ describe('acquisition card', () => {
 });
 
 describe('H7 fake door', () => {
-  const dashboard = (submitted: boolean) => ({ ...makeScoredDashboard([makeScoredChild()], [PET7]), phase2_interest: { submitted } });
+  const dashboard = (submitted: boolean) => ({ ...on(), phase2_interest: { submitted } });
 
   it('older server → no row', async () => {
-    m.getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    m.getParentDashboard.mockResolvedValue(on());
     renderWithQuery(<ParentDashboardScreen />);
     expect(await screen.findByTestId('child-card-2')).toBeTruthy();
     expect(screen.queryByTestId('dashboard-phase2')).toBeNull();
@@ -158,7 +163,7 @@ describe('H7 fake door', () => {
 
   it('B1: »Ne obveščajte me več« sends {notify: false} and switches to the plain thanks without the promise', async () => {
     m.getParentDashboard.mockResolvedValue({
-      ...makeScoredDashboard([makeScoredChild()], [PET7]),
+      ...on(),
       phase2_interest: { submitted: true, notify: true, price_choice: 'monthly_5_99' },
     });
     m.submitPhase2Interest.mockResolvedValueOnce({ status: 'saved' });
@@ -183,7 +188,7 @@ describe('H7 fake door', () => {
 
   it('B1: a failed withdrawal keeps the button and says so', async () => {
     m.getParentDashboard.mockResolvedValue({
-      ...makeScoredDashboard([makeScoredChild()], [PET7]),
+      ...on(),
       phase2_interest: { submitted: true, notify: true, price_choice: 'free' },
     });
     m.submitPhase2Interest.mockRejectedValueOnce(new ApiError('x', 500, null));
@@ -201,5 +206,88 @@ describe('H7 fake door', () => {
     fireEvent.press(await screen.findByTestId('dashboard-phase2'));
     expect(screen.getByTestId('phase2-thanks')).toBeTruthy();
     expect(screen.queryByTestId('phase2-submit')).toBeNull();
+  });
+});
+
+describe('admin switch »Validation signals«', () => {
+  const plain = () => makeScoredDashboard([makeScoredChild()], [PET7]);
+
+  it('off (dashboard false): no card, no row, no H6, nothing sent — even when GET /api/user would say on', async () => {
+    m.getUser.mockResolvedValue({ ...PARENT, pet: null, acquisition_source: null, validation_signals: true });
+    m.getParentDashboard.mockResolvedValue({ ...plain(), validation_signals: false, phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    renderWithQuery(<ParentDashboardScreen />);
+    expect(await screen.findByTestId('child-card-2')).toBeTruthy();
+    await flush(OPEN_GRACE_MS + 50);
+    expect(screen.queryByTestId('acquisition-card')).toBeNull();
+    expect(screen.queryByTestId('dashboard-phase2')).toBeNull();
+    expect(m.reportDashboardOpened).not.toHaveBeenCalled();
+    // The dashboard field wins: GET /api/user is not asked for the flag.
+    expect(m.getUser).not.toHaveBeenCalled();
+  });
+
+  it('field missing everywhere (older server): hidden and nothing sent', async () => {
+    m.getUser.mockResolvedValue({ ...PARENT, pet: null, acquisition_source: null });
+    m.getParentDashboard.mockResolvedValue({ ...plain(), phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    renderWithQuery(<ParentDashboardScreen />);
+    expect(await screen.findByTestId('child-card-2')).toBeTruthy();
+    await flush(OPEN_GRACE_MS + 50);
+    expect(m.getUser).toHaveBeenCalledTimes(1);
+    expect(screen.queryByTestId('acquisition-card')).toBeNull();
+    expect(screen.queryByTestId('dashboard-phase2')).toBeNull();
+    expect(m.reportDashboardOpened).not.toHaveBeenCalled();
+  });
+
+  it('test family on via GET /api/user (dashboard without the field): card, row and H6', async () => {
+    m.getUser.mockResolvedValue({ ...PARENT, pet: null, acquisition_source: null, validation_signals: true });
+    m.getParentDashboard.mockResolvedValue({ ...plain(), phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    renderWithQuery(<ParentDashboardScreen />);
+    expect(await screen.findByTestId('acquisition-card')).toBeTruthy();
+    expect(screen.getByTestId('dashboard-phase2')).toBeTruthy();
+    await flush(OPEN_GRACE_MS + 50);
+    expect(m.reportDashboardOpened).toHaveBeenCalledWith('launch');
+  });
+
+  it('on (test family or All, dashboard true): card, row and H6', async () => {
+    m.getUser.mockResolvedValue({ ...PARENT, pet: null, acquisition_source: null });
+    m.getParentDashboard.mockResolvedValue({ ...on(), phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    renderWithQuery(<ParentDashboardScreen />);
+    expect(await screen.findByTestId('acquisition-card')).toBeTruthy();
+    expect(screen.getByTestId('dashboard-phase2')).toBeTruthy();
+    await flush(OPEN_GRACE_MS + 50);
+    expect(m.reportDashboardOpened).toHaveBeenCalledTimes(1);
+  });
+
+  it('withdrawal while off: the thank-you row stays, no »viewed«, »Ne obveščajte me več« works', async () => {
+    m.getParentDashboard.mockResolvedValue({
+      ...plain(),
+      validation_signals: false,
+      phase2_interest: { submitted: true, notify: true, price_choice: 'monthly_2_99' },
+    });
+    m.submitPhase2Interest.mockResolvedValueOnce({ status: 'saved' });
+    renderWithQuery(<ParentDashboardScreen />);
+    fireEvent.press(await screen.findByTestId('dashboard-phase2'));
+    expect(m.reportPhase2Viewed).not.toHaveBeenCalled();
+    expect(screen.getByTestId('phase2-thanks')).toBeTruthy();
+    expect(screen.queryByTestId('phase2-submit')).toBeNull();
+    fireEvent.press(screen.getByTestId('phase2-withdraw'));
+    await flush();
+    expect(m.submitPhase2Interest).toHaveBeenCalledWith({ notify: false });
+    expect(screen.getByText('Hvala za odgovor!')).toBeTruthy();
+    // Back on the dashboard: no live consent and the switch off → no row any more.
+    fireEvent.press(screen.getByTestId('phase2-back'));
+    expect(screen.queryByTestId('dashboard-phase2')).toBeNull();
+  });
+
+  it('422 feature_unavailable: calm message and the dashboard is refetched', async () => {
+    m.getParentDashboard.mockResolvedValue({ ...on(), phase2_interest: { submitted: false, notify: false, price_choice: null } });
+    m.submitPhase2Interest.mockRejectedValueOnce(new ApiError('x', 422, { message: 'x', code: 'feature_unavailable' }));
+    renderWithQuery(<ParentDashboardScreen />);
+    fireEvent.press(await screen.findByTestId('dashboard-phase2'));
+    fireEvent.press(screen.getByTestId('phase2-price-free'));
+    const before = m.getParentDashboard.mock.calls.length;
+    fireEvent.press(screen.getByTestId('phase2-submit'));
+    await flush(50);
+    expect(screen.getByText('Ta del trenutno ni na voljo. Poskusite znova pozneje.')).toBeTruthy();
+    expect(m.getParentDashboard.mock.calls.length).toBeGreaterThan(before);
   });
 });

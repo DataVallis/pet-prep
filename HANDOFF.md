@@ -168,6 +168,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-22 (mobile, `feat/M5-08-validation-signals-app-v3`)
+- App follows the admin switch »Validation signals« (default off; supersedes #1486): card, Phase-2 row and H6 only for switched-on families, sign-up picker only in mode »All«, withdrawal always reachable, 422 `feature_unavailable` handled. New switch fields hand-typed until the backend switch PR merges.
+
 ### 2026-11-22 (mobile, `feat/M5-08-validation-signals-app-v2`)
 - Validation signals in the app on the generated types (supersedes #1479 after QA): sign-up question + once-only dashboard card, H6 signal (iOS background → inactive → active handled), fake door with the GDPR withdrawal »Ne obveščajte me več«. Not on a device.
 

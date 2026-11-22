@@ -75,7 +75,7 @@ export function socialSignInBody(
     timezone: string | undefined;
     deviceName: string;
     /** M5-08: the optional answer from the terms sheet (server uses it only for a NEW account). */
-    acquisition?: AcquisitionChoice;
+    acquisition?: AcquisitionChoice | null;
   },
 ): SocialSignInRequest {
   return {
@@ -146,7 +146,7 @@ export async function performSocialSignIn(
   credential: ProviderCredential,
   termsAccepted: boolean,
   deps: SocialSignInDeps = defaultDeps,
-  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
+  acquisition: AcquisitionChoice | null = null,
 ): Promise<{ session: SignInPayload; created: boolean }> {
   const body = socialSignInBody(credential, { termsAccepted, timezone: deps.timezone(), deviceName: deps.device(), acquisition });
   let response: SocialSignInResponse;
@@ -163,8 +163,8 @@ export async function performSocialSignIn(
     throw new ApiError('Not a parent account.', 403, { code: 'not_a_parent' });
   }
   await deps.saveMethod(credential.provider);
-  // M5-08: the terms sheet asked »Kje ste izvedeli za PetPrep?« — never again on the dashboard.
-  if (termsAccepted && response.created === true) void markAcquisitionPromptDone(response.user.id);
+  // M5-08: the terms sheet asked »Kje ste izvedeli za PetPrep?« (picker shown) — never again on the dashboard.
+  if (termsAccepted && acquisition !== null && response.created === true) void markAcquisitionPromptDone(response.user.id);
   return {
     session: {
       token: response.token,
@@ -181,7 +181,7 @@ async function settle(
   credential: ProviderCredential,
   termsAccepted: boolean,
   deps: SocialSignInDeps,
-  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
+  acquisition: AcquisitionChoice | null = null,
 ): Promise<SocialSignInOutcome> {
   try {
     const { session, created } = await performSocialSignIn(credential, termsAccepted, deps, acquisition);
@@ -211,7 +211,7 @@ export async function startSocialSignIn(provider: SocialProvider, deps: SocialSi
 export function completeSocialSignUp(
   credential: ProviderCredential,
   deps: SocialSignInDeps = defaultDeps,
-  acquisition: AcquisitionChoice = EMPTY_ACQUISITION,
+  acquisition: AcquisitionChoice | null = null,
 ): Promise<SocialSignInOutcome> {
   return settle(credential, true, deps, acquisition);
 }

@@ -390,6 +390,7 @@
       "price_required": "Izberite eno od možnosti.",
       "email_required": "Vpišite e-poštni naslov, da vas lahko obvestimo.",
       "email_invalid": "Preverite e-poštni naslov.",
+      "unavailable": "Ta del trenutno ni na voljo. Poskusite znova pozneje.",
       "offline": "Ni povezave. Poskusite znova, ko boste spet na spletu.",
       "failed": "Pošiljanje ni uspelo. Poskusite znova."
     }
