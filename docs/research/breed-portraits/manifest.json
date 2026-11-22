@@ -4623,6 +4623,66 @@
             "prompt_hash": "sha256:e04469c803f7b5fdbee25f536aa7b7a6e435cbb199243f15de6e720187548e1e",
             "generated_at": "2026-11-20T22:54:59+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "neapolitan_mastiff",
+            "species": "dog",
+            "colour": "black",
+            "colour_value": "black",
+            "file": "dog/neapolitan-mastiff--black.webp",
+            "reference": "dog/neapolitan-mastiff.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:76b7c15cd3efc4d14199906a8b36346f91c1275ea728247b7d49dfaadbe9dcc5",
+            "generated_at": "2026-11-22T08:03:42+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "neapolitan_mastiff",
+            "species": "dog",
+            "colour": "mahogany",
+            "colour_value": "brown (mahogany)",
+            "file": "dog/neapolitan-mastiff--mahogany.webp",
+            "reference": "dog/neapolitan-mastiff.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:2b231b351f5217d18173cf5cf7ffc1cd2da4b30a0905afb2a1b466dbbd5f87f9",
+            "generated_at": "2026-11-22T08:03:59+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "neapolitan_mastiff",
+            "species": "dog",
+            "colour": "fawn",
+            "colour_value": "fawn",
+            "file": "dog/neapolitan-mastiff--fawn.webp",
+            "reference": "dog/neapolitan-mastiff.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:768ea5b070acb17bf5db7ecc1704487ac976de5e815ff4d5b592f624d988ebf2",
+            "generated_at": "2026-11-22T08:04:18+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "neapolitan_mastiff",
+            "species": "dog",
+            "colour": "deep-fawn",
+            "colour_value": "deep fawn (red deer)",
+            "file": "dog/neapolitan-mastiff--deep-fawn.webp",
+            "reference": "dog/neapolitan-mastiff.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:0ba4ee1abeec2e22699eb8a459b69728075f42d4e39a41a0671b4329ae03226b",
+            "generated_at": "2026-11-22T08:04:35+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

@@ -372,6 +372,13 @@ return [
         'black' => 'dogs/black-russian-terrier.webp',
         'black-grey' => 'dogs/black-russian-terrier--black-grey.webp',
     ],
+    'neapolitan_mastiff' => [
+        'grey' => 'dogs/neapolitan-mastiff.webp',
+        'black' => 'dogs/neapolitan-mastiff--black.webp',
+        'mahogany' => 'dogs/neapolitan-mastiff--mahogany.webp',
+        'fawn' => 'dogs/neapolitan-mastiff--fawn.webp',
+        'deep-fawn' => 'dogs/neapolitan-mastiff--deep-fawn.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
