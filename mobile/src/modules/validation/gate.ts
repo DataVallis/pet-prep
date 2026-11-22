@@ -12,15 +12,19 @@
  *    false or a failed request = hidden — never blocks sign-up.
  */
 
+import type { ParentDashboardResponse } from '@/api/client';
 import type { Phase2InterestState } from './phase2';
 
+/** The generated dashboard flag (every variant of `GET /api/parent/dashboard` carries it). */
+export type DashboardValidationFlag = ParentDashboardResponse['validation_signals'];
+
 /**
- * `GET /api/parent/dashboard` → top-level `validation_signals`; null = the payload has no boolean.
- * HAND-TYPED read (feat/M5-08-validation-signals-switch, draft) — switch to the generated type once merged.
+ * `GET /api/parent/dashboard` → top-level `validation_signals`; null = not loaded, or an older server
+ * without the field (checked at runtime — the cache can hold a payload from before the switch).
  */
-export function readDashboardValidationFlag(dashboard: unknown): boolean | null {
-  if (typeof dashboard !== 'object' || dashboard === null || !('validation_signals' in dashboard)) return null;
-  const value = (dashboard as { validation_signals: unknown }).validation_signals;
+export function readDashboardValidationFlag(dashboard: ParentDashboardResponse | undefined): DashboardValidationFlag | null {
+  if (dashboard === undefined) return null;
+  const value: unknown = (dashboard as { validation_signals?: unknown }).validation_signals;
   return typeof value === 'boolean' ? value : null;
 }
 

@@ -1,4 +1,5 @@
 /** M5-08 admin switch »Validation signals« — pure gate rules. */
+import type { ParentDashboardResponse } from '@/api/client';
 import {
   needsUserValidationFlag,
   phase2RowMode,
@@ -9,16 +10,18 @@ import {
 } from '../gate';
 import type { Phase2InterestState } from '../phase2';
 
+/** Loose payloads as a cache / an older server can hold them. */
+const dash = (payload: Record<string, unknown>) => payload as unknown as ParentDashboardResponse;
 const open: Phase2InterestState = { submitted: false, notify: null, priceChoice: null };
 const consent: Phase2InterestState = { submitted: true, notify: true, priceChoice: 'free' };
 const withdrawn: Phase2InterestState = { submitted: true, notify: false, priceChoice: 'free' };
 
 describe('family switch', () => {
   it('reads only booleans; anything else is "missing"', () => {
-    expect(readDashboardValidationFlag({ validation_signals: true })).toBe(true);
-    expect(readDashboardValidationFlag({ validation_signals: false })).toBe(false);
-    expect(readDashboardValidationFlag({ validation_signals: 'yes' })).toBeNull();
-    expect(readDashboardValidationFlag({ pet: null })).toBeNull();
+    expect(readDashboardValidationFlag(dash({ validation_signals: true }))).toBe(true);
+    expect(readDashboardValidationFlag(dash({ validation_signals: false }))).toBe(false);
+    expect(readDashboardValidationFlag(dash({ validation_signals: 'yes' }))).toBeNull();
+    expect(readDashboardValidationFlag(dash({ pet: null }))).toBeNull();
     expect(readDashboardValidationFlag(undefined)).toBeNull();
     expect(readUserValidationFlag({ role: 'parent', validation_signals: true })).toBe(true);
     expect(readUserValidationFlag({ role: 'parent' })).toBeNull();

@@ -128,7 +128,7 @@ export function mapPhase2Error(err: unknown): Phase2SendError {
     const code = codeOf(err.data);
     if (code === 'email_required') return 'email_required';
     if (code === 'email_invalid') return 'email_invalid';
-    // HAND-TYPED code (feat/M5-08-validation-signals-switch, draft).
+    // Admin switch off for this family (VALIDATION_API.md §0; a withdrawal of a submitted answer still works).
     if (code === 'feature_unavailable') return 'unavailable';
   }
   return 'failed';
