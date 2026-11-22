@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AppErrorController;
+use App\Http\Controllers\AppFeaturesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
@@ -106,6 +107,10 @@ Route::post('partner-inquiries', [PartnerInquiryController::class, 'store'])
 // M6-S09: EVERY e-mail left on petprep.si (newsletter / early access; calculator, quiz, forms) with
 // consent, source, page and targeting context → email_contacts + email_signups. Public; per-IP
 // throttle (20 / hour); 204; no e-mail is sent, no IP stored.
+// David 2026-11-22: public product switches for the signed-out app (booleans only), 60 / min per IP.
+Route::get('app-features', [AppFeaturesController::class, 'show'])
+    ->middleware('throttle:app-features');
+
 Route::post('email-signups', [EmailSignupController::class, 'store'])
     ->middleware('throttle:email-signups');
 

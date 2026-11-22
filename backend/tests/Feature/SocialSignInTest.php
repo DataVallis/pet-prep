@@ -700,6 +700,10 @@ describe('RsaJwt', function () {
 });
 
 describe('POST /api/auth/social — acquisition source (VALIDATION_PLAN §4.1)', function () {
+    beforeEach(function () {
+        useValidationSignals('everyone');
+    });
+
     it('stores the answer when the call creates the account (detail only for other / ad)', function () {
         ssGoogle(['acquisition_source' => 'ad', 'acquisition_detail' => ' IG-JESEN '])->assertOk()->assertJsonPath('created', true);
 

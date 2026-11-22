@@ -7,6 +7,7 @@ use App\Http\Requests\Phase2InterestRequest;
 use App\Models\User;
 use App\Services\Validation\DashboardOpenService;
 use App\Services\Validation\Phase2InterestService;
+use App\Services\Validation\ValidationSignals;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -21,6 +22,7 @@ class ParentValidationController extends Controller
     public function __construct(
         private readonly DashboardOpenService $opens,
         private readonly Phase2InterestService $phase2,
+        private readonly ValidationSignals $signals,
     ) {}
 
     /**
@@ -28,19 +30,24 @@ class ParentValidationController extends Controller
      * foreground or a push tap — `trigger`, optional). The server keeps at
      * most one open per parent per 30 minutes; a call inside that window is
      * accepted and ignored. Always 204. Throttled 30 / min per parent.
+     * While the admin switch »Validation signals« is off for this family:
+     * 204 and nothing stored.
      *
      * POST /api/parent/dashboard-opened
      */
     public function dashboardOpened(DashboardOpenedRequest $request): Response
     {
-        $this->opens->record($request->user(), $request->trigger());
+        if ($this->signals->enabledFor($request->user())) {
+            $this->opens->record($request->user(), $request->trigger());
+        }
 
         return response()->noContent();
     }
 
     /**
      * The parent tapped »Dobili smo pravo žival«: the first tap is stored,
-     * later taps update the last one. 204.
+     * later taps update the last one. 204. While the admin switch
+     * »Validation signals« is off for this family: 204 and nothing stored.
      *
      * POST /api/parent/phase2-interest/viewed
      */
@@ -50,7 +57,9 @@ class ParentValidationController extends Controller
             return response()->json(['message' => 'Only parent profiles can do this.'], 403);
         }
 
-        $this->phase2->viewed($request->user());
+        if ($this->signals->enabledFor($request->user())) {
+            $this->phase2->viewed($request->user());
+        }
 
         return response()->noContent();
     }
@@ -65,11 +74,18 @@ class ParentValidationController extends Controller
      * already answered may send only `{notify: false}` — the stored price
      * stays (»Ne obveščajte me več«). 200 `{status: "saved"}`.
      *
+     * While the admin switch »Validation signals« is off for this family:
+     * 422 `{message, code: feature_unavailable}` and nothing stored — except a
+     * withdrawal (`notify: false` from a parent who already has a row), which
+     * always works (the price is then kept as stored).
+     *
      * POST /api/parent/phase2-interest
      */
     public function phase2Submit(Phase2InterestRequest $request): JsonResponse
     {
-        $this->phase2->submit($request->user(), $request->priceChoice(), $request->notify(), $request->email());
+        $enabled = $this->signals->enabledFor($request->user());
+        // Switch off: only a withdrawal reaches here (Phase2InterestRequest) — it keeps the stored price.
+        $this->phase2->submit($request->user(), $enabled ? $request->priceChoice() : null, $enabled && $request->notify(), $enabled ? $request->email() : null);
 
         return response()->json([
             /** @var 'saved' */
