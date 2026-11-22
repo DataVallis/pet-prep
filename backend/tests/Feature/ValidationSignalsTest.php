@@ -37,6 +37,11 @@ use function Pest\Laravel\putJson;
 |
 */
 
+beforeEach(function () {
+    // The signals themselves; the admin switch modes are in ValidationSignalsSwitchTest.
+    useValidationSignals('everyone');
+});
+
 function vsAt(string $utc): void
 {
     Carbon::setTestNow(Carbon::parse($utc, 'UTC'));

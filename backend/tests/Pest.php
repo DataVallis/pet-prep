@@ -407,6 +407,21 @@ function useUniquePetMedia(bool $on): void
 }
 
 /**
+ * David 2026-11-22: the admin switch »Validation signals« (default off). Tests of the signals
+ * themselves set `everyone`; ValidationSignalsSwitchTest covers the modes.
+ *
+ * @param  list<int>  $testParentIds
+ */
+function useValidationSignals(string $mode = 'everyone', array $testParentIds = []): void
+{
+    AppSetting::updateOrCreate(
+        ['key' => AppSettingsService::VALIDATION_SIGNALS_KEY],
+        ['value' => ['mode' => $mode, 'test_parent_ids' => $testParentIds]],
+    );
+    Cache::forget(AppSettingsService::cacheKey(AppSettingsService::VALIDATION_SIGNALS_KEY));
+}
+
+/**
  * M5-T08: turn the state media (key images, seamless loops, transitions) on
  * for a test. phpunit.xml sets AI_STATE_MEDIA_ENABLED=false so the tests of
  * the pre-M5-T08 pipeline keep their numbers; production default is on.
