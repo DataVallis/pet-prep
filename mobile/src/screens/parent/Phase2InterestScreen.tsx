@@ -8,12 +8,14 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { ActivityIndicator, BackHandler, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Check, ChevronLeft } from 'lucide-react-native';
 
 import { Text, TextInput } from '@/components/ui/Text';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { useSubmitPhase2Interest } from '@/hooks/queries/useValidationQueries';
+import { parentDashboardKey } from '@/modules/family/live';
 import {
   initialPhase2Form,
   mapPhase2Error,
@@ -49,6 +51,9 @@ export default function Phase2InterestScreen({ state, accountEmail, onBack }: Ph
   }, []);
 
   const submit = useSubmitPhase2Interest();
+  const queryClient = useQueryClient();
+  /** 422 `feature_unavailable`: the admin switch is off for this family → refetch, the row follows the server. */
+  const refetchDashboard = () => void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
   const [form, setForm] = useState<Phase2Form>(() => initialPhase2Form(accountEmail));
   const [error, setError] = useState<Phase2FormError | Phase2SendError | null>(null);
   /** Just sent here: whether the parent asked to be notified (decides the thank-you text). */
@@ -78,7 +83,9 @@ export default function Phase2InterestScreen({ state, accountEmail, onBack }: Ph
       await submit.mutateAsync(phase2Body({ ...form, price: form.price }));
       setSentNotify(form.notify);
     } catch (err) {
-      setError(mapPhase2Error(err));
+      const kind = mapPhase2Error(err);
+      setError(kind);
+      if (kind === 'unavailable') refetchDashboard();
     }
   };
 
@@ -91,7 +98,8 @@ export default function Phase2InterestScreen({ state, accountEmail, onBack }: Ph
       setSentNotify(false);
     } catch (err) {
       const kind = mapPhase2Error(err);
-      setWithdrawError(kind === 'offline' ? 'offline' : 'failed');
+      setWithdrawError(kind === 'offline' || kind === 'unavailable' ? kind : 'failed');
+      if (kind === 'unavailable') refetchDashboard();
     }
   };
 
@@ -201,7 +209,7 @@ export default function Phase2InterestScreen({ state, accountEmail, onBack }: Ph
                   {S.errors[error]}
                 </Text>
               )}
-              {(error === 'offline' || error === 'failed') && (
+              {(error === 'offline' || error === 'failed' || error === 'unavailable') && (
                 <Text style={styles.error} accessibilityRole="alert" testID="phase2-error">
                   {S.errors[error]}
                 </Text>

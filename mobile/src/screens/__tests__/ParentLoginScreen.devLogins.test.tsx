@@ -2,11 +2,12 @@
  * Parent e-mail login: M0-10 (seeded demo logins never outside development builds)
  * and M2-02 (children no longer log in with e-mail).
  */
-import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
+import { fireEvent, screen, waitFor } from '@testing-library/react-native';
 import * as SecureStore from 'expo-secure-store';
 
 import { ApiError, api } from '@/api/client';
 import ParentLoginScreen, { PARENT_LOGIN_STRINGS as S } from '@/screens/ParentLoginScreen';
+import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { useAppStore } from '@/store/appStore';
 
 jest.mock('@/api/client', () => {
@@ -41,7 +42,7 @@ describe('ParentLoginScreen', () => {
 
   it('shows the parent 1-tap demo login in development builds — and no child one', () => {
     g.__DEV__ = true;
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     expect(screen.queryByText(S.devTitle)).not.toBeNull();
     expect(screen.queryByText(S.devParent)).not.toBeNull();
     expect(screen.queryByText('Otrok (HUD)')).toBeNull();
@@ -49,7 +50,7 @@ describe('ParentLoginScreen', () => {
 
   it('hides the demo logins and test emails in release builds', () => {
     g.__DEV__ = false;
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     expect(screen.queryByText(S.devTitle)).toBeNull();
     expect(screen.queryByPlaceholderText(/test\.com/)).toBeNull();
   });
@@ -60,7 +61,7 @@ describe('ParentLoginScreen', () => {
       user: { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent' },
       pet: null,
     });
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     fillAndSubmit('p@x.si', 'secret');
 
     await waitFor(() => expect(useAppStore.getState().authToken).toBe('parent-token'));
@@ -73,7 +74,7 @@ describe('ParentLoginScreen', () => {
       user: { id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' },
       pet: null,
     });
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     fillAndSubmit('c@x.si', 'secret');
 
     expect(await screen.findByText(S.childAccount)).toBeTruthy();
@@ -88,7 +89,7 @@ describe('ParentLoginScreen', () => {
     [new ApiError('Server Error', 500), S.failed],
   ])('maps %p to a parent-friendly message', async (error, message) => {
     login.mockRejectedValueOnce(error);
-    render(<ParentLoginScreen onBack={jest.fn()} />);
+    renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
     fillAndSubmit('p@x.si', 'x');
 
     expect(await screen.findByText(message)).toBeTruthy();

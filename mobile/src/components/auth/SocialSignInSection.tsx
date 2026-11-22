@@ -42,10 +42,21 @@ interface SocialSignInSectionProps {
   onBusyChange?: (busy: boolean) => void;
   /** Tests: fixed availability instead of probing the device. */
   providers?: SocialProviders;
+  /**
+   * M5-08: show »Kje ste izvedeli za PetPrep?« on the new-account sheet — only when the public
+   * `validation_signals_signup` flag is true (the screen reads it); default hidden, nothing sent.
+   */
+  showAcquisition?: boolean;
   testID?: string;
 }
 
-export default function SocialSignInSection({ disabled = false, onBusyChange, providers, testID = 'social-signin' }: SocialSignInSectionProps) {
+export default function SocialSignInSection({
+  disabled = false,
+  onBusyChange,
+  providers,
+  showAcquisition = false,
+  testID = 'social-signin',
+}: SocialSignInSectionProps) {
   const detected = useSocialProviders();
   const available = providers ?? detected;
   const apple = available.apple ? appleButtonSdk() : null;
@@ -106,7 +117,7 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
     }
     setBusy('terms');
     try {
-      apply(await completeSocialSignUp(pendingCredential, undefined, acquisition));
+      apply(await completeSocialSignUp(pendingCredential, undefined, showAcquisition ? acquisition : null));
     } finally {
       setBusy(null);
     }
@@ -167,11 +178,13 @@ export default function SocialSignInSection({ disabled = false, onBusyChange, pr
               {S.termsTitle}
             </Text>
             <Text style={styles.sheetBody}>{S.termsBody}</Text>
-            <ScrollView style={styles.sheetScroll} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
-              <View style={styles.sheetAcquisition}>
-                <AcquisitionPicker value={acquisition} onChange={setAcquisition} disabled={busy !== null} testID={`${testID}-acquisition`} />
-              </View>
-            </ScrollView>
+            {showAcquisition && (
+              <ScrollView style={styles.sheetScroll} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
+                <View style={styles.sheetAcquisition}>
+                  <AcquisitionPicker value={acquisition} onChange={setAcquisition} disabled={busy !== null} testID={`${testID}-acquisition`} />
+                </View>
+              </ScrollView>
+            )}
             <TermsCheckbox
               checked={termsAccepted}
               onToggle={() => {

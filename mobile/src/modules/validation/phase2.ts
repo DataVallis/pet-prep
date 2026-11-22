@@ -108,7 +108,8 @@ export function phase2View(state: Phase2InterestState | null, sentNotify: boolea
   return { done, thanks, canWithdraw: done && notify === true, showBody: !done || thanks === 'notify' };
 }
 
-export type Phase2SendError = 'email_required' | 'email_invalid' | 'offline' | 'failed';
+/** `unavailable` = 422 `feature_unavailable` (admin switch »Validation signals« off for this family). */
+export type Phase2SendError = 'email_required' | 'email_invalid' | 'unavailable' | 'offline' | 'failed';
 
 function codeOf(data: unknown): string | null {
   if (typeof data !== 'object' || data === null) return null;
@@ -127,6 +128,8 @@ export function mapPhase2Error(err: unknown): Phase2SendError {
     const code = codeOf(err.data);
     if (code === 'email_required') return 'email_required';
     if (code === 'email_invalid') return 'email_invalid';
+    // HAND-TYPED code (feat/M5-08-validation-signals-switch, draft).
+    if (code === 'feature_unavailable') return 'unavailable';
   }
   return 'failed';
 }

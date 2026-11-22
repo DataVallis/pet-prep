@@ -57,6 +57,12 @@ export interface UserResponse extends SessionUser {
    * missing = an older server (then the app never asks). Always null for a child.
    */
   acquisition_source?: AuthUserBody['acquisition_source'];
+  /**
+   * M5-08 admin switch »Validation signals« (off / test families / all): may this parent's family see
+   * the acquisition card, the fake door and send the H6 signal? Missing = off.
+   * HAND-TYPED (feat/M5-08-validation-signals-switch, draft): switch to `schema.ts` once merged.
+   */
+  validation_signals?: boolean;
 }
 
 /** `POST /api/login` response. */
@@ -229,6 +235,15 @@ export type Phase2PriceChoice = NonNullable<Phase2InterestRequest['price_choice'
 /** `POST /api/parent/phase2-interest` 200 body. */
 export type Phase2InterestResponse =
   operations['parentValidation.phase2Submit']['responses'][200]['content']['application/json'];
+
+/**
+ * Public app features for screens without a session (M5-08 switch): `validation_signals_signup` = show
+ * »Kje ste izvedeli za PetPrep?« at sign-up (true only in mode »All«). Read loosely — missing = false.
+ * HAND-TYPED (feat/M5-08-validation-signals-switch, draft; path to confirm): switch to `schema.ts` once merged.
+ */
+export interface AppFeaturesResponse {
+  validation_signals_signup?: boolean;
+}
 
 /** `PATCH /api/parent/settings` 200 body. */
 export type UpdateAcquisitionResponse = operations['parentSettings.patch']['responses'][200]['content']['application/json'];
@@ -1421,6 +1436,14 @@ export const api = {
    */
   updateAcquisitionSource: (body: AcquisitionFields) =>
     apiRequest<UpdateAcquisitionResponse>('/api/parent/settings', { method: 'PATCH', body: { ...body } }),
+
+  /**
+   * GET /api/app-features (public, M5-08 switch) — `validation_signals_signup`. Anonymous, bounded (5 s),
+   * never moves the outage banner; a failure just hides the sign-up picker.
+   * HAND-TYPED path / body (draft contract, confirm against feat/M5-08-validation-signals-switch).
+   */
+  getAppFeatures: () =>
+    apiRequest<AppFeaturesResponse>('/api/app-features', { anonymous: true, timeoutMs: 5000, silentStatus: true }),
 
   /** GET /api/parent/quiet-hours — quiet hours config + the family zone they are read in. */
   getQuietHours: () =>

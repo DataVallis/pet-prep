@@ -57,6 +57,14 @@ import Phase2Row from '@/components/parent/Phase2Row';
 import Phase2InterestScreen from '@/screens/parent/Phase2InterestScreen';
 import { readPhase2Interest } from '@/modules/validation/phase2';
 import { useDashboardOpenedSignal } from '@/modules/validation/useDashboardOpenedSignal';
+import { useParentAccount } from '@/hooks/queries/useValidationQueries';
+import {
+  needsUserValidationFlag,
+  phase2RowMode,
+  readDashboardValidationFlag,
+  readUserValidationFlag,
+  validationSignalsOn,
+} from '@/modules/validation/gate';
 
 /** User-visible strings (`parent:dashboard`, M1-18). */
 export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
@@ -145,12 +153,19 @@ export default function ParentDashboardScreen() {
   // M5-08: the signed-in parent (H6 signal, acquisition card, e-mail prefill of the fake door).
   const user = useAppStore((s) => s.user);
   const parentId = user?.role === 'parent' ? user.id : null;
-  useDashboardOpenedSignal(parentId);
+  // M5-08 admin switch »Validation signals«: the dashboard's flag wins, else GET /api/user; missing = off.
+  const dashboardFlag = readDashboardValidationFlag(dashboard.data);
+  const account = useParentAccount(parentId !== null && needsUserValidationFlag(dashboard.data !== undefined, dashboardFlag));
+  const signalsOn = parentId !== null && validationSignalsOn(dashboardFlag, readUserValidationFlag(account.data));
+  // H6 only while the switch is on (off → nothing sent).
+  useDashboardOpenedSignal(signalsOn ? parentId : null);
   // M5-08 H7: null on an older server → no »Dobili smo pravo žival« row.
   const phase2 = readPhase2Interest(dashboard.data);
+  // Off → hidden, except the thank-you row for a parent with a live »Obvestite me« (GDPR withdrawal).
+  const phase2Mode = phase2RowMode(signalsOn, phase2, children.length > 0);
   const openPhase2 = () => {
-    // Fire and forget — a failure never blocks the screen.
-    void api.reportPhase2Viewed().catch(() => undefined);
+    // Fire and forget — a failure never blocks the screen; never with the switch off (withdraw-only row).
+    if (phase2Mode === 'full') void api.reportPhase2Viewed().catch(() => undefined);
     setOverlay({ kind: 'phase2' });
   };
 
@@ -376,8 +391,8 @@ export default function ParentDashboardScreen() {
             ))
           )}
           {/* M5-08: once-only »Kje ste izvedeli za PetPrep?« and the calm H7 row, below the children. */}
-          {dashboard.data && parentId !== null && <AcquisitionCard userId={parentId} />}
-          {phase2 !== null && children.length > 0 && <Phase2Row state={phase2} onPress={openPhase2} />}
+          {dashboard.data && parentId !== null && signalsOn && <AcquisitionCard userId={parentId} />}
+          {phase2 !== null && phase2Mode !== 'hidden' && <Phase2Row state={phase2} onPress={openPhase2} />}
         </ScrollView>
 
         <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} onHeight={setTabBarHeight} />

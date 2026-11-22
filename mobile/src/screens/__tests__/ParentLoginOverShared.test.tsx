@@ -4,13 +4,14 @@
  * token: no Bearer is sent, the unauthorized handler is not called, the child stays signed in
  * and the login shows its error. Android back closes the login and returns to the child.
  */
-import { act, fireEvent, render, screen } from '@testing-library/react-native';
+import { act, fireEvent, screen } from '@testing-library/react-native';
 import * as SecureStore from 'expo-secure-store';
 import { BackHandler } from 'react-native';
 
 import { setUnauthorizedHandler } from '@/api/client';
 import AppNavigator from '@/navigation/AppNavigator';
 import ParentLoginScreen, { PARENT_LOGIN_STRINGS as S } from '@/screens/ParentLoginScreen';
+import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { useAppStore } from '@/store/appStore';
 import { makePet } from '@/test-utils/fixtures';
 
@@ -41,13 +42,13 @@ afterEach(() => setUnauthorizedHandler(null));
 it('a wrong password over a shared child session: no Bearer, no unauthorized handler, child stays, error shown', async () => {
   const onUnauthorized = jest.fn();
   setUnauthorizedHandler(onUnauthorized);
-  fetchMock.mockResolvedValueOnce({
-    ok: false,
-    status: 401,
-    json: async () => ({ message: 'Invalid credentials.' }),
-    headers: { get: () => null },
-  });
-  render(<ParentLoginScreen onBack={jest.fn()} />);
+  // M5-08: the login screen also asks the public app features (sign-up picker flag) — answer that apart.
+  fetchMock.mockImplementation(async (url: string) =>
+    url.endsWith('/api/app-features')
+      ? { ok: true, status: 200, json: async () => ({}), headers: { get: () => null } }
+      : { ok: false, status: 401, json: async () => ({ message: 'Invalid credentials.' }), headers: { get: () => null } },
+  );
+  renderWithQuery(<ParentLoginScreen onBack={jest.fn()} />);
 
   fireEvent.changeText(screen.getByPlaceholderText(S.email), 'mama@example.com');
   fireEvent.changeText(screen.getByPlaceholderText(S.password), 'narobe');
@@ -55,7 +56,8 @@ it('a wrong password over a shared child session: no Bearer, no unauthorized han
     fireEvent.press(screen.getByText(S.submit));
   });
 
-  const [url, init] = fetchMock.mock.calls[0] as [string, { headers: Record<string, string> }];
+  const loginCall = fetchMock.mock.calls.find(([u]) => typeof u === 'string' && u.endsWith('/api/login'));
+  const [url, init] = loginCall as [string, { headers: Record<string, string> }];
   expect(url).toMatch(/\/api\/login$/);
   expect(init.headers.Authorization).toBeUndefined();
   expect(onUnauthorized).not.toHaveBeenCalled();
@@ -69,7 +71,7 @@ it('Android back on the login overlay returns to the child and resets parentLogi
     handlers.push(handler);
     return { remove: jest.fn() };
   });
-  render(<AppNavigator />);
+  renderWithQuery(<AppNavigator />);
   expect(screen.getByTestId('child-hud')).toBeTruthy();
 
   act(() => useAppStore.getState().setParentLoginOpen(true));

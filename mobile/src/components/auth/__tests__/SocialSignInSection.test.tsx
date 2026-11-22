@@ -124,6 +124,29 @@ describe('SocialSignInSection', () => {
     expect(useAppStore.getState().user?.id).toBe(9);
   });
 
+  it.each([
+    ['hidden by default (switch not »All«)', false],
+    ['shown with showAcquisition (public flag true)', true],
+  ])('M5-08 terms sheet picker: %s', async (_label, shown) => {
+    obtain.mockResolvedValueOnce({ kind: 'credential', credential: { provider: 'apple', idToken: 'a.jwt', nonce: 'raw' } });
+    socialSignIn
+      .mockRejectedValueOnce(new ApiError('terms', 422, { message: 'terms', code: 'terms_required' }))
+      .mockResolvedValueOnce({ ...RESPONSE, created: true });
+    render(<SocialSignInSection providers={{ google: false, apple: true }} showAcquisition={shown} />);
+    fireEvent.press(screen.getByTestId('apple-native-button'));
+    await flush();
+
+    expect(screen.queryByTestId('social-signin-acquisition') !== null).toBe(shown);
+    if (shown) fireEvent.press(screen.getByTestId('social-signin-acquisition-youtube'));
+    fireEvent.press(screen.getByTestId('social-signin-terms-checkbox'));
+    fireEvent.press(screen.getByTestId('social-signin-terms-submit'));
+    await flush();
+
+    const retry = socialSignIn.mock.calls[1][0] as Record<string, unknown>;
+    if (shown) expect(retry).toMatchObject({ acquisition_source: 'youtube', terms_accepted: true });
+    else expect(retry).not.toHaveProperty('acquisition_source');
+  });
+
   it('cancelling the terms sheet signs nobody in', async () => {
     obtain.mockResolvedValueOnce({ kind: 'credential', credential: { provider: 'google', idToken: 'g.jwt' } });
     socialSignIn.mockRejectedValueOnce(new ApiError('terms', 422, { message: 'terms', code: 'terms_required' }));

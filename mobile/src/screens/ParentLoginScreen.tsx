@@ -14,6 +14,7 @@ import { ApiError, api, saveAuthToken } from '@/api/client';
 import { logout } from '@/modules/session/logout';
 import { saveSignInMethod } from '@/modules/session/signInMethod';
 import SocialSignInSection from '@/components/auth/SocialSignInSection';
+import { useSignupPickerVisible } from '@/hooks/queries/useValidationQueries';
 import { useAppStore } from '@/store/appStore';
 import { light, palette, radius } from '@/theme';
 import { AUTH_STYLES } from '@/components/auth/authStyles';
@@ -43,6 +44,8 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
   const [error, setError] = useState<string | null>(null);
   // M2-10c: a Google / Apple flow is running — the e-mail form waits.
   const [socialBusy, setSocialBusy] = useState(false);
+  // M5-08: a new Google / Apple account made here gets the same optional question (public flag).
+  const showAcquisition = useSignupPickerVisible();
   const signIn = useAppStore((s) => s.signIn);
 
   const handleLogin = async (loginEmail?: string, loginPassword?: string) => {
@@ -104,7 +107,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
           </View>
 
           <View style={styles.formCard}>
-            <SocialSignInSection disabled={isLoading} onBusyChange={setSocialBusy} testID="parent-login-social" />
+            <SocialSignInSection disabled={isLoading} onBusyChange={setSocialBusy} showAcquisition={showAcquisition} testID="parent-login-social" />
 
             {/* Quick 1-tap demo login — development builds only (M0-10). __DEV__ is false in
                 EAS preview/production builds, so seeded test credentials never ship. */}

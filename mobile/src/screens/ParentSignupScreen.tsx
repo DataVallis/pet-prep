@@ -31,6 +31,7 @@ import SocialSignInSection from '@/components/auth/SocialSignInSection';
 import TermsCheckbox from '@/components/auth/TermsCheckbox';
 import AcquisitionPicker from '@/components/auth/AcquisitionPicker';
 import { EMPTY_ACQUISITION, type AcquisitionChoice } from '@/modules/validation/acquisition';
+import { useSignupPickerVisible } from '@/hooks/queries/useValidationQueries';
 import { BrandLogo } from '@/components/brand/BrandLogo';
 
 const S = SIGNUP_STRINGS;
@@ -93,6 +94,8 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
   const [errors, setErrors] = useState<SignupErrors>({});
   // M5-08: optional »Kje ste izvedeli za PetPrep?« — never validated, never blocks the sign-up.
   const [acquisition, setAcquisition] = useState<AcquisitionChoice>(EMPTY_ACQUISITION);
+  // Admin switch »Validation signals« = »All« (public flag); unknown / failed → hidden.
+  const showAcquisition = useSignupPickerVisible();
   const [general, setGeneral] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -121,7 +124,9 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
 
     setIsLoading(true);
     try {
-      const session = await performSignup(signupBody(form, deviceName(), deviceTimezone(), acquisition));
+      const session = await performSignup(signupBody(form, deviceName(), deviceTimezone(), showAcquisition ? acquisition : null), {
+        askedAcquisition: showAcquisition,
+      });
       // Same store update as login / session restore; AppNavigator routes by role.
       signIn(session);
     } catch (err) {
@@ -153,7 +158,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
           </View>
 
           <View style={styles.formCard}>
-            <SocialSignInSection disabled={isLoading} onBusyChange={setSocialBusy} testID="signup-social" />
+            <SocialSignInSection disabled={isLoading} onBusyChange={setSocialBusy} showAcquisition={showAcquisition} testID="signup-social" />
 
             <View style={styles.inputsContainer}>
               <View>
@@ -225,9 +230,11 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
               </View>
             </View>
 
-            <View style={styles.acquisition}>
-              <AcquisitionPicker value={acquisition} onChange={setAcquisition} disabled={formLocked} testID="signup-acquisition" />
-            </View>
+            {showAcquisition && (
+              <View style={styles.acquisition}>
+                <AcquisitionPicker value={acquisition} onChange={setAcquisition} disabled={formLocked} testID="signup-acquisition" />
+              </View>
+            )}
 
             <TermsCheckbox
               checked={form.acceptTerms}
