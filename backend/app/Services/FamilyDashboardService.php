@@ -284,7 +284,7 @@ class FamilyDashboardService
                      * The pet's effective quiet hours (David 2026-11-16): its own schedule, else the
                      * family's — "HH:MM" | null, read on the pet's clock (`timezone`).
                      *
-                     * @var array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, follows_family: bool}
+                     * @var array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, school_days: list<int>, follows_family: bool}
                      */
                     'quiet_hours' => PetQuietHoursService::payloadFor($pet, $familyQuiet),
                     /**

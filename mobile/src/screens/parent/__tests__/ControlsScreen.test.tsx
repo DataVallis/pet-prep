@@ -335,7 +335,7 @@ describe('ControlsScreen — quiet hours per pet + time format (David 2026-11-16
       makeScoredDashboard([makeScoredChild()], [
         makeFamilyPet({
           id: 7,
-          quiet_hours: { school_start: '08:00', school_end: '13:00', bedtime_start: '20:00', bedtime_end: '06:30', is_active: true, follows_family: false },
+          quiet_hours: { school_start: '08:00', school_end: '13:00', bedtime_start: '20:00', bedtime_end: '06:30', is_active: true, school_days: [1, 2, 3, 4, 5], follows_family: false },
           quiet_hours_follow_family: false,
         }),
       ]) as never,

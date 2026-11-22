@@ -174,6 +174,8 @@ export const FIXTURE_QUIET_HOURS = {
   bedtime_start: '21:00',
   bedtime_end: '07:00',
   is_active: true,
+  // David 2026-11-22: the school window's ISO weekdays (default Mon–Fri).
+  school_days: [1, 2, 3, 4, 5],
 };
 
 /** Child pet state as returned by `GET /api/child/pet` and in action responses (M1-07). */

@@ -1595,7 +1595,7 @@ class Pet extends Model
      * the column from the database when this model was loaded without it
      * (partial select), so a rule never silently gets the family's hours.
      *
-     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool}|null
+     * @return array{school_start: string|null, school_end: string|null, bedtime_start: string|null, bedtime_end: string|null, is_active: bool, school_days: list<int>}|null
      */
     public function ownQuietHoursValues(): ?array
     {

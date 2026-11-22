@@ -203,7 +203,7 @@ describe('a grooming is never missed only because the pet slept', function () {
             ->and(CatChoreService::feasibleGroomingDays($quiet, $from, $to, 'Europe/Ljubljana', 90, 3))->toBe(3);
 
         // Night 21–07 + school 07–21 = asleep all day: no day has room.
-        $always = setQuietHours(['parent_id' => $parent->id, 'school_start' => '07:00', 'school_end' => '21:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        $always = setQuietHours(['parent_id' => $parent->id, 'school_start' => '07:00', 'school_end' => '21:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00'] + QH_SCHOOL_EVERY_DAY);
         expect(CatChoreService::feasibleGroomingDays($always, $from, $to, 'Europe/Ljubljana', 90))->toBe(0);
 
         // 07:00–07:01 awake (60 s < session + grace): no room either; quiet hours off → every day.
@@ -214,7 +214,7 @@ describe('a grooming is never missed only because the pet slept', function () {
     });
 
     it('a pet that sleeps all day gets no grooming slot: nothing missed, no matted coat', function () {
-        [, $child, $dog] = sgFamily(quiet: ['school_start' => '07:00', 'school_end' => '21:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        [, $child, $dog] = sgFamily(quiet: ['school_start' => '07:00', 'school_end' => '21:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00'] + QH_SCHOOL_EVERY_DAY);
         sgTick('2026-10-20 09:00');
         sgAt('2026-10-21 12:00');
         expect(sgState($child)['grooming'])->toMatchArray(['can_start' => false, 'blocked_reason' => 'grooming_quiet_hours']);

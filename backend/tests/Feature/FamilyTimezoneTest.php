@@ -36,7 +36,7 @@ function tzFamily(array $quietHours = [], string $timezone = TZ_LJUBLJANA, array
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
     if ($quietHours !== []) {
-        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true] + QH_SCHOOL_EVERY_DAY, $quietHours)); // DST days are Sundays
     } else {
         withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }

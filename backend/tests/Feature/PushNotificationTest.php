@@ -747,7 +747,7 @@ function pnQuiet(User $parent, string $schoolStart = '08:00', string $schoolEnd 
         'school_start' => $schoolStart, 'school_end' => $schoolEnd,
         'bedtime_start' => $bedStart, 'bedtime_end' => $bedEnd,
         'is_active' => true,
-    ]);
+    ] + QH_SCHOOL_EVERY_DAY); // written for school every day (DST Sunday cases)
 }
 
 function pnAt(string $utc): void

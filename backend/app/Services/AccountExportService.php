@@ -13,6 +13,7 @@ use App\Models\FamilyMember;
 use App\Models\ParentDashboardOpen;
 use App\Models\Pet;
 use App\Models\PetMedia;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\Media\PetGrowthService;
@@ -306,6 +307,8 @@ class AccountExportService
             'bedtime_start' => $q->bedtime_start,
             'bedtime_end' => $q->bedtime_end,
             'is_active' => (bool) $q->is_active,
+            // David 2026-11-22: ISO weekdays 1 (Mon) … 7 (Sun) of the school window.
+            'school_days' => QuietHours::normaliseSchoolDays($q->school_days ?? null),
             'updated_at' => $this->iso($q->updated_at),
         ];
     }
