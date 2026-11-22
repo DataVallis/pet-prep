@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `neapolitan_mastiff` (viri S993–S1001; ponovno S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: RKC (S994) |
 | Izvor | FCI št. 197, skupina 2, sekcija 2.1 (molosi, tip doge), Italija (S993) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 128. mesto »Neopolitan Mastiff« (S174, zapisano 2026-11-20 v vrstici 131: »127 Black Russian Terrier«, »128 Neopolitan Mastiff«) |
-| PR-ji | pet-prep #1472 (pasma) · portret pet-prep (sledi) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-neapolitan-mastiff` |
+| PR-ji | pet-prep #1472 (pasma, združen `9c52953`) · portret pet-prep (zagon `breed-portraits.yml` 45000094366, sprejet v prvem poskusu) · barvne različice pet-prep (sledijo) · spletna stran: pet-prep-website `feat/register-neapolitan-mastiff` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-21 |
 | Čiščenje kožnih gub vsak dan (otrok); opomnik za kopanje enkrat na mesec (starši) | 🛠 | 💶 izziv | M5-R14 / R20 | 2026-11-21 |
 | Barve (izbirnik: 5 barv — siv, črn, mahagonij, plav, temno plav) | 🛠 | 💶 izziv | M5-R21 | 2026-11-21 |
-| AI portret v registru | 🗓 sledi v tem zagonu | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), siv, zmerne gube, tesne veke, odprte nosnice, naravna ušesa in rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-22 |
 | Stran na petprep.si (`/animals/dogs/neapolitan-mastiff`, `/sl/zivali/psi/napolitanski-mastif`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -54,7 +54,7 @@
 
 ## Odprto za Davida
 
-- **Ustavitev zagona (2026-11-21):** CI je dvakrat padel zaradi kode (skupni testi z ročnimi seznami pasem: DavidStageDecisionsTest / TrainingDecisionsTest, nato MastiffBreedTest, ki je trdil, da `neapolitan_mastiff` ni ključ pasme). Vse tri popravke sem potisnil na vejo; po pravilu runbooka PR #1472 ostaja odprt. Ko je `CI OK` zelen: združite, nato portret (§8), barve (§8b) in spletna stran (§9) — prej pasme ne objavljajte na petprep.si.
+- ~~**Ustavitev zagona (2026-11-21):**~~ rešeno 2026-11-22: CI je bil po popravkih skupnih testov zelen, David je naročil dokončanje — PR #1472 združen (`9c52953`), nato portret, barve in spletna stran.
 - **Meja »starejši« (74 mesecev):** predlog Claude, `verified=false`. RKC / PDSA navajata le »Under 10 years«; mediane McMillan 2024 / VetCompass za pasmo nisem dosegel. Osnova je povprečje 8,17 leta iz ankete lastnikov (Bell & Hesketh 2021, S1000). Alternativi: 63 (PetMD 7 let) ali 84 (Dogs Trust »> 7 let«). Ob ročnem pregledu tabele Dogs Trust / študije VetCompass o velikanskih pasmah (S1001) lahko mejo popravite.
 - **Coren:** Wikipedija ni bila dosegljiva; zrcalna kopija pasme ne navaja, a nima niti angleškega mastifa → 1,0× je nepreverjen. Potrdite.
 - **Kratek gobec:** Purina UK (vir C) pasmo imenuje brahicefalno; standard FCI (S993) navaja gobec tretjino dolžine glave in noben vir A/B pasme ne imenuje ploskoobrazne → brez čipa za dihanje in pasma ostaja v marketingu. Preverite, ali želite čip ali izključitev iz marketinga.

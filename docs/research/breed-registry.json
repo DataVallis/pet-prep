@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "0ab63331526b3fe94ed21f34f7e791ddb2181d72619d915985f186b59e6bf1b8"
+      "sha256": "8d9f98944ad5f179541976818a4f69f1259628dcecf28be47a2878d1f2ab8a01"
     }
   },
   "suitability_vocabulary": {
@@ -75704,7 +75704,12 @@
           "S1000"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "neapolitan-mastiff.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
