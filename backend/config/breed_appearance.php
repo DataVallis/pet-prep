@@ -887,6 +887,11 @@
 | hard coat; loose skin with head folds. Welfare (RKC Breed Watch Category 3, S994; PDSA eyelid problems, S995): moderate folds
 | (`skin`), tight eyelids, visible muzzle with open nostrils (`muzzle`). Grey first (portrait default); weights unsourced.
 |
+| Belgian Sheepdog / Groenendael (M5-R10-135, docs/research/dog-data belgian_sheepdog.appearance): "Only uniform black."
+| (FCI standard No. 15, S831 — Groenendael; a small amount of white tolerated on forechest and toes, none in the game);
+| long-haired variety with an abundant ruff, breeches and a plumed tail, rather small erect triangular ears, black nose. Not
+| flat-faced; RKC Breed Watch Category 1 (S1019). One colour (the portrait default); weight unsourced → `verified => false`.
+|
 | Norfolk Terrier (M5-R10-134, docs/research/dog-data norfolk_terrier.appearance): "All shades of red, wheaten, black and
 | tan or grizzle." (FCI-Standard N° 272, S1010; any other colour unacceptable, no white patches in the game); hard, wiry,
 | straight coat, longer and rougher on the neck and shoulders, V-shaped drop ears dropping forward close to the cheek, natural
@@ -5693,6 +5698,38 @@ return [
             'tail' => ['natural tail of moderate length, thick at the root and tapering, carried jauntily'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-135 (docs/research/dog-data/data.json belgian_sheepdog.appearance; runbook rules 2026-10-10: the standard's
+    // Groenendael colour only — uniform black (FCI S831), no white marks in the game; erect ears, natural plumed tail).
+    'belgian_sheepdog' => [
+        'display_name' => 'Belgian Sheepdog (Groenendael)',
+        // Colour frequency is in no source (belgian_sheepdog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 15 (S313, KUSA reprint S831), RKC Breeds A–Z (S1019) — for the traits listed in `sources`. Colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S1019 "Medium-Large"; S313 ideal height 62 cm (males) / 58 cm (females)',
+            'build' => 'S313 "The Belgian Shepherd is a mediolineal dog, harmoniously proportioned, combining elegance and power."',
+            'coat_length' => 'S831 "The hair is long and smooth on the rest of the body, and longer and more abundant around the neck and on the forechest" — short on the head and lower legs, breeches, plumed tail',
+            'coat_color' => 'S831 "Only uniform black." (weight unsourced; no white marks in the game)',
+            'ear_carriage' => 'S831 "Rather small, set high, distinctly triangular appearance, well-rounded outer ear, pointed tips, stiff, carried upright, and vertical when dog is alert."',
+            'eye_color' => 'S831 "Medium size, neither protruding nor sunken, slightly almond-shaped, obliquely set, brownish colour, preferably dark; black-rimmed eyelids"',
+            'tail' => 'S831 "Well set on, strong at the base, of medium length, reaching at least to hock"',
+            'head' => 'S831 "narrowing gradually toward the nose like an elongated wedge"; nose "Black."',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'harmoniously proportioned, elegant and powerful long-haired shepherd build with a proud head carriage', 'weight' => 3], 'lean, athletic, square shepherd build'],
+            'coat_length' => ['long, smooth coat with a dense woolly undercoat, a full ruff around the neck and forechest, breeches and a plumed tail, short hair on the head and lower legs'],
+            // The only Groenendael colour (S831) → the register portrait.
+            'coat_color' => [
+                ['value' => 'black', 'weight' => 100],
+            ],
+            'head' => ['long, wedge-shaped head carried high, muzzle of medium length, black nose'],
+            'ear_carriage' => ['rather small, high-set, distinctly triangular ears carried stiffly erect'],
+            'eye_color' => ['medium, slightly almond-shaped, dark brown eyes with black-rimmed eyelids'],
+            'tail' => ['natural plumed tail reaching the hock, carried low at rest with the tip curved slightly back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

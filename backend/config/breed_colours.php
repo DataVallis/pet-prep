@@ -884,6 +884,10 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
         ['key' => 'grizzle', 'value' => 'grizzle', 'en' => 'Grizzle', 'sl' => 'Sivkast'],
     ],
+    // M5-R10-135: FCI standard 15 (S831) Groenendael "Only uniform black."; same order and value as breed_appearance.php.
+    'belgian_sheepdog' => [
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

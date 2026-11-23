@@ -3159,5 +3159,31 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1013'], 'refs' => ['norfolk_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-135 Belgian Sheepdog / Groenendael (data.json proposed_game_parameters.belgian_sheepdog.suitability_tags;
+        // S1019–S1021), runbook rules. RKC Breed Watch Category 1 → no welfare chip; children conflicting (PetMD vs WebMD) → no
+        // chip; herding, no prey-drive wording → no chases_small_pets; in marketing. No new vocabulary key. Never hypoallergenic.
+        'belgian_sheepdog' => [
+            'suits' => [
+                // S1019 "More than 2 hours per day"; S1020 "They tend to do well in homes with active families and fenced yards."
+                ['tag' => 'active_family', 'source_ids' => ['S1019', 'S1020'], 'refs' => ['belgian_sheepdog.exercise.adult', 'belgian_sheepdog.exercise.active_families']],
+                // S1019 "Large house" / "Large garden"
+                ['tag' => 'large_home', 'source_ids' => ['S1019'], 'refs' => ['belgian_sheepdog.suitability.rkc_size_of_home', 'belgian_sheepdog.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S1019 "More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S1019'], 'refs' => ['belgian_sheepdog.exercise.adult', 'belgian_sheepdog.suitability.rkc_exercise']],
+                // S1020 "Raising a Belgian Sheepdog means teaching them what isn't acceptable to herd: children, other animals (like cats), and you."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S1020'], 'refs' => ['belgian_sheepdog.behaviour.children']],
+                // S1020 "still need ample exercise and mental stimulation to stay happy"
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S1020'], 'refs' => ['belgian_sheepdog.exercise.daily_text']],
+                // S1021 "So they aren't a good choice for people who need to be away from them for long hours at a time."
+                ['tag' => 'needs_company', 'source_ids' => ['S1021'], 'refs' => ['belgian_sheepdog.behaviour.time_alone']],
+                // S1019 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S1019'], 'refs' => ['belgian_sheepdog.suitability.rkc_shedding']],
+                // S1019 "More than once a week"; S1020 weekly brushing, frequently while shedding
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1019', 'S1020'], 'refs' => ['belgian_sheepdog.suitability.rkc_grooming', 'belgian_sheepdog.suitability.petmd_grooming']],
+            ],
+        ],
     ],
 ];

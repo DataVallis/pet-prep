@@ -133,6 +133,7 @@ return [
     'neapolitan_mastiff' => 'Napolitanski mastif',
     'finnish_lapphund' => 'Finski laponski pes',
     'norfolk_terrier' => 'Norfolk terier',
+    'belgian_sheepdog' => 'Belgijski ovčar groenendael',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -1574,6 +1574,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_NORFOLK_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-134)';
 
     /**
+     * M5-R10-135 Belgian Sheepdog / Groenendael (unattended run 2026-11-23, data.json
+     * proposed_game_parameters.belgian_sheepdog.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min (RKC S1019 "More
+     * than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages young 9 / adult 36 / senior 90
+     * (0.75 × RKC lower bound 10 y, S1019 — provisional until McMillan 2024 is checked, like the Belgian Malinois /
+     * Tervuren), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 15, Excellent, S35); care rates the Border
+     * Collie's.
+     */
+    public const CONFIRMED_R10_BELGIAN_SHEEPDOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-135)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -2015,6 +2026,11 @@ class BreedStageParamsSeeder extends Seeder
             'bath' => [1, 'month', 'S1014', 'bathed about every four to six weeks.', 'proposed_game_parameters.norfolk_terrier.bathing', '"about every four to six weeks" → the lower bound, every 4 weeks'],
             'groomer_visit' => [1, 'three_months', 'S1012', 'Their wiry coats need combing a couple of times per week, and will also need stripping three to four times per year.', 'proposed_game_parameters.norfolk_terrier.professional_grooming', '"stripping three to four times per year" = every 3–4 months → the lower bound, 3 months (12 program weeks; nails: no frequency → no task)'],
         ],
+        'belgian_sheepdog' => [
+            'tooth_brushing' => [7, 'day', 'S1021', "It's best to do this daily.", 'proposed_game_parameters.belgian_sheepdog.tooth_brushing', '"It\'s best to do this daily." (WebMD, tooth brushing) → every day'],
+            'ear_cleaning' => [1, 'month', 'S1020', "clean your dog's ears once or twice a month with a veterinary-approved ear cleaner", 'proposed_game_parameters.belgian_sheepdog.ear_care', '"once or twice a month" → the lower bound, every 4 weeks'],
+            'bath' => [1, 'month', 'S1021', 'if not competing, a monthly bath with weekly brushing will suffice.', 'proposed_game_parameters.belgian_sheepdog.bathing', '"a monthly bath" → every 4 weeks (nails: "regularly", no frequency → no task; groomer: no source)'],
+        ],
     ];
 
     /**
@@ -2165,6 +2181,7 @@ class BreedStageParamsSeeder extends Seeder
         'neapolitan_mastiff' => [1, 'S994', 'Once a week', 'high', false],
         'finnish_lapphund' => [1, 'S1004', 'Once a week', 'high', false],
         'norfolk_terrier' => [2, 'S1013', 'A brush and comb through once or twice a week will keep their coat at an appropriate length', 'high', false],
+        'belgian_sheepdog' => [1, 'S1020', 'Regular, weekly brushings will keep their coat beautiful and healthy, especially because it can be prone to matting.', 'medium', false],
     ];
 
     /**
@@ -2365,13 +2382,14 @@ class BreedStageParamsSeeder extends Seeder
         'neapolitan_mastiff' => ['S996', 'Proper socialization and positive-reinforcement training from an early age'],
         'finnish_lapphund' => ['S1006', 'can get along with people of all ages when socialized as a puppy.'],
         'norfolk_terrier' => ['S1012', 'They will also need early socialisation with other household pets.'],
+        'belgian_sheepdog' => ['S1020', "Make sure you also have time to train and socialize them early, as it's important for their growth and development."],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3222,6 +3240,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::NeapolitanMastiff => self::neapolitanMastiffProfile(),
             BreedType::FinnishLapphund => self::finnishLapphundProfile(),
             BreedType::NorfolkTerrier => self::norfolkTerrierProfile(),
+            BreedType::BelgianSheepdog => self::belgianSheepdogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -12624,6 +12643,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'norfolk_terrier.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC lower bound (S1011) — the runbook\'s third choice after McMillan 2024 and a VetCompass median (neither reachable at tier A/B). Woodgreen 12–15 y (S1013), PetMD 12–16 y (S1014). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Belgian Sheepdog / Groenendael (M5-R10-135). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_BELGIAN_SHEEPDOG); weight, growth, Coren rank and lifespan are sourced. The
+     * senior boundary uses the RKC lower bound (no McMillan 2024 / VetCompass median reachable for the variety) —
+     * provisional, like the Belgian Malinois.
+     *
+     * @return array<string, mixed>
+     */
+    private static function belgianSheepdogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BELGIAN_SHEEPDOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S1019', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.belgian_sheepdog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S1019) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median was reachable for the Groenendael (Wikipedia S318 quotes McMillan 2024 only for the Malinois and the Tervueren; PetMD / WebMD lower bound 12 y, S1020, S1021 → 108 — alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_sheepdog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S1019', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_sheepdog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S1019) → 120 min = 12,000 steps (runbook rule: "more than N" → N). WebMD (S1021) "almost two hours of exercise each day" agrees; PetMD (S1020) gives no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_sheepdog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S313', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_sheepdog.adult_weight.fci',
+                'quote' => 'Males about 25-30 kg.',
+                'notes' => 'FCI standard 15 (S313, shared by the four varieties): males about 25–30 kg, females about 20–25 kg → 20–30 kg for the game. PetMD (S1020) 55–75 / 45–60 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_sheepdog.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Medium-Large", S1019 — Belgian Malinois precedent).',
+            ]],
+            'coren_rank' => [15, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_sheepdog.trainability.coren_rank',
+                'quote' => 'Belgian Sheepdog',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35, read 2026-11-14): rank 15 "Belgian Sheepdog", tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_sheepdog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 15 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S1019', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_sheepdog.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC breed page lower bound (S1019); PetMD "12–14 years" (S1020), WebMD the same (S1021). No McMillan 2024 value for the variety. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

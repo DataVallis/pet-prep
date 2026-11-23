@@ -2674,6 +2674,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.norfolk_terrier',
                 'search_keywords' => ['norfolk terrier', 'norfolk terier', 'norfolški terier', 'norfolk'],
             ],
+            // M5-R10-135 Belgian Sheepdog / Groenendael (docs/research/dog-data/data.json belgian_sheepdog, sources S1019–S1021;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.belgian_sheepdog.step_goal_adult: 120 min × 100 steps/min — RKC S1019 "More than 2 hours
+            // per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BelgianSheepdog->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1260,
+                'label_key' => 'breeds.belgian_sheepdog',
+                'search_keywords' => ['belgian sheepdog', 'groenendael', 'belgijski ovčar groenendael', 'belgijski ovcar groenendael', 'belgian shepherd groenendael', 'belgian shepherd dog groenendael', 'grunendal'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
