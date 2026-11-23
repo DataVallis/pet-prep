@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "6f2cfe07163b9f47f40445771f43da1f639cb35b7487650879e9a775c08b44af"
+      "sha256": "215a3dc511e6bc335e2e9828a0f49cdc71c121dcfb136ebab93329cee0798d32"
     }
   },
   "suitability_vocabulary": {
@@ -77712,7 +77712,42 @@
         "file": "norfolk-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/norfolk-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "wheaten",
+            "label": {
+              "en": "Wheaten",
+              "sl": "Pšenično rumen"
+            },
+            "file": "dog/norfolk-terrier--wheaten.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjav"
+            },
+            "file": "dog/norfolk-terrier--black-tan.webp"
+          },
+          {
+            "key": "grizzle",
+            "label": {
+              "en": "Grizzle",
+              "sl": "Sivkast"
+            },
+            "file": "dog/norfolk-terrier--grizzle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "none_recommended",
