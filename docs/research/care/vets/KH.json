@@ -108,7 +108,8 @@
         "da": "Åbent hver dag 9.00–19.00 (helligdage 9.00–12.00). Akut- og intensivbehandling døgnet rundt, 7 dage om ugen; ring på hospitalets nummer.",
         "fi": "Auki joka päivä 9.00–19.00 (pyhinä 9.00–12.00). Päivystys ja tehohoito 24/7; soita sairaalan numeroon.",
         "nb": "Åpent alle dager kl. 09.00–19.00 (helligdager 09.00–12.00). Akutt- og intensivbehandling hele døgnet; ring sykehusets nummer.",
-        "sl": "Odprto vsak dan 9–19 (ob praznikih 9–12). Nujna pomoč in intenzivna nega 24 ur na dan; pokličite številko bolnišnice."
+        "sl": "Odprto vsak dan 9–19 (ob praznikih 9–12). Nujna pomoč in intenzivna nega 24 ur na dan; pokličite številko bolnišnice.",
+        "hr": "Otvoreno svaki dan 9:00–19:00 (blagdanima 9:00–12:00). Hitna i intenzivna skrb 24/7; nazovi broj bolnice."
       }
     },
     {
@@ -135,7 +136,8 @@
         "da": "Åbent dagligt 9.00–19.00 (kan lukke tidligere – ring først). Akutte opkald efter 19.00 på samme nummer, kun på engelsk, med tillæg uden for åbningstid.",
         "fi": "Auki päivittäin 9.00–19.00 (voi sulkeutua aiemmin – soita ensin). Hätäpuhelut klo 19.00 jälkeen samassa numerossa, vain englanniksi, aukioloajan jälkeinen lisämaksu.",
         "nb": "Åpent 9.00–19.00 hver dag (kan stenge tidligere, ring først). Akuttsamtaler etter 19.00 på samme nummer, kun på engelsk, med tillegg utenom åpningstid.",
-        "sl": "Odprto vsak dan 9–19 (lahko zapre prej, zato najprej pokličite). Nujni klici po 19. uri na isto številko, samo v angleščini, z doplačilom za čas zunaj rednega časa."
+        "sl": "Odprto vsak dan 9–19 (lahko zapre prej, zato najprej pokličite). Nujni klici po 19. uri na isto številko, samo v angleščini, z doplačilom za čas zunaj rednega časa.",
+        "hr": "Otvoreno svaki dan 9:00–19:00 (može se ranije zatvoriti – prvo nazovi). Hitni pozivi nakon 19:00 na istom broju, samo na engleskom, uz doplatu izvan radnog vremena."
       }
     },
     {
@@ -162,7 +164,8 @@
         "da": "Der er en telefonlinje uden for åbningstid: +855 88 818 0022.",
         "fi": "Aukioloajan jälkeinen puhelinlinja käytettävissä: +855 88 818 0022.",
         "nb": "Vakttelefon utenfor ordinær åpningstid er tilgjengelig: +855 88 818 0022.",
-        "sl": "Telefonska linija zunaj rednega časa: +855 88 818 0022."
+        "sl": "Telefonska linija zunaj rednega časa: +855 88 818 0022.",
+        "hr": "Dostupna je telefonska linija izvan radnog vremena: +855 88 818 0022."
       }
     },
     {
@@ -189,7 +192,8 @@
         "da": "Åbent tirsdag til fredag og søndag; ring eller skriv en e-mail på forhånd. Gæstende dyrlæger kommer også til Kampot på faste datoer.",
         "fi": "Auki tiistaista perjantaihin ja sunnuntaisin; soita tai lähetä sähköpostia etukäteen. Vierailevat eläinlääkärit käyvät myös Kampotissa tiettyinä päivinä.",
         "nb": "Åpent tirsdag til fredag og søndag; ring eller send e-post på forhånd. Besøkende dyrleger kommer også til Kampot på faste datoer.",
-        "sl": "Odprto tor–pet in ned; vnaprej pokličite ali pošljite e-pošto. Veterinarji ob določenih datumih prihajajo tudi v Kampot."
+        "sl": "Odprto tor–pet in ned; vnaprej pokličite ali pošljite e-pošto. Veterinarji ob določenih datumih prihajajo tudi v Kampot.",
+        "hr": "Otvoreno od utorka do petka i nedjeljom; nazovi ili pošalji e-poštu unaprijed. Veterinari gostuju i u Kampotu na određene datume."
       }
     },
     {
@@ -216,7 +220,8 @@
         "da": "Åbningstider er ikke offentliggjort.",
         "fi": "Aukioloaikoja ei ole julkaistu.",
         "nb": "Åpningstider er ikke oppgitt.",
-        "sl": "Delovni čas ni objavljen."
+        "sl": "Delovni čas ni objavljen.",
+        "hr": "Radno vrijeme nije objavljeno."
       }
     },
     {
@@ -243,7 +248,8 @@
         "da": "Konsultationer efter aftale, hverdage 9.00–16.00.",
         "fi": "Vastaanotto ajanvarauksella arkisin 9.00–16.00.",
         "nb": "Konsultasjoner etter timebestilling, hverdager kl. 9.00–16.00.",
-        "sl": "Pregledi po naročilu, med tednom 9–16."
+        "sl": "Pregledi po naročilu, med tednom 9–16.",
+        "hr": "Pregledi uz termin, radnim danom 9:00–16:00."
       }
     },
     {
@@ -270,7 +276,8 @@
         "da": "Konsultationer efter aftale, dagligt. Akutte opkald tages imod når som helst; hjemmebesøg er muligt.",
         "fi": "Vastaanotto ajanvarauksella päivittäin. Hätäpuheluihin vastataan milloin tahansa; kotikäynnit mahdollisia.",
         "nb": "Konsultasjoner etter timebestilling, alle dager. Nødanrop tas imot når som helst; hjemmebesøk er mulig.",
-        "sl": "Pregledi po naročilu, vsak dan. Nujne klice sprejemajo kadar koli; možni so tudi obiski na domu."
+        "sl": "Pregledi po naročilu, vsak dan. Nujne klice sprejemajo kadar koli; možni so tudi obiski na domu.",
+        "hr": "Pregledi uz termin, svaki dan. Hitni pozivi primaju se u bilo koje doba; moguće su kućne posjete."
       }
     },
     {
@@ -297,7 +304,8 @@
         "da": "Telefonisk tilgængelig døgnet rundt; hjemmebesøg.",
         "fi": "Tavoitettavissa puhelimitse ympäri vuorokauden; kotikäynnit.",
         "nb": "Nås på telefon hele døgnet; hjemmebesøk.",
-        "sl": "Po telefonu so dosegljivi 24 ur na dan; obiski na domu."
+        "sl": "Po telefonu so dosegljivi 24 ur na dan; obiski na domu.",
+        "hr": "Dostupni telefonom 24 sata dnevno; kućni posjeti."
       }
     },
     {
@@ -324,7 +332,8 @@
         "da": "Åbent dagligt 7.30–17.00.",
         "fi": "Auki päivittäin 7.30–17.00.",
         "nb": "Åpent alle dager kl. 07.30–17.00.",
-        "sl": "Odprto vsak dan 7.30–17."
+        "sl": "Odprto vsak dan 7.30–17.",
+        "hr": "Otvoreno svaki dan 7:30–17:00."
       }
     }
   ],

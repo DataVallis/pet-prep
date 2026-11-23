@@ -71,7 +71,8 @@
         "da": "Åbent døgnet rundt, alle ugens dage.",
         "fi": "Auki ympäri vuorokauden joka päivä.",
         "nb": "Åpent hele døgnet, alle ukedager.",
-        "sl": "Odprto 24 ur na dan, vse dni v tednu."
+        "sl": "Odprto 24 ur na dan, vse dni v tednu.",
+        "hr": "Otvoreno 24 sata dnevno, svaki dan u tjednu."
       }
     },
     {
@@ -101,7 +102,8 @@
         "da": "Universitetsdyrehospital. Det er afdelingen i Bilbao (Providencia), der har døgnåbent.",
         "fi": "Yliopiston opetussairaala. Bilbaon toimipiste (Providencia) on auki ympäri vuorokauden.",
         "nb": "Undervisningssykehus. Det er Bilbao-filialen (Providencia) som er døgnåpen.",
-        "sl": "Univerzitetna učna bolnišnica. Lokacija Bilbao (Providencia) je odprta 24 ur na dan."
+        "sl": "Univerzitetna učna bolnišnica. Lokacija Bilbao (Providencia) je odprta 24 ur na dan.",
+        "hr": "Sveučilišna nastavna bolnica. Lokacija Bilbao (Providencia) jedina je otvorena 24 sata."
       }
     },
     {
@@ -131,7 +133,8 @@
         "da": "Åbent dagligt 10.00–20.00; akutte tilfælde modtages døgnet rundt.",
         "fi": "Auki päivittäin klo 10.00–20.00; päivystys ympäri vuorokauden.",
         "nb": "Åpent alle dager kl. 10.00–20.00; nødtilfeller tas imot hele døgnet.",
-        "sl": "Odprto vsak dan 10–20; nujni primeri se sprejemajo 24 ur na dan."
+        "sl": "Odprto vsak dan 10–20; nujni primeri se sprejemajo 24 ur na dan.",
+        "hr": "Otvoreno svaki dan 10:00–20:00; hitni slučajevi primaju se 24 sata."
       }
     },
     {
@@ -161,7 +164,8 @@
         "da": "Hverdage 08.30–18.30 (udvidet åbningstid meddeles). Indlagte patienter overvåges døgnet rundt; ikke en døgnåben akutklinik.",
         "fi": "Arkisin klo 8.30–18.30 (pidennetyistä ajoista ilmoitetaan erikseen). Sairaalahoidossa olevia potilaita valvotaan ympäri vuorokauden; ei ole ympärivuorokautinen päivystysklinikka.",
         "nb": "Hverdager 8.30–18.30 (utvidet åpningstid er varslet). Innlagte pasienter overvåkes døgnet rundt; ikke en døgnåpen dyrlegevakt.",
-        "sl": "Ob delavnikih 8.30–18.30 (podaljšan delovni čas bo naznanjen). Hospitalizirani pacienti so pod stalnim nadzorom; ni ambulanta za nujne primere 24 ur na dan."
+        "sl": "Ob delavnikih 8.30–18.30 (podaljšan delovni čas bo naznanjen). Hospitalizirani pacienti so pod stalnim nadzorom; ni ambulanta za nujne primere 24 ur na dan.",
+        "hr": "Radnim danom 08:30–18:30 (najavljeno produljeno radno vrijeme). Hospitalizirani pacijenti nadziru se non-stop; nije klinika s hitnom službom 24 sata."
       }
     },
     {
@@ -191,7 +195,8 @@
         "da": "Hverdage 09.00–19.00. Ikke en døgnåben akutklinik.",
         "fi": "Arkisin klo 9.00–19.00. Ei ole ympärivuorokautinen päivystysklinikka.",
         "nb": "Hverdager 9.00–19.00. Ikke en døgnåpen dyrlegevakt.",
-        "sl": "Ob delavnikih 9–19. Ni 24-urna nujna ambulanta."
+        "sl": "Ob delavnikih 9–19. Ni 24-urna nujna ambulanta.",
+        "hr": "Radnim danom 09:00–19:00. Nije hitna ambulanta koja radi 24 sata."
       }
     },
     {
@@ -221,7 +226,8 @@
         "da": "Åbent dagligt 10.00–20.00. Ikke en døgnåben akutklinik.",
         "fi": "Auki päivittäin klo 10.00–20.00. Ei ole ympärivuorokautinen päivystysklinikka.",
         "nb": "Åpent alle dager kl. 10.00–20.00. Ikke en døgnåpen dyrlegevakt.",
-        "sl": "Odprto vsak dan 10–20. Ni 24-urna nujna ambulanta."
+        "sl": "Odprto vsak dan 10–20. Ni 24-urna nujna ambulanta.",
+        "hr": "Radi svaki dan 10:00–20:00. Nije hitna ambulanta koja radi 24 sata."
       }
     },
     {
@@ -251,7 +257,8 @@
         "da": "Akutte tilfælde modtages døgnet rundt, 365 dage om året, uden tidsbestilling. Tidsbestilte konsultationer dagligt 09.30–20.00.",
         "fi": "Päivystys ympäri vuorokauden, 365 päivänä vuodessa, ilman ajanvarausta. Ajanvarauksella päivittäin klo 9.30–20.00.",
         "nb": "Nødtilfeller tas imot hele døgnet, 365 dager i året, uten timebestilling. Avtalte timer daglig 09.30–20.00.",
-        "sl": "Nujni primeri se sprejemajo 24 ur na dan, 365 dni v letu, brez naročanja. Redni termini vsak dan 9.30–20."
+        "sl": "Nujni primeri se sprejemajo 24 ur na dan, 365 dni v letu, brez naročanja. Redni termini vsak dan 9.30–20.",
+        "hr": "Hitni slučajevi primaju se 24 sata dnevno, 365 dana u godini, bez termina. Naručeni termini svaki dan 09:30–20:00."
       }
     },
     {
@@ -281,7 +288,8 @@
         "da": "Akut hjælp døgnet rundt, 7 dage om ugen.",
         "fi": "Kiireellinen hoito saatavilla ympäri vuorokauden, 7 päivää viikossa.",
         "nb": "Hastebehandling tilgjengelig hele døgnet, sju dager i uken.",
-        "sl": "Nujna oskrba 24 ur na dan, 7 dni v tednu."
+        "sl": "Nujna oskrba 24 ur na dan, 7 dni v tednu.",
+        "hr": "Hitna služba dostupna 24 sata, 7 dana u tjednu."
       }
     },
     {
@@ -311,7 +319,8 @@
         "da": "Afdelingen i Providencia er åben døgnet rundt, hver dag, for akutte tilfælde. Afdelingen Santiago Centro (Huérfanos 1951) har ikke døgnåbent.",
         "fi": "Providencian toimipiste auki ympäri vuorokauden joka päivä päivystystapauksia varten. Santiago Centron toimipiste (Huérfanos 1951) ei ole auki ympäri vuorokauden.",
         "nb": "Filialen i Providencia er åpen hele døgnet, alle dager, for nødtilfeller. Filialen i Santiago Centro (Huérfanos 1951) er ikke døgnåpen.",
-        "sl": "Podružnica Providencia je za nujne primere odprta 24 ur na dan, vsak dan. Podružnica Santiago Centro (Huérfanos 1951) ni odprta 24 ur na dan."
+        "sl": "Podružnica Providencia je za nujne primere odprta 24 ur na dan, vsak dan. Podružnica Santiago Centro (Huérfanos 1951) ni odprta 24 ur na dan.",
+        "hr": "Podružnica Providencia svaki dan radi 24 sata za hitne slučajeve. Podružnica Santiago Centro (Huérfanos 1951) ne radi 24 sata."
       }
     },
     {
@@ -341,7 +350,8 @@
         "da": "Døgnåbent hospital med akut hjælp døgnet rundt.",
         "fi": "Eläinsairaala, jossa päivystys 24/7.",
         "nb": "Døgnåpent dyresykehus med akuttbehandling døgnet rundt, sju dager i uken.",
-        "sl": "Bolnišnica 24 ur na dan z nujno pomočjo 24/7."
+        "sl": "Bolnišnica 24 ur na dan z nujno pomočjo 24/7.",
+        "hr": "Bolnica koja radi 24 sata, hitna služba non-stop."
       }
     },
     {
@@ -371,7 +381,8 @@
         "da": "Akuttjeneste døgnet rundt. Konsultationer mandag til fredag 09.00–18.30.",
         "fi": "Päivystys ympäri vuorokauden. Eläinlääkärin vastaanotto ma–pe klo 9.00–18.30.",
         "nb": "Akuttjeneste hele døgnet. Medisinske konsultasjoner mandag til fredag kl. 9.00–18.30.",
-        "sl": "Nujna služba 24 ur na dan. Pregledi pon–pet 9–18.30."
+        "sl": "Nujna služba 24 ur na dan. Pregledi pon–pet 9–18.30.",
+        "hr": "Hitna služba 24 sata. Pregledi pon–pet 09:00–18:30."
       }
     },
     {
@@ -401,7 +412,8 @@
         "da": "Åbent dagligt 09.00–20.00; akuttjeneste døgnet rundt.",
         "fi": "Auki päivittäin klo 9.00–20.00; päivystys ympäri vuorokauden.",
         "nb": "Åpent alle dager kl. 09.00–20.00; akuttjeneste hele døgnet.",
-        "sl": "Odprto vsak dan 9–20; nujna služba 24 ur na dan."
+        "sl": "Odprto vsak dan 9–20; nujna služba 24 ur na dan.",
+        "hr": "Radi svaki dan 09:00–20:00; hitna služba 24 sata."
       }
     },
     {
@@ -431,7 +443,8 @@
         "da": "Akut dyrlægehjælp døgnet rundt, 7 dage om ugen, på klinikken i Asunción.",
         "fi": "Eläinlääkäripäivystys ympäri vuorokauden, 7 päivää viikossa Asunciónin klinikalla.",
         "nb": "Akutt dyrlegehjelp hele døgnet, sju dager i uken, ved klinikken i Asunción.",
-        "sl": "Nujna veterinarska oskrba 24 ur na dan, 7 dni v tednu, v ambulanti Asunción."
+        "sl": "Nujna veterinarska oskrba 24 ur na dan, 7 dni v tednu, v ambulanti Asunción.",
+        "hr": "Hitna veterinarska skrb 24 sata, 7 dana u tjednu u ambulanti Asunción."
       }
     },
     {
@@ -461,7 +474,8 @@
         "da": "Døgnåbent, 7 dage om ugen; akutte tilfælde alle årets dage.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa; päivystys joka päivä vuoden ympäri.",
         "nb": "Åpent hele døgnet, sju dager i uken; nødtilfeller alle dager i året.",
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu; nujni primeri vse dni v letu."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; nujni primeri vse dni v letu.",
+        "hr": "Radi 24 sata, 7 dana u tjednu; hitni slučajevi svaki dan u godini."
       }
     },
     {
@@ -491,7 +505,8 @@
         "da": "Akutte tilfælde modtages døgnet rundt, alle årets dage (begge afdelinger i Los Castaños).",
         "fi": "Päivystys ympäri vuorokauden, joka päivä vuoden ympäri (molemmat Los Castaños -toimipisteet).",
         "nb": "Nødtilfeller tas imot hele døgnet, alle dager i året (begge avdelingene Los Castaños).",
-        "sl": "Nujni primeri se sprejemajo 24 ur na dan, vse dni v letu (obe podružnici Los Castaños)."
+        "sl": "Nujni primeri se sprejemajo 24 ur na dan, vse dni v letu (obe podružnici Los Castaños).",
+        "hr": "Hitni slučajevi primaju se 24 sata dnevno, svaki dan u godini (obje podružnice Los Castaños)."
       }
     },
     {
@@ -521,7 +536,8 @@
         "da": "Mandag til lørdag 08.00–20.00; akuttjeneste hver dag til 01.00. Ikke døgnåbent.",
         "fi": "ma–la klo 8.00–20.00; päivystys joka päivä klo 1.00 asti. Ei ympäri vuorokauden.",
         "nb": "mandag–lørdag 8.00–20.00; akuttjeneste hver dag til kl. 01.00. Ikke døgnåpent.",
-        "sl": "Pon–sob 8–20; nujna služba vsak dan do 1. Ni odprto 24 ur na dan."
+        "sl": "Pon–sob 8–20; nujna služba vsak dan do 1. Ni odprto 24 ur na dan.",
+        "hr": "pon–sub 08:00–20:00; hitna služba svaki dan do 01:00. Ne radi 24 sata."
       }
     },
     {
@@ -551,7 +567,8 @@
         "da": "Akutmodtagelsen er døgnåben hver dag, også på helligdage. Tidsbestilte konsultationer mandag til fredag 09.00–21.00.",
         "fi": "Päivystys auki ympäri vuorokauden joka päivä, myös pyhäpäivinä. Ajanvarauksella ma–pe klo 9.00–21.00.",
         "nb": "Nødtilfeller åpent hele døgnet alle dager, også helligdager. Avtalte timer mandag til fredag 09.00–21.00.",
-        "sl": "Nujna pomoč odprta 24 ur na dan vse dni, tudi ob praznikih. Redni termini pon–pet 9–21."
+        "sl": "Nujna pomoč odprta 24 ur na dan vse dni, tudi ob praznikih. Redni termini pon–pet 9–21.",
+        "hr": "Hitna služba radi 24 sata svaki dan, uključujući blagdane. Naručeni termini pon–pet 09:00–21:00."
       }
     },
     {
@@ -581,7 +598,8 @@
         "da": "Akuttjeneste hver dag 11.00–23.00. Ikke døgnåbent.",
         "fi": "Päivystys joka päivä klo 11.00–23.00. Ei ympäri vuorokauden.",
         "nb": "Akuttjeneste alle dager kl. 11.00–23.00. Ikke døgnåpent.",
-        "sl": "Nujna služba vsak dan 11–23. Ni odprto 24 ur na dan."
+        "sl": "Nujna služba vsak dan 11–23. Ni odprto 24 ur na dan.",
+        "hr": "Hitna služba svaki dan 11:00–23:00. Ne radi 24 sata."
       }
     },
     {
@@ -611,7 +629,8 @@
         "da": "Akut hjælp døgnet rundt, 7 dage om ugen. Konsultationer dagligt ca. 09.30/10.30–19.30.",
         "fi": "Päivystys ympäri vuorokauden, 7 päivää viikossa. Ajanvarauksella päivittäin noin klo 9.30/10.30–19.30.",
         "nb": "Akuttbehandling hele døgnet, sju dager i uken. Avtalte timer daglig ca. kl. 9.30/10.30–19.30.",
-        "sl": "Nujna oskrba 24 ur na dan, 7 dni v tednu. Termini vsak dan približno 9.30/10.30–19.30."
+        "sl": "Nujna oskrba 24 ur na dan, 7 dni v tednu. Termini vsak dan približno 9.30/10.30–19.30.",
+        "hr": "Hitna skrb 24 sata, 7 dana u tjednu. Termini svaki dan oko 09:30/10:30–19:30."
       }
     },
     {
@@ -641,7 +660,8 @@
         "da": "Universitetshospital: mandag til torsdag 09.00–12.00 og 14.00–17.00, fredag 09.00–12.00. Akutnummer for små kæledyr +56 9 3775 8382.",
         "fi": "Yliopistosairaala: ma–to klo 9.00–12.00 ja 14.00–17.00, pe klo 9.00–12.00. Pieneläinten päivystysnumero +56 9 3775 8382.",
         "nb": "Universitetssykehus: mandag–torsdag 9.00–12.00 og 14.00–17.00, fredag 9.00–12.00. Vakttelefon for smådyr +56 9 3775 8382.",
-        "sl": "Univerzitetna bolnišnica: pon–čet 9–12 in 14–17, pet 9–12. Številka za nujne primere pri malih živalih +56 9 3775 8382."
+        "sl": "Univerzitetna bolnišnica: pon–čet 9–12 in 14–17, pet 9–12. Številka za nujne primere pri malih živalih +56 9 3775 8382.",
+        "hr": "Sveučilišna bolnica: pon–čet 09:00–12:00 i 14:00–17:00, pet 09:00–12:00. Broj za hitne slučajeve malih životinja +56 9 3775 8382."
       }
     },
     {
@@ -671,7 +691,8 @@
         "da": "Akut hjælp døgnet rundt. Konsultationer mandag til fredag 09.00–19.00, lørdag 10.00–18.00.",
         "fi": "Päivystys 24/7. Vastaanotto ma–pe klo 9.00–19.00, la klo 10.00–18.00.",
         "nb": "Nødtilfeller hele døgnet. Konsultasjoner mandag til fredag 09.00–19.00, lørdag 10.00–18.00.",
-        "sl": "Nujna pomoč 24/7. Pregledi pon–pet 9–19, sob 10–18."
+        "sl": "Nujna pomoč 24/7. Pregledi pon–pet 9–19, sob 10–18.",
+        "hr": "Hitna služba 24/7. Pregledi pon–pet 09:00–19:00, sub 10:00–18:00."
       }
     },
     {
@@ -701,7 +722,8 @@
         "da": "Akutte tilfælde mandag til lørdag 09.30–24.00; søndage efter kapacitet. Indlagte patienter overvåges døgnet rundt. Konsultationer kræver tidsbestilling.",
         "fi": "Päivystys ma–la klo 9.30–24.00; sunnuntaisin saatavuuden mukaan. Sairaalahoidossa olevia potilaita valvotaan ympäri vuorokauden. Vastaanotolle tarvitaan ajanvaraus.",
         "nb": "Nødtilfeller mandag til lørdag 09.30–24.00; søndager etter tilgjengelighet. Innlagte pasienter overvåkes hele døgnet. Konsultasjoner krever timebestilling.",
-        "sl": "Nujna pomoč pon–sob 9.30–24; ob nedeljah glede na razpoložljivost. Hospitalizirani pacienti so pod nadzorom 24 ur na dan. Za preglede se je treba naročiti."
+        "sl": "Nujna pomoč pon–sob 9.30–24; ob nedeljah glede na razpoložljivost. Hospitalizirani pacienti so pod nadzorom 24 ur na dan. Za preglede se je treba naročiti.",
+        "hr": "Hitna služba pon–sub 09:30–24:00; nedjeljom prema dostupnosti. Hospitalizirani pacijenti pod nadzorom 24 sata. Za preglede je potreban termin."
       }
     },
     {
@@ -731,7 +753,8 @@
         "da": "Døgnåbent, 7 dage om ugen: konsultationer 09.00–20.00, akutte tilfælde 20.30–08.30.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa: vastaanotto klo 9.00–20.00, päivystys klo 20.30–8.30.",
         "nb": "Åpent hele døgnet, sju dager i uken: konsultasjoner 09.00–20.00, nødtilfeller 20.30–08.30.",
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu: pregledi 9–20, nujna pomoč 20.30–8.30."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu: pregledi 9–20, nujna pomoč 20.30–8.30.",
+        "hr": "Radi 24 sata, 7 dana u tjednu: pregledi 09:00–20:00, hitni slučajevi 20:30–08:30."
       }
     },
     {
@@ -761,7 +784,8 @@
         "da": "Indlagte patienter passes døgnet rundt af en dyrlæge; ring for at høre om akut hjælp.",
         "fi": "Sairaalahoidossa olevista potilaista huolehtii eläinlääkäri ympäri vuorokauden; soita ja kysy päivystysjärjestelyistä.",
         "nb": "Innlagte pasienter følges opp døgnet rundt av en dyrlege; ring for å avtale nødtilfeller.",
-        "sl": "Hospitalizirane paciente veterinar oskrbuje ves čas; za dogovor o nujni oskrbi pokličite."
+        "sl": "Hospitalizirane paciente veterinar oskrbuje ves čas; za dogovor o nujni oskrbi pokličite.",
+        "hr": "Hospitalizirane ljubimce non-stop prati veterinar; hitne slučajeve dogovori telefonom."
       }
     },
     {
@@ -791,7 +815,8 @@
         "da": "Akuttjeneste til 02.00.",
         "fi": "Päivystys klo 2.00 asti.",
         "nb": "Akuttjeneste til kl. 2.00.",
-        "sl": "Nujna služba do 2. ure."
+        "sl": "Nujna služba do 2. ure.",
+        "hr": "Hitna služba do 02:00."
       }
     },
     {
@@ -821,7 +846,8 @@
         "da": "Akuttjeneste til 02.00; indlæggelse døgnet rundt.",
         "fi": "Päivystys klo 2.00 asti; sairaalahoito ympäri vuorokauden.",
         "nb": "Akuttjeneste til kl. 2.00; innleggelse hele døgnet.",
-        "sl": "Nujna služba do 2; hospitalizacija 24 ur na dan."
+        "sl": "Nujna služba do 2; hospitalizacija 24 ur na dan.",
+        "hr": "Hitna služba do 02:00; hospitalizacija 24 sata."
       }
     },
     {
@@ -851,7 +877,8 @@
         "da": "Akut hjælp til 22.00. Hverdage 09.00–18.00, lørdag 10.00–14.00.",
         "fi": "Päivystys klo 22.00 asti. Arkisin klo 9.00–18.00, la klo 10.00–14.00.",
         "nb": "Akuttbehandling til kl. 22.00. Hverdager 09.00–18.00, lørdag 10.00–14.00.",
-        "sl": "Nujna oskrba do 22. Ob delavnikih 9–18, sob 10–14."
+        "sl": "Nujna oskrba do 22. Ob delavnikih 9–18, sob 10–14.",
+        "hr": "Hitna služba do 22:00. Radnim danom 09:00–18:00, sub 10:00–14:00."
       }
     },
     {
@@ -881,7 +908,8 @@
         "da": "Døgnbemandet hospitalsafdeling for indlagte kæledyr.",
         "fi": "Sairaalapalvelu ympäri vuorokauden sairaalahoidossa oleville lemmikeille.",
         "nb": "Døgntjeneste for innlagte kjæledyr.",
-        "sl": "Bolnišnična oskrba 24 ur na dan za hospitalizirane ljubljenčke."
+        "sl": "Bolnišnična oskrba 24 ur na dan za hospitalizirane ljubljenčke.",
+        "hr": "Bolnička služba 24 sata za hospitalizirane ljubimce."
       }
     },
     {
@@ -911,7 +939,8 @@
         "da": "Mandag til lørdag 09.00–19.00. Akutte tilfælde efter kapacitet; kontakt klinikken, før du kommer.",
         "fi": "ma–la klo 9.00–19.00. Päivystys saatavuuden mukaan; ota yhteyttä ennen tuloa.",
         "nb": "mandag–lørdag 9.00–19.00. Nødtilfeller etter tilgjengelighet; ta kontakt før du kommer.",
-        "sl": "Pon–sob 9–19. Nujni primeri glede na razpoložljivost; pred prihodom pokličite."
+        "sl": "Pon–sob 9–19. Nujni primeri glede na razpoložljivost; pred prihodom pokličite.",
+        "hr": "pon–sub 09:00–19:00. Hitni slučajevi prema dostupnosti; javi se prije dolaska."
       }
     },
     {
@@ -939,7 +968,8 @@
         "da": "Mandag til fredag 09.00–17.00.",
         "fi": "ma–pe klo 9.00–17.00.",
         "nb": "mandag–fredag 9.00–17.00.",
-        "sl": "Pon–pet 9–17."
+        "sl": "Pon–pet 9–17.",
+        "hr": "pon–pet 09:00–17:00."
       }
     },
     {
@@ -969,7 +999,8 @@
         "da": "Mandag til fredag 09.00–19.00; lørdag formiddag. Genåbnet eller genåbner i 2026 efter ombygning; ring for at få det bekræftet.",
         "fi": "ma–pe klo 9.00–19.00; lauantaiaamuisin. Avattu uudelleen tai avautumassa uudelleen vuonna 2026 remontin jälkeen; soita ja varmista.",
         "nb": "mandag–fredag 9.00–19.00; lørdag formiddag. Gjenåpnet eller gjenåpner i 2026 etter ombygging; ring for å bekrefte.",
-        "sl": "Pon–pet 9–19; sobota dopoldne. Po prenovi znova odprta ali se ponovno odpira v letu 2026; za potrditev pokličite."
+        "sl": "Pon–pet 9–19; sobota dopoldne. Po prenovi znova odprta ali se ponovno odpira v letu 2026; za potrditev pokličite.",
+        "hr": "pon–pet 09:00–19:00; subotom ujutro. Nakon obnove ponovno otvorena ili se ponovno otvara u 2026.; nazovi i provjeri."
       }
     },
     {
@@ -999,7 +1030,8 @@
         "da": "Kommunal klinik; tidsbestilling pr. telefon tirsdag til torsdag fra 09.00. Ingen akuttjeneste eller indlæggelse.",
         "fi": "Kunnallinen klinikka; ajanvaraus puhelimitse ti–to klo 9.00 alkaen. Ei päivystystä eikä sairaalahoitoa.",
         "nb": "Kommunal klinikk; timebestilling på telefon tirsdag til torsdag fra kl. 09.00. Ingen akuttbehandling eller innleggelse.",
-        "sl": "Občinska ambulanta; naročanje po telefonu tor–čet od 9. Brez nujne službe in hospitalizacije."
+        "sl": "Občinska ambulanta; naročanje po telefonu tor–čet od 9. Brez nujne službe in hospitalizacije.",
+        "hr": "Gradska ambulanta; termini telefonom uto–čet od 09:00. Nema hitne službe ni hospitalizacije."
       }
     }
   ],

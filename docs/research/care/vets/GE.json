@@ -73,7 +73,8 @@
         "da": "Akut hjælp annonceres som tilgængelig døgnet rundt (georgisksproget hjemmeside). Ring på forhånd.",
         "fi": "Päivystysapua ilmoitetaan olevan saatavilla 24/7 (georgiankielinen sivusto). Soita etukäteen.",
         "nb": "Akutthjelp annonseres som tilgjengelig hele døgnet (nettsted på georgisk). Ring på forhånd.",
-        "sl": "Nujna pomoč 24/7. Vnaprej pokličite."
+        "sl": "Nujna pomoč 24/7. Vnaprej pokličite.",
+        "hr": "Hitna služba dostupna 24/7. Nazovi unaprijed."
       }
     },
     {
@@ -101,7 +102,8 @@
         "da": "Åbent 10.00–20.00 hver dag; ring på forhånd ved akut sygdom. Hospital for hunde og katte med en afdeling for katte.",
         "fi": "Auki päivittäin 10.00–20.00; päivystystapauksissa soita etukäteen. Koira- ja kissasairaala, jossa on kissaosasto.",
         "nb": "Åpent 10.00–20.00 daglig; ring på forhånd ved nødtilfeller. Sykehus for hunder og katter med kattavdeling.",
-        "sl": "Odprto vsak dan 10–20; za nujne primere vnaprej pokličite. Bolnišnica za pse in mačke z oddelkom za mačke."
+        "sl": "Odprto vsak dan 10–20; za nujne primere vnaprej pokličite. Bolnišnica za pse in mačke z oddelkom za mačke.",
+        "hr": "Otvoreno svaki dan 10:00–20:00; u hitnim slučajevima nazovi unaprijed. Bolnica za pse i mačke s odjelom za mačke."
       }
     },
     {
@@ -129,7 +131,8 @@
         "da": "Åbent hver dag 10.00–19.00.",
         "fi": "Auki päivittäin 10.00–19.00.",
         "nb": "Åpent alle dager kl. 10.00–19.00.",
-        "sl": "Odprto vsak dan 10–19."
+        "sl": "Odprto vsak dan 10–19.",
+        "hr": "Otvoreno svaki dan 10:00–19:00."
       }
     },
     {
@@ -157,7 +160,8 @@
         "da": "Åbent hver dag 11.00–20.00. Hunde og katte.",
         "fi": "Auki päivittäin 11.00–20.00. Koirat ja kissat.",
         "nb": "Åpent alle dager kl. 11.00–20.00. Hunder og katter.",
-        "sl": "Odprto vsak dan 11–20. Psi in mačke."
+        "sl": "Odprto vsak dan 11–20. Psi in mačke.",
+        "hr": "Otvoreno svaki dan 11:00–20:00. Psi i mačke."
       }
     },
     {
@@ -185,7 +189,8 @@
         "da": "Skal efter sigende være en døgnåben klinik; bekræft telefonisk, før du kører derhen.",
         "fi": "Ilmoituksen mukaan ympärivuorokautinen klinikka; varmista puhelimitse ennen lähtöä.",
         "nb": "Oppgis å være en døgnåpen klinikk; bekreft på telefon før du reiser.",
-        "sl": "24-urna ambulanta; pred potjo potrdite po telefonu."
+        "sl": "24-urna ambulanta; pred potjo potrdite po telefonu.",
+        "hr": "Klinika radi 24 sata; prije polaska potvrdi telefonom."
       }
     },
     {
@@ -213,7 +218,8 @@
         "da": "Skal efter sigende have åbent døgnet rundt hver dag; bekræft telefonisk, før du kører derhen.",
         "fi": "Ilmoituksen mukaan auki ympäri vuorokauden päivittäin; varmista puhelimitse ennen lähtöä.",
         "nb": "Oppgis å være åpen hele døgnet, alle dager; bekreft på telefon før du reiser.",
-        "sl": "Odprto 24 ur na dan, vsak dan; pred potjo potrdite po telefonu."
+        "sl": "Odprto 24 ur na dan, vsak dan; pred potjo potrdite po telefonu.",
+        "hr": "Otvoreno 24 sata svaki dan; prije polaska potvrdi telefonom."
       }
     },
     {
@@ -241,7 +247,8 @@
         "da": "Efter aftale: man–fre 10.00–18.00, søn 11.00–16.00, lør lukket. Hjemmebesøg. Hunde, katte, kaniner, marsvin, gnavere.",
         "fi": "Ajanvarauksella: ma–pe 10.00–18.00, su 11.00–16.00, la suljettu. Kotikäynnit. Koirat, kissat, kanit, marsut, jyrsijät.",
         "nb": "Etter timebestilling: man–fre kl. 10.00–18.00, søn kl. 11.00–16.00, lør stengt. Hjemmebesøk. Hunder, katter, kaniner, marsvin, gnagere.",
-        "sl": "Po naročilu: pon–pet 10–18, ned 11–16, ob sobotah zaprto. Obiski na domu. Psi, mačke, zajci, morski prašički, glodavci."
+        "sl": "Po naročilu: pon–pet 10–18, ned 11–16, ob sobotah zaprto. Obiski na domu. Psi, mačke, zajci, morski prašički, glodavci.",
+        "hr": "Uz termin: pon–pet 10:00–18:00, ned 11:00–16:00, sub zatvoreno. Kućni posjeti. Psi, mačke, kunići, zamorci, glodavci."
       }
     }
   ],

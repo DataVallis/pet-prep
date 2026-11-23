@@ -60,7 +60,8 @@
         "da": "Annonceret akutservice døgnet rundt, 7 dage om ugen.",
         "fi": "Päivystys ilmoitetusti ympäri vuorokauden, 7 päivää viikossa.",
         "nb": "Akuttjeneste annonseres som åpen hele døgnet, sju dager i uken.",
-        "sl": "Nujna služba 24 ur na dan, 7 dni v tednu."
+        "sl": "Nujna služba 24 ur na dan, 7 dni v tednu.",
+        "hr": "Hitna služba 24 sata dnevno, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://veterinairecasablanca.ma/",
@@ -89,7 +90,8 @@
         "da": "Åbent døgnet rundt, 7 dage om ugen, også helligdage.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä.",
         "nb": "Åpent hele døgnet, alle dager i uken, offentlige helligdager inkludert.",
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih.",
+        "hr": "Otvoreno 24 sata dnevno, 7 dana u tjednu, uključujući blagdane."
       },
       "small_animals": true,
       "url": "https://cliniqueveterinairesoleil.com/",
@@ -118,7 +120,8 @@
         "da": "Konsultationer man–fre 9.00–19.00, lør 9.00–16.00; akutte tilfælde døgnet rundt, 7 dage om ugen.",
         "fi": "Vastaanotto ma–pe 9.00–19.00, la 9.00–16.00; päivystys ympäri vuorokauden, 7 päivää viikossa.",
         "nb": "Konsultasjoner man–fre kl. 9.00–19.00, lør kl. 9.00–16.00; nødtilfeller hele døgnet, sju dager i uken.",
-        "sl": "Pregledi pon–pet 9–19, sob 9–16; nujni primeri 24 ur na dan, 7 dni v tednu."
+        "sl": "Pregledi pon–pet 9–19, sob 9–16; nujni primeri 24 ur na dan, 7 dni v tednu.",
+        "hr": "Pregledi pon–pet 9:00–19:00, sub 9:00–16:00; hitni slučajevi 24 sata dnevno, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://www.hermitagevets.com/",
@@ -147,7 +150,8 @@
         "da": "Åbent døgnet rundt, alle ugens dage.",
         "fi": "Auki ympäri vuorokauden, 7 päivää viikossa.",
         "nb": "Åpent hele døgnet, alle dager i uken.",
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu.",
+        "hr": "Otvoreno 24 sata dnevno, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://www.veterinaireideal.com/",
@@ -176,7 +180,8 @@
         "da": "Man–fre 9.00–19.00, lør 9.00–14.00; særskilt akutnummer 06 61 49 26 18.",
         "fi": "ma–pe 9.00–19.00, la 9.00–14.00; erillinen päivystysnumero 06 61 49 26 18.",
         "nb": "man–fre 9.00–19.00, lør 9.00–14.00; eget nødnummer 06 61 49 26 18.",
-        "sl": "Pon–pet 9–19, sob 9–14; ločena številka za nujne primere 06 61 49 26 18."
+        "sl": "Pon–pet 9–19, sob 9–14; ločena številka za nujne primere 06 61 49 26 18.",
+        "hr": "pon–pet 9:00–19:00, sub 9:00–14:00; zasebni broj za hitne slučajeve 06 61 49 26 18."
       },
       "small_animals": true,
       "url": "https://sites.google.com/view/clinique-veterinaire-maarif/accueil",
@@ -205,7 +210,8 @@
         "da": "Åbent dagligt 9.00–21.00; kan træffes pr. telefon eller WhatsApp ved kritiske situationer i dette tidsrum.",
         "fi": "Auki päivittäin 9.00–21.00; kriittisissä tilanteissa tavoitettavissa puhelimitse tai WhatsAppilla näinä aikoina.",
         "nb": "Åpent alle dager kl. 09.00–21.00; kan nås på telefon eller WhatsApp ved kritiske situasjoner i dette tidsrommet.",
-        "sl": "Odprto vsak dan 9–21; v tem času so za kritične primere dosegljivi po telefonu ali WhatsAppu."
+        "sl": "Odprto vsak dan 9–21; v tem času so za kritične primere dosegljivi po telefonu ali WhatsAppu.",
+        "hr": "Otvoreno svaki dan 9:00–21:00; u tom razdoblju dostupni telefonom ili WhatsAppom za kritične situacije."
       },
       "small_animals": true,
       "url": "https://www.vetsocrate.ma/",
@@ -233,7 +239,8 @@
         "da": "Annonceret akuthjælp døgnet rundt.",
         "fi": "Päivystys ilmoitetusti 24/7.",
         "nb": "Akuttbehandling annonseres som tilgjengelig hele døgnet.",
-        "sl": "Nujna pomoč 24/7."
+        "sl": "Nujna pomoč 24/7.",
+        "hr": "Hitna skrb 24/7."
       },
       "small_animals": true,
       "url": "https://cvt.ma/",
@@ -262,7 +269,8 @@
         "da": "Man–fre 9.00–13.00 og 15.00–19.00; akutte tilfælde uden for åbningstid døgnet rundt, 7 dage om ugen, pr. telefon (også 06 61 72 99 28).",
         "fi": "ma–pe 9.00–13.00 ja 15.00–19.00; päivystys aukioloaikojen ulkopuolella ympäri vuorokauden, 7 päivää viikossa puhelimitse (myös 06 61 72 99 28).",
         "nb": "man–fre 9.00–13.00 og 15.00–19.00; nødtilfeller utenom åpningstid hele døgnet, alle dager, på telefon (også 06 61 72 99 28).",
-        "sl": "Pon–pet 9–13 in 15–19; nujni primeri zunaj delovnega časa 24 ur na dan, 7 dni v tednu po telefonu (tudi 06 61 72 99 28)."
+        "sl": "Pon–pet 9–13 in 15–19; nujni primeri zunaj delovnega časa 24 ur na dan, 7 dni v tednu po telefonu (tudi 06 61 72 99 28).",
+        "hr": "pon–pet 9:00–13:00 i 15:00–19:00; hitni slučajevi izvan radnog vremena 24 sata dnevno, 7 dana u tjednu telefonom (i na 06 61 72 99 28)."
       },
       "small_animals": true,
       "url": "https://cvy.ma/",
@@ -291,7 +299,8 @@
         "da": "Man–fre ca. 9.00–19.00, lør formiddag; annonceret akuthjælp døgnet rundt.",
         "fi": "ma–pe noin 9.00–19.00, la aamupäivällä; päivystys ilmoitetusti 24/7.",
         "nb": "man–fre ca. 9.00–19.00, lør formiddag; akuttjeneste hele døgnet annonseres.",
-        "sl": "Pon–pet približno 9–19, sob dopoldne; nujna pomoč 24/7."
+        "sl": "Pon–pet približno 9–19, sob dopoldne; nujna pomoč 24/7.",
+        "hr": "pon–pet otprilike 9:00–19:00, sub ujutro; hitni slučajevi 24/7."
       },
       "small_animals": true,
       "url": "https://agafayvetpractice.wixsite.com/anix",
@@ -320,7 +329,8 @@
         "da": "Man–lør 9.00–20.00; akutte tilfælde håndteres til kl. 3.00 om natten.",
         "fi": "ma–la 9.00–20.00; päivystystapaukset hoidetaan klo 3.00 asti.",
         "nb": "man–lør 9.00–20.00; nødtilfeller behandles til kl. 03.00 om natten.",
-        "sl": "Pon–sob 9–20; nujne primere obravnavajo do 3. ure zjutraj."
+        "sl": "Pon–sob 9–20; nujne primere obravnavajo do 3. ure zjutraj.",
+        "hr": "pon–sub 9:00–20:00; hitni slučajevi zbrinjavaju se do 3:00 ujutro."
       },
       "small_animals": true,
       "url": "https://vetezzaytoune.com/",
@@ -348,7 +358,8 @@
         "da": "Annonceret akutservice døgnet rundt, alle ugens dage.",
         "fi": "Päivystys ilmoitetusti 24/7, viikon jokaisena päivänä.",
         "nb": "Akuttjeneste annonseres som åpen hele døgnet, alle ukens dager.",
-        "sl": "Nujna služba 24/7, vsak dan v tednu."
+        "sl": "Nujna služba 24/7, vsak dan v tednu.",
+        "hr": "Hitna služba 24/7, svaki dan u tjednu."
       },
       "small_animals": true,
       "url": "https://veterinairegibraltar.com/",
@@ -377,7 +388,8 @@
         "da": "Man–fre 9.30–12.30 og 15.30–18.30, lør 9.30–13.00; hjemmebesøg pr. telefon.",
         "fi": "ma–pe 9.30–12.30 ja 15.30–18.30, la 9.30–13.00; kotikäynnit puhelimitse.",
         "nb": "man–fre 9.30–12.30 og 15.30–18.30, lør 9.30–13.00; hjemmebesøk etter telefonavtale.",
-        "sl": "Pon–pet 9.30–12.30 in 15.30–18.30, sob 9.30–13; obiski na domu po telefonskem dogovoru."
+        "sl": "Pon–pet 9.30–12.30 in 15.30–18.30, sob 9.30–13; obiski na domu po telefonskem dogovoru.",
+        "hr": "pon–pet 9:30–12:30 i 15:30–18:30, sub 9:30–13:00; kućni posjeti telefonskim dogovorom."
       },
       "small_animals": true,
       "url": "https://www.veterinaireagadir.com/",
@@ -406,7 +418,8 @@
         "da": "Man–fre 9.00–13.00 og 15.00–19.00, lør 9.00–14.00.",
         "fi": "ma–pe 9.00–13.00 ja 15.00–19.00, la 9.00–14.00.",
         "nb": "man–fre 9.00–13.00 og 15.00–19.00, lør 9.00–14.00.",
-        "sl": "Pon–pet 9–13 in 15–19, sob 9–14."
+        "sl": "Pon–pet 9–13 in 15–19, sob 9–14.",
+        "hr": "pon–pet 9:00–13:00 i 15:00–19:00, sub 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://vetcareagadir.lovable.app/",
@@ -435,7 +448,8 @@
         "da": "Konsultationer dagligt 9.00–18.00; akutservice 18.00–9.00; åbent døgnet rundt, 7 dage om ugen.",
         "fi": "Vastaanotto päivittäin 9.00–18.00; päivystys 18.00–9.00; auki ympäri vuorokauden, 7 päivää viikossa.",
         "nb": "Konsultasjoner alle dager kl. 9.00–18.00; akuttjeneste kl. 18.00–9.00; åpent hele døgnet, sju dager i uken.",
-        "sl": "Pregledi vsak dan 9–18; nujna služba 18–9; odprto 24 ur na dan, 7 dni v tednu."
+        "sl": "Pregledi vsak dan 9–18; nujna služba 18–9; odprto 24 ur na dan, 7 dni v tednu.",
+        "hr": "Pregledi svaki dan 9:00–18:00; hitna služba 18:00–09:00; otvoreno 24 sata, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://vetchampsdecourse.com/",
@@ -464,7 +478,8 @@
         "da": "Man–fre 9.00–18.00, lør 9.00–14.00.",
         "fi": "ma–pe 9.00–18.00, la 9.00–14.00.",
         "nb": "man–fre 9.00–18.00, lør 9.00–14.00.",
-        "sl": "Pon–pet 9–18, sob 9–14."
+        "sl": "Pon–pet 9–18, sob 9–14.",
+        "hr": "pon–pet 9:00–18:00, sub 9:00–14:00."
       },
       "small_animals": true,
       "url": "https://veterinaire-rabat.com/",
@@ -492,7 +507,8 @@
         "da": "Akut hjælp ved livstruende tilfælde; ring på forhånd.",
         "fi": "Kiireellinen hoito hengenvaarallisissa tapauksissa; soita etukäteen.",
         "nb": "Hastebehandling ved livstruende tilfeller; ring på forhånd.",
-        "sl": "Nujna oskrba za življenjsko nevarne primere; vnaprej pokličite."
+        "sl": "Nujna oskrba za življenjsko nevarne primere; vnaprej pokličite.",
+        "hr": "Hitna skrb za slučajeve opasne po život; nazovi unaprijed."
       },
       "small_animals": true,
       "url": "https://mimosa.ma/",
@@ -535,7 +551,8 @@
         "da": "Man–fre 9.00–17.00, lør 10.00–17.00; annonceret akuthjælp døgnet rundt, 7 dage om ugen.",
         "fi": "ma–pe 9.00–17.00, la 10.00–17.00; päivystys ilmoitetusti ympäri vuorokauden, 7 päivää viikossa.",
         "nb": "man–fre 9.00–17.00, lør 10.00–17.00; akuttbehandling markedsføres hele døgnet, alle dager.",
-        "sl": "Pon–pet 9–17, sob 10–17; nujna pomoč 24 ur na dan, 7 dni v tednu."
+        "sl": "Pon–pet 9–17, sob 10–17; nujna pomoč 24 ur na dan, 7 dni v tednu.",
+        "hr": "pon–pet 9:00–17:00, sub 10:00–17:00; hitna skrb 24 sata dnevno, 7 dana u tjednu."
       },
       "small_animals": true,
       "url": "https://veterinaire-villehaute.com/",
@@ -564,7 +581,8 @@
         "da": "Man–lør 9.30–19.00.",
         "fi": "ma–la 9.30–19.00.",
         "nb": "man–lør 9.30–19.00.",
-        "sl": "Pon–sob 9.30–19."
+        "sl": "Pon–sob 9.30–19.",
+        "hr": "pon–sub 9:30–19:00."
       },
       "small_animals": true,
       "url": "https://petcare.ma/",
@@ -609,7 +627,8 @@
         "da": "Særskilt akutnummer 06 61 56 16 10.",
         "fi": "Erillinen päivystysnumero 06 61 56 16 10.",
         "nb": "Eget akuttnummer 06 61 56 16 10.",
-        "sl": "Ločena številka za nujne primere 06 61 56 16 10."
+        "sl": "Ločena številka za nujne primere 06 61 56 16 10.",
+        "hr": "Zasebni broj za hitne slučajeve 06 61 56 16 10."
       }
     }
   ],

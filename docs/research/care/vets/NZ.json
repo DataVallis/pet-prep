@@ -71,7 +71,8 @@
         "da": "Åbent døgnet rundt fra mandag kl. 8 til lørdag kl. 8. Akut hjælp i weekenden (lørdag kl. 8 til mandag kl. 8) kun for kunder i Community Practice; andre, der ringer i weekenden, henvises til Totally Vets Fielding, +64 6 324 0812. Konsultationsgebyr ved ankomst; 50 % depositum, hvis kæledyret indlægges.",
         "fi": "Auki ympäri vuorokauden maanantaista klo 8 lauantaihin klo 8. Viikonlopun päivystys (la klo 8 – ma klo 8) vain Community Practicen asiakkaille; muut viikonloppuna soittavat ohjataan Totally Vets Fieldingiin, +64 6 324 0812. Vastaanottomaksu maksetaan perillä; 50 % ennakkomaksu, jos lemmikki jää sairaalahoitoon.",
         "nb": "Åpent hele døgnet fra mandag kl. 8.00 til lørdag kl. 8.00. Akuttbehandling i helgen (lørdag kl. 8.00 til mandag kl. 8.00) er kun for kunder hos Community Practice; andre som ringer i helgen henvises til Totally Vets Fielding, +64 6 324 0812. Konsultasjonsgebyr ved ankomst; 50 % depositum hvis kjæledyret legges inn.",
-        "sl": "Odprto 24 ur na dan od ponedeljka ob 8 do sobote ob 8. Nujna oskrba ob koncih tedna (od sobote ob 8 do ponedeljka ob 8) je samo za stranke Community Practice; drugi klicatelji ob koncih tedna so napoteni na Totally Vets Fielding, +64 6 324 0812. Pristojbina za posvet ob prihodu; 50 % polog, če je ljubljenček sprejet v bolnišnico."
+        "sl": "Odprto 24 ur na dan od ponedeljka ob 8 do sobote ob 8. Nujna oskrba ob koncih tedna (od sobote ob 8 do ponedeljka ob 8) je samo za stranke Community Practice; drugi klicatelji ob koncih tedna so napoteni na Totally Vets Fielding, +64 6 324 0812. Pristojbina za posvet ob prihodu; 50 % polog, če je ljubljenček sprejet v bolnišnico.",
+        "hr": "Radi 24 sata od ponedjeljka 8:00 do subote 8:00. Hitna skrb vikendom (od subote 8:00 do ponedjeljka 8:00) samo je za klijente Community Practice; ostale pozivatelje vikendom upućuju na Totally Vets Fielding, +64 6 324 0812. Pregled se plaća pri dolasku; 50 % pologa ako se ljubimac hospitalizira."
       }
     },
     {
@@ -101,7 +102,8 @@
         "da": "Akut- og skadestue for dyr døgnet rundt. Du kan møde op uden at ringe, men det anbefales at ringe på forhånd.",
         "fi": "Tapaturma- ja päivystyseläinlääkärit ympäri vuorokauden. Ilman ajanvarausta voi tulla; soita kuitenkin mieluiten etukäteen.",
         "nb": "Dyrleger for ulykker og nødtilfeller hele døgnet. Du kan komme uten timebestilling; det anbefales å ringe på forhånd.",
-        "sl": "Nujna veterinarska pomoč 24 ur na dan. Sprejemajo tudi paciente brez naročila; priporočamo, da vnaprej pokličete."
+        "sl": "Nujna veterinarska pomoč 24 ur na dan. Sprejemajo tudi paciente brez naročila; priporočamo, da vnaprej pokličete.",
+        "hr": "Veterinari za nezgode i hitne slučajeve 24 sata dnevno. Prima i bez najave; preporučuje se nazvati unaprijed."
       }
     },
     {
@@ -131,7 +133,8 @@
         "da": "Akut- og skadestue for dyr døgnet rundt.",
         "fi": "Tapaturma- ja päivystyseläinlääkärit ympäri vuorokauden.",
         "nb": "Dyrleger for ulykker og nødtilfeller hele døgnet.",
-        "sl": "Nujna veterinarska pomoč 24 ur na dan."
+        "sl": "Nujna veterinarska pomoč 24 ur na dan.",
+        "hr": "Veterinari za nezgode i hitne slučajeve 24 sata dnevno."
       }
     },
     {
@@ -161,7 +164,8 @@
         "da": "Akutklinik uden for almindelig åbningstid. Ring, før du kommer.",
         "fi": "Päivystysklinikka virka-ajan ulkopuolella. Soita ennen tuloa.",
         "nb": "Dyrlegevakt utenfor ordinær åpningstid. Ring på forhånd.",
-        "sl": "Nujna ambulanta zunaj delovnega časa. Pred prihodom pokličite."
+        "sl": "Nujna ambulanta zunaj delovnega časa. Pred prihodom pokličite.",
+        "hr": "Hitna ambulanta izvan radnog vremena. Nazovi prije dolaska."
       }
     },
     {
@@ -191,7 +195,8 @@
         "da": "Akutklinik uden for almindelig åbningstid. Ring, før du kommer.",
         "fi": "Päivystysklinikka virka-ajan ulkopuolella. Soita ennen tuloa.",
         "nb": "Dyrlegevakt utenfor ordinær åpningstid. Ring på forhånd.",
-        "sl": "Nujna ambulanta zunaj delovnega časa. Pred prihodom pokličite."
+        "sl": "Nujna ambulanta zunaj delovnega časa. Pred prihodom pokličite.",
+        "hr": "Hitna ambulanta izvan radnog vremena. Nazovi prije dolaska."
       }
     },
     {
@@ -221,7 +226,8 @@
         "da": "Akutklinik uden for almindelig åbningstid, ikke døgnåben: hverdage fra 18.00 til 8.00; weekend fra lørdag middag til mandag kl. 8.",
         "fi": "Päivystysklinikka virka-ajan ulkopuolella, ei auki ympäri vuorokauden: arkisin klo 18–8; viikonloppuisin lauantaista klo 12 maanantaihin klo 8.",
         "nb": "Dyrlegevakt utenfor ordinær åpningstid, ikke åpen hele døgnet: hverdager kl. 18–8; helger fra lørdag kl. 12 til mandag kl. 8.",
-        "sl": "Nujna ambulanta zunaj delovnega časa, ni odprta 24 ur na dan: ob delavnikih od 18 do 8; ob koncih tedna od sobote opoldne do ponedeljka do 8."
+        "sl": "Nujna ambulanta zunaj delovnega časa, ni odprta 24 ur na dan: ob delavnikih od 18 do 8; ob koncih tedna od sobote opoldne do ponedeljka do 8.",
+        "hr": "Hitna ambulanta izvan radnog vremena, ne radi 24 sata: radnim danom od 18:00 do 8:00; vikendom od subote u podne do ponedjeljka 8:00."
       }
     },
     {
@@ -251,7 +257,8 @@
         "da": "Henvisnings- og akuthospital med specialister. Åbningstid man–fre 8.00–18.00; ring og hør, om der er akut hjælp.",
         "fi": "Erikoiseläinsairaala ja päivystyssairaala. Aukioloajat ma–pe 8–18; soita ja kysy päivystyshoidosta.",
         "nb": "Spesialist- og akuttsykehus for henviste pasienter. Åpningstid man–fre kl. 8–18; ring for å spørre om akuttbehandling.",
-        "sl": "Specialistična napotna in nujna bolnišnica. Delovni čas pon–pet 8–18; o nujni oskrbi se pozanimajte po telefonu."
+        "sl": "Specialistična napotna in nujna bolnišnica. Delovni čas pon–pet 8–18; o nujni oskrbi se pozanimajte po telefonu.",
+        "hr": "Specijalistička referentna i hitna bolnica. Radno vrijeme pon–pet 8:00–18:00; za hitnu skrb nazovi i raspitaj se."
       }
     },
     {
@@ -281,7 +288,8 @@
         "da": "Regional akutklinik uden for åbningstid i Wellington. Ring først, så personalet er klar til at tage imod dig.",
         "fi": "Wellingtonin alueen päivystysklinikka virka-ajan ulkopuolella. Soita ensin, niin henkilökunta odottaa sinua.",
         "nb": "Regional dyrlegevakt utenom åpningstid for Wellington. Ring først, slik at de ansatte venter deg.",
-        "sl": "Regionalna nujna ambulanta zunaj delovnega časa za Wellington. Najprej pokličite, da vas bo osebje pričakalo."
+        "sl": "Regionalna nujna ambulanta zunaj delovnega časa za Wellington. Najprej pokličite, da vas bo osebje pričakalo.",
+        "hr": "Regionalna hitna ambulanta izvan radnog vremena za Wellington. Najprije nazovi da te osoblje očekuje."
       }
     },
     {
@@ -310,7 +318,8 @@
         "da": "Man–fre 7.30–19.00, lør 9.00–16.00, lukket søndag og helligdage. Uden for åbningstid henvises akutte tilfælde til Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fi": "ma–pe 7.30–19, la 9–16, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella päivystystapaukset ohjataan klinikalle Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "nb": "Man–fre 7.30–19.00, lør 9.00–16.00, stengt søndager og helligdager. Utenom åpningstiden henvises nødtilfeller til Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "sl": "Pon–pet 7.30–19, sob 9–16, ob nedeljah in praznikih zaprto. Zunaj delovnega časa nujne primere sprejema Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "sl": "Pon–pet 7.30–19, sob 9–16, ob nedeljah in praznikih zaprto. Zunaj delovnega časa nujne primere sprejema Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "hr": "pon–pet 7:30–19:00, sub 9:00–16:00, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena hitni slučajevi idu u Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -340,7 +349,8 @@
         "da": "Akutklinik uden for almindelig åbningstid: man–tor 19.00–8.00; fre 19.00 til man 8.00; åben alle helligdage. Ikke døgnåben på hverdage.",
         "fi": "Päivystysklinikka virka-ajan ulkopuolella: ma–to 19–8; pe 19 – ma 8; auki kaikkina pyhäpäivinä. Arkisin ei auki ympäri vuorokauden.",
         "nb": "Dyrlegevakt utenfor ordinær åpningstid: man–tor kl. 19–8; fredag kl. 19 til mandag kl. 8; åpen alle helligdager. Ikke åpen hele døgnet på hverdager.",
-        "sl": "Nujna ambulanta zunaj delovnega časa: pon–čet od 19 do 8; od petka ob 19 do ponedeljka ob 8; odprto ob vseh praznikih. Ob delavnikih ni odprta 24 ur na dan."
+        "sl": "Nujna ambulanta zunaj delovnega časa: pon–čet od 19 do 8; od petka ob 19 do ponedeljka ob 8; odprto ob vseh praznikih. Ob delavnikih ni odprta 24 ur na dan.",
+        "hr": "Hitna ambulanta izvan radnog vremena: pon–čet 19:00–8:00; od petka 19:00 do ponedjeljka 8:00; radi sve blagdane. Radnim danom ne radi 24 sata."
       }
     },
     {
@@ -369,7 +379,8 @@
         "da": "Man–fre 8.00–19.00, lør 8.00–14.00, lukket søndag. Uden for åbningstid ring til Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
         "fi": "ma–pe 8–19, la 8–14, su suljettu. Virka-ajan ulkopuolella soita numeroon +64 3 366 1052 (Christchurch Afterhours Veterinary Clinic).",
         "nb": "man–fre 8–19, lør 8–14, stengt søndag. Utenom åpningstid ring Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
-        "sl": "Pon–pet 8–19, sob 8–14, ned zaprto. Zunaj delovnega časa pokličite Christchurch Afterhours Veterinary Clinic, +64 3 366 1052."
+        "sl": "Pon–pet 8–19, sob 8–14, ned zaprto. Zunaj delovnega časa pokličite Christchurch Afterhours Veterinary Clinic, +64 3 366 1052.",
+        "hr": "pon–pet 8:00–19:00, sub 8:00–14:00, nedjeljom zatvoreno. Izvan radnog vremena nazovi Christchurch Afterhours Veterinary Clinic, +64 3 366 1052."
       }
     },
     {
@@ -399,7 +410,8 @@
         "da": "Se klinikkens side om vagt uden for åbningstid.",
         "fi": "Virka-ajan ulkopuoliset järjestelyt löydät klinikan After Hours -sivulta.",
         "nb": "Se klinikkens side «After Hours» for ordninger utenom åpningstid.",
-        "sl": "Za ureditev oskrbe zunaj delovnega časa glejte stran After Hours na spletni strani ambulante."
+        "sl": "Za ureditev oskrbe zunaj delovnega časa glejte stran After Hours na spletni strani ambulante.",
+        "hr": "Dogovor izvan radnog vremena potraži na stranici ambulante „After Hours“."
       }
     },
     {
@@ -429,7 +441,8 @@
         "da": "Man, tirs, tor, fre 8.00–17.30; ons 8.00–20.00; lør 9.00–13.00. Døgnvagt for små dyr: ring til klinikkens nummer.",
         "fi": "ma, ti, to, pe 8–17.30; ke 8–20; la 9–13. Pieneläinten päivystys ympäri vuorokauden: soita klinikan numeroon.",
         "nb": "Man, tir, tor, fre 8–17.30; ons 8–20; lør 9–13. Vakttelefon for smådyr hele døgnet: ring klinikkens nummer.",
-        "sl": "Pon, tor, čet, pet 8–17.30; sre 8–20; sob 9–13. Dežurna služba 24 ur na dan za male ljubljenčke: pokličite številko ambulante."
+        "sl": "Pon, tor, čet, pet 8–17.30; sre 8–20; sob 9–13. Dežurna služba 24 ur na dan za male ljubljenčke: pokličite številko ambulante.",
+        "hr": "pon, uto, čet, pet 8:00–17:30; sri 8:00–20:00; sub 9:00–13:00. Dežurna služba za male životinje 24 sata: nazovi broj ambulante."
       }
     },
     {
@@ -459,7 +472,8 @@
         "da": "Man–fre 8.30–17.30, lør 9.00–13.00, lukket søndag; åbningstiden kan afvige på helligdage. Ring for rådgivning ved akutte tilfælde.",
         "fi": "ma–pe 8.30–17.30, la 9–13, su suljettu; aukioloajat voivat poiketa pyhäpäivinä. Päivystystilanteessa soita ja kysy neuvoa.",
         "nb": "man–fre 8.30–17.30, lør 9–13, stengt søndag; åpningstidene kan avvike på offentlige helligdager. Ring for råd ved nødtilfeller.",
-        "sl": "Pon–pet 8.30–17.30, sob 9–13, ned zaprto; ob praznikih se delovni čas lahko razlikuje. V nujnem primeru pokličite za nasvet."
+        "sl": "Pon–pet 8.30–17.30, sob 9–13, ned zaprto; ob praznikih se delovni čas lahko razlikuje. V nujnem primeru pokličite za nasvet.",
+        "hr": "pon–pet 8:30–17:30, sub 9:00–13:00, nedjeljom zatvoreno; blagdanima radno vrijeme može biti drukčije. U hitnom slučaju nazovi za savjet."
       }
     },
     {
@@ -488,7 +502,8 @@
         "da": "Man–fre 8.00–18.00, lør 9.00–14.00, lukket søndag. Akutte tilfælde uden for åbningstid: se klinikfinderen på hjemmesiden.",
         "fi": "ma–pe 8–18, la 9–14, su suljettu. Päivystys virka-ajan ulkopuolella: katso klinikkahaku verkkosivuilta.",
         "nb": "man–fre 8–18, lør 9–14, stengt søndag. Nødtilfeller utenom åpningstid: se klinikkoversikten på nettsiden.",
-        "sl": "Pon–pet 8–18, sob 9–14, ned zaprto. Nujni primeri zunaj delovnega časa: glejte iskalnik klinik na spletni strani."
+        "sl": "Pon–pet 8–18, sob 9–14, ned zaprto. Nujni primeri zunaj delovnega časa: glejte iskalnik klinik na spletni strani.",
+        "hr": "pon–pet 8:00–18:00, sub 9:00–14:00, nedjeljom zatvoreno. Hitni slučajevi izvan radnog vremena: pogledaj tražilicu ambulanti na web-stranici."
       }
     },
     {
@@ -517,7 +532,8 @@
         "da": "Giftrådgivning for dyr til kæledyrsejere og dyreklinikker i New Zealand. Der opkræves betaling. Ring også til din dyrlæge, hvis et dyr er forgiftet; det nationale giftinformationscenter for mennesker henviser dyretilfælde hertil.",
         "fi": "Myrkytysneuvontalinja Uuden-Seelannin lemmikinomistajille ja eläinlääkäriklinikoille. Palvelu on maksullinen. Jos eläin on saanut myrkytyksen, soita myös omalle eläinlääkärillesi; ihmisten kansallinen myrkytystietokeskus ohjaa eläintapaukset tänne.",
         "nb": "Giftrådgivning på telefon for kjæledyreiere og dyreklinikker i New Zealand. Det belastes avgift. Ved forgiftet dyr bør du også ringe dyrlegen; National Poisons Centre for mennesker henviser dyresaker hit.",
-        "sl": "Telefonska linija za nasvete o zastrupitvah za lastnike ljubljenčkov in veterinarske ambulante na Novi Zelandiji. Storitev je plačljiva. Ob zastrupitvi ljubljenčka pokličite tudi svojega veterinarja; državni center za strupe za ljudi tovrstne primere napoti sem."
+        "sl": "Telefonska linija za nasvete o zastrupitvah za lastnike ljubljenčkov in veterinarske ambulante na Novi Zelandiji. Storitev je plačljiva. Ob zastrupitvi ljubljenčka pokličite tudi svojega veterinarja; državni center za strupe za ljudi tovrstne primere napoti sem.",
+        "hr": "Linija za savjete o trovanjima za vlasnike ljubimaca i veterinarske ambulante na Novom Zelandu. Naplaćuje se. Kod otrovane životinje nazovi i svog veterinara; Nacionalni centar za otrovanja namijenjen ljudima upućuje slučajeve životinja ovamo."
       }
     },
     {
@@ -547,7 +563,8 @@
         "da": "Hverdage 18.00–8.00 (mandag til fredag); åbent døgnet rundt i weekenden. Ring, før du kommer. Modtager akutte tilfælde uden for åbningstid fra alle klinikker i Hawke's Bay.",
         "fi": "Arki-iltaisin 18–8 (ma–pe); viikonloppuisin ympäri vuorokauden. Soita ennen tuloa. Ottaa vastaan virka-ajan ulkopuoliset tapaukset kaikilta Hawke's Bayn klinikoilta.",
         "nb": "Netter på hverdager kl. 18–8 (mandag–fredag); åpent hele døgnet i helgene. Ring før du kommer. Tar imot tilfeller utenom åpningstid fra alle klinikker i Hawke's Bay.",
-        "sl": "Ob delavnikih zvečer od 18 do 8 (pon–pet); ob koncih tedna odprto 24 ur na dan. Pred prihodom pokličite. Sprejema primere zunaj delovnega časa iz vseh ambulant v Hawke's Bayu."
+        "sl": "Ob delavnikih zvečer od 18 do 8 (pon–pet); ob koncih tedna odprto 24 ur na dan. Pred prihodom pokličite. Sprejema primere zunaj delovnega časa iz vseh ambulant v Hawke's Bayu.",
+        "hr": "Radnim noćima od 18:00 do 8:00 (pon–pet); vikendom 24 sata. Nazovi prije dolaska. Preuzima slučajeve izvan radnog vremena iz svih ambulanti u Hawke's Bayu."
       }
     },
     {
@@ -577,7 +594,8 @@
         "da": "Åbent hverdage 18.00–8.00; døgnåbent i weekenden og på helligdage (fredag 18.00 til mandag 8.00). Ring, før du kommer.",
         "fi": "Auki arki-iltaisin 18–8; viikonloppuisin ja pyhäpäivinä ympäri vuorokauden (pe 18 – ma 8). Soita ennen tuloa.",
         "nb": "Åpent hverdagsnetter kl. 18–8; åpent hele døgnet i helger og på helligdager (fredag kl. 18 til mandag kl. 8). Ring før du kommer.",
-        "sl": "Odprto pon–pet od 18 do 8; ob koncih tedna in praznikih odprto 24 ur na dan (pet od 18 do pon 8). Pred prihodom pokličite."
+        "sl": "Odprto pon–pet od 18 do 8; ob koncih tedna in praznikih odprto 24 ur na dan (pet od 18 do pon 8). Pred prihodom pokličite.",
+        "hr": "Radnim noćima 18:00–8:00; vikendom i blagdanima 24 sata (od petka 18:00 do ponedjeljka 8:00). Nazovi prije dolaska."
       }
     },
     {
@@ -607,7 +625,8 @@
         "da": "Akuthospital uden for almindelig åbningstid i Tauranga. Ring, før du kommer.",
         "fi": "Päivystyssairaala Tauranga-alueelle virka-ajan ulkopuolella. Soita ennen tuloa.",
         "nb": "Dyresykehus med akuttmottak utenfor ordinær åpningstid for Tauranga. Ring på forhånd.",
-        "sl": "Nujna bolnišnica zunaj delovnega časa za Tauranga. Pred prihodom pokličite."
+        "sl": "Nujna bolnišnica zunaj delovnega časa za Tauranga. Pred prihodom pokličite.",
+        "hr": "Hitna bolnica izvan radnog vremena za Tauranga. Nazovi prije dolaska."
       }
     },
     {
@@ -637,7 +656,8 @@
         "da": "Akut- og intensivklinik uden for almindelig åbningstid på Aucklands North Shore. Ring, før du kommer.",
         "fi": "Päivystys- ja tehohoitoklinikka virka-ajan ulkopuolella Aucklandin North Shorella. Soita ennen tuloa.",
         "nb": "Akutt- og intensivklinikk utenom åpningstid på Auckland North Shore. Ring før du drar.",
-        "sl": "Ambulanta za nujno in intenzivno oskrbo zunaj delovnega časa na North Shoreu v Aucklandu. Pred prihodom pokličite."
+        "sl": "Ambulanta za nujno in intenzivno oskrbo zunaj delovnega časa na North Shoreu v Aucklandu. Pred prihodom pokličite.",
+        "hr": "Hitna ambulanta i ambulanta za intenzivnu njegu izvan radnog vremena na North Shoreu u Aucklandu. Nazovi prije dolaska."
       }
     },
     {
@@ -667,7 +687,8 @@
         "da": "Akutklinik uden for almindelig åbningstid i det vestlige Auckland. Ring, før du kommer.",
         "fi": "Päivystysklinikka virka-ajan ulkopuolella Länsi-Aucklandissa. Soita ennen tuloa.",
         "nb": "Dyrlegevakt i det vestlige Auckland utenfor ordinær åpningstid. Ring på forhånd.",
-        "sl": "Nujna ambulanta zunaj delovnega časa v zahodnem Aucklandu. Pred prihodom pokličite."
+        "sl": "Nujna ambulanta zunaj delovnega časa v zahodnem Aucklandu. Pred prihodom pokličite.",
+        "hr": "Hitna ambulanta izvan radnog vremena u zapadnom Aucklandu. Nazovi prije dolaska."
       }
     },
     {
@@ -697,7 +718,8 @@
         "da": "Man–fre 8.00–18.00, lør 8.30–16.00, lukket søndag og helligdage. Uden for åbningstid ring til klinikkens nummer for at komme i kontakt med vagthavende.",
         "fi": "ma–pe 8–18, la 8.30–16, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita klinikan numeroon, josta saat päivystävän yhteystiedon.",
         "nb": "man–fre 8–18, lør 8.30–16, stengt søndager og offentlige helligdager. Utenom åpningstid ring klinikkens nummer for å nå kontaktpersonen på vakt.",
-        "sl": "Pon–pet 8–18, sob 8.30–16, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite številko ambulante in vas bodo povezali z dežurno osebo."
+        "sl": "Pon–pet 8–18, sob 8.30–16, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite številko ambulante in vas bodo povezali z dežurno osebo.",
+        "hr": "pon–pet 8:00–18:00, sub 8:30–16:00, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena nazovi broj ambulante za dežurni kontakt."
       }
     },
     {
@@ -727,7 +749,8 @@
         "da": "Man–fre 8.00–17.00, lør 9.00–13.00, lukket søndag. Uden for åbningstid ring +64 7 872 2040 for at tale med en dyrlægesygeplejerske (gratis telefonrådgivning døgnet rundt), som kan sørge for akut hjælp.",
         "fi": "ma–pe 8–17, la 9–13, su suljettu. Virka-ajan ulkopuolella soita +64 7 872 2040, niin tavoitat eläinhoitajan (maksuton puhelinneuvonta 24/7), joka voi järjestää päivystyshoidon.",
         "nb": "man–fre 8–17, lør 9–13, stengt søndag. Utenom åpningstid ring +64 7 872 2040 for å nå en dyrepleier (gratis telefonråd hele døgnet) som kan ordne akuttbehandling.",
-        "sl": "Pon–pet 8–17, sob 9–13, ned zaprto. Zunaj delovnega časa pokličite +64 7 872 2040, da dosežete veterinarsko medicinsko sestro (brezplačen telefonski nasvet 24/7), ki lahko uredi nujno oskrbo."
+        "sl": "Pon–pet 8–17, sob 9–13, ned zaprto. Zunaj delovnega časa pokličite +64 7 872 2040, da dosežete veterinarsko medicinsko sestro (brezplačen telefonski nasvet 24/7), ki lahko uredi nujno oskrbo.",
+        "hr": "pon–pet 8:00–17:00, sub 9:00–13:00, nedjeljom zatvoreno. Izvan radnog vremena nazovi +64 7 872 2040 i javit će ti se veterinarska medicinska sestra (besplatni telefonski savjeti 24/7) koja može organizirati hitnu skrb."
       }
     },
     {
@@ -756,7 +779,8 @@
         "da": "Man–fre 8.00–17.30, lør 9.00–13.00, lukket søndag. Ved akutte tilfælde uden for åbningstid ring til Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "fi": "ma–pe 8–17.30, la 9–13, su suljettu. Päivystystapauksissa virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care and After Hours Veterinary Clinic).",
         "nb": "man–fre 8–17.30, lør 9–13, stengt søndag. Nødtilfeller utenom åpningstid: ring Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "sl": "Pon–pet 8–17.30, sob 9–13, ned zaprto. Za nujne primere zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "sl": "Pon–pet 8–17.30, sob 9–13, ned zaprto. Za nujne primere zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–17:30, sub 9:00–13:00, nedjeljom zatvoreno. Za hitne slučajeve izvan radnog vremena nazovi Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -785,7 +809,8 @@
         "da": "Man–fre 8.00–17.00; lørdag og søndag lukket, bortset fra hver anden lørdag 9.00–12.00 (ring og bekræft). Akutte tilfælde uden for åbningstid: se klinikfinderen på hjemmesiden.",
         "fi": "ma–pe 8–17; la ja su suljettu, paitsi joka toinen lauantai 9–12 (varmista puhelimitse). Päivystys virka-ajan ulkopuolella: katso klinikkahaku verkkosivuilta.",
         "nb": "man–fre 8–17; lørdag og søndag stengt, unntatt annenhver lørdag 9–12 (ring for å bekrefte). Nødtilfeller utenom åpningstid: se klinikkoversikten på nettsiden.",
-        "sl": "Pon–pet 8–17; ob sobotah in nedeljah zaprto, razen vsako drugo soboto 9–12 (potrdite po telefonu). Nujni primeri zunaj delovnega časa: glejte iskalnik klinik na spletni strani."
+        "sl": "Pon–pet 8–17; ob sobotah in nedeljah zaprto, razen vsako drugo soboto 9–12 (potrdite po telefonu). Nujni primeri zunaj delovnega časa: glejte iskalnik klinik na spletni strani.",
+        "hr": "pon–pet 8:00–17:00; subotom i nedjeljom zatvoreno, osim svake druge subote 9:00–12:00 (nazovi radi potvrde). Hitni slučajevi izvan radnog vremena: pogledaj tražilicu ambulanti na web-stranici."
       }
     },
     {
@@ -815,7 +840,8 @@
         "da": "Man–fre 8.00–17.30, lør 9.00–12.00. Ring for at høre om muligheder uden for åbningstid.",
         "fi": "ma–pe 8–17.30, la 9–12. Soita ja kysy päivystysjärjestelyt virka-ajan ulkopuolella.",
         "nb": "man–fre 8–17.30, lør 9–12. Ring for ordninger utenom åpningstid.",
-        "sl": "Pon–pet 8–17.30, sob 9–12. Za dogovor zunaj delovnega časa pokličite."
+        "sl": "Pon–pet 8–17.30, sob 9–12. Za dogovor zunaj delovnega časa pokličite.",
+        "hr": "pon–pet 8:00–17:30, sub 9:00–12:00. Za dogovor izvan radnog vremena nazovi."
       }
     },
     {
@@ -845,7 +871,8 @@
         "da": "Åbningstid: man, ons, fre 8.00–17.00; tirs og tor 8.00–18.00; lør 9.00–14.00. Ring for at høre om muligheder uden for åbningstid.",
         "fi": "Aukioloajat: ma, ke, pe 8–17; ti ja to 8–18; la 9–14. Soita ja kysy päivystysjärjestelyt virka-ajan ulkopuolella.",
         "nb": "Åpningstid: man, ons, fre kl. 8–17; tir og tors kl. 8–18; lør kl. 9–14. Ring for å høre om vakt utenom åpningstid.",
-        "sl": "Delovni čas: pon, sre, pet 8–17; tor in čet 8–18; sob 9–14. Za dogovor zunaj delovnega časa pokličite."
+        "sl": "Delovni čas: pon, sre, pet 8–17; tor in čet 8–18; sob 9–14. Za dogovor zunaj delovnega časa pokličite.",
+        "hr": "Radno vrijeme: pon, sri, pet 8:00–17:00; uto i čet 8:00–18:00; sub 9:00–14:00. Za dogovor izvan radnog vremena nazovi."
       }
     },
     {
@@ -875,7 +902,8 @@
         "da": "Man–fre 8.00–17.00. Ring for at høre om muligheder uden for åbningstid.",
         "fi": "ma–pe 8–17. Soita ja kysy päivystysjärjestelyt virka-ajan ulkopuolella.",
         "nb": "man–fre 8–17. Ring for ordninger utenom åpningstid.",
-        "sl": "Pon–pet 8–17. Za dogovor zunaj delovnega časa pokličite."
+        "sl": "Pon–pet 8–17. Za dogovor zunaj delovnega časa pokličite.",
+        "hr": "pon–pet 8:00–17:00. Za dogovor izvan radnog vremena nazovi."
       }
     },
     {
@@ -905,7 +933,8 @@
         "da": "Man og ons–tor 7.30–20.00, tirs og fre 7.30–18.00, lør 9.00–12.00 (kun akutte tilfælde samme dag), lukket søndag. Uden for åbningstid ring til samme nummer for akuttjenesten døgnet rundt.",
         "fi": "ma, ke–to 7.30–20, ti, pe 7.30–18, la 9–12 (vain saman päivän päivystystapaukset), su suljettu. Virka-ajan ulkopuolella soita samaan numeroon 24/7-päivystystä varten.",
         "nb": "Man og ons–tor 7.30–20, tir og fre 7.30–18, lør 9–12 (kun nødtilfeller samme dag), stengt søndag. Utenom åpningstid ring samme nummer for dyrlegevakt hele døgnet.",
-        "sl": "Pon in sre–čet 7.30–20, tor in pet 7.30–18, sob 9–12 (samo nujni primeri istega dne), ned zaprto. Zunaj delovnega časa pokličite isto številko za nujno službo 24/7."
+        "sl": "Pon in sre–čet 7.30–20, tor in pet 7.30–18, sob 9–12 (samo nujni primeri istega dne), ned zaprto. Zunaj delovnega časa pokličite isto številko za nujno službo 24/7.",
+        "hr": "pon i sri–čet 7:30–20:00, uto i pet 7:30–18:00, sub 9:00–12:00 (samo hitni slučajevi isti dan), nedjeljom zatvoreno. Izvan radnog vremena nazovi isti broj za hitnu službu 24/7."
       }
     },
     {
@@ -935,7 +964,8 @@
         "da": "Man–fre 8.00–18.00, weekend 9.00–13.00. Uden for åbningstid ring til Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "fi": "ma–pe 8–18, viikonloppuisin 9–13. Virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care and After Hours Veterinary Clinic).",
         "nb": "man–fre 8–18, helger 9–13. Utenom åpningstid ring Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "sl": "Pon–pet 8–18, ob vikendih 9–13. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "sl": "Pon–pet 8–18, ob vikendih 9–13. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–18:00, vikendom 9:00–13:00. Izvan radnog vremena nazovi Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -965,7 +995,8 @@
         "da": "Man–fre 8.00–18.00, weekend 9.00–13.00. Uden for åbningstid ring til Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "fi": "ma–pe 8–18, viikonloppuisin 9–13. Virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care and After Hours Veterinary Clinic).",
         "nb": "man–fre 8–18, helger 9–13. Utenom åpningstid ring Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "sl": "Pon–pet 8–18, ob koncih tedna 9–13. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "sl": "Pon–pet 8–18, ob koncih tedna 9–13. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–18:00, vikendom 9:00–13:00. Izvan radnog vremena nazovi Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -995,7 +1026,8 @@
         "da": "Man–fre 8.00–17.30, weekend 9.00–13.00. Uden for åbningstid ring til Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "fi": "ma–pe 8–17.30, viikonloppuisin 9–13. Virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care and After Hours Veterinary Clinic).",
         "nb": "man–fre 8–17.30, helger 9–13. Utenom åpningstid ring Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "sl": "Pon–pet 8–17.30, ob koncih tedna 9–13. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "sl": "Pon–pet 8–17.30, ob koncih tedna 9–13. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–17:30, vikendom 9:00–13:00. Izvan radnog vremena nazovi Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -1025,7 +1057,8 @@
         "da": "Man–fre 8.00–17.00, lør 9.00–12.00, lukket søndag. Uden for åbningstid ring til Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "fi": "ma–pe 8–17, la 9–12, su suljettu. Virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care and After Hours Veterinary Clinic).",
         "nb": "man–fre 8–17, lør 9–12, stengt søndag. Utenom åpningstid ring Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "sl": "Pon–pet 8–17, sob 9–12, ned zaprto. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "sl": "Pon–pet 8–17, sob 9–12, ned zaprto. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–17:00, sub 9:00–12:00, nedjeljom zatvoreno. Izvan radnog vremena nazovi Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -1054,7 +1087,8 @@
         "da": "Man–fre 8.00–18.00, lør 9.00–14.00, søn 10.00–14.00. Uden for åbningstid ring til Hawke's Bay Urgent Care, +64 6 651 7103.",
         "fi": "ma–pe 8–18, la 9–14, su 10–14. Virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care).",
         "nb": "man–fre 8–18, lør 9–14, søn 10–14. Utenom åpningstid ring Hawke's Bay Urgent Care, +64 6 651 7103.",
-        "sl": "Pon–pet 8–18, sob 9–14, ned 10–14. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care, +64 6 651 7103."
+        "sl": "Pon–pet 8–18, sob 9–14, ned 10–14. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–18:00, sub 9:00–14:00, ned 10:00–14:00. Izvan radnog vremena nazovi Hawke's Bay Urgent Care, +64 6 651 7103."
       }
     },
     {
@@ -1083,7 +1117,8 @@
         "da": "Man–fre 8.00–18.00, lukket i weekenden og på helligdage. Uden for åbningstid ring til Bay After Hours Veterinary Hospital, +64 800 229 838.",
         "fi": "ma–pe 8–18, viikonloppuisin ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 800 229 838 (Bay After Hours Veterinary Hospital).",
         "nb": "man–fre 8–18, stengt i helger og på offentlige helligdager. Utenom åpningstid ring Bay After Hours Veterinary Hospital, +64 800 229 838.",
-        "sl": "Pon–pet 8–18, ob vikendih in praznikih zaprto. Zunaj delovnega časa pokličite Bay After Hours Veterinary Hospital, +64 800 229 838."
+        "sl": "Pon–pet 8–18, ob vikendih in praznikih zaprto. Zunaj delovnega časa pokličite Bay After Hours Veterinary Hospital, +64 800 229 838.",
+        "hr": "pon–pet 8:00–18:00, vikendom i blagdanima zatvoreno. Izvan radnog vremena nazovi Bay After Hours Veterinary Hospital, +64 800 229 838."
       }
     },
     {
@@ -1112,7 +1147,8 @@
         "da": "Man–fre 8.00–18.00, lør–søn 9.00–16.00 (der er ikke altid en dyrlæge til stede i weekenden), lukket på helligdage. Uden for åbningstid ring til Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
         "fi": "ma–pe 8–18, la–su 9–16 (eläinlääkäri ei ole aina paikalla viikonloppuisin), pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 6 651 7103 (Hawke's Bay Urgent Care and After Hours Veterinary Clinic).",
         "nb": "man–fre 8–18, lør–søn 9–16 (dyrlege er ikke alltid til stede i helgene), stengt på offentlige helligdager. Utenom åpningstid ring Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
-        "sl": "Pon–pet 8–18, sob–ned 9–16 (ob koncih tedna veterinar ni vedno v ambulanti), ob praznikih zaprto. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
+        "sl": "Pon–pet 8–18, sob–ned 9–16 (ob koncih tedna veterinar ni vedno v ambulanti), ob praznikih zaprto. Zunaj delovnega časa pokličite Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103.",
+        "hr": "pon–pet 8:00–18:00, sub–ned 9:00–16:00 (vikendom veterinar nije uvijek u ambulanti), blagdanima zatvoreno. Izvan radnog vremena nazovi Hawke's Bay Urgent Care and After Hours Veterinary Clinic, +64 6 651 7103."
       }
     },
     {
@@ -1141,7 +1177,8 @@
         "da": "Man–fre 8.00–19.00, lør 9.00–15.00, lukket søndag og helligdage. Uden for åbningstid ring til Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fi": "ma–pe 8–19, la 9–15, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 4 473 7545 (Wellington After Hours Vet Clinic).",
         "nb": "man–fre 8–19, lør 9–15, stengt søndag og offentlige helligdager. Utenom åpningstid ring Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "sl": "Pon–pet 8–19, sob 9–15, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "sl": "Pon–pet 8–19, sob 9–15, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "hr": "pon–pet 8:00–19:00, sub 9:00–15:00, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena nazovi Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1170,7 +1207,8 @@
         "da": "Man–ons og fre 8.00–18.30, tor 8.00–19.00, lør 9.00–16.30, søn 10.00–16.00, lukket på helligdage. Uden for åbningstid ring til Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fi": "ma–ke ja pe 8–18.30, to 8–19, la 9–16.30, su 10–16, pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 4 473 7545 (Wellington After Hours Vet Clinic).",
         "nb": "man–ons og fre 8.00–18.30, tor 8.00–19.00, lør 9.00–16.30, søn 10.00–16.00, stengt på helligdager. Utenom åpningstiden ring Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "sl": "Pon–sre in pet 8–18.30, čet 8–19, sob 9–16.30, ned 10–16, ob praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "sl": "Pon–sre in pet 8–18.30, čet 8–19, sob 9–16.30, ned 10–16, ob praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "hr": "pon–sri i pet 8:00–18:30, čet 8:00–19:00, sub 9:00–16:30, ned 10:00–16:00, blagdanima zatvoreno. Izvan radnog vremena nazovi Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1199,7 +1237,8 @@
         "da": "Man–fre 8.00–19.00, lør 9.00–16.00, lukket søndag og helligdage. Uden for åbningstid ring til Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fi": "ma–pe 8–19, la 9–16, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 4 473 7545 (Wellington After Hours Vet Clinic).",
         "nb": "man–fre 8–19, lør 9–16, stengt søndag og offentlige helligdager. Utenom åpningstid ring Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "sl": "Pon–pet 8–19, sob 9–16, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "sl": "Pon–pet 8–19, sob 9–16, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "hr": "pon–pet 8:00–19:00, sub 9:00–16:00, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena nazovi Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1228,7 +1267,8 @@
         "da": "Man–fre 8.00–18.00, lør 9.30–16.30, søn 10.00–15.00 (ingen dyrlæge til stede om søndagen), lukket på helligdage. Uden for åbningstid ring til Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fi": "ma–pe 8–18, la 9.30–16.30, su 10–15 (su ei eläinlääkäriä paikalla), pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 4 473 7545 (Wellington After Hours Vet Clinic).",
         "nb": "man–fre 8–18, lør 9.30–16.30, søn 10–15 (ingen dyrlege til stede på søndager), stengt på offentlige helligdager. Utenom åpningstid ring Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "sl": "Pon–pet 8–18, sob 9.30–16.30, ned 10–15 (ob nedeljah veterinarja ni v ambulanti), ob praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "sl": "Pon–pet 8–18, sob 9.30–16.30, ned 10–15 (ob nedeljah veterinarja ni v ambulanti), ob praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "hr": "pon–pet 8:00–18:00, sub 9:30–16:30, ned 10:00–15:00 (nedjeljom nema veterinara u ambulanti), blagdanima zatvoreno. Izvan radnog vremena nazovi Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1257,7 +1297,8 @@
         "da": "Man og tor–fre 8.00–18.00, tirs–ons 8.00–19.00, lør 9.00–15.00, lukket søndag og helligdage. Uden for åbningstid ring til Wellington After Hours Vet Clinic, +64 4 473 7545.",
         "fi": "ma, to–pe 8–18, ti–ke 8–19, la 9–15, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 4 473 7545 (Wellington After Hours Vet Clinic).",
         "nb": "Man og tor–fre 8–18, tir–ons 8–19, lør 9–15, stengt søndag og på helligdager. Utenom åpningstid ring Wellington After Hours Vet Clinic, +64 4 473 7545.",
-        "sl": "Pon in čet–pet 8–18, tor–sre 8–19, sob 9–15, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545."
+        "sl": "Pon in čet–pet 8–18, tor–sre 8–19, sob 9–15, ob nedeljah in praznikih zaprto. Zunaj delovnega časa pokličite Wellington After Hours Vet Clinic, +64 4 473 7545.",
+        "hr": "pon i čet–pet 8:00–18:00, uto–sri 8:00–19:00, sub 9:00–15:00, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena nazovi Wellington After Hours Vet Clinic, +64 4 473 7545."
       }
     },
     {
@@ -1286,7 +1327,8 @@
         "da": "Man–fre 8.00–18.00, lukket i weekenden og på helligdage. Uden for åbningstid ring til Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "fi": "ma–pe 8–18, viikonloppuisin ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 7 839 5656 (Waikato After Hours Veterinary Hospital).",
         "nb": "man–fre 8–18, stengt i helger og på offentlige helligdager. Utenom åpningstid ring Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "sl": "Pon–pet 8–18, ob koncih tedna in praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "sl": "Pon–pet 8–18, ob koncih tedna in praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "hr": "pon–pet 8:00–18:00, vikendom i blagdanima zatvoreno. Izvan radnog vremena nazovi Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1315,7 +1357,8 @@
         "da": "Man, tirs, tor, fre 8.00–18.00, ons 8.00–19.00, lør–søn 9.00–16.00, lukket på helligdage. Uden for åbningstid ring til Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "fi": "ma, ti, to, pe 8–18, ke 8–19, la–su 9–16, pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 7 839 5656 (Waikato After Hours Veterinary Hospital).",
         "nb": "Man, tir, tor, fre 8–18, ons 8–19, lør–søn 9–16, stengt på helligdager. Utenom åpningstid ring Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "sl": "Pon, tor, čet, pet 8–18, sre 8–19, sob–ned 9–16, ob praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "sl": "Pon, tor, čet, pet 8–18, sre 8–19, sob–ned 9–16, ob praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "hr": "pon, uto, čet, pet 8:00–18:00, sri 8:00–19:00, sub–ned 9:00–16:00, blagdanima zatvoreno. Izvan radnog vremena nazovi Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1344,7 +1387,8 @@
         "da": "Man–ons og fre 8.00–18.00, tor 8.00–19.30, lukket i weekenden og på helligdage. Uden for åbningstid ring til Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "fi": "ma–ke ja pe 8–18, to 8–19.30, viikonloppuisin ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 7 839 5656 (Waikato After Hours Veterinary Hospital).",
         "nb": "man–ons og fre 8.00–18.00, tor 8.00–19.30, stengt i helger og på helligdager. Utenom åpningstiden ring Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "sl": "Pon–sre in pet 8–18, čet 8–19.30, ob vikendih in praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "sl": "Pon–sre in pet 8–18, čet 8–19.30, ob vikendih in praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "hr": "pon–sri i pet 8:00–18:00, čet 8:00–19:30, vikendom i blagdanima zatvoreno. Izvan radnog vremena nazovi Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1373,7 +1417,8 @@
         "da": "Man–fre 8.00–17.30, lukket i weekenden og på helligdage. Uden for åbningstid ring til Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
         "fi": "ma–pe 8–17.30, viikonloppuisin ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita numeroon +64 7 839 5656 (Waikato After Hours Veterinary Hospital).",
         "nb": "man–fre 8–17.30, stengt i helger og på offentlige helligdager. Utenom åpningstid ring Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
-        "sl": "Pon–pet 8–17.30, ob vikendih in praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656."
+        "sl": "Pon–pet 8–17.30, ob vikendih in praznikih zaprto. Zunaj delovnega časa pokličite Waikato After Hours Veterinary Hospital, +64 7 839 5656.",
+        "hr": "pon–pet 8:00–17:30, vikendom i blagdanima zatvoreno. Izvan radnog vremena nazovi Waikato After Hours Veterinary Hospital, +64 7 839 5656."
       }
     },
     {
@@ -1402,7 +1447,8 @@
         "da": "Man–fre 8.00–17.00, lør 9.00–12.00, lukket søndag og helligdage. Uden for åbningstid ring til dyrlægen i vagt, +64 21 548 387.",
         "fi": "ma–pe 8–17, la 9–12, su ja pyhäpäivinä suljettu. Virka-ajan ulkopuolella soita päivystävälle eläinlääkärille, +64 21 548 387.",
         "nb": "man–fre 8–17, lør 9–12, stengt søndag og offentlige helligdager. Utenom åpningstid ring dyrlegen på vakt, +64 21 548 387.",
-        "sl": "Pon–pet 8–17, sob 9–12, ned in prazniki zaprto. Zunaj delovnega časa pokličite dežurnega veterinarja, +64 21 548 387."
+        "sl": "Pon–pet 8–17, sob 9–12, ned in prazniki zaprto. Zunaj delovnega časa pokličite dežurnega veterinarja, +64 21 548 387.",
+        "hr": "pon–pet 8:00–17:00, sub 9:00–12:00, nedjeljom i blagdanima zatvoreno. Izvan radnog vremena nazovi dežurnog veterinara, +64 21 548 387."
       }
     }
   ],

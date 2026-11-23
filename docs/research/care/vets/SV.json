@@ -49,7 +49,8 @@
         "da": "Akut hver dag døgnet rundt. Callcenter 195.",
         "fi": "Päivystys joka päivä, 24 h. Puhelinkeskus 195.",
         "nb": "Nødtilfeller alle dager, hele døgnet. Telefonsentral 195.",
-        "sl": "Nujna pomoč vsak dan, 24 ur na dan. Klicni center 195."
+        "sl": "Nujna pomoč vsak dan, 24 ur na dan. Klicni center 195.",
+        "hr": "Hitni slučajevi svaki dan, 24 sata. Pozivni centar 195."
       }
     },
     {
@@ -72,7 +73,8 @@
         "da": "Dyrlægehjælp og akut assistance døgnet rundt, alle ugens dage. Akutlinje +503 2226 1062; WhatsApp +503 7606 6066.",
         "fi": "Eläinlääkärinhoito ja päivystysapu 24 h, 7 päivää viikossa. Päivystysnumero +503 2226 1062; WhatsApp +503 7606 6066.",
         "nb": "Dyrlegehjelp og akutthjelp hele døgnet, sju dager i uken. Vakttelefon +503 2226 1062; WhatsApp +503 7606 6066.",
-        "sl": "Veterinarska oskrba in nujna pomoč 24 ur na dan, 7 dni v tednu. Nujna številka +503 2226 1062; WhatsApp +503 7606 6066."
+        "sl": "Veterinarska oskrba in nujna pomoč 24 ur na dan, 7 dni v tednu. Nujna številka +503 2226 1062; WhatsApp +503 7606 6066.",
+        "hr": "Veterinarska skrb i hitna veterinarska pomoć 24 sata, 7 dana u tjednu. Hitna linija +503 2226 1062; WhatsApp +503 7606 6066."
       }
     },
     {
@@ -95,7 +97,8 @@
         "da": "Akut hjælp døgnet rundt. Åben mandag til søndag.",
         "fi": "Päivystys 24/7. Auki maanantaista sunnuntaihin.",
         "nb": "Akuttbehandling hele døgnet. Åpent mandag til søndag.",
-        "sl": "Nujna pomoč 24/7. Odprto od ponedeljka do nedelje."
+        "sl": "Nujna pomoč 24/7. Odprto od ponedeljka do nedelje.",
+        "hr": "Hitna skrb 24/7. Otvoreno pon–ned."
       }
     }
   ],

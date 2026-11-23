@@ -199,7 +199,8 @@
         "da": "Berlin-klinikker med døgnåben akutvagt for små dyr og klinikker med akuttid om aftenen, i weekender og på helligdage; søg 'Notdienst, Tierarzt, Berlin, Stadtbezirk'; brug kun klinikkerne ved livstruende tilfælde.",
         "fi": "Berliinin klinikat, joissa on ympärivuorokautinen pieneläinpäivystys, sekä vastaanotot, joilla on päivystysaikoja iltaisin, viikonloppuisin ja pyhäpäivinä; hakusanat ”Notdienst, Tierarzt, Berlin, Stadtbezirk”; käytä klinikoita vain hengenvaarallisiin tapauksiin.",
         "nb": "Klinikker i Berlin med akuttjeneste for smådyr hele døgnet og praksiser med kvelds-, helge- og helligdagsvakt; søk «Notdienst, Tierarzt, Berlin, Stadtbezirk»; bruk klinikkene kun ved livstruende tilfeller.",
-        "sl": "Berlinske klinike z 24-urno nujno službo za male živali ter ordinacije z nujnim delovnim časom zvečer, ob koncih tedna in praznikih; poiščite »Notdienst, Tierarzt, Berlin, Stadtbezirk«; klinike uporabite samo za življenjsko nevarne primere."
+        "sl": "Berlinske klinike z 24-urno nujno službo za male živali ter ordinacije z nujnim delovnim časom zvečer, ob koncih tedna in praznikih; poiščite »Notdienst, Tierarzt, Berlin, Stadtbezirk«; klinike uporabite samo za življenjsko nevarne primere.",
+        "hr": "Berlinske klinike s hitnom službom za male životinje 24 sata i ambulante s hitnim radnim vremenom navečer, vikendom i blagdanima; pretraži „Notdienst, Tierarzt, Berlin, Stadtbezirk“; klinike koristi samo za slučajeve opasne po život."
       },
       "note": "No central emergency phone; chamber office number is administrative only. Clinics report severe capacity shortages. Source: Tierärztekammer Berlin page listing these clinics/practices.",
       "source_url": "https://tieraerztekammer-berlin.de/notdienst/",
@@ -497,7 +498,8 @@
         "da": "Vagtplan med datoer jan. 2026–jan. 2027: hverdage 07.00 til 07.00 næste morgen, weekender lør 12.00 til man 07.00; ring først",
         "fi": "Päivystysvuorot tammikuusta 2026 tammikuuhun 2027: arkisin klo 7.00 – seuraavaan aamuun klo 7.00, viikonloppuisin la klo 12.00 – ma klo 7.00; soita ensin",
         "nb": "Vaktplan med datoer jan. 2026–jan. 2027: hverdager 07.00 til 07.00 neste morgen, helger lør 12.00 til man 07.00; ring først",
-        "sl": "Razpored dežurstev od januarja 2026 do januarja 2027: med tednom od 7 do 7 naslednjega jutra, ob koncih tedna od sobote 12 do ponedeljka 7; vnaprej pokličite"
+        "sl": "Razpored dežurstev od januarja 2026 do januarja 2027: med tednom od 7 do 7 naslednjega jutra, ob koncih tedna od sobote 12 do ponedeljka 7; vnaprej pokličite",
+        "hr": "Raspored s datumima od siječnja 2026. do siječnja 2027.: radnim danom od 07:00 do 07:00 sljedeće jutro, vikendom od sub 12:00 do pon 07:00; prvo nazovi"
       },
       "note": "Hosted by a participating practice. Moved from duty (2026-11-10): no guarantee of accuracy",
       "source_url": "https://kleintierpraxis-langenhagen.com/notdienstplan/",
@@ -525,7 +527,8 @@
         "da": "Fælles vagtplan for Oldenburgs byklinikker om natten, i weekender og på helligdage; ring til vagtklinikken, før du kører derhen; ingen hjemmebesøg",
         "fi": "Oldenburgin kaupungin vastaanottojen yhteinen vuorolista öille, viikonlopuille ja pyhäpäiville; soita päivystävälle vastaanotolle ennen lähtöä; ei kotikäyntejä",
         "nb": "Felles vaktordning for praksisene i Oldenburg by om netter, i helger og på helligdager; ring praksisen som har vakt før du drar; ingen hjemmebesøk",
-        "sl": "Skupni razpored dežurstev oldenburških mestnih ordinacij za noči, konce tedna in praznike; pred obiskom pokličite dežurno ordinacijo; hišnih obiskov ni"
+        "sl": "Skupni razpored dežurstev oldenburških mestnih ordinacij za noči, konce tedna in praznike; pred obiskom pokličite dežurno ordinacijo; hišnih obiskov ni",
+        "hr": "Zajednički raspored gradskih ambulanti u Oldenburgu za noći, vikende i blagdane; prije odlaska nazovi dežurnu ambulantu; bez kućnih posjeta"
       },
       "note": "Life-threatening emergencies only; emergency fee 50 EUR + VAT. Moved from duty (2026-11-10): see 'Dienstplan'",
       "source_url": "https://tierarztnotdienst-stadtol.de/",
@@ -1818,7 +1821,8 @@
         "da": "Akutvagt døgnet rundt til livstruende tilfælde; akuttid hver dag 00–24",
         "fi": "Päivystys ympäri vuorokauden hengenvaarallisiin hätätapauksiin; päivystysaika joka päivä klo 0–24",
         "nb": "Akuttjeneste hele døgnet for livstruende nødtilfeller; akuttåpent alle dager kl. 00–24",
-        "sl": "Nujna služba 24/7 za življenjsko nevarne primere; čas nujne pomoči vsak dan 0–24"
+        "sl": "Nujna služba 24/7 za življenjsko nevarne primere; čas nujne pomoči vsak dan 0–24",
+        "hr": "Hitna služba 24/7 za slučajeve opasne po život; radno vrijeme hitne službe svaki dan 00–24"
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierklinik-haar/",
@@ -1977,7 +1981,8 @@
         "da": "Døgnåben akutvagt; dyrlæge og dyrlægesygeplejerske til stede alle årets 365 dage; akuttid hver dag 00–24",
         "fi": "Päivystys ympäri vuorokauden; eläinlääkäri ja eläinhoitaja paikalla 365 päivänä vuodessa; päivystysaika joka päivä klo 0–24",
         "nb": "Akuttjeneste hele døgnet; dyrlege og dyrepleier på stedet 365 dager i året; akuttåpent alle dager kl. 00–24",
-        "sl": "24-urna nujna služba; veterinar in veterinarski tehnik sta prisotna 365 dni v letu; nujne ure vsak dan 0–24"
+        "sl": "24-urna nujna služba; veterinar in veterinarski tehnik sta prisotna 365 dni v letu; nujne ure vsak dan 0–24",
+        "hr": "Hitna služba 24 sata; veterinar i veterinarski tehničar na licu mjesta 365 dana u godini; radno vrijeme hitne službe svaki dan 00–24"
       },
       "small_animals": true,
       "url": "https://www.anicura.de/standorte/tierarztliche-klinik-vom-bokelberg/",
@@ -3021,7 +3026,8 @@
         "da": "Regional akutvagt.",
         "fi": "Alueellinen päivystyspalvelu.",
         "nb": "Regional akuttvakt.",
-        "sl": "Regionalna dežurna nujna služba."
+        "sl": "Regionalna dežurna nujna služba.",
+        "hr": "Regionalna dežurna veterinarska služba."
       }
     },
     {

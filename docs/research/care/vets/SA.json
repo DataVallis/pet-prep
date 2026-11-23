@@ -58,7 +58,8 @@
         "da": "Døgnåben, alle dage.",
         "fi": "Auki ympäri vuorokauden joka päivä.",
         "nb": "Åpent hele døgnet, alle dager.",
-        "sl": "Odprto 24 ur na dan, vsak dan."
+        "sl": "Odprto 24 ur na dan, vsak dan.",
+        "hr": "Otvoreno 24 sata, svaki dan."
       }
     },
     {
@@ -85,7 +86,8 @@
         "da": "Døgnåben, alle dage.",
         "fi": "Auki ympäri vuorokauden joka päivä.",
         "nb": "Åpent hele døgnet, alle dager.",
-        "sl": "Odprto 24 ur na dan, vsak dan."
+        "sl": "Odprto 24 ur na dan, vsak dan.",
+        "hr": "Otvoreno 24 sata, svaki dan."
       }
     },
     {
@@ -110,7 +112,8 @@
         "da": "Åbent 24 timer lørdag til torsdag; fredag kl. 4–16, kun akutte tilfælde.",
         "fi": "Auki ympäri vuorokauden la–to; pe 4–16, vain hätätapaukset.",
         "nb": "Åpent hele døgnet lørdag til torsdag; fredag kl. 4.00–16.00, kun nødtilfeller.",
-        "sl": "Odprto 24 ur na dan od sobote do četrtka; ob petkih 4–16, samo nujna pomoč."
+        "sl": "Odprto 24 ur na dan od sobote do četrtka; ob petkih 4–16, samo nujna pomoč.",
+        "hr": "Otvoreno sub–čet non-stop; pet 4:00–16:00, samo hitni slučajevi."
       }
     },
     {
@@ -137,7 +140,8 @@
         "da": "Akutservice 24/7; ring på forhånd.",
         "fi": "Päivystys 24/7; soita etukäteen.",
         "nb": "Akuttjeneste hele døgnet; ring på forhånd.",
-        "sl": "Nujna služba 24/7; vnaprej pokličite."
+        "sl": "Nujna služba 24/7; vnaprej pokličite.",
+        "hr": "Hitna služba 24/7; nazovi unaprijed."
       }
     },
     {
@@ -164,7 +168,8 @@
         "da": "Lør–ons kl. 8–22; tor–fre kl. 16–22. Akutlinje 24/7: +966 50 229 6655.",
         "fi": "la–ke 8–22; to–pe 16–22. Päivystysnumero 24/7: +966 50 229 6655.",
         "nb": "Lør–ons kl. 8–22; tor–fre kl. 16–22. Akuttelefon hele døgnet: +966 50 229 6655.",
-        "sl": "Sob–sre 8–22; čet–pet 16–22. Nujna linija 24/7: +966 50 229 6655."
+        "sl": "Sob–sre 8–22; čet–pet 16–22. Nujna linija 24/7: +966 50 229 6655.",
+        "hr": "sub–sri 8:00–22:00; čet–pet 16:00–22:00. Hitna linija 24/7: +966 50 229 6655."
       }
     },
     {
@@ -191,7 +196,8 @@
         "da": "Søn–tor og lør kl. 10–23; fre kl. 15–23. Hjemmebesøg mulige.",
         "fi": "su–to ja la 10–23; pe 15–23. Kotikäynnit mahdollisia.",
         "nb": "Søn–tor og lør 10–23; fre 15–23. Hjemmebesøk tilbys.",
-        "sl": "Ned–čet in sob 10–23; pet 15–23. Možni obiski na domu."
+        "sl": "Ned–čet in sob 10–23; pet 15–23. Možni obiski na domu.",
+        "hr": "ned–čet i sub 10:00–23:00; pet 15:00–23:00. Mogući su kućni posjeti."
       }
     },
     {
@@ -217,7 +223,8 @@
         "da": "Lør–tor kl. 9–24; fre kl. 16–24. Ingen akut hjælp efter midnat; ring, før du kommer.",
         "fi": "la–to 9–24; pe 16–24. Ei päivystystä keskiyön jälkeen; soita ennen tuloa.",
         "nb": "Lør–tor kl. 9–24; fre kl. 16–24. Ingen akuttbehandling etter midnatt; ring før du kommer.",
-        "sl": "Sob–čet 9–24; pet 16–24. Po polnoči nujne pomoči ni; pred prihodom pokličite."
+        "sl": "Sob–čet 9–24; pet 16–24. Po polnoči nujne pomoči ni; pred prihodom pokličite.",
+        "hr": "sub–čet 9:00–24:00; pet 16:00–24:00. Nakon ponoći nema hitne službe; nazovi prije dolaska."
       }
     },
     {
@@ -243,7 +250,8 @@
         "da": "Åbent dagligt kl. 15.30–23.30.",
         "fi": "Auki päivittäin 15.30–23.30.",
         "nb": "Åpent alle dager kl. 15.30–23.30.",
-        "sl": "Odprto vsak dan 15.30–23.30."
+        "sl": "Odprto vsak dan 15.30–23.30.",
+        "hr": "Otvoreno svaki dan 15:30–23:30."
       }
     },
     {
@@ -297,7 +305,8 @@
         "da": "Man–tor og lør kl. 14–22; fre kl. 16–22; lukket søndag.",
         "fi": "ma–to ja la 14–22; pe 16–22; su suljettu.",
         "nb": "man–tor og lør 14.00–22.00; fre 16.00–22.00; stengt søndag.",
-        "sl": "Pon–čet in sob 14–22; pet 16–22; ned zaprto."
+        "sl": "Pon–čet in sob 14–22; pet 16–22; ned zaprto.",
+        "hr": "pon–čet i sub 14:00–22:00; pet 16:00–22:00; nedjeljom zatvoreno."
       }
     },
     {
@@ -324,7 +333,8 @@
         "da": "Lør–tor kl. 9–23; fre kl. 14–23.",
         "fi": "la–to 9–23; pe 14–23.",
         "nb": "Lør–tor kl. 9–23; fre kl. 14–23.",
-        "sl": "Sob–čet 9–23; pet 14–23."
+        "sl": "Sob–čet 9–23; pet 14–23.",
+        "hr": "sub–čet 9:00–23:00; pet 14:00–23:00."
       }
     },
     {
@@ -350,7 +360,8 @@
         "da": "Lør–tor kl. 9–22; akutservice oplyst som 24/7, ring på forhånd.",
         "fi": "la–to 9–22; päivystys ilmoitetun mukaan 24/7, soita etukäteen.",
         "nb": "Lør–tor kl. 9–22; akuttjeneste annonseres som døgnåpen, ring på forhånd.",
-        "sl": "Sob–čet 9–22; nujno službo oglašujejo 24/7, vnaprej pokličite."
+        "sl": "Sob–čet 9–22; nujno službo oglašujejo 24/7, vnaprej pokličite.",
+        "hr": "sub–čet 9:00–22:00; hitna služba oglašena kao 24/7, nazovi unaprijed."
       }
     },
     {
@@ -377,7 +388,8 @@
         "da": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akutlinje: 0500521717.",
         "fi": "la–to 8.30–22; pe 16–22. Päivystysnumero: 0500521717.",
         "nb": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akuttelefon: 0500521717.",
-        "sl": "Sob–čet 8.30–22; pet 16–22. Nujna linija: 0500521717."
+        "sl": "Sob–čet 8.30–22; pet 16–22. Nujna linija: 0500521717.",
+        "hr": "sub–čet 8:30–22:00; pet 16:00–22:00. Hitna linija: 0500521717."
       }
     },
     {
@@ -404,7 +416,8 @@
         "da": "Søn–tor og lør kl. 8.30–23; fre kl. 16–21. Akutlinje: 0559171818.",
         "fi": "su–to ja la 8.30–23; pe 16–21. Päivystysnumero: 0559171818.",
         "nb": "Søn–tor og lør 8.30–23; fre 16–21. Vakttelefon: 0559171818.",
-        "sl": "Ned–čet in sob 8.30–23; pet 16–21. Nujna linija: 0559171818."
+        "sl": "Ned–čet in sob 8.30–23; pet 16–21. Nujna linija: 0559171818.",
+        "hr": "ned–čet i sub 8:30–23:00; pet 16:00–21:00. Hitna linija: 0559171818."
       }
     },
     {
@@ -431,7 +444,8 @@
         "da": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akutlinje: 0559825550.",
         "fi": "la–to 8.30–22; pe 16–22. Päivystysnumero: 0559825550.",
         "nb": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akuttelefon: 0559825550.",
-        "sl": "Sob–čet 8.30–22; pet 16–22. Nujna linija: 0559825550."
+        "sl": "Sob–čet 8.30–22; pet 16–22. Nujna linija: 0559825550.",
+        "hr": "sub–čet 8:30–22:00; pet 16:00–22:00. Hitna linija: 0559825550."
       }
     },
     {
@@ -458,7 +472,8 @@
         "da": "Lør–tor kl. 9–22; fre kl. 14–22.",
         "fi": "la–to 9–22; pe 14–22.",
         "nb": "Lør–tor kl. 9–22; fre kl. 14–22.",
-        "sl": "Sob–čet 9–22; pet 14–22."
+        "sl": "Sob–čet 9–22; pet 14–22.",
+        "hr": "sub–čet 9:00–22:00; pet 14:00–22:00."
       }
     },
     {

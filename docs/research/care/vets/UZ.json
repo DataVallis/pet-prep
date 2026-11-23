@@ -55,7 +55,8 @@
         "da": "Åbent døgnet rundt, uden frokostpause, fridage eller helligdage. Akuttelefon +998 99 067 07 90.",
         "fi": "Auki 24/7, ei lounastaukoa, vapaapäiviä eikä pyhiä. Päivystysnumero +998 99 067 07 90.",
         "nb": "Åpent hele døgnet, uten lunsjpause, fridager eller helligdager. Akuttlinje +998 99 067 07 90.",
-        "sl": "Odprto 24/7, brez odmora za malico, prostih dni ali praznikov. Nujna številka +998 99 067 07 90."
+        "sl": "Odprto 24/7, brez odmora za malico, prostih dni ali praznikov. Nujna številka +998 99 067 07 90.",
+        "hr": "Radi non-stop, bez stanke za ručak, slobodnih dana i blagdana. Hitna linija +998 99 067 07 90."
       }
     },
     {
@@ -79,7 +80,8 @@
         "da": "Åbent døgnet rundt, ingen fridage. Andre numre: +998 97 344 08 47, +998 88 100 32 82.",
         "fi": "Auki ympäri vuorokauden, ei vapaapäiviä. Muut numerot: +998 97 344 08 47, +998 88 100 32 82.",
         "nb": "Åpent døgnet rundt, uten fridager. Andre numre: +998 97 344 08 47, +998 88 100 32 82.",
-        "sl": "Odprto 24 ur na dan, brez prostih dni. Druge številke: +998 97 344 08 47, +998 88 100 32 82."
+        "sl": "Odprto 24 ur na dan, brez prostih dni. Druge številke: +998 97 344 08 47, +998 88 100 32 82.",
+        "hr": "Radi non-stop, bez slobodnih dana. Ostali brojevi: +998 97 344 08 47, +998 88 100 32 82."
       }
     },
     {
@@ -103,7 +105,8 @@
         "da": "Hver dag 9.00–18.00, søndag lukket. Fastnet +998 71 256 54 50.",
         "fi": "Joka päivä 9.00–18.00, su suljettu. Lankapuhelin +998 71 256 54 50.",
         "nb": "Alle dager 9.00–18.00, stengt søndag. Fasttelefon +998 71 256 54 50.",
-        "sl": "Vsak dan 9–18, ned zaprto. Stacionarni telefon +998 71 256 54 50."
+        "sl": "Vsak dan 9–18, ned zaprto. Stacionarni telefon +998 71 256 54 50.",
+        "hr": "Svaki dan 9:00–18:00, nedjeljom zatvoreno. Fiksni telefon +998 71 256 54 50."
       }
     },
     {
@@ -127,7 +130,8 @@
         "da": "man–fre 9.00–18.00, lør–søn 10.00–18.00, frokost 13.00–14.00; modtager akutte tilfælde i åbningstiden.",
         "fi": "ma–pe 9.00–18.00, la–su 10.00–18.00, lounastauko 13.00–14.00; ottaa vastaan päivystystapauksia aukioloaikana.",
         "nb": "man–fre 9.00–18.00, lør–søn 10.00–18.00, lunsj 13.00–14.00; tar imot nødtilfeller i åpningstiden.",
-        "sl": "Pon–pet 9–18, sob–ned 10–18, odmor za kosilo 13–14; v delovnem času sprejemajo nujne primere."
+        "sl": "Pon–pet 9–18, sob–ned 10–18, odmor za kosilo 13–14; v delovnem času sprejemajo nujne primere.",
+        "hr": "pon–pet 9:00–18:00, sub–ned 10:00–18:00, stanka za ručak 13:00–14:00; hitne slučajeve prima tijekom radnog vremena."
       }
     }
   ],

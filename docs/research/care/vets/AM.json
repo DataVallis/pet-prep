@@ -84,7 +84,8 @@
         "da": "Åbent dagligt 9.00–24.00; telefonen er angiveligt bemandet døgnet rundt. Ring på forhånd om natten.",
         "fi": "Auki päivittäin 9–24; puhelin vastaa ilmoituksen mukaan 24/7. Soita yöllä etukäteen.",
         "nb": "Åpent 9.00–24.00 hver dag; telefonlinjen er oppgitt å være åpen hele døgnet. Ring på forhånd om natten.",
-        "sl": "Odprto vsak dan 9–24; telefonska linija 24/7. Ponoči vnaprej pokličite."
+        "sl": "Odprto vsak dan 9–24; telefonska linija 24/7. Ponoči vnaprej pokličite.",
+        "hr": "Otvoreno svaki dan 9:00–24:00; telefonska linija 24/7. Noću nazovi unaprijed."
       }
     },
     {
@@ -111,7 +112,8 @@
         "da": "Mobil dyrlæge med hjemmebesøg i Yerevan og op til 30 km omkring byen; oplyser at have åbent døgnet rundt med en akut dyrlæge til rådighed.",
         "fi": "Liikkuva eläinlääkäri tekee kotikäyntejä Yerevanissa ja 30 km:n säteellä; ilmoituksen mukaan auki 24/7 ja päivystävä eläinlääkäri tavoitettavissa.",
         "nb": "Mobil dyrlege med hjemmebesøk i Jerevan og inntil 30 km rundt; oppgitt som døgnåpen med dyrlegevakt tilgjengelig.",
-        "sl": "Mobilni veterinar z obiski na domu v Erevanu in do 30 km naokoli; odprto 24/7, nujni veterinar na voljo."
+        "sl": "Mobilni veterinar z obiski na domu v Erevanu in do 30 km naokoli; odprto 24/7, nujni veterinar na voljo.",
+        "hr": "Mobilni veterinar s kućnim posjetima u Yerevanu i do 30 km u okolici; radi 24/7, dostupan je veterinar za hitne slučajeve."
       }
     },
     {
@@ -139,7 +141,8 @@
         "da": "Tilbyder dyrlægehjælp og dyreambulance døgnet rundt på +374 99 404070. Ring på forhånd.",
         "fi": "Ilmoittaa tarjoavansa eläinlääkäriapua 24/7 ja eläinambulanssin numerossa +374 99 404070. Soita etukäteen.",
         "nb": "Markedsfører dyrlegehjelp og dyreambulanse hele døgnet på +374 99 404070. Ring på forhånd.",
-        "sl": "Veterinarska pomoč 24/7 in reševalno vozilo za živali na +374 99 404070. Vnaprej pokličite."
+        "sl": "Veterinarska pomoč 24/7 in reševalno vozilo za živali na +374 99 404070. Vnaprej pokličite.",
+        "hr": "Veterinarska pomoć 24/7 i kola za hitni prijevoz životinja na +374 99 404070. Nazovi unaprijed."
       }
     },
     {
@@ -167,7 +170,8 @@
         "da": "Åbent dagligt 10.00–22.00.",
         "fi": "Auki päivittäin 10–22.",
         "nb": "Åpent 10.00–22.00 daglig.",
-        "sl": "Odprto vsak dan 10–22."
+        "sl": "Odprto vsak dan 10–22.",
+        "hr": "Otvoreno svaki dan 10:00–22:00."
       }
     },
     {
@@ -195,7 +199,8 @@
         "da": "Man–lør 10.00–20.00, søn 9.00–12.00.",
         "fi": "ma–la 10–20, su 9–12.",
         "nb": "man–lør 10.00–20.00, søn 9.00–12.00.",
-        "sl": "Pon–sob 10–20, ned 9–12."
+        "sl": "Pon–sob 10–20, ned 9–12.",
+        "hr": "pon–sub 10:00–20:00, ned 9:00–12:00."
       }
     },
     {
@@ -235,7 +240,8 @@
         "da": "Tir–lør 11.00–19.00; lukket søndag og mandag.",
         "fi": "ti–la 11–19; su ja ma suljettu.",
         "nb": "Tir–lør 11.00–19.00; stengt søn og man.",
-        "sl": "Tor–sob 11–19; ob nedeljah in ponedeljkih zaprto."
+        "sl": "Tor–sob 11–19; ob nedeljah in ponedeljkih zaprto.",
+        "hr": "uto–sub 11:00–19:00; nedjeljom i ponedjeljkom zatvoreno."
       }
     }
   ],
