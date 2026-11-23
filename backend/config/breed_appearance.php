@@ -887,6 +887,12 @@
 | hard coat; loose skin with head folds. Welfare (RKC Breed Watch Category 3, S994; PDSA eyelid problems, S995): moderate folds
 | (`skin`), tight eyelids, visible muzzle with open nostrils (`muzzle`). Grey first (portrait default); weights unsourced.
 |
+| Norfolk Terrier (M5-R10-134, docs/research/dog-data norfolk_terrier.appearance): "All shades of red, wheaten, black and
+| tan or grizzle." (FCI-Standard N° 272, S1010; any other colour unacceptable, no white patches in the game); hard, wiry,
+| straight coat, longer and rougher on the neck and shoulders, V-shaped drop ears dropping forward close to the cheek, natural
+| tail of moderate length (docking "previously optional"). Not flat-faced; RKC Breed Watch Category 1 (S1011). Red first with
+| the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Finnish Lapphund (M5-R10-133, docs/research/dog-data finnish_lapphund.appearance): "Smaller than medium sized." (FCI-Standard
 | N° 189, S1003), strongly built, slightly longer than tall; "All colours are permitted." "The basic colour must be dominant." (S1003)
 | → six common colours (Wikipedia S1008, C): black and tan, black, brown, wolf-sable, sable, cream; profuse long harsh outer coat
@@ -5654,6 +5660,39 @@ return [
             'muzzle' => ['strong, broad, straight muzzle, only slightly tapering, with a dark nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-134 (docs/research/dog-data/data.json norfolk_terrier.appearance; runbook rules 2026-10-10: standard colours only —
+    // red, wheaten, black and tan or grizzle (FCI S1010), no white patches; V-shaped drop ears, natural tail).
+    'norfolk_terrier' => [
+        'display_name' => 'Norfolk Terrier',
+        // Colour frequencies are in no source (norfolk_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 272 Norfolk Terrier (S1010, https://fci.be/Nomenclature/Standards/272g03-en.pdf), RKC Breeds A–Z (S1011) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1011 "Size: Small"; S1010 "Ideal height at the withers: 25 cm."',
+            'build' => 'S1010 "One of the smallest of terriers. Low, keen dog, compact and strong, short back, good substance and bone."',
+            'coat_length' => 'S1010 "Hard, wiry, straight, lying close to body. Longer and rougher on neck and shoulders."',
+            'coat_color' => 'S1010 "All shades of red, wheaten, black and tan or grizzle. White marks or patches undesirable but permissible." (weights unsourced; no white patches in the game)',
+            'ear_carriage' => 'S1010 "Medium size, V-shaped, slightly rounded at tip, dropping forward close to cheek."',
+            'eye_color' => 'S1010 "Oval-shaped, dark brown or black. Expression alert, keen and intelligent."',
+            'tail' => 'S1010 "Docking of tail previously optional." — the natural tail of moderate length, thick at the root, carried jauntily',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'low, keen, compact and strong small terrier with a short back and good bone', 'weight' => 3], 'one of the smallest terriers, sturdy and active'],
+            'coat_length' => ['hard, wiry, straight close-lying coat, longer and rougher on the neck and shoulders'],
+            // Standard colours only (S1010); red highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'red', 'weight' => 50],
+                ['value' => 'wheaten', 'weight' => 20],
+                ['value' => 'black and tan', 'weight' => 15],
+                ['value' => 'grizzle', 'weight' => 15],
+            ],
+            'ear_carriage' => ['medium-sized V-shaped drop ears, slightly rounded at the tip, dropping forward close to the cheek'],
+            'eye_color' => ['oval, dark brown eyes with an alert, keen and intelligent expression'],
+            'tail' => ['natural tail of moderate length, thick at the root and tapering, carried jauntily'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

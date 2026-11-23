@@ -877,6 +877,13 @@ return [
         ['key' => 'sable', 'value' => 'sable', 'en' => 'Sable', 'sl' => 'Sobolji'],
         ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Krem'],
     ],
+    // M5-R10-134: FCI-Standard N° 272 (S1010) "All shades of red, wheaten, black and tan or grizzle."; same order and values as breed_appearance.php.
+    'norfolk_terrier' => [
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'grizzle', 'value' => 'grizzle', 'en' => 'Grizzle', 'sl' => 'Sivkast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
