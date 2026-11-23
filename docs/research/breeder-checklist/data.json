@@ -4373,6 +4373,61 @@
         }
       ],
       "notes": "RKC Breeds A–Z page 'Neapolitan Mastiff' (dog-data S994, 2026-11-21, M5-R10-132): minimum (Good Practice schemes and tests) — genetic diversity (inbreeding_coi), BVA/KC elbow and hip schemes; Best Practice — BVA/KC/ISDS eye scheme. No new test keys."
+    },
+    "finnish_lapphund": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S1004",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S1004",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S1004",
+          "quote": "DNA test for progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "dna_gsd2",
+          "level": "best_practice",
+          "name": "DNA test for glycogen storage disease (GSDII)",
+          "source_id": "S1004",
+          "quote": "DNA test for glycogen storage disease (GSDII)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S1004",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S1004",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S1004",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page 'Finnish Lapphund' (dog-data S1004, 2026-11-23, M5-R10-133): minimum (Good Practice) — genetic diversity (inbreeding_coi), DNA test prcd-PRA; Best Practice — GSDII DNA test (new key dna_gsd2), BVA/KC elbow and hip schemes, BVA/KC/ISDS eye scheme."
     }
   }
 }

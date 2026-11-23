@@ -68069,6 +68069,559 @@
       }
     }
   },
+  "finnish_lapphund": {
+    "_note": "Added 2026-11-23 (M5-R10-133, unattended run — appended after the Neapolitan Mastiff: AKC 2024 No. 129 'Finnish Lapphund', S174 full-list table fetched 2026-11-23 '128 Neopolitan Mastiff', '129 Finnish Lapphund', '130 Norfolk Terrier'). Quotes as returned by the web-fetch tool on 2026-11-23 (after a web search; the tool limits quotes from non-preapproved pages to ~125 characters — longer passages were returned as fragments or paraphrase); paraphrase only in notes, marked '(paraphrase)'. Sources S1002–S1008 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S1002, 'SUOMENLAPINKOIRA (189)', English 'FINNISH LAPPONIAN DOG', Group 5 Section 3, Finland); standard wording from FCI-Standard N° 189 (S1003, official valid standard published 30.09.2016). RKC Breeds A–Z page (S1004) reached at royalkennelclub.com: size 'Medium', exercise 'Up to 1 hour per day' → 60, grooming 'Once a week' → 1, sheds 'Yes', lifespan 'Over 12 years' → senior 108 (RKC lower bound — McMillan 2024 has no Lapphund in the readable Nature PDF text and the Dogs Trust 155-breed table S123 was refused by the fetch tool; open for David). The RKC breed standard page and the CKC standard were refused; colours from the AKC standard (S1005, via the Finnish Lapphund Club of America) and the FCI standard ('All colours are permitted.'). Coren (S35): the breed is not known to be ranked (the Wikipedia ranking page was not re-read; Coren's survey predates the breed's AKC recognition — Claude's reading) → unranked 1.0, open for David. Names: RKC / AKC 'Finnish Lapphund', FCI 'Finnish Lapponian Dog'; other names 'Lapinkoira', 'Suomenlapinkoira', 'Lappie' (S1008, S1007); Slovenian »finski laponski pes« (Claude, after the FCI name — no KZS page read, open for David).",
+    "identity": {
+      "value": "FCI No. 189, Group 5 Section 3 (Nordic Watchdogs and Herders), Finland",
+      "unit": "—",
+      "source_id": "S1002",
+      "quote": "FINNISH LAPPONIAN DOG",
+      "confidence": "high",
+      "notes": "FCI nomenclature page (S1002): heading 'SUOMENLAPINKOIRA (189)', English name 'FINNISH LAPPONIAN DOG', group 'n°5 - Chiens de type Spitz et de type primitif', section 'Chiens nordiques de garde et de berger', country 'FINLANDE', definitive acceptance 22/08/1955, no working trial. FCI standard (S1003): 'ORIGIN: Finland.', 'Section 3.4 Nordic Watchdogs and Herders.', 'Without working trial.' RKC Pastoral group (S1004). Country code FI."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S1004",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S1004). FCI 'Smaller than medium sized.' (S1003). PetMD / WebMD 33–53 lb (S1006, S1007) ≈ 15–24 kg → the 'Medium (24–59 pounds)' class of S10 for growth only."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            46,
+            52
+          ],
+          "female": [
+            41,
+            47
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1003",
+        "quote": "Ideal height: males 49 cm and females 44 cm with a tolerance of 3 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 189 (S1003): ideal 49 / 44 cm ± 3 cm → males 46–52, females 41–47 cm; 'The type is more important than the size.' AKC standard (S1005): males 18–21 in (ideal 19.5), females 16–19 in (ideal 17.5) (paraphrase). WebMD (S1007) 'Male Finnish Lapphunds are around 18 to 21 inches tall at the shoulder.'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                46,
+                53
+              ],
+              "female": [
+                41,
+                48
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S1005",
+            "quote": "The ideal male stands 19.5 inches at the shoulder and the ideal female is 17.5 inches.",
+            "confidence": "high",
+            "notes": "AKC standard (S1005, February 2008): males 18–21 in ≈ 46–53 cm, females 16–19 in ≈ 41–48 cm (paraphrase of the range)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            15,
+            24
+          ],
+          "female": [
+            15,
+            24
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1006",
+        "quote": "(16–21 inches tall; 33–53 pounds)",
+        "confidence": "medium",
+        "notes": "PetMD (S1006): 33–53 lb ≈ 15.0–24.0 kg, one range for both sexes (stored per sex); 'Females tend to be a bit smaller than males.' WebMD (S1007) 'The stout and fluffy Finnish Lapphunds weigh between 33 and 53 pounds.' agrees. The FCI (S1003) and AKC (S1005) standards give no weight.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                15,
+                24
+              ],
+              "female": [
+                15,
+                24
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1007",
+            "quote": "The stout and fluffy Finnish Lapphunds weigh between 33 and 53 pounds.",
+            "confidence": "medium",
+            "notes": "WebMD (S1007), the same range."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 33–53 lb (S1006) → the 'Medium (24–59 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Finnish Lapphund growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S1004",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S1004). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable — the readable text of the McMillan 2024 Nature PDF does not name the breed and the Dogs Trust table S123 was refused by the fetch tool). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1006",
+        "quote": "Finnish Lapphunds are generally healthy dogs with an average lifespan of 12–15 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1006). WebMD (S1007) 'They typically live between 12 and 15 years.' Background; the RKC lower bound is used."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S1004) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). McMillan 2024 / VetCompass median not reachable — open for David.",
+        "derived_from": [
+          "S11",
+          "S1004"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1004",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S1004), runbook first choice → 60 min ('up to N' → N). PetMD (S1006) 'about 60–90 minutes every day' (lower bound 60 agrees); WebMD (S1007) 'A daily long walk with about 30 minutes of play is enough for a Finnish Lapphund.'",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S1006",
+            "quote": "requires only moderate amounts of exercise (about 60–90 minutes every day).",
+            "confidence": "high",
+            "notes": "PetMD (S1006) — range → lower bound 60."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "moderate exercise: about an hour a day, a daily long walk with play",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "A daily long walk with about 30 minutes of play is enough for a Finnish Lapphund.",
+        "confidence": "high",
+        "notes": "WebMD (S1007); PetMD (S1006) 'about 60–90 minutes every day'."
+      },
+      "heat": {
+        "value": "watch for overheating in extreme heat",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "you should always watch for signs of overheating in extreme heat.",
+        "confidence": "medium",
+        "notes": "WebMD (S1007). General advice for a thick double coat — no heat_sensitive chip (no statement that the breed is prone to heat problems); not flat-faced → no DOG_NO_WALK_IN_HEAT rule."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source names a gap between meals and exercise for this breed → no meal / exercise gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent, courageous, calm and docile; friendly and faithful",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "Intelligent, courageous, calm and docile. Friendly and faithful.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 189 (S1003). AKC standard (S1005): 'When interacting with people, Finnish Lapphunds are calm, friendly, and very submissive.'"
+      },
+      "family": {
+        "value": "a family companion breed, good with children",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "Lappies are good with children since they're a family companion breed.",
+        "confidence": "high",
+        "notes": "WebMD (S1007). PetMD (S1006): can do well with family members of all ages, provided children are taught how to interact safely (paraphrase)."
+      },
+      "children": {
+        "value": "good with children",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "Lappies are good with children since they're a family companion breed.",
+        "confidence": "high",
+        "notes": "WebMD (S1007). PetMD (S1006) adds a caveat: 'can do well with family members of all ages (provided children are taught how to safely interact with animals)' → children chip, no small_children (no rating without a caveat)."
+      },
+      "other_pets": {
+        "value": "typically get along with other dogs; may be hesitant around new animals",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "They also typically get along with other dogs, but mature Lappy dogs adopted into homes that already have pets may need more help adjusting.",
+        "confidence": "medium",
+        "notes": "PetMD (S1006); WebMD (S1007) 'Finnish Lapphunds can be good with other pets. But they may be hesitant around new animals.' PetMD also says they are 'happy to chase whatever creature crosses their path' (no 'high prey drive' wording → no chases_small_pets). Conditional → no other_pets chip."
+      },
+      "time_alone": {
+        "value": "craves companionship; does not do well being left on its own",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Finnish Lapphunds are dogs that crave companionship.",
+        "confidence": "high",
+        "notes": "PetMD (S1006); bored, lonely Lappies may show 'excessive barking, chewing, and digging'. WebMD (S1007): 'They'll want to spend a lot of time with you and don't do well being independent.' Basis of the needs_company chip."
+      },
+      "barking": {
+        "value": "vocal; barking is part of the herding instinct",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Yes, Finnish Lapphunds are highly accomplished barkers.",
+        "confidence": "high",
+        "notes": "PetMD (S1006); WebMD (S1007) 'Barking is part of their herding instinct.' Breed text only (no vocabulary key)."
+      },
+      "socialisation": {
+        "value": "socialise the puppy early (the first 16 weeks)",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "can get along with people of all ages when socialized as a puppy.",
+        "confidence": "high",
+        "notes": "PetMD (S1006), a condition; the page names the first 16 weeks of life as the window for safe exposure (paraphrase)."
+      },
+      "training": {
+        "value": "smart and trainable, but herding dogs can be eager to do their own thing",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "Lappies are smart and do well with training, competitions, and canine sports.",
+        "confidence": "high",
+        "notes": "WebMD (S1007); PetMD (S1006) 'Though intelligent and generally eager please, herding dogs like the Lappy can also be eager to do their own thing.'"
+      },
+      "chewing": {
+        "value": "may chew, dig and bark when bored and lonely",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S1006) names 'excessive barking, chewing, and digging' in bored, lonely Lappies (fragment) — no chews_when_bored chip (one fragment only)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S1004) — no veterinary association names the breed for conformation-related welfare problems.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z (S1004): no breed-specific points of concern identified (paraphrase) → no welfare chip; in marketing."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Hip dysplasia",
+        "confidence": "high",
+        "notes": "PetMD (S1006); WebMD (S1007). RKC Best Practice: BVA/KC hip scheme (S1004)."
+      },
+      "elbow_dysplasia": {
+        "value": "elbow dysplasia",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Elbow dysplasia",
+        "confidence": "high",
+        "notes": "PetMD (S1006); WebMD (S1007). RKC Best Practice: BVA/KC elbow scheme (S1004)."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — inherited eye disease that can lead to blindness",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Progressive retinal atrophy (PRA)",
+        "confidence": "high",
+        "notes": "PetMD (S1006); WebMD (S1007). RKC minimum test: DNA test prcd-PRA (S1004)."
+      },
+      "gsd2": {
+        "value": "glycogen storage disease type II (Pompe disease) — an inherited disease with a DNA test",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "DNA test for glycogen storage disease (GSDII)",
+        "confidence": "high",
+        "notes": "RKC Best Practice DNA test (S1004). Background only; the register shows it as a breeder test."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not known to be ranked: the Wikipedia table of Coren's ranking (S35) was not re-read by name this run; the breed was recognised by the AKC long after Coren's 1994 survey (Claude — open for David)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked."
+      },
+      "training_notes": {
+        "value": "smart, does well with training and canine sports; can be independent",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S1007), PetMD (S1006) (paraphrase). The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.finnish_lapphund.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "smaller than medium sized, strongly built, slightly longer than tall, with a long dense coat",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "Smaller than medium sized.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 189 (S1003); strongly built, body slightly longer than the height at the withers, coat long and dense (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "black and tan",
+          "black",
+          "brown",
+          "wolf-sable",
+          "sable",
+          "cream"
+        ],
+        "unit": "list (all colours permitted; the basic colour must be dominant)",
+        "source_id": "S1003",
+        "quote": "All colours are permitted.",
+        "confidence": "high",
+        "notes": "FCI (S1003) 'All colours are permitted.' 'The basic colour must be dominant.'; AKC standard (S1005) names 'sable, wolfsable, or domino' as single colours. The six listed are common colours of the breed (Wikipedia S1008, C: black and tan one of the most common; black, brown, sable, wolf-sable, cream) chosen for the AI looks (Claude, runbook rule 'standard colours only'). Black and tan first (portrait default)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no colour frequencies found; the weights in breed_appearance.php are a draft (verified => false)."
+      },
+      "coat": {
+        "value": "profuse long, harsh outer coat, soft dense undercoat; males with an abundant mane",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "Profuse, especially the males have an abundant mane.",
+        "confidence": "high",
+        "notes": "FCI (S1003): 'The outer coat is long and harsh.'; shorter on the head and the front of the legs; soft, dense undercoat (paraphrase). AKC (S1005): outer coat 'straight and long, and very harsh and water-repellant.'"
+      },
+      "muzzle": {
+        "value": "strong, broad, straight muzzle, only slightly tapering",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "Strong, broad and straight; viewed from above and in profile evenly, but only slightly tapering.",
+        "confidence": "high",
+        "notes": "FCI (S1003)."
+      },
+      "nose": {
+        "value": "black or brown according to coat colour",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "Black or brown, according to coat colour.",
+        "confidence": "high",
+        "notes": "FCI (S1003)."
+      },
+      "eyes": {
+        "value": "oval, dark brown eyes",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "Oval shaped, dark brown, according to coat colour.",
+        "confidence": "high",
+        "notes": "FCI (S1003)."
+      },
+      "ears": {
+        "value": "medium-sized, triangular, erect or semi-erect, very mobile",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI (S1003): medium, erect or semi-erect, triangular, very mobile, hair on the inner side (paraphrase); full drop ears disqualify."
+      },
+      "tail": {
+        "value": "set rather high, medium length, profuse long hair, curved over the back or side when moving",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": "The tip of the tail may have a J-formed hook.",
+        "confidence": "high",
+        "notes": "FCI (S1003): set rather high, medium length, profuse long hair; curved over the back or side when moving, may hang at rest (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S1004), PetMD (S1006), WebMD (S1007).",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "RKC key fact. Not 'Flat/ Apartment' → no apartment chip; not 'Large house' → no large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact → brushing 1× a week (M5-R13)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' → sheds chip."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing, extra attention during the spring and autumn shedding",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "recommends a weekly brushing and extra attention during heavy shedding seasons.",
+        "confidence": "high",
+        "notes": "PetMD (S1006), citing the Finnish Lapphund Club of America. WebMD (S1007) 'needs brushing once a week' and daily brushing in the shedding season (moult not modelled)."
+      },
+      "petmd_bath": {
+        "value": "monthly bathing is usually enough",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Monthly bathing is usually sufficient, but ask your vet if you're uncertain.",
+        "confidence": "high",
+        "notes": "PetMD (S1006) → bath reminder every 4 program weeks (M5-R20). WebMD (S1007) 'bathing as needed'."
+      },
+      "webmd_nails": {
+        "value": "trim the nails once a month",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "You should trim your Finnish Lapphund's nails once a month.",
+        "confidence": "high",
+        "notes": "WebMD (S1007) → nail trim every 4 program weeks (M5-R19)."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth daily with dog toothpaste (one of the options)",
+        "unit": "—",
+        "source_id": "S1007",
+        "quote": "daily with dog-friendly toothpaste",
+        "confidence": "medium",
+        "notes": "WebMD (S1007, fragment): brushing daily with dog-friendly toothpaste, listed next to dental chews and professional cleaning → tooth brushing every day (M5-R15, Tibetan Spaniel precedent S982)."
+      },
+      "petmd_ears": {
+        "value": "ask the vet how often to clean the ears — no frequency",
+        "unit": "—",
+        "source_id": "S1006",
+        "quote": "Talk to your veterinary team about how often you should clean your dog's ears.",
+        "confidence": "high",
+        "notes": "PetMD (S1006) — no frequency → no ear task (runbook)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -101993,6 +102546,270 @@
         "confidence": "medium",
         "notes": "Standard colours only (S993): grey, black, brown, fawn, deep fawn; grey = portrait default. Welfare (Category 3): moderate folds, no drooping eyelids.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only, grey portrait, moderate folds (welfare)"
+      }
+    },
+    "finnish_lapphund": {
+      "_note": "Unattended run M5-R10-133 (2026-11-23): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC (S1004 'Up to 1 hour per day' → 60). Senior boundary 108 from the RKC lower bound 'Over 12 years' (S1004; McMillan 2024 / VetCompass not reachable — open for David). Learning 1.0 (unranked, S35). Built: brushing 1× a week (RKC 'Once a week', M5-R13), tooth brushing every day (WebMD S1007, M5-R15), nail trim every 4 weeks (WebMD, M5-R19), bath reminder every 4 weeks (PetMD S1006, M5-R20), puppy socialisation with the PetMD quote (M5-R17). No ear task (PetMD: ask the vet, no frequency), no groomer task, no meal gap, no heat walk ban (not flat-faced). No new vocabulary key. In marketing (RKC Breed Watch Category 1). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1004",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC (S1004) → rule 'up to N' → 60. PetMD (S1006) 60–90 → 60 agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S1006",
+            "quote": "requires only moderate amounts of exercise (about 60–90 minutes every day)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1004 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S1004",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) = 108 (S11 + RKC lower bound 'Over 12 years', S1004). Alternative: 84 (Dogs Trust > 7 y, S14). McMillan 2024 / VetCompass median not reachable — open for David.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1004"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 12 y, S1004)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not known to be ranked by Coren (S35) → unranked rule → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1004",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "finnish_lapphund.suitability.rkc_grooming. RKC 'Once a week' → 1. PetMD (S1006) 'a weekly brushing' and WebMD (S1007) 'once a week' agree (daily during the moult — not modelled). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S1006",
+            "quote": "recommends a weekly brushing and extra attention during heavy shedding seasons."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R15)",
+        "source_id": "S1007",
+        "quote": "daily with dog-friendly toothpaste",
+        "confidence": "medium",
+        "notes": "finnish_lapphund.suitability.webmd_teeth → every day (Tibetan Spaniel precedent). Built: DOG_CARE_TASKS tooth_brushing [7, day].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child task (M5-R19)",
+        "source_id": "S1007",
+        "quote": "You should trim your Finnish Lapphund's nails once a month.",
+        "confidence": "high",
+        "notes": "finnish_lapphund.suitability.webmd_nails → once a month = every 4 program weeks. Built: DOG_CARE_TASKS nail_trim [1, month].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »once a month« → vsake 4 tedne"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R20, never scored)",
+        "source_id": "S1006",
+        "quote": "Monthly bathing is usually sufficient, but ask your vet if you're uncertain.",
+        "confidence": "high",
+        "notes": "finnish_lapphund.suitability.petmd_bath → every 4 program weeks. Built: DOG_CARE_TASKS bath [1, month]. Ears: PetMD gives no frequency → no task; groomer: no source → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »Monthly bathing« → vsake 4 tedne"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1006",
+        "quote": "can get along with people of all ages when socialized as a puppy.",
+        "confidence": "high",
+        "notes": "finnish_lapphund.behaviour.socialisation (PetMD S1006, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1006)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-133); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1004"
+            ],
+            "refs": [
+              "finnish_lapphund.exercise.adult",
+              "finnish_lapphund.suitability.rkc_exercise"
+            ],
+            "quote": "S1004 'Up to 1 hour per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1007"
+            ],
+            "refs": [
+              "finnish_lapphund.behaviour.family"
+            ],
+            "quote": "S1007 'Lappies are good with children since they're a family companion breed.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1007"
+            ],
+            "refs": [
+              "finnish_lapphund.behaviour.children"
+            ],
+            "quote": "S1007 'Lappies are good with children since they're a family companion breed.' (PetMD caveat: children taught how to interact safely)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1006"
+            ],
+            "refs": [
+              "finnish_lapphund.behaviour.time_alone"
+            ],
+            "quote": "S1006 'Finnish Lapphunds are dogs that crave companionship.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1004"
+            ],
+            "refs": [
+              "finnish_lapphund.suitability.rkc_shedding"
+            ],
+            "quote": "S1004 key fact 'Sheds' 'Yes'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating without a caveat (PetMD: children taught how to interact safely).",
+          "apartment": "RKC 'Small house' (S1004), not 'Flat/ Apartment'.",
+          "chases_small_pets": "PetMD 'happy to chase whatever creature crosses their path' — no 'high prey drive' wording.",
+          "heat_sensitive": "WebMD only general advice to watch for overheating in extreme heat.",
+          "other_pets": "Conditional (PetMD: adult dogs may need help adjusting; WebMD: hesitant around new animals).",
+          "secure_fencing": "PetMD leash / fence advice returned only as paraphrase (no verbatim quote).",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1004",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 1 (S1004). Marketing never promises the breed's health and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Finnish Lapphund, black and tan: smaller than medium, strongly built spitz-type herder slightly longer than tall; profuse long harsh double coat with a mane; broad head with a strong straight muzzle; medium triangular erect ears; dark oval eyes; tail with profuse hair curved over the back",
+        "unit": "—",
+        "source_id": "S1003",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S1003) as in finnish_lapphund.appearance. Six common colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default (first colour, highest weight; weights unsourced); natural tail and ears"
       }
     }
   }
