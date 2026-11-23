@@ -3116,5 +3116,25 @@ return [
                 ['tag' => 'drools', 'source_ids' => ['S996'], 'refs' => ['neapolitan_mastiff.behaviour.drooling']],
             ],
         ],
+
+        // M5-R10-133 Finnish Lapphund (data.json proposed_game_parameters.finnish_lapphund.suitability_tags; S1004, S1006,
+        // S1007), runbook rules. RKC Breed Watch Category 1 → no welfare chip; no prey-drive statement; in marketing. No new
+        // vocabulary key. Never hypoallergenic.
+        'finnish_lapphund' => [
+            'suits' => [
+                // S1004 "Exercise: Up to 1 hour per day"
+                ['tag' => 'active_family', 'source_ids' => ['S1004'], 'refs' => ['finnish_lapphund.exercise.adult', 'finnish_lapphund.suitability.rkc_exercise']],
+                // S1007 "Lappies are good with children since they're a family companion breed."
+                ['tag' => 'family_pet', 'source_ids' => ['S1007'], 'refs' => ['finnish_lapphund.behaviour.family']],
+                // S1007 "Lappies are good with children since they're a family companion breed." (PetMD caveat in data.json)
+                ['tag' => 'children', 'source_ids' => ['S1007'], 'refs' => ['finnish_lapphund.behaviour.children']],
+            ],
+            'consider' => [
+                // S1006 "Finnish Lapphunds are dogs that crave companionship."
+                ['tag' => 'needs_company', 'source_ids' => ['S1006'], 'refs' => ['finnish_lapphund.behaviour.time_alone']],
+                // S1004 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S1004'], 'refs' => ['finnish_lapphund.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];

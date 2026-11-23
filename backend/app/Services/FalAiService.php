@@ -1005,6 +1005,13 @@ class FalAiService
                 .'tight eyelids, a clearly visible muzzle with a dark grey nose and open nostrils, small natural triangular ears, '
                 .'a thick natural tail hanging in a sabre curve, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-133: FCI-Standard N° 189 (S1003) — smaller than medium, strongly built spitz-type herder; profuse long harsh
+            // double coat with a mane; black and tan (portrait default of six common colours); erect ears; natural tail.
+            BreedType::FinnishLapphund => 'A medium-sized, strongly built Finnish Lapphund, a Nordic spitz-type reindeer herder slightly longer than tall, '
+                .'black and tan coat, a profuse long harsh outer coat with a dense undercoat and a mane, '
+                .'a broad head with a strong straight muzzle, dark brown oval eyes, medium triangular erect ears, '
+                .'a natural tail with profuse long hair curved over the back, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2357,6 +2364,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, hard, dense coat of the same length all over',
                 'markings' => 'loose skin with moderate head folds and dewlap, tight eyelids, small natural ears, natural sabre tail, dark grey nose',
+            ],
+            // M5-R10-133: FCI S1003 all colours permitted; black and tan (the portrait default of the six common colours).
+            BreedType::FinnishLapphund => [
+                'color_scheme' => 'black and tan',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'profuse long, harsh outer coat with a soft dense undercoat and a mane',
+                'markings' => 'tan markings on the face, legs and chest, medium triangular erect ears, natural tail curved over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

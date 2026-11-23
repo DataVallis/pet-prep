@@ -887,6 +887,12 @@
 | hard coat; loose skin with head folds. Welfare (RKC Breed Watch Category 3, S994; PDSA eyelid problems, S995): moderate folds
 | (`skin`), tight eyelids, visible muzzle with open nostrils (`muzzle`). Grey first (portrait default); weights unsourced.
 |
+| Finnish Lapphund (M5-R10-133, docs/research/dog-data finnish_lapphund.appearance): "Smaller than medium sized." (FCI-Standard
+| N° 189, S1003), strongly built, slightly longer than tall; "All colours are permitted." "The basic colour must be dominant." (S1003)
+| → six common colours (Wikipedia S1008, C): black and tan, black, brown, wolf-sable, sable, cream; profuse long harsh outer coat
+| with a dense undercoat and a mane; erect or semi-erect triangular ears; natural tail with profuse hair. No welfare trait (RKC Breed
+| Watch Category 1, S1004). Black and tan first (portrait default); weights unsourced → `verified => false`.
+|
 | Mudi (M5-R10-126, docs/research/dog-data mudi.appearance): "Medium-sized herding dog with a wedge-shaped head. Prick ears.
 | Body topline is distinctly sloping towards the rear." (FCI-Standard N° 238, S949); colours black, white, fawn, ash (blue), liver,
 | ash-brown and cifra (merle) (S949 / FCI nomenclature S948); dense, shiny, wavy coat 3–7 cm; high-set prick ears; natural tail.
@@ -5611,6 +5617,43 @@ return [
             'muzzle' => ['broad, deep muzzle a third of the head length, clearly visible, with open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin', 'muzzle'],
+    ],
+    // M5-R10-133 (docs/research/dog-data/data.json finnish_lapphund.appearance; runbook rules 2026-10-10: FCI-Standard N° 189
+    // (S1003) — all colours permitted; six common colours, black and tan first = the portrait default; natural ears and tail).
+    'finnish_lapphund' => [
+        'display_name' => 'Finnish Lapphund',
+        // Colour frequencies are in no source (finnish_lapphund.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 189 (S1003, https://www.fci.be/Nomenclature/Standards/189g05-en.pdf), AKC standard (S1005), RKC (S1004) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1004 "Medium"; S1003 "Smaller than medium sized."; ideal height males 49 cm, females 44 cm',
+            'build' => 'S1003 "Smaller than medium sized." (strongly built, slightly longer than the height at the withers — paraphrase)',
+            'coat_length' => 'S1003 "Profuse, especially the males have an abundant mane." "The outer coat is long and harsh."',
+            'coat_color' => 'S1003 "All colours are permitted." "The basic colour must be dominant."; S1005 "sable, wolfsable, or domino"; common colours S1008 (C) (weights unsourced)',
+            'ear_carriage' => 'S1003 medium, erect or semi-erect, triangular, very mobile (paraphrase); full drop ears disqualify',
+            'eye_color' => 'S1003 "Oval shaped, dark brown, according to coat colour."',
+            'tail' => 'S1003 "The tip of the tail may have a J-formed hook."; set rather high, profuse long hair, curved over the back when moving (paraphrase)',
+            'muzzle' => 'S1003 "Strong, broad and straight; viewed from above and in profile evenly, but only slightly tapering."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'strongly built spitz-type reindeer herder, slightly longer than tall, with a rather broad head', 'weight' => 3], 'sturdy, agile Nordic herding dog standing alert on strong legs'],
+            'coat_length' => ['profuse long, harsh outer coat with a soft dense undercoat and an abundant mane, shorter on the head and front of the legs'],
+            // FCI (S1003): all colours permitted; six common colours, black and tan first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'black and tan', 'weight' => 30],
+                ['value' => 'black', 'weight' => 20],
+                ['value' => 'brown', 'weight' => 15],
+                ['value' => 'wolf-sable (grey sable)', 'weight' => 15],
+                ['value' => 'sable', 'weight' => 10],
+                ['value' => 'cream', 'weight' => 10],
+            ],
+            'ear_carriage' => ['medium-sized triangular ears, erect or semi-erect, set well apart'],
+            'eye_color' => ['dark brown oval eyes with a friendly, calm expression'],
+            'tail' => ['natural tail set rather high, covered in profuse long hair, curved over the back'],
+            'muzzle' => ['strong, broad, straight muzzle, only slightly tapering, with a dark nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

@@ -131,6 +131,7 @@ return [
     'tibetan_spaniel' => 'Tibetanski španjel',
     'black_russian_terrier' => 'Ruski črni terier',
     'neapolitan_mastiff' => 'Napolitanski mastif',
+    'finnish_lapphund' => 'Finski laponski pes',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

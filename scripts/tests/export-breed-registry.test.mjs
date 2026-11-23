@@ -257,6 +257,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.tibetan_spaniel.slug, { en: 'tibetan-spaniel', sl: 'tibetanski-spanjel' });
   assert.deepEqual(byId.black_russian_terrier.slug, { en: 'black-russian-terrier', sl: 'ruski-crni-terier' });
   assert.deepEqual(byId.neapolitan_mastiff.slug, { en: 'neapolitan-mastiff', sl: 'napolitanski-mastif' });
+  assert.deepEqual(byId.finnish_lapphund.slug, { en: 'finnish-lapphund', sl: 'finski-laponski-pes' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -476,6 +477,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     tibetan_spaniel: { adult: 6000, senior: 4500, seniorFrom: 137, learning: 1 },
     black_russian_terrier: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
     neapolitan_mastiff: { adult: 6000, senior: 4500, seniorFrom: 74, learning: 1 },
+    finnish_lapphund: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -950,7 +952,9 @@ test('every dog breed has a Coren rank fact except the explicitly unranked Havan
     // Black Russian Terrier: unranked (S35 not re-read by name, M5-R10-131 — open for David).
     'black_russian_terrier',
     // Neapolitan Mastiff: not found in S35 (IPFS mirror 2026-11-21, M5-R10-132 — open for David).
-    'neapolitan_mastiff'];
+    'neapolitan_mastiff',
+    // Finnish Lapphund: unranked (S35 not re-read by name, M5-R10-133 — open for David).
+    'finnish_lapphund'];
   for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
     const has = b.facts.some((f) => f.field === 'coren_rank');
     assert.equal(has, !unranked.includes(b.id), `${b.id} coren_rank fact`);
@@ -4135,4 +4139,35 @@ test('Neapolitan Mastiff (M5-R10-132): RKC up to 1 h, FCI height + weight, RKC u
   assert.equal(d.breeder_checklist.status, 'listed');
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|8\.17/i);
+});
+
+test('Finnish Lapphund (M5-R10-133): RKC up to 1 h, FCI height, PetMD weight, RKC over 12 y → senior 108, unranked → 1.0, brushing weekly, teeth + nails + bath, origin Finland, chips, RKC breeder list', () => {
+  const d = registry.breeds.find((b) => b.id === 'finnish_lapphund');
+  assert.deepEqual(d.name, { en: 'Finnish Lapphund', sl: 'Finski laponski pes' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S1004']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 189, group: 5, section: 3, origin: 'FI' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [15, 24], female: [15, 24] }, ['S1006']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [46, 52], female: [41, 47] }, ['S1003']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 12, ['S1004']]]);
+  assert.equal(d.facts.find((f) => f.field === 'grooming_frequency').value, 'once_a_week');
+  assert.equal(d.facts.find((f) => f.field === 'shedding').value, 'yes');
+  assert.ok(!d.facts.some((f) => f.field === 'coren_rank'));
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 1 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => [r.params.task, r.params.actor, r.params.times, r.params.period_days]), [
+    ['tooth_brushing', 'child', 7, 7],
+    ['nail_trim', 'child', 1, 28],
+    ['bath', 'parent', 1, 28],
+  ]);
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'meal_exercise_gap'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_company', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'pra_eye_disease']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle/i);
 });
