@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f6f3b9557c7b71aa9e10c790e7135b093a7577052a0f4fd43744b2aa6de2bf39"
+      "sha256": "f4bb142aded5a930a80be75f438736a665d88b2428cb58560943303ee09c258f"
     }
   },
   "suitability_vocabulary": {
@@ -78348,7 +78348,12 @@
           "S1021"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "belgian-sheepdog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

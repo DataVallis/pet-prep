@@ -1647,6 +1647,19 @@
             "prompt_hash": "sha256:ceb47ed160c82945630379ac0de17c89d4df111ed349894e7661327cfd670978",
             "generated_at": "2026-11-23T03:10:40+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "belgian_sheepdog",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/belgian-sheepdog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:37aa672cf13afd97399190618e7b0ace0822aa6d3882fdb5bda41ad3c787fecb",
+            "generated_at": "2026-11-23T06:46:34+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
