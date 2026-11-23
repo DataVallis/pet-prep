@@ -69215,6 +69215,555 @@
       }
     }
   },
+  "belgian_sheepdog": {
+    "_note": "Added 2026-11-23 (M5-R10-135, unattended run — appended after the Norfolk Terrier: AKC 2024 No. 131 'Belgian Sheepdog', S174 full-list table fetched 2026-11-23 '130 Norfolk Terrier', '131 Belgian Sheepdog', '132 Bracco Italiano'). The FCI recognises one breed, the Belgian Shepherd Dog (FCI No. 15, S312), with four varieties; the game breed is the long-haired black Groenendael variety only (the Malinois, M5-R10-38, and the Tervueren, M5-R10-111, are their own game breeds). The AKC registers it as the 'Belgian Sheepdog'; Wikipedia (S318, tier C): 'the name Belgian Shepherd or Belgian Sheepdog is commonly used to refer to the Groenendael' in the US. Quotes as returned by the web-fetch tool on 2026-11-23 (fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S1019–S1021 (reused S10, S11, S14, S24, S35, S45, S174, S312, S313, S318, S831). No health percentages anywhere. RKC Breeds A–Z page (S1019, royalkennelclub.com, reached through a search result): key facts, Breed Watch Category 1, Good Practice 'Prioritising genetic diversity', Best Practice BVA/KC elbow / hip and BVA/KC/ISDS eye schemes. FCI standard 15 read through the KUSA reprint (S831, 2026-11-23): Groenendael 'Only uniform black.'; weight and height as in S313 (shared by the varieties). Lifespan: no McMillan 2024 / VetCompass value reachable for the Groenendael (Wikipedia quotes McMillan only for the Malinois and the Tervueren) → RKC lower bound 'Over 10 years' → senior 90, provisional (Belgian Malinois / Tervuren precedent). Coren rank 15 'Belgian Sheepdog' (S35, recorded 2026-11-14 in the Tervuren entry) → Excellent → 1.5. No PDSA / Woodgreen / Dogs Trust page found. Names: RKC 'Belgian Shepherd Dog: Groenendael', AKC 'Belgian Sheepdog'; Slovenian »belgijski ovčar groenendael« (Malinois / Tervuren precedent, no KZS page read — open for David).",
+    "identity": {
+      "value": "FCI No. 15, Group 1 Section 1 (Sheepdogs), Belgium",
+      "unit": "—",
+      "source_id": "S312",
+      "quote": "CHIEN DE BERGER BELGE (15)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S312, read 2026-10-14 for the Malinois): varieties 'a) Groenendael, b) Laekenois, c) Malinois, d) Tervueren'; group 1 'Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country BELGIUM. FCI standard 15 (S831): 'The Groenendael and the Tervueren are the long-haired varieties.' The AKC registers the 'Belgian Sheepdog' as its own breed (S174); the RKC as 'Belgian Shepherd Dog: Groenendael' (S1019). Belgium is already in FCI_ORIGINS (BE)."
+    },
+    "size_class": {
+      "value": "medium-large",
+      "unit": "—",
+      "source_id": "S1019",
+      "quote": "Medium-Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size: Medium-Large' (S1019). FCI 20–30 kg (S313) = 44–66 lb → mostly the 'Medium (24–59 pounds)' class of S10; treated like the Belgian Malinois / Tervuren. RKC group: Pastoral."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            60,
+            66
+          ],
+          "female": [
+            56,
+            62
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S313",
+        "quote": "The ideal height at withers is on average - 62 cm for males",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S313, read 2026-10-14; KUSA reprint S831 the same): males on average 62 cm, females 58 cm, limits 2 cm less, 4 cm more → 60–66 / 56–62 cm. Shared by the four varieties."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            null,
+            66
+          ],
+          "female": [
+            null,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1020",
+        "quote": "The average male Belgian Sheepdog stands up to 26 inches tall and weighs 55–75 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S1020, tier B): males 'up to 26 inches', females 'up to 24 inches' (× 2.54 by us = 66 / 61 cm). Alternative only (upper bounds)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            30
+          ],
+          "female": [
+            20,
+            25
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S313",
+        "quote": "Males about 25-30 kg.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S313): 'Males about 25-30 kg.' and 'Females about 20-25 kg.'; shared by the four varieties. The game range (adult_weight_kg 20–30)."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            24.9,
+            34
+          ],
+          "female": [
+            20.4,
+            27.2
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1020",
+        "quote": "The average male Belgian Sheepdog stands up to 26 inches tall and weighs 55–75 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S1020): males 55–75 lb, females 'weighs 45–60 pounds' (× 0.4536 by us). WebMD (S1021) body text the same; its FAQ gives other numbers (not used). Alternative only."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 20–30 kg (S313) ≈ 44–66 lb → mostly 'Medium (24–59 pounds)' (Belgian Malinois / Tervuren precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Belgian Sheepdog growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S1019",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Lifespan: Over 10 years' (S1019). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S1020",
+        "quote": "Belgian Sheepdogs have an average lifespan of 12–14 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1020, tier B, US); WebMD (S1021) 'about 12-14 years'. Lower bound 12 y → 108 would be the senior boundary; alternative only (the runbook's order is McMillan → VetCompass → RKC)."
+      },
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no McMillan 2024 / VetCompass median for the Groenendael reachable (Wikipedia S318 quotes McMillan 2024 only for the Malinois, 12 y, and the Tervueren, 13.8 y)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S1019) → 7.5 y = 90 months. Provisional until a McMillan 2024 / VetCompass value for the variety is checked. Alternatives: 108 (PetMD / WebMD lower bound 12 y, S1020, S1021), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S1019"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S1019",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: More than 2 hours per day' (S1019), runbook first choice → 120 min ('more than N' → N). WebMD (S1021) 'almost two hours' (alternative); PetMD (S1020) no number.",
+        "alternatives": [
+          {
+            "value": "almost 120",
+            "source_id": "S1021",
+            "quote": "Belgian sheepdogs are a herding breed, which means they require almost two hours of exercise each day."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "ample exercise and mental stimulation; does well with active families",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "still need ample exercise and mental stimulation to stay happy",
+        "confidence": "high",
+        "notes": "PetMD (S1020, fragment); 'They tend to do well in homes with active families and fenced yards.' (S1020). Basis of active_family / needs_mental_stimulation."
+      },
+      "active_families": {
+        "value": "does well in homes with active families",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "They tend to do well in homes with active families and fenced yards.",
+        "confidence": "high",
+        "notes": "PetMD (S1020). Basis of active_family (with exercise.adult)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B quote advising a gap between meals and exercise found (PetMD S1020 and WebMD S1021 do not mention bloat) → no meal_exercise_gap row (runbook: never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "watchful, wary and highly intelligent, with an appetite for work",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "an appetite for work, being watchful, wary and highly intelligent",
+        "confidence": "high",
+        "notes": "RKC breed page 'About this breed' (S1019, fragment). FCI standard 15 (S831): 'a watchful and active dog, bursting with energy' (paraphrase of the shared standard)."
+      },
+      "family": {
+        "value": "develops strong bonds with its humans",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Belgian Sheepdogs are known to develop strong bonds with their humans.",
+        "confidence": "medium",
+        "notes": "PetMD (S1020). Not used for family_pet (the same page warns it may herd children)."
+      },
+      "children": {
+        "value": "may try to herd children and other animals",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Raising a Belgian Sheepdog means teaching them what isn't acceptable to herd: children, other animals (like cats), and you.",
+        "confidence": "medium",
+        "notes": "PetMD (S1020) → may_herd_children. PetMD also 'Belgian Sheepdogs tend to do well with children, especially if they are raised with them' and 'the children have been taught how to interact with dogs' (fragments), but WebMD (S1021) warns 'The Belgian can mistakenly assume the noise and playful chaos to be an assault and try to scare the children away.' → conflicting → no children chip (runbook: conflicting sources → no tag)."
+      },
+      "other_pets": {
+        "value": "gets along with cats and dogs it was raised with; may herd cats",
+        "unit": "—",
+        "source_id": "S1021",
+        "quote": "Belgians can get along well with other pets, whether cats or dogs, if they've been raised together.",
+        "confidence": "medium",
+        "notes": "WebMD (S1021); 'they might act hostile if they find a strange animal on their property.' (S1021). PetMD (S1020): may herd 'other animals (like cats)'. No 'prey drive' wording → no chases_small_pets (runbook)."
+      },
+      "strangers": {
+        "value": "may be uneasy with strangers",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "It's not uncommon for Belgian Sheepdogs to show uneasiness toward humans or other animals who are strangers to them.",
+        "confidence": "medium",
+        "notes": "PetMD (S1020). See socialisation."
+      },
+      "socialisation": {
+        "value": "early socialisation is important for its growth and development",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Make sure you also have time to train and socialize them early, as it's important for their growth and development.",
+        "confidence": "high",
+        "notes": "PetMD (S1020); also 'This is why early socialization and training are important.' (S1020) and WebMD (S1021) 'Socialization is also important and should start when the dogs are young.' A need (runbook M5-R17) → proposed_game_parameters.belgian_sheepdog.socialisation (DOG_SOCIALISATION row)."
+      },
+      "time_alone": {
+        "value": "not for people away for long hours; may become destructive or anxious without company",
+        "unit": "—",
+        "source_id": "S1021",
+        "quote": "So they aren't a good choice for people who need to be away from them for long hours at a time.",
+        "confidence": "high",
+        "notes": "WebMD (S1021); 'Without human companionship, they may start finding destructive forms of entertainment or develop separation anxiety.' (S1021). Basis of needs_company."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S1019) → no welfare chip. Breeder checklist: RKC Good Practice 'Prioritising genetic diversity', Best Practice BVA/KC elbow and hip schemes and the BVA/KC/ISDS eye scheme (S1019). PetMD (S1020) health headings: elbow and hip dysplasia, hypothyroidism, sensitivity to anaesthesia, progressive retinal atrophy, epilepsy.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S1019, fragment). Not a welfare breed."
+      },
+      "hip_dysplasia": {
+        "value": "elbow and hip dysplasia",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Elbow and Hip Dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S1020) health heading; RKC Best Practice hip and elbow schemes (S1019). Register health key hip_elbow_dysplasia."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Hypothyroidism",
+        "confidence": "medium",
+        "notes": "PetMD (S1020) health heading. Register health key hypothyroidism."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (an inherited eye disease)",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Progressive Retinal Atrophy (PRA)",
+        "confidence": "medium",
+        "notes": "PetMD (S1020) health heading; RKC Best Practice eye scheme (S1019). Register health key pra_inherited_blindness."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Epilepsy",
+        "confidence": "medium",
+        "notes": "PetMD (S1020) health heading. Register health key epilepsy (when the register has one — else background only)."
+      },
+      "anaesthesia": {
+        "value": "sensitivity to anaesthesia",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Sensitivity to Anesthesia",
+        "confidence": "medium",
+        "notes": "PetMD (S1020) health heading. Background only (no register key)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 15,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Belgian Sheepdog",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-14 for the Tervuren, recorded in belgian_tervuren.trainability.coren_rank: 'Belgian Sheepdog' 15) under 'Excellent Working Dogs' (ranks 11–26). Coren's own article (S34) lists only the top and bottom 10. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;",
+        "confidence": "medium",
+        "notes": "S35 tier 'Excellent Working Dogs' (ranks 11–26). Tier definitions from Wikipedia; verify in the book."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.belgian_sheepdog.learning_multiplier (1.5, runbook rule: Excellent tier, rank 15).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, harmoniously proportioned long-haired shepherd combining elegance and power",
+        "unit": "—",
+        "source_id": "S313",
+        "quote": "The Belgian Shepherd is a mediolineal dog, harmoniously proportioned, combining elegance and power.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S313, shared by the varieties)."
+      },
+      "colours": {
+        "value": [
+          "black"
+        ],
+        "unit": "list",
+        "source_id": "S831",
+        "quote": "Only uniform black.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, 2026-11-23): 'Groenendael:' 'Only uniform black.'; 'a small amount of white is tolerated on forechest and toes' (all varieties); Groenendael faults 'reddish tinges in the coat; grey breeches' (fragment); disqualifying 'any colours that do not correspond with those of the described varieties' (fragment). Wikipedia (S318, tier C) 'Solid black'. One colour → no colour picker variants. The game shows solid black without white marks."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): one colour, black (the only standard colour)."
+      },
+      "coat": {
+        "value": "long-haired variety: short on the head, outer ears and lower legs; long and smooth on the body, longer and more abundant around the neck and forechest; dense woolly undercoat",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "The hair is long and smooth on the rest of the body, and longer and more abundant around the neck and on the forechest",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, fragment); 'dense, close fitting, and of good texture, with the woolly undercoat forming an excellent protective covering' (fragment). RKC key fact 'Coat length: Medium' (S1019)."
+      },
+      "head": {
+        "value": "carried high, long without exaggeration, an elongated wedge; muzzle of medium length",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "narrowing gradually toward the nose like an elongated wedge",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, fragment): 'Carried high, long without exaggeration, rectilinear … well-chiselled and dry'; skull and muzzle roughly equal in length; nose 'Black.' Not flat-faced."
+      },
+      "eyes": {
+        "value": "medium size, slightly almond-shaped, brownish, preferably dark, black-rimmed eyelids",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Medium size, neither protruding nor sunken, slightly almond-shaped, obliquely set, brownish colour, preferably dark; black-rimmed eyelids",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831)."
+      },
+      "ears": {
+        "value": "rather small, set high, distinctly triangular, stiff and erect",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Rather small, set high, distinctly triangular appearance, well-rounded outer ear, pointed tips, stiff, carried upright, and vertical when dog is alert.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831)."
+      },
+      "tail": {
+        "value": "medium length, reaching at least to the hock; carried down at rest with the tip curved back; plumed",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Well set on, strong at the base, of medium length, reaching at least to hock",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831, read 2026-11-14 for the Tervuren; shared by the varieties); a missing or shortened tail disqualifies (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S1019, reached 2026-11-23), PetMD (S1020) and WebMD (S1021). No PDSA / Woodgreen / Dogs Trust page for the breed. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Medium-Large",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Medium-Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S1019)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S1019). Basis of 120 min, active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S1019). Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S1019). Basis of large_home (with the home)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S1019) — no number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S1020) 'Regular, weekly brushings' / WebMD (S1021) 'a weekly brushing' → 1 (open for David: 'more than once a week' reads as 2 or more). With PetMD 'brushed frequently … especially during periods of shedding' → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S1019); the standard describes the long-haired variety (S831)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S1019). Basis of the sheds chip; PetMD (S1020) 'especially during periods of shedding' and WebMD (S1021) daily brushing while shedding agree."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S1019",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; frequent brushing while shedding",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "Regular, weekly brushings will keep their coat beautiful and healthy, especially because it can be prone to matting.",
+        "confidence": "high",
+        "notes": "PetMD (S1020); 'need their long coat brushed frequently to remove dead hairs, especially during periods of shedding' (fragment) → 1 session a week (seasonal moult not modelled). With RKC 'More than once a week' → frequent_grooming."
+      },
+      "webmd_grooming": {
+        "value": "weekly brushing; daily while shedding",
+        "unit": "—",
+        "source_id": "S1021",
+        "quote": "Most of the year, all it needs is a weekly brushing and an occasional bath.",
+        "confidence": "high",
+        "notes": "WebMD (S1021); 'During this time, you need to brush their coat thoroughly every day to remove excess fur.' (seasonal, not modelled)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears once or twice a month",
+        "unit": "—",
+        "source_id": "S1020",
+        "quote": "clean your dog's ears once or twice a month with a veterinary-approved ear cleaner",
+        "confidence": "high",
+        "notes": "PetMD (S1020, fragment) → ear cleaning once a month ('once or twice a month' → the lower bound; M5-R18 child mini-game)."
+      },
+      "webmd_bathing": {
+        "value": "a monthly bath",
+        "unit": "—",
+        "source_id": "S1021",
+        "quote": "if not competing, a monthly bath with weekly brushing will suffice.",
+        "confidence": "high",
+        "notes": "WebMD (S1021, a breeder quoted by the page) → bath reminder every 4 weeks (month → 28 days; M5-R18 parent reminder, never scored)."
+      },
+      "webmd_teeth": {
+        "value": "brush the teeth daily",
+        "unit": "—",
+        "source_id": "S1021",
+        "quote": "It's best to do this daily.",
+        "confidence": "high",
+        "notes": "WebMD (S1021), about brushing the teeth with dog toothpaste and a toothbrush (context paraphrase) → tooth brushing every day (M5-R15 child mini-game)."
+      },
+      "webmd_nails": {
+        "value": "trim the nails regularly",
+        "unit": "—",
+        "source_id": "S1021",
+        "quote": "make a habit of regularly trimming your dog's nails.",
+        "confidence": "high",
+        "notes": "WebMD (S1021, fragment) — no frequency → no nail task (runbook)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -103693,6 +104242,309 @@
         "confidence": "high",
         "notes": "norfolk_terrier.suitability.pdsa_grooming. PDSA stripping 'three to four times per year' → every 3 months = 12 program weeks (Wire Fox Terrier / Airedale Terrier precedent). Woodgreen (S1013) 'clipped about three times a year' (every 4 months) — alternative, open for David.",
         "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja / ročno trimanje vsakih 12 tednov (PDSA »three to four times per year«)"
+      }
+    },
+    "belgian_sheepdog": {
+      "_note": "Unattended run M5-R10-135 (2026-11-23): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1019 'More than 2 hours per day' → 120). Senior 90 provisional (RKC lower bound 'Over 10 years' — no McMillan 2024 / VetCompass value for the variety). Coren rank 15 (Excellent) → 1.5. Built: brushing 1× a week (RKC 'More than once a week' → PetMD / WebMD 'weekly', M5-R13 — open for David), tooth brushing every day (WebMD S1021, M5-R15), ear cleaning once a month (PetMD S1020 'once or twice a month', M5-R18), bath reminder every 4 weeks (WebMD S1021 'a monthly bath', M5-R18), puppy socialisation with the PetMD quote (M5-R17). No meal gap (no quote), no heat warning (not flat-faced), no nail / groomer task (no frequency). No new vocabulary key. RKC Breed Watch Category 1 → in marketing. One standard colour (black) → no colour variants. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S1019",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S1019) → rule 'more than N' → 120. WebMD (S1021) 'almost two hours' agrees; PetMD (S1020) gives no number.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S1019 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S1019",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S1019). No McMillan 2024 / VetCompass value reachable for the Groenendael. Alternatives: 108 (PetMD / WebMD lower bound 12 y, S1020, S1021), 84 (Dogs Trust > 7 y, S14). Provisional until a McMillan 2024 value for the variety is checked — open for David.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1019"
+        ],
+        "alternatives": {
+          "senior_petmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S1019)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 15 'Belgian Sheepdog' (S35) → tier Excellent (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 15, Excellent, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1020",
+        "quote": "Regular, weekly brushings will keep their coat beautiful and healthy, especially because it can be prone to matting.",
+        "confidence": "medium",
+        "notes": "belgian_sheepdog.suitability.petmd_grooming. RKC 'Grooming: More than once a week' (S1019) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S1020) 'weekly' (WebMD S1021 'a weekly brushing' the same) → 1. Open for David: 'more than once a week' suggests 2 or more (Belgian Tervuren 1, Belgian Malinois 2). Seasonal daily brushing while shedding is not modelled. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S1019",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          },
+          {
+            "value": 7,
+            "source_id": "S1021",
+            "quote": "During this time, you need to brush their coat thoroughly every day to remove excess fur.",
+            "notes": "WebMD — only while shedding (seasonal, not modelled)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »weekly«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R15)",
+        "source_id": "S1021",
+        "quote": "It's best to do this daily.",
+        "confidence": "high",
+        "notes": "belgian_sheepdog.suitability.webmd_teeth (WebMD, about brushing the teeth). 'daily' → every day.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (WebMD »It's best to do this daily.«)"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S1020",
+        "quote": "clean your dog's ears once or twice a month with a veterinary-approved ear cleaner",
+        "confidence": "high",
+        "notes": "belgian_sheepdog.suitability.petmd_ears. 'once or twice a month' → a range → its lower bound → once a month (4 program weeks).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes 1× na mesec (PetMD »once or twice a month« → spodnja meja)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R18)",
+        "source_id": "S1021",
+        "quote": "if not competing, a monthly bath with weekly brushing will suffice.",
+        "confidence": "high",
+        "notes": "belgian_sheepdog.suitability.webmd_bathing. 'a monthly bath' → every 4 weeks. Nails ('regularly') and groomer: no frequency → no task.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (WebMD »a monthly bath«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1020",
+        "quote": "Make sure you also have time to train and socialize them early, as it's important for their growth and development.",
+        "confidence": "high",
+        "notes": "belgian_sheepdog.behaviour.socialisation (PetMD S1020, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1020)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-135); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1019",
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.exercise.adult",
+              "belgian_sheepdog.exercise.active_families"
+            ],
+            "quote": "S1019 'More than 2 hours per day'; S1020 'They tend to do well in homes with active families and fenced yards.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S1019"
+            ],
+            "refs": [
+              "belgian_sheepdog.suitability.rkc_size_of_home",
+              "belgian_sheepdog.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S1019 'Large house' / 'Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1019"
+            ],
+            "refs": [
+              "belgian_sheepdog.exercise.adult",
+              "belgian_sheepdog.suitability.rkc_exercise"
+            ],
+            "quote": "S1019 'More than 2 hours per day'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.behaviour.children"
+            ],
+            "quote": "S1020 'Raising a Belgian Sheepdog means teaching them what isn't acceptable to herd: children, other animals (like cats), and you.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.exercise.daily_text"
+            ],
+            "quote": "S1020 'still need ample exercise and mental stimulation to stay happy'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1021"
+            ],
+            "refs": [
+              "belgian_sheepdog.behaviour.time_alone"
+            ],
+            "quote": "S1021 'So they aren't a good choice for people who need to be away from them for long hours at a time.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1019"
+            ],
+            "refs": [
+              "belgian_sheepdog.suitability.rkc_shedding"
+            ],
+            "quote": "S1019 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1019",
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.suitability.rkc_grooming",
+              "belgian_sheepdog.suitability.petmd_grooming"
+            ],
+            "quote": "S1019 'More than once a week'; S1020 'Regular, weekly brushings …' (brushed frequently while shedding)"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PetMD 'develop strong bonds with their humans' but warns it may herd children — no plain family-pet statement (Belgian Malinois / Tervuren precedent).",
+          "children": "Conflicting: PetMD (S1020) 'tend to do well with children, especially if they are raised with them' vs WebMD (S1021) may try to scare the children away → no chip (runbook: conflicting sources → no tag).",
+          "small_children": "No rating.",
+          "apartment": "RKC 'Large house' (S1019).",
+          "chases_small_pets": "No 'prey drive' wording — herding only (runbook).",
+          "experienced_owner": "No A/B statement found.",
+          "shorter_lifespan": "RKC 'Over 10 years'.",
+          "welfare_chip": "RKC Breed Watch Category 1 (S1019) — no points of concern.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, may_herd_children, needs_mental_stimulation, needs_company, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed (FCI S831 muzzle 'like an elongated wedge'); RKC Breed Watch Category 1 (S1019) — no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Belgian Sheepdog (Groenendael — Belgian Shepherd, long-haired black variety), solid black: medium-sized, harmoniously proportioned, elegant and powerful; long smooth coat with an abundant ruff around the neck and forechest, breeches and a plumed tail, short on the head and lower legs; rather small, high-set, triangular erect ears; medium, slightly almond-shaped dark brown eyes; long wedge-shaped muzzle with a black nose; natural tail reaching the hock, carried low",
+        "unit": "—",
+        "source_id": "S831",
+        "quote": "Only uniform black.",
+        "confidence": "high",
+        "notes": "FCI standard 15 (S831). Not a welfare breed → no welfare trait. Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): solid black (the only standard colour) is the portrait default; never white marks beyond the forechest / toes, never grey, red or fawn"
       }
     }
   }

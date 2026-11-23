@@ -1018,6 +1018,14 @@ class FalAiService
                 .'dropping forward close to the cheek, a natural tail of moderate length carried jauntily, alert, fearless, lovable expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-135: FCI standard No. 15 (S313, S831) — long-haired Groenendael variety, uniform black; erect triangular ears,
+            // natural plumed tail.
+            BreedType::BelgianSheepdog => 'A medium-sized, harmoniously proportioned, elegant and powerful Belgian Sheepdog (Groenendael, the long-haired '
+                .'black Belgian Shepherd) with a long, smooth, uniformly black coat, a full ruff around the neck and forechest, breeches and a plumed tail, '
+                .'short hair on the head and lower legs, rather small high-set triangular erect ears, medium slightly almond-shaped dark brown eyes, '
+                .'a long wedge-shaped muzzle with a black nose, natural tail reaching the hock carried low, watchful expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2384,6 +2392,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'hard, wiry, straight close-lying coat, longer and rougher on the neck and shoulders',
                 'markings' => 'solid red coat without white patches, black nose, V-shaped drop ears',
+            ],
+            // M5-R10-135: the only Groenendael colour of FCI standard 15 (S831 "Only uniform black."), no white marks.
+            BreedType::BelgianSheepdog => [
+                'color_scheme' => 'black',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, smooth coat with a dense undercoat, a ruff, breeches and a plumed tail',
+                'markings' => 'uniformly black coat without white marks, black nose, erect triangular ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
