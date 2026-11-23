@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "eeb9c453f648e3873b8d38d51f42c8c2fcce82e17b6d9e97694eae5814e133a8"
+      "sha256": "58270cfbf14ff08683e3eb217939a25ea31894fc2ea87197401e9995373ad578"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "faaf383f3a4cc43b9a77f9ae46c2090d9d92255293211a9f1de757ff2499ce6a"
+      "sha256": "013377b9df5e6d18325db1f1301806e333f5328f6212c148b934313532be44cf"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "befe20f1d62a0823f060e68b28113d990595fa5c3a9e3306fc0151493be44966"
+      "sha256": "fa9a814f6527096d856882943a39d04044af5f8f796ef7c998805d1a3408d114"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5c4bd17c121e8c61cf8ba8f05a36df3963e9843e652f7625d16233f5291f0aba"
+      "sha256": "d6402863c5c56ef3d0d00cfffcd90a4ce3ce200d1464a18021a91db137c25368"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "171f25dc99162bdf798618a37930c08b27199d0f6ef6bfd7500778555de406e0"
+      "sha256": "d070aee17b8a118eac41a5d0bc8bc187ef2799e6b2ae7ea5baa7c973baec5874"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "358f63b5da346d36d612608164e97ae92e552baa4aabc3e7a3307fac57114c7f"
+      "sha256": "a9ee1e76bb7bc6af48df947760ba3af3f1cefd8fde6eaab5659a0ff881e4b673"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "5982f5f16f4403f51d75e5afdf0cdb4100c15697c88f56e2f5d8ee8cce05273f"
+      "sha256": "ef8c582824c72a66cb8169dbe019bdf1ac28f72f27ae7f6c28969dc6d8db5a62"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 123,
+      "breed_count": 124,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -76147,6 +76147,586 @@
       ]
     },
     {
+      "id": "finnish_lapphund",
+      "species": "dog",
+      "order": 123,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Finnish Lapphund",
+        "sl": "Finski laponski pes"
+      },
+      "slug": {
+        "en": "finnish-lapphund",
+        "sl": "finski-laponski-pes"
+      },
+      "synonyms": {
+        "en": [
+          "Finnish Lapponian Dog",
+          "Lapinkoira",
+          "Suomenlapinkoira",
+          "Lappie"
+        ],
+        "sl": [
+          "finski laponski pes",
+          "laponski pes",
+          "finski lapphund"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S1004"
+          ],
+          "ref": "finnish_lapphund.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              46,
+              52
+            ],
+            "female": [
+              41,
+              47
+            ]
+          },
+          "source_ids": [
+            "S1003"
+          ],
+          "ref": "finnish_lapphund.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              15,
+              24
+            ],
+            "female": [
+              15,
+              24
+            ]
+          },
+          "source_ids": [
+            "S1006"
+          ],
+          "ref": "finnish_lapphund.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "finnish_lapphund.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S1004"
+          ],
+          "ref": "finnish_lapphund.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S1004"
+          ],
+          "ref": "finnish_lapphund.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S1004"
+          ],
+          "ref": "finnish_lapphund.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S1004"
+          ],
+          "ref": "finnish_lapphund.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1004"
+          ],
+          "ref": "finnish_lapphund.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 189,
+            "group": 5,
+            "section": 3,
+            "origin": "FI"
+          },
+          "source_ids": [
+            "S1002"
+          ],
+          "ref": "finnish_lapphund.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S1006"
+          ],
+          "ref": "finnish_lapphund.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S1006"
+          ],
+          "ref": "finnish_lapphund.health.pra",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1004"
+            ],
+            "refs": [
+              "finnish_lapphund.exercise.adult",
+              "finnish_lapphund.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1007"
+            ],
+            "refs": [
+              "finnish_lapphund.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1007"
+            ],
+            "refs": [
+              "finnish_lapphund.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1006"
+            ],
+            "refs": [
+              "finnish_lapphund.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1004"
+            ],
+            "refs": [
+              "finnish_lapphund.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1004"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1004 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1004"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 12 y, S1004)"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.grooming",
+            "basis_source_ids": [
+              "S1004"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.tooth_brushing",
+            "basis_source_ids": [
+              "S1007"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.nail_trimming",
+            "basis_source_ids": [
+              "S1007"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »once a month« → vsake 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.finnish_lapphund.bathing",
+            "basis_source_ids": [
+              "S1006"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »Monthly bathing« → vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1004",
+          "S1006",
+          "S1007"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S1004"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S1004"
+            ]
+          },
+          {
+            "key": "dna_gsd2",
+            "level": "best_practice",
+            "source_ids": [
+              "S1004"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1004"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1004"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1004"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S1004"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1002",
+        "S1003",
+        "S1004",
+        "S1006",
+        "S1007",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -83294,6 +83874,41 @@
       "publisher": "Veterinary and Animal Science 13:100194 (2021)",
       "title": "Bell L., Hesketh S. Mastiff breed mortality: A study of owner experience, dog age and longevity. doi:10.1016/j.vas.2021.100194",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8379649"
+    },
+    {
+      "id": "S1002",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature: SUOMENLAPINKOIRA (189)",
+      "url": "https://www.fci.be/EN/nomenclature/FINNISH-LAPPONIAN-DOG-189.html"
+    },
+    {
+      "id": "S1003",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 189 — Finnish Lapponian Dog (Suomenlapinkoira), EN 12.10.2016 (official valid standard published 30.09.2016) (PDF)",
+      "url": "https://www.fci.be/Nomenclature/Standards/189g05-en.pdf"
+    },
+    {
+      "id": "S1004",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A–Z: Finnish Lapphund",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/finnish-lapphund/"
+    },
+    {
+      "id": "S1006",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Mouton Dowdy, reviewed by Barri J. Morrison, DVM (updated Apr. 29, 2024)",
+      "title": "Finnish Lapphund",
+      "url": "https://petmd.com/dog/breeds/finnish-lapphund"
+    },
+    {
+      "id": "S1007",
+      "tier": "B",
+      "publisher": "WebMD Pets — Logan Smith, medically reviewed by Amy Flowers, DVM (2024-06-10)",
+      "title": "What to Know About Finnish Lapphunds",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-finnish-lapphunds"
     },
     {
       "id": "C1",

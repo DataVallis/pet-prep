@@ -513,6 +513,7 @@ const SPECIES = [
       { id: 'tibetan_spaniel', synonyms: { en: ['Tibbie'], sl: ['tibetanski spanjel', 'tibetan španjel'] } },
       { id: 'black_russian_terrier', synonyms: { en: ['Russian Black Terrier', 'Russian Terrier', 'Tchiorny Terrier', 'BRT', 'RBT'], sl: ['ruski crni terier', 'črni ruski terier', 'ruski terier'] } },
       { id: 'neapolitan_mastiff', synonyms: { en: ['Mastino Napoletano', 'Neo', 'Neapolitan'], sl: ['napolitanski mastif', 'neapeljski mastif', 'mastino napoletano'] } },
+      { id: 'finnish_lapphund', synonyms: { en: ['Finnish Lapponian Dog', 'Lapinkoira', 'Suomenlapinkoira', 'Lappie'], sl: ['finski laponski pes', 'laponski pes', 'finski lapphund'] } },
     ],
   },
   {
@@ -537,7 +538,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO', Finland: 'FI' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -3357,6 +3358,27 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-133. RKC Breeds A–Z page reached (S1004): exercise 'Up to 1 hour per day', coat 'Medium', grooming 'Once a week',
+  // sheds 'Yes', lifespan 'Over 12 years'; height = FCI-Standard N° 189 (S1003: ideal 49 / 44 cm ± 3 cm); weight = PetMD
+  // (S1006: 33–53 lb, no standard weight). Unranked by Coren (S35 not re-read — open for David). FCI origin Finland. Not
+  // exported: height / weight alternatives (AKC / WebMD), lifespan.petmd (span background), senior_from (derived),
+  // health.gsd2 (no own key), health.elbow_dysplasia (covered by hip_elbow_dysplasia). No new health key.
+  finnish_lapphund: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren as far as known (S35 not re-read by name, M5-R10-133 — open for David) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_dysplasia'],
+      ['pra_eye_disease', 'health.pra'],
+    ],
+  },
 
 
 
@@ -3447,6 +3469,7 @@ export const DOG_CARE_TASKS = {
   tibetan_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.tibetan_spaniel.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.tibetan_spaniel.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.tibetan_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.tibetan_spaniel.bathing']],
   black_russian_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.black_russian_terrier.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.black_russian_terrier.nail_trimming'], ['groomer_visit', 1, 42, 'proposed_game_parameters.black_russian_terrier.professional_grooming']],
   neapolitan_mastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.neapolitan_mastiff.face_fold_cleaning'], ['bath', 1, 28, 'proposed_game_parameters.neapolitan_mastiff.bathing']],
+  finnish_lapphund: [['tooth_brushing', 7, 7, 'proposed_game_parameters.finnish_lapphund.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.finnish_lapphund.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.finnish_lapphund.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4453,6 +4476,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.neapolitan_mastiff.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.neapolitan_mastiff.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.neapolitan_mastiff.exercise_minutes_senior',
+  },
+  finnish_lapphund: {
+    adult_minutes: ['proposed_game_parameters.finnish_lapphund.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.finnish_lapphund.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.finnish_lapphund.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.finnish_lapphund.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.finnish_lapphund.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.finnish_lapphund.exercise_minutes_senior',
   },
 
 
