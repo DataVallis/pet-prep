@@ -68221,7 +68221,7 @@
     },
     "exercise": {
       "adult": {
-        "value": 60,
+        "value": "≤ 60",
         "unit": "minutes/day",
         "source_id": "S1004",
         "quote": "Up to 1 hour per day",
@@ -68439,7 +68439,7 @@
           "black and tan",
           "black",
           "brown",
-          "wolf-sable",
+          "wolf-sable (grey sable)",
           "sable",
           "cream"
         ],
