@@ -868,6 +868,15 @@ return [
         ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plav'],
         ['key' => 'deep-fawn', 'value' => 'deep fawn (red deer)', 'en' => 'Deep fawn', 'sl' => 'Temno plav'],
     ],
+    // M5-R10-133: FCI-Standard N° 189 (S1003) "All colours are permitted." — six common colours; same order and values as breed_appearance.php.
+    'finnish_lapphund' => [
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'wolf-sable', 'value' => 'wolf-sable (grey sable)', 'en' => 'Wolf sable', 'sl' => 'Volčje siv'],
+        ['key' => 'sable', 'value' => 'sable', 'en' => 'Sable', 'sl' => 'Sobolji'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Krem'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
