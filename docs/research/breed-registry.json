@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "00f352b195605b6de234a697e932b747488f5a147df79d4adcea0f950a68a9b1"
+      "sha256": "6f2cfe07163b9f47f40445771f43da1f639cb35b7487650879e9a775c08b44af"
     }
   },
   "suitability_vocabulary": {
@@ -77708,7 +77708,12 @@
           "S1015"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "norfolk-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "none_recommended",
         "tests": [],
