@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "0876b281cdb6de1b5a496571b86f212ed10aa55f612017a84fc20362d178dd06"
+      "sha256": "9e088e74d2a3c11a9300f22922448252799b1738a8aa42c897a49851060ae797"
     }
   },
   "suitability_vocabulary": {
@@ -77005,7 +77005,12 @@
           "S1007"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "finnish-lapphund.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

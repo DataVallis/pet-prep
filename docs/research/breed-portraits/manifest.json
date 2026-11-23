@@ -1621,6 +1621,19 @@
             "prompt_hash": "sha256:7040362e3d52664d8b5b94d6092a6491ba07f1eb01de80a21d0a7aa01ecb16d0",
             "generated_at": "2026-11-22T07:51:49+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "finnish_lapphund",
+            "species": "dog",
+            "colour": "black-tan",
+            "file": "dog/finnish-lapphund.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d2cbfafce25e39894478042c628ad928836a5ad175a3666cc7439af1d265b427",
+            "generated_at": "2026-11-23T01:04:10+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
