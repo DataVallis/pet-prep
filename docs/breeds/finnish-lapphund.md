@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `finnish_lapphund` (viri S1002–S1008; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1004) |
 | Izvor | FCI št. 189, skupina 5, sekcija 3 (nordijski čuvaji in pastirski psi), Finska (S1002, S1003) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 129. mesto »Finnish Lapphund« (S174, prebrano 2026-11-23: »128 Neopolitan Mastiff«, »129 Finnish Lapphund«, »130 Norfolk Terrier«) |
-| PR-ji | pet-prep #1519 (pasma) · portret pet-prep (sledi) · barvne različice pet-prep (sledi) · spletna stran: pet-prep-website `feat/register-finnish-lapphund` |
+| PR-ji | pet-prep #1519 (pasma, združen `c32d8bf`) · portret pet-prep (zagon `breed-portraits.yml` 45092349946, sprejet v prvem poskusu) · barvne različice pet-prep (sledi) · spletna stran: pet-prep-website `feat/register-finnish-lapphund` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-23 |
 | Ščetkanje zob vsak dan, kremplji vsake 4 tedne (otrok); opomnik za kopanje vsake 4 tedne (starši) | 🛠 | 💶 izziv | M5-R15 / R19 / R20 | 2026-11-23 |
 | Barve (izbirnik: 6 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-23 |
-| AI portret v registru | 🗓 sledi v tem zagonu | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črno-rjav, pokončna ušesa, košat rep čez hrbet, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-23 |
 | Stran na petprep.si (`/animals/dogs/finnish-lapphund`, `/sl/zivali/psi/finski-laponski-pes`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
