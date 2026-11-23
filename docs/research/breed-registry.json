@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f4bb142aded5a930a80be75f438736a665d88b2428cb58560943303ee09c258f"
+      "sha256": "57e16e5d2d11d888d6bf8bdfc0e314a52ac54ad84f9c95df24e18f5e8e8a36b3"
     }
   },
   "suitability_vocabulary": {
@@ -43954,7 +43954,50 @@
         "file": "cairn-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "wheaten",
+            "label": {
+              "en": "Wheaten",
+              "sl": "Pšenično rumen"
+            },
+            "file": "dog/cairn-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/cairn-terrier--red.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/cairn-terrier--cream.webp"
+          },
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey",
+              "sl": "Siv"
+            },
+            "file": "dog/cairn-terrier--grey.webp"
+          },
+          {
+            "key": "nearly-black",
+            "label": {
+              "en": "Nearly black",
+              "sl": "Skoraj črn"
+            },
+            "file": "dog/cairn-terrier--nearly-black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -44502,7 +44545,58 @@
         "file": "bull-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/bull-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/bull-terrier--brindle.webp"
+          },
+          {
+            "key": "black-brindle",
+            "label": {
+              "en": "Black brindle",
+              "sl": "Črno tigrast"
+            },
+            "file": "dog/bull-terrier--black-brindle.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/bull-terrier--red.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plav"
+            },
+            "file": "dog/bull-terrier--fawn.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/bull-terrier--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -45043,7 +45137,26 @@
         "file": "miniature-pinscher.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/miniature-pinscher.webp",
+            "default": true
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn s porjavelimi oznakami"
+            },
+            "file": "dog/miniature-pinscher--black-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -45664,7 +45777,50 @@
         "file": "pyrenean-mountain-dog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/pyrenean-mountain-dog.webp",
+            "default": true
+          },
+          {
+            "key": "white-badger",
+            "label": {
+              "en": "White with badger patches",
+              "sl": "Bel z jazbečastimi lisami"
+            },
+            "file": "dog/pyrenean-mountain-dog--white-badger.webp"
+          },
+          {
+            "key": "white-grey",
+            "label": {
+              "en": "White with grey patches",
+              "sl": "Bel s sivimi lisami"
+            },
+            "file": "dog/pyrenean-mountain-dog--white-grey.webp"
+          },
+          {
+            "key": "white-yellow",
+            "label": {
+              "en": "White with pale yellow patches",
+              "sl": "Bel z bledo rumenimi lisami"
+            },
+            "file": "dog/pyrenean-mountain-dog--white-yellow.webp"
+          },
+          {
+            "key": "white-orange",
+            "label": {
+              "en": "White with orange patches",
+              "sl": "Bel z oranžnimi lisami"
+            },
+            "file": "dog/pyrenean-mountain-dog--white-orange.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -46899,7 +47055,58 @@
         "file": "irish-wolfhound.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey",
+              "sl": "Siv"
+            },
+            "file": "dog/irish-wolfhound.webp",
+            "default": true
+          },
+          {
+            "key": "wheaten",
+            "label": {
+              "en": "Wheaten",
+              "sl": "Pšenično rumen"
+            },
+            "file": "dog/irish-wolfhound--wheaten.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Rumenorjav"
+            },
+            "file": "dog/irish-wolfhound--fawn.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/irish-wolfhound--red.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/irish-wolfhound--black.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "Pure white",
+              "sl": "Čisto bel"
+            },
+            "file": "dog/irish-wolfhound--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

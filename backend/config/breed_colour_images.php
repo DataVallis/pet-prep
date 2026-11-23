@@ -394,8 +394,42 @@ return [
         'orange-white' => 'dogs/nova-scotia-duck-tolling-retriever--orange-white.webp',
         'red' => 'dogs/nova-scotia-duck-tolling-retriever--red.webp',
     ],
+    'cairn_terrier' => [
+        'wheaten' => 'dogs/cairn-terrier.webp',
+        'red' => 'dogs/cairn-terrier--red.webp',
+        'cream' => 'dogs/cairn-terrier--cream.webp',
+        'grey' => 'dogs/cairn-terrier--grey.webp',
+        'nearly-black' => 'dogs/cairn-terrier--nearly-black.webp',
+    ],
+    'bull_terrier' => [
+        'white' => 'dogs/bull-terrier.webp',
+        'brindle' => 'dogs/bull-terrier--brindle.webp',
+        'black-brindle' => 'dogs/bull-terrier--black-brindle.webp',
+        'red' => 'dogs/bull-terrier--red.webp',
+        'fawn' => 'dogs/bull-terrier--fawn.webp',
+        'tricolour' => 'dogs/bull-terrier--tricolour.webp',
+    ],
+    'miniature_pinscher' => [
+        'red' => 'dogs/miniature-pinscher.webp',
+        'black-tan' => 'dogs/miniature-pinscher--black-tan.webp',
+    ],
+    'pyrenean_mountain_dog' => [
+        'white' => 'dogs/pyrenean-mountain-dog.webp',
+        'white-badger' => 'dogs/pyrenean-mountain-dog--white-badger.webp',
+        'white-grey' => 'dogs/pyrenean-mountain-dog--white-grey.webp',
+        'white-yellow' => 'dogs/pyrenean-mountain-dog--white-yellow.webp',
+        'white-orange' => 'dogs/pyrenean-mountain-dog--white-orange.webp',
+    ],
     'soft_coated_wheaten_terrier' => [
         'wheaten' => 'dogs/soft-coated-wheaten-terrier.webp',
+    ],
+    'irish_wolfhound' => [
+        'grey' => 'dogs/irish-wolfhound.webp',
+        'wheaten' => 'dogs/irish-wolfhound--wheaten.webp',
+        'fawn' => 'dogs/irish-wolfhound--fawn.webp',
+        'red' => 'dogs/irish-wolfhound--red.webp',
+        'black' => 'dogs/irish-wolfhound--black.webp',
+        'white' => 'dogs/irish-wolfhound--white.webp',
     ],
     'greater_swiss_mountain_dog' => [
         'tricolour' => 'dogs/greater-swiss-mountain-dog.webp',
