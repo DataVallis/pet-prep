@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "e4ab3b032b1abb9cbdac55396d0760c2ab0b57a3f5b04640f9c19b9ed542749f"
+      "sha256": "0876b281cdb6de1b5a496571b86f212ed10aa55f612017a84fc20362d178dd06"
     }
   },
   "suitability_vocabulary": {
@@ -37748,7 +37748,42 @@
         "file": "akita.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Red fawn",
+              "sl": "Rdečkasto plav"
+            },
+            "file": "dog/akita.webp",
+            "default": true
+          },
+          {
+            "key": "pinto",
+            "label": {
+              "en": "Pinto",
+              "sl": "Lisast"
+            },
+            "file": "dog/akita--pinto.webp"
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/akita--brindle.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/akita--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -38259,7 +38294,58 @@
         "file": "cardigan-welsh-corgi.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/cardigan-welsh-corgi.webp",
+            "default": true
+          },
+          {
+            "key": "brindle-white",
+            "label": {
+              "en": "Brindle and white",
+              "sl": "Tigrast z belo"
+            },
+            "file": "dog/cardigan-welsh-corgi--brindle-white.webp"
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/cardigan-welsh-corgi--sable-white.webp"
+          },
+          {
+            "key": "blue-merle",
+            "label": {
+              "en": "Blue merle",
+              "sl": "Modro marmoriran"
+            },
+            "file": "dog/cardigan-welsh-corgi--blue-merle.webp"
+          },
+          {
+            "key": "tricolour-brindle",
+            "label": {
+              "en": "Tricolour, brindle points",
+              "sl": "Trobarven s tigrastimi oznakami"
+            },
+            "file": "dog/cardigan-welsh-corgi--tricolour-brindle.webp"
+          },
+          {
+            "key": "tricolour-red",
+            "label": {
+              "en": "Tricolour, red points",
+              "sl": "Trobarven z rdečimi oznakami"
+            },
+            "file": "dog/cardigan-welsh-corgi--tricolour-red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -38882,7 +38968,34 @@
         "file": "german-wirehaired-pointer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "liver-roan",
+            "label": {
+              "en": "Liver roan",
+              "sl": "Rjavo-sivkast"
+            },
+            "file": "dog/german-wirehaired-pointer.webp",
+            "default": true
+          },
+          {
+            "key": "liver-white",
+            "label": {
+              "en": "Liver and white",
+              "sl": "Rjavo-bel"
+            },
+            "file": "dog/german-wirehaired-pointer--liver-white.webp"
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Rjav"
+            },
+            "file": "dog/german-wirehaired-pointer--liver.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -39518,7 +39631,34 @@
         "file": "saint-bernard.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/saint-bernard.webp",
+            "default": true
+          },
+          {
+            "key": "white-red",
+            "label": {
+              "en": "White with red patches",
+              "sl": "Bel z rdečimi lisami"
+            },
+            "file": "dog/saint-bernard--white-red.webp"
+          },
+          {
+            "key": "brindle-white",
+            "label": {
+              "en": "Red brindle and white",
+              "sl": "Rdeče tigrasto-bel"
+            },
+            "file": "dog/saint-bernard--brindle-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -40077,7 +40217,98 @@
         "file": "staffordshire-bull-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/staffordshire-bull-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "brindle-white",
+            "label": {
+              "en": "Brindle and white",
+              "sl": "Tigrasto-bel"
+            },
+            "file": "dog/staffordshire-bull-terrier--brindle-white.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/staffordshire-bull-terrier--red.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/staffordshire-bull-terrier--black-white.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plav"
+            },
+            "file": "dog/staffordshire-bull-terrier--fawn.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/staffordshire-bull-terrier--black.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder"
+            },
+            "file": "dog/staffordshire-bull-terrier--blue.webp"
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/staffordshire-bull-terrier--red-white.webp"
+          },
+          {
+            "key": "blue-white",
+            "label": {
+              "en": "Blue and white",
+              "sl": "Modro-bel"
+            },
+            "file": "dog/staffordshire-bull-terrier--blue-white.webp"
+          },
+          {
+            "key": "fawn-white",
+            "label": {
+              "en": "Fawn and white",
+              "sl": "Plavo-bel"
+            },
+            "file": "dog/staffordshire-bull-terrier--fawn-white.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/staffordshire-bull-terrier--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -40676,7 +40907,26 @@
         "file": "airedale-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Rjav s črnim sedlom"
+            },
+            "file": "dog/airedale-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "grizzle-tan",
+            "label": {
+              "en": "Grizzle and tan",
+              "sl": "Rjav s sivim sedlom"
+            },
+            "file": "dog/airedale-terrier--grizzle-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -41265,7 +41515,34 @@
         "file": "jack-russell-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white-tan",
+            "label": {
+              "en": "White and tan",
+              "sl": "Bel z rjavimi lisami"
+            },
+            "file": "dog/jack-russell-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/jack-russell-terrier--tricolour.webp"
+          },
+          {
+            "key": "white-black",
+            "label": {
+              "en": "White and black",
+              "sl": "Bel s črnimi lisami"
+            },
+            "file": "dog/jack-russell-terrier--white-black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -41891,7 +42168,34 @@
         "file": "bullmastiff.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/bullmastiff.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/bullmastiff--red.webp"
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/bullmastiff--brindle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -42462,7 +42766,34 @@
         "file": "chinese-crested.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "pink-spotted",
+            "label": {
+              "en": "Pink with dark spots",
+              "sl": "Rožnat s temnimi pegami"
+            },
+            "file": "dog/chinese-crested.webp",
+            "default": true
+          },
+          {
+            "key": "slate",
+            "label": {
+              "en": "Dark slate",
+              "sl": "Temno skrilasto siv"
+            },
+            "file": "dog/chinese-crested--slate.webp"
+          },
+          {
+            "key": "pink",
+            "label": {
+              "en": "Pink",
+              "sl": "Rožnat"
+            },
+            "file": "dog/chinese-crested--pink.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -43025,7 +43356,34 @@
         "file": "nova-scotia-duck-tolling-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red with white markings",
+              "sl": "Rdeč z belimi oznakami"
+            },
+            "file": "dog/nova-scotia-duck-tolling-retriever.webp",
+            "default": true
+          },
+          {
+            "key": "orange-white",
+            "label": {
+              "en": "Orange with white markings",
+              "sl": "Oranžen z belimi oznakami"
+            },
+            "file": "dog/nova-scotia-duck-tolling-retriever--orange-white.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/nova-scotia-duck-tolling-retriever--red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
