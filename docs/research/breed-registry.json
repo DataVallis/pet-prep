@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "a315748c8cb2d5214d1ba5908ff946740fc583671144753d6b3f01c5360b7c73"
+      "sha256": "c737877f5d60d7edc0b0f03a261a4b4744c21121f399f5c9d51d5a410d828546"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -76508,7 +76508,7 @@
       "id": "finnish_lapphund",
       "species": "dog",
       "order": 123,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Finnish Lapphund",
         "sl": "Finski laponski pes"
@@ -77136,7 +77136,7 @@
       "id": "norfolk_terrier",
       "species": "dog",
       "order": 124,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Norfolk Terrier",
         "sl": "Norfolk terier"
@@ -77791,7 +77791,7 @@
       "id": "belgian_sheepdog",
       "species": "dog",
       "order": 125,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Belgian Sheepdog",
         "sl": "Belgijski ovčar groenendael"
