@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "739324f282e1f8b662df31b153e51cf3cfc77dac48dbd9fbc06d1a2c11054325"
+      "sha256": "abbeb75f0203f40a72a11e10e92a7198f5e1a756e13b9c37d2547a0e11c33922"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2c655c87453fde529d4ec57c3ce2d4dccdaabfd5c867301adbdfaf93007cbb5a"
+      "sha256": "3c76eb306ff2c20e69498fc91b1519ae2765f82325dda47fcc4de6e69039884b"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "f209c32713f2c0675da7348103e8d24f176b30d02ded7fa21eb138b458053d2b"
+      "sha256": "14176d07eb8528a4295bb1054a1340bd213f4d651d1cbdb7b268ec313840914b"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "cc8aab95f2468d8514944b4a370c68e009facad6e4a5d21d13ae766e527a01e0"
+      "sha256": "4eb431e7fcf40717b2c5f5d897608c98a301d950fd1fb51f2c1629de39f8f609"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "02b7f995df0c506ea45aa444034d00156e5f9b341c54010385dfcf2f0a881d7b"
+      "sha256": "a19c3e929153d50246feb363deae436778e66bf45669c71e7bee6beaf9b7ea54"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "f851ebf8c38d671dc9e4d2a2bb56dc7df7eae45bf1fdbf91cd33c33a017ece34"
+      "sha256": "178efeaf296580a87f69e5b6a9a9a5a74f4b42f9c8d9febcbe1ea808ea30c8e0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "69ac3c963f525e6bced1f9e585bf6c0aa9b77c493dc2500dbd833f8384bccf8b"
+      "sha256": "65379e27a39f38aa1e38eded5ab2054bfb176c9aca08ad2b4c91eb3551f6ddcf"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 125,
+      "breed_count": 126,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -77788,6 +77788,632 @@
       ]
     },
     {
+      "id": "belgian_sheepdog",
+      "species": "dog",
+      "order": 125,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Belgian Sheepdog",
+        "sl": "Belgijski ovčar groenendael"
+      },
+      "slug": {
+        "en": "belgian-sheepdog",
+        "sl": "belgijski-ovcar-groenendael"
+      },
+      "synonyms": {
+        "en": [
+          "Groenendael",
+          "Belgian Shepherd Groenendael",
+          "Belgian Shepherd Dog (Groenendael)",
+          "Belgian Groenendael"
+        ],
+        "sl": [
+          "groenendael",
+          "belgijski ovcar groenendael",
+          "belgijski ovčar"
+        ]
+      },
+      "facets": {
+        "size": "medium_large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium_large",
+          "source_ids": [
+            "S1019"
+          ],
+          "ref": "belgian_sheepdog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              66
+            ],
+            "female": [
+              56,
+              62
+            ]
+          },
+          "source_ids": [
+            "S313"
+          ],
+          "ref": "belgian_sheepdog.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              25,
+              30
+            ],
+            "female": [
+              20,
+              25
+            ]
+          },
+          "source_ids": [
+            "S313"
+          ],
+          "ref": "belgian_sheepdog.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "belgian_sheepdog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S1019"
+          ],
+          "ref": "belgian_sheepdog.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S1019"
+          ],
+          "ref": "belgian_sheepdog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S1019"
+          ],
+          "ref": "belgian_sheepdog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S1019"
+          ],
+          "ref": "belgian_sheepdog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1019"
+          ],
+          "ref": "belgian_sheepdog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 15,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "belgian_sheepdog.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 15,
+            "group": 1,
+            "section": 1,
+            "origin": "BE"
+          },
+          "source_ids": [
+            "S312"
+          ],
+          "ref": "belgian_sheepdog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S1020"
+          ],
+          "ref": "belgian_sheepdog.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S1020"
+          ],
+          "ref": "belgian_sheepdog.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S1020"
+          ],
+          "ref": "belgian_sheepdog.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S1020"
+          ],
+          "ref": "belgian_sheepdog.health.epilepsy",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1019",
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.exercise.adult",
+              "belgian_sheepdog.exercise.active_families"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S1019"
+            ],
+            "refs": [
+              "belgian_sheepdog.suitability.rkc_size_of_home",
+              "belgian_sheepdog.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1019"
+            ],
+            "refs": [
+              "belgian_sheepdog.exercise.adult",
+              "belgian_sheepdog.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.behaviour.children"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1021"
+            ],
+            "refs": [
+              "belgian_sheepdog.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1019"
+            ],
+            "refs": [
+              "belgian_sheepdog.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1019",
+              "S1020"
+            ],
+            "refs": [
+              "belgian_sheepdog.suitability.rkc_grooming",
+              "belgian_sheepdog.suitability.petmd_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1019"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S1019 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1019"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S1019)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 15, Excellent, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.grooming",
+            "basis_source_ids": [
+              "S1020"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »weekly«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.tooth_brushing",
+            "basis_source_ids": [
+              "S1021"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (WebMD »It's best to do this daily.«)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.ear_care",
+            "basis_source_ids": [
+              "S1020"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes 1× na mesec (PetMD »once or twice a month« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_sheepdog.bathing",
+            "basis_source_ids": [
+              "S1021"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (WebMD »a monthly bath«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1019",
+          "S1020",
+          "S1021"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S1019"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1019"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1019"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1019"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S1019"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S312",
+        "S313",
+        "S1019",
+        "S1020",
+        "S1021",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -85026,6 +85652,27 @@
       "publisher": "United Kennel Club (US)",
       "title": "Official UKC Breed Standard — Norfolk Terrier (revised April 15, 2007) (PDF)",
       "url": "https://www.ukcdogs.com/docs/breeds/norfolk-terrier.pdf"
+    },
+    {
+      "id": "S1019",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Belgian Shepherd Dog: Groenendael — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-groenendael/"
+    },
+    {
+      "id": "S1020",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Kloepple, reviewed by Barri J. Morrison, DVM (updated 2023-10-11)",
+      "title": "Belgian Sheepdog (Groenendael)",
+      "url": "https://www.petmd.com/dog/breeds/belgian-sheepdog"
+    },
+    {
+      "id": "S1021",
+      "tier": "B",
+      "publisher": "WebMD Pets — Mallika Bhattacharya, medically reviewed by Amy Flowers, DVM (2025-03-24)",
+      "title": "What to Know About Belgian Sheepdogs",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-belgian-sheepdogs"
     },
     {
       "id": "C1",

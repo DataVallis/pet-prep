@@ -515,6 +515,7 @@ const SPECIES = [
       { id: 'neapolitan_mastiff', synonyms: { en: ['Mastino Napoletano', 'Neo', 'Neapolitan'], sl: ['napolitanski mastif', 'neapeljski mastif', 'mastino napoletano'] } },
       { id: 'finnish_lapphund', synonyms: { en: ['Finnish Lapponian Dog', 'Lapinkoira', 'Suomenlapinkoira', 'Lappie'], sl: ['finski laponski pes', 'laponski pes', 'finski lapphund'] } },
       { id: 'norfolk_terrier', synonyms: { en: ['Norfolk'], sl: ['norfolški terier', 'norfolk terrier'] } },
+      { id: 'belgian_sheepdog', synonyms: { en: ['Groenendael', 'Belgian Shepherd Groenendael', 'Belgian Shepherd Dog (Groenendael)', 'Belgian Groenendael'], sl: ['groenendael', 'belgijski ovcar groenendael', 'belgijski ovčar'] } },
     ],
   },
   {
@@ -3404,6 +3405,28 @@ const DOG_FACTS = {
       ['dental_disease_home_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-135. Height = FCI standard 15 (S313; shared by the four varieties), weight = FCI 'Males about 25-30 kg.' (S313),
+  // lifespan = RKC 'Over 10 years' (S1019; no McMillan 2024 value for the Groenendael), exercise = RKC 'More than 2 hours per
+  // day' (S1019), grooming / shedding / coat = RKC key facts (S1019). Coren rank 15 (S35). FCI origin Belgium (BE). Not
+  // exported: height.petmd / adult_weight.petmd / lifespan.petmd (alternatives), lifespan.median_uk (null), senior_from
+  // (derived), health.breed_watch (Category 1), health.anaesthesia (no register key), the PetMD / WebMD care texts (care
+  // tasks / grooming rule come from the game). No new health key.
+  belgian_sheepdog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_dysplasia'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['epilepsy', 'health.epilepsy'],
+    ],
+  },
 
 
 
@@ -3496,6 +3519,7 @@ export const DOG_CARE_TASKS = {
   neapolitan_mastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.neapolitan_mastiff.face_fold_cleaning'], ['bath', 1, 28, 'proposed_game_parameters.neapolitan_mastiff.bathing']],
   finnish_lapphund: [['tooth_brushing', 7, 7, 'proposed_game_parameters.finnish_lapphund.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.finnish_lapphund.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.finnish_lapphund.bathing']],
   norfolk_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norfolk_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.norfolk_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.norfolk_terrier.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.norfolk_terrier.professional_grooming']],
+  belgian_sheepdog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.belgian_sheepdog.tooth_brushing'], ['ear_cleaning', 1, 28, 'proposed_game_parameters.belgian_sheepdog.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_sheepdog.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4518,6 +4542,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.norfolk_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.norfolk_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.norfolk_terrier.exercise_minutes_senior',
+  },
+  belgian_sheepdog: {
+    adult_minutes: ['proposed_game_parameters.belgian_sheepdog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.belgian_sheepdog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.belgian_sheepdog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.belgian_sheepdog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.belgian_sheepdog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.belgian_sheepdog.exercise_minutes_senior',
   },
 
 
