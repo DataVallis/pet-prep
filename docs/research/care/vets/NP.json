@@ -68,7 +68,8 @@
         "da": "Åbningstid 10.00–17.00, søndag til fredag. Ring på forhånd; 9801912476 er også KATs redningslinje for dyr i nød.",
         "fi": "Aukioloaika 10–17, su–pe. Soita etukäteen; 9801912476 on myös KAT-pelastuslinja hädässä oleville eläimille.",
         "nb": "Åpningstid 10.00–17.00, søndag–fredag. Ring på forhånd; 9801912476 er også KAT-redningslinjen for dyr i nød.",
-        "sl": "Delovni čas 10–17, ned–pet. Vnaprej pokličite; 9801912476 je tudi reševalna linija KAT za živali v stiski."
+        "sl": "Delovni čas 10–17, ned–pet. Vnaprej pokličite; 9801912476 je tudi reševalna linija KAT za živali v stiski.",
+        "hr": "Radno vrijeme 10:00–17:00, ned–pet. Nazovi unaprijed; 9801912476 je ujedno KAT linija za spašavanje životinja u nevolji."
       }
     },
     {
@@ -94,7 +95,8 @@
         "da": "Åbent hver dag 8.30–18.30; akut hjælp døgnet rundt. Ring på forhånd.",
         "fi": "Auki päivittäin 8.30–18.30; päivystys ympäri vuorokauden. Soita etukäteen.",
         "nb": "Åpent alle dager kl. 08.30–18.30; akuttjeneste tilgjengelig hele døgnet. Ring på forhånd.",
-        "sl": "Odprto vsak dan 8.30–18.30; nujna pomoč 24 ur na dan. Vnaprej pokličite."
+        "sl": "Odprto vsak dan 8.30–18.30; nujna pomoč 24 ur na dan. Vnaprej pokličite.",
+        "hr": "Radi svaki dan 8:30–18:30; hitna služba dostupna 24 sata. Nazovi unaprijed."
       }
     },
     {
@@ -120,7 +122,8 @@
         "da": "Åbent døgnet rundt, 365 dage om året, med akut hjælp. Kun hunde og katte.",
         "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa, myös päivystys. Vain koirat ja kissat.",
         "nb": "Åpent hele døgnet, 365 dager i året, med akuttjeneste. Kun hunder og katter.",
-        "sl": "Odprto 24 ur na dan, 365 dni v letu, z nujno pomočjo. Samo psi in mačke."
+        "sl": "Odprto 24 ur na dan, 365 dni v letu, z nujno pomočjo. Samo psi in mačke.",
+        "hr": "Radi 24 sata, 365 dana u godini, s hitnom službom. Samo psi i mačke."
       }
     },
     {
@@ -146,7 +149,8 @@
         "da": "Åbent døgnet rundt, alle ugens dage.",
         "fi": "Auki 24 tuntia, 7 päivää viikossa.",
         "nb": "Åpent hele døgnet, sju dager i uken.",
-        "sl": "Odprto 24 ur na dan, vse dni v tednu."
+        "sl": "Odprto 24 ur na dan, vse dni v tednu.",
+        "hr": "Radi 24 sata, 7 dana u tjednu."
       }
     },
     {
@@ -172,7 +176,8 @@
         "da": "Akut og ikke-akut behandling. Ring på forhånd for åbningstider.",
         "fi": "Päivystys- ja muut palvelut. Soita ja kysy aukioloajat.",
         "nb": "Tjenester for nødtilfeller og andre tilfeller. Ring på forhånd for åpningstider.",
-        "sl": "Nujna in redna oskrba. Za delovni čas vnaprej pokličite."
+        "sl": "Nujna in redna oskrba. Za delovni čas vnaprej pokličite.",
+        "hr": "Hitna i redovna služba. Nazovi unaprijed za radno vrijeme."
       }
     },
     {
@@ -198,7 +203,8 @@
         "da": "Åbent kun nogle få timer om dagen; ring på forhånd.",
         "fi": "Auki vain muutaman tunnin päivässä; soita etukäteen.",
         "nb": "Åpent bare noen få timer om dagen; ring på forhånd.",
-        "sl": "Odprto le nekaj ur na dan; vnaprej pokličite."
+        "sl": "Odprto le nekaj ur na dan; vnaprej pokličite.",
+        "hr": "Radi samo nekoliko sati dnevno; nazovi unaprijed."
       }
     },
     {
@@ -224,7 +230,8 @@
         "da": "Offentligt henvisningshospital; åbent fra 10.00. Ingen akuttjeneste ifølge de seneste oplysninger.",
         "fi": "Valtion lähetesairaala; palvelu alkaa klo 10. Viimeisimmän julkaistun tiedon mukaan päivystystä ei ole.",
         "nb": "Offentlig henvisningssykehus; tjeneste fra kl. 10.00. Ingen akuttjeneste ifølge siste publiserte opplysninger.",
-        "sl": "Državna napotna bolnišnica; začetek dela ob 10. uri. Nujne službe ne nudi."
+        "sl": "Državna napotna bolnišnica; začetek dela ob 10. uri. Nujne službe ne nudi.",
+        "hr": "Državna referentna bolnica; radi od 10:00. Nema hitne službe."
       }
     }
   ],

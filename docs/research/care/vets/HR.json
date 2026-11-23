@@ -1686,7 +1686,8 @@
         "da": "Ring for at få bekræftet åbningstider.",
         "fi": "Varmista aukioloajat soittamalla.",
         "nb": "Ring for å bekrefte åpningstidene.",
-        "sl": "Delovni čas preverite s klicem."
+        "sl": "Delovni čas preverite s klicem.",
+        "hr": "Radno vrijeme potvrdi telefonom."
       },
       "small_animals": true,
       "url": "https://ljubimac.net/",
@@ -1954,7 +1955,8 @@
         "da": "Vagthavende dyrlæge døgnet rundt på 091 511 5092.",
         "fi": "Päivystävä eläinlääkäri ympäri vuorokauden numerossa 091 511 5092.",
         "nb": "Vakthavende dyrlege hele døgnet på 091 511 5092.",
-        "sl": "Dežurni veterinar 24 ur na dan na 091 511 5092."
+        "sl": "Dežurni veterinar 24 ur na dan na 091 511 5092.",
+        "hr": "Dežurni veterinar 0/24 h na 091 511 5092."
       },
       "small_animals": true,
       "url": "https://veterinarskaambulantabokanjac.hr/",
@@ -1984,7 +1986,8 @@
         "da": "Tidsbestilling pr. telefon; ring for at bekræfte åbningstiden.",
         "fi": "Ajanvaraus puhelimitse; varmista aukioloajat soittamalla.",
         "nb": "Timebestilling på telefon; ring for å bekrefte åpningstidene.",
-        "sl": "Naročanje po telefonu; delovni čas preverite s klicem."
+        "sl": "Naročanje po telefonu; delovni čas preverite s klicem.",
+        "hr": "Naručivanje telefonom; za radno vrijeme nazovi."
       },
       "small_animals": true,
       "url": "https://www.veterina-zilic.hr/",
@@ -2038,7 +2041,8 @@
         "da": "Vagttelefon 099 700 3737 (døgnet rundt).",
         "fi": "Päivystyspuhelin 099 700 3737 (0–24).",
         "nb": "Vakttelefon 099 700 3737 (hele døgnet).",
-        "sl": "Dežurna številka 099 700 3737 (24 ur na dan)."
+        "sl": "Dežurna številka 099 700 3737 (24 ur na dan).",
+        "hr": "Dežurni telefon 099 700 3737 (0–24 h)."
       },
       "url": "http://www.veterinar-vodice.com",
       "source_url": "https://www.grad-vodice.hr/informacije/vazni-telefonski-brojevi",
@@ -2323,7 +2327,8 @@
         "da": "Vagt døgnet rundt ved akutte tilfælde: ring til klinikkens nummer, så oplyser telefonsvareren den vagthavende dyrlæges mobil.",
         "fi": "Päivystys 0–24: soita klinikan numeroon, niin vastaaja kertoo päivystävän eläinlääkärin matkapuhelinnumeron.",
         "nb": "Døgnvakt for nødtilfeller: ring klinikkens nummer, så oppgir telefonsvareren mobilnummeret til dyrlegen på vakt.",
-        "sl": "Dežurstvo 24 ur na dan za nujne primere: pokličite številko ambulante in telefonski odzivnik vam posreduje mobilno številko dežurnega veterinarja."
+        "sl": "Dežurstvo 24 ur na dan za nujne primere: pokličite številko ambulante in telefonski odzivnik vam posreduje mobilno številko dežurnega veterinarja.",
+        "hr": "Dežurstvo 0/24 h za hitne slučajeve: nazovi broj klinike, a telefonska sekretarica javlja broj mobitela dežurnog veterinara."
       },
       "small_animals": true,
       "url": "https://veterinarska-pozega.hr/",
@@ -2354,7 +2359,8 @@
         "da": "Akut og uden for åbningstid: 060 606 777 (vagthavende dyrlæge for kæledyr).",
         "fi": "Päivystys ja aukioloaikojen ulkopuolella: 060 606 777 (lemmikkien päivystävä eläinlääkäri).",
         "nb": "Nødtilfeller og vakttjeneste utenom åpningstid: 060 606 777 (vakthavende dyrlege for kjæledyr).",
-        "sl": "Nujni primeri in zunaj delovnega časa: 060 606 777 (dežurni veterinar za ljubljenčke)."
+        "sl": "Nujni primeri in zunaj delovnega časa: 060 606 777 (dežurni veterinar za ljubljenčke).",
+        "hr": "Hitni slučajevi i izvan radnog vremena: 060 606 777 (dežurni veterinar za kućne ljubimce)."
       },
       "url": "https://vs-djakovo.hr/",
       "source_url": "https://vs-djakovo.hr/kontakt/",
@@ -2407,7 +2413,8 @@
         "da": "Information om internatet og adoption: man–lør 7–11, tirs og tors om eftermiddagen.",
         "fi": "Tietoa turvakodista ja adoptiosta: ma–la 7–11, ti ja to iltapäivisin.",
         "nb": "Informasjon om dyrevernet og adopsjon: man–lør kl. 7–11, tir og tor ettermiddag.",
-        "sl": "Informacije o zavetišču in posvojitvah: pon–sob 7–11, tor in čet popoldne."
+        "sl": "Informacije o zavetišču in posvojitvah: pon–sob 7–11, tor in čet popoldne.",
+        "hr": "Informacije o skloništu i udomljavanju: pon–sub 7–11, uto i čet poslijepodne."
       },
       "url": "http://veterinarskastanicasisak.yolasite.com/",
       "source_url": "https://sisak.hr/info-centar-za-izgubljene-i-napustene-zivotinje/",

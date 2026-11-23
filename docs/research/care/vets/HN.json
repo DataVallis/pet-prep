@@ -54,7 +54,8 @@
         "da": "Akut døgnet rundt på denne afdeling på +504 9757-6797. Normal åbningstid man–fre 8.30–18.00, lør 8.30–16.00, søn 9.00–15.00.",
         "fi": "Päivystys 24/7 tässä toimipisteessä numerossa +504 9757-6797. Tavalliset aukioloajat ma–pe 8.30–18.00, la 8.30–16.00, su 9.00–15.00.",
         "nb": "Nødtilfeller hele døgnet ved denne avdelingen på +504 9757-6797. Ordinær åpningstid man–fre 8.30–18.00, lør 8.30–16.00, søn 9.00–15.00.",
-        "sl": "Nujna pomoč 24/7 v tej podružnici na +504 9757-6797. Redni delovni čas pon–pet 8.30–18, sob 8.30–16, ned 9–15."
+        "sl": "Nujna pomoč 24/7 v tej podružnici na +504 9757-6797. Redni delovni čas pon–pet 8.30–18, sob 8.30–16, ned 9–15.",
+        "hr": "Hitni slučajevi 24/7 u ovoj podružnici na +504 9757-6797. Redovno radno vrijeme pon–pet 8:30–18:00, sub 8:30–16:00, ned 9:00–15:00."
       }
     },
     {
@@ -77,7 +78,8 @@
         "da": "Åbent man–fre 8.00–17.30, lør 8.00–16.00, lukket søndag. Akut døgnet rundt håndteres på afdelingen i Rio de Piedras.",
         "fi": "Auki ma–pe 8.00–17.30, la 8.00–16.00, su suljettu. Päivystys 24/7 hoidetaan Rio de Piedrasin toimipisteessä.",
         "nb": "Åpent man–fre 8.00–17.30, lør 8.00–16.00, stengt søndag. Nødtilfeller hele døgnet håndteres ved avdelingen i Rio de Piedras.",
-        "sl": "Odprto pon–pet 8–17.30, sob 8–16, ned zaprto. Nujne primere 24/7 obravnavajo v podružnici Rio de Piedras."
+        "sl": "Odprto pon–pet 8–17.30, sob 8–16, ned zaprto. Nujne primere 24/7 obravnavajo v podružnici Rio de Piedras.",
+        "hr": "Otvoreno pon–pet 8:00–17:30, sub 8:00–16:00, ned zatvoreno. Hitni slučajevi 24/7 zbrinjavaju se u podružnici Rio de Piedras."
       }
     },
     {
@@ -100,7 +102,8 @@
         "da": "Man–fre 9.00–17.00 efter aftale; søndag 9.00–13.00 først til mølle; lukket lørdag.",
         "fi": "ma–pe 9.00–17.00 ajanvarauksella; sunnuntaisin 9.00–13.00 saapumisjärjestyksessä; lauantaisin suljettu.",
         "nb": "man–fre 9.00–17.00 etter timebestilling; søndag 9.00–13.00 først til mølla; stengt lørdag.",
-        "sl": "Pon–pet 9–17 po naročilu; ned 9–13 po vrstnem redu prihoda; sob zaprto."
+        "sl": "Pon–pet 9–17 po naročilu; ned 9–13 po vrstnem redu prihoda; sob zaprto.",
+        "hr": "pon–pet 9:00–17:00 uz termin; ned 9:00–13:00 bez naručivanja, redom dolaska; sub zatvoreno."
       }
     },
     {
@@ -123,7 +126,8 @@
         "da": "Åbent man–fre 7.30–17.00 og lør 7.30–15.00. Akut hjælp og intensiv pleje tilbydes; ring på forhånd.",
         "fi": "Auki ma–pe 7.30–17.00 ja la 7.30–15.00. Päivystys ja tehohoito tarjolla; soita etukäteen.",
         "nb": "Åpent man–fre 7.30–17.00 og lør 7.30–15.00. Akutt- og intensivbehandling tilbys; ring på forhånd.",
-        "sl": "Odprto pon–pet 7.30–17 in sob 7.30–15. Na voljo sta nujna in intenzivna oskrba; vnaprej pokličite."
+        "sl": "Odprto pon–pet 7.30–17 in sob 7.30–15. Na voljo sta nujna in intenzivna oskrba; vnaprej pokličite.",
+        "hr": "Otvoreno pon–pet 7:30–17:00 i sub 7:30–15:00. Nudi hitnu i intenzivnu skrb; nazovi unaprijed."
       }
     }
   ],

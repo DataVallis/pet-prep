@@ -174,7 +174,8 @@
         "da": "Akut dyrlægehjælp oplyst døgnet rundt; åbent i weekender og på helligdage.",
         "fi": "Eläinlääkäripäivystys mainostettu 24 h; auki viikonloppuisin ja pyhäpäivinä.",
         "nb": "Akutt dyrlegehjelp oppgitt som døgnåpent; åpent i helger og på helligdager.",
-        "sl": "Oglašuje nujno veterinarsko pomoč 24 ur na dan; odprto tudi ob koncih tedna in praznikih."
+        "sl": "Oglašuje nujno veterinarsko pomoč 24 ur na dan; odprto tudi ob koncih tedna in praznikih.",
+        "hr": "Hitna veterinarska skrb oglašava se 24/24; radi vikendom i blagdanima."
       }
     },
     {
@@ -202,7 +203,8 @@
         "da": "Akut dyrlægehjælp oplyst døgnet rundt; åbent i weekender og på helligdage.",
         "fi": "Eläinlääkäripäivystys mainostettu 24 h; auki viikonloppuisin ja pyhäpäivinä.",
         "nb": "Akutt dyrlegehjelp oppgitt som døgnåpent; åpent i helger og på helligdager.",
-        "sl": "Nujna veterinarska pomoč 24 ur na dan; odprto tudi ob koncih tedna in praznikih."
+        "sl": "Nujna veterinarska pomoč 24 ur na dan; odprto tudi ob koncih tedna in praznikih.",
+        "hr": "Hitna veterinarska skrb oglašava se 24/24; radi vikendom i blagdanima."
       }
     },
     {
@@ -229,7 +231,8 @@
         "da": "Akut dyrlægehjælp oplyst døgnet rundt; åbent i weekender og på helligdage.",
         "fi": "Eläinlääkäripäivystys mainostettu 24 h; auki viikonloppuisin ja pyhäpäivinä.",
         "nb": "Akutt dyrlegehjelp oppgitt som døgnåpent; åpent i helger og på helligdager.",
-        "sl": "Po navedbah nujna veterinarska pomoč 24 ur na dan; odprto tudi ob koncih tedna in praznikih."
+        "sl": "Po navedbah nujna veterinarska pomoč 24 ur na dan; odprto tudi ob koncih tedna in praznikih.",
+        "hr": "Hitna veterinarska skrb oglašava se 24/24; radi vikendom i blagdanima."
       }
     },
     {
@@ -257,7 +260,8 @@
         "da": "Oplyser akut hjælp døgnet rundt, alle dage inklusive helligdage; ring på forhånd.",
         "fi": "Mainostaa päivystystä 24/7 joka päivä, myös pyhäpäivinä; soita etukäteen.",
         "nb": "Markedsfører akuttbehandling hele døgnet, alle dager, også på helligdager; ring på forhånd.",
-        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite.",
+        "hr": "Oglašava hitnu skrb 24/7, svaki dan uključujući blagdane; nazovi unaprijed."
       }
     },
     {
@@ -285,7 +289,8 @@
         "da": "Oplyser akut hjælp døgnet rundt, alle dage inklusive helligdage; ring på forhånd.",
         "fi": "Mainostaa päivystystä 24/7 joka päivä, myös pyhäpäivinä; soita etukäteen.",
         "nb": "Markedsfører akuttbehandling hele døgnet, alle dager, også på helligdager; ring på forhånd.",
-        "sl": "Oglašujejo nujno pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite."
+        "sl": "Oglašujejo nujno pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite.",
+        "hr": "Oglašava hitnu skrb 24/7, svaki dan uključujući blagdane; nazovi unaprijed."
       }
     },
     {
@@ -313,7 +318,8 @@
         "da": "Oplyser akut hjælp døgnet rundt, alle dage inklusive helligdage; ring på forhånd.",
         "fi": "Mainostaa päivystystä 24/7 joka päivä, myös pyhäpäivinä; soita etukäteen.",
         "nb": "Markedsfører akuttbehandling hele døgnet, alle dager, også på helligdager; ring på forhånd.",
-        "sl": "Oglašuje nujno pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite."
+        "sl": "Oglašuje nujno pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite.",
+        "hr": "Oglašava hitnu skrb 24/7, svaki dan uključujući blagdane; nazovi unaprijed."
       }
     },
     {
@@ -341,7 +347,8 @@
         "da": "Oplyser akut hjælp døgnet rundt, alle dage inklusive helligdage; ring på forhånd.",
         "fi": "Mainostaa päivystystä 24/7 joka päivä, myös pyhäpäivinä; soita etukäteen.",
         "nb": "Markedsfører akuttbehandling hele døgnet, alle dager, også på helligdager; ring på forhånd.",
-        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan, vsak dan, tudi ob praznikih; vnaprej pokličite.",
+        "hr": "Oglašava hitnu skrb 24/7, svaki dan uključujući blagdane; nazovi unaprijed."
       }
     },
     {
@@ -369,7 +376,8 @@
         "da": "Kæden oplyser akut hjælp døgnet rundt med dyrlæger på vagt på afdelingerne; ring til hotlinen for at finde nærmeste afdeling.",
         "fi": "Ketju mainostaa päivystystä 24/7, eläinlääkärit toimipisteissä ympäri vuorokauden; kysy lähin toimipiste palvelunumerosta.",
         "nb": "Kjeden opplyser om akuttbehandling hele døgnet med dyrleger på filialene døgnet rundt; ring hotlinen for nærmeste filial.",
-        "sl": "Veriga oglašuje nujno pomoč 24 ur na dan z veterinarji, ki so v poslovalnicah prisotni ves čas; za najbližjo poslovalnico pokličite telefonsko linijo."
+        "sl": "Veriga oglašuje nujno pomoč 24 ur na dan z veterinarji, ki so v poslovalnicah prisotni ves čas; za najbližjo poslovalnico pokličite telefonsko linijo.",
+        "hr": "Lanac oglašava hitnu skrb 24/7 s veterinarima u podružnicama non-stop; nazovi telefonsku liniju za najbližu podružnicu."
       }
     },
     {
@@ -397,7 +405,8 @@
         "da": "Almindelige åbningstider 8.00–19.00; akut hjælp døgnet rundt.",
         "fi": "Normaali aukioloaika 8.00–19.00; päivystys 24/7.",
         "nb": "Ordinær åpningstid kl. 8.00–19.00; akuttbehandling hele døgnet.",
-        "sl": "Redni čas 8–19; nujna pomoč 24 ur na dan."
+        "sl": "Redni čas 8–19; nujna pomoč 24 ur na dan.",
+        "hr": "Redovno radno vrijeme 08:00–19:00; hitna skrb 24/7."
       }
     },
     {
@@ -425,7 +434,8 @@
         "da": "Almindelige åbningstider 8.00–19.00; akut hjælp døgnet rundt.",
         "fi": "Normaali aukioloaika 8.00–19.00; päivystys 24/7.",
         "nb": "Ordinær åpningstid kl. 8.00–19.00; akuttbehandling hele døgnet.",
-        "sl": "Redni čas 8–19; nujna pomoč 24 ur na dan."
+        "sl": "Redni čas 8–19; nujna pomoč 24 ur na dan.",
+        "hr": "Redovno radno vrijeme 08:00–19:00; hitna skrb 24/7."
       }
     },
     {
@@ -453,7 +463,8 @@
         "da": "Åbent 8.00–19.00.",
         "fi": "Auki 8.00–19.00.",
         "nb": "Åpent 08.00–19.00.",
-        "sl": "Odprto 8–19."
+        "sl": "Odprto 8–19.",
+        "hr": "Radi 08:00–19:00."
       }
     },
     {
@@ -481,7 +492,8 @@
         "da": "Almindelige åbningstider 8.00–19.00; akut hjælp oplyst døgnet rundt.",
         "fi": "Normaali aukioloaika 8.00–19.00; päivystys mainostettu 24/7.",
         "nb": "Ordinær åpningstid kl. 8.00–19.00; akuttbehandling annonseres som døgnåpen.",
-        "sl": "Redni delovni čas 8–19; nujna pomoč 24 ur na dan."
+        "sl": "Redni delovni čas 8–19; nujna pomoč 24 ur na dan.",
+        "hr": "Redovno radno vrijeme 08:00–19:00; hitna skrb oglašava se 24/7."
       }
     },
     {
@@ -509,7 +521,8 @@
         "da": "Åbent døgnet rundt, også i weekender og på helligdage; hotlinen er bemandet døgnet rundt.",
         "fi": "Auki 24 h, myös viikonloppuisin ja pyhäpäivinä; palvelunumero miehitetty ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, også i helger og på helligdager; hotline bemannet døgnet rundt.",
-        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno."
+        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno.",
+        "hr": "Radi 24/24 uključujući vikende i blagdane; telefonska linija radi non-stop."
       }
     },
     {
@@ -537,7 +550,8 @@
         "da": "Åbent døgnet rundt, også i weekender og på helligdage; hotlinen er bemandet døgnet rundt.",
         "fi": "Auki 24 h, myös viikonloppuisin ja pyhäpäivinä; palvelunumero miehitetty ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, også i helger og på helligdager; hotline bemannet døgnet rundt.",
-        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno."
+        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno.",
+        "hr": "Radi 24/24 uključujući vikende i blagdane; telefonska linija radi non-stop."
       }
     },
     {
@@ -565,7 +579,8 @@
         "da": "Åbent døgnet rundt, også i weekender og på helligdage; hotlinen er bemandet døgnet rundt.",
         "fi": "Auki 24 h, myös viikonloppuisin ja pyhäpäivinä; palvelunumero miehitetty ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, også i helger og på helligdager; hotline bemannet døgnet rundt.",
-        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno."
+        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno.",
+        "hr": "Radi 24/24 uključujući vikende i blagdane; telefonska linija radi non-stop."
       }
     },
     {
@@ -593,7 +608,8 @@
         "da": "Åbent døgnet rundt, også i weekender og på helligdage; hotlinen er bemandet døgnet rundt.",
         "fi": "Auki 24 h, myös viikonloppuisin ja pyhäpäivinä; palvelunumero miehitetty ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, også i helger og på helligdager; hotline bemannet døgnet rundt.",
-        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno."
+        "sl": "Odprto 24 ur na dan, tudi ob koncih tedna in praznikih; telefonska linija je dosegljiva neprekinjeno.",
+        "hr": "Radi 24/24 uključujući vikende i blagdane; telefonska linija radi non-stop."
       }
     },
     {
@@ -621,7 +637,8 @@
         "da": "Åbent alle årets dage; vagthavende personale til akutte tilfælde hos hunde og katte døgnet rundt.",
         "fi": "Auki vuoden jokaisena päivänä; koirien ja kissojen päivystystapauksille henkilökunta vuorossa 24/7.",
         "nb": "Åpent alle dager i året; vakthavende personale for nødtilfeller hos hund og katt hele døgnet.",
-        "sl": "Odprto vse dni v letu; dežurna služba za nujne primere psov in mačk 24 ur na dan."
+        "sl": "Odprto vse dni v letu; dežurna služba za nujne primere psov in mačk 24 ur na dan.",
+        "hr": "Otvoreno svaki dan u godini; osoblje dežura za hitne slučajeve pasa i mačaka 24/7."
       }
     },
     {
@@ -649,7 +666,8 @@
         "da": "Almindelige åbningstider hver dag 7.00–19.00; vagthavende dyrlæge til akutte tilfælde døgnet rundt.",
         "fi": "Normaali aukioloaika joka päivä 7.00–19.00; päivystävä eläinlääkäri hätätapauksille 24 h.",
         "nb": "Ordinær åpningstid alle dager kl. 7.00–19.00; lege på vakt for nødtilfeller hele døgnet.",
-        "sl": "Redni čas vsak dan 7–19; dežurni veterinar za nujne primere 24 ur na dan."
+        "sl": "Redni čas vsak dan 7–19; dežurni veterinar za nujne primere 24 ur na dan.",
+        "hr": "Redovno radno vrijeme 07:00–19:00 svaki dan; veterinar dežura za hitne slučajeve 24/24."
       }
     },
     {
@@ -677,7 +695,8 @@
         "da": "Åbent hver dag 9.00–19.00; akut- og intensivbehandling døgnet rundt.",
         "fi": "Auki joka päivä 9.00–19.00; päivystys ja tehohoito 24/7.",
         "nb": "Åpent 9.00–19.00 hver dag; akutt- og intensivbehandling hele døgnet.",
-        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan."
+        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan.",
+        "hr": "Radi 9:00–19:00 svaki dan; hitna i intenzivna skrb 24/7."
       }
     },
     {
@@ -705,7 +724,8 @@
         "da": "Åbent hver dag 9.00–19.00; akut- og intensivbehandling døgnet rundt.",
         "fi": "Auki joka päivä 9.00–19.00; päivystys ja tehohoito 24/7.",
         "nb": "Åpent 9.00–19.00 hver dag; akutt- og intensivbehandling hele døgnet.",
-        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan."
+        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan.",
+        "hr": "Radi 9:00–19:00 svaki dan; hitna i intenzivna skrb 24/7."
       }
     },
     {
@@ -733,7 +753,8 @@
         "da": "Åbent hver dag 9.00–19.00; akut- og intensivbehandling døgnet rundt.",
         "fi": "Auki joka päivä 9.00–19.00; päivystys ja tehohoito 24/7.",
         "nb": "Åpent 9.00–19.00 hver dag; akutt- og intensivbehandling hele døgnet.",
-        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan."
+        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan.",
+        "hr": "Radi 9:00–19:00 svaki dan; hitna i intenzivna skrb 24/7."
       }
     },
     {
@@ -761,7 +782,8 @@
         "da": "Åbent hver dag 9.00–19.00; akut- og intensivbehandling døgnet rundt.",
         "fi": "Auki joka päivä 9.00–19.00; päivystys ja tehohoito 24/7.",
         "nb": "Åpent 9.00–19.00 hver dag; akutt- og intensivbehandling hele døgnet.",
-        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan."
+        "sl": "Odprto vsak dan 9–19; nujna pomoč in intenzivna nega 24 ur na dan.",
+        "hr": "Radi 9:00–19:00 svaki dan; hitna i intenzivna skrb 24/7."
       }
     },
     {
@@ -789,7 +811,8 @@
         "da": "Åbent hver dag 7.00–21.00; support på engelsk, fransk og kinesisk på 0909 063 267.",
         "fi": "Auki joka päivä 7.00–21.00; tuki englanniksi, ranskaksi ja kiinaksi numerossa 0909 063 267.",
         "nb": "Åpent 7.00–21.00 hver dag; støtte på engelsk, fransk og kinesisk på 0909 063 267.",
-        "sl": "Odprto vsak dan 7–21; podpora v angleščini, francoščini in kitajščini na 0909 063 267."
+        "sl": "Odprto vsak dan 7–21; podpora v angleščini, francoščini in kitajščini na 0909 063 267.",
+        "hr": "Radi 7:00–21:00 svaki dan; podrška na engleskom, francuskom i kineskom na 0909 063 267."
       }
     },
     {
@@ -817,7 +840,8 @@
         "da": "Åbent hver dag 7.00–21.00; support på engelsk, fransk og kinesisk på 0909 063 267.",
         "fi": "Auki joka päivä 7.00–21.00; tuki englanniksi, ranskaksi ja kiinaksi numerossa 0909 063 267.",
         "nb": "Åpent 7.00–21.00 hver dag; støtte på engelsk, fransk og kinesisk på 0909 063 267.",
-        "sl": "Odprto vsak dan 7–21; podpora v angleščini, francoščini in kitajščini na 0909 063 267."
+        "sl": "Odprto vsak dan 7–21; podpora v angleščini, francoščini in kitajščini na 0909 063 267.",
+        "hr": "Radi 7:00–21:00 svaki dan; podrška na engleskom, francuskom i kineskom na 0909 063 267."
       }
     },
     {
@@ -845,7 +869,8 @@
         "da": "Åbent hver dag 7.00–21.00; support på engelsk, fransk og kinesisk på 0909 063 267.",
         "fi": "Auki joka päivä 7.00–21.00; tuki englanniksi, ranskaksi ja kiinaksi numerossa 0909 063 267.",
         "nb": "Åpent 7.00–21.00 hver dag; støtte på engelsk, fransk og kinesisk på 0909 063 267.",
-        "sl": "Odprto vsak dan 7–21; podpora v angleščini, francoščini in kitajščini na 0909 063 267."
+        "sl": "Odprto vsak dan 7–21; podpora v angleščini, francoščini in kitajščini na 0909 063 267.",
+        "hr": "Radi 7:00–21:00 svaki dan; podrška na engleskom, francuskom i kineskom na 0909 063 267."
       }
     },
     {
@@ -873,7 +898,8 @@
         "da": "Åbent 8.00–17.00; akutvagt oplyst døgnet rundt, også i weekender og på helligdage; ring på forhånd ved akutte tilfælde efter kl. 19.",
         "fi": "Auki 8.00–17.00; päivystys mainostettu 24/7, myös viikonloppuisin ja pyhäpäivinä; klo 19 jälkeen päivystystapauksissa soita etukäteen.",
         "nb": "Åpent 08.00–17.00; akuttjeneste annonsert hele døgnet, også helger og helligdager; ring på forhånd ved nødtilfeller etter kl. 19.00.",
-        "sl": "Odprto 8–17; oglašuje nujno pomoč 24 ur na dan, tudi ob koncih tedna in praznikih; za nujne primere po 19. uri vnaprej pokličite."
+        "sl": "Odprto 8–17; oglašuje nujno pomoč 24 ur na dan, tudi ob koncih tedna in praznikih; za nujne primere po 19. uri vnaprej pokličite.",
+        "hr": "Radi 08:00–17:00; hitna služba oglašava se 24/7 uključujući vikende i blagdane; za hitne slučajeve nakon 19:00 nazovi unaprijed."
       }
     },
     {
@@ -901,7 +927,8 @@
         "da": "Åbent 8.00–19.00; akut hjælp oplyst døgnet rundt; ring på forhånd.",
         "fi": "Auki 8.00–19.00; päivystys mainostettu 24 h; soita etukäteen.",
         "nb": "Åpent 08.00–19.00; akuttbehandling annonsert hele døgnet; ring på forhånd.",
-        "sl": "Odprto 8–19; nujna pomoč 24 ur na dan; vnaprej pokličite."
+        "sl": "Odprto 8–19; nujna pomoč 24 ur na dan; vnaprej pokličite.",
+        "hr": "Radi 08:00–19:00; hitna skrb oglašava se 24/24; nazovi unaprijed."
       }
     },
     {
@@ -929,7 +956,8 @@
         "da": "Åbent man–lør 8.00–21.00, søn og helligdage 8.00–20.00; akuttelefon 085 55 85 234; ring på forhånd.",
         "fi": "Auki ma–la 8.00–21.00, su ja pyhäpäivinä 8.00–20.00; päivystysnumero 085 55 85 234; soita etukäteen.",
         "nb": "Åpent man–lør 08.00–21.00, søn og helligdager 08.00–20.00; akuttlinje 085 55 85 234; ring på forhånd.",
-        "sl": "Pon–sob 8–21, ned in prazniki 8–20; nujna linija 085 55 85 234; vnaprej pokličite."
+        "sl": "Pon–sob 8–21, ned in prazniki 8–20; nujna linija 085 55 85 234; vnaprej pokličite.",
+        "hr": "Radi pon–sub 08:00–21:00, ned i blagdanima 08:00–20:00; hitna linija 085 55 85 234; nazovi unaprijed."
       }
     },
     {
@@ -957,7 +985,8 @@
         "da": "Åbent man–lør 8.00–21.00, søn og helligdage 8.00–20.00; akuttelefon 085 55 85 234; ring på forhånd.",
         "fi": "Auki ma–la 8.00–21.00, su ja pyhäpäivinä 8.00–20.00; päivystysnumero 085 55 85 234; soita etukäteen.",
         "nb": "Åpent man–lør 08.00–21.00, søn og helligdager 08.00–20.00; akuttlinje 085 55 85 234; ring på forhånd.",
-        "sl": "Pon–sob 8–21, ned in prazniki 8–20; nujna linija 085 55 85 234; vnaprej pokličite."
+        "sl": "Pon–sob 8–21, ned in prazniki 8–20; nujna linija 085 55 85 234; vnaprej pokličite.",
+        "hr": "Radi pon–sub 08:00–21:00, ned i blagdanima 08:00–20:00; hitna linija 085 55 85 234; nazovi unaprijed."
       }
     },
     {
@@ -985,7 +1014,8 @@
         "da": "Åbent hver dag 7.30–21.30 (lørdag til 22.00).",
         "fi": "Auki joka päivä 7.30–21.30 (lauantaisin 22.00 asti).",
         "nb": "Åpent daglig 07.30–21.30 (lørdag til 22.00).",
-        "sl": "Odprto vsak dan 7.30–21.30 (ob sobotah do 22)."
+        "sl": "Odprto vsak dan 7.30–21.30 (ob sobotah do 22).",
+        "hr": "Radi svaki dan 07:30–21:30 (subotom do 22:00)."
       }
     },
     {
@@ -1013,7 +1043,8 @@
         "da": "Universitetshospital med undervisning; åbent man–fre 7.30–11.30 og 13.30–17.30; akuttelefon oplyst døgnet rundt på 0399 065 115.",
         "fi": "Yliopiston opetussairaala; auki ma–pe 7.30–11.30 ja 13.30–17.30; päivystysnumero mainostettu 24 h: 0399 065 115.",
         "nb": "Undervisningssykehus; åpent man–fre 7.30–11.30 og 13.30–17.30; vakttelefon oppgis å være døgnåpen på 0399 065 115.",
-        "sl": "Univerzitetna učna bolnišnica; pon–pet 7.30–11.30 in 13.30–17.30; nujna linija, oglašena 24 ur na dan, na 0399 065 115."
+        "sl": "Univerzitetna učna bolnišnica; pon–pet 7.30–11.30 in 13.30–17.30; nujna linija, oglašena 24 ur na dan, na 0399 065 115.",
+        "hr": "Sveučilišna nastavna bolnica; radi pon–pet 07:30–11:30 i 13:30–17:30; hitna linija oglašava se 24/24 na 0399 065 115."
       }
     },
     {
@@ -1040,7 +1071,8 @@
         "da": "Universitetsdyrehospital; kontakt via e-mail vethospital@hcmuaf.edu.vn.",
         "fi": "Yliopiston eläinsairaala; yhteydenotto sähköpostitse vethospital@hcmuaf.edu.vn.",
         "nb": "Universitetets dyresykehus; ta kontakt på e-post vethospital@hcmuaf.edu.vn.",
-        "sl": "Univerzitetna veterinarska bolnišnica; pišite na vethospital@hcmuaf.edu.vn."
+        "sl": "Univerzitetna veterinarska bolnišnica; pišite na vethospital@hcmuaf.edu.vn.",
+        "hr": "Sveučilišna veterinarska bolnica; kontakt e-poštom vethospital@hcmuaf.edu.vn."
       }
     },
     {
@@ -1068,7 +1100,8 @@
         "da": "Universitetsdyreklinik; ring på forhånd.",
         "fi": "Yliopiston eläinlääkäriklinikka; soita etukäteen.",
         "nb": "Universitetets dyreklinikk; ring på forhånd.",
-        "sl": "Univerzitetna veterinarska klinika; vnaprej pokličite."
+        "sl": "Univerzitetna veterinarska klinika; vnaprej pokličite.",
+        "hr": "Sveučilišna veterinarska ambulanta; nazovi unaprijed."
       }
     },
     {
@@ -1096,7 +1129,8 @@
         "da": "Åbent 8.00–19.00; akut hjælp uden for åbningstid 19.00–8.00 mod tillæg; oplyst døgnet rundt, 365 dage om året.",
         "fi": "Auki 8.00–19.00; päivystys aukioloajan jälkeen 19.00–8.00 lisämaksulla; mainostettu 24/7, 365 päivää vuodessa.",
         "nb": "Åpent 08.00–19.00; akuttbehandling utenom åpningstid 19.00–08.00 med tillegg; annonsert hele døgnet, 365 dager i året.",
-        "sl": "Odprto 8–19; nujna pomoč zunaj rednega delovnega časa 19–8 z doplačilom; oglašuje se kot odprto 24 ur na dan, 365 dni v letu."
+        "sl": "Odprto 8–19; nujna pomoč zunaj rednega delovnega časa 19–8 z doplačilom; oglašuje se kot odprto 24 ur na dan, 365 dni v letu.",
+        "hr": "Radi 08:00–19:00; hitna skrb izvan radnog vremena 19:00–08:00 uz doplatu; oglašava se 24/7, 365 dana u godini."
       }
     },
     {
@@ -1124,7 +1158,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941."
+        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1152,7 +1187,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej preverite po telefonu; telefonska linija 1800 599 941."
+        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej preverite po telefonu; telefonska linija 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1180,7 +1216,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941."
+        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1208,7 +1245,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941."
+        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1236,7 +1274,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Skupina bolnišnic oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska številka 1800 599 941."
+        "sl": "Skupina bolnišnic oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska številka 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1264,7 +1303,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941."
+        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej pokličite in preverite; telefonska linija 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1292,7 +1332,8 @@
         "da": "Hospitalsgruppen oplyser vagthavende dyrlæger døgnet rundt; ring på forhånd for at bekræfte for denne afdeling; hotline 1800 599 941.",
         "fi": "Sairaalaryhmä mainostaa päivystäviä eläinlääkäreitä ympäri vuorokauden; varmista tämän toimipisteen osalta soittamalla etukäteen; palvelunumero 1800 599 941.",
         "nb": "Sykehusgruppen oppgir dyrleger på vakt hele døgnet; ring på forhånd for å bekrefte for denne avdelingen; hotline 1800 599 941.",
-        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej preverite po telefonu; telefonska linija 1800 599 941."
+        "sl": "Bolnišnična skupina oglašuje dežurne veterinarje 24 ur na dan; za to poslovalnico vnaprej preverite po telefonu; telefonska linija 1800 599 941.",
+        "hr": "Grupa bolnica oglašava dežurne veterinare 24/24; nazovi unaprijed i provjeri vrijedi li to za ovu podružnicu; telefonska linija 1800 599 941."
       }
     },
     {
@@ -1320,7 +1361,8 @@
         "da": "Hospitalet er åbent hver dag 8.30–21.00; akutmodtagelse døgnet rundt, også om natten, i weekender og på helligdage.",
         "fi": "Sairaala auki joka päivä 8.30–21.00; päivystyspotilaat otetaan vastaan 24/7, myös öisin, viikonloppuisin ja pyhäpäivinä.",
         "nb": "Sykehus åpent daglig 8.30–21.00; akuttmottak hele døgnet, også om natten, i helger og på helligdager.",
-        "sl": "Bolnišnica odprta vsak dan 8.30–21; nujni sprejem 24 ur na dan, tudi ponoči, ob koncih tedna in praznikih."
+        "sl": "Bolnišnica odprta vsak dan 8.30–21; nujni sprejem 24 ur na dan, tudi ponoči, ob koncih tedna in praznikih.",
+        "hr": "Bolnica radi svaki dan 08:30–21:00; hitni prijem 24/7, uključujući noći, vikende i blagdane."
       }
     },
     {
@@ -1348,7 +1390,8 @@
         "da": "Åbent døgnet rundt, 7 dage om ugen med akut hjælp og indlæggelse, også på helligdage.",
         "fi": "Auki ympäri vuorokauden, 7 vrk viikossa, päivystys ja vuodeosastohoito, myös pyhäpäivinä.",
         "nb": "Åpent hele døgnet, alle dager i uken med akutt- og innleggelsestilbud, også helligdager.",
-        "sl": "Odprto 24 ur na dan, vse dni v tednu, z nujno pomočjo in bolnišničnim zdravljenjem, tudi ob praznikih."
+        "sl": "Odprto 24 ur na dan, vse dni v tednu, z nujno pomočjo in bolnišničnim zdravljenjem, tudi ob praznikih.",
+        "hr": "Radi 24 sata dnevno, 7 dana u tjednu, uz hitnu i stacionarnu skrb, uključujući blagdane."
       }
     },
     {
@@ -1376,7 +1419,8 @@
         "da": "Almindelige åbningstider man–lør 8.00–12.00 og 14.00–19.00, søn og helligdage 8.00–12.00; akut hjælp oplyst døgnet rundt, også på helligdage; ring på forhånd.",
         "fi": "Normaali aukioloaika ma–la 8.00–12.00 ja 14.00–19.00, su ja pyhäpäivinä 8.00–12.00; päivystys mainostettu 24/7, myös pyhäpäivinä; soita etukäteen.",
         "nb": "Ordinær åpningstid man–lør kl. 8.00–12.00 og 14.00–19.00, søn og helligdager kl. 8.00–12.00; akuttbehandling annonseres som døgnåpen, også på helligdager; ring på forhånd.",
-        "sl": "Redni čas pon–sob 8–12 in 14–19, ned in prazniki 8–12; nujna pomoč 24 ur na dan, tudi ob praznikih; vnaprej pokličite."
+        "sl": "Redni čas pon–sob 8–12 in 14–19, ned in prazniki 8–12; nujna pomoč 24 ur na dan, tudi ob praznikih; vnaprej pokličite.",
+        "hr": "Redovno radno vrijeme pon–sub 08:00–12:00 i 14:00–19:00, ned i blagdanima 08:00–12:00; hitna skrb oglašava se 24/7 uključujući blagdane; nazovi unaprijed."
       }
     },
     {
@@ -1404,7 +1448,8 @@
         "da": "Almindelige åbningstider man–lør 8.00–12.00 og 14.00–19.00, søn og helligdage 8.00–12.00; ring på forhånd ved akutte tilfælde.",
         "fi": "Normaali aukioloaika ma–la 8.00–12.00 ja 14.00–19.00, su ja pyhäpäivinä 8.00–12.00; hätätapauksissa soita etukäteen.",
         "nb": "Ordinær åpningstid man–lør kl. 8.00–12.00 og 14.00–19.00, søn og helligdager kl. 8.00–12.00; ring på forhånd ved nødtilfeller.",
-        "sl": "Redni čas pon–sob 8–12 in 14–19, ned in prazniki 8–12; za nujne primere vnaprej pokličite."
+        "sl": "Redni čas pon–sob 8–12 in 14–19, ned in prazniki 8–12; za nujne primere vnaprej pokličite.",
+        "hr": "Redovno radno vrijeme pon–sub 08:00–12:00 i 14:00–19:00, ned i blagdanima 08:00–12:00; za hitne slučajeve nazovi unaprijed."
       }
     },
     {
@@ -1432,7 +1477,8 @@
         "da": "Almindelige åbningstider man–lør 8.00–12.00 og 14.00–19.00, søn og helligdage 8.00–12.00; akut hjælp oplyst døgnet rundt, også på helligdage; ring på forhånd.",
         "fi": "Normaali aukioloaika ma–la 8.00–12.00 ja 14.00–19.00, su ja pyhäpäivinä 8.00–12.00; päivystys mainostettu 24/7, myös pyhäpäivinä; soita etukäteen.",
         "nb": "Ordinær åpningstid man–lør kl. 8.00–12.00 og 14.00–19.00, søn og helligdager kl. 8.00–12.00; akuttbehandling annonseres som døgnåpen, også på helligdager; ring på forhånd.",
-        "sl": "Redni čas pon–sob 8–12 in 14–19, ned in prazniki 8–12; oglašuje nujno pomoč 24 ur na dan, tudi ob praznikih; vnaprej pokličite."
+        "sl": "Redni čas pon–sob 8–12 in 14–19, ned in prazniki 8–12; oglašuje nujno pomoč 24 ur na dan, tudi ob praznikih; vnaprej pokličite.",
+        "hr": "Redovno radno vrijeme pon–sub 08:00–12:00 i 14:00–19:00, ned i blagdanima 08:00–12:00; hitna skrb oglašava se 24/7 uključujući blagdane; nazovi unaprijed."
       }
     },
     {
@@ -1460,7 +1506,8 @@
         "da": "Akut dyrlægehjælp oplyst døgnet rundt på alle afdelinger; akuttelefon 0908 412 400.",
         "fi": "Eläinlääkäripäivystys mainostettu 24/7 kaikissa toimipisteissä; päivystyspuhelin 0908 412 400.",
         "nb": "Akuttbehandling for dyr oppgis å være tilgjengelig hele døgnet ved alle filialer; vakttelefon 0908 412 400.",
-        "sl": "Nujna veterinarska pomoč 24 ur na dan v vseh poslovalnicah; nujna linija 0908 412 400."
+        "sl": "Nujna veterinarska pomoč 24 ur na dan v vseh poslovalnicah; nujna linija 0908 412 400.",
+        "hr": "Veterinarska hitna skrb oglašava se 24/7 u svim podružnicama; hitna telefonska linija 0908 412 400."
       }
     },
     {
@@ -1488,7 +1535,8 @@
         "da": "Akut dyrlægehjælp oplyst døgnet rundt på alle afdelinger; akuttelefon 0908 412 400.",
         "fi": "Eläinlääkäripäivystys mainostettu 24/7 kaikissa toimipisteissä; päivystyspuhelin 0908 412 400.",
         "nb": "Akuttbehandling for dyr oppgis å være tilgjengelig hele døgnet ved alle filialer; vakttelefon 0908 412 400.",
-        "sl": "Po navedbah nujna veterinarska pomoč 24 ur na dan v vseh poslovalnicah; nujna linija 0908 412 400."
+        "sl": "Po navedbah nujna veterinarska pomoč 24 ur na dan v vseh poslovalnicah; nujna linija 0908 412 400.",
+        "hr": "Veterinarska hitna skrb oglašava se 24/7 u svim podružnicama; hitna telefonska linija 0908 412 400."
       }
     },
     {
@@ -1516,7 +1564,8 @@
         "da": "Akut hjælp oplyst døgnet rundt; ring på forhånd.",
         "fi": "Päivystystuki mainostettu 24/7; soita etukäteen.",
         "nb": "Akuttilbud oppgitt som døgnåpent, alle dager; ring på forhånd.",
-        "sl": "Nujna pomoč 24 ur na dan; vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; vnaprej pokličite.",
+        "hr": "Hitna podrška oglašava se 24/7; nazovi unaprijed."
       }
     },
     {
@@ -1544,7 +1593,8 @@
         "da": "Åbent man–lør 7.00–19.00, søn og helligdage 7.00–17.00; ring på forhånd ved akutte tilfælde uden for åbningstiden.",
         "fi": "Auki ma–la 7.00–19.00, su ja pyhäpäivinä 7.00–17.00; aukioloajan ulkopuolisissa päivystystapauksissa soita etukäteen.",
         "nb": "Åpent man–lør 07.00–19.00, søn og helligdager 07.00–17.00; ring på forhånd ved nødtilfeller utenom åpningstid.",
-        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite."
+        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite.",
+        "hr": "Radi pon–sub 07:00–19:00, ned i blagdanima 07:00–17:00; za hitne slučajeve izvan radnog vremena nazovi unaprijed."
       }
     },
     {
@@ -1572,7 +1622,8 @@
         "da": "Åbent man–lør 7.00–19.00, søn og helligdage 7.00–17.00; ring på forhånd ved akutte tilfælde uden for åbningstiden.",
         "fi": "Auki ma–la 7.00–19.00, su ja pyhäpäivinä 7.00–17.00; aukioloajan ulkopuolisissa päivystystapauksissa soita etukäteen.",
         "nb": "Åpent man–lør 07.00–19.00, søn og helligdager 07.00–17.00; ring på forhånd ved nødtilfeller utenom åpningstid.",
-        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite."
+        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite.",
+        "hr": "Radi pon–sub 07:00–19:00, ned i blagdanima 07:00–17:00; za hitne slučajeve izvan radnog vremena nazovi unaprijed."
       }
     },
     {
@@ -1600,7 +1651,8 @@
         "da": "Åbent man–lør 7.00–19.00, søn og helligdage 7.00–17.00; ring på forhånd ved akutte tilfælde uden for åbningstiden.",
         "fi": "Auki ma–la 7.00–19.00, su ja pyhäpäivinä 7.00–17.00; aukioloajan ulkopuolisissa päivystystapauksissa soita etukäteen.",
         "nb": "Åpent man–lør 07.00–19.00, søn og helligdager 07.00–17.00; ring på forhånd ved nødtilfeller utenom åpningstid.",
-        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite."
+        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite.",
+        "hr": "Radi pon–sub 07:00–19:00, ned i blagdanima 07:00–17:00; za hitne slučajeve izvan radnog vremena nazovi unaprijed."
       }
     },
     {
@@ -1628,7 +1680,8 @@
         "da": "Åbent man–lør 7.00–19.00, søn og helligdage 7.00–17.00; ring på forhånd ved akutte tilfælde uden for åbningstiden.",
         "fi": "Auki ma–la 7.00–19.00, su ja pyhäpäivinä 7.00–17.00; aukioloajan ulkopuolisissa päivystystapauksissa soita etukäteen.",
         "nb": "Åpent man–lør 07.00–19.00, søn og helligdager 07.00–17.00; ring på forhånd ved nødtilfeller utenom åpningstid.",
-        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite."
+        "sl": "Pon–sob 7–19, ned in prazniki 7–17; za nujne primere zunaj rednega časa vnaprej pokličite.",
+        "hr": "Radi pon–sub 07:00–19:00, ned i blagdanima 07:00–17:00; za hitne slučajeve izvan radnog vremena nazovi unaprijed."
       }
     },
     {
@@ -1656,7 +1709,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1684,7 +1738,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1712,7 +1767,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1740,7 +1796,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1768,7 +1825,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1796,7 +1854,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1824,7 +1883,8 @@
         "da": "Afdelingens navn angiver akut hjælp døgnet rundt; ring på forhånd for at bekræfte.",
         "fi": "Toimipisteen nimen mukaan päivystys 24/7; varmista soittamalla etukäteen.",
         "nb": "Filialens navn oppgir akuttjeneste hele døgnet; ring på forhånd for å bekrefte.",
-        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite."
+        "sl": "Nujna pomoč 24 ur na dan; za potrditev vnaprej pokličite.",
+        "hr": "Hitna skrb 24/7; nazovi unaprijed radi potvrde."
       }
     },
     {
@@ -1852,7 +1912,8 @@
         "da": "Åbent hver dag 8.00–20.00; akut hjælp oplyst døgnet rundt.",
         "fi": "Auki joka päivä 8.00–20.00; päivystys mainostettu 24/7.",
         "nb": "Åpent 08.00–20.00 daglig; akuttbehandling annonsert hele døgnet, alle dager.",
-        "sl": "Odprto vsak dan 8–20; oglašuje nujno pomoč 24 ur na dan."
+        "sl": "Odprto vsak dan 8–20; oglašuje nujno pomoč 24 ur na dan.",
+        "hr": "Radi svaki dan 08:00–20:00; hitna skrb oglašava se 24/7."
       }
     },
     {
@@ -1880,7 +1941,8 @@
         "da": "Åbent hver dag 7.00–19.00; ring på forhånd ved akutte tilfælde.",
         "fi": "Auki joka päivä 7.00–19.00; hätätapauksissa soita etukäteen.",
         "nb": "Åpent daglig 07.00–19.00; ring på forhånd ved nødtilfeller.",
-        "sl": "Odprto vsak dan 7–19; za nujne primere vnaprej pokličite."
+        "sl": "Odprto vsak dan 7–19; za nujne primere vnaprej pokličite.",
+        "hr": "Radi svaki dan 07:00–19:00; za hitne slučajeve nazovi unaprijed."
       }
     },
     {
@@ -1908,7 +1970,8 @@
         "da": "Åbent hver dag 7.00–19.00; ring på forhånd ved akutte tilfælde.",
         "fi": "Auki joka päivä 7.00–19.00; hätätapauksissa soita etukäteen.",
         "nb": "Åpent daglig 07.00–19.00; ring på forhånd ved nødtilfeller.",
-        "sl": "Odprto vsak dan 7–19; za nujne primere vnaprej pokličite."
+        "sl": "Odprto vsak dan 7–19; za nujne primere vnaprej pokličite.",
+        "hr": "Radi svaki dan 07:00–19:00; za hitne slučajeve nazovi unaprijed."
       }
     },
     {
@@ -1935,7 +1998,8 @@
         "da": "Engelsktalende klinik i Da Nang; akuttelefon 0339 325 563; ring på forhånd.",
         "fi": "Klinikka Da Nangissa, jossa puhutaan englantia; päivystysnumero 0339 325 563; soita etukäteen.",
         "nb": "Engelsktalende klinikk i Da Nang; akuttelefon 0339 325 563; ring på forhånd.",
-        "sl": "Klinika z angleško govorečim osebjem v Da Nangu; nujna linija 0339 325 563; vnaprej pokličite."
+        "sl": "Klinika z angleško govorečim osebjem v Da Nangu; nujna linija 0339 325 563; vnaprej pokličite.",
+        "hr": "Ambulanta u Da Nangu s osobljem koje govori engleski; hitna linija 0339 325 563; nazovi unaprijed."
       }
     }
   ],

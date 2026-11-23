@@ -54,7 +54,8 @@
         "da": "Åbent døgnet rundt, også akut. Telefon/WhatsApp +505 8966-5221.",
         "fi": "Auki ympäri vuorokauden, myös päivystys. Puhelin/WhatsApp +505 8966-5221.",
         "nb": "Åpent hele døgnet, også nødtilfeller. Telefon/WhatsApp +505 8966-5221.",
-        "sl": "Odprto 24 ur na dan, tudi za nujne primere. Telefon/WhatsApp +505 8966-5221."
+        "sl": "Odprto 24 ur na dan, tudi za nujne primere. Telefon/WhatsApp +505 8966-5221.",
+        "hr": "Radi 24 sata, uključujući hitne slučajeve. Telefon/WhatsApp +505 8966-5221."
       }
     },
     {
@@ -77,7 +78,8 @@
         "da": "Åbent mandag til lørdag 8.00–18.00.",
         "fi": "Auki maanantaista lauantaihin 8.00–18.00.",
         "nb": "Åpent mandag til lørdag 8.00–18.00.",
-        "sl": "Odprto pon–sob 8–18."
+        "sl": "Odprto pon–sob 8–18.",
+        "hr": "Radi pon–sub 8:00–18:00."
       }
     },
     {
@@ -100,7 +102,8 @@
         "da": "Åbent mandag til fredag 9.00–17.00, lukket lørdag og søndag.",
         "fi": "Auki maanantaista perjantaihin 9.00–17.00, lauantaisin ja sunnuntaisin suljettu.",
         "nb": "Åpent mandag til fredag 9.00–17.00, stengt lørdag og søndag.",
-        "sl": "Odprto pon–pet 9–17, ob sobotah in nedeljah zaprto."
+        "sl": "Odprto pon–pet 9–17, ob sobotah in nedeljah zaprto.",
+        "hr": "Radi pon–pet 9:00–17:00, subotom i nedjeljom zatvoreno."
       }
     }
   ],

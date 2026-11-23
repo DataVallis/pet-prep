@@ -49,7 +49,8 @@
         "da": "Efter aftale. Dagligt 9.00–19.00, torsdag 9.00–16.00, lørdag 9.00–12.00; ring på forhånd.",
         "fi": "Ajanvarauksella. Päivittäin 9.00–19.00, torstaisin 9.00–16.00, lauantaisin 9.00–12.00; soita etukäteen.",
         "nb": "Etter timebestilling. Alle dager kl. 9.00–19.00, torsdag kl. 9.00–16.00, lørdag kl. 9.00–12.00; ring på forhånd.",
-        "sl": "Po naročilu. Vsak dan 9–19, čet 9–16, sob 9–12; vnaprej pokličite."
+        "sl": "Po naročilu. Vsak dan 9–19, čet 9–16, sob 9–12; vnaprej pokličite.",
+        "hr": "Uz termin. Svaki dan 9:00–19:00, četvrtkom 9:00–16:00, subotom 9:00–12:00; nazovi unaprijed."
       }
     },
     {
@@ -72,7 +73,8 @@
         "da": "Mandag til lørdag 9.00–19.00; ring på forhånd.",
         "fi": "Maanantaista lauantaihin 9.00–19.00; soita etukäteen.",
         "nb": "mandag–lørdag 9.00–19.00; ring på forhånd.",
-        "sl": "Pon–sob 9–19; vnaprej pokličite."
+        "sl": "Pon–sob 9–19; vnaprej pokličite.",
+        "hr": "Od ponedjeljka do subote 9:00–19:00; nazovi unaprijed."
       }
     },
     {
@@ -95,7 +97,8 @@
         "da": "Mandag til fredag 10.00–19.00; ring på forhånd.",
         "fi": "Maanantaista perjantaihin 10.00–19.00; soita etukäteen.",
         "nb": "mandag–fredag 10.00–19.00; ring på forhånd.",
-        "sl": "Pon–pet 10–19; vnaprej pokličite."
+        "sl": "Pon–pet 10–19; vnaprej pokličite.",
+        "hr": "Od ponedjeljka do petka 10:00–19:00; nazovi unaprijed."
       }
     },
     {
@@ -118,7 +121,8 @@
         "da": "Vagtservice uden for åbningstid om nætter og i weekender: +33 6 60 61 36 24. Ikke en døgnåben klinik; ring på forhånd.",
         "fi": "Päivystys öisin ja viikonloppuisin aukioloaikojen ulkopuolella: +33 6 60 61 36 24. Ei 24 tunnin klinikka; soita etukäteen.",
         "nb": "Vakttjeneste utenom åpningstid for netter og helger: +33 6 60 61 36 24. Ikke en døgnåpen klinikk; ring på forhånd.",
-        "sl": "Dežurna služba zunaj rednega časa ob nočeh in koncih tedna: +33 6 60 61 36 24. Ni klinika, odprta 24 ur na dan; vnaprej pokličite."
+        "sl": "Dežurna služba zunaj rednega časa ob nočeh in koncih tedna: +33 6 60 61 36 24. Ni klinika, odprta 24 ur na dan; vnaprej pokličite.",
+        "hr": "Dežurna služba izvan radnog vremena za noći i vikende: +33 6 60 61 36 24. Nije ambulanta koja radi 24 sata; nazovi unaprijed."
       }
     }
   ],

@@ -44,7 +44,8 @@
         "da": "Dyrehospital for smådyr, åbent mandag til fredag 9.00–19.00. Ikke en akutklinik med åbent døgnet rundt.",
         "fi": "Pieneläinsairaala auki ma–pe 9–19. Ei ole 24 tunnin päivystysklinikka.",
         "nb": "Smådyrsykehus åpent mandag til fredag kl. 9.00–19.00. Ikke en døgnåpen akuttklinikk.",
-        "sl": "Bolnišnica za male živali, odprta pon–pet 9–19. Ni 24-urna nujna ambulanta."
+        "sl": "Bolnišnica za male živali, odprta pon–pet 9–19. Ni 24-urna nujna ambulanta.",
+        "hr": "Bolnica za male životinje radi pon–pet 9:00–19:00. Nije hitna klinika koja radi 24 sata."
       }
     },
     {
@@ -74,7 +75,8 @@
         "da": "Almindelig åbningstid mandag til fredag 10.00–12.00 og 14.00–17.00. Akutte tilfælde tages imod uden for åbningstiden, også om natten, i weekenden og på helligdage; ring på forhånd.",
         "fi": "Tavalliset aukioloajat ma–pe 10–12 ja 14–17. Päivystystapaukset hoidetaan näiden aikojen ulkopuolella, myös öisin, viikonloppuisin ja pyhäpäivinä; soita etukäteen.",
         "nb": "Ordinær åpningstid mandag til fredag kl. 10.00–12.00 og 14.00–17.00. Nødtilfeller tas imot utenom disse tidene, også om natten, i helger og på helligdager; ring på forhånd.",
-        "sl": "Redni delovni čas pon–pet 10–12 in 14–17. Nujni primeri se sprejemajo zunaj tega časa, tudi ponoči, ob koncih tedna in praznikih; vnaprej pokličite."
+        "sl": "Redni delovni čas pon–pet 10–12 in 14–17. Nujni primeri se sprejemajo zunaj tega časa, tudi ponoči, ob koncih tedna in praznikih; vnaprej pokličite.",
+        "hr": "Redovno radno vrijeme pon–pet 10:00–12:00 i 14:00–17:00. Hitni slučajevi primaju se i izvan tog vremena, uključujući noći, vikende i blagdane; nazovi unaprijed."
       }
     },
     {
@@ -103,7 +105,8 @@
         "da": "Giftrådgivning for dyr, hverdage 8.00–18.00. Ikke en døgnåben linje.",
         "fi": "Eläinten myrkytystietopalvelu arkisin 8–18. Ei ole 24 tunnin linja.",
         "nb": "Giftinformasjon for dyr, hverdager 8.00–18.00. Ikke en døgnåpen linje.",
-        "sl": "Veterinarska informacijska služba za zastrupitve, ob delavnikih 8–18. Ni linija 24 ur na dan."
+        "sl": "Veterinarska informacijska služba za zastrupitve, ob delavnikih 8–18. Ni linija 24 ur na dan.",
+        "hr": "Veterinarska služba za informacije o trovanjima, radnim danom 8:00–18:00. Nije linija koja radi 24 sata."
       }
     }
   ],

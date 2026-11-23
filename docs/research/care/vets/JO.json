@@ -52,7 +52,8 @@
         "da": "Åbent døgnet rundt; akuttelefonen har samme nummer.",
         "fi": "Auki 24 h; päivystyslinja 24 h samassa numerossa.",
         "nb": "Åpent hele døgnet; døgnåpen akuttlinje på samme nummer.",
-        "sl": "Odprto 24 ur na dan; nujna linija 24 ur na dan je na isti številki."
+        "sl": "Odprto 24 ur na dan; nujna linija 24 ur na dan je na isti številki.",
+        "hr": "Otvoreno 24 sata; hitna linija 24 sata na istom broju."
       }
     },
     {
@@ -78,7 +79,8 @@
         "da": "Åbent døgnet rundt, alle ugens dage; akutlæger til stede natten over.",
         "fi": "Auki 24 h, 7 päivää viikossa; päivystävät lääkärit paikalla yöllä.",
         "nb": "Åpent hele døgnet, sju dager i uken; akuttleger på stedet om natten.",
-        "sl": "Odprto 24 ur na dan, 7 dni v tednu; ponoči so na kraju na voljo zdravniki za nujne primere."
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; ponoči so na kraju na voljo zdravniki za nujne primere.",
+        "hr": "Otvoreno 24 sata, 7 dana u tjednu; hitni veterinari u klinici i preko noći."
       }
     },
     {
@@ -105,7 +107,8 @@
         "da": "Smådyrsafdeling med akut- og intensivbehandling; ring i forvejen angående åbningstider.",
         "fi": "Pieneläinosasto, jossa päivystys ja tehohoito; kysy aukioloajat soittamalla etukäteen.",
         "nb": "Smådyravdeling med akutt- og intensivbehandling; ring på forhånd for åpningstider.",
-        "sl": "Oddelek za male živali z nujno in intenzivno oskrbo; za delovni čas pokličite."
+        "sl": "Oddelek za male živali z nujno in intenzivno oskrbo; za delovni čas pokličite.",
+        "hr": "Odjel za male životinje s hitnom i intenzivnom skrbi; za radno vrijeme nazovi unaprijed."
       }
     },
     {
@@ -131,7 +134,8 @@
         "da": "Dagligt 10.00–22.00; fredag 14.00–22.00.",
         "fi": "Päivittäin 10.00–22.00; perjantaisin 14.00–22.00.",
         "nb": "Alle dager 10.00–22.00; fredag 14.00–22.00.",
-        "sl": "Vsak dan 10–22; ob petkih 14–22."
+        "sl": "Vsak dan 10–22; ob petkih 14–22.",
+        "hr": "Svaki dan 10:00–22:00; petkom 14:00–22:00."
       }
     },
     {
@@ -158,7 +162,8 @@
         "da": "Dagligt 11.00–19.00; ring i forvejen ved akutte tilfælde.",
         "fi": "Päivittäin 11.00–19.00; hätätapauksissa soita etukäteen.",
         "nb": "Alle dager 11.00–19.00; ring på forhånd ved nødtilfeller.",
-        "sl": "Vsak dan 11–19; za nujne primere vnaprej pokličite."
+        "sl": "Vsak dan 11–19; za nujne primere vnaprej pokličite.",
+        "hr": "Svaki dan 11:00–19:00; za hitne slučajeve nazovi unaprijed."
       }
     },
     {
@@ -184,7 +189,8 @@
         "da": "Lør–ons 08.00–20.00 (tirsdag til 19.30).",
         "fi": "la–ke 8.00–20.00 (ti asti 19.30).",
         "nb": "Lør–ons kl. 8.00–20.00 (tirsdager til kl. 19.30).",
-        "sl": "Sob–sre 8–20 (tor do 19.30)."
+        "sl": "Sob–sre 8–20 (tor do 19.30).",
+        "hr": "sub–sri 08:00–20:00 (uto do 19:30)."
       }
     },
     {
@@ -210,7 +216,8 @@
         "da": "Lør–ons 09.00–18.00.",
         "fi": "la–ke 9.00–18.00.",
         "nb": "Lør–ons kl. 9.00–18.00.",
-        "sl": "Sob–sre 9–18."
+        "sl": "Sob–sre 9–18.",
+        "hr": "sub–sri 09:00–18:00."
       }
     },
     {
@@ -236,7 +243,8 @@
         "da": "Lør–ons 09.30–18.00.",
         "fi": "la–ke 9.30–18.00.",
         "nb": "Lør–ons kl. 9.30–18.00.",
-        "sl": "Sob–sre 9.30–18."
+        "sl": "Sob–sre 9.30–18.",
+        "hr": "sub–sri 09:30–18:00."
       }
     },
     {
@@ -263,7 +271,8 @@
         "da": "Hastehjælp samme dag; ring i forvejen angående åbningstider.",
         "fi": "Kiireellinen hoito samana päivänä; kysy aukioloajat soittamalla etukäteen.",
         "nb": "Hastebehandling samme dag; ring på forhånd for åpningstider.",
-        "sl": "Nujna oskrba še isti dan; za delovni čas pokličite."
+        "sl": "Nujna oskrba še isti dan; za delovni čas pokličite.",
+        "hr": "Hitna skrb istoga dana; za radno vrijeme nazovi unaprijed."
       }
     }
   ],
