@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `norfolk_terrier` (viri S1009–S1018; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1011) |
 | Izvor | FCI št. 272 »Norfolk Terrier«, skupina 3, sekcija 2 (mali terierji), Velika Britanija (S1009, S1010) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 130. mesto »Norfolk Terrier« (S174, zapisano 2026-11-23) |
-| PR-ji | pet-prep #1527 (pasma, združen `fcc09b2`) · portret pet-prep PR `feat/M5-R10-134-norfolk-terrier-portrait` (zagon `breed-portraits.yml` 45104328056, sprejet v prvem poskusu) · barvne različice: sledijo · spletna stran: pet-prep-website `feat/register-norfolk-terrier` |
+| PR-ji | pet-prep #1527 (pasma, združen `fcc09b2`) · portret pet-prep PR `feat/M5-R10-134-norfolk-terrier-portrait` (zagon `breed-portraits.yml` 45104328056, sprejet v prvem poskusu) · portret PR #1530 (združen `eaf405b`) · barvne različice pet-prep PR `feat/M5-R10-134-norfolk-terrier-colours` (zagon `breed-portraits.yml` 45105661759: 3/3 odobril Claude) · spletna stran: pet-prep-website `feat/register-norfolk-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -39,7 +39,7 @@
 | Pasma v izbirniku (značka »Izziv«, namig »Del 12-tedenskega izziva · česanje 2× na teden«, iskanje »norfolk terrier«, »norfolk terier« …, oznake, starostni namigi) | 🛠 | 💶 izziv | M5-R10-134 | 2026-11-23 |
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 0,7×) | 🛠 | 💶 izziv | M5-R10-134 | 2026-11-23 |
 | Česanje 2× na teden, ščetkanje zob vsak dan, čiščenje ušes vsak teden, opomnik za kopanje vsake 4 tedne, opomnik za frizerja vsakih 12 tednov, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R20 / M5-R18 / M5-R17 | 2026-11-23 |
-| Barva (izbirnik: rdeč, pšenično rumen, črno-rjav, sivkast) | 🛠 | 💶 izziv | M5-R21 | 2026-11-23 |
+| Barva (izbirnik: rdeč, pšenično rumen, črno-rjav, sivkast; fotografije vseh štirih — rdeč je portret, ostale tri je 2026-11-23 odobril Claude) | 🛠 | 💶 izziv | M5-R21 | 2026-11-23 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč, povešena ušesa v obliki črke V, žimasta dlaka, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-23 |
 | Stran na petprep.si (`/animals/dogs/norfolk-terrier`, `/sl/zivali/psi/norfolk-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 

@@ -506,6 +506,12 @@ return [
         'sable' => 'dogs/finnish-lapphund--sable.webp',
         'cream' => 'dogs/finnish-lapphund--cream.webp',
     ],
+    'norfolk_terrier' => [
+        'red' => 'dogs/norfolk-terrier.webp',
+        'wheaten' => 'dogs/norfolk-terrier--wheaten.webp',
+        'black-tan' => 'dogs/norfolk-terrier--black-tan.webp',
+        'grizzle' => 'dogs/norfolk-terrier--grizzle.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

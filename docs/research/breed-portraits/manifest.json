@@ -5624,6 +5624,51 @@
             "prompt_hash": "sha256:8230530791d0e5f3d7c7409c96e2aea5cd5e2a57b56754952ad59f8a57a71421",
             "generated_at": "2026-11-23T01:18:36+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "norfolk_terrier",
+            "species": "dog",
+            "colour": "wheaten",
+            "colour_value": "wheaten",
+            "file": "dog/norfolk-terrier--wheaten.webp",
+            "reference": "dog/norfolk-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:d43a9e1c9d77b9dbe8d2fb05dc6c92a030b63a2a5418ffae2f5289d761b20bc2",
+            "generated_at": "2026-11-23T03:23:56+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "norfolk_terrier",
+            "species": "dog",
+            "colour": "black-tan",
+            "colour_value": "black and tan",
+            "file": "dog/norfolk-terrier--black-tan.webp",
+            "reference": "dog/norfolk-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:8a0de0c0d1fe6602e17fa4ad4f89f08505899e6fb40a317b877bb6ecdc056130",
+            "generated_at": "2026-11-23T03:24:13+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "norfolk_terrier",
+            "species": "dog",
+            "colour": "grizzle",
+            "colour_value": "grizzle",
+            "file": "dog/norfolk-terrier--grizzle.webp",
+            "reference": "dog/norfolk-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:4cae872c43080acf5683ba8ab699b5941b7411d09175c747b13218d4261b7763",
+            "generated_at": "2026-11-23T03:24:33+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
