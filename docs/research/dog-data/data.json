@@ -68622,6 +68622,599 @@
       }
     }
   },
+  "norfolk_terrier": {
+    "_note": "Added 2026-11-23 (M5-R10-134, unattended run — appended after the Finnish Lapphund: AKC 2024 No. 130 'Norfolk Terrier', S174 full-list table as recorded on 2026-11-23 '129 Finnish Lapphund', '130 Norfolk Terrier'). Quotes as returned by the web-fetch tool on 2026-11-23 (non-preapproved pages under a 125-character quote limit — fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S1009–S1018 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S1009, 'NORFOLK TERRIER' No. 272, Group 3 Section 2, Great Britain); FCI-Standard N° 272 English PDF (S1010, 06.10.2026, valid standard 08.09.2026). RKC Breeds A–Z page (S1011, royalkennelclub.com — reached through a search result; the thekennelclub.org.uk address redirects and was refused; the RKC breed-standard page returned an error): key facts, Breed Watch Category 1, no recommended pre-breeding health screening. Weight: no FCI / RKC weight — UKC standard (S1016) 'Weight ranges from 11 to 12 pounds' (PDSA S1012 '5-5.5 kg', Woodgreen S1013 '5-7 kg'). Lifespan: McMillan et al. 2024 only via Wikipedia (S1017, tier C, 13.5 y) → RKC lower bound 'Over 10 years' (S1011) → senior 90 (Norwich Terrier / Boston Terrier precedent). PDSA (S1012) and Woodgreen (S1013) breed pages exist for this breed. Dogs Trust Ireland (S1018) is a rehoming page with a copy-paste error (a 'Tibetan Terriers' heading) — used only for the shedding conflict. Names: RKC / AKC / FCI 'Norfolk Terrier'; Slovenian »norfolk terier« (after »norwich terier«) — no KZS page read, open for David.",
+    "identity": {
+      "value": "FCI No. 272, Group 3 Section 2 (Small-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S1009",
+      "quote": "Group : [n°3 - Terriers]",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S1009, as returned): 'NORFOLK TERRIER (272)', 'Group : [n°3 - Terriers]', section 'Small sized Terriers', country of origin 'GREAT BRITAIN', 'Recognized on a definitive basis' (10/1/1966), 'Not subject to a working trial according to the FCI breeds nomenclature'; English standard published 06/10/2026. FCI-Standard N° 272 (S1010): 'FCI-CLASSIFICATION: Group 3 Terriers' 'Section 2 Small-sized Terriers' 'ORIGIN: Great Britain.' Great Britain is already in FCI_ORIGINS (GB)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S1011",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S1011) 'Small'; PDSA (S1012) small, 5–5.5 kg; UKC (S1016) 11–12 lb → the 'Small (12–24 pounds)' class of S10 (lower edge) — used for growth. FCI (S1010): 'One of the smallest of terriers.'"
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            25
+          ],
+          "female": [
+            25,
+            25
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1010",
+        "quote": "Ideal height at the withers: 25 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 272 (S1010): one ideal height for both sexes (stored per sex). UKC (S1016) 'The ideal height is 10 inches.', PDSA (S1012) average height '25 cm', PetMD (S1014) 'standing no more than 10 inches at the shoulder' agree."
+      }
+    },
+    "adult_weight": {
+      "ukc": {
+        "value": {
+          "male": [
+            5.0,
+            5.4
+          ],
+          "female": [
+            5.0,
+            5.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1016",
+        "quote": "Weight ranges from 11 to 12 pounds, or a weight that is suitable for the individual dog's structure and balance.",
+        "confidence": "medium",
+        "notes": "UKC breed standard (S1016, revised April 15, 2007): one range for both sexes, 11–12 lb = 4.99–5.44 kg → 5.0–5.4 kg (stored per sex, Norwich Terrier precedent). The FCI standard (S1010) gives height only. PetMD (S1014) 'weighing just 11–12 pounds' and WebMD (S1015) 'a maximum weight of about 11 to 12 pounds' agree.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                5.0,
+                5.5
+              ],
+              "female": [
+                5.0,
+                5.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1012",
+            "quote": "5-5.5 kg",
+            "confidence": "medium",
+            "notes": "PDSA (S1012) average weight."
+          },
+          {
+            "value": {
+              "male": [
+                5.0,
+                7.0
+              ],
+              "female": [
+                5.0,
+                7.0
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1013",
+            "quote": "5-7 kg",
+            "confidence": "medium",
+            "notes": "Woodgreen (S1013) at-a-glance weight."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 11–12 lb (S1016) sits at the lower edge of 'Small (12–24 pounds)' (Norwich Terrier precedent). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Norfolk Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED at tier A/B — the McMillan et al. 2024 breed median was not read at an A/B source on 2026-11-23 (the Dogs Trust table S123 was refused in earlier runs and not retried). Wikipedia (S1017, tier C): 'life expectancy of 13.5 years for the breed' (cites McMillan 2024) → would give senior round(0.75 × 13.5 × 12) = 122 — tier C, not used alone (Norwich Terrier precedent). Re-check S123 later.",
+        "alternatives": {
+          "wikipedia_mcmillan_13_5_y_senior": 122
+        }
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S1011",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S1011). Runbook lifespan order: McMillan 2024 → VetCompass median → RKC lower bound → used: 10 years (Norwich Terrier precedent). PDSA (S1012) 'Over 10 years' agrees. Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "woodgreen": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1013",
+        "quote": "12-15 years",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1013) at-a-glance lifespan. Background."
+      },
+      "petmd": {
+        "value": "12–16",
+        "unit": "years",
+        "source_id": "S1014",
+        "quote": "The average Norfolk Terrier lifespan is 12–16 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1014, tier B, US). WebMD (S1015) 'can live for about 14 to 16 years.' Background; the RKC lower bound is used by the runbook order."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S1011) → 0.75 × 10 = 7.5 y = 90 months. Alternatives: 122 (Wikipedia's McMillan 13.5 y, tier C), 108 (Woodgreen / PetMD lower bound 12 y), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S1011"
+        ],
+        "months": 90
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S1011",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S1011), runbook first choice → 60 min ('up to N' → N). PDSA (S1012) 'Minimum exercise (per day) | 1 hour' and Woodgreen (S1013) 'around an hour of exercise every day' agree.",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S1012",
+            "quote": "Norfolk Terriers have plenty of energy, and will need around an hour of exercise daily to keep them happy and healthy.",
+            "confidence": "high",
+            "notes": "PDSA (S1012) — 'around an hour' → 60."
+          },
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S1013",
+            "quote": "Norfolk terriers need around an hour of exercise every day.",
+            "confidence": "high",
+            "notes": "Woodgreen (S1013, fragment; at-a-glance box '40-60 minutes'). Splitting it into two outings works well (paraphrase)."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "plenty of energy — around an hour a day, can be split into two outings; walks and play",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "This doesn't have to be one long walk – splitting it into two outings works well for most dogs.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1013). PetMD (S1014): playtime and long walks, a lot of activity and mental stimulation (paraphrase — no verbatim sentence kept → no needs_mental_stimulation chip)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row. PetMD (S1014) 'two measured feedings per day' for adults (fragment) — general advice; the game keeps its meal windows."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "a 'demon' for its size; lovable disposition, not quarrelsome, hardy; alert and fearless",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "A \"demon\" for its size. Lovable disposition, not quarrelsome, hardy constitution; alert and fearless.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 272 (S1010). RKC (S1011) tagline 'Alert and fearless, but with a lovable disposition'. PDSA (S1012): 'Norfolk Terriers are bold, curious, independent dogs.'"
+      },
+      "children": {
+        "value": "gentle and patient with children — always supervise",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "they're gentle and patient with children and will calmly accept snuggles",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1013, fragment); same page: 'children and Norfolk terriers should always be supervised when together.' PetMD (S1014): 'Most individuals are very patient with children, though kids should always be taught how to interact with small dogs.' Explicit statement → children (supervision caveat kept here); no small_children."
+      },
+      "other_pets": {
+        "value": "strong prey drive — small pets like rabbits or guinea pigs may not be safe; more sociable with other dogs than many terriers",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "They have a strong prey drive, so small pets like rabbits or guinea pigs may not be safe around them.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1013); at-a-glance 'Sociable with pets: Low'; 'They're also more sociable with other dogs than many terrier breeds tend to be.' PetMD (S1014): 'Many Norfolk Terriers have a strong prey drive, which means they do not always live in harmony with cats or other small animals.' WebMD (S1015): 'This breed is naturally a hunter, with a strong prey drive.' Basis of chases_small_pets (runbook: a quote naming a high / strong prey drive)."
+      },
+      "containment": {
+        "value": "escape artists — a secure garden with an escape-proof fence is a must",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "a secure garden with an escape-proof fence is a must.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1013, fragment); 'They can be escape artists.' 'they will sniff out any gap in your fence!' WebMD (S1015): 'you shouldn't let your Norfolk Terrier off their leash if you're not in a fenced area.' Basis of secure_fencing."
+      },
+      "time_alone": {
+        "value": "people-loving — does not enjoy being left alone for long; best where someone is around much of the day",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "These people-loving dogs don't enjoy being left alone for long stretches of time.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1013); 'Norfolks do best in homes where someone is around for much of the day.' Basis of needs_company."
+      },
+      "socialisation": {
+        "value": "early socialisation with other household pets",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "They will also need early socialisation with other household pets.",
+        "confidence": "high",
+        "notes": "PDSA (S1012), a need (runbook M5-R17) → proposed_game_parameters.norfolk_terrier.socialisation (DOG_SOCIALISATION row). Woodgreen (S1013): 'All puppies need early socialisation and training to help them grow into confident, well-mannered adults.' PetMD (S1014): critical period under 12 weeks (paraphrase)."
+      },
+      "training": {
+        "value": "independent thinkers; basic training and especially recall not always easy; responds to positive reinforcement",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "even basic training – and especially recall – will not always be easy",
+        "confidence": "medium",
+        "notes": "PDSA (S1012, fragment). Woodgreen (S1013): 'they're independent thinkers and can be difficult to motivate.' PetMD (S1014): very intelligent, quick to respond to 'positive reinforcement methods' (fragment)."
+      },
+      "barking_digging": {
+        "value": "loves to dig; can become noisy when bored",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "They love to dig and have a strong instinct to hunt and explore",
+        "confidence": "medium",
+        "notes": "PDSA (S1012, fragment). Woodgreen (S1013): 'they have a real passion for digging!'; 'They're not the yappiest of breeds, but they can become noisy if they're bored or under-stimulated.' Background only (no chip)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found (PetMD: bored dogs may become destructive — paraphrase)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found → no food_motivated_weight chip."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S1011) — no points of concern → no welfare chip. Breeder checklist: RKC 'At this time this breed does not have any recommended pre-breeding health screening in place' (S1011) → none_recommended. Wikipedia (S1017, tier C) names mitral valve disease, luxating patellas, incorrect bites and shallow hip sockets — tier C, cross-check only.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S1011, fragment; 'Category 1'). No welfare chip."
+      },
+      "heart": {
+        "value": "myxomatous mitral valve disease (MMVD)",
+        "unit": "—",
+        "source_id": "S1014",
+        "quote": "myxomatous mitral valve disease (MMVD)",
+        "confidence": "medium",
+        "notes": "PetMD (S1014, as returned in the list of conditions). Register health key mitral_valve_disease."
+      },
+      "patella": {
+        "value": "luxating patella (kneecap dislocation)",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "luxating patellas",
+        "confidence": "medium",
+        "notes": "PDSA (S1012, list of conditions as returned); Woodgreen (S1013) luxating patella; PetMD (S1014) patellar luxation. Register health key kneecap_luxation."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "hip dysplasia",
+        "confidence": "medium",
+        "notes": "PDSA (S1012), Woodgreen (S1013), PetMD (S1014), WebMD (S1015) name hip dysplasia. Register health key hip_dysplasia_arthritis."
+      },
+      "eyes": {
+        "value": "eye conditions — cataracts, glaucoma, lens luxation",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "cataracts, glaucoma, lens luxation",
+        "confidence": "medium",
+        "notes": "PDSA (S1012, list as returned); Woodgreen (S1013) and WebMD (S1015) the same three. Register health key cataracts_lens_luxation."
+      },
+      "dental": {
+        "value": "dental disease — daily tooth brushing",
+        "unit": "—",
+        "source_id": "S1015",
+        "quote": "Norfolk Terriers also need regular teeth cleaning and daily brushing.",
+        "confidence": "medium",
+        "notes": "WebMD (S1015); PetMD (S1014) names dental disease and 'daily toothbrushing' (fragment). Register health key dental_disease_home_brushing. Basis of the daily tooth brushing (proposed_game_parameters.norfolk_terrier.tooth_brushing)."
+      },
+      "skin": {
+        "value": "skin problems",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "skin problems",
+        "confidence": "low",
+        "notes": "PDSA (S1012, list as returned); WebMD (S1015) 'skin issues'. Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 56,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Norfolk Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-23): rank 56 'Norfolk Terrier' (shared with Sealyham Terrier), 'Fair Working/Obedience Intelligence' (as returned). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 55–69 (as returned: 'Fair Working/Obedience Intelligence')."
+      },
+      "training_notes": {
+        "value": "independent; recall not always easy",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "even basic training – and especially recall – will not always be easy",
+        "confidence": "medium",
+        "notes": "PDSA (S1012) — see behaviour.training."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.norfolk_terrier.learning_multiplier (0.7, runbook rule: Fair tier, rank 56).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "one of the smallest terriers — low, keen, compact and strong, short back, good substance and bone",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "One of the smallest of terriers. Low, keen dog, compact and strong, short back, good substance and bone.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 272 (S1010)."
+      },
+      "colours": {
+        "value": [
+          "red",
+          "wheaten",
+          "black and tan",
+          "grizzle"
+        ],
+        "unit": "list",
+        "source_id": "S1010",
+        "quote": "All shades of red, wheaten, black and tan or grizzle. White marks or patches undesirable but permissible.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 272 (S1010); 'Any other colour or combination of colours unacceptable.' UKC (S1016): 'All shades of red, wheaten (pale yellow or fawn), black and tan, or grizzle (blue-gray or roan) are permitted.' 'White markings are undesirable, but permitted.' No white dog, no white patches in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): red 0.5 (first colour of the FCI standard — the portrait default), wheaten 0.2, black and tan 0.15, grizzle 0.15."
+      },
+      "coat": {
+        "value": "hard, wiry, straight, close-lying coat; longer and rougher on the neck and shoulders",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "Hard, wiry, straight, lying close to body. Longer and rougher on neck and shoulders.",
+        "confidence": "high",
+        "notes": "FCI (S1010); 'Excessive trimming undesirable.' UKC (S1016): about 1½ to 2 inches long with a definite undercoat (paraphrase). RKC key fact 'Coat length: Medium' (S1011)."
+      },
+      "eyes": {
+        "value": "oval, dark brown or black; alert, keen and intelligent expression",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "Oval-shaped, dark brown or black. Expression alert, keen and intelligent.",
+        "confidence": "high",
+        "notes": "FCI (S1010)."
+      },
+      "ears": {
+        "value": "medium-sized V-shaped drop ears, slightly rounded at the tip, dropping forward close to the cheek",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "Medium size, V-shaped, slightly rounded at tip, dropping forward close to cheek.",
+        "confidence": "high",
+        "notes": "FCI (S1010). The drop ears tell it apart from the prick-eared Norwich Terrier (Wikipedia S1017: a drop-eared variety of the Norwich until 1964 — paraphrase)."
+      },
+      "tail": {
+        "value": "medium docked or of moderate length (undocked), thick at the root and tapering, carried jauntily",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "Docking of tail previously optional.",
+        "confidence": "high",
+        "notes": "FCI (S1010): docked 'Medium docked, set level with topline and carried erect.'; undocked 'Tail of moderate length to give a general balance to dog, thick at root and tapering towards the tip, as straight as possible, carried jauntily, not excessively gay.' The game shows the natural (undocked) tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S1011), PDSA (S1012), Woodgreen (S1013), PetMD (S1014), WebMD (S1015). RKC key facts reached on 2026-11-23.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011) → small (size class)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011) → 60 min. Not long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011). Basis of apartment (runbook: only from RKC 'Flat/ Apartment'). Woodgreen (S1013) 'from houses with gardens to flats' agrees."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011). Background."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011) — no number → the most specific number of another A/B source: Woodgreen 'once or twice a week' → 2 (range → upper bound), PDSA 'a couple of times per week' agrees (runbook »Dog grooming«). With the stripping three to four times a year → frequent_grooming (Norwich Terrier precedent)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011). Conflicts with Woodgreen (S1013) 'Shedding: Minimal' / 'They're light shedders' and Dogs Trust Ireland (S1018) 'Norfolk Terriers shed very little.' → neither sheds nor a low-shedding statement as a chip (runbook: conflicting sources → neither tag)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011). The basis of the senior boundary (no McMillan value reachable at A/B)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011). Background only."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S1011",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S1011)."
+      },
+      "pdsa_grooming": {
+        "value": "combing a couple of times per week; stripping three to four times per year",
+        "unit": "—",
+        "source_id": "S1012",
+        "quote": "Their wiry coats need combing a couple of times per week, and will also need stripping three to four times per year.",
+        "confidence": "high",
+        "notes": "PDSA (S1012) → brushing 2× a week agrees; stripping 'three to four times per year' → professional grooming / hand-stripping every 3 months (Wire Fox Terrier / Airedale Terrier precedent, proposed_game_parameters.norfolk_terrier.professional_grooming)."
+      },
+      "woodgreen_grooming": {
+        "value": "brush and comb once or twice a week; coat clipped about three times a year",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "A brush and comb through once or twice a week will keep their coat at an appropriate length",
+        "confidence": "high",
+        "notes": "Woodgreen (S1013, fragment) → 2 (range → upper bound, runbook »Dog grooming«). 'A Norfolk terrier should also get their coat clipped about three times a year.' (alternative for the groomer task, every 4 months)."
+      },
+      "woodgreen_care": {
+        "value": "regular nail trims, ear checks and teeth brushing",
+        "unit": "—",
+        "source_id": "S1013",
+        "quote": "Don't forget regular nail trims, ear checks, and teeth brushing to keep your Norfolk in great shape overall.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1013). No frequency for nails → no nail task (fact only)."
+      },
+      "petmd_teeth": {
+        "value": "daily toothbrushing is the best way to prevent dental disease",
+        "unit": "—",
+        "source_id": "S1014",
+        "quote": "daily toothbrushing",
+        "confidence": "medium",
+        "notes": "PetMD (S1014, fragment). WebMD (S1015) 'Norfolk Terriers also need regular teeth cleaning and daily brushing.' → tooth brushing every day (M5-R15)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears every one or two weeks",
+        "unit": "—",
+        "source_id": "S1014",
+        "quote": "Cleaning the ears every one or two weeks for maintenance helps prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S1014) → ear cleaning once a week (lower bound, Soft Coated Wheaten Terrier precedent, M5-R20 ear task)."
+      },
+      "petmd_bathing": {
+        "value": "bathed about every four to six weeks; not more often than every two weeks",
+        "unit": "—",
+        "source_id": "S1014",
+        "quote": "bathed about every four to six weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S1014, fragment); bathing 'more frequently than every two weeks can strip the coat's natural oils' (fragment) → bath reminder every 4 weeks (lower bound, M5-R18 parent reminder, never scored)."
+      },
+      "petmd_grooming": {
+        "value": "moderate grooming needs; hand stripping a few times per year",
+        "unit": "—",
+        "source_id": "S1014",
+        "quote": "They have moderate grooming needs.",
+        "confidence": "medium",
+        "notes": "PetMD (S1014). 'hand stripping ... is necessary a few times per year' (fragment) — no program-period number; the PDSA number is used for the groomer task."
+      },
+      "webmd_teeth": {
+        "value": "regular teeth cleaning and daily brushing",
+        "unit": "—",
+        "source_id": "S1015",
+        "quote": "Norfolk Terriers also need regular teeth cleaning and daily brushing.",
+        "confidence": "high",
+        "notes": "WebMD (S1015) → tooth brushing every day (proposed_game_parameters.norfolk_terrier.tooth_brushing). Nails: 'keep your dog's nails short' (fragment) — no frequency → no nail task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -102810,6 +103403,296 @@
         "confidence": "medium",
         "notes": "FCI standard (S1003) as in finnish_lapphund.appearance. Six common colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default (first colour, highest weight; weights unsourced); natural tail and ears"
+      }
+    },
+    "norfolk_terrier": {
+      "_note": "Unattended run M5-R10-134 (2026-11-23): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1011 'Up to 1 hour per day' → 60). Senior 90 from the RKC lower bound 'Over 10 years' (S1011) — provisional until McMillan 2024 is checked (Norwich Terrier precedent). Coren rank 56 (Fair) → 0.7. Built: brushing 2× a week (RKC 'More than once a week' → Woodgreen S1013 'once or twice a week', M5-R13), tooth brushing every day (WebMD S1015, M5-R15), ear cleaning once a week (PetMD S1014 'every one or two weeks', M5-R20), bath reminder every 4 weeks (PetMD 'about every four to six weeks', M5-R18), groomer / hand-stripping reminder every 12 weeks (PDSA S1012 'three to four times per year', M5-R20), puppy socialisation with the PDSA quote (M5-R17). No nail task (no frequency), no meal gap, no heat warning (not flat-faced). No new vocabulary key. RKC Breed Watch Category 1; in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1011",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 1 hour per day' (S1011) → rule 'up to N' → 60. PDSA (S1012) 'around an hour of exercise daily' and Woodgreen (S1013) 'around an hour of exercise every day' agree.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1011 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S1011",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S1011) — no McMillan 2024 / VetCompass median reachable at A/B. Alternatives: 122 (Wikipedia S1017, tier C, McMillan 13.5 y), 108 (Woodgreen S1013 / PetMD S1014 lower bound 12 y), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1011"
+        ],
+        "alternatives": {
+          "senior_wikipedia_mcmillan_13_5_y": 122,
+          "senior_woodgreen_petmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S1011; provisional until McMillan 2024 is checked)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 56 'Norfolk Terrier' (S35, checked 2026-11-23) → tier Fair (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 56, Fair, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1013",
+        "quote": "A brush and comb through once or twice a week will keep their coat at an appropriate length",
+        "confidence": "high",
+        "notes": "norfolk_terrier.suitability.woodgreen_grooming. RKC 'Grooming: More than once a week' (S1011) has no number → runbook dog-grooming rule: the most specific number of another A/B source — Woodgreen (S1013) 'once or twice a week' → 2 (range → upper bound); PDSA (S1012) 'a couple of times per week' agrees. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S1011",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          },
+          {
+            "value": 2,
+            "source_id": "S1012",
+            "quote": "Their wiry coats need combing a couple of times per week, and will also need stripping three to four times per year.",
+            "notes": "PDSA — 'a couple of times' read as 2."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → Woodgreen »once or twice a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R15)",
+        "source_id": "S1015",
+        "quote": "Norfolk Terriers also need regular teeth cleaning and daily brushing.",
+        "confidence": "high",
+        "notes": "norfolk_terrier.suitability.webmd_teeth → every day (Finnish Lapphund precedent); PetMD (S1014) 'daily toothbrushing' agrees. Built: DOG_CARE_TASKS tooth_brushing [7, day].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily brushing« → vsak dan"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R18)",
+        "source_id": "S1014",
+        "quote": "bathed about every four to six weeks.",
+        "confidence": "high",
+        "notes": "norfolk_terrier.suitability.petmd_bathing. 'about every four to six weeks' → the lower bound, every 4 weeks (28 program days).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (PetMD »about every four to six weeks« → spodnja meja)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1012",
+        "quote": "They will also need early socialisation with other household pets.",
+        "confidence": "high",
+        "notes": "norfolk_terrier.behaviour.socialisation (PDSA S1012, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S1012)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-134); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S1011"
+            ],
+            "refs": [
+              "norfolk_terrier.suitability.rkc_size_of_home"
+            ],
+            "quote": "S1011 'Size of home: Flat/ Apartment'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.children"
+            ],
+            "quote": "S1013 'they're gentle and patient with children and will calmly accept snuggles'",
+            "note": "Woodgreen also says children and Norfolk terriers should always be supervised together; supervision is always advised in the app; no small_children."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.time_alone"
+            ],
+            "quote": "S1013 'These people-loving dogs don't enjoy being left alone for long stretches of time.'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.containment"
+            ],
+            "quote": "S1013 'a secure garden with an escape-proof fence is a must.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1011",
+              "S1012"
+            ],
+            "refs": [
+              "norfolk_terrier.suitability.rkc_grooming",
+              "norfolk_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S1011 'Grooming: More than once a week'; S1012 'Their wiry coats need combing a couple of times per week, and will also need stripping three to four times per year.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.other_pets"
+            ],
+            "quote": "S1013 'They have a strong prey drive, so small pets like rabbits or guinea pigs may not be safe around them.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No A/B sentence calling it a family dog / companion for families (Woodgreen 'sociable souls', 'people-loving' — not a family statement) → no chip.",
+          "small_children": "Woodgreen asks for supervision; no rating without a caveat.",
+          "other_pets": "Woodgreen 'Sociable with pets: Low' and a strong prey drive → no chip (chases_small_pets instead).",
+          "sheds": "RKC 'Sheds: Yes' (S1011) vs Woodgreen 'Shedding: Minimal' (S1013) and Dogs Trust Ireland 'shed very little' (S1018) — conflicting → neither tag.",
+          "needs_mental_stimulation": "PetMD names mental stimulation only in a paraphrase (no verbatim sentence kept) → no chip.",
+          "long_daily_exercise": "Up to 1 hour a day (S1011).",
+          "shorter_lifespan": "RKC 'Over 10 years'; Woodgreen 12–15 y.",
+          "welfare_chip": "RKC Breed Watch Category 1 (S1011) → no chip.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, children; consider needs_company, secure_fencing, frequent_grooming, chases_small_pets (David 2026-10-12: chases_small_pets at the end)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed; RKC Breed Watch Category 1 (S1011) — no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Norfolk Terrier, red (default): one of the smallest terriers — low, keen, compact and strong small dog with a short back and good bone; hard, wiry, straight close-lying coat, longer and rougher on the neck and shoulders; dark oval keen eyes, black nose; medium-sized V-shaped drop ears, slightly rounded at the tip, dropping forward close to the cheek; natural tail of moderate length, thick at the root, carried jauntily; only red, wheaten, black and tan or grizzle, no white patches",
+        "unit": "—",
+        "source_id": "S1010",
+        "quote": "All shades of red, wheaten, black and tan or grizzle. White marks or patches undesirable but permissible.",
+        "confidence": "high",
+        "notes": "FCI (S1010). Not a welfare breed → no `muzzle` trait. Colour weights are ours (unsourced). Natural (undocked) tail — the FCI standard describes both ('Docking of tail previously optional.'). Drop ears (not the Norwich's prick ears).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default (first colour of the FCI standard); V-shaped drop ears, wiry coat, natural tail, standard colours only (no white patches)"
+      },
+      "ear_care": {
+        "value": "ears cleaned every one or two weeks → once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S1014",
+        "quote": "Cleaning the ears every one or two weeks for maintenance helps prevent ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S1014), norfolk_terrier.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20; Soft Coated Wheaten Terrier precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every one or two weeks« → spodnja meja, 1× na teden"
+      },
+      "professional_grooming": {
+        "value": [
+          1,
+          84
+        ],
+        "unit": "[times, period days] — parent reminder (M5-R20, never scored)",
+        "source_id": "S1012",
+        "quote": "Their wiry coats need combing a couple of times per week, and will also need stripping three to four times per year.",
+        "confidence": "high",
+        "notes": "norfolk_terrier.suitability.pdsa_grooming. PDSA stripping 'three to four times per year' → every 3 months = 12 program weeks (Wire Fox Terrier / Airedale Terrier precedent). Woodgreen (S1013) 'clipped about three times a year' (every 4 months) — alternative, open for David.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja / ročno trimanje vsakih 12 tednov (PDSA »three to four times per year«)"
       }
     }
   }
