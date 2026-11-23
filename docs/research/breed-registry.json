@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "9e088e74d2a3c11a9300f22922448252799b1738a8aa42c897a49851060ae797"
+      "sha256": "00f352b195605b6de234a697e932b747488f5a147df79d4adcea0f950a68a9b1"
     }
   },
   "suitability_vocabulary": {
@@ -77009,7 +77009,50 @@
         "file": "finnish-lapphund.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjav"
+            },
+            "file": "dog/finnish-lapphund.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/finnish-lapphund--black.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/finnish-lapphund--brown.webp"
+          },
+          {
+            "key": "sable",
+            "label": {
+              "en": "Sable",
+              "sl": "Sobolji"
+            },
+            "file": "dog/finnish-lapphund--sable.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Krem"
+            },
+            "file": "dog/finnish-lapphund--cream.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
