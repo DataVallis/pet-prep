@@ -512,6 +512,9 @@ return [
         'black-tan' => 'dogs/norfolk-terrier--black-tan.webp',
         'grizzle' => 'dogs/norfolk-terrier--grizzle.webp',
     ],
+    'belgian_sheepdog' => [
+        'black' => 'dogs/belgian-sheepdog.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

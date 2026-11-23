@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `belgian_sheepdog` (viri S1019–S1021; ponovno S10, S11, S14, S24, S35, S45, S174, S312, S313, S318, S831); seznam za vzreditelja: RKC (S1019) |
 | Izvor | FCI št. 15 »Chien de Berger Belge« (belgijski ovčar), skupina 1, sekcija 1 (ovčarji), Belgija — dolgodlaka črna različica groenendael (S312, S831) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 131. mesto »Belgian Sheepdog« (S174, prebrano 2026-11-23) |
-| PR-ji | pet-prep #1535 (pasma) · portret: glej vrstico v `docs/research/BREED_QUEUE.md` · barvne različice: ni potrebno (ena standardna barva) · spletna stran: pet-prep-website `feat/register-belgian-sheepdog` |
+| PR-ji | pet-prep #1535 (pasma, združen `2c324eb`) · portret pet-prep PR `feat/M5-R10-135-belgian-sheepdog-portrait` (zagon `breed-portraits.yml` 45126325622, sprejet v prvem poskusu) · barvne različice: niso potrebne (ena standardna barva — portret je fotografija v izbirniku) · spletna stran: pet-prep-website `feat/register-belgian-sheepdog` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,5×) | 🛠 | 💶 izziv | M5-R10-135 | 2026-11-23 |
 | Česanje 1× na teden, ščetkanje zob vsak dan, čiščenje ušes 1× na mesec, opomnik za kopanje vsake 4 tedne, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R17 | 2026-11-23 |
 | Barva (izbirnik: črn — edina standardna barva, fotografija = portret) | 🛠 | 💶 izziv | M5-R21 | 2026-11-23 |
-| AI portret v registru | glej vrstico v `BREED_QUEUE.md` | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/belgian-sheepdog`, `/sl/zivali/psi/belgijski-ovcar-groenendael`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), povsem črn, pokončna trikotna ušesa, dolga dlaka z ovratnikom, košat naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-23 |
+| Stran na petprep.si (`/animals/dogs/belgian-sheepdog`, `/sl/zivali/psi/belgijski-ovcar-groenendael`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
