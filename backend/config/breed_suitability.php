@@ -3136,5 +3136,28 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S1004'], 'refs' => ['finnish_lapphund.suitability.rkc_shedding']],
             ],
         ],
+
+        // M5-R10-134 Norfolk Terrier (data.json proposed_game_parameters.norfolk_terrier.suitability_tags; S1011, S1012,
+        // S1013), runbook rules. RKC Breed Watch Category 1 → no welfare chip; sheds conflicting (RKC yes vs Woodgreen /
+        // Dogs Trust minimal) → no chip; Woodgreen names a strong prey drive → chases_small_pets last; in marketing. No new
+        // vocabulary key. Never hypoallergenic.
+        'norfolk_terrier' => [
+            'suits' => [
+                // S1011 "Size of home: Flat/ Apartment"
+                ['tag' => 'apartment', 'source_ids' => ['S1011'], 'refs' => ['norfolk_terrier.suitability.rkc_size_of_home']],
+                // S1013 "they're gentle and patient with children and will calmly accept snuggles" (supervision caveat in data.json)
+                ['tag' => 'children', 'source_ids' => ['S1013'], 'refs' => ['norfolk_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S1013 "These people-loving dogs don't enjoy being left alone for long stretches of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S1013'], 'refs' => ['norfolk_terrier.behaviour.time_alone']],
+                // S1013 "a secure garden with an escape-proof fence is a must."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S1013'], 'refs' => ['norfolk_terrier.behaviour.containment']],
+                // S1011 "Grooming: More than once a week"; S1012 combing a couple of times per week + stripping three to four times per year
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1011', 'S1012'], 'refs' => ['norfolk_terrier.suitability.rkc_grooming', 'norfolk_terrier.suitability.pdsa_grooming']],
+                // S1013 "They have a strong prey drive, so small pets like rabbits or guinea pigs may not be safe around them."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S1013'], 'refs' => ['norfolk_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

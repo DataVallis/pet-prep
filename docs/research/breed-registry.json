@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "58270cfbf14ff08683e3eb217939a25ea31894fc2ea87197401e9995373ad578"
+      "sha256": "739324f282e1f8b662df31b153e51cf3cfc77dac48dbd9fbc06d1a2c11054325"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "013377b9df5e6d18325db1f1301806e333f5328f6212c148b934313532be44cf"
+      "sha256": "2c655c87453fde529d4ec57c3ce2d4dccdaabfd5c867301adbdfaf93007cbb5a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "fa9a814f6527096d856882943a39d04044af5f8f796ef7c998805d1a3408d114"
+      "sha256": "f209c32713f2c0675da7348103e8d24f176b30d02ded7fa21eb138b458053d2b"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d6402863c5c56ef3d0d00cfffcd90a4ce3ce200d1464a18021a91db137c25368"
+      "sha256": "cc8aab95f2468d8514944b4a370c68e009facad6e4a5d21d13ae766e527a01e0"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d070aee17b8a118eac41a5d0bc8bc187ef2799e6b2ae7ea5baa7c973baec5874"
+      "sha256": "02b7f995df0c506ea45aa444034d00156e5f9b341c54010385dfcf2f0a881d7b"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "a9ee1e76bb7bc6af48df947760ba3af3f1cefd8fde6eaab5659a0ff881e4b673"
+      "sha256": "f851ebf8c38d671dc9e4d2a2bb56dc7df7eae45bf1fdbf91cd33c33a017ece34"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "ef8c582824c72a66cb8169dbe019bdf1ac28f72f27ae7f6c28969dc6d8db5a62"
+      "sha256": "69ac3c963f525e6bced1f9e585bf6c0aa9b77c493dc2500dbd833f8384bccf8b"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 124,
+      "breed_count": 125,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -77133,6 +77133,621 @@
       ]
     },
     {
+      "id": "norfolk_terrier",
+      "species": "dog",
+      "order": 124,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Norfolk Terrier",
+        "sl": "Norfolk terier"
+      },
+      "slug": {
+        "en": "norfolk-terrier",
+        "sl": "norfolk-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Norfolk"
+        ],
+        "sl": [
+          "norfolški terier",
+          "norfolk terrier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S1011"
+          ],
+          "ref": "norfolk_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              25
+            ],
+            "female": [
+              25,
+              25
+            ]
+          },
+          "source_ids": [
+            "S1010"
+          ],
+          "ref": "norfolk_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5,
+              5.4
+            ],
+            "female": [
+              5,
+              5.4
+            ]
+          },
+          "source_ids": [
+            "S1016"
+          ],
+          "ref": "norfolk_terrier.adult_weight.ukc",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "norfolk_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S1011"
+          ],
+          "ref": "norfolk_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S1013"
+          ],
+          "ref": "norfolk_terrier.lifespan.woodgreen",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S1011"
+          ],
+          "ref": "norfolk_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S1011"
+          ],
+          "ref": "norfolk_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S1011"
+          ],
+          "ref": "norfolk_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1011"
+          ],
+          "ref": "norfolk_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 56,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "norfolk_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 272,
+            "group": 3,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S1009"
+          ],
+          "ref": "norfolk_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S1012"
+          ],
+          "ref": "norfolk_terrier.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S1012"
+          ],
+          "ref": "norfolk_terrier.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts_lens_luxation",
+          "source_ids": [
+            "S1012"
+          ],
+          "ref": "norfolk_terrier.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "mitral_valve_disease",
+          "source_ids": [
+            "S1014"
+          ],
+          "ref": "norfolk_terrier.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "dental_disease_home_brushing",
+          "source_ids": [
+            "S1015"
+          ],
+          "ref": "norfolk_terrier.health.dental",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S1011"
+            ],
+            "refs": [
+              "norfolk_terrier.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.containment"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1011",
+              "S1012"
+            ],
+            "refs": [
+              "norfolk_terrier.suitability.rkc_grooming",
+              "norfolk_terrier.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1013"
+            ],
+            "refs": [
+              "norfolk_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1011"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1011 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1011"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S1011; provisional until McMillan 2024 is checked)"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 56, Fair, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.grooming",
+            "basis_source_ids": [
+              "S1013"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → Woodgreen »once or twice a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S1015"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily brushing« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.ear_care",
+            "basis_source_ids": [
+              "S1014"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every one or two weeks« → spodnja meja, 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.bathing",
+            "basis_source_ids": [
+              "S1014"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsake 4 tedne (PetMD »about every four to six weeks« → spodnja meja)"
+          },
+          {
+            "ref": "proposed_game_parameters.norfolk_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S1012"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): obisk frizerja / ročno trimanje vsakih 12 tednov (PDSA »three to four times per year«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1011",
+          "S1012",
+          "S1013",
+          "S1014",
+          "S1015"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "none_recommended",
+        "tests": [],
+        "basis_source_ids": [
+          "S1011"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1009",
+        "S1010",
+        "S1011",
+        "S1012",
+        "S1013",
+        "S1014",
+        "S1015",
+        "S1016",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -84315,6 +84930,62 @@
       "publisher": "WebMD Pets — Logan Smith, medically reviewed by Amy Flowers, DVM (2024-06-10)",
       "title": "What to Know About Finnish Lapphunds",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-finnish-lapphunds"
+    },
+    {
+      "id": "S1009",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI breeds nomenclature — Norfolk Terrier (272)",
+      "url": "https://fci.be/en/nomenclature/NORFOLK-TERRIER-272.html"
+    },
+    {
+      "id": "S1010",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 272: Norfolk Terrier (06.10.2026, English; valid standard 08.09.2026) (PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/272g03-en.pdf"
+    },
+    {
+      "id": "S1011",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Norfolk Terrier — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norfolk-terrier/"
+    },
+    {
+      "id": "S1012",
+      "tier": "B",
+      "publisher": "PDSA (UK)",
+      "title": "Norfolk Terrier Breed Information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/norfolk-terrier"
+    },
+    {
+      "id": "S1013",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity (UK) — Ask Woodgreen Pet Explorer (Sue Ketland)",
+      "title": "Norfolk terrier",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/norfolk-terrier"
+    },
+    {
+      "id": "S1014",
+      "tier": "B",
+      "publisher": "PetMD — Virginia LaMon, DVM (published Jan. 8, 2024)",
+      "title": "Norfolk Terrier Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/norfolk-terrier"
+    },
+    {
+      "id": "S1015",
+      "tier": "B",
+      "publisher": "WebMD Editorial Team (reviewed by Shruthi N, MD, Feb 9, 2025)",
+      "title": "What to Know About Norfolk Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-norfolk-terriers"
+    },
+    {
+      "id": "S1016",
+      "tier": "A",
+      "publisher": "United Kennel Club (US)",
+      "title": "Official UKC Breed Standard — Norfolk Terrier (revised April 15, 2007) (PDF)",
+      "url": "https://www.ukcdogs.com/docs/breeds/norfolk-terrier.pdf"
     },
     {
       "id": "C1",

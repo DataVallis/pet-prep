@@ -4428,6 +4428,14 @@
         }
       ],
       "notes": "RKC Breeds A–Z page 'Finnish Lapphund' (dog-data S1004, 2026-11-23, M5-R10-133): minimum (Good Practice) — genetic diversity (inbreeding_coi), DNA test prcd-PRA; Best Practice — GSDII DNA test (new key dna_gsd2), BVA/KC elbow and hip schemes, BVA/KC/ISDS eye scheme."
+    },
+    "norfolk_terrier": {
+      "status": "none_recommended",
+      "basis": {
+        "source_id": "S1011",
+        "quote": "At this time this breed does not have any recommended pre-breeding health screening in place"
+      },
+      "tests": []
     }
   }
 }

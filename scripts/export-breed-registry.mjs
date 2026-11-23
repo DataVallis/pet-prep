@@ -514,6 +514,7 @@ const SPECIES = [
       { id: 'black_russian_terrier', synonyms: { en: ['Russian Black Terrier', 'Russian Terrier', 'Tchiorny Terrier', 'BRT', 'RBT'], sl: ['ruski crni terier', 'črni ruski terier', 'ruski terier'] } },
       { id: 'neapolitan_mastiff', synonyms: { en: ['Mastino Napoletano', 'Neo', 'Neapolitan'], sl: ['napolitanski mastif', 'neapeljski mastif', 'mastino napoletano'] } },
       { id: 'finnish_lapphund', synonyms: { en: ['Finnish Lapponian Dog', 'Lapinkoira', 'Suomenlapinkoira', 'Lappie'], sl: ['finski laponski pes', 'laponski pes', 'finski lapphund'] } },
+      { id: 'norfolk_terrier', synonyms: { en: ['Norfolk'], sl: ['norfolški terier', 'norfolk terrier'] } },
     ],
   },
   {
@@ -3379,6 +3380,30 @@ const DOG_FACTS = {
       ['pra_eye_disease', 'health.pra'],
     ],
   },
+  // M5-R10-134. RKC Breeds A–Z page reached (S1011): exercise 'Up to 1 hour per day', coat 'Medium', grooming 'More than once
+  // a week', sheds 'Yes' (Woodgreen / Dogs Trust say minimal — no chip, the RKC fact stays), lifespan 'Over 10 years'
+  // + Woodgreen 12–15 y (S1013); height = FCI-Standard N° 272 'Ideal height at the withers: 25 cm.' (S1010); weight = UKC
+  // standard 11–12 lb (S1016; FCI / RKC give none). Coren rank 56 (S35). FCI origin Great Britain (GB). Not exported:
+  // lifespan.median_uk (null — McMillan only via Wikipedia), lifespan.petmd, senior_from (derived), health.breed_watch
+  // (Category 1), health.skin (background), the PDSA / PetMD / WebMD care texts (care tasks / grooming rule come from the
+  // game). No new health key.
+  norfolk_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.ukc', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.woodgreen', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['hip_dysplasia_arthritis', 'health.hips'],
+      ['cataracts_lens_luxation', 'health.eyes'],
+      ['mitral_valve_disease', 'health.heart'],
+      ['dental_disease_home_brushing', 'health.dental'],
+    ],
+  },
 
 
 
@@ -3470,6 +3495,7 @@ export const DOG_CARE_TASKS = {
   black_russian_terrier: [['ear_cleaning', 1, 7, 'proposed_game_parameters.black_russian_terrier.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.black_russian_terrier.nail_trimming'], ['groomer_visit', 1, 42, 'proposed_game_parameters.black_russian_terrier.professional_grooming']],
   neapolitan_mastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.neapolitan_mastiff.face_fold_cleaning'], ['bath', 1, 28, 'proposed_game_parameters.neapolitan_mastiff.bathing']],
   finnish_lapphund: [['tooth_brushing', 7, 7, 'proposed_game_parameters.finnish_lapphund.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.finnish_lapphund.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.finnish_lapphund.bathing']],
+  norfolk_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norfolk_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.norfolk_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.norfolk_terrier.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.norfolk_terrier.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4484,6 +4510,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.finnish_lapphund.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.finnish_lapphund.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.finnish_lapphund.exercise_minutes_senior',
+  },
+  norfolk_terrier: {
+    adult_minutes: ['proposed_game_parameters.norfolk_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.norfolk_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.norfolk_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.norfolk_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.norfolk_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.norfolk_terrier.exercise_minutes_senior',
   },
 
 
