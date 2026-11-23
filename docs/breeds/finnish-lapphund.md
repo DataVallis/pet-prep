@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `finnish_lapphund` (viri S1002–S1008; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1004) |
 | Izvor | FCI št. 189, skupina 5, sekcija 3 (nordijski čuvaji in pastirski psi), Finska (S1002, S1003) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 129. mesto »Finnish Lapphund« (S174, prebrano 2026-11-23: »128 Neopolitan Mastiff«, »129 Finnish Lapphund«, »130 Norfolk Terrier«) |
-| PR-ji | pet-prep #1519 (pasma, združen `c32d8bf`) · portret pet-prep (zagon `breed-portraits.yml` 45092349946, sprejet v prvem poskusu) · barvne različice pet-prep (sledi) · spletna stran: pet-prep-website `feat/register-finnish-lapphund` |
+| PR-ji | pet-prep #1519 (pasma, združen `c32d8bf`) · portret pet-prep (zagon `breed-portraits.yml` 45092349946, sprejet v prvem poskusu) · portret PR #1523 (združen `c89eb18`) · barvne različice pet-prep (zagona `breed-portraits.yml` 45093638196 in 45093894254: 4/5 odobril Claude) · spletna stran: pet-prep-website `feat/register-finnish-lapphund` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,7 +41,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-133 | 2026-11-23 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-23 |
 | Ščetkanje zob vsak dan, kremplji vsake 4 tedne (otrok); opomnik za kopanje vsake 4 tedne (starši) | 🛠 | 💶 izziv | M5-R15 / R19 / R20 | 2026-11-23 |
-| Barve (izbirnik: 6 barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-23 |
+| Barve (izbirnik: 6 barv; fotografije: črno-rjav (portret), črn, rjav, sobolji, krem — volčje siv brez fotografije) | 🛠 | 💶 izziv | M5-R21 | 2026-11-23 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črno-rjav, pokončna ušesa, košat rep čez hrbet, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-23 |
 | Stran na petprep.si (`/animals/dogs/finnish-lapphund`, `/sl/zivali/psi/finski-laponski-pes`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -52,6 +52,8 @@
 **Kako povedati** — starši: »Finski laponski pes je prijazen in potrpežljiv z otroki, a želi biti z družino in potrebuje redno česanje. V PetPrepu boste videli, ali vaš otrok to zmore 12 tednov.« · otroci: »Finski laponski pes je nekoč pomagal pasti severne jelene — danes pa najraje teče s teboj na sprehod in čaka, da ga počešeš.« · vlagatelji / partnerji: »124. pasma psa, ki jo je samodejni nočni zagon sam izbral po javni lestvici AKC in dodal z viri — ključne podatke s strani Royal Kennel Club, mere iz standarda FCI, nego iz PetMD in WebMD (pregledano pri veterinarjih).«
 
 ## Odprto za Davida
+
+- **colours needing David:** `wolf-sable` (volčje siv) — oba poskusa (drugi bajtno enak) sta dala toplo rjavo-zlato sobolje dlako, enako kot `sable`, brez hladnega sivega »wolf-sable«; fotografija ni objavljena (izbirnik barvo pokaže brez slike), vrstica v `docs/research/breed-portraits/COLOUR_REVIEW.md`. Črn, rjav, sobolji in krem je 2026-11-23 odobril Claude (isti pes, poza in ozadje kot portret, spremenjena le barva).
 
 - **Meja »starejši« (108 mesecev):** po pravilu runbooka iz spodnje meje RKC »Over 12 years«. Mediane McMillan 2024 nisem dosegel (berljivi del PDF-ja pasme ne navaja, tabela Dogs Trust je bila zavrnjena). PetMD / WebMD navajata 12–15 let. Ob ročnem pregledu tabele Dogs Trust lahko mejo popravite.
 - **Coren:** Wikipedijine tabele nisem ponovno prebral po imenu; pasma po znanem ni uvrščena → 1,0×. Potrdite.

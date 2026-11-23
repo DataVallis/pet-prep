@@ -499,6 +499,13 @@ return [
         'fawn' => 'dogs/neapolitan-mastiff--fawn.webp',
         'deep-fawn' => 'dogs/neapolitan-mastiff--deep-fawn.webp',
     ],
+    'finnish_lapphund' => [
+        'black-tan' => 'dogs/finnish-lapphund.webp',
+        'black' => 'dogs/finnish-lapphund--black.webp',
+        'brown' => 'dogs/finnish-lapphund--brown.webp',
+        'sable' => 'dogs/finnish-lapphund--sable.webp',
+        'cream' => 'dogs/finnish-lapphund--cream.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

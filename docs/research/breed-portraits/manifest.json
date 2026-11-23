@@ -5551,6 +5551,66 @@
             "prompt_hash": "sha256:00b8d5a7f27c62d94a065dd702798bc6a9ceb97b58c4beff272a4f8e94d88be2",
             "generated_at": "2026-11-23T00:11:28+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "finnish_lapphund",
+            "species": "dog",
+            "colour": "black",
+            "colour_value": "black",
+            "file": "dog/finnish-lapphund--black.webp",
+            "reference": "dog/finnish-lapphund.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:c41dd4d66df3937c6409f2859cb9b96ff05b1a9c36b45d7ea48e31af35a6cccf",
+            "generated_at": "2026-11-23T01:17:24+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "finnish_lapphund",
+            "species": "dog",
+            "colour": "brown",
+            "colour_value": "brown",
+            "file": "dog/finnish-lapphund--brown.webp",
+            "reference": "dog/finnish-lapphund.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:6cbc9b32d7623f0f66c72eac08e3d065268996ef2c2ab34c4acc6b6315f02003",
+            "generated_at": "2026-11-23T01:17:42+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "finnish_lapphund",
+            "species": "dog",
+            "colour": "sable",
+            "colour_value": "sable",
+            "file": "dog/finnish-lapphund--sable.webp",
+            "reference": "dog/finnish-lapphund.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:c763cde8f1caa4c93893cbf484f892d03637f74828f2c012cae7dfc4cfc7e9d3",
+            "generated_at": "2026-11-23T01:18:18+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "finnish_lapphund",
+            "species": "dog",
+            "colour": "cream",
+            "colour_value": "cream",
+            "file": "dog/finnish-lapphund--cream.webp",
+            "reference": "dog/finnish-lapphund.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:8230530791d0e5f3d7c7409c96e2aea5cd5e2a57b56754952ad59f8a57a71421",
+            "generated_at": "2026-11-23T01:18:36+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
