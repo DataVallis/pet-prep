@@ -93,6 +93,8 @@ Meja med izgubo in dobičkom: ~4,3 % (43 prodaj). Duolingo: ~9 % plačnikov.
 
 ### 6.4 Štiri številke, ki jih moramo izmeriti (cilji so Claudov predlog)
 
+> Kanonski pragovi so v `VALIDATION_PLAN.md` §3 (H1–H7) in mejniki prihodka v §8; spodnje številke so poenostavitev za razlago. A/B testov zaradi premalo uporabnikov za zdaj ne delamo (VALIDATION_PLAN V3).
+
 1. Aktivne družine po 7 dneh: ≥ 30 %.
 2. Delež, ki kupi izziv: ≥ 5 %.
 3. Delež, ki izziv dokonča: ≥ 50 %.

@@ -65,3 +65,19 @@ Pri tako majhnem številu družin so odstotki grobi kazalniki, ne statistika —
 | V4 | Proračun za oglase v valu 2 | 500–1.000 € |
 
 Vzporedno, ne del validacije: PetPrep d.o.o. s prenosom IP in trgovinskih računov, en veterinar kot svetovalec za zdravstvene vsebine.
+
+## 8. Mejniki prihodka (David potrdil 22. 11. 2026)
+
+Stroški projekta so danes približno **200 € na mesec** (David, 22. 11. 2026; brez njegovega dela, brez plač). Od enega izziva ostane ~35 € (prag H4); pri kupcu iz oglasov z načrtovanim CAC 15 € (predpostavka) ostane ~20 €.
+
+| Mejnik | Prodaj na mesec | Kaj pomeni |
+|---|---|---|
+| M-A | **6** (brez oglasov) / 10 (z oglasi) | Projekt pokrije svoje stroške (200 €). |
+| M-B | **60** (brez oglasov) / 100 (z oglasi) | ~2.000 € na mesec: prva plača za Davida. Za vsakih 1.000 € je treba ~29 prodaj brez oglasov ali ~50 z oglasi. |
+| M-C | **150** | ~3.000–5.000 € na mesec: šele tu razmislek o pomoči ali zaposlitvi. |
+
+Pravila (predlog Claude, David potrdil mejnike 22. 11. 2026):
+- **Brez zaposlovanja pred dokazom:** prva plača šele, ko prodaja tri mesece zapored pokrije njen strošek.
+- **Oglasi samo, ko se povrnejo:** za kupca največ toliko, kolikor vrne ob prvem nakupu (≤ 35 €, H4).
+- **Signal za spremembo modela:** če nekaj mesecev po objavi v trgovinah ne pridemo niti do 30 prodaj na mesec, spremenimo model (§6), ne vlagamo več dela v istega.
+- Vsak ponavljajoč prihodek (naročnina za pravega ljubljenčka, plačani vpisi v imenike, sponzorstva — `REVENUE_MODELS.md`) zniža število potrebnih prodaj.
