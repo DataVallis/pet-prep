@@ -3247,8 +3247,6 @@ return [
                 ['tag' => 'older_children', 'source_ids' => ['S1040'], 'refs' => ['bedlington_terrier.behaviour.children']],
                 // S1037 "they also suffer with separation anxiety so need someone around all the time."
                 ['tag' => 'needs_company', 'source_ids' => ['S1037'], 'refs' => ['bedlington_terrier.behaviour.time_alone']],
-                // S1038 "A fully enclosed garden with secure fencing is essential."
-                ['tag' => 'secure_fencing', 'source_ids' => ['S1038'], 'refs' => ['bedlington_terrier.behaviour.containment']],
                 // S1037 "they do have very strong prey drive so you should never leave your Bedlington unattended with other pets."
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1037'], 'refs' => ['bedlington_terrier.behaviour.other_pets']],
             ],

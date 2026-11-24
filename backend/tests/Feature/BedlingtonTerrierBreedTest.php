@@ -39,7 +39,7 @@ use function Pest\Laravel\postJson;
 | 2 / 9 / 36 / 123, learning × 1.0 (Coren rank 40, Average), paid breed, Border Collie care rates, brushing 3× a week
 | (Woodgreen, M5-R13), puppy socialisation with the PetMD quote (S1040, M5-R17), tooth brushing every day (WebMD S1041) and a
 | groomer reminder every 6 weeks (PDSA S1037); no nail / ear / bath task, no meal gap, no heat walk ban. No welfare chip, in
-| marketing; suits family_pet, low_shedding; consider frequent_grooming, older_children, needs_company, secure_fencing,
+| marketing; suits family_pet, low_shedding; consider frequent_grooming, older_children, needs_company,
 | chases_small_pets; blue portrait (one of six standard colours).
 */
 
@@ -382,7 +382,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('bedlington_terrier')['search_keywords'], 'sort_order' => 1290,
             'suitability' => [
                 'suits' => ['family_pet', 'low_shedding'],
-                'consider' => ['frequent_grooming', 'older_children', 'needs_company', 'secure_fencing', 'chases_small_pets'],
+                'consider' => ['frequent_grooming', 'older_children', 'needs_company', 'chases_small_pets'],
             ],
         ]);
     });
@@ -455,12 +455,12 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('suits families and low shedding; consider grooming, older children, company, fencing and small pets', function () {
+    it('suits families and low shedding; consider grooming, older children, company and small pets', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::BedlingtonTerrier);
         expect($tags['suits'])->toBe(['family_pet', 'low_shedding'])
-            ->and($tags['consider'])->toBe(['frequent_grooming', 'older_children', 'needs_company', 'secure_fencing', 'chases_small_pets'])
+            ->and($tags['consider'])->toBe(['frequent_grooming', 'older_children', 'needs_company', 'chases_small_pets'])
             ->and($tags['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')->not->toContain('other_pets')
-            ->and($tags['consider'])->not->toContain('sheds')->not->toContain('long_daily_exercise')->not->toContain('shorter_lifespan');
+            ->and($tags['consider'])->not->toContain('sheds')->not->toContain('long_daily_exercise')->not->toContain('shorter_lifespan')->not->toContain('secure_fencing');
 
         expect(btData('bedlington_terrier.suitability.pdsa_shedding.quote'))->toContain('not huge shedders')
             ->and(btData('bedlington_terrier.behaviour.other_pets.quote'))->toContain('very strong prey drive')

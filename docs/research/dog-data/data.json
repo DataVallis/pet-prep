@@ -71029,7 +71029,7 @@
         "source_id": "S1038",
         "quote": "A fully enclosed garden with secure fencing is essential.",
         "confidence": "high",
-        "notes": "Woodgreen (S1038) → secure_fencing chip; Woodgreen also: 'they're not well suited to living in a flat.'"
+        "notes": "Woodgreen (S1038); Woodgreen also: 'they're not well suited to living in a flat.' No source says the breed escapes → no secure_fencing chip (its label says 'escapes easily')."
       },
       "time_alone": {
         "value": "should never be left alone for more than four hours; can suffer from separation anxiety",
@@ -106851,16 +106851,6 @@
             "quote": "S1037 'they also suffer with separation anxiety so need someone around all the time.'"
           },
           {
-            "tag": "secure_fencing",
-            "source_ids": [
-              "S1038"
-            ],
-            "refs": [
-              "bedlington_terrier.behaviour.containment"
-            ],
-            "quote": "S1038 'A fully enclosed garden with secure fencing is essential.'"
-          },
-          {
             "tag": "chases_small_pets",
             "source_ids": [
               "S1037"
@@ -106880,7 +106870,8 @@
           "other_pets": "Very strong prey drive (PDSA) → chases_small_pets instead.",
           "shorter_lifespan": "McMillan 13.7 y; PDSA 'Over 10 years'.",
           "welfare_chip": "Copper toxicosis is inherited, not conformation-related; no veterinary body names a conformation problem → no chip.",
-          "hypoallergenic": "Never a tag (runbook)."
+          "hypoallergenic": "Never a tag (runbook).",
+          "secure_fencing": "Woodgreen (S1038) 'A fully enclosed garden with secure fencing is essential.' — about the prey drive, no source says the breed escapes; the chip's label says 'escapes easily' (German Pinscher precedent) → no chip (kept as a fact in behaviour.containment)."
         }
       },
       "marketing": {
