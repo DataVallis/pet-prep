@@ -4509,6 +4509,25 @@
         }
       ],
       "notes": "RKC breed page (dog-data S1024, 2026-11-24): under 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the BVA/KC elbow and hip dysplasia schemes (labels as returned); 'We don't currently offer a breed-specific DNA testing package for this breed.' No new test key. The BICA health statement (S1028, US) also names eye screening and kidney testing before breeding — not added (no K-source; US club rule, background in dog-data)."
+    },
+    "german_pinscher": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S1031",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S1031",
+          "quote": "Prioritising genetic diversity"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S1031, 2026-11-24, M5-R10-137): under 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' only 'Prioritising genetic diversity'; 'Good Practice schemes and tests' lists no named test; 'We don't currently offer a breed-specific DNA testing package for this breed'. No new test key. PetMD / WebMD name hip dysplasia, cataracts and von Willebrand disease (background in dog-data) — no A/B breeding rule, not added."
     }
   }
 }

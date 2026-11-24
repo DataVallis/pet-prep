@@ -70295,6 +70295,511 @@
       }
     }
   },
+  "german_pinscher": {
+    "_note": "Added 2026-11-24 (M5-R10-137, unattended run — appended after the Bracco Italiano: AKC 2024 No. 133 'German Pinscher', S174 full-list table re-read 2026-11-24 '132 Bracco Italiano', '133 German Pinscher'). Quotes as returned by the web-fetch tool on 2026-11-24 (after web searches; non-preapproved pages give fragments up to ~125 characters); paraphrase only in notes, marked '(paraphrase)'. Sources S1029–S1034 (reused S10, S11, S14, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 184 German Pinscher (S1030, '18.04.2007/EN', valid standard '06.03.07'). RKC Breeds A–Z page reached (S1031, URL from a web search): 'Up to 1 hour per day' → 60, 'Once a week' grooming, 'Over 10 years' lifespan, Small house / Small/ medium garden, Sheds 'Yes', Breed Watch 'Category 1'. The RKC breed standard page (thekennelclub.org.uk → royalkennelclub.com redirect) was refused (PROVENANCE_REQUIRED). Lifespan: no McMillan 2024 row (not on the Dogs Trust page S15 nor in the text of the Scientific Reports paper PDF; the S123 table not reachable) → RKC lower bound 10 y → senior 90 (Norfolk Terrier precedent). Coren: not ranked (S35 table has Doberman Pinscher 5, Affenpinscher 37, Miniature Pinscher 37 — no German Pinscher) → 1.0. No PDSA / Woodgreen / Dogs Trust breed page found. Never hypoallergenic. Slovenian »nemški pinč« (KZS-style name, as »pritlikavi pinč« for the Miniature Pinscher already in the app; no KZS page fetched — open for David).",
+    "identity": {
+      "value": "FCI No. 184, Group 2 Section 1 (Pinscher and Schnauzer type), Germany",
+      "unit": "—",
+      "source_id": "S1030",
+      "quote": "Section 1 Pinscher and Schnauzer type.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 184 (S1030): 'FCI-CLASSIFICATION: Group 2 Pinscher and Schnauzer- Molossian breeds - Swiss Mountain and Cattle Dogs.', 'Section 1 Pinscher and Schnauzer type.', 'Without working trial.', 'COUNTRY OF ORIGIN: Germany.', 'UTILISATION: Watch and Companion Dog.' FCI nomenclature page (S1029): subsection 'Pinscher', 'Country of origin of the breed | GERMANY', definitive acceptance 7/14/1955, English name 'GERMAN PINSCHER'; varieties 'a) SELF COLOURED: DEER RED, REDDISH-BROWN TO DARK RED BROWN' and 'b) BLACK AND TAN'."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S1031",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S1031). FCI weight 14–20 kg (S1030) ≈ 31–44 lb → the 'Medium (26–57 pounds)' class of S10."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            45,
+            50
+          ],
+          "female": [
+            45,
+            50
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1030",
+        "quote": "Height at withers : Dogs and bitches: 45 to 50 cm .",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 184 (S1030) — one range for both sexes; the register value. PetMD (S1032) / WebMD (S1033) 17–20 in agree; Wikipedia (S1034, tier C) 45–50 cm."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            14,
+            20
+          ],
+          "female": [
+            14,
+            20
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1030",
+        "quote": "Weight : Dogs and bitches: 14 to 20 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 184 (S1030) — one range for both sexes; the game / register value.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                11.3,
+                20.4
+              ],
+              "female": [
+                11.3,
+                20.4
+              ]
+            },
+            "unit": "kg (converted from 25–45 lb)",
+            "source_id": "S1032",
+            "quote": "Adult German Pinschers typically stand between 17 and 20 inches at the shoulder and weigh 25–45 pounds.",
+            "notes": "PetMD (S1032), both sexes; WebMD (S1033) 'They weigh between 25 and 45 pounds.' agrees."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (26–57 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 14–20 kg ≈ 31–44 lb (S1030); RKC size 'Medium' (S1031). The puppy cap of 60 min is reached at 6 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no German Pinscher growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED at tier A/B — no McMillan et al. 2024 value found on 2026-11-24: the Dogs Trust longevity page (S15) does not name the breed, the Scientific Reports PDF text has no German Pinscher row (per-breed estimates are in a supplementary table), the Dogs Trust table (S123) was not reachable."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S1031",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Lifespan' (S1031). Runbook lifespan order: McMillan 2024 → VetCompass median → RKC lower bound → used: 10 years (Norfolk Terrier precedent). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S1032",
+        "quote": "German Pinschers are generally healthy and live 12–14 years on average.",
+        "confidence": "medium",
+        "notes": "PetMD (S1032, tier B, US). WebMD (S1033) 'They generally live between 12 and 14 years.' agrees. Background; the RKC lower bound is used by the runbook order. Lower bound 12 y → 108 would be an alternative senior boundary."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S1031) → 0.75 × 10 = 7.5 y = 90 months. Alternatives: 108 (PetMD / WebMD lower bound 12 y), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S1031"
+        ],
+        "months": 90
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S1031",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S1031), runbook first choice → 60 min ('up to N' → N). PetMD (S1032) / WebMD (S1033) give no minutes.",
+        "alternatives": [
+          {
+            "value": null,
+            "unit": "—",
+            "source_id": "S1033",
+            "quote": "They need plenty of daily exercise that's physically and mentally engaging.",
+            "notes": "WebMD (S1033) — no minutes."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "athletic and energetic; vigorous walks, playtime and mental stimulation every day",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "Daily walks, engaging playtime, and opportunities for mental stimulation are important to keep them happy and fulfilled.",
+        "confidence": "high",
+        "notes": "PetMD (S1032); also 'They thrive in active homes with plenty of space to run, play, and explore.' and 'If you lead a sedentary lifestyle or live in a confined space, this breed might not be the best fit.' WebMD (S1033): 'German Pinschers are athletic and energetic.' Basis of needs_mental_stimulation."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise → no meal / exercise gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively, spirited, self-assured and even-tempered; intelligent, with endurance",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "His lively, spirited, self assured and evenly tempered nature combined with intelligence and endurance",
+        "confidence": "high",
+        "notes": "FCI standard (S1030); the sentence goes on: an agreeable family, watch and companion dog (paraphrase). RKC tagline (S1031) 'Good-natured and fearless with roots as a rat catcher'. PetMD (S1032): 'Well-socialized German Pinschers are confident and courageous dogs that are not usually afraid of new situations or people'."
+      },
+      "family": {
+        "value": "fits well into family life; can be a wonderful family dog with socialisation and training",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "needing little grooming and fitting well into family life",
+        "confidence": "high",
+        "notes": "RKC breed page 'About' (S1031, fragment). PetMD (S1032): 'German Pinschers can be wonderful family dogs with proper socialization and training.' and 'German Pinschers adore their family and form a strong bond with their people'. Basis of family_pet."
+      },
+      "children": {
+        "value": "can be good with children when well trained and socialised; always supervise; may be a little rough with young children",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "A well-trained and socialized German Pinscher can be good with children and other pets.",
+        "confidence": "high",
+        "notes": "PetMD (S1032); next sentence: 'But, like with any dog, interactions between German Pinschers and kids should always be supervised.' WebMD (S1033): 'They're energetic and loving, which may cause them to be a little rough with young children.' / 'You can train Pinschers to be gentle and calm around kids but should always supervise them.' → children chip (supervision caveat kept), never small_children."
+      },
+      "other_pets": {
+        "value": "strong prey drive — caution around smaller pets",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "However, their strong prey drive necessitates caution around smaller pets and neighborhood critters.",
+        "confidence": "high",
+        "notes": "PetMD (S1032, a strong = high prey drive) → chases_small_pets (runbook, David 2026-10-12). WebMD (S1033): 'German Pinschers have a prey drive that may lead them to chase smaller animals.'"
+      },
+      "containment": {
+        "value": "a fenced yard is a must when outside and unsupervised",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "A fenced yard is a must when they are outside and unsupervised.",
+        "confidence": "high",
+        "notes": "PetMD (S1032); the sentence goes on: their history as hunters means a strong prey drive (paraphrase). Basis of secure_fencing (Norfolk Terrier precedent)."
+      },
+      "owner": {
+        "value": "best suited for an experienced dog owner; can be manipulative and mischievous to train",
+        "unit": "—",
+        "source_id": "S1033",
+        "quote": "best suited for an experienced dog owner.",
+        "confidence": "high",
+        "notes": "WebMD (S1033, fragment); also 'German Pinschers can be manipulative and mischievous, making them challenging to train.' Basis of experienced_owner."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on being left alone (PetMD / WebMD checked) → no needs_company chip."
+      },
+      "socialisation": {
+        "value": "puppies need consistent socialisation from a young age (people, pets, environments)",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "German Pinscher puppies need to be socialized consistently from a young age",
+        "confidence": "high",
+        "notes": "PetMD (S1032, a need); the sentence goes on 'where they are exposed to different people, pets, and environments' → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "needs positive, consistent training in short, engaging sessions",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "They require positive, consistent training.",
+        "confidence": "high",
+        "notes": "PetMD (S1032); keep sessions 'short and engaging'. WebMD (S1033): 'You can train a German Pinscher to do almost anything.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found (PetMD S1032: adults eat twice or three times per day; WebMD S1033: twice a day — background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch 'Category 1' (S1031) → no welfare chip. Breeder checklist: RKC minimum 'Prioritising genetic diversity' (S1031); no named test; 'We don't currently offer a breed-specific DNA testing package for this breed'.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S1031). No welfare chip."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1033",
+        "quote": "more common in larger dogs, but German Pinschers are also susceptible",
+        "confidence": "medium",
+        "notes": "WebMD (S1033, about hip dysplasia); PetMD (S1032) also lists hip dysplasia. Register health key hip_dysplasia."
+      },
+      "eyes": {
+        "value": "cataracts and corneal dystrophy (inherited eye conditions)",
+        "unit": "—",
+        "source_id": "S1033",
+        "quote": "genetic predisposition for cataracts",
+        "confidence": "medium",
+        "notes": "WebMD (S1033, fragment); PetMD (S1032) lists cataracts and corneal dystrophy. Register health key cataracts."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand disease (a bleeding disorder)",
+        "unit": "—",
+        "source_id": "S1033",
+        "quote": "German Pinschers are also at risk",
+        "confidence": "medium",
+        "notes": "WebMD (S1033, fragment, in the von Willebrand's disease paragraph); PetMD (S1032) lists von Willebrand disease. Register health key bleeding_disorder_vwd."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, read 2026-11-24) has 'Doberman Pinscher' (5), 'Affenpinscher' (37) and 'Miniature Pinscher' (37) but no German Pinscher. Unranked → learning multiplier 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked (S35) → no tier."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.german_pinscher.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, smooth-haired, square and elegant pinscher with proud carriage and flowing outlines",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "The German Pinscher is smoothhaired, medium in size with proud carriage, flowing outlines, elegant and square build.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030)."
+      },
+      "colours": {
+        "value": [
+          "black and tan",
+          "red"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S1030",
+        "quote": "Black and Tan : Lacquer black with red or brown markings.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030): 'Self coloured : Deer red, reddish-brown to dark red brown.' / 'Black and Tan : Lacquer black with red or brown markings.'; faults 'Black trace on the back, dark saddle and lightened or pale coat.' The RKC breed page (S1031) also lists 'Blue & Tan' and 'Fawn' as UK breed-standard colours — not in the FCI (origin) standard → not drawn (runbook: standard colours only; Miniature Pinscher precedent). Black and tan first as the portrait default (WebMD S1033 'The most common base coat colors are black, blue, fawn, and red.' names black first — Claude's reading). Never blue, fawn, chocolate, merle or white."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): black and tan 55 (the portrait default), red 45."
+      },
+      "coat": {
+        "value": "short and dense, smooth, close and shiny",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "HAIR : Short and dense, smooth, close and shiny without bald patches.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030); RKC key fact 'Coat length' 'Short' (S1031)."
+      },
+      "ears": {
+        "value": "natural V-shaped drop ears, set high, inner edges close to the cheeks",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "Drop ears, set high, V-shaped,with inner edges lying close to the cheeks, turned forward towards temples.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030); the standard does not mention cropping — the game shows natural drop ears, never cropped."
+      },
+      "eyes": {
+        "value": "dark, oval, with black close-fitting eyelids",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "Dark, oval, with black pigmented, close fitting eyelids.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030)."
+      },
+      "nose": {
+        "value": "well developed, always black",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "Nose leather well developed and always black.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030)."
+      },
+      "tail": {
+        "value": "natural tail, sabre or sickle carriage",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "TAIL : Natural; a sabre or sickle carriage is sought after.",
+        "confidence": "high",
+        "notes": "FCI standard (S1030). The game shows the natural (undocked) tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S1031), PetMD (S1032), WebMD (S1033). No PDSA / Woodgreen breed page found.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S1031)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1031) → 60 min."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S1031) — not 'Flat/ Apartment' → no apartment chip."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S1031)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S1031) → brushing 1× a week (M5-R13). PetMD (S1032) 'Weekly brushing is sufficient to remove dead hair and keep their coat shiny.' and WebMD (S1033) 'need weekly brushing' agree; PetMD's 'two or three times a week' is for the heavier seasonal shedding only (season not modelled)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S1031)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S1031); PetMD (S1032) 'this breed is a moderate shedder' and WebMD (S1033) 'German Pinschers shed regularly.' agree → sheds chip."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S1031). The basis of the senior boundary (no McMillan value reachable)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact (S1031)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S1031",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S1031)."
+      },
+      "petmd_ears": {
+        "value": "weekly ear cleaning",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "Weekly ear cleanings are recommended to remove dirt, debris, and wax buildup.",
+        "confidence": "high",
+        "notes": "PetMD (S1032) → ear cleaning once a week (M5-R20 ear task)."
+      },
+      "petmd_bathing": {
+        "value": "a bath about every six to eight weeks",
+        "unit": "—",
+        "source_id": "S1032",
+        "quote": "If your dog needs a bath (about every six to eight weeks or so), use a gentle shampoo to prevent drying their skin.",
+        "confidence": "high",
+        "notes": "PetMD (S1032) → bath reminder every 6 weeks (lower bound, M5-R18 parent reminder, never scored). WebMD (S1033) 'German Pinschers need baths every four to six weeks.' — alternative (lower bound 4 weeks), listed for David."
+      },
+      "webmd_nails": {
+        "value": "nails trimmed monthly",
+        "unit": "—",
+        "source_id": "S1033",
+        "quote": "Most German Pinschers need their nails trimmed monthly.",
+        "confidence": "high",
+        "notes": "WebMD (S1033) → nail trim once a month (M5-R19 nail task)."
+      },
+      "webmd_teeth": {
+        "value": "teeth cleaned to prevent bad breath and periodontal disease — daily brushing is one of three options",
+        "unit": "—",
+        "source_id": "S1033",
+        "quote": "Your German Pinscher also needs their teeth cleaned to prevent bad breath and periodontal disease.",
+        "confidence": "high",
+        "notes": "WebMD (S1033): 'You can clean your pinscher's teeth by:' daily brushing with dog toothpaste, dental treats and chews, or professional cleaning by the vet (paraphrase of the list) — daily brushing is one option, not a stated frequency → no tooth-brushing task (runbook: conditional / no frequency → no task). PetMD (S1032): no teeth text."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -105349,6 +105854,297 @@
         "confidence": "medium",
         "notes": "FCI standard (S1023) as in bracco_italiano.appearance. Five standard colours; weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with orange markings is the portrait default (FCI variety a) WHITE-ORANGE, S1022 / S1023; weights unsourced); natural tail, never docked; never black / tricolour / fawn / tan (disqualifying)"
+      }
+    },
+    "german_pinscher": {
+      "_note": "Unattended run M5-R10-137 (2026-11-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1031 'Up to 1 hour per day' → 60). Senior 90 from the RKC lower bound 'Over 10 years' (no McMillan 2024 / VetCompass value reachable; provisional). Learning 1.0 (unranked, S35). Built: brushing once a week (RKC, M5-R13), puppy socialisation with the PetMD quote (M5-R17), ear cleaning weekly (PetMD, M5-R20), nail trim monthly (WebMD, M5-R19), bath reminder every 6 weeks (PetMD, M5-R18). No tooth task (daily brushing only one option, WebMD), no groomer task, no meal gap, no heat warning. No new vocabulary key. Breed Watch Category 1 → no welfare chip; in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1031",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1031) → rule 'up to N' → 60. PetMD (S1032) / WebMD (S1033) give no minutes.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1031 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S1031",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S1031) — no McMillan 2024 / VetCompass median reachable. Alternatives: 108 (PetMD S1032 / WebMD S1033 lower bound 12 y), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1031"
+        ],
+        "alternatives": {
+          "senior_petmd_webmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S1031; provisional until McMillan 2024 is checked)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35 — see german_pinscher.trainability.coren_rank) → unranked rule → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1031",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "german_pinscher.suitability.rkc_grooming. RKC 'Once a week' (S1031) → 1 (runbook »Dog grooming«); PetMD (S1032) weekly brushing agrees (2–3× only while shedding heavily — season not modelled). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S1032",
+            "quote": "Weekly brushing is sufficient to remove dead hair and keep their coat shiny.",
+            "notes": "PetMD — the same number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "ear_care": {
+        "value": "weekly ear cleaning → once a week",
+        "unit": "care routine (sourced need)",
+        "source_id": "S1032",
+        "quote": "Weekly ear cleanings are recommended to remove dirt, debris, and wax buildup.",
+        "confidence": "high",
+        "notes": "PetMD (S1032), german_pinscher.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once every program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »Weekly ear cleanings« → 1× na teden"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child task (M5-R19)",
+        "source_id": "S1033",
+        "quote": "Most German Pinschers need their nails trimmed monthly.",
+        "confidence": "high",
+        "notes": "german_pinscher.suitability.webmd_nails. 'monthly' → every 4 weeks (28 program days; Finnish Lapphund precedent).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsake 4 tedne (WebMD »monthly«)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          42
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R18)",
+        "source_id": "S1032",
+        "quote": "If your dog needs a bath (about every six to eight weeks or so), use a gentle shampoo to prevent drying their skin.",
+        "confidence": "high",
+        "notes": "german_pinscher.suitability.petmd_bathing. 'about every six to eight weeks' → the lower bound, every 6 weeks (42 program days). WebMD (S1033) 'every four to six weeks' would give 28 — PetMD (vet-authored) chosen, open for David.",
+        "alternatives": [
+          {
+            "value": [
+              1,
+              28
+            ],
+            "source_id": "S1033",
+            "quote": "German Pinschers need baths every four to six weeks.",
+            "notes": "WebMD — lower bound 4 weeks."
+          }
+        ],
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsakih 6 tednov (PetMD »about every six to eight weeks« → spodnja meja)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1032",
+        "quote": "German Pinscher puppies need to be socialized consistently from a young age",
+        "confidence": "high",
+        "notes": "german_pinscher.behaviour.socialisation (PetMD S1032, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1032)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-137); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1031"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.family"
+            ],
+            "quote": "S1031 'needing little grooming and fitting well into family life'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.children"
+            ],
+            "quote": "S1032 'A well-trained and socialized German Pinscher can be good with children and other pets.'",
+            "note": "PetMD also says interactions with kids should always be supervised; WebMD (S1033) 'a little rough with young children' → no small_children."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S1033"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.owner"
+            ],
+            "quote": "S1033 'best suited for an experienced dog owner.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.exercise.daily_text"
+            ],
+            "quote": "S1032 'Daily walks, engaging playtime, and opportunities for mental stimulation are important to keep them happy and fulfilled.'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.containment"
+            ],
+            "quote": "S1032 'A fenced yard is a must when they are outside and unsupervised.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1031"
+            ],
+            "refs": [
+              "german_pinscher.suitability.rkc_shedding"
+            ],
+            "quote": "S1031 'Yes' (Sheds); PetMD S1032 'this breed is a moderate shedder'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.other_pets"
+            ],
+            "quote": "S1032 'However, their strong prey drive necessitates caution around smaller pets and neighborhood critters.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PetMD asks for supervision; WebMD 'a little rough with young children' → no rating without a caveat.",
+          "apartment": "RKC 'Small house' (S1031), not 'Flat/ Apartment'; PetMD: a confined space might not be the best fit.",
+          "active_family": "Up to 1 hour a day (S1031).",
+          "long_daily_exercise": "Up to 1 hour a day (S1031).",
+          "needs_company": "No A/B statement on being left alone.",
+          "other_pets": "Strong prey drive (PetMD) → chases_small_pets instead.",
+          "frequent_grooming": "RKC / PetMD / WebMD once a week.",
+          "shorter_lifespan": "RKC 'Over 10 years'; PetMD 12–14 y.",
+          "welfare_chip": "RKC Breed Watch Category 1 (S1031) → no chip.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider experienced_owner, needs_mental_stimulation, secure_fencing, sheds, chases_small_pets (David 2026-10-12: chases_small_pets at the end)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed; RKC Breed Watch Category 1 (S1031) — no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult German Pinscher, black and tan (default): medium-sized, smooth-haired, square and elegant pinscher with proud carriage; short, dense, shiny close coat; dark oval eyes with black eyelids; black nose; natural high-set V-shaped drop ears close to the cheeks (never cropped); natural tail in a sabre or sickle carriage (never docked); only black and tan or self-coloured red",
+        "unit": "—",
+        "source_id": "S1030",
+        "quote": "Black and Tan : Lacquer black with red or brown markings.",
+        "confidence": "high",
+        "notes": "FCI (S1030). Not a welfare breed → `muzzle` trait only for the black nose (Miniature Pinscher precedent). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default (WebMD names black as the most common base colour — Claude's reading); natural drop ears and tail, FCI standard colours only"
       }
     }
   }
