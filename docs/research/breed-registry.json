@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "0e78efee4ee0c5f70f58ce1551a0766749eee9bf9cd98fa3775dc38c0553feec"
+      "sha256": "85290aa1ca193bdd05f26fe18a128a79d3e84cb25bbd1403522c8410e9d24072"
     }
   },
   "suitability_vocabulary": {
@@ -79765,7 +79765,12 @@
           "S1033"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "german-pinscher.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

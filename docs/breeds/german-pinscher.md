@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `german_pinscher` (viri S1029–S1034; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1031) |
 | Izvor | FCI št. 184 »German Pinscher (Deutscher Pinscher)«, skupina 2, sekcija 1 (pinči in šnavcerji), Nemčija (S1029, S1030) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 133. mesto »German Pinscher« (S174, zapisano 2026-11-24) |
-| PR-ji | pet-prep #1564 (pasma) · portret pet-prep PR `feat/M5-R10-137-german-pinscher-portrait` · barvne različice pet-prep PR `feat/M5-R10-137-german-pinscher-colours` · spletna stran: pet-prep-website `feat/register-german-pinscher` |
+| PR-ji | pet-prep #1564 (pasma, združen `5c71f42`) · portret pet-prep PR `feat/M5-R10-137-german-pinscher-portrait` (zagon `breed-portraits.yml` 45318117304, sprejet v prvem poskusu) · barvne različice pet-prep PR `feat/M5-R10-137-german-pinscher-colours` · spletna stran: pet-prep-website `feat/register-german-pinscher` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-137 | 2026-11-24 |
 | Česanje 1× na teden, čiščenje ušes vsak teden, striženje krempljev vsake 4 tedne, opomnik za kopanje vsakih 6 tednov, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R20 / M5-R19 / M5-R18 / M5-R17 | 2026-11-24 |
 | Barva (izbirnik: črn s porjavelimi oznakami, rdeč) | 🛠 | 💶 izziv | M5-R21 | 2026-11-24 |
-| AI portret v registru | 🗓 po združitvi (črn s porjavelimi oznakami) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/german-pinscher`, `/sl/zivali/psi/nemski-pinc`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn s porjavelimi oznakami, naravna povešena ušesa, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-24 |
+| Stran na petprep.si (`/animals/dogs/german-pinscher`, `/sl/zivali/psi/nemski-pinc`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
