@@ -1673,6 +1673,19 @@
             "prompt_hash": "sha256:56475c05f5a706f9279991df8457506a309a579302f50186802cbfda63d2783c",
             "generated_at": "2026-11-24T01:14:29+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "german_pinscher",
+            "species": "dog",
+            "colour": "black-tan",
+            "file": "dog/german-pinscher.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:64695f2f46d8d33daae31e935c5a22fdd938d8bf8c5e24fef967685050425274",
+            "generated_at": "2026-11-24T03:15:24+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
