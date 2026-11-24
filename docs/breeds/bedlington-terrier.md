@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bedlington_terrier` (viri S1035–S1042; ponovno S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: BTCA (K44) |
 | Izvor | FCI št. 9 »Bedlington Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S1035, S1036) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 134. mesto »Bedlington Terrier« (S174, prebrano 2026-11-24) |
-| PR-ji | pet-prep #1572 (pasma) · portret pet-prep PR `feat/M5-R10-138-bedlington-terrier-portrait` · barvne različice pet-prep PR `feat/M5-R10-138-bedlington-terrier-colours` · spletna stran: pet-prep-website `feat/register-bedlington-terrier` |
+| PR-ji | pet-prep #1572 (pasma, združen `c4dd55a`) · portret pet-prep PR `feat/M5-R10-138-bedlington-terrier-portrait` (zagon `breed-portraits.yml` 45345261978, sprejet v prvem poskusu) · barvne različice pet-prep PR `feat/M5-R10-138-bedlington-terrier-colours` · spletna stran: pet-prep-website `feat/register-bedlington-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 123. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-138 | 2026-11-24 |
 | Česanje 3× na teden, ščetkanje zob vsak dan, opomnik za frizerja vsakih 6 tednov, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R14 / M5-R17 | 2026-11-24 |
 | Barva (izbirnik: 6 barv po standardu FCI) | 🛠 | 💶 izziv | M5-R21 | 2026-11-24 |
-| AI portret v registru | sledi (portretni PR) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/bedlington-terrier`, `/sl/zivali/psi/bedlington-terier`) | 🛠 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), moder, bel čop na glavi, nizko nameščena ušesa, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-24 |
+| Stran na petprep.si (`/animals/dogs/bedlington-terrier`, `/sl/zivali/psi/bedlington-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
