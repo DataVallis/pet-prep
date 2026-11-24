@@ -169,6 +169,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-24 (mobile, `fix/quiet-hours-night-warning`)
+- Tihe ure: opozorilo pod »Spanje«, ko so tihe ure vklopljene brez nočnega okna (tester ob 1–2 ponoči; David možnost A). Samo JS / OTA, test `QuietHoursForm.test.tsx`. Vzrok pri testerju ni potrjen — strežnik sam ne ustvari vklopljenih ur brez spanja; preveri shranjeno vrstico (`quiet_hours.updated_at`).
+
 ### 2026-11-22 (mobile, `fix/quiet-hours-school-days-app`)
 - School days in quiet hours, app part (contract `SCHOOL_DAYS_CONTRACT`, David »Starš izbere dneve«): 7 day chips »Po … Ne« (default Mon–Fri) under the school window in Nadzor → Tihe ure and pet »Lastne ure«; saves `school_days`, older server → chips hidden, field never sent. Backend: #1513 (merged); hand-typed types replaced with schema.ts. Not on a device.
 ### 2026-11-22 (backend, `fix/quiet-hours-school-days`)
