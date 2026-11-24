@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c5261f8c8b2fbbf05989603bc9db579cde908b82f83ced918257bf522094e646"
+      "sha256": "c394eb62dfbf6e8e9e88cd5d57f4cd0f52fc0609625c1cb9ed58e755e664f597"
     }
   },
   "suitability_vocabulary": {
@@ -47625,7 +47625,34 @@
         "file": "american-staffordshire-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/american-staffordshire-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder"
+            },
+            "file": "dog/american-staffordshire-terrier--blue.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/american-staffordshire-terrier--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -48187,7 +48214,66 @@
         "file": "lagotto-romagnolo.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "brown-roan",
+            "label": {
+              "en": "Brown roan",
+              "sl": "Rjavi roan"
+            },
+            "file": "dog/lagotto-romagnolo.webp",
+            "default": true
+          },
+          {
+            "key": "off-white",
+            "label": {
+              "en": "Off-white",
+              "sl": "Belkast"
+            },
+            "file": "dog/lagotto-romagnolo--off-white.webp"
+          },
+          {
+            "key": "white-brown",
+            "label": {
+              "en": "White with brown patches",
+              "sl": "Bel z rjavimi lisami"
+            },
+            "file": "dog/lagotto-romagnolo--white-brown.webp"
+          },
+          {
+            "key": "white-orange",
+            "label": {
+              "en": "White with orange patches",
+              "sl": "Bel z oranžnimi lisami"
+            },
+            "file": "dog/lagotto-romagnolo--white-orange.webp"
+          },
+          {
+            "key": "orange-roan",
+            "label": {
+              "en": "Orange roan",
+              "sl": "Oranžni roan"
+            },
+            "file": "dog/lagotto-romagnolo--orange-roan.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/lagotto-romagnolo--brown.webp"
+          },
+          {
+            "key": "orange",
+            "label": {
+              "en": "Orange",
+              "sl": "Oranžen"
+            },
+            "file": "dog/lagotto-romagnolo--orange.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -48825,7 +48911,50 @@
         "file": "alaskan-malamute.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey-white",
+            "label": {
+              "en": "Grey and white",
+              "sl": "Sivo-bel"
+            },
+            "file": "dog/alaskan-malamute.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/alaskan-malamute--black-white.webp"
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Sable and white",
+              "sl": "Sobolji z belo"
+            },
+            "file": "dog/alaskan-malamute--sable-white.webp"
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/alaskan-malamute--red-white.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/alaskan-malamute--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -49380,7 +49509,42 @@
         "file": "basenji.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/basenji.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/basenji--black-white.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (black, tan, white)",
+              "sl": "Trobarven (črn, rjavkast, bel)"
+            },
+            "file": "dog/basenji--tricolour.webp"
+          },
+          {
+            "key": "brindle-white",
+            "label": {
+              "en": "Brindle and white",
+              "sl": "Tigrast z belo"
+            },
+            "file": "dog/basenji--brindle-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -49981,7 +50145,58 @@
         "file": "rat-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan-white",
+            "label": {
+              "en": "Tricolour (black, tan, white)",
+              "sl": "Trobarven (črn, rjavkast, bel)"
+            },
+            "file": "dog/rat-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "chocolate-tan-white",
+            "label": {
+              "en": "Chocolate, tan and white",
+              "sl": "Čokoladno-rjavkasto-bel"
+            },
+            "file": "dog/rat-terrier--chocolate-tan-white.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/rat-terrier--black-white.webp"
+          },
+          {
+            "key": "apricot-white",
+            "label": {
+              "en": "Apricot and white",
+              "sl": "Marelično-bel"
+            },
+            "file": "dog/rat-terrier--apricot-white.webp"
+          },
+          {
+            "key": "lemon-white",
+            "label": {
+              "en": "Lemon and white",
+              "sl": "Limonasto-bel"
+            },
+            "file": "dog/rat-terrier--lemon-white.webp"
+          },
+          {
+            "key": "blue-tan-white",
+            "label": {
+              "en": "Blue, tan and white",
+              "sl": "Modro-rjavkasto-bel"
+            },
+            "file": "dog/rat-terrier--blue-tan-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -51247,7 +51462,58 @@
         "file": "shar-pei.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/shar-pei.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/shar-pei--red.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/shar-pei--cream.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/shar-pei--black.webp"
+          },
+          {
+            "key": "chocolate",
+            "label": {
+              "en": "Chocolate",
+              "sl": "Čokoladno rjav"
+            },
+            "file": "dog/shar-pei--chocolate.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder (modro siv)"
+            },
+            "file": "dog/shar-pei--blue.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -51923,7 +52189,34 @@
         "file": "brussels-griffon.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/brussels-griffon.webp",
+            "default": true
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjav"
+            },
+            "file": "dog/brussels-griffon--black-tan.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/brussels-griffon--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -53133,7 +53426,26 @@
         "file": "anatolian-shepherd-dog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn with black mask",
+              "sl": "Plav s črno masko"
+            },
+            "file": "dog/anatolian-shepherd-dog.webp",
+            "default": true
+          },
+          {
+            "key": "wolf-sable",
+            "label": {
+              "en": "Wolf sable with black mask",
+              "sl": "Volčje siv s črno masko"
+            },
+            "file": "dog/anatolian-shepherd-dog--wolf-sable.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -53828,7 +54140,74 @@
         "file": "pekingese.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-gold",
+            "label": {
+              "en": "Red-gold with black mask",
+              "sl": "Rdeče zlat s črno masko"
+            },
+            "file": "dog/pekingese.webp",
+            "default": true
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn with black mask",
+              "sl": "Plav s črno masko"
+            },
+            "file": "dog/pekingese--fawn.webp"
+          },
+          {
+            "key": "sable",
+            "label": {
+              "en": "Sable with black mask",
+              "sl": "Sobolji s črno masko"
+            },
+            "file": "dog/pekingese--sable.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/pekingese--cream.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/pekingese--black.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjav"
+            },
+            "file": "dog/pekingese--black-tan.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/pekingese--white.webp"
+          },
+          {
+            "key": "parti-colour",
+            "label": {
+              "en": "Parti-colour",
+              "sl": "Lisast (bel z barvnimi lisami)"
+            },
+            "file": "dog/pekingese--parti-colour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
