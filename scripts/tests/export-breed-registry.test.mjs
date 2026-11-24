@@ -4307,7 +4307,7 @@ test('Bedlington Terrier (M5-R10-138): PDSA minimum 1 h, FCI height + weight, Mc
   assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [8.2, 10.4], female: [8.2, 10.4] }, ['S1035']]]);
   assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [41, 41], female: [41, 41] }, ['S1035']]]);
   assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.source_ids]), [['median', ['S123']], ['more_than', ['S1037']]]);
-  assert.equal(d.facts.find((f) => f.field === 'shedding').value, 'no');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'shedding').map((f) => f.source_ids), [['S1038']]);
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 123 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
   assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1 });
   assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 3 });
