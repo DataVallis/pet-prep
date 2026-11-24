@@ -21,3 +21,5 @@ here with `needs-david` is skipped by the backfill until David decides (delete t
 | cairn_terrier | brindle | needs-david | Both edits (redo practically identical) only darkened the face of the grey variant — looks like `grey`, no brindle striping or warm base. | 45282352195, 45283609294 | 2026-11-23 |
 | bedlington_terrier | sandy | needs-david | Both edits gave a black nose; the FCI standard (S1035) asks for brown noses in sandies — coat colour itself was right. | 45346734251, 45347091933 | 2026-11-24 |
 | bedlington_terrier | sandy-tan | needs-david | Both edits gave a black nose; the FCI standard (S1035) asks for brown noses in sandies — coat colour itself was right. | 45346734251, 45347091933 | 2026-11-24 |
+| rat_terrier | red-white | needs-david | Both edits (byte-identical on the redo) gave an unnatural crimson / burgundy red and kept the tan points of the tricolour portrait — no natural red. | 45503655865, 45505686149 | 2026-11-24 |
+| rat_terrier | fawn-white | needs-david | Both edits gave the same saturated orange-tan with a black nose as the `apricot-white` variant — no lighter dilute fawn. | 45503655865, 45505686149 | 2026-11-24 |
