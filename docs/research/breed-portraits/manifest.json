@@ -5980,6 +5980,66 @@
             "prompt_hash": "sha256:5764bdd909f234262e692d8ceef194bbcfef528f402afb8147e8b8bbe8e9b229",
             "generated_at": "2026-11-23T22:50:07+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bracco_italiano",
+            "species": "dog",
+            "colour": "brown-white",
+            "colour_value": "white with brown markings",
+            "file": "dog/bracco-italiano--brown-white.webp",
+            "reference": "dog/bracco-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:d8b5cb4bd5dd1db399e1dc7f3136cf61a3d6e40f40e3bb82ca6d3241ab5e1e09",
+            "generated_at": "2026-11-24T01:25:53+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bracco_italiano",
+            "species": "dog",
+            "colour": "orange-roan",
+            "colour_value": "orange roan",
+            "file": "dog/bracco-italiano--orange-roan.webp",
+            "reference": "dog/bracco-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:e5bef5fb3594372d0dd806de2715608ef7983c189f4af992f9fe0d2e3670e85e",
+            "generated_at": "2026-11-24T01:26:11+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bracco_italiano",
+            "species": "dog",
+            "colour": "brown-roan",
+            "colour_value": "brown roan",
+            "file": "dog/bracco-italiano--brown-roan.webp",
+            "reference": "dog/bracco-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:2ef181f47320b86afbbfc4ca47748934f6e08f132de89d633dfebdcd7a59a846",
+            "generated_at": "2026-11-24T01:26:31+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bracco_italiano",
+            "species": "dog",
+            "colour": "white",
+            "colour_value": "white",
+            "file": "dog/bracco-italiano--white.webp",
+            "reference": "dog/bracco-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:6b20f593bacfa144daa751230411bbe6fbd7ab2a68aa234b1bda8f163242ee8c",
+            "generated_at": "2026-11-24T01:26:48+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

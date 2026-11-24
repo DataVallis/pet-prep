@@ -549,6 +549,13 @@ return [
     'belgian_sheepdog' => [
         'black' => 'dogs/belgian-sheepdog.webp',
     ],
+    'bracco_italiano' => [
+        'orange-white' => 'dogs/bracco-italiano.webp',
+        'brown-white' => 'dogs/bracco-italiano--brown-white.webp',
+        'orange-roan' => 'dogs/bracco-italiano--orange-roan.webp',
+        'brown-roan' => 'dogs/bracco-italiano--brown-roan.webp',
+        'white' => 'dogs/bracco-italiano--white.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

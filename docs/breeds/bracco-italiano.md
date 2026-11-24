@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bracco_italiano` (viri S1022–S1028; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1024) |
 | Izvor | FCI št. 202 »Bracco Italiano« (Italian Pointing Dog), skupina 7, sekcija 1 (celinski ptičarji, tip »braque«), Italija (S1022, S1023) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 132. mesto »Bracco Italiano« (S174, zapisano 2026-11-23 v vrstici 135 čakalne vrste) |
-| PR-ji | pet-prep #1559 (pasma, združen `c453e62`) · portret: pet-prep PR `feat/M5-R10-136-bracco-italiano-portrait` (zagon `breed-portraits.yml` 45303443120, sprejet v prvem poskusu) · barvne različice: pet-prep PR `feat/M5-R10-136-bracco-italiano-colours` · spletna stran: pet-prep-website `feat/register-bracco-italiano` |
+| PR-ji | pet-prep #1559 (pasma, združen `c453e62`) · portret: pet-prep PR `feat/M5-R10-136-bracco-italiano-portrait` (zagon `breed-portraits.yml` 45303443120, sprejet v prvem poskusu) · barvne različice: pet-prep PR `feat/M5-R10-136-bracco-italiano-colours` (zagon 45304884439 — belo-rjav, oranžno lisast, rjavo lisast, bel: vse 4 odobril Claude) · spletna stran: pet-prep-website `feat/register-bracco-italiano` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pasma v izbirniku (značka »Izziv«, namig »Del 12-tedenskega izziva · česanje 1× na teden«, iskanje »bracco«, »italijanski ptičar«, »italian pointer« …, oznake, starostni namigi) | 🛠 | 💶 izziv | M5-R10-136 | 2026-11-24 |
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 99. meseca — predlog; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-136 | 2026-11-24 |
 | Česanje 1× na teden, opozorilo »počakaj s sprehodom« 60 min po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-11-24 |
-| Barve (izbirnik: belo-oranžen, belo-rjav, oranžno lisast, rjavo lisast, bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-24 |
+| Barve (izbirnik: belo-oranžen, belo-rjav, oranžno lisast, rjavo lisast, bel — vse s fotografijo) | 🛠 | 💶 izziv | M5-R21 | 2026-11-24 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), bel z oranžnimi lisami na glavi in uhljih, dolgi viseči uhlji, kratka svetleča dlaka, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-24 |
 | Stran na petprep.si (`/animals/dogs/bracco-italiano`, `/sl/zivali/psi/italijanski-pticar`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
