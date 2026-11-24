@@ -901,6 +901,15 @@ return [
         ['key' => 'black-tan', 'value' => 'lacquer black with red-brown markings (black and tan)', 'en' => 'Black and tan', 'sl' => 'Črn s porjavelimi oznakami'],
         ['key' => 'red', 'value' => 'self-coloured deer red (red to dark red-brown)', 'en' => 'Red', 'sl' => 'Rdeč'],
     ],
+    // M5-R10-138: FCI-Standard N°9 (S1035) blue / liver / sandy, with or without tan; same order and values as breed_appearance.php.
+    'bedlington_terrier' => [
+        ['key' => 'blue', 'value' => 'blue (slate blue-grey to silvery blue)', 'en' => 'Blue', 'sl' => 'Moder'],
+        ['key' => 'liver', 'value' => 'liver (warm brown)', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
+        ['key' => 'sandy', 'value' => 'sandy (light fawn)', 'en' => 'Sandy', 'sl' => 'Peščen'],
+        ['key' => 'blue-tan', 'value' => 'blue with tan markings (blue and tan)', 'en' => 'Blue and tan', 'sl' => 'Moder s porjavelimi oznakami'],
+        ['key' => 'liver-tan', 'value' => 'liver with tan markings (liver and tan)', 'en' => 'Liver and tan', 'sl' => 'Jetrno rjav s porjavelimi oznakami'],
+        ['key' => 'sandy-tan', 'value' => 'sandy with tan markings (sandy and tan)', 'en' => 'Sandy and tan', 'sl' => 'Peščen s porjavelimi oznakami'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

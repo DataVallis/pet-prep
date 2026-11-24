@@ -136,6 +136,7 @@ return [
     'belgian_sheepdog' => 'Belgijski ovčar groenendael',
     'bracco_italiano' => 'Italijanski ptičar',
     'german_pinscher' => 'Nemški pinč',
+    'bedlington_terrier' => 'Bedlington terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
