@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f1079d6cc70a71e155970572b6c659cad076ae12eef6174339ca79889f5aef88"
+      "sha256": "0e78efee4ee0c5f70f58ce1551a0766749eee9bf9cd98fa3775dc38c0553feec"
     }
   },
   "suitability_vocabulary": {
@@ -79141,7 +79141,50 @@
         "file": "bracco-italiano.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "orange-white",
+            "label": {
+              "en": "White and orange",
+              "sl": "Belo-oranžen"
+            },
+            "file": "dog/bracco-italiano.webp",
+            "default": true
+          },
+          {
+            "key": "brown-white",
+            "label": {
+              "en": "White and brown",
+              "sl": "Belo-rjav"
+            },
+            "file": "dog/bracco-italiano--brown-white.webp"
+          },
+          {
+            "key": "orange-roan",
+            "label": {
+              "en": "Orange roan",
+              "sl": "Oranžno lisast"
+            },
+            "file": "dog/bracco-italiano--orange-roan.webp"
+          },
+          {
+            "key": "brown-roan",
+            "label": {
+              "en": "Brown roan",
+              "sl": "Rjavo lisast"
+            },
+            "file": "dog/bracco-italiano--brown-roan.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/bracco-italiano--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
