@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\QuietHoursChangeScope;
 use App\Events\PetUpdated;
 use App\Models\Family;
 use App\Models\Pet;
@@ -28,10 +29,13 @@ use Illuminate\Support\Facades\Log;
  *
  * One transaction, family row lock → pet row lock (the order of the family
  * and pet zone changes), one `pet_quiet_hours_changed` PetUpdated after
- * commit when the stored value changed, one audit log line (no PII).
+ * commit when the stored value changed, one audit log line (no PII) and one
+ * `quiet_hours_changes` row (QuietHoursChangeLog, David 2026-11-24).
  */
 class PetQuietHoursService
 {
+    public function __construct(private readonly QuietHoursChangeLog $changeLog) {}
+
     /**
      * Give the pet its own schedule, or — `$values` null — make it follow
      * the family's quiet hours again.
@@ -60,6 +64,8 @@ class PetQuietHoursService
             }
 
             $locked->forceFill(['own_quiet_hours' => $new])->save();
+            // David 2026-11-24: one `quiet_hours_changes` row per change (after null = follows the family).
+            $this->changeLog->record($family->id, (int) $locked->id, $parent, QuietHoursChangeScope::Pet, $old, $new);
             PetUpdated::afterCommit($locked, 'pet_quiet_hours_changed');
 
             Log::info('PetQuietHoursService: pet quiet hours changed', [

@@ -9,6 +9,7 @@ use App\Models\FamilyInvite;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\QuietHours;
+use App\Models\QuietHoursChange;
 use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -146,6 +147,13 @@ class FamilyInviteService
                         QuietHours::where('family_id', $current->id)
                             ->where('parent_id', $parent->id)
                             ->update(['parent_id' => $remainingParent]);
+                        // The old family keeps its quiet hours change log (David
+                        // 2026-11-24), but without the leaving parent — same as an
+                        // account deletion: who saved and their phone's User-Agent /
+                        // app features go. Rows in the new family are untouched.
+                        QuietHoursChange::where('family_id', $current->id)
+                            ->where('user_id', $parent->id)
+                            ->update(['user_id' => null, 'user_agent' => null, 'client_features' => null]);
                     } else {
                         // Never delete a family that has any child data: the
                         // last guard before the delete (pets.family_id and

@@ -87,7 +87,7 @@ The pet is **born at the first contract**. Every additional caretaker must sign 
 
 ### Deletes and locking (review of PR #14)
 
-- **No cascade from a family into child data:** `pets.family_id`, `family_user.family_id` and `quiet_hours.family_id` are `ON DELETE RESTRICT`; only `family_invites` cascade with their family. A family with any pet, member or settings row cannot be deleted by accident.
+- **No cascade from a family into child data:** `pets.family_id`, `family_user.family_id` and `quiet_hours.family_id` are `ON DELETE RESTRICT`; only `family_invites`, `child_login_pins` (open / used child login PINs, `child_login_pins.family_id` `cascadeOnDelete`, migration `2026_10_04_150000_add_pin_only_child_profiles`) and `quiet_hours_changes` (the quiet hours change log, no child data — 2026-11-24) cascade with their family. A family with any pet, member or settings row cannot be deleted by accident.
 - **Lock order** shared by `PairingService::pairChild` and `FamilyInviteService::joinFamily`: parent user row → (child user row) → family row. `pairChild` locks the PIN's parent, then the child (a second concurrent pairing of the same child sees `parent_id` and gets 422, not a unique-key 500), then the family it creates the pet in. `joinFamily` locks the joining parent, the invite, then the parent's current family, re-checks "no children, no pets" after the locks, and deletes the old family only if no member and no pet is left (last guard; otherwise 409 and the whole move rolls back).
 - `pet_caretakers_copy_pet_is_active` reads the pet `FOR SHARE`, so an `is_active` change waits for a caretaker insert.
 - GET endpoints never create a family (lookup only; a parent without a family gets the empty dashboard state, `quiet_hours: null`, no activities).

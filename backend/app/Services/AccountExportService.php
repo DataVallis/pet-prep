@@ -14,6 +14,7 @@ use App\Models\ParentDashboardOpen;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\QuietHours;
+use App\Models\QuietHoursChange;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\Media\PetGrowthService;
@@ -31,7 +32,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  * JSON document: parents (name, e-mail, timezone, terms acceptance, sign-in
  * methods incl. linked Google / Apple identities — M2-10c; the acquisition answer, dashboard opens
  * and the Phase-2 interest with its »Obvestite me« e-mail — VALIDATION_PLAN §4), children
- * (nickname, birth year), quiet hours, invites, pets (state, appearance traits,
+ * (nickname, birth year), quiet hours + their change log (David 2026-11-24), invites, pets (state, appearance traits,
  * caretakers, contracts INCLUDING the child's signature — the family's own
  * drawing, SVG path data or base64 PNG), the full history (activities, steps,
  * walks, routines, pause / illness periods, hygiene events), scores (Care
@@ -98,6 +99,7 @@ class AccountExportService
                 'parents' => [$this->parentRow($parent, $this->deviceCounts([$parent->id]), $this->pushDevices([$parent->id]))],
                 'children' => [],
                 'quiet_hours' => null,
+                'quiet_hours_changes' => [],
                 'invites' => [],
                 'pets' => [],
                 'wish_purchases' => [],
@@ -146,6 +148,8 @@ class AccountExportService
                 'created_at' => $this->iso($u->created_at),
             ])->values()->all(),
             'quiet_hours' => $this->quietHours($family),
+            // David 2026-11-24: every parent save that changed the family's or a pet's quiet hours.
+            'quiet_hours_changes' => $this->quietHoursChanges($family),
             'invites' => DB::table('family_invites')->where('family_id', $family->id)->orderBy('id')
                 ->get(['created_by', 'expires_at', 'used_at', 'used_by', 'created_at'])
                 ->map(fn ($r) => [
@@ -311,6 +315,33 @@ class AccountExportService
             'school_days' => QuietHours::normaliseSchoolDays($q->school_days ?? null),
             'updated_at' => $this->iso($q->updated_at),
         ];
+    }
+
+    /**
+     * The quiet hours change log (David 2026-11-24), oldest first: who saved
+     * (parent id), which schedule (family / pet), before → after (pet after
+     * null = follows the family again), the app's User-Agent and features
+     * header — the request data of the family's parents who saved (a parent
+     * who deleted their account or left for another family shows as null).
+     *
+     * @return list<array<string, mixed>>
+     */
+    private function quietHoursChanges(Family $family): array
+    {
+        $this->assertRows(QuietHoursChange::where('family_id', $family->id)->count());
+        $rows = QuietHoursChange::where('family_id', $family->id)->orderBy('created_at')->orderBy('id')->get();
+
+        return $rows->map(fn (QuietHoursChange $c): array => [
+            'created_at' => $this->iso($c->created_at),
+            'scope' => $c->scope->value,
+            'pet_id' => $c->pet_id,
+            'by_user_id' => $c->user_id,
+            // jsonb reorders keys — re-normalise so the export reads in the schedule's own order.
+            'before' => $c->before === null ? null : QuietHours::normaliseValues($c->before),
+            'after' => $c->after === null ? null : QuietHours::normaliseValues($c->after),
+            'user_agent' => $c->user_agent,
+            'client_features' => $c->client_features,
+        ])->values()->all();
     }
 
     /**

@@ -969,6 +969,8 @@ erDiagram
   PETS |o--o| CHALLENGE_CREDITS : "paid by (one unrevoked)"
   FAMILIES |o--o{ PURCHASE_EVENTS : "RevenueCat ledger (null after delete)"
   FAMILIES ||--o| QUIET_HOURS : "one per family"
+  FAMILIES ||--o{ QUIET_HOURS_CHANGES : "change log (2026-11-24)"
+  PETS |o--o{ QUIET_HOURS_CHANGES : "own hours changes"
   FAMILIES ||--o{ FAMILY_INVITES : "second parent"
   PETS ||--|{ PET_CARETAKERS : "1..n children"
   USERS ||--o{ PET_CARETAKERS : "child, max 1 active pet"
@@ -2692,6 +2694,7 @@ sequenceDiagram
     S-->>API: no-op (no broadcast)
   else changed
     S->>DB: pets.own_quiet_hours = values|null
+    S->>DB: INSERT quiet_hours_changes (scope pet, before → after, parent, User-Agent, features)
   end
   S->>DB: COMMIT
   S-->>P: PetUpdated pet_quiet_hours_changed · 200 {pet_id, quiet_hours, quiet_hours_follow_family}

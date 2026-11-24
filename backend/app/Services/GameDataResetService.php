@@ -160,6 +160,8 @@ class GameDataResetService
         'pet_training_sessions',
         'pet_training_skills',
         'child_login_pins',
+        // David 2026-11-24: quiet hours change log (→ pets, users, families)
+        'quiet_hours_changes',
         'pets',
         // M4-10 shared look pool of free pets (after pets / pet_media, which reference it)
         'pet_looks',
