@@ -148,6 +148,8 @@ import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import { EMPTY_PET_MEDIA, isMediaPending } from '@/modules/petMedia/petMedia';
 import { useItemMoment } from '@/modules/petMedia/useItemMoment';
+import { careBeatFor, treatBeatFor, useCareBeat } from '@/modules/childPet/careBeat';
+import { dueCare } from '@/modules/childPet/dueCare';
 import { advanceToyTurn, bowlsMoment } from '@/modules/petMedia/itemMedia';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import { loadMessGames } from '@/modules/cleaning/loadMessGames';
@@ -505,9 +507,22 @@ export default function ChildHudScreen() {
   // M6-W03: bowls after a feed / water, the treat clip after »Priboljšek« — once on the stage.
   const itemMoment = useItemMoment(view?.pet.media ?? EMPTY_PET_MEDIA, mediaModeOf(view));
   const endItemMoment = itemMoment.end;
+  // M5-T20 care beat: while a care clip plays the care buttons are busy and taps are ignored
+  // (≤ CARE_BEAT_MAX_MS, only with a clip — never `disabled`, never in actionRules).
+  const careBeat = useCareBeat();
+  const endCareBeat = careBeat.end;
+  const startCareBeat = careBeat.start;
+  const isCareBeatBusy = careBeat.isBusy;
+  const onStagePhaseEnd = useCallback(() => {
+    endItemMoment();
+    endCareBeat();
+  }, [endItemMoment, endCareBeat]);
   useEffect(() => {
-    if (lockedNow) endItemMoment();
-  }, [lockedNow, endItemMoment]);
+    if (lockedNow) {
+      endItemMoment();
+      endCareBeat();
+    }
+  }, [lockedNow, endItemMoment, endCareBeat]);
   const giveTreat = useGiveTreat();
   useEffect(() => {
     if (!treatHearts) return;
@@ -519,14 +534,18 @@ export default function ChildHudScreen() {
     giveTreat.mutate(undefined, {
       onSuccess: (result) => {
         // M6-W03: the treat clip once on the stage (picture mode: its image), else the hearts.
-        if (!playItemMoment('treats', result.clipUrl)) setTreatHearts(true);
+        const current = queryClient.getQueryData<ChildPetView>(childPetKey) ?? null;
+        const played = playItemMoment('treats', result.clipUrl);
+        if (!played) setTreatHearts(true);
+        // M5-T20: a treat WITH a clip also holds the care buttons until it ends (≤ 5 s).
+        else if (current !== null && treatBeatFor(current.pet.media, mediaModeOf(current), result.clipUrl)) startCareBeat();
         showToast({ tone: 'ok', message: t('wishes:child.treat.given') });
       },
       onError: (error) => {
         showToast({ tone: 'info', message: treatErrorText(error, queryClient.getQueryData<ChildPetView>(childPetKey) ?? null) });
       },
     });
-  }, [giveTreat, queryClient, showToast, playItemMoment]);
+  }, [giveTreat, queryClient, showToast, playItemMoment, startCareBeat]);
   // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // GAMES_SPEC §6.2: the slipper game (native layer only); a lock closes it.
@@ -588,6 +607,11 @@ export default function ChildHudScreen() {
 
   const mutations = { feed, water, clean, take_out: takeOut, resolve_chewing: resolveChewing } as const;
   const runAction = (action: CareAction) => {
+    // M5-T20 (David 2026-11-24): a tap during the care beat is ignored, never queued.
+    if (isCareBeatBusy()) return;
+    // The beat starts at PRESS time, only when this action will play a clip.
+    const beat = view !== undefined && careBeatFor(action, view.pet.media, mediaModeOf(view));
+    if (beat) startCareBeat();
     mutations[action].mutate(undefined, {
       onSuccess: (response) => {
         const after = normalizeChildState(response.state);
@@ -600,10 +624,13 @@ export default function ChildHudScreen() {
         // M6-W03: the pet's own bowls once on the stage after an accepted meal / water (looks only, S1):
         // feed → the eating clip, water → the drinking clip, never the eating one (David 2026-11-20).
         const bowlsClip = accepted ? bowlsMoment(action) : null;
-        if (bowlsClip !== null) playItemMoment('bowls', null, bowlsClip);
+        const played = bowlsClip !== null && playItemMoment('bowls', null, bowlsClip);
+        // Refused / nothing to show after all → the buttons are free again at once.
+        if (beat && !played) endCareBeat();
         showToast({ tone: 'ok', message, confirm: accepted, next: confirmationNext(action, response.status, after, response.feed_mode) });
       },
       onError: (error) => {
+        if (beat) endCareBeat();
         const message = failureMessage(
           classifyActionError(error),
           queryClient.getQueryData<ChildPetView>(childPetKey) ?? null,
@@ -777,12 +804,16 @@ export default function ChildHudScreen() {
   const compactDock = dock.length >= 5;
   const scoop = cat ? scoopDock(view) : null;
   const wand = cat ? wandDock(view) : null;
-  // CGP v2: the care that is due right now is the ONE solid-mint button —
-  // priority: puppy must go out > a mess to scrub > the cat's litter > food.
-  const takeOutDue = !takeOutDisabled && countdown?.due === true;
-  const cleanDue = !takeOutDue && !cleanDisabled && needsScrub;
-  const scoopDue = !takeOutDue && !cleanDue && scoop !== null && scoop.due && !scoop.disabled;
-  const feedDue = !takeOutDue && !cleanDue && !scoopDue && !locked && view.feeding.can_feed;
+  // CGP v2 + M5-T20 soft order: the care that is due right now is the ONE solid-mint button —
+  // only via `dueCare` (take out > scrub > litter > food > water). Everything stays pressable.
+  const due = dueCare(view, { nowMs: serverNow });
+  const takeOutDue = due === 'take_out';
+  const cleanDue = due === 'clean';
+  const scoopDue = due === 'scoop';
+  const feedDue = due === 'feed';
+  const waterDue = due === 'water';
+  // M5-T20 care beat: busy (never disabled) while a care clip plays.
+  const beatBusy = careBeat.busy;
   const dockIcon = (due: boolean) => (due ? palette.graphite : palette.white);
   const iconSize = compactDock ? 20 : 24;
   // The deploy banner replaces the amber "no connection" one (never both).
@@ -973,7 +1004,7 @@ export default function ChildHudScreen() {
           <PlayChip compact={compact} block={entry.block} onPress={() => setPlayOverlay('pick')} />
         ))}
       {treatChip && view.wishes !== null && (
-        <TreatChip compact={compact} left={view.wishes.treats.left} species={pet.species} busy={giveTreat.isPending} preparing={treatPreparing} onPress={handleTreat} />
+        <TreatChip compact={compact} left={view.wishes.treats.left} species={pet.species} busy={giveTreat.isPending || careBeat.busy} preparing={treatPreparing} onPress={handleTreat} />
       )}
     </>
   );
@@ -1005,7 +1036,7 @@ export default function ChildHudScreen() {
           mode={mediaModeOf(view)}
           // M6-W03: a bought item's one-shot moment (bowls / treats), then the normal stage.
           phase={itemMoment.phase}
-          onPhaseEnd={endItemMoment}
+          onPhaseEnd={onStagePhaseEnd}
           variant="hud"
           // M5-F06: the "getting ready" notice is stacked above the dock (BehaviourPanel), not on the media.
           // Under a translucent lock (vet, hard stop, payment) the panel is hidden → keep it on the media.
@@ -1175,7 +1206,7 @@ export default function ChildHudScreen() {
                     onPress={() => runAction('feed')}
                     disabled={feedDisabled}
                     due={feedDue}
-                    busy={feed.isPending}
+                    busy={feed.isPending || beatBusy}
                     hint={feedDockHint(view)}
                     compact={compactDock}
                   />
@@ -1185,11 +1216,12 @@ export default function ChildHudScreen() {
                   <ActionButton
                     key={kind}
                     testID="action-water"
-                    icon={<Droplet color={palette.white} size={iconSize} />}
+                    icon={<Droplet color={dockIcon(waterDue)} size={iconSize} />}
                     label={HUD_STRINGS.water}
                     onPress={() => runAction('water')}
                     disabled={waterDisabled}
-                    busy={water.isPending}
+                    due={waterDue}
+                    busy={water.isPending || beatBusy}
                     hint={waterDockHint(view)}
                     compact={compactDock}
                   />
@@ -1204,11 +1236,11 @@ export default function ChildHudScreen() {
                     onPress={() => runAction('take_out')}
                     disabled={takeOutDisabled}
                     due={takeOutDue}
-                    busy={takeOut.isPending}
+                    busy={takeOut.isPending || beatBusy}
                     hint={countdown?.hint ?? null}
                     accessibilityHint={countdown ? (countdown.howTo ? `${countdown.line} ${countdown.howTo}` : countdown.line) : undefined}
                     // M5-T01: the last 30 min (and overdue) pulse gently — never with reduce motion.
-                    pulse={countdown?.level === 'urgent' && !reduceMotion && !takeOut.isPending}
+                    pulse={countdown?.level === 'urgent' && !reduceMotion && !takeOut.isPending && !beatBusy}
                     compact
                   />
                 );
@@ -1221,6 +1253,7 @@ export default function ChildHudScreen() {
                     label={HUD_STRINGS.walk}
                     onPress={() => setWalkModalVisible(true)}
                     disabled={walkDisabled}
+                    busy={beatBusy}
                     hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
                     hintSingleLine
                     compact={compactDock}
@@ -1237,6 +1270,7 @@ export default function ChildHudScreen() {
                     onPress={() => openCat('scoop')}
                     disabled={scoop?.disabled ?? true}
                     due={scoopDue}
+                    busy={beatBusy}
                     hint={scoop?.hint ?? null}
                     compact={compactDock}
                   />
@@ -1251,6 +1285,7 @@ export default function ChildHudScreen() {
                     accessibilityHint={CAT_HUD_STRINGS.wandA11y}
                     onPress={() => openCat('wand')}
                     disabled={wand?.disabled ?? true}
+                    busy={beatBusy}
                     hint={wand?.hint ?? null}
                     hintSingleLine
                     compact={compactDock}
@@ -1266,7 +1301,7 @@ export default function ChildHudScreen() {
                     onPress={() => setCleaningOverlayVisible(true)}
                     disabled={cleanDisabled}
                     due={cleanDue}
-                    busy={clean.isPending}
+                    busy={clean.isPending || beatBusy}
                     hint={cleanHint(view)}
                     compact={compactDock}
                   />

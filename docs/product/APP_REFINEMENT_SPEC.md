@@ -52,6 +52,7 @@
 - Po pritisku kratek zaslon: animacija (kuža na travi) → »✓ Kuža je opravil potrebo. Naslednjič čez ~X h.« + točke.
 - Ura se vidno ponastavi z animacijo, ne »tiho«.
 - Isti vzorec potrditve velja za vsa dejanja (hrana, voda, čiščenje, česanje).
+- *M5-T20 (David 24. 11. 2026):* med posnetkom skled po hrani / vodi (in po priboljšku s posnetkom) so gumbi za nego zaposleni in pritisk se prezre — od pritiska do konca posnetka, največ 5 s, samo ko se posnetek res predvaja (PRODUCT_SPEC §8 »Ena skrb naenkrat«). Aplikacija: `mobile/src/modules/childPet/careBeat.ts`.
 - *Stanje M5-T01 (21. 10. 2026):* zgrajena potrditvena kartica »✓ … Naslednjič čez ~X h.« (pelji ven; hrana → naslednji obrok, voda → kdaj spet, čiščenje brez »naslednjič«) in kratka animacija ponastavitve ure. **Točk ni** — David 21. 10. 2026: »ne zdaj«, potrditev po dejanju ne kaže točk, Care Score ostane v poročilu; animacija »kuža na travi« čaka na medije (M5-T08). Česanje svojo potrditev že kaže v lastni igri.
 
 ## 5. Mini navodila
@@ -113,6 +114,7 @@
 - **Ko ljubljenček spi, sta onemogočeni igra in šola** (David 20. 10.); **od 21. 10. tudi crkljanje in česanje** (»spečo žival ne motimo«, pes in muca).
 - **Šolsko okno ostane spanje** (David 21. 10.): med šolskim oknom tihih ur ljubljenček »spi« kot ponoči (igra / šola / crkljanje / česanje onemogočeni z istim besedilom) — pravilo ostane, kot je.
 - Onemogočen gumb vedno pokaže razlog, npr. »💤 Kuža spi do 7:00«.
+- *M5-T20 (David 24. 11. 2026):* tabela ostane samo zastavice strežnika. »Ena skrb naenkrat« (gumbi zaposleni ≤ 5 s med posnetkom skled) in »sveti samo naslednji korak« (`dueCare`: ven › drgnjenje › pesek › hrana › voda, ko jo strežnik dovoli in skleda ni polna) nista pravili dovoljenja — nič ni onemogočeno, trdega vrstnega reda ni (PRODUCT_SPEC §8).
 
 **Zgrajeno (M5-T02, 21. 10. 2026) — kanonična tabela.** Odloča strežnik (zastavice `can_*` v stanju otroka); aplikacija ima eno tabelo (`mobile/src/modules/childPet/actionRules.ts`), ki zastavice samo prebere in doda razlog spanja (z uro bujenja) ali zaklepa.
 

@@ -171,6 +171,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-24 (mobile, `feat/M5-T20-care-beat`)
+- M5-T20 (David: ignore taps, W1): one care at a time — `careBeat.ts` keeps care buttons `busy` (never `disabled`, never in `actionRules`) from the press until the bowls / treat clip ends, ≤ 5 s, only when a clip plays; `dueCare.ts` = the one source of the glowing care button (take out › scrub › litter › feed › water when refillable and thirst < 100). JS only (OTA). Debt: not verified on a device; next: David checks Take out → Feed → Water on a phone with bowls.
+
 ### 2026-11-24 (backend + mobile, `feat/report-pet-media-errors`)
 - Odpoved predvajalnika videa ljubljenčka se poroča v »App errors« (novo področje `pet-media`, David »ja naredi«): `PetMediaView#onError` → `modules/petMedia/mediaErrorReport.ts` (sporočilo `pet-media <label> src=… stage=… layer=… link=… player=…`, enkrat na oznako + korak na sejo). Backend: enum + migracija samo za CHECK, Pest v `AppErrorReportsTest`. Samo JS / OTA. Brez vklopljenega stikala ne pride nič (§1b točka 4). Dolg: `toy_1` / `toy_2` imata isti fingerprint (številke se normalizirajo).
 
