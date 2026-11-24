@@ -83,7 +83,8 @@
         "fi": "Päivystys 24 tuntia vuorokaudessa, 365 päivää vuodessa. Soita etukäteen.",
         "nb": "Akuttbehandling hele døgnet, 365 dager i året. Ring på forhånd.",
         "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu. Vnaprej pokličite.",
-        "hr": "Hitna skrb 24 sata, 365 dana u godini. Nazovi unaprijed."
+        "hr": "Hitna skrb 24 sata, 365 dana u godini. Nazovi unaprijed.",
+        "de": "Notversorgung rund um die Uhr, 365 Tage im Jahr. Bitte vorher anrufen."
       }
     },
     {
@@ -111,7 +112,8 @@
         "fi": "Vain luonnonvaraiset eläimet: auki 24 tuntia, 365 päivää vuodessa hätätapauksia varten, maksutta.",
         "nb": "Kun viltlevende dyr: åpent hele døgnet, 365 dager i året, for nødtilfeller, gratis.",
         "sl": "Samo divje živali: nujna pomoč odprta 24 ur na dan, 365 dni v letu, brezplačno.",
-        "hr": "Samo divlje životinje: hitni slučajevi 24 sata, 365 dana u godini, besplatno."
+        "hr": "Samo divlje životinje: hitni slučajevi 24 sata, 365 dana u godini, besplatno.",
+        "de": "Nur Wildtiere: Notfälle rund um die Uhr, 365 Tage im Jahr, kostenlos."
       }
     },
     {
@@ -139,7 +141,8 @@
         "fi": "Ilmainen kunnallinen klinikka. Vastaanotto ma–pe klo 8.00–16.30. Soita päivystystapauksissa etukäteen.",
         "nb": "Gratis kommunal klinikk. Konsultasjoner mandag til fredag kl. 8.00–16.30. Ring på forhånd ved nødtilfeller.",
         "sl": "Brezplačna občinska klinika. Pregledi od ponedeljka do petka 8–16.30. Za nujno pomoč vnaprej pokličite.",
-        "hr": "Besplatna gradska klinika. Pregledi pon–pet 08:00–16:30. Za hitne slučajeve nazovi unaprijed."
+        "hr": "Besplatna gradska klinika. Pregledi pon–pet 08:00–16:30. Za hitne slučajeve nazovi unaprijed.",
+        "de": "Kostenlose städtische Klinik. Sprechstunde Mo–Fr 8.00–16.30 Uhr. Bei Notfällen bitte vorher anrufen."
       }
     },
     {
@@ -165,7 +168,8 @@
         "fi": "Auki ma–pe klo 8.00–16.00; potilaita otetaan vastaan noin klo 15 asti, ajanvarausta ei tarvita. Klinikalla on päivystysosasto; yöpäivystystä ei ole ilmoitettu.",
         "nb": "Åpent mandag til fredag 08.00–16.00; pasienter tas imot til ca. 15.00, ingen timebestilling nødvendig. Har et akuttområde; ingen nattjeneste oppgitt.",
         "sl": "Odprto od ponedeljka do petka 8–16; sprejem do približno 15, naročanje ni potrebno. Ima prostor za nujne primere; nočna služba ni navedena.",
-        "hr": "Radi pon–pet 08:00–16:00; pacijenti se primaju do oko 15:00, bez termina. Ima hitni prijem; noćna služba nije navedena."
+        "hr": "Radi pon–pet 08:00–16:00; pacijenti se primaju do oko 15:00, bez termina. Ima hitni prijem; noćna služba nije navedena.",
+        "de": "Mo–Fr 8.00–16.00 Uhr geöffnet; Annahme bis etwa 15.00 Uhr, ohne Termin. Mit Notfallbereich; ein Nachtdienst ist nicht angegeben."
       }
     },
     {
@@ -192,7 +196,8 @@
         "fi": "Kunnallinen koirien ja kissojen sairaala. Ma–pe klo 8.00–17.00, suljettu viikonloppuisin ja pyhäpäivinä.",
         "nb": "Kommunalt dyresykehus for hunder og katter. Mandag til fredag 08.00–17.00, stengt i helger og på helligdager.",
         "sl": "Občinska bolnišnica za pse in mačke. Od ponedeljka do petka 8–17, ob koncih tedna in praznikih zaprto.",
-        "hr": "Gradska bolnica za pse i mačke. pon–pet 08:00–17:00, vikendom i blagdanima zatvoreno."
+        "hr": "Gradska bolnica za pse i mačke. pon–pet 08:00–17:00, vikendom i blagdanima zatvoreno.",
+        "de": "Städtische Tierklinik für Hunde und Katzen. Mo–Fr 8.00–17.00 Uhr, am Wochenende und feiertags geschlossen."
       }
     }
   ],

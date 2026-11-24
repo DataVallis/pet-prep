@@ -221,7 +221,8 @@
         "fi": "Päivystys 24 h, 365 päivää vuodessa. Normaali aukioloaika 9.00–20.00 (keskiviikkoisin suljettu, päivystystapaukset silti otetaan vastaan). Soita ennen tuloa; aukioloajan ulkopuolella voi periä lisämaksuja.",
         "nb": "Akuttbehandling hele døgnet, 365 dager i året. Ordinær åpningstid kl. 9.00–20.00 (stengt onsdager, nødtilfeller tas fortsatt imot). Ring før du kommer; tillegg utenom åpningstid kan forekomme.",
         "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu. Redni delovni čas 9–20 (ob sredah zaprto, nujni primeri se sprejemajo). Vnaprej pokličite; možna so doplačila zunaj delovnega časa.",
-        "hr": "Hitna skrb 24 sata, 365 dana u godini. Redovno radno vrijeme 9:00–20:00 (srijedom zatvoreno, hitni slučajevi ipak se primaju). Nazovi prije dolaska; moguća doplata izvan radnog vremena."
+        "hr": "Hitna skrb 24 sata, 365 dana u godini. Redovno radno vrijeme 9:00–20:00 (srijedom zatvoreno, hitni slučajevi ipak se primaju). Nazovi prije dolaska; moguća doplata izvan radnog vremena.",
+        "de": "Notdienst rund um die Uhr, 365 Tage im Jahr. Regulär 9.00–20.00 Uhr (mittwochs geschlossen, Notfälle werden dennoch angenommen). Bitte vorher anrufen; außerhalb der Sprechzeiten können Zuschläge anfallen."
       },
       "small_animals": true,
       "url": "https://jamc.co.jp/english/",
@@ -251,7 +252,8 @@
         "fi": "Päivystysvastaanotto 24 h, 365 päivää vuodessa. Normaali aukioloaika 10.00–12.30 ja 14.30–19.00; aukioloajan ulkopuolella lisämaksu. Soita ennen tuloa.",
         "nb": "Akuttmottak hele døgnet, 365 dager i året. Ordinær åpningstid kl. 10.00–12.30 og 14.30–19.00; gebyr for tid utenom åpningstid gjelder. Ring før du kommer.",
         "sl": "Nujni sprejem 24 ur na dan, 365 dni v letu. Redni delovni čas 10–12.30 in 14.30–19; zunaj delovnega časa velja doplačilo. Vnaprej pokličite.",
-        "hr": "Hitni prijem 24 sata, 365 dana u godini. Redovno radno vrijeme 10:00–12:30 i 14:30–19:00; izvan radnog vremena naplaćuje se doplata. Nazovi prije dolaska."
+        "hr": "Hitni prijem 24 sata, 365 dana u godini. Redovno radno vrijeme 10:00–12:30 i 14:30–19:00; izvan radnog vremena naplaćuje se doplata. Nazovi prije dolaska.",
+        "de": "Notfallannahme rund um die Uhr, 365 Tage im Jahr. Regulär 10.00–12.30 und 14.30–19.00 Uhr; außerhalb der Sprechzeiten wird eine Gebühr erhoben. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.daktari.gr.jp/",
@@ -281,7 +283,8 @@
         "fi": "Päivystys ja tehohoito 24 h, 365 päivää vuodessa (päivystyslinja +81 3-6260-2997; varanumero +81 3-6706-7170). Erikoishoito lähetteellä ja ajanvarauksella 9.00–19.00. Soita ennen tuloa.",
         "nb": "Akutt- og intensivbehandling hele døgnet, 365 dager i året (akuttlinje +81 3-6260-2997; reservenummer +81 3-6706-7170). Spesialistbehandling etter henvisning og timebestilling 9.00–19.00. Ring før du kommer.",
         "sl": "Nujna in intenzivna oskrba 24 ur na dan, 365 dni v letu (nujna številka +81 3-6260-2997; rezervna +81 3-6706-7170). Specialistična oskrba z napotnico in po naročilu 9–19. Vnaprej pokličite.",
-        "hr": "Hitna i intenzivna skrb 24 sata, 365 dana u godini (hitna linija +81 3-6260-2997; rezervna +81 3-6706-7170). Specijalistička skrb uz uputnicu i termin 9:00–19:00. Nazovi prije dolaska."
+        "hr": "Hitna i intenzivna skrb 24 sata, 365 dana u godini (hitna linija +81 3-6260-2997; rezervna +81 3-6706-7170). Specijalistička skrb uz uputnicu i termin 9:00–19:00. Nazovi prije dolaska.",
+        "de": "Notfall- und Intensivversorgung rund um die Uhr, 365 Tage im Jahr (Notfalltelefon +81 3-6260-2997; Ersatznummer +81 3-6706-7170). Fachbehandlung nur mit Überweisung und Termin, 9.00–19.00 Uhr. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://jarvis.anicom-med.co.jp/",
@@ -311,7 +314,8 @@
         "fi": "Auki 24 h joka päivä. Päiväaika 9.00–18.59, yöaika 19.00–8.59. Yölisä ja etukäteismaksu; soita ennen tuloa.",
         "nb": "Åpent hele døgnet, alle dager. Dagtid 9.00–18.59, nattid 19.00–8.59. Nattillegg og depositum gjelder; ring før du kommer.",
         "sl": "Odprto 24 ur na dan, vsak dan. Dnevni urnik 9–18.59, nočni urnik 19–8.59. Velja nočno doplačilo in akontacija; pred prihodom pokličite.",
-        "hr": "Otvoreno 24 sata, svaki dan. Dnevno radno vrijeme 9:00–18:59, noćno 19:00–8:59. Noću se naplaćuju doplata i polog; nazovi prije dolaska."
+        "hr": "Otvoreno 24 sata, svaki dan. Dnevno radno vrijeme 9:00–18:59, noćno 19:00–8:59. Noću se naplaćuju doplata i polog; nazovi prije dolaska.",
+        "de": "Täglich rund um die Uhr geöffnet. Tagdienst 9.00–18.59 Uhr, Nachtdienst 19.00–8.59 Uhr. Nachtzuschlag und Anzahlung fallen an; bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.kariya-ah.co.jp/access/koto",
@@ -341,7 +345,8 @@
         "fi": "Auki 24 h joka päivä. Päiväaika 9.00–18.59, yöaika 19.00–8.59. Yölisä ja etukäteismaksu; soita ennen tuloa.",
         "nb": "Åpent hele døgnet, alle dager. Dagtid 9.00–18.59, nattid 19.00–8.59. Nattillegg og depositum gjelder; ring før du kommer.",
         "sl": "Odprto 24 ur na dan, vsak dan. Dnevni čas 9–18.59, nočni čas 19–8.59. Nočno doplačilo in akontacija; pred prihodom pokličite.",
-        "hr": "Otvoreno 24 sata, svaki dan. Dnevno radno vrijeme 9:00–18:59, noćno 19:00–8:59. Noću se naplaćuju doplata i polog; nazovi prije dolaska."
+        "hr": "Otvoreno 24 sata, svaki dan. Dnevno radno vrijeme 9:00–18:59, noćno 19:00–8:59. Noću se naplaćuju doplata i polog; nazovi prije dolaska.",
+        "de": "Täglich rund um die Uhr geöffnet. Tagsüber 9.00–18.59 Uhr, nachts 19.00–8.59 Uhr. Nachtzuschlag und Anzahlung erforderlich; bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.kariya-ah.co.jp/access/adachi",
@@ -371,7 +376,8 @@
         "fi": "Kertoo olevansa 24 h:n eläinsairaala, joka on auki pyhinä ja öisin. Varmista soittamalla etukäteen, sillä se voi tilapäisesti hoitaa potilaita toisessa toimipisteessä.",
         "nb": "Presenterer seg som et dyresykehus som er åpent hele døgnet, også på helligdager og om natten. Ring på forhånd for å bekrefte, ettersom de midlertidig kan behandle pasienter ved et annet sted.",
         "sl": "24-urna živalska bolnišnica, odprta ob praznikih in ponoči. Vnaprej pokličite in preverite, saj morda začasno zdravi paciente na drugi lokaciji.",
-        "hr": "Veterinarska bolnica koja radi 24 sata, i na blagdane i noću. Nazovi unaprijed radi potvrde jer privremeno može liječiti pacijente na drugoj lokaciji."
+        "hr": "Veterinarska bolnica koja radi 24 sata, i na blagdane i noću. Nazovi unaprijed radi potvrde jer privremeno može liječiti pacijente na drugoj lokaciji.",
+        "de": "Tierklinik rund um die Uhr, auch feiertags und nachts geöffnet. Bitte vorher anrufen, da zeitweise an einem anderen Standort behandelt werden kann."
       },
       "small_animals": true,
       "url": "https://animal24.tokyo/",
@@ -401,7 +407,8 @@
         "fi": "Yöpäivystys joka päivä vuoden ympäri klo 20.00 alkaen (soita ensin numeroon +81 3-5760-1212). Erikoissairaanhoidon linja +81 3-5760-1211.",
         "nb": "Akuttjeneste natt alle dager hele året, fra 20.00 (ring først +81 3-5760-1212). Linje for sekundærbehandling +81 3-5760-1211.",
         "sl": "Nočna nujna služba vsak dan v letu, od 20. ure dalje (najprej pokličite +81 3-5760-1212). Linija za sekundarno oskrbo +81 3-5760-1211.",
-        "hr": "Noćna hitna služba svaki dan u godini, od 20:00 (prvo nazovi +81 3-5760-1212). Linija za sekundarnu skrb +81 3-5760-1211."
+        "hr": "Noćna hitna služba svaki dan u godini, od 20:00 (prvo nazovi +81 3-5760-1212). Linija za sekundarnu skrb +81 3-5760-1211.",
+        "de": "Nächtlicher Notdienst an allen Tagen des Jahres, ab 20.00 Uhr (zuerst anrufen: +81 3-5760-1212). Nummer für Weiterbehandlung: +81 3-5760-1211."
       },
       "small_animals": true,
       "url": "https://trva.jp/",
@@ -431,7 +438,8 @@
         "fi": "Yöpäivystyssairaala auki joka päivä vuoden ympäri klo 20.00 alkaen aikaiseen aamuun asti. Soita ensin; aukioloaikoja on tilapäisesti lyhennetty, joten varmista puhelimitse.",
         "nb": "Nattlig akuttsykehus åpent alle dager hele året fra 20.00 til tidlig morgen. Ring først; åpningstidene er midlertidig forkortet, så bekreft på telefon.",
         "sl": "Nočna nujna bolnišnica, odprta vsak dan v letu od 20. ure do zgodnjega jutra. Najprej pokličite; delovni čas je bil začasno skrajšan, zato ga potrdite po telefonu.",
-        "hr": "Noćna hitna bolnica otvorena svaki dan u godini od 20:00 do ranog jutra. Prvo nazovi; radno vrijeme privremeno je skraćeno pa ga provjeri telefonom."
+        "hr": "Noćna hitna bolnica otvorena svaki dan u godini od 20:00 do ranog jutra. Prvo nazovi; radno vrijeme privremeno je skraćeno pa ga provjeri telefonom.",
+        "de": "Nachtnotdienst-Klinik an allen Tagen des Jahres von 20.00 Uhr bis in die frühen Morgenstunden. Bitte vorher anrufen; die Öffnungszeiten wurden vorübergehend verkürzt, daher telefonisch bestätigen."
       },
       "small_animals": true,
       "url": "https://www.yakan-99.com/",
@@ -461,7 +469,8 @@
         "fi": "Yöpäivystys joka päivä vuoden ympäri, 19.00 – seuraavaan aamuun klo 7.00 (puhelinvastaanotto 19.00–6.00).",
         "nb": "Akuttbehandling natt alle dager hele året, 19.00 til 7.00 neste morgen (telefonmottak 19.00–6.00).",
         "sl": "Nočna nujna pomoč vsak dan v letu, od 19 do 7 naslednje jutro (telefonski sprejem 19–6).",
-        "hr": "Noćna hitna skrb svaki dan u godini, od 19:00 do 7:00 sljedećeg jutra (telefonski prijem 19:00–6:00)."
+        "hr": "Noćna hitna skrb svaki dan u godini, od 19:00 do 7:00 sljedećeg jutra (telefonski prijem 19:00–6:00).",
+        "de": "Nächtlicher Notdienst an allen Tagen des Jahres, 19.00 Uhr bis 7.00 Uhr am Folgemorgen (telefonische Annahme 19.00–6.00 Uhr)."
       },
       "small_animals": true,
       "url": "https://www.doubutsu-yakan99.com/",
@@ -490,7 +499,8 @@
         "fi": "Yöpäivystysklinikka ja kotikäynnit. Yöpäivystys 20.00–5.00 (suljetut päivät klinikan kalenterista); puhelinvastaanotto 9.00–18.00.",
         "nb": "Nattlig akuttklinikk og hjemmebesøk. Åpningstid for akutt natthjelp 20.00–5.00 (se klinikkens kalender for stengte dager); telefonmottak 9.00–18.00.",
         "sl": "Nočna nujna ambulanta in obiski na domu. Nočna nujna pomoč 20–5 (zaprte dni preverite v koledarju ambulante); telefonski sprejem 9–18.",
-        "hr": "Noćna hitna klinika i kućni posjeti. Noćna hitna služba 20:00–5:00 (neradne dane provjeri u kalendaru klinike); telefonski prijem 9:00–18:00."
+        "hr": "Noćna hitna klinika i kućni posjeti. Noćna hitna služba 20:00–5:00 (neradne dane provjeri u kalendaru klinike); telefonski prijem 9:00–18:00.",
+        "de": "Nachtnotfallklinik und Hausbesuche. Nachtnotdienst 20.00–5.00 Uhr (Schließtage siehe Kalender der Klinik); telefonische Annahme 9.00–18.00 Uhr."
       },
       "small_animals": true,
       "url": "https://azabupet.jp/en/",
@@ -520,7 +530,8 @@
         "fi": "Yliopiston opetussairaala, vain arkisin (vastaanotto 9.00–11.30 ja 13.30–15.30). Ensikäynti vaatii nykyisen eläinlääkärin lähetteen; ei päivystystä.",
         "nb": "Undervisningssykehus, kun hverdager (resepsjon 9.00–11.30 og 13.30–15.30). Første besøk krever henvisning fra din nåværende dyrlege; ingen akuttjeneste.",
         "sl": "Univerzitetna učna bolnišnica, samo ob delavnikih (sprejem 9–11.30 in 13.30–15.30). Za prvi obisk potrebujete napotnico svojega veterinarja; brez nujne pomoči.",
-        "hr": "Sveučilišna nastavna bolnica, samo radnim danom (prijem 9:00–11:30 i 13:30–15:30). Za prvi posjet potrebna je uputnica tvog sadašnjeg veterinara; nema hitne službe."
+        "hr": "Sveučilišna nastavna bolnica, samo radnim danom (prijem 9:00–11:30 i 13:30–15:30). Za prvi posjet potrebna je uputnica tvog sadašnjeg veterinara; nema hitne službe.",
+        "de": "Universitäre Lehrklinik, nur werktags (Annahme 9.00–11.30 und 13.30–15.30 Uhr). Erstbesuche nur mit Überweisung Ihrer bisherigen Tierarztpraxis; kein Notdienst."
       },
       "small_animals": true,
       "url": "https://www.vm.a.u-tokyo.ac.jp/vmc/",
@@ -554,7 +565,8 @@
         "fi": "Yliopiston opetussairaala. Arkisin 9.00–16.00; varaa aika ensin varauslinjalta.",
         "nb": "Undervisningssykehus. Hverdager 9.00–16.00; bestill først på bestillingslinjen.",
         "sl": "Univerzitetna učna bolnišnica. Ob delavnikih 9–16; najprej se naročite na številki za rezervacije.",
-        "hr": "Sveučilišna nastavna bolnica. Radnim danom 9:00–16:00; prvo naruči termin na liniji za rezervacije."
+        "hr": "Sveučilišna nastavna bolnica. Radnim danom 9:00–16:00; prvo naruči termin na liniji za rezervacije.",
+        "de": "Universitäre Lehrklinik. Werktags 9.00–16.00 Uhr; bitte zuerst über die Terminvergabe-Hotline anmelden."
       }
     },
     {
@@ -579,7 +591,8 @@
         "fi": "Vastaanotto arkisin 9.30–18.00, viikonloppuisin ja pyhinä 17.00 asti. Englanninkielinen verkkosivusto.",
         "nb": "Resepsjon kl. 9.30–18.00 på hverdager, til kl. 17.00 i helger og på helligdager. Nettsted på engelsk tilgjengelig.",
         "sl": "Sprejem 9.30–18 ob delavnikih, do 17 ob koncih tedna in praznikih. Na voljo je spletna stran v angleščini.",
-        "hr": "Prijem radnim danom 9:30–18:00, vikendom i blagdanima do 17:00. Dostupna je mrežna stranica na engleskom."
+        "hr": "Prijem radnim danom 9:30–18:00, vikendom i blagdanima do 17:00. Dostupna je mrežna stranica na engleskom.",
+        "de": "Annahme werktags 9.30–18.00 Uhr, am Wochenende und feiertags bis 17.00 Uhr. Englischsprachige Website vorhanden."
       },
       "small_animals": true,
       "url": "https://akasaka-ah-en.com/",
@@ -609,7 +622,8 @@
         "fi": "Aamupäivisin 10.00–13.00 ja iltapäivisin 16.00–19.00; suljettu keskiviikkoisin; sunnuntaisin ja pyhinä vain aamupäivisin. Soita, jos tapaus voi olla kiireellinen.",
         "nb": "Formiddag 10.00–13.00 og ettermiddag 16.00–19.00; stengt onsdager; søndager og helligdager kun formiddag. Ring hvis det kan være akutt.",
         "sl": "Dopoldne 10–13 in popoldne 16–19; ob sredah zaprto; ob nedeljah in praznikih samo dopoldne. Če gre morda za nujni primer, pokličite.",
-        "hr": "Ujutro 10:00–13:00 i poslijepodne 16:00–19:00; srijedom zatvoreno; nedjeljom i blagdanima samo ujutro. Nazovi ako bi slučaj mogao biti hitan."
+        "hr": "Ujutro 10:00–13:00 i poslijepodne 16:00–19:00; srijedom zatvoreno; nedjeljom i blagdanima samo ujutro. Nazovi ako bi slučaj mogao biti hitan.",
+        "de": "Vormittags 10.00–13.00 Uhr und nachmittags 16.00–19.00 Uhr; mittwochs geschlossen; sonntags und feiertags nur vormittags. Bei möglicher Dringlichkeit bitte anrufen."
       },
       "small_animals": true,
       "url": "https://www.westcross.jp/English.html",
@@ -639,7 +653,8 @@
         "fi": "Auki päivittäin 9.00–12.00 ja 16.00–19.00; englanninkielistä puhelintukea. Päivystyksestä ja yöhoidosta kysy puhelimitse.",
         "nb": "Åpent alle dager kl. 09.00–12.00 og 16.00–19.00; telefonstøtte på engelsk. Ring for å høre om nødtilfeller og nattbehandling.",
         "sl": "Odprto vsak dan 9–12 in 16–19; telefonska podpora v angleščini. Za nujne primere in nočno oskrbo preverite po telefonu.",
-        "hr": "Otvoreno svaki dan 9:00–12:00 i 16:00–19:00; dostupna telefonska podrška na engleskom. Za hitne slučajeve i noćnu skrb provjeri telefonom."
+        "hr": "Otvoreno svaki dan 9:00–12:00 i 16:00–19:00; dostupna telefonska podrška na engleskom. Za hitne slučajeve i noćnu skrb provjeri telefonom.",
+        "de": "Täglich 9.00–12.00 und 16.00–19.00 Uhr geöffnet; englischsprachige telefonische Beratung möglich. Für Notfälle und Nachtbehandlung bitte telefonisch nachfragen."
       },
       "small_animals": true,
       "url": "https://amc-motoazabu.com/english.php",
@@ -669,7 +684,8 @@
         "fi": "Englantia puhuva eläinlääkäriklinikka; kysy aukioloajat soittamalla.",
         "nb": "Engelsktalende dyreklinikk; ring for åpningstider.",
         "sl": "Veterinarska ambulanta z angleško govorečim osebjem; za delovni čas pokličite.",
-        "hr": "Veterinarska klinika s osobljem koje govori engleski; za radno vrijeme nazovi."
+        "hr": "Veterinarska klinika s osobljem koje govori engleski; za radno vrijeme nazovi.",
+        "de": "Englischsprachige Tierarztpraxis; Öffnungszeiten bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://petlife.co.jp/en/",
@@ -699,7 +715,8 @@
         "fi": "Koirat ja kissat, ajanvarauksella; englantia puhuva eläinlääkäri ja hoitaja. Noin 10.00–13.00 ja 16.00–19.00, suljettu torstaisin – varmista puhelimitse.",
         "nb": "Hunder og katter, etter timeavtale; engelsktalende dyrlege og dyrepleier. Omtrent 10.00–13.00 og 16.00–19.00, stengt torsdager – bekreft på telefon.",
         "sl": "Psi in mačke, po naročilu; veterinar in medicinska sestra govorita angleško. Približno 10–13 in 16–19, ob četrtkih zaprto – potrdite po telefonu.",
-        "hr": "Psi i mačke, uz termin; veterinar i veterinarski tehničar govore engleski. Otprilike 10:00–13:00 i 16:00–19:00, četvrtkom zatvoreno – potvrdi telefonom."
+        "hr": "Psi i mačke, uz termin; veterinar i veterinarski tehničar govore engleski. Otprilike 10:00–13:00 i 16:00–19:00, četvrtkom zatvoreno – potvrdi telefonom.",
+        "de": "Hunde und Katzen, nur nach Terminvereinbarung; englischsprachige Tierärztin bzw. englischsprachiger Tierarzt sowie englischsprachige Praxisassistenz. Etwa 10.00–13.00 und 16.00–19.00 Uhr, donnerstags geschlossen – bitte telefonisch bestätigen."
       },
       "small_animals": true,
       "url": "https://www.mitsubachi-ah.com/",
@@ -729,7 +746,8 @@
         "fi": "Vain ajanvarauksella (puhelimitse tai verkossa). Ei ole päivystyssairaala; yöpäivystystapaukset ohjataan yöpäivystyssairaalaan.",
         "nb": "Kun timebestilling (telefon eller nett). Ikke et akuttsykehus; henviser nattlige nødtilfeller til et dyresykehus med nattåpent akuttmottak.",
         "sl": "Samo po naročilu (po telefonu ali na spletu). Ni nujna bolnišnica; nočne nujne primere napoti v nočno nujno bolnišnico.",
-        "hr": "Samo uz termin (telefonom ili mrežno). Nije hitna bolnica; noćne hitne slučajeve upućuje u noćnu hitnu bolnicu."
+        "hr": "Samo uz termin (telefonom ili mrežno). Nije hitna bolnica; noćne hitne slučajeve upućuje u noćnu hitnu bolnicu.",
+        "de": "Nur nach Terminvereinbarung (telefonisch oder online). Kein Notdienst; Nachtnotfälle werden an einen Nachtnotdienst verwiesen."
       },
       "small_animals": true,
       "url": "https://crown-ah.tokyo/",
@@ -759,7 +777,8 @@
         "fi": "10.00–13.00 ja 14.30–18.30; keskiviikkoisin iltapäivisin ja uutenavuotena suljettu. Hammas- ja ihosairaudet; päivystystapaukset Japan Animal Medical Centeriin (+81 3-3378-3366).",
         "nb": "kl. 10.00–13.00 og 14.30–18.30; stengt onsdag ettermiddag og nyttår. Tannbehandling og hudsykdommer; nødtilfeller henvises til Japan Animal Medical Center (+81 3-3378-3366).",
         "sl": "10–13 in 14.30–18.30; ob sredah popoldne in ob novem letu zaprto. Zobozdravstvo in dermatologija; nujne primere napoti v Japan Animal Medical Center (+81 3-3378-3366).",
-        "hr": "10:00–13:00 i 14:30–18:30; srijedom poslijepodne i na Novu godinu zatvoreno. Stomatologija i dermatologija; hitni slučajevi upućuju se u „Japan Animal Medical Center“ (+81 3-3378-3366)."
+        "hr": "10:00–13:00 i 14:30–18:30; srijedom poslijepodne i na Novu godinu zatvoreno. Stomatologija i dermatologija; hitni slučajevi upućuju se u „Japan Animal Medical Center“ (+81 3-3378-3366).",
+        "de": "10.00–13.00 und 14.30–18.30 Uhr; mittwochnachmittags und zum Jahreswechsel geschlossen. Zahnmedizin und Dermatologie; Notfälle an das Japan Animal Medical Center (+81 3-3378-3366)."
       },
       "small_animals": true,
       "url": "https://azabu.jamc.co.jp/about/",
@@ -789,7 +808,8 @@
         "fi": "Vain yöpäivystys, ei 24 h: 21.00–4.30 arkisin ja pyhinä, puhelinvastaanotto 20.00–4.00, suljettu lauantaisin. Pääasiassa koirat ja kissat. Soita ennen tuloa; ei pelkkiä puhelinkonsultaatioita; maksu vain luottokortilla.",
         "nb": "Kun akutt natthjelp, ikke døgnåpent: 21.00–04.30 på hverdager og offentlige helligdager, telefonmottak 20.00–04.00, stengt lørdager. Hovedsakelig hunder og katter. Ring før du kommer; ingen konsultasjon kun på telefon; kun betaling med betalingskort.",
         "sl": "Samo nočna nujna pomoč, ne 24 ur na dan: 21–4.30 ob delavnikih in praznikih, telefonski sprejem 20–4, ob sobotah zaprto. Pretežno psi in mačke. Pred prihodom pokličite; svetovanje samo po telefonu ni mogoče; plačilo samo s kreditno kartico.",
-        "hr": "Samo noćna hitna služba, ne radi 24 sata: 21:00–04:30 radnim danom i blagdanima, telefonski prijem 20:00–04:00, subotom zatvoreno. Uglavnom psi i mačke. Nazovi prije dolaska; nema savjetovanja samo telefonom; plaćanje samo kreditnom karticom."
+        "hr": "Samo noćna hitna služba, ne radi 24 sata: 21:00–04:30 radnim danom i blagdanima, telefonski prijem 20:00–04:00, subotom zatvoreno. Uglavnom psi i mačke. Nazovi prije dolaska; nema savjetovanja samo telefonom; plaćanje samo kreditnom karticom.",
+        "de": "Nur nächtlicher Notdienst, nicht rund um die Uhr: 21.00–4.30 Uhr werktags und an Feiertagen, telefonische Annahme 20.00–4.00 Uhr, samstags geschlossen. Überwiegend Hunde und Katzen. Bitte vorher anrufen; keine reine Telefonberatung; nur Kreditkartenzahlung."
       },
       "small_animals": true,
       "url": "https://www.raema.or.jp/",
@@ -819,7 +839,8 @@
         "fi": "Vain yöpäivystys, ei 24 h: 21.00–5.00 joka päivä vuoden ympäri; vastaanotto 4.30 asti. Soita ensin ja kerro oireet sekä arvioitu saapumisaika. Koirat ja kissat; muista eläimistä kysy erikseen.",
         "nb": "Kun akutt natthjelp, ikke døgnåpent: 21.00 til 05.00 alle dager hele året; mottak til 04.30. Ring først med symptomer og forventet ankomsttid. Hunder og katter; spør om andre dyr.",
         "sl": "Samo nočna nujna pomoč, ne 24 ur na dan: 21–5 vsak dan v letu; sprejem do 4.30. Najprej pokličite in navedite simptome ter predviden čas prihoda. Psi in mačke; za druge živali vprašajte.",
-        "hr": "Samo noćna hitna služba, ne radi 24 sata: 21:00–05:00 svaki dan u godini; prijem do 04:30. Prvo nazovi i navedi simptome i očekivano vrijeme dolaska. Psi i mačke; za druge životinje raspitaj se."
+        "hr": "Samo noćna hitna služba, ne radi 24 sata: 21:00–05:00 svaki dan u godini; prijem do 04:30. Prvo nazovi i navedi simptome i očekivano vrijeme dolaska. Psi i mačke; za druge životinje raspitaj se.",
+        "de": "Nur nächtlicher Notdienst, nicht rund um die Uhr: 21.00–5.00 Uhr an allen Tagen des Jahres; Annahme bis 4.30 Uhr. Bitte zuerst mit Symptomen und voraussichtlicher Ankunftszeit anrufen. Hunde und Katzen; andere Tiere bitte erfragen."
       },
       "small_animals": true,
       "url": "https://doubutsuyakan.jp/",
@@ -849,7 +870,8 @@
         "fi": "Vain yöpäivystys, ei 24 h: 20.00–3.00 (viimeinen vastaanotto 3.00), auki joka päivä. Soita ensin, jos olet epävarma. Koirat ja kissat.",
         "nb": "Kun akutt natthjelp, ikke døgnåpent: 20.00 til 03.00 (siste mottak 03.00), åpent alle dager. Ring først hvis du er usikker. Hunder og katter.",
         "sl": "Samo nočna nujna pomoč, ne 24 ur na dan: 20–3 (zadnji sprejem ob 3), odprto vsak dan. Če ste negotovi, najprej pokličite. Psi in mačke.",
-        "hr": "Samo noćna hitna služba, ne radi 24 sata: 20:00–03:00 (zadnji prijem 03:00), svaki dan. U nedoumici prvo nazovi. Psi i mačke."
+        "hr": "Samo noćna hitna služba, ne radi 24 sata: 20:00–03:00 (zadnji prijem 03:00), svaki dan. U nedoumici prvo nazovi. Psi i mačke.",
+        "de": "Nur nächtlicher Notdienst, nicht rund um die Uhr: 20.00–3.00 Uhr (letzte Annahme 3.00 Uhr), täglich geöffnet. Im Zweifel vorher anrufen. Hunde und Katzen."
       },
       "small_animals": true,
       "url": "https://osaka-pet911.com/",
@@ -879,7 +901,8 @@
         "fi": "Vain yöpäivystys, ei 24 h: 21.00 – seuraavaan aamuun klo 6.00, joka päivä vuoden ympäri. Soita ennen tuloa. Koirat ja kissat; muut eläimet vasta puhelinvahvistuksen jälkeen.",
         "nb": "Kun akutt natthjelp, ikke døgnåpent: 21.00 til 06.00 neste morgen, alle dager hele året. Ring før du kommer. Hunder og katter; andre dyr kun etter telefonbekreftelse.",
         "sl": "Samo nočna nujna pomoč, ne 24 ur na dan: 21–6 naslednje jutro, vsak dan v letu. Pred prihodom pokličite. Psi in mačke; drugi ljubljenčki šele po telefonski potrditvi.",
-        "hr": "Samo noćna hitna služba, ne radi 24 sata: 21:00–06:00 sljedećeg jutra, svaki dan u godini. Nazovi prije dolaska. Psi i mačke; druge životinje tek nakon telefonske potvrde."
+        "hr": "Samo noćna hitna služba, ne radi 24 sata: 21:00–06:00 sljedećeg jutra, svaki dan u godini. Nazovi prije dolaska. Psi i mačke; druge životinje tek nakon telefonske potvrde.",
+        "de": "Nur nächtlicher Notdienst, nicht rund um die Uhr: 21.00 bis 6.00 Uhr am Folgemorgen, an allen Tagen des Jahres. Bitte vorher anrufen. Hunde und Katzen; andere Tiere nur nach telefonischer Bestätigung."
       },
       "small_animals": true,
       "url": "https://heah.jp/",
@@ -907,7 +930,8 @@
         "fi": "Yöklinikka, ei 24 h: 19.00–24.00. Päivystys ja yleiset yökonsultaatiot. Varmista aukioloajat soittamalla etukäteen.",
         "nb": "Nattklinikk, ikke døgnåpen: 19.00 til 24.00. Akuttbehandling og alminnelige nattkonsultasjoner. Ring på forhånd for å bekrefte.",
         "sl": "Nočna ambulanta, ne 24 ur na dan: 19–24. Nujni in splošni nočni pregledi. Za potrditev vnaprej pokličite.",
-        "hr": "Noćna klinika, ne radi 24 sata: 19:00–24:00. Hitni i opći noćni pregledi. Nazovi unaprijed radi potvrde."
+        "hr": "Noćna klinika, ne radi 24 sata: 19:00–24:00. Hitni i opći noćni pregledi. Nazovi unaprijed radi potvrde.",
+        "de": "Nachtklinik, nicht rund um die Uhr: 19.00–24.00 Uhr. Notfälle und allgemeine Nachtsprechstunde. Bitte vorher zur Bestätigung anrufen."
       },
       "small_animals": true,
       "url": "https://osaka-moriguchi-yakan-ah.jp/",
@@ -937,7 +961,8 @@
         "fi": "Vain yöpäivystys, ei 24 h: vastaanotto 21.00–2.00, puhelinkyselyt 20.30–1.30. Suljettu torstaisin; voi sulkeutua yllättäen. Soita ennen tuloa – ilman puhelua potilaita ei voida ottaa vastaan.",
         "nb": "Kun akutt natthjelp, ikke døgnåpent: mottak 21.00 til 02.00, telefonhenvendelser 20.30 til 01.30. Stengt torsdager; kan stenge med kort varsel. Ring før du kommer – pasienter som ikke har ringt, kan ikke tas imot.",
         "sl": "Samo nočna nujna pomoč, ne 24 ur na dan: sprejem 21–2, telefonske poizvedbe 20.30–1.30. Ob četrtkih zaprto; lahko zaprejo tudi brez vnaprejšnjega obvestila. Pred prihodom pokličite – pacientov brez klica ne sprejmejo.",
-        "hr": "Samo noćna hitna služba, ne radi 24 sata: prijem 21:00–02:00, telefonski upiti 20:30–01:30. Četvrtkom zatvoreno; može se zatvoriti bez najave. Nazovi prije dolaska – bez poziva se pacijenti ne primaju."
+        "hr": "Samo noćna hitna služba, ne radi 24 sata: prijem 21:00–02:00, telefonski upiti 20:30–01:30. Četvrtkom zatvoreno; može se zatvoriti bez najave. Nazovi prije dolaska – bez poziva se pacijenti ne primaju.",
+        "de": "Nur nächtlicher Notdienst, nicht rund um die Uhr: Annahme 21.00–2.00 Uhr, telefonische Auskunft 20.30–1.30 Uhr. Donnerstags geschlossen; kann kurzfristig schließen. Bitte vorher anrufen – Patienten ohne Anruf können nicht angenommen werden."
       },
       "small_animals": true,
       "url": "https://ah.aeonpet.com/sakai-yakan-emergency/",
@@ -967,7 +992,8 @@
         "fi": "Normaali aukioloaika 10.00–13.00 ja 16.00–19.00 (viimeinen vastaanotto 18.40). Yöpäivystyksen hoitaa Sakai Animal Night Emergency Clinic 21.00–2.00 – ei 24 h; soita ennen tuloa.",
         "nb": "Ordinær åpningstid kl. 10.00–13.00 og 16.00–19.00 (siste mottak kl. 18.40). Nattlige nødtilfeller tas hånd om av Sakai Animal Night Emergency Clinic, kl. 21.00–02.00 – ikke døgnåpent; ring før du kommer.",
         "sl": "Redni delovni čas 10–13 in 16–19 (zadnji sprejem ob 18.40). Nočne nujne primere obravnava Sakai Animal Night Emergency Clinic, 21–2 – ne 24 ur na dan; pred prihodom pokličite.",
-        "hr": "Redovno radno vrijeme 10:00–13:00 i 16:00–19:00 (zadnji prijem 18:40). Noćne hitne slučajeve preuzima „Sakai Animal Night Emergency Clinic“, 21:00–02:00 – ne radi 24 sata; nazovi prije dolaska."
+        "hr": "Redovno radno vrijeme 10:00–13:00 i 16:00–19:00 (zadnji prijem 18:40). Noćne hitne slučajeve preuzima „Sakai Animal Night Emergency Clinic“, 21:00–02:00 – ne radi 24 sata; nazovi prije dolaska.",
+        "de": "Regulär 10.00–13.00 und 16.00–19.00 Uhr (letzte Annahme 18.40 Uhr). Nachtnotfälle übernimmt die Sakai Animal Night Emergency Clinic, 21.00–2.00 Uhr – nicht rund um die Uhr; bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/daktari/",
@@ -997,7 +1023,8 @@
         "fi": "Auki 9.00–12.00 ja 16.00–19.00, suljettu tiistaisin (sunnuntaisin 10.00–13.00). Rajoitettu iltapäivystys 21.00–23.00 koirille ja kissoille vain tiettyinä päivinä; soita etukäteen. Ei 24 h.",
         "nb": "Åpent 9.00–12.00 og 16.00–19.00, stengt tirsdager (søndager 10.00–13.00). Begrenset akuttilbud om kvelden 21.00–23.00 for hunder og katter, kun på faste dager; ring på forhånd. Ikke døgnåpent.",
         "sl": "Odprto 9–12 in 16–19, ob torkih zaprto (ob nedeljah 10–13). Omejena večerna nujna pomoč 21–23 za pse in mačke samo ob določenih dneh; vnaprej pokličite. Ne 24 ur na dan.",
-        "hr": "Otvoreno 9:00–12:00 i 16:00–19:00, utorkom zatvoreno (nedjeljom 10:00–13:00). Ograničena večernja hitna služba 21:00–23:00 za pse i mačke samo određenim danima; nazovi unaprijed. Ne radi 24 sata."
+        "hr": "Otvoreno 9:00–12:00 i 16:00–19:00, utorkom zatvoreno (nedjeljom 10:00–13:00). Ograničena večernja hitna služba 21:00–23:00 za pse i mačke samo određenim danima; nazovi unaprijed. Ne radi 24 sata.",
+        "de": "9.00–12.00 und 16.00–19.00 Uhr geöffnet, dienstags geschlossen (sonntags 10.00–13.00 Uhr). Eingeschränkter abendlicher Notdienst 21.00–23.00 Uhr für Hunde und Katzen nur an bestimmten Tagen; bitte vorher anrufen. Nicht rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://www.higashi-ah.jp/",
@@ -1026,7 +1053,8 @@
         "fi": "Yliopiston opetussairaala. Päivähoito vain ajanvarauksella, arkisin 9.00–12.00 ja 13.00–17.00 (suljettu viikonloppuisin, pyhinä ja vuodenvaihteessa). Yöpäivystystä hoidetaan yhdessä Rinku Animal Emergency Medical Associationin kanssa – katso sen oma merkintä.",
         "nb": "Undervisningssykehus. Dagbehandling kun etter timebestilling, hverdager 9.00–12.00 og 13.00–17.00 (stengt i helger, på helligdager og over årsskiftet). Nattlig akuttbehandling drives sammen med Rinku Animal Emergency Medical Association – se egen oppføring.",
         "sl": "Univerzitetna učna bolnišnica. Dnevna oskrba samo po naročilu, ob delavnikih 9–12 in 13–17 (ob koncih tedna, praznikih in ob koncu leta zaprto). Nočno nujno pomoč izvaja skupaj z Rinku Animal Emergency Medical Association – glejte ustrezni vnos.",
-        "hr": "Sveučilišna nastavna bolnica. Dnevna skrb samo uz termin, radnim danom 9:00–12:00 i 13:00–17:00 (vikendom, blagdanima i na kraju godine zatvoreno). Noćnu hitnu skrb provodi zajedno s „Rinku Animal Emergency Medical Association“ – vidi taj zapis."
+        "hr": "Sveučilišna nastavna bolnica. Dnevna skrb samo uz termin, radnim danom 9:00–12:00 i 13:00–17:00 (vikendom, blagdanima i na kraju godine zatvoreno). Noćnu hitnu skrb provodi zajedno s „Rinku Animal Emergency Medical Association“ – vidi taj zapis.",
+        "de": "Universitäre Lehrklinik. Tagsüber nur nach Terminvereinbarung, werktags 9.00–12.00 und 13.00–17.00 Uhr (am Wochenende, feiertags und zum Jahreswechsel geschlossen). Der Nachtnotdienst wird gemeinsam mit der Rinku Animal Emergency Medical Association betrieben – siehe den dortigen Eintrag."
       },
       "small_animals": true,
       "url": "https://www.omu.ac.jp/vet/vmc/",
@@ -1055,7 +1083,8 @@
         "fi": "Pieneläinklinikoiden vuorolista, joka antaa yöllistä ensihoitoa koirille ja kissoille 20.00–23.00 (puhelinvaraus 22.30 asti). Selvitä päivystävä klinikka soittamalla yhdistykseen; ajanvaraus pakollinen; vain perushoito, ei leikkauksia eikä vuodeosastohoitoa.",
         "nb": "Vaktordning for smådyrklinikker som gir førstelinjebehandling om natten for hunder og katter, kl. 20.00–23.00 (telefonbestilling til kl. 22.30). Ring foreningen for å få vite hvilken klinikk som har vakt; timebestilling kreves; kun grunnleggende behandling, ingen kirurgi eller innleggelse.",
         "sl": "Dežurni krog ambulant za male živali, ki nudijo prvo nočno oskrbo za pse in mačke, 20–23 (telefonsko naročanje do 22.30). Pokličite združenje, da izveste, katera ambulanta dežura; naročanje je obvezno; samo osnovna oskrba, brez operacij in hospitalizacije.",
-        "hr": "Izmjenično dežurstvo malih veterinarskih ambulanti koje pružaju prvu noćnu skrb za pse i mačke, 20:00–23:00 (telefonska rezervacija do 22:30). Nazovi udrugu da saznaš koja je ambulanta dežurna; rezervacija je obvezna; samo osnovna skrb, bez operacija i hospitalizacije."
+        "hr": "Izmjenično dežurstvo malih veterinarskih ambulanti koje pružaju prvu noćnu skrb za pse i mačke, 20:00–23:00 (telefonska rezervacija do 22:30). Nazovi udrugu da saznaš koja je ambulanta dežurna; rezervacija je obvezna; samo osnovna skrb, bez operacija i hospitalizacije.",
+        "de": "Turnus kleiner Tierarztpraxen für die nächtliche Erstversorgung von Hunden und Katzen, 20.00–23.00 Uhr (telefonische Anmeldung bis 22.30 Uhr). Welche Praxis Dienst hat, erfahren Sie beim Verband; Anmeldung erforderlich; nur Basisversorgung, keine Operationen oder stationäre Aufnahme."
       },
       "small_animals": true,
       "url": "https://www.kochikenjuishikai.or.jp/article/archives/8",
@@ -1085,7 +1114,8 @@
         "fi": "Yöpäivystys 21.30–2.00 joka päivä vuoden ympäri. Soita ennen käyntiä.",
         "nb": "Akuttbehandling natt 21.30–02.00, alle dager hele året. Ring før du kommer.",
         "sl": "Nočna nujna pomoč 21.30–2, vsak dan v letu. Pred obiskom pokličite.",
-        "hr": "Noćna hitna skrb 21:30–02:00, svaki dan u godini. Nazovi prije dolaska."
+        "hr": "Noćna hitna skrb 21:30–02:00, svaki dan u godini. Nazovi prije dolaska.",
+        "de": "Nächtlicher Notdienst 21.30–2.00 Uhr an allen Tagen des Jahres. Bitte vor dem Besuch anrufen."
       },
       "small_animals": true,
       "url": "https://kyoto99.net/",
@@ -1115,7 +1145,8 @@
         "fi": "Yliopistosairaalan yöklinikka vain arkisin (ei viikonloppuisin, pyhinä eikä yliopiston sulkuaikoina): 19.00–6.00 samana päivänä puhelimitse sovitulla ajalla; vain koirat ja kissat; erillinen yösisäänkäynti.",
         "nb": "Nattklinikk ved universitetssykehus, kun hverdager (ikke helger, helligdager eller universitetets stengedager): 19.00–6.00 etter timebestilling på telefon samme dag; kun hunder og katter; egen nattinngang.",
         "sl": "Nočna ambulanta univerzitetne bolnišnice, samo ob delavnikih (ne ob koncih tedna, praznikih in univerzitetnih zaprtjih): 19–6 po naročilu isti dan po telefonu; samo psi in mačke; ločen nočni vhod.",
-        "hr": "Noćna klinika sveučilišne bolnice, samo radnim danom (ne vikendom, blagdanima ni kad je sveučilište zatvoreno): 19:00–06:00 uz telefonski termin istoga dana; samo psi i mačke; zaseban noćni ulaz."
+        "hr": "Noćna klinika sveučilišne bolnice, samo radnim danom (ne vikendom, blagdanima ni kad je sveučilište zatvoreno): 19:00–06:00 uz telefonski termin istoga dana; samo psi i mačke; zaseban noćni ulaz.",
+        "de": "Nachtklinik der Universitätsklinik, nur werktags (nicht am Wochenende, an Feiertagen oder bei Universitätsschließung): 19.00–6.00 Uhr nach telefonischer Terminvergabe am selben Tag; nur Hunde und Katzen; separater Nachteingang."
       },
       "small_animals": true,
       "url": "https://www.vet.kagoshima-u.ac.jp/KUVTH/",
@@ -1145,7 +1176,8 @@
         "fi": "Yliopistosairaala: arki-iltaisin 17.00–24.00 erillisellä linjalla; yöt, viikonloput ja pyhät hoitaa Anicom24-puhelinpalvelu. Vain koirat ja kissat; soita ennen tuloa; yömaksu; ei CT/MRI-kuvantamista.",
         "nb": "Universitetssykehus: hverdagskvelder 17.00–24.00 på egen linje; natt, helger og helligdager håndteres av telefontjenesten Anicom24. Kun hunder og katter; ring før du kommer; nattillegg gjelder; ingen CT/MR.",
         "sl": "Univerzitetna bolnišnica: ob delavniških večerih 17–24 na posebni liniji; ponoči, ob koncih tedna in praznikih deluje telefonska služba Anicom24. Samo psi in mačke; pred prihodom pokličite; ponoči velja doplačilo; brez CT/MRI.",
-        "hr": "Sveučilišna bolnica: radnim danom navečer 17:00–24:00 na posebnoj liniji; noću, vikendom i blagdanima javlja se telefonska služba „Anicom24“. Samo psi i mačke; nazovi prije dolaska; noću se naplaćuje doplata; nema CT-a ni MR-a."
+        "hr": "Sveučilišna bolnica: radnim danom navečer 17:00–24:00 na posebnoj liniji; noću, vikendom i blagdanima javlja se telefonska služba „Anicom24“. Samo psi i mačke; nazovi prije dolaska; noću se naplaćuje doplata; nema CT-a ni MR-a.",
+        "de": "Universitätsklinik: werktags abends 17.00–24.00 Uhr über eine eigene Nummer; nachts, am Wochenende und feiertags übernimmt der Telefondienst Anicom24. Nur Hunde und Katzen; bitte vorher anrufen; Nachtgebühr; kein CT/MRT."
       },
       "small_animals": true,
       "url": "https://www.vetmed.hokudai.ac.jp/VMTH/",
@@ -1175,7 +1207,8 @@
         "fi": "Yöpäivystysvastaanotto 20.00–8.00 joka päivä (soita ensin; vakuutuskorvaukset öisin vain Anicomin kautta). Normaali vastaanotto ajanvarauksella 9.00–13.00 ja 17.00–19.00.",
         "nb": "Mottak for akutt natthjelp 20.00–08.00 alle dager (ring først; forsikringskrav om natten kun via Anicom). Ordinære åpningstider etter timebestilling 9.00–13.00 og 17.00–19.00.",
         "sl": "Nočni nujni sprejem 20–8 vsak dan (najprej pokličite; nočni zahtevki za zavarovanje samo prek Anicom). Redni delovni čas po naročilu 9–13 in 17–19.",
-        "hr": "Noćni hitni prijem 20:00–08:00 svaki dan (prvo nazovi; osiguranje noću samo preko „Anicoma“). Redovno radno vrijeme uz termin 9:00–13:00 i 17:00–19:00."
+        "hr": "Noćni hitni prijem 20:00–08:00 svaki dan (prvo nazovi; osiguranje noću samo preko „Anicoma“). Redovno radno vrijeme uz termin 9:00–13:00 i 17:00–19:00.",
+        "de": "Nachtnotfallannahme täglich 20.00–8.00 Uhr (bitte zuerst anrufen; Versicherungsabrechnung nachts nur über Anicom). Reguläre Sprechzeiten nach Termin 9.00–13.00 und 17.00–19.00 Uhr."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/makuharishin/",
@@ -1205,7 +1238,8 @@
         "fi": "Päivystysvastaanotto 21.00–24.00 ja 5.00–9.00 (yöpäivystyslinja 011-598-9936); normaali aukioloaika 10.00–13.00 ja 17.00–20.00. Soita ennen tuloa.",
         "nb": "Akuttmottak kl. 21.00–24.00 og 5.00–9.00 (nattakuttelefon 011-598-9936); ordinær åpningstid kl. 10.00–13.00 og 17.00–20.00. Ring før du kommer.",
         "sl": "Nujni sprejem 21–24 in 5–9 (nočna nujna številka 011-598-9936); redni delovni čas 10–13 in 17–20. Pred prihodom pokličite.",
-        "hr": "Hitni prijem 21:00–24:00 i 05:00–09:00 (noćna hitna linija 011-598-9936); redovno radno vrijeme 10:00–13:00 i 17:00–20:00. Nazovi prije dolaska."
+        "hr": "Hitni prijem 21:00–24:00 i 05:00–09:00 (noćna hitna linija 011-598-9936); redovno radno vrijeme 10:00–13:00 i 17:00–20:00. Nazovi prije dolaska.",
+        "de": "Notfallannahme 21.00–24.00 und 5.00–9.00 Uhr (Nachtnotfalltelefon 011-598-9936); reguläre Sprechzeiten 10.00–13.00 und 17.00–20.00 Uhr. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/sapporotsukisamu/",
@@ -1235,7 +1269,8 @@
         "fi": "Yöpäivystysvastaanotto 21.00–8.00 (päivystyslinja 042-757-3166); normaali vastaanotto ajanvarauksella 9.00–13.00 ja 16.00–19.00. Soita ennen tuloa.",
         "nb": "Mottak for akutt natthjelp 21.00–08.00 (akuttelefon 042-757-3166); ordinære åpningstider 9.00–13.00 og 16.00–19.00 etter timebestilling. Ring før du kommer.",
         "sl": "Nočni nujni sprejem 21–8 (nujna številka 042-757-3166); redni delovni čas 9–13 in 16–19 po naročilu. Pred prihodom pokličite.",
-        "hr": "Noćni hitni prijem 21:00–08:00 (hitna linija 042-757-3166); redovno radno vrijeme 9:00–13:00 i 16:00–19:00 uz termin. Nazovi prije dolaska."
+        "hr": "Noćni hitni prijem 21:00–08:00 (hitna linija 042-757-3166); redovno radno vrijeme 9:00–13:00 i 16:00–19:00 uz termin. Nazovi prije dolaska.",
+        "de": "Nächtliche Notfallannahme 21.00–8.00 Uhr (Notfalltelefon 042-757-3166); reguläre Sprechzeiten nach Termin 9.00–13.00 und 16.00–19.00 Uhr. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/sagamihara/",
@@ -1265,7 +1300,8 @@
         "fi": "Normaali aukioloaika 9.30–12.00, 13.00–15.00 (ajanvarauksella) ja 16.00–20.00; vuodeosaston hoito 24 h. Yöpäivystyksen tiedot ovat erillisellä sivulla – soita ensin.",
         "nb": "Ordinær åpningstid kl. 9.30–12.00, 13.00–15.00 (etter timebestilling) og 16.00–20.00; sykepleie for innlagte hele døgnet. Opplysninger om nattlige nødtilfeller står på en egen side – ring først.",
         "sl": "Redni delovni čas 9.30–12, 13–15 (po naročilu) in 16–20; 24-urna bolniška nega. Podrobnosti o nočni nujni pomoči so na ločeni strani – najprej pokličite.",
-        "hr": "Redovno radno vrijeme 9:30–12:00, 13:00–15:00 (uz termin) i 16:00–20:00; bolnička njega 24 sata. Pojedinosti o noćnoj hitnoj službi nalaze se na zasebnoj stranici – prvo nazovi."
+        "hr": "Redovno radno vrijeme 9:30–12:00, 13:00–15:00 (uz termin) i 16:00–20:00; bolnička njega 24 sata. Pojedinosti o noćnoj hitnoj službi nalaze se na zasebnoj stranici – prvo nazovi.",
+        "de": "Reguläre Sprechzeiten 9.30–12.00, 13.00–15.00 Uhr (nach Termin) und 16.00–20.00 Uhr; stationäre Pflege rund um die Uhr. Angaben zum Nachtnotdienst stehen auf einer eigenen Seite – bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://mc.aeonpet.com/nagoya/",
@@ -1295,7 +1331,8 @@
         "fi": "Päivystysvastaanotto 9.00–1.00 joka päivä vuoden ympäri, vuodepotilaille tehohoito 24 h. Soita ennen tuloa.",
         "nb": "Akuttmottak kl. 9.00–1.00 alle dager i året, med intensivavdeling hele døgnet for innlagte pasienter. Ring før du kommer.",
         "sl": "Nujni sprejem 9–1 vsak dan v letu, z 24-urno intenzivno oskrbo hospitaliziranih. Pred prihodom pokličite.",
-        "hr": "Hitni prijem 09:00–01:00 svaki dan u godini, uz 24-satnu intenzivnu njegu hospitaliziranih pacijenata. Nazovi prije dolaska."
+        "hr": "Hitni prijem 09:00–01:00 svaki dan u godini, uz 24-satnu intenzivnu njegu hospitaliziranih pacijenata. Nazovi prije dolaska.",
+        "de": "Notfallannahme täglich 9.00–1.00 Uhr an allen Tagen des Jahres, mit Intensivstation rund um die Uhr für stationäre Patienten. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://vsec.jp/",
@@ -1325,7 +1362,8 @@
         "fi": "Yöpäivystys 19.30–2.00 joka päivä (puhelinvastaanotto 19.00–1.30). Soita ennen tuloa.",
         "nb": "Akutt natthjelp 19.30–02.00 alle dager (telefonmottak 19.00–01.30). Ring før du kommer.",
         "sl": "Nočna nujna pomoč 19.30–2 vsak dan (telefonski sprejem 19–1.30). Pred prihodom pokličite.",
-        "hr": "Noćna hitna služba 19:30–02:00 svaki dan (telefonski prijem 19:00–01:30). Nazovi prije dolaska."
+        "hr": "Noćna hitna služba 19:30–02:00 svaki dan (telefonski prijem 19:00–01:30). Nazovi prije dolaska.",
+        "de": "Nachtnotdienst 19.30–2.00 Uhr täglich (telefonische Annahme 19.00–1.30 Uhr). Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://kuki-er-ah.com/",
@@ -1355,7 +1393,8 @@
         "fi": "Päiväsairaala 9.00–12.00 ja 15.00–18.00, suljettu torstaisin (vain jatkuvassa hoidossa olevat potilaat). Kiireelliset tapaukset otetaan vastaan pyynnöstä aukioloaikoina; yöpäivystystapaukset ohjataan AEON Petemo Makuhari Shin-toshiniin.",
         "nb": "Dagsykehus 9.00–12.00 og 15.00–18.00, stengt torsdager (kun faste pasienter). Akutte tilfeller tas imot på forespørsel i åpningstiden; nødtilfeller om natten henvises til AEON Petemo Makuhari Shin-toshin.",
         "sl": "Dnevna bolnišnica 9–12 in 15–18, ob četrtkih zaprto (samo stalni pacienti). Nujne primere med delovnim časom sprejmejo na zahtevo; nočne nujne primere napotijo v AEON Petemo Makuhari Shin-toshin.",
-        "hr": "Dnevna bolnica 9:00–12:00 i 15:00–18:00, četvrtkom zatvoreno (samo stalni pacijenti). Hitni slučajevi primaju se na zahtjev tijekom radnog vremena; noćne hitne slučajeve upućuju u „AEON Petemo Makuhari Shin-toshin“."
+        "hr": "Dnevna bolnica 9:00–12:00 i 15:00–18:00, četvrtkom zatvoreno (samo stalni pacijenti). Hitni slučajevi primaju se na zahtjev tijekom radnog vremena; noćne hitne slučajeve upućuju u „AEON Petemo Makuhari Shin-toshin“.",
+        "de": "Tagesklinik 9.00–12.00 und 15.00–18.00 Uhr, donnerstags geschlossen (nur Bestandspatienten). Dringende Fälle werden während der Öffnungszeiten auf Anfrage behandelt; Nachtnotfälle werden an AEON Petemo Makuhari Shin-toshin verwiesen."
       },
       "small_animals": true,
       "url": "https://kaihin-amc.com/",
@@ -1389,7 +1428,8 @@
         "fi": "Päiväklinikka 9.00–12.00 ja 13.30–18.00; suljettu keskiviikkoisin, sunnuntaisin ja pyhinä. Uusia potilaita ei tällä hetkellä oteta vastaan.",
         "nb": "Dagklinikk 9.00–12.00 og 13.30–18.00; stengt onsdag, søndag og helligdager. Tar for tiden ikke imot nye pasienter.",
         "sl": "Dnevna ambulanta 9–12 in 13.30–18; ob sredah, nedeljah in praznikih zaprto. Novih pacientov trenutno ne sprejemajo.",
-        "hr": "Dnevna klinika 9:00–12:00 i 13:30–18:00; srijedom, nedjeljom i blagdanima zatvoreno. Novi pacijenti trenutačno se ne primaju."
+        "hr": "Dnevna klinika 9:00–12:00 i 13:30–18:00; srijedom, nedjeljom i blagdanima zatvoreno. Novi pacijenti trenutačno se ne primaju.",
+        "de": "Tagesklinik 9.00–12.00 und 13.30–18.00 Uhr; mittwochs, sonntags und feiertags geschlossen. Derzeit keine Neupatienten."
       }
     },
     {
@@ -1414,7 +1454,8 @@
         "fi": "Päivystyskeskus auki 24 h joka päivä vuoden ympäri (pääasiassa koirat ja kissat). Soita ennen tuloa.",
         "nb": "Akuttsenter åpent hele døgnet, alle dager i året (hovedsakelig hunder og katter). Ring før du kommer.",
         "sl": "Center za nujno pomoč, odprt 24 ur na dan, vsak dan v letu (pretežno psi in mačke). Pred prihodom pokličite.",
-        "hr": "Hitni centar otvoren 24 sata, svaki dan u godini (uglavnom psi i mačke). Nazovi prije dolaska."
+        "hr": "Hitni centar otvoren 24 sata, svaki dan u godini (uglavnom psi i mačke). Nazovi prije dolaska.",
+        "de": "Notfallzentrum rund um die Uhr, an allen Tagen des Jahres geöffnet (überwiegend Hunde und Katzen). Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://veccs-yokohama.jp/",
@@ -1444,7 +1485,8 @@
         "fi": "Päivystys ja täysi hoito 24 h, 365 päivää vuodessa. Sairaalan linja muihin kuin päivystysasioihin 044-433-5155.",
         "nb": "Akuttbehandling og full pleie hele døgnet, 365 dager i året. Sykehustelefon for ikke-akutte henvendelser 044-433-5155.",
         "sl": "Nujna pomoč in celovita zdravstvena nega 24 ur na dan, 365 dni v letu. Številka bolnišnice za nenujne primere 044-433-5155.",
-        "hr": "Hitna skrb i potpuna njega 24 sata, 365 dana u godini. Linija bolnice za nehitne slučajeve 044-433-5155."
+        "hr": "Hitna skrb i potpuna njega 24 sata, 365 dana u godini. Linija bolnice za nehitne slučajeve 044-433-5155.",
+        "de": "Notfallversorgung und volle stationäre Pflege rund um die Uhr, 365 Tage im Jahr. Nummer der Klinik für Nicht-Notfälle: 044-433-5155."
       },
       "small_animals": true,
       "url": "https://amc-japan.com/",
@@ -1474,7 +1516,8 @@
         "fi": "Yöpäivystyskeskus 20.00–3.00. Soita ennen tuloa.",
         "nb": "Nattlig akuttsenter 20.00–03.00. Ring før du kommer.",
         "sl": "Nočni nujni center 20–3. Pred prihodom pokličite.",
-        "hr": "Noćni hitni centar 20:00–03:00. Nazovi prije dolaska."
+        "hr": "Noćni hitni centar 20:00–03:00. Nazovi prije dolaska.",
+        "de": "Nachtnotfallzentrum 20.00–3.00 Uhr. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://yokohama-dvms.com/",
@@ -1508,7 +1551,8 @@
         "fi": "Päivystys 24 h joka päivä vuoden ympäri. Soita ennen tuloa; ilman puhelua tulevia ei välttämättä oteta vastaan.",
         "nb": "Tilbyr akuttbehandling hele døgnet, alle dager i året. Ring før du kommer; besøk uten å ringe først kan bli avvist.",
         "sl": "Nudi nujno pomoč 24 ur na dan, vsak dan v letu. Pred prihodom pokličite; obiskov brez klica morda ne sprejmejo.",
-        "hr": "Pruža hitnu skrb 24 sata, svaki dan u godini. Nazovi prije dolaska; dolazak bez poziva možda neće biti prihvaćen."
+        "hr": "Pruža hitnu skrb 24 sata, svaki dan u godini. Nazovi prije dolaska; dolazak bez poziva možda neće biti prihvaćen.",
+        "de": "Notfallversorgung rund um die Uhr an allen Tagen des Jahres. Bitte vorher anrufen; Besuche ohne Anruf werden möglicherweise nicht angenommen."
       }
     },
     {
@@ -1533,7 +1577,8 @@
         "fi": "Yöpäivystys 20.00–9.00 joka päivä, ajanvarauksella – soita ensin.",
         "nb": "Akutt natthjelp 20.00–09.00 alle dager, etter timebestilling – ring først.",
         "sl": "Nočna nujna pomoč 20–9 vsak dan, po naročilu – najprej pokličite.",
-        "hr": "Noćna hitna služba 20:00–09:00 svaki dan, uz termin – prvo nazovi."
+        "hr": "Noćna hitna služba 20:00–09:00 svaki dan, uz termin – prvo nazovi.",
+        "de": "Nachtnotdienst täglich 20.00–9.00 Uhr, nur nach Anmeldung – bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://www.anicare.net/",
@@ -1563,7 +1608,8 @@
         "fi": "Yöpäivystys 20.00–5.00 joka päivä vuoden ympäri.",
         "nb": "Akutt natthjelp 20.00–05.00, alle dager hele året.",
         "sl": "Nočna nujna pomoč 20–5, vsak dan v letu.",
-        "hr": "Noćna hitna služba 20:00–05:00, svaki dan u godini."
+        "hr": "Noćna hitna služba 20:00–05:00, svaki dan u godini.",
+        "de": "Nachtnotdienst 20.00–5.00 Uhr an allen Tagen des Jahres."
       },
       "small_animals": true,
       "url": "https://pet99.net/",
@@ -1593,7 +1639,8 @@
         "fi": "Yöpäivystys arkisin 19.00–6.00; sunnuntaisin ja pyhinä 14.00–6.00; auki joka päivä vuoden ympäri.",
         "nb": "Akutt natthjelp på hverdager 19.00–06.00; søndager og helligdager 14.00–06.00; åpent alle dager hele året.",
         "sl": "Nočna nujna pomoč ob delavnikih 19–6; ob nedeljah in praznikih 14–6; odprto vsak dan v letu.",
-        "hr": "Noćna hitna služba radnim danom 19:00–06:00; nedjeljom i blagdanima 14:00–06:00; otvoreno svaki dan u godini."
+        "hr": "Noćna hitna služba radnim danom 19:00–06:00; nedjeljom i blagdanima 14:00–06:00; otvoreno svaki dan u godini.",
+        "de": "Nachtnotdienst werktags 19.00–6.00 Uhr; sonntags und feiertags 14.00–6.00 Uhr; an allen Tagen des Jahres geöffnet."
       },
       "small_animals": true,
       "url": "https://www.sapporo1299.net/",
@@ -1623,7 +1670,8 @@
         "fi": "Yöpäivystyskeskus ma–pe 20.00–2.00; puhelin ma–pe 9.00–2.00, la–su 9.00–19.00; vuodeosasto ja tehohoito 24 h.",
         "nb": "Nattlig dyreklinikk man–fre 20.00–02.00; telefon man–fre 9.00–02.00, lør–søn 9.00–19.00; døgnåpen innleggelse og intensivbehandling.",
         "sl": "Nočni medicinski center pon–pet 20–2; telefon pon–pet 9–2, sob–ned 9–19; 24-urna bolnišnična in intenzivna oskrba.",
-        "hr": "Noćni medicinski centar pon–pet 20:00–02:00; telefon pon–pet 9:00–02:00, sub–ned 9:00–19:00; bolnička i intenzivna njega 24 sata."
+        "hr": "Noćni medicinski centar pon–pet 20:00–02:00; telefon pon–pet 9:00–02:00, sub–ned 9:00–19:00; bolnička i intenzivna njega 24 sata.",
+        "de": "Nachtklinik Mo–Fr 20.00–2.00 Uhr; Telefon Mo–Fr 9.00–2.00 Uhr, Sa–So 9.00–19.00 Uhr; stationäre Aufnahme und Intensivpflege rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://anes-amc.com/",
@@ -1653,7 +1701,8 @@
         "fi": "Yöpäivystys 21.00–9.00 joka päivä vuoden ympäri. Soita ennen tuloa; ei pelkkiä puhelinkonsultaatioita.",
         "nb": "Akutt natthjelp 21.00–09.00, alle dager hele året. Ring før du kommer; ingen konsultasjoner kun på telefon.",
         "sl": "Nočna nujna pomoč 21–9, vsak dan v letu. Pred prihodom pokličite; svetovanje samo po telefonu ni mogoče.",
-        "hr": "Noćna hitna služba 21:00–09:00, svaki dan u godini. Nazovi prije dolaska; nema savjetovanja samo telefonom."
+        "hr": "Noćna hitna služba 21:00–09:00, svaki dan u godini. Nazovi prije dolaska; nema savjetovanja samo telefonom.",
+        "de": "Nachtnotdienst 21.00–9.00 Uhr an allen Tagen des Jahres. Bitte vorher anrufen; keine reine Telefonberatung."
       },
       "small_animals": true,
       "url": "https://www.kobe-naec.com/",
@@ -1687,7 +1736,8 @@
         "fi": "Hoitaa eläimiä ympäri vuorokauden, myös pyhinä, ja tarjoaa yöpäivystyksen. Soita ennen tuloa.",
         "nb": "Behandler dyr hele døgnet, også på helligdager, med akuttbehandling om natten. Ring før du kommer.",
         "sl": "Veterinarska oskrba 24 ur na dan, tudi ob praznikih, z nočno nujno pomočjo. Pred prihodom pokličite.",
-        "hr": "Liječi životinje 24 sata dnevno, uključujući blagdane, s noćnom hitnom skrbi. Nazovi prije dolaska."
+        "hr": "Liječi životinje 24 sata dnevno, uključujući blagdane, s noćnom hitnom skrbi. Nazovi prije dolaska.",
+        "de": "Behandlung rund um die Uhr, auch feiertags, mit nächtlichem Notdienst. Bitte vorher anrufen."
       }
     },
     {
@@ -1712,7 +1762,8 @@
         "fi": "Päivystys ympäri vuorokauden; päivystysajat arkisin 19.00–9.00, viikonloppuisin ja pyhinä 17.00–9.00, ympäri vuoden. Soita ennen tuloa.",
         "nb": "Akuttbehandling døgnet rundt; akuttåpningstid hverdager kl. 19.00–9.00, helger og helligdager kl. 17.00–9.00, hele året. Ring før du kommer.",
         "sl": "Nujna pomoč 24 ur na dan; čas nujne pomoči ob delavnikih 19–9, ob koncih tedna in praznikih 17–9, vse leto. Pred prihodom pokličite.",
-        "hr": "Hitna skrb u 24-satnom režimu; hitno radno vrijeme radnim danom 19:00–09:00, vikendom i blagdanima 17:00–09:00, cijele godine. Nazovi prije dolaska."
+        "hr": "Hitna skrb u 24-satnom režimu; hitno radno vrijeme radnim danom 19:00–09:00, vikendom i blagdanima 17:00–09:00, cijele godine. Nazovi prije dolaska.",
+        "de": "Notversorgung rund um die Uhr; Notdienstzeiten werktags 19.00–9.00 Uhr, am Wochenende und feiertags 17.00–9.00 Uhr, ganzjährig. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.chiba-ah.com/",
@@ -1742,7 +1793,8 @@
         "fi": "Yöpäivystys 21.00–5.00 joka päivä vuoden ympäri. Soita ennen tuloa.",
         "nb": "Akutt natthjelp 21.00–05.00, alle dager hele året. Ring før du kommer.",
         "sl": "Nočna nujna pomoč 21–5, vsak dan v letu. Pred prihodom pokličite.",
-        "hr": "Noćna hitna služba 21:00–05:00, svaki dan u godini. Nazovi prije dolaska."
+        "hr": "Noćna hitna služba 21:00–05:00, svaki dan u godini. Nazovi prije dolaska.",
+        "de": "Nachtnotdienst 21.00–5.00 Uhr an allen Tagen des Jahres. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.svet.jp/yakan/",
@@ -1772,7 +1824,8 @@
         "fi": "Päiväaika 8.30–12.00 ja 15.00–18.30, auki ympäri vuoden uutta vuotta lukuun ottamatta; yöpäivystys hoidetaan erillisen sivun kautta (klo 19.00 alkaen) – soita ensin.",
         "nb": "Åpningstid på dagtid 8.30–12.00 og 15.00–18.30, åpent hele året unntatt nyttår; akuttbehandling om natten håndteres via en egen side (fra 19.00) – ring først.",
         "sl": "Dnevni delovni čas 8.30–12 in 15–18.30, odprto vse leto razen ob novem letu; nočna nujna pomoč je opisana na ločeni strani (od 19. ure) – najprej pokličite.",
-        "hr": "Dnevno radno vrijeme 8:30–12:00 i 15:00–18:30, otvoreno cijele godine osim na Novu godinu; za noćnu hitnu skrb (od 19:00) vidi zasebnu stranicu – prvo nazovi."
+        "hr": "Dnevno radno vrijeme 8:30–12:00 i 15:00–18:30, otvoreno cijele godine osim na Novu godinu; za noćnu hitnu skrb (od 19:00) vidi zasebnu stranicu – prvo nazovi.",
+        "de": "Tagsüber 8.30–12.00 und 15.00–18.30 Uhr, ganzjährig geöffnet außer zum Jahreswechsel; der Nachtnotdienst (ab 19.00 Uhr) ist auf einer eigenen Seite beschrieben – bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://jpbvet.com/",
@@ -1802,7 +1855,8 @@
         "fi": "Yöpäivystys 20.00–3.00 (viimeinen vastaanotto 2.30); suljettu torstaisin ja perjantaisin; aukioloajat voivat muuttua eläinlääkäreiden saatavuuden mukaan – soita ensin.",
         "nb": "Akutt natthjelp 20.00–03.00 (siste mottak 02.30); stengt torsdag og fredag; åpningstidene kan endres avhengig av dyrlegetilgang – ring først.",
         "sl": "Nočna nujna pomoč 20–3 (zadnji sprejem ob 2.30); ob četrtkih in petkih zaprto; delovni čas se lahko spremeni glede na razpoložljivost veterinarjev – najprej pokličite.",
-        "hr": "Noćna hitna služba 20:00–03:00 (zadnji prijem 02:30); četvrtkom i petkom zatvoreno; radno vrijeme može se promijeniti ovisno o dostupnosti veterinara – prvo nazovi."
+        "hr": "Noćna hitna služba 20:00–03:00 (zadnji prijem 02:30); četvrtkom i petkom zatvoreno; radno vrijeme može se promijeniti ovisno o dostupnosti veterinara – prvo nazovi.",
+        "de": "Nachtnotdienst 20.00–3.00 Uhr (letzte Annahme 2.30 Uhr); donnerstags und freitags geschlossen; die Zeiten können sich je nach Verfügbarkeit der Tierärzte ändern – bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://naha-ah.com/night/",
@@ -1832,7 +1886,8 @@
         "fi": "Päivystys aukioloajan jälkeen 19.00–3.00 maanantaista perjantaihin; lauantaisin ja sunnuntaisin suljettu. Soita ennen käyntiä.",
         "nb": "Akuttvakt utenom åpningstid kl. 19.00–03.00, mandag til fredag; stengt lørdag og søndag. Ring før du kommer.",
         "sl": "Nujna pomoč zunaj delovnega časa 19–3, od ponedeljka do petka; ob sobotah in nedeljah zaprto. Pred obiskom pokličite.",
-        "hr": "Hitna služba izvan radnog vremena 19:00–03:00, pon–pet; subotom i nedjeljom zatvoreno. Nazovi prije dolaska."
+        "hr": "Hitna služba izvan radnog vremena 19:00–03:00, pon–pet; subotom i nedjeljom zatvoreno. Nazovi prije dolaska.",
+        "de": "Notdienst außerhalb der Sprechzeiten 19.00–3.00 Uhr, Montag bis Freitag; samstags und sonntags geschlossen. Bitte vor dem Besuch anrufen."
       },
       "small_animals": true,
       "url": "https://www.okinawa-yakan-ah.com/en/",
@@ -1862,7 +1917,8 @@
         "fi": "Yöpäivystys 21.00–2.00; suljettu maanantaisin. Soita ennen tuloa.",
         "nb": "Akutt natthjelp 21.00–02.00; stengt mandager. Ring før du kommer.",
         "sl": "Nočna nujna pomoč 21–2; ob ponedeljkih zaprto. Pred prihodom pokličite.",
-        "hr": "Noćna hitna služba 21:00–02:00; ponedjeljkom zatvoreno. Nazovi prije dolaska."
+        "hr": "Noćna hitna služba 21:00–02:00; ponedjeljkom zatvoreno. Nazovi prije dolaska.",
+        "de": "Nachtnotdienst 21.00–2.00 Uhr; montags geschlossen. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.shizujyu.com/publics/index/438/",
@@ -1896,7 +1952,8 @@
         "fi": "Hoitaa sairaita eläimiä ympäri vuorokauden: normaali aukioloaika 9.00–11.30 ja 17.00–19.00, päivystysvastaanotto 19.00–9.00 ja 11.30–17.00 (ti/to iltapäivisin vain päivystys). Soita ensin.",
         "nb": "Behandler syke dyr hele døgnet: ordinær åpningstid 9.00–11.30 og 17.00–19.00, akuttmottak 19.00–9.00 og 11.30–17.00 (kun nødtilfeller tir/tor ettermiddag). Ring først.",
         "sl": "Zdravi bolne živali 24 ur na dan: redni delovni čas 9–11.30 in 17–19, nujni sprejem 19–9 in 11.30–17 (ob torkih in četrtkih popoldne samo nujni primeri). Najprej pokličite.",
-        "hr": "Liječi bolesne životinje 24 sata dnevno: redovno radno vrijeme 9:00–11:30 i 17:00–19:00, hitni prijem 19:00–09:00 i 11:30–17:00 (utorkom i četvrtkom poslijepodne samo hitni slučajevi). Prvo nazovi."
+        "hr": "Liječi bolesne životinje 24 sata dnevno: redovno radno vrijeme 9:00–11:30 i 17:00–19:00, hitni prijem 19:00–09:00 i 11:30–17:00 (utorkom i četvrtkom poslijepodne samo hitni slučajevi). Prvo nazovi.",
+        "de": "Behandlung kranker Tiere rund um die Uhr: reguläre Sprechzeiten 9.00–11.30 und 17.00–19.00 Uhr, Notfallannahme 19.00–9.00 und 11.30–17.00 Uhr (dienstag- und donnerstagnachmittags nur Notfälle). Bitte zuerst anrufen."
       }
     },
     {
@@ -1924,7 +1981,8 @@
         "fi": "Yö- ja pyhäpäivystys sairastuneille eläimille; soita ennen käyntiä.",
         "nb": "Tilbyr akuttbehandling om natten og på helligdager for dyr som blir syke; ring før besøk.",
         "sl": "Nudi nočno nujno pomoč in nujno pomoč ob praznikih za ljubljenčke, ki zbolijo; pred obiskom pokličite.",
-        "hr": "Pruža hitnu skrb noću i na blagdane za životinje koje se razbole; nazovi prije dolaska."
+        "hr": "Pruža hitnu skrb noću i na blagdane za životinje koje se razbole; nazovi prije dolaska.",
+        "de": "Nacht- und Feiertagsnotdienst für plötzlich erkrankte Tiere; bitte vor dem Besuch anrufen."
       }
     },
     {
@@ -1949,7 +2007,8 @@
         "fi": "Yöpäivystys 21.00–1.00 (ajanvaraus 20.30–0.30).",
         "nb": "Akutt natthjelp 21.00–01.00 (timebestillingslinje 20.30–00.30).",
         "sl": "Nočna nujna pomoč 21–1 (telefonsko naročanje 20.30–0.30).",
-        "hr": "Noćna hitna služba 21:00–01:00 (linija za najavu 20:30–00:30)."
+        "hr": "Noćna hitna služba 21:00–01:00 (linija za najavu 20:30–00:30).",
+        "de": "Nachtnotdienst 21.00–1.00 Uhr (Anmeldetelefon 20.30–0.30 Uhr)."
       },
       "small_animals": true,
       "url": "https://hiroshimayakan.com/",
@@ -1979,7 +2038,8 @@
         "fi": "Yöpäivystys 21.00–24.00 joka päivä vuoden ympäri paitsi lumi- tai taifuunisäällä. Soita ennen tuloa.",
         "nb": "Akutt natthjelp 21.00–24.00, alle dager hele året, unntatt ved snø eller tyfon. Ring før du kommer.",
         "sl": "Nočna nujna pomoč 21–24, vsak dan v letu, razen ob snegu ali tajfunu. Pred prihodom pokličite.",
-        "hr": "Noćna hitna služba 21:00–24:00, svaki dan u godini osim za snijega ili tajfuna. Nazovi prije dolaska."
+        "hr": "Noćna hitna služba 21:00–24:00, svaki dan u godini osim za snijega ili tajfuna. Nazovi prije dolaska.",
+        "de": "Nachtnotdienst 21.00–24.00 Uhr an allen Tagen des Jahres, außer bei Schnee oder Taifun. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://kitakyu-vet.com/night/",
@@ -2009,7 +2069,8 @@
         "fi": "Yöpäivystys 21.00–1.00 (puhelinvastaanotto 20.30–0.30), ei suljettuja päiviä. Ajanvaraus puhelimitse pakollinen.",
         "nb": "Akutt natthjelp 21.00–01.00 (telefonmottak 20.30–00.30), ingen stengte dager. Timebestilling på telefon er påkrevd.",
         "sl": "Nočna nujna pomoč 21–1 (telefonski sprejem 20.30–0.30), brez zaprtih dni. Obvezno naročanje po telefonu.",
-        "hr": "Noćna hitna služba 21:00–01:00 (telefonski prijem 20:30–00:30), bez neradnih dana. Obvezna telefonska rezervacija."
+        "hr": "Noćna hitna služba 21:00–01:00 (telefonski prijem 20:30–00:30), bez neradnih dana. Obvezna telefonska rezervacija.",
+        "de": "Nachtnotdienst 21.00–1.00 Uhr (telefonische Annahme 20.30–0.30 Uhr), keine Ruhetage. Telefonische Anmeldung erforderlich."
       },
       "small_animals": true,
       "url": "https://anecniigata.com/",
@@ -2039,7 +2100,8 @@
         "fi": "Yöpäivystys 21.00–1.00 joka päivä vuoden ympäri. Soita ennen käyntiä; ei pelkkiä puhelinkonsultaatioita.",
         "nb": "Akutt natthjelp 21.00–01.00, alle dager hele året. Ring før du kommer; ingen konsultasjoner kun på telefon.",
         "sl": "Nočna nujna pomoč 21–1, vsak dan v letu. Pred obiskom pokličite; svetovanje samo po telefonu ni mogoče.",
-        "hr": "Noćna hitna služba 21:00–01:00, svaki dan u godini. Nazovi prije dolaska; nema savjetovanja samo telefonom."
+        "hr": "Noćna hitna služba 21:00–01:00, svaki dan u godini. Nazovi prije dolaska; nema savjetovanja samo telefonom.",
+        "de": "Nachtnotdienst 21.00–1.00 Uhr an allen Tagen des Jahres. Bitte vor dem Besuch anrufen; keine reine Telefonberatung."
       },
       "small_animals": true,
       "url": "https://www.gifuyakan.jp/",
@@ -2073,7 +2135,8 @@
         "fi": "Päivystys käytettävissä 24 h joka päivä vuoden ympäri; ilta- ja yövastaanotto 20.00–8.00. Soita ensin.",
         "nb": "Akuttbehandling tilgjengelig hele døgnet, alle dager i året; kvelds- og nattkonsultasjoner kl. 20.00–8.00. Ring først.",
         "sl": "Nujna pomoč 24 ur na dan, vsak dan v letu; večerni in nočni posveti 20–8. Najprej pokličite.",
-        "hr": "Hitna skrb dostupna 24 sata, svaki dan u godini; večernje i noćne konzultacije 20:00–08:00. Prvo nazovi."
+        "hr": "Hitna skrb dostupna 24 sata, svaki dan u godini; večernje i noćne konzultacije 20:00–08:00. Prvo nazovi.",
+        "de": "Notversorgung rund um die Uhr an allen Tagen des Jahres; abendliche und nächtliche Sprechstunde 20.00–8.00 Uhr. Bitte zuerst anrufen."
       }
     },
     {
@@ -2096,7 +2159,8 @@
         "fi": "Yöpäivystys 21.00–2.00 (puhelinvastaanotto 1.30 asti) joka päivä vuoden ympäri. Soita ennen käyntiä.",
         "nb": "Akutt natthjelp 21.00–02.00 (telefonmottak til 01.30), alle dager hele året. Ring før du kommer.",
         "sl": "Nočna nujna pomoč 21–2 (telefonski sprejem do 1.30), vsak dan v letu. Pred obiskom pokličite.",
-        "hr": "Noćna hitna služba 21:00–02:00 (telefonski prijem do 01:30), svaki dan u godini. Nazovi prije dolaska."
+        "hr": "Noćna hitna služba 21:00–02:00 (telefonski prijem do 01:30), svaki dan u godini. Nazovi prije dolaska.",
+        "de": "Nachtnotdienst 21.00–2.00 Uhr (telefonische Annahme bis 1.30 Uhr) an allen Tagen des Jahres. Bitte vor dem Besuch anrufen."
       },
       "small_animals": true,
       "url": "https://nagoyavet.jp/hospital_yakan.php",
@@ -2130,7 +2194,8 @@
         "fi": "Päivystyshoito (yöllä) tarjolla, ja sairaalassa on ympärivuorokautinen vuodeosastohoito. Soita ennen tuloa.",
         "nb": "Akuttbehandling (natt) tilbys, og sykehuset har full pleie og innleggelse hele døgnet. Ring før du kommer.",
         "sl": "Ponuja (nočno) nujno pomoč, bolnišnica pa ima 24-urno polno bolniško nego (hospitalizacijo). Pred prihodom pokličite.",
-        "hr": "Nudi hitnu (noćnu) skrb, a bolnica ima 24-satni sustav potpune njege (hospitalizacije). Nazovi prije dolaska."
+        "hr": "Nudi hitnu (noćnu) skrb, a bolnica ima 24-satni sustav potpune njege (hospitalizacije). Nazovi prije dolaska.",
+        "de": "Notdienst (nachts) wird angeboten; die Klinik verfügt über stationäre Vollpflege rund um die Uhr. Bitte vorher anrufen."
       }
     },
     {
@@ -2155,7 +2220,8 @@
         "fi": "Yöpäivystys tiistaista perjantaihin 21.00–24.00; suljettu maanantaisin, lauantaisin, sunnuntaisin ja pyhinä. Soita ensin.",
         "nb": "Akutt natthjelp tirsdag–fredag 21.00–24.00; stengt mandag, lørdag, søndag og helligdager. Ring først.",
         "sl": "Nočna nujna pomoč tor–pet 21–24; ob ponedeljkih, sobotah, nedeljah in praznikih zaprto. Najprej pokličite.",
-        "hr": "Noćna hitna služba uto–pet 21:00–24:00; ponedjeljkom, subotom, nedjeljom i blagdanima zatvoreno. Prvo nazovi."
+        "hr": "Noćna hitna služba uto–pet 21:00–24:00; ponedjeljkom, subotom, nedjeljom i blagdanima zatvoreno. Prvo nazovi.",
+        "de": "Nachtnotdienst Di–Fr 21.00–24.00 Uhr; montags, samstags, sonntags und feiertags geschlossen. Bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://www.saidaidori-ah.jp/",
@@ -2185,7 +2251,8 @@
         "fi": "Yöpäivystys arkisin 20.00–22.00 (viimeinen vastaanotto 21.00); suljettu lauantaisin, sunnuntaisin ja pyhinä; klo 22 jälkeen potilaat ohjataan yöpäivystyssairaalaan. Soita ensin.",
         "nb": "Akutt natthjelp på hverdager 20.00–22.00 (siste mottak 21.00); stengt lørdag, søndag og helligdager; etter kl. 22.00 henvises pasienter til et nattlig akuttsykehus. Ring først.",
         "sl": "Nočna nujna pomoč ob delavnikih 20–22 (zadnji sprejem ob 21); ob sobotah, nedeljah in praznikih zaprto; po 22. uri paciente napotijo v nočno nujno bolnišnico. Najprej pokličite.",
-        "hr": "Noćna hitna služba radnim danom 20:00–22:00 (zadnji prijem 21:00); subotom, nedjeljom i blagdanima zatvoreno; nakon 22:00 pacijenti se upućuju u noćnu hitnu bolnicu. Prvo nazovi."
+        "hr": "Noćna hitna služba radnim danom 20:00–22:00 (zadnji prijem 21:00); subotom, nedjeljom i blagdanima zatvoreno; nakon 22:00 pacijenti se upućuju u noćnu hitnu bolnicu. Prvo nazovi.",
+        "de": "Nachtnotdienst werktags 20.00–22.00 Uhr (letzte Annahme 21.00 Uhr); samstags, sonntags und feiertags geschlossen; nach 22.00 Uhr werden Patienten an eine Nachtnotdienst-Klinik verwiesen. Bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://musashinokuni-amc.com/",
@@ -2215,7 +2282,8 @@
         "fi": "Yöhoito arkisin 19.00–22.00 vain pääklinikalla; 24 h:n neuvontalinja vain vakituisille potilaille.",
         "nb": "Nattbehandling på hverdager 19.00–22.00 kun ved hovedavdelingen; en døgnåpen konsultasjonslinje finnes kun for eksisterende pasienter.",
         "sl": "Nočna oskrba ob delavnikih 19–22 samo v glavni poslovalnici; za obstoječe paciente je na voljo 24-urna svetovalna linija.",
-        "hr": "Noćna skrb radnim danom 19:00–22:00 samo u glavnoj podružnici; 24-satna linija za savjetovanje samo za stalne pacijente."
+        "hr": "Noćna skrb radnim danom 19:00–22:00 samo u glavnoj podružnici; 24-satna linija za savjetovanje samo za stalne pacijente.",
+        "de": "Nachtdienst werktags 19.00–22.00 Uhr nur in der Hauptfiliale; eine Beratungsnummer rund um die Uhr gibt es nur für Bestandspatienten."
       },
       "small_animals": true,
       "url": "https://www.ukyo-ah.com/",
@@ -2245,7 +2313,8 @@
         "fi": "Auki 365 päivää ajanvarauksella: 9.00–12.00 ja 16.00–19.00 (ti 9.00–12.00 ja 14.00–17.00). Kiireelliset ongelmat hoidetaan myös pyhinä ja uutenavuotena; soita ensin.",
         "nb": "Åpent 365 dager etter timebestilling: 9.00–12.00 og 16.00–19.00 (tir 9.00–12.00 og 14.00–17.00). Akutte problemer på helligdager og nyttår håndteres; ring først.",
         "sl": "Odprto 365 dni po naročilu: 9–12 in 16–19 (tor 9–12 in 14–17). Nujne težave ob praznikih in novem letu obravnavajo; najprej pokličite.",
-        "hr": "Otvoreno 365 dana uz termin: 9:00–12:00 i 16:00–19:00 (uto 9:00–12:00 i 14:00–17:00). Hitni problemi na blagdane i Novu godinu rješavaju se; prvo nazovi."
+        "hr": "Otvoreno 365 dana uz termin: 9:00–12:00 i 16:00–19:00 (uto 9:00–12:00 i 14:00–17:00). Hitni problemi na blagdane i Novu godinu rješavaju se; prvo nazovi.",
+        "de": "365 Tage im Jahr nur nach Terminvereinbarung geöffnet: 9.00–12.00 und 16.00–19.00 Uhr (Di 9.00–12.00 und 14.00–17.00 Uhr). Dringende Fälle an Feiertagen und zum Jahreswechsel werden behandelt; bitte zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://www.okayama-amc.com/",
@@ -2279,7 +2348,8 @@
         "fi": "Yliopiston opetussairaala, maanantaista perjantaihin päiväaikaan, vain ajanvarauksella (verkkovaraus huhtikuusta 2026).",
         "nb": "Undervisningssykehus, hverdager på dagtid, kun etter timebestilling (nettbestilling siden april 2026).",
         "sl": "Univerzitetna učna bolnišnica, pon–pet čez dan, samo po naročilu (spletno naročanje od aprila 2026).",
-        "hr": "Sveučilišna nastavna bolnica, pon–pet danju, samo uz termin (mrežno naručivanje od travnja 2026.)."
+        "hr": "Sveučilišna nastavna bolnica, pon–pet danju, samo uz termin (mrežno naručivanje od travnja 2026.).",
+        "de": "Universitäre Lehrklinik, Montag bis Freitag tagsüber, nur nach Terminvereinbarung (Online-Buchung seit April 2026)."
       }
     },
     {
@@ -2304,7 +2374,8 @@
         "fi": "Normaali aukioloaika 9.00–11.30 ja 15.00–18.30, suljettu maanantaisin. Yöhoito keskiyöhön asti (ei maanantaisin); soita ensin – klo 19.00 jälkeen puhelut ohjautuvat vastaajaan ja klinikka soittaa takaisin. Lisämaksu +5 000 jeniä klo 0.00 asti, +8 000 jeniä sen jälkeen. Yöhoito ei välttämättä ole saatavilla työmäärästä riippuen.",
         "nb": "Ordinær åpningstid kl. 9.00–11.30 og 15.00–18.30, stengt mandager. Nattbehandling til midnatt (ikke mandager); ring først – etter kl. 19.00 går anrop til telefonsvarer, og klinikken ringer tilbake. Tillegg på 5 000 yen fram til kl. 0.00, 8 000 yen etter kl. 0.00. Nattbehandling kan være utilgjengelig avhengig av arbeidsmengden.",
         "sl": "Redni delovni čas 9–11.30 in 15–18.30, ob ponedeljkih zaprto. Nočna oskrba do polnoči (ne ob ponedeljkih); najprej pokličite – po 19. uri klici gredo na odzivnik, ambulanta pokliče nazaj. Doplačilo +5000 jenov do 0.00, +8000 jenov po 0.00. Nočna oskrba morda ni na voljo, odvisno od zasedenosti.",
-        "hr": "Redovno radno vrijeme 9:00–11:30 i 15:00–18:30, ponedjeljkom zatvoreno. Noćna skrb do ponoći (ne ponedjeljkom); prvo nazovi – nakon 19:00 pozivi idu na govornu poštu, a klinika uzvraća poziv. Doplata +5.000 jena do 0:00, +8.000 jena nakon 0:00. Noćna skrb može biti nedostupna ovisno o opterećenju."
+        "hr": "Redovno radno vrijeme 9:00–11:30 i 15:00–18:30, ponedjeljkom zatvoreno. Noćna skrb do ponoći (ne ponedjeljkom); prvo nazovi – nakon 19:00 pozivi idu na govornu poštu, a klinika uzvraća poziv. Doplata +5.000 jena do 0:00, +8.000 jena nakon 0:00. Noćna skrb može biti nedostupna ovisno o opterećenju.",
+        "de": "Reguläre Sprechzeiten 9.00–11.30 und 15.00–18.30 Uhr, montags geschlossen. Nachtdienst bis Mitternacht (nicht montags); bitte zuerst anrufen – Anrufe nach 19.00 Uhr landen auf der Mailbox, die Klinik ruft zurück. Zuschlag +5.000 Yen bis 0.00 Uhr, +8.000 Yen nach 0.00 Uhr. Je nach Auslastung ist der Nachtdienst möglicherweise nicht verfügbar."
       },
       "small_animals": true,
       "url": "https://hifumi-petclinic.com/",
@@ -2334,7 +2405,8 @@
         "fi": "Yö- ja aukioloajan jälkeistä hoitoa: älä tule yöllä ilman soittoa, soita ensin ja kerro arvioitu saapumisaika. Jos takaisinsoittoa ei tule 15 minuutin sisällä, kokeile toista sairaalaa. Ei puhelinneuvontaa. Aukioloajan jälkeinen tutkimusmaksu. Pääasiassa koirat ja kissat.",
         "nb": "Behandling på kvelds- og nattestid tilbys: ikke møt opp uanmeldt om natten, ring først og oppgi forventet ankomsttid. Hvis du ikke blir ringt opp igjen innen 15 minutter, prøv et annet sykehus. Ingen telefonrådgivning. Tillegg for undersøkelse utenom åpningstid. Hovedsakelig hunder og katter.",
         "sl": "Nudi nočno zdravljenje in zdravljenje zunaj delovnega časa: ne pridite ponoči brez klica, najprej pokličite in navedite predviden čas prihoda. Če se v 15 minutah nihče ne oglasi, poskusite v drugi bolnišnici. Brez svetovanja po telefonu. Pregled zunaj delovnega časa se doplača. Pretežno psi in mačke.",
-        "hr": "Liječenje noću i izvan radnog vremena: ne dolazi noću bez najave, prvo nazovi i navedi očekivano vrijeme dolaska. Ako nitko ne uzvrati poziv u roku od 15 minuta, probaj drugu bolnicu. Nema savjeta telefonom. Naplaćuje se naknada za pregled izvan radnog vremena. Uglavnom psi i mačke."
+        "hr": "Liječenje noću i izvan radnog vremena: ne dolazi noću bez najave, prvo nazovi i navedi očekivano vrijeme dolaska. Ako nitko ne uzvrati poziv u roku od 15 minuta, probaj drugu bolnicu. Nema savjeta telefonom. Naplaćuje se naknada za pregled izvan radnog vremena. Uglavnom psi i mačke.",
+        "de": "Behandlung nachts und außerhalb der Sprechzeiten: nicht unangemeldet nachts vorbeikommen, bitte zuerst anrufen und die voraussichtliche Ankunftszeit nennen. Erfolgt innerhalb von 15 Minuten kein Rückruf, bitte eine andere Klinik versuchen. Keine telefonische Beratung. Gebühr für Untersuchung außerhalb der Sprechzeiten. Überwiegend Hunde und Katzen."
       },
       "small_animals": true,
       "url": "https://k1r4t3t0animalhospital.jp/",
@@ -2364,7 +2436,8 @@
         "fi": "Aukioloajan jälkeistä hoitoa koirille ja kissoille; soita numeroon 0985-48-0808 ennen tuloa. Ei 24 h:n palvelua.",
         "nb": "Behandling utenfor ordinær åpningstid tilbys for hunder og katter; ring 0985-48-0808 før du kommer. Ikke døgnåpent.",
         "sl": "Zdravljenje zunaj delovnega časa za pse in mačke; pred prihodom pokličite 0985-48-0808. Ni 24-urne službe.",
-        "hr": "Liječenje izvan radnog vremena nudi se za pse i mačke; nazovi 0985-48-0808 prije dolaska. Ne radi 24 sata."
+        "hr": "Liječenje izvan radnog vremena nudi se za pse i mačke; nazovi 0985-48-0808 prije dolaska. Ne radi 24 sata.",
+        "de": "Behandlung außerhalb der Sprechzeiten für Hunde und Katzen; bitte vorher unter 0985-48-0808 anrufen. Kein Dienst rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://o-vet.com/guidance",
@@ -2393,7 +2466,8 @@
         "fi": "Kiertävä yöpäivystysklinikka koirille ja kissoille: hoito 20.00–23.00, puhelinvastaanotto 22.30 asti. Suljettu torstaisin ja sunnuntaisin. Tämän illan päivystävä sairaala selviää verkkokalenterista – soita sille ensin. Pääasiassa käteinen; aukioloajan jälkeinen lisämaksu (noin 5 000 jeniä).",
         "nb": "Dyrlegevakt om natten på rundgang for hunder og katter: behandling kl. 20.00–23.00, telefonresepsjon til kl. 22.30. Stengt torsdager og søndager. Se nettkalenderen for hvilket sykehus som har vakt i kveld, og ring dit først. Hovedsakelig kontanter; ekstra gebyr utenom åpningstid (ca. 5 000 yen).",
         "sl": "Izmenična nočna nujna ambulanta za pse in mačke: zdravljenje 20–23, telefonski sprejem do 22.30. Ob četrtkih in nedeljah zaprto. V spletnem koledarju poiščite nocojšnjo dežurno bolnišnico in jo najprej pokličite. Pretežno gotovina; doplačilo zunaj delovnega časa (okoli 5000 jenov).",
-        "hr": "Rotirajuća noćna hitna klinika za pse i mačke: liječenje 20:00–23:00, telefonski prijem do 22:30. Četvrtkom i nedjeljom zatvoreno. U mrežnom kalendaru provjeri koja je bolnica dežurna večeras i prvo je nazovi. Uglavnom gotovina; dodatna naknada izvan radnog vremena (oko 5.000 jena)."
+        "hr": "Rotirajuća noćna hitna klinika za pse i mačke: liječenje 20:00–23:00, telefonski prijem do 22:30. Četvrtkom i nedjeljom zatvoreno. U mrežnom kalendaru provjeri koja je bolnica dežurna večeras i prvo je nazovi. Uglavnom gotovina; dodatna naknada izvan radnog vremena (oko 5.000 jena).",
+        "de": "Nachtnotdienst-Klinik im Wechsel für Hunde und Katzen: Behandlung 20.00–23.00 Uhr, telefonische Annahme bis 22.30 Uhr. Donnerstags und sonntags geschlossen. Die diensthabende Klinik für heute Nacht steht im Online-Kalender; bitte dort zuerst anrufen. Überwiegend Barzahlung; zusätzliche Gebühr außerhalb der Sprechzeiten (etwa 5.000 Yen)."
       },
       "small_animals": true,
       "url": "https://ehime-vets.jp/",
@@ -2423,7 +2497,8 @@
         "fi": "ma–ke, pe, la 9.00–12.00 ja 16.00–19.30; su ja pyhinä vain aamupäivällä; suljettu torstaisin. Yö- ja päivystyshoito mahdollisuuksien mukaan – soita etukäteen.",
         "nb": "man–ons, fre, lør 9.00–12.00 og 16.00–19.30; søn og helligdager kun formiddag; stengt torsdager. Natt- og akuttbehandling så langt det er mulig – ring på forhånd.",
         "sl": "Pon–sre, pet, sob 9–12 in 16–19.30; ned in prazniki samo dopoldne; ob četrtkih zaprto. Nočna in nujna pomoč po možnosti – vnaprej pokličite.",
-        "hr": "pon–sri, pet, sub 9:00–12:00 i 16:00–19:30; ned i blagdanima samo ujutro; četvrtkom zatvoreno. Noćna i hitna skrb koliko je moguće – nazovi unaprijed."
+        "hr": "pon–sri, pet, sub 9:00–12:00 i 16:00–19:30; ned i blagdanima samo ujutro; četvrtkom zatvoreno. Noćna i hitna skrb koliko je moguće – nazovi unaprijed.",
+        "de": "Mo–Mi, Fr, Sa 9.00–12.00 und 16.00–19.30 Uhr; So und feiertags nur vormittags; donnerstags geschlossen. Nacht- und Notfallversorgung nach Möglichkeit – bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://koushindo.com/",
@@ -2453,7 +2528,8 @@
         "fi": "Auki 365 päivää: 10.00–11.30 ja 13.30–18.30 (2. ja 3. torstain iltapäivinä suljettu). Yöpäivystys hoidetaan Ehimen eläinlääkäriyhdistyksen yöpäivystysvuorojen kautta.",
         "nb": "Åpent 365 dager: 10.00–11.30 og 13.30–18.30 (stengt om ettermiddagen den andre og tredje torsdagen). Nødtilfeller om natten håndteres gjennom nattvaktordningen til dyrlegeforeningen i Ehime.",
         "sl": "Odprto 365 dni: 10–11.30 in 13.30–18.30 (ob 2. in 3. četrtku v mesecu popoldne zaprto). Nočne nujne primere urejajo prek nočnega turnusa veterinarskega združenja Ehime.",
-        "hr": "Otvoreno 365 dana: 10:00–11:30 i 13:30–18:30 (2. i 3. četvrtkom u mjesecu poslijepodne zatvoreno). Noćne hitne slučajeve preuzima noćna rotacija veterinarske udruge Ehime."
+        "hr": "Otvoreno 365 dana: 10:00–11:30 i 13:30–18:30 (2. i 3. četvrtkom u mjesecu poslijepodne zatvoreno). Noćne hitne slučajeve preuzima noćna rotacija veterinarske udruge Ehime.",
+        "de": "365 Tage im Jahr geöffnet: 10.00–11.30 und 13.30–18.30 Uhr (am 2. und 3. Donnerstag nachmittags geschlossen). Nachtnotfälle werden über den Nachtdienst-Turnus des Tierärzteverbands der Präfektur Ehime abgedeckt."
       },
       "small_animals": true,
       "url": "https://mhvc.jp/",
@@ -2483,7 +2559,8 @@
         "fi": "ma, ke, pe, la 9.00–11.30 ja 15.30–19.00; ti vain aamupäivällä; su aamupäivällä ajanvarauksella; suljettu torstaisin. Osallistuu Ehimen yöpäivystysvuoroihin (20.00–23.00); vain koirat ja kissat.",
         "nb": "Man, ons, fre, lør 9.00–11.30 og 15.30–19.00; tir kun formiddag; søn formiddag etter avtale; stengt torsdager. Deltar i nattvaktordningen i Ehime (20.00–23.00); kun hunder og katter.",
         "sl": "Pon, sre, pet, sob 9–11.30 in 15.30–19; tor samo dopoldne; ned dopoldne po naročilu; ob četrtkih zaprto. Sodeluje v nočnem dežurstvu Ehime (20–23); samo psi in mačke.",
-        "hr": "pon, sri, pet, sub 9:00–11:30 i 15:30–19:00; uto samo ujutro; ned ujutro uz termin; četvrtkom zatvoreno. Sudjeluje u noćnom dežurstvu Ehime (20:00–23:00); samo psi i mačke."
+        "hr": "pon, sri, pet, sub 9:00–11:30 i 15:30–19:00; uto samo ujutro; ned ujutro uz termin; četvrtkom zatvoreno. Sudjeluje u noćnom dežurstvu Ehime (20:00–23:00); samo psi i mačke.",
+        "de": "Mo, Mi, Fr, Sa 9.00–11.30 und 15.30–19.00 Uhr; Di nur vormittags; So vormittags nach Termin; donnerstags geschlossen. Beteiligt sich am Nachtdienst-Turnus der Präfektur Ehime (20.00–23.00 Uhr); nur Hunde und Katzen."
       },
       "small_animals": true,
       "url": "https://murakami-dogcat.com/",
@@ -2513,7 +2590,8 @@
         "fi": "Yöpäivystys 21.00–1.00 (viimeinen sisäänotto 0.30) joka päivä; puhelinvastaanotto 20.30–0.30 ja ajanvaraus puhelimitse pakollinen. Koirat ja kissat; vain luottokortti. Ensikäyntimaksu 10 000 jeniä.",
         "nb": "Akutt natthjelp 21.00–1.00 (siste innsjekking 0.30), alle dager; telefonmottak 20.30–0.30 og timebestilling på telefon er påkrevd. Hunder og katter; kun betalingskort. Gebyr for første besøk 10 000 yen.",
         "sl": "Nočna nujna pomoč 21–1 (zadnja prijava ob 0.30), vsak dan; telefonski sprejem 20.30–0.30, obvezno naročilo po telefonu. Psi in mačke; samo kreditna kartica. Pristojbina za prvi obisk 10.000 jenov.",
-        "hr": "Noćna hitna služba 21:00–1:00 (zadnja prijava 0:30), svaki dan; telefonski prijem 20:30–0:30 i obvezna telefonska rezervacija. Psi i mačke; samo kreditna kartica. Naknada za prvi posjet 10.000 jena."
+        "hr": "Noćna hitna služba 21:00–1:00 (zadnja prijava 0:30), svaki dan; telefonski prijem 20:30–0:30 i obvezna telefonska rezervacija. Psi i mačke; samo kreditna kartica. Naknada za prvi posjet 10.000 jena.",
+        "de": "Nachtnotdienst 21.00–1.00 Uhr (letzter Check-in 0.30 Uhr), täglich; telefonische Annahme 20.30–0.30 Uhr, telefonische Anmeldung erforderlich. Hunde und Katzen; nur Kreditkarte. Gebühr für den Erstbesuch 10.000 Yen."
       },
       "small_animals": true,
       "url": "https://anecniigata.com/",
@@ -2543,7 +2621,8 @@
         "fi": "Yöpäivystys 21.00–2.00, vaihtelevat suljetut päivät – tarkista kalenteri ja soita ensin.",
         "nb": "Akutt natthjelp 21.00–2.00, uregelmessige stengedager – sjekk kalenderen og ring først.",
         "sl": "Nočna nujna pomoč 21–2, neredni dnevi zaprtja – preverite koledar in najprej pokličite.",
-        "hr": "Noćna hitna služba 21:00–2:00, neredoviti neradni dani – provjeri kalendar i prvo nazovi."
+        "hr": "Noćna hitna služba 21:00–2:00, neredoviti neradni dani – provjeri kalendar i prvo nazovi.",
+        "de": "Nachtnotdienst 21.00–2.00 Uhr, unregelmäßige Ruhetage – bitte Kalender prüfen und zuerst anrufen."
       },
       "small_animals": true,
       "url": "https://kanazawa-yakan.com/",
@@ -2573,7 +2652,8 @@
         "fi": "ma–la 9.00–12.00 ja 16.00–18.00. Yöhoito 20.00–23.00 ja vapaapäivien hoito 8.00–23.00 mahdollisuuksien mukaan (vastaanotto päättyy 30 min aiemmin). Ensikertalaiset saavat vain ensivaiheen päivystyshoitoa. Ei pelkkiä puhelinkonsultaatioita.",
         "nb": "man–lør 9.00–12.00 og 16.00–18.00. Nattbehandling 20.00–23.00 og behandling på stengte dager 8.00–23.00 så langt det er mulig (mottaket stenger 30 min før). Nye pasienter får bare førstehjelp ved akutte tilfeller. Ingen konsultasjoner kun på telefon.",
         "sl": "Pon–sob 9–12 in 16–18. Nočno zdravljenje 20–23 in zdravljenje ob zaprtih dneh 8–23 po možnosti (sprejem se konča 30 minut prej). Novi pacienti prejmejo samo prvo nujno oskrbo. Svetovanje samo po telefonu ni mogoče.",
-        "hr": "pon–sub 9:00–12:00 i 16:00–18:00. Noćno liječenje 20:00–23:00 i liječenje u neradne dane 8:00–23:00 koliko je moguće (prijem završava 30 minuta prije). Novi pacijenti dobivaju samo prvu hitnu skrb. Nema savjetovanja samo telefonom."
+        "hr": "pon–sub 9:00–12:00 i 16:00–18:00. Noćno liječenje 20:00–23:00 i liječenje u neradne dane 8:00–23:00 koliko je moguće (prijem završava 30 minuta prije). Novi pacijenti dobivaju samo prvu hitnu skrb. Nema savjetovanja samo telefonom.",
+        "de": "Mo–Sa 9.00–12.00 und 16.00–18.00 Uhr. Nachtbehandlung 20.00–23.00 Uhr und Behandlung an Ruhetagen 8.00–23.00 Uhr nach Möglichkeit (Annahme endet 30 Min. vorher). Neupatienten erhalten nur eine notfallmäßige Erstversorgung. Keine reine Telefonberatung."
       },
       "small_animals": true,
       "url": "https://asa-vet.com/",
@@ -2603,7 +2683,8 @@
         "fi": "9.00–12.00 ja 16.30–19.30, suljettu torstaisin sekä sunnuntai- ja pyhäpäivinä iltapäivisin. Yöpäivystys keskiyöhön asti – soita ensin; nykyiset potilaat etusijalla. Aukioloajan jälkeinen maksu 3 000–7 000 jeniä. Jos takaisinsoittoa ei tule, klinikka ohjaa Kyoto Night Animal Clinicille.",
         "nb": "Kl. 09.00–12.00 og 16.30–19.30, stengt torsdager og om ettermiddagen på søndager/helligdager. Nattakutt frem til midnatt – ring først; eksisterende pasienter har prioritet. Tillegg utenom åpningstid 3 000–7 000 yen. Hvis ingen ringer tilbake, henviser klinikken til Kyoto Night Animal Clinic.",
         "sl": "9–12 in 16.30–19.30, ob četrtkih ter ob nedeljah in praznikih popoldne zaprto. Nočna nujna pomoč do polnoči – najprej pokličite; obstoječi pacienti imajo prednost. Doplačilo zunaj delovnega časa 3000–7000 jenov. Če se nihče ne odzove, ambulanta napoti v Kyoto Night Animal Clinic.",
-        "hr": "9:00–12:00 i 16:30–19:30, četvrtkom te nedjeljom i blagdanima poslijepodne zatvoreno. Noćna hitna služba do ponoći – prvo nazovi; stalni pacijenti imaju prednost. Naknada izvan radnog vremena 3.000–7.000 jena. Ako nema povratnog poziva, klinika upućuje u „Kyoto Night Animal Clinic“."
+        "hr": "9:00–12:00 i 16:30–19:30, četvrtkom te nedjeljom i blagdanima poslijepodne zatvoreno. Noćna hitna služba do ponoći – prvo nazovi; stalni pacijenti imaju prednost. Naknada izvan radnog vremena 3.000–7.000 jena. Ako nema povratnog poziva, klinika upućuje u „Kyoto Night Animal Clinic“.",
+        "de": "9.00–12.00 und 16.30–19.30 Uhr, donnerstags sowie sonntags und feiertags nachmittags geschlossen. Nachtnotdienst bis Mitternacht – bitte zuerst anrufen; Bestandspatienten haben Vorrang. Gebühr außerhalb der Sprechzeiten 3.000–7.000 Yen. Ohne Rückruf verweist die Klinik an die Kyoto Night Animal Clinic."
       },
       "small_animals": true,
       "url": "https://nagahama-ah.com/",
@@ -2633,7 +2714,8 @@
         "fi": "Yön ensiapu: soita ensin ja jätä viesti vastaajaan; jos klinikka ehtii vastata, se soittaa takaisin 15 minuutin sisällä. Erilliset yömaksut; luottokortti ja PayPay. Koirat, kissat, kanit, hamsterit. Ota mukaan kuvallinen henkilöllisyystodistus.",
         "nb": "Førstehjelp på natt: ring først og legg igjen en beskjed på telefonsvareren; hvis klinikken kan ta imot, ringer den tilbake innen 15 minutter. Egne nattakster; betalingskort og PayPay. Hunder, katter, kaniner, hamstere. Ta med legitimasjon med bilde.",
         "sl": "Nočna prva pomoč: najprej pokličite in pustite sporočilo; če ambulanta lahko pomaga, pokliče nazaj v 15 minutah. Ločene nočne pristojbine; kreditna kartica in PayPay. Psi, mačke, zajci, hrčki. S seboj prinesite osebni dokument s sliko.",
-        "hr": "Noćna prva pomoć: prvo nazovi i ostavi poruku na govornoj pošti; ako klinika može pomoći, uzvraća poziv u roku od 15 minuta. Zasebne noćne naknade; kreditna kartica i PayPay. Psi, mačke, kunići, hrčci. Ponesi osobnu ispravu s fotografijom."
+        "hr": "Noćna prva pomoć: prvo nazovi i ostavi poruku na govornoj pošti; ako klinika može pomoći, uzvraća poziv u roku od 15 minuta. Zasebne noćne naknade; kreditna kartica i PayPay. Psi, mačke, kunići, hrčci. Ponesi osobnu ispravu s fotografijom.",
+        "de": "Nächtliche Erste Hilfe: bitte zuerst anrufen und eine Nachricht auf der Mailbox hinterlassen; kann die Klinik helfen, ruft sie innerhalb von 15 Minuten zurück. Gesonderte Nachtgebühren; Kreditkarte und PayPay. Hunde, Katzen, Kaninchen, Hamster. Bitte Lichtbildausweis mitbringen."
       },
       "small_animals": true,
       "url": "https://ukulele-vets.com/",
@@ -2663,7 +2745,8 @@
         "fi": "9.00–12.00 ja 16.00–19.30, suljettu torstaisin sekä sunnuntai- ja pyhäpäivinä iltapäivisin. Aukioloajan jälkeinen hoito pääasiassa rekisteröidyille potilaille; soita ensin (puhelinvastaaja – takaisinsoittoa 5 minuutin sisällä ei taata). Aukioloajan jälkeen peritään lisämaksu.",
         "nb": "Kl. 09.00–12.00 og 16.00–19.30, stengt torsdager og om ettermiddagen på søndager/helligdager. Vakttjeneste utenom åpningstid hovedsakelig for registrerte pasienter; ring først (telefonsvarer – tilbakeringing innen 5 minutter er ikke garantert). Tillegg utenom åpningstid gjelder.",
         "sl": "9–12 in 16–19.30, ob četrtkih ter ob nedeljah in praznikih popoldne zaprto. Oskrba zunaj delovnega časa predvsem za registrirane paciente; najprej pokličite (odzivnik – klic nazaj v 5 minutah ni zagotovljen). Zaračuna se doplačilo za oskrbo zunaj delovnega časa.",
-        "hr": "9:00–12:00 i 16:00–19:30, četvrtkom te nedjeljom i blagdanima poslijepodne zatvoreno. Skrb izvan radnog vremena uglavnom za registrirane pacijente; prvo nazovi (govorna pošta – povratni poziv u roku od 5 minuta nije zajamčen). Naplaćuje se dodatna naknada izvan radnog vremena."
+        "hr": "9:00–12:00 i 16:00–19:30, četvrtkom te nedjeljom i blagdanima poslijepodne zatvoreno. Skrb izvan radnog vremena uglavnom za registrirane pacijente; prvo nazovi (govorna pošta – povratni poziv u roku od 5 minuta nije zajamčen). Naplaćuje se dodatna naknada izvan radnog vremena.",
+        "de": "9.00–12.00 und 16.00–19.30 Uhr, donnerstags sowie sonntags und feiertags nachmittags geschlossen. Behandlung außerhalb der Sprechzeiten überwiegend für registrierte Patienten; bitte zuerst anrufen (Mailbox – ein Rückruf innerhalb von 5 Minuten ist nicht garantiert). Zusätzliche Gebühr außerhalb der Sprechzeiten."
       },
       "small_animals": true,
       "url": "https://www.mirai-ac.info/",
@@ -2693,7 +2776,8 @@
         "fi": "ma, ti, to, pe 9.00–12.00 ja 17.00–20.00; la 9.00–15.00; suljettu keskiviikkoisin. Ei 24 h:n sairaala, mutta hätätapauksissa voi soittaa aukioloajan ulkopuolella numeroon 059-384-1299 (puhelinvastaaja, jos ei tavoitettavissa); aukioloajan jälkeinen lisämaksu. Koirat, kissat, hamsterit, fretit.",
         "nb": "Man, tir, tor, fre 9.00–12.00 og 17.00–20.00; lør 9.00–15.00; stengt onsdager. Ikke et døgnåpent sykehus, men ved nødtilfeller kan man ringe 059-384-1299 utenom åpningstiden (telefonsvarer hvis ingen svarer); tilleggsgebyr gjelder utenom åpningstiden. Hunder, katter, hamstere, fretter.",
         "sl": "Pon, tor, čet, pet 9–12 in 17–20; sob 9–15; ob sredah zaprto. Ni 24-urna bolnišnica, vendar lahko v nujnih primerih zunaj delovnega časa pokličete 059-384-1299 (če nihče ne odgovori, se vklopi odzivnik); zunaj delovnega časa velja doplačilo. Psi, mačke, hrčki, dihurji.",
-        "hr": "pon, uto, čet, pet 9:00–12:00 i 17:00–20:00; sub 9:00–15:00; srijedom zatvoreno. Nije 24-satna bolnica, ali za hitne slučajeve izvan radnog vremena možeš nazvati 059-384-1299 (govorna pošta ako nitko nije dostupan); naplaćuje se naknada izvan radnog vremena. Psi, mačke, hrčci, tvorovi."
+        "hr": "pon, uto, čet, pet 9:00–12:00 i 17:00–20:00; sub 9:00–15:00; srijedom zatvoreno. Nije 24-satna bolnica, ali za hitne slučajeve izvan radnog vremena možeš nazvati 059-384-1299 (govorna pošta ako nitko nije dostupan); naplaćuje se naknada izvan radnog vremena. Psi, mačke, hrčci, tvorovi.",
+        "de": "Mo, Di, Do, Fr 9.00–12.00 und 17.00–20.00 Uhr; Sa 9.00–15.00 Uhr; mittwochs geschlossen. Kein Dienst rund um die Uhr, in Notfällen ist die Klinik außerhalb der Sprechzeiten unter 059-384-1299 erreichbar (sonst Anrufbeantworter); Gebühr außerhalb der Sprechzeiten. Hunde, Katzen, Hamster, Frettchen."
       },
       "small_animals": true,
       "url": "https://kitagawa-ac.com/",
@@ -2723,7 +2807,8 @@
         "fi": "ma–la 9.30–12.00 ja 15.00–18.00 (su 10.00–12.00; pyhinä 10.30–12.00, 15.00–17.00); suljettu torstaisin. Yöpäivystysaika keskeytetty; aukioloajan jälkeinen apu vain vakituisille ja yhteistyösairaaloiden potilaille puhelinvastaajan kautta. Ei yökäyntejä ilman ajanvarausta.",
         "nb": "man–lør 9.30–12.00 og 15.00–18.00 (søn 10.00–12.00; helligdager 10.30–12.00, 15.00–17.00); stengt torsdager. Det nattlige akuttilbudet er midlertidig stanset; hjelp utenom åpningstiden kun for faste pasienter og pasienter fra samarbeidssykehus via telefonsvarer. Ingen uanmeldte besøk om natten.",
         "sl": "Pon–sob 9.30–12 in 15–18 (ned 10–12; prazniki 10.30–12, 15–17); ob četrtkih zaprto. Nočno nujno okence je začasno ukinjeno; pomoč zunaj delovnega časa samo za redne paciente in paciente partnerskih bolnišnic prek odzivnika. Ponoči sprejem brez naročanja ni mogoč.",
-        "hr": "pon–sub 9:30–12:00 i 15:00–18:00 (ned 10:00–12:00; blagdanima 10:30–12:00, 15:00–17:00); četvrtkom zatvoreno. Noćni hitni prijem je obustavljen; pomoć izvan radnog vremena samo za stalne pacijente i pacijente partnerskih bolnica preko telefonske sekretarice. Noću nema prijema bez najave."
+        "hr": "pon–sub 9:30–12:00 i 15:00–18:00 (ned 10:00–12:00; blagdanima 10:30–12:00, 15:00–17:00); četvrtkom zatvoreno. Noćni hitni prijem je obustavljen; pomoć izvan radnog vremena samo za stalne pacijente i pacijente partnerskih bolnica preko telefonske sekretarice. Noću nema prijema bez najave.",
+        "de": "Mo–Sa 9.30–12.00 und 15.00–18.00 Uhr (So 10.00–12.00 Uhr; feiertags 10.30–12.00 und 15.00–17.00 Uhr); donnerstags geschlossen. Nachtnotdienst ausgesetzt; Hilfe außerhalb der Sprechzeiten nur für Stamm- und Partnerklinik-Patienten über den Anrufbeantworter. Nachts keine Behandlung ohne Anmeldung."
       },
       "small_animals": true,
       "url": "https://aamc.aomori.jp/",
@@ -2753,7 +2838,8 @@
         "fi": "ma, ti, to–la 9.00–12.00 ja 16.00–18.00; su vain aamupäivällä; suljettu keskiviikkoisin ja pyhinä. Aukioloajan jälkeinen hoito ei ole rutiinia, mutta hätätapaukset hoidetaan mahdollisuuksien mukaan: jätä viesti vastaajaan tai käytä yhteydenottolomaketta; aukioloajan jälkeinen lisämaksu.",
         "nb": "Man, tir, tor–lør 9.00–12.00 og 16.00–18.00; søn kun formiddag; stengt onsdager og helligdager. Behandling utenom åpningstiden er ikke rutine, men nødtilfeller håndteres så langt det lar seg gjøre: legg igjen en beskjed på telefonsvareren eller bruk kontaktskjemaet; tilleggsgebyr gjelder utenom åpningstiden.",
         "sl": "Pon, tor, čet–sob 9–12 in 16–18; ned samo dopoldne; ob sredah in praznikih zaprto. Oskrba zunaj delovnega časa ni redna, nujne primere pa po možnosti obravnavajo: pustite sporočilo ali uporabite kontaktni obrazec; zunaj delovnega časa velja doplačilo.",
-        "hr": "pon, uto, čet–sub 9:00–12:00 i 16:00–18:00; ned samo ujutro; srijedom i blagdanima zatvoreno. Skrb izvan radnog vremena nije uobičajena, ali se hitni slučajevi rješavaju koliko je moguće: ostavi poruku na govornoj pošti ili upotrijebi kontaktni obrazac; naplaćuje se naknada izvan radnog vremena."
+        "hr": "pon, uto, čet–sub 9:00–12:00 i 16:00–18:00; ned samo ujutro; srijedom i blagdanima zatvoreno. Skrb izvan radnog vremena nije uobičajena, ali se hitni slučajevi rješavaju koliko je moguće: ostavi poruku na govornoj pošti ili upotrijebi kontaktni obrazac; naplaćuje se naknada izvan radnog vremena.",
+        "de": "Mo, Di, Do–Sa 9.00–12.00 und 16.00–18.00 Uhr; So nur vormittags; mittwochs und feiertags geschlossen. Behandlung außerhalb der Sprechzeiten gehört nicht zum Regelbetrieb, Notfälle werden aber nach Möglichkeit versorgt: Nachricht auf der Mailbox hinterlassen oder Kontaktformular nutzen; Gebühr außerhalb der Sprechzeiten."
       },
       "small_animals": true,
       "url": "https://www.yasuda-animal-hospital.com/",
@@ -2783,7 +2869,8 @@
         "fi": "Suljettu keskiviikkoisin; sunnuntaisin ja pyhinä suljettu iltapäivisin. Kiireelliset tapaukset hoidetaan nopeasti; soita etukäteen.",
         "nb": "Stengt på onsdager; søndag og helligdager stengt om ettermiddagen. Hastetilfeller behandles raskt; ring på forhånd.",
         "sl": "Ob sredah zaprto; ob nedeljah in praznikih popoldne zaprto. Nujne primere obravnavajo takoj; vnaprej pokličite.",
-        "hr": "Srijedom zatvoreno; nedjeljom i blagdanima poslijepodne zatvoreno. Hitni slučajevi rješavaju se žurno; nazovi unaprijed."
+        "hr": "Srijedom zatvoreno; nedjeljom i blagdanima poslijepodne zatvoreno. Hitni slučajevi rješavaju se žurno; nazovi unaprijed.",
+        "de": "Mittwochs geschlossen; sonntags und feiertags nachmittags geschlossen. Dringende Fälle werden zügig behandelt; bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://matuzono.com/",
@@ -2817,7 +2904,8 @@
         "fi": "Arkisin 9.00–12.00 ja 16.00–19.00; la ja su 9.00–12.00 ja 15.00–16.00; suljettu keskiviikkoisin ja pyhinä.",
         "nb": "Hverdager 9.00–12.00 og 16.00–19.00; lør og søn 9.00–12.00 og 15.00–16.00; stengt onsdager og helligdager.",
         "sl": "Ob delavnikih 9–12 in 16–19; sob in ned 9–12 in 15–16; ob sredah in praznikih zaprto.",
-        "hr": "Radnim danom 9:00–12:00 i 16:00–19:00; sub i ned 9:00–12:00 i 15:00–16:00; srijedom i blagdanima zatvoreno."
+        "hr": "Radnim danom 9:00–12:00 i 16:00–19:00; sub i ned 9:00–12:00 i 15:00–16:00; srijedom i blagdanima zatvoreno.",
+        "de": "Werktags 9.00–12.00 und 16.00–19.00 Uhr; Sa und So 9.00–12.00 und 15.00–16.00 Uhr; mittwochs und feiertags geschlossen."
       }
     },
     {
@@ -2842,7 +2930,8 @@
         "fi": "Arkisin 9.00–17.00 ajanvarauksella; pääasiassa muiden eläinlääkärien lähetteellä. Ei päivystystä eikä 24 h:n palvelua.",
         "nb": "Hverdager 9.00–17.00 etter timebestilling; hovedsakelig henvisninger fra andre dyrleger. Ingen akutt- eller døgnåpen tjeneste.",
         "sl": "Ob delavnikih 9–17 po naročilu; pretežno napotitve drugih veterinarjev. Brez nujne pomoči in 24-urne službe.",
-        "hr": "Radnim danom 9:00–17:00 uz najavu; uglavnom upućeni slučajevi od drugih veterinara. Nema hitne službe ni rada 24 sata."
+        "hr": "Radnim danom 9:00–17:00 uz najavu; uglavnom upućeni slučajevi od drugih veterinara. Nema hitne službe ni rada 24 sata.",
+        "de": "Werktags 9.00–17.00 Uhr nach Terminvereinbarung; überwiegend Überweisungen anderer Tierarztpraxen. Kein Notdienst, kein Dienst rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://vmth.vet.iwate-u.ac.jp/",
@@ -2875,7 +2964,8 @@
         "fi": "Yliopiston erikoissairaanhoidon sairaala, kokonaan ajanvarauksella oman eläinlääkärin kautta (poikkeuksena eksoottiset eläimet). Suljettu viikonloppuisin ja pyhinä.",
         "nb": "Universitetets henvisningssykehus (andrelinje), kun etter timebestilling via din egen dyrlege (unntatt eksotiske dyr). Stengt i helger og på helligdager.",
         "sl": "Univerzitetna bolnišnica sekundarne oskrbe, popolnoma po naročilu prek vašega veterinarja (izjema so eksotične živali). Ob koncih tedna in praznikih zaprto.",
-        "hr": "Sveučilišna bolnica sekundarne skrbi, isključivo uz termin preko tvog veterinara (osim egzotičnih životinja). Vikendom i blagdanima zatvoreno."
+        "hr": "Sveučilišna bolnica sekundarne skrbi, isključivo uz termin preko tvog veterinara (osim egzotičnih životinja). Vikendom i blagdanima zatvoreno.",
+        "de": "Universitäre Klinik der Zweitversorgung, ausschließlich nach Termin über die eigene Tierarztpraxis (außer Exoten). Am Wochenende und an Feiertagen geschlossen."
       }
     },
     {
@@ -2904,7 +2994,8 @@
         "fi": "Arkisin 9.00–17.00 (vastaanotto sulkeutuu 16.00), suljettu viikonloppuisin ja pyhinä. Vain ajanvarauksella oman eläinlääkärin kautta.",
         "nb": "Hverdager 9.00–17.00 (resepsjonen stenger 16.00), stengt i helger og på helligdager. Kun etter timebestilling via din egen dyrlege.",
         "sl": "Ob delavnikih 9–17 (sprejem se zapre ob 16), ob koncih tedna in praznikih zaprto. Samo po naročilu, prek vašega veterinarja.",
-        "hr": "Radnim danom 9:00–17:00 (prijem se zatvara u 16:00), vikendom i blagdanima zatvoreno. Samo uz termin, preko tvog veterinara."
+        "hr": "Radnim danom 9:00–17:00 (prijem se zatvara u 16:00), vikendom i blagdanima zatvoreno. Samo uz termin, preko tvog veterinara.",
+        "de": "Werktags 9.00–17.00 Uhr (Annahmeschluss 16.00 Uhr), am Wochenende und feiertags geschlossen. Nur nach Termin über die eigene Tierarztpraxis."
       }
     },
     {
@@ -2929,7 +3020,8 @@
         "fi": "Tutkimukset 9.30–16.00, puhelin 9.00–16.30, suljettu perjantaisin; viikonloppu- ja pyhätutkimuksista lisämaksu. Päivystystapaukset otetaan vastaan tutkimusaikoina – soita ensin. Ei yöpäivystystä; aukioloajan jälkeiset puhelut ohjataan erilliseen 24 h:n neuvontalinjaan (ei hoitoa).",
         "nb": "Undersøkelser kl. 9.30–16.00, telefon kl. 9.00–16.30, stengt fredager; tillegg for undersøkelser i helger og på helligdager. Nødtilfeller tas imot i undersøkelsestiden – ring først. Ingen akuttbehandling om natten; utenom åpningstid går samtaler til en egen døgnåpen rådgivningstelefon (ingen behandling).",
         "sl": "Pregledi 9.30–16, telefon 9–16.30, ob petkih zaprto; pregledi ob koncih tedna in praznikih se doplačajo. Nujne primere sprejemajo med časom pregledov – najprej pokličite. Brez nočne nujne pomoči; klice zunaj delovnega časa sprejme ločena 24-urna telefonska svetovalna linija (brez zdravljenja).",
-        "hr": "Pregledi 9:30–16:00, telefon 9:00–16:30, petkom zatvoreno; pregledi vikendom i blagdanima uz doplatu. Hitni slučajevi primaju se tijekom vremena pregleda – nazovi unaprijed. Nema noćne hitne skrbi; pozivi izvan radnog vremena preusmjeravaju se na zasebnu telefonsku liniju za savjete 24 sata (bez liječenja)."
+        "hr": "Pregledi 9:30–16:00, telefon 9:00–16:30, petkom zatvoreno; pregledi vikendom i blagdanima uz doplatu. Hitni slučajevi primaju se tijekom vremena pregleda – nazovi unaprijed. Nema noćne hitne skrbi; pozivi izvan radnog vremena preusmjeravaju se na zasebnu telefonsku liniju za savjete 24 sata (bez liječenja).",
+        "de": "Untersuchungen 9.30–16.00 Uhr, Telefon 9.00–16.30 Uhr, freitags geschlossen; Untersuchungen am Wochenende und feiertags mit Zuschlag. Notfälle werden während der Untersuchungszeiten angenommen – bitte zuerst anrufen. Kein Nachtnotdienst; außerhalb der Zeiten landen Anrufe bei einer separaten telefonischen Beratung rund um die Uhr (ohne Behandlung)."
       },
       "small_animals": true,
       "url": "https://tuat-kamec.org/",
@@ -2963,7 +3055,8 @@
         "fi": "Ajanvaraus puhelimitse arkisin 9.00–17.00. Hoitaa pieneläimiä ja lemmikkejä.",
         "nb": "Timebestilling på telefon på hverdager kl. 9.00–17.00. Behandler smådyr og kjæledyr.",
         "sl": "Naročanje po telefonu ob delavnikih 9–17. Zdravi male živali in ljubljenčke.",
-        "hr": "Termin se dogovara telefonom radnim danom 9:00–17:00. Liječi male životinje i kućne ljubimce."
+        "hr": "Termin se dogovara telefonom radnim danom 9:00–17:00. Liječi male životinje i kućne ljubimce.",
+        "de": "Telefonische Terminvergabe werktags 9.00–17.00 Uhr. Behandelt Kleintiere und Haustiere."
       }
     },
     {
@@ -2988,7 +3081,8 @@
         "fi": "Aamupäivisin ma–pe (saapuminen viimeistään klo 11.30), vain ajanvarauksella ja eläinlääkärin lähetteellä. Ei päivystystä eikä 24 h:n palvelua; kiireelliset tapaukset oman lähettävän eläinlääkärin kautta.",
         "nb": "Formiddager man–fre (innsjekking innen kl. 11.30), kun etter timebestilling og henvisning fra dyrlege. Ingen akuttbehandling eller døgnåpen vakt; akutte tilfeller via din egen henvisende dyrlege.",
         "sl": "Dopoldne pon–pet (prijava do 11.30), samo po naročilu in napotnici veterinarja. Brez nujne pomoči in 24-urne službe; v nujnih primerih se obrnite na svojega napotnega veterinarja.",
-        "hr": "Ujutro pon–pet (prijava do 11:30), samo uz termin i uputnicu veterinara. Nema hitne službe ni rada 24 sata; u hitnim slučajevima javi se svom veterinaru koji upućuje."
+        "hr": "Ujutro pon–pet (prijava do 11:30), samo uz termin i uputnicu veterinara. Nema hitne službe ni rada 24 sata; u hitnim slučajevima javi se svom veterinaru koji upućuje.",
+        "de": "Vormittags Mo–Fr (Check-in bis 11.30 Uhr), nur nach Termin und mit Überweisung. Kein Notdienst, kein Dienst rund um die Uhr; dringende Fälle über die überweisende Tierarztpraxis."
       },
       "small_animals": true,
       "url": "https://www.animalhospital.gifu-u.ac.jp/",
@@ -3017,7 +3111,8 @@
         "fi": "Yö- ja päivystyskotikäynnit noin 19.00–6.00 (voivat päättyä aiemmin). Pääasiassa kanit, fretit ja hamsterit; koirat ja kissat tapauskohtaisesti. Vain käteinen. Yksi eläinlääkäri – ei välttämättä tavoitettavissa muiden hätätapausten aikana.",
         "nb": "Nattlig akutt hjemmebesøk, ca. 19.00–6.00 (kan avsluttes tidligere). Hovedsakelig kaniner, ilder og hamstere; hunder og katter etter vurdering. Kun kontant. Én dyrlege – kan være utilgjengelig ved andre nødtilfeller.",
         "sl": "Nočna nujna služba z obiski na domu, približno 19–6 (lahko se konča prej). Pretežno zajci, dihurji in hrčki; psi in mačke od primera do primera. Samo gotovina. Samo en veterinar – ob drugih nujnih primerih morda ni dosegljiv.",
-        "hr": "Noćna i hitna služba s kućnim posjetima, otprilike 19:00–6:00 (može završiti ranije). Uglavnom kunići, fretke i hrčci; psi i mačke od slučaja do slučaja. Samo gotovina. Jedan veterinar – tijekom drugih hitnih slučajeva možda nije dostupan."
+        "hr": "Noćna i hitna služba s kućnim posjetima, otprilike 19:00–6:00 (može završiti ranije). Uglavnom kunići, fretke i hrčci; psi i mačke od slučaja do slučaja. Samo gotovina. Jedan veterinar – tijekom drugih hitnih slučajeva možda nije dostupan.",
+        "de": "Nacht- und Notfall-Hausbesuche, etwa 19.00–6.00 Uhr (kann früher enden). Überwiegend Kaninchen, Frettchen und Hamster; Hunde und Katzen im Einzelfall. Nur Barzahlung. Nur ein Tierarzt – bei anderen Notfällen möglicherweise nicht erreichbar."
       },
       "small_animals": true,
       "url": "https://animal.oita.jp/",

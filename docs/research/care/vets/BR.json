@@ -509,7 +509,8 @@
         "fi": "Yliopiston opetussairaala. Hoidon tarpeen arvio ma–pe 7–10, vuoronumerot jaetaan klo 7; vastaanotot ja tutkimukset ovat maksullisia. Puhelimeen vastataan klo 14 alkaen, WhatsAppiin 8–16.30.",
         "nb": "Undervisningssykehus. Triage man–fre 7.00–10.00, kølapper deles ut kl. 7.00; konsultasjoner og prøver er betalingspliktige. Telefonen besvares fra kl. 14.00, WhatsApp 8.00–16.30.",
         "sl": "Univerzitetna učna bolnišnica. Triaža pon–pet 7–10, številke se delijo ob 7. uri; pregledi in preiskave so plačljivi. Na telefon odgovarjajo od 14. ure, na WhatsApp 8–16.30.",
-        "hr": "Sveučilišna nastavna bolnica. Trijaža pon–pet 7:00–10:00, brojevi se dijele u 07:00; pregledi i pretrage plaćaju se. Telefon se javlja od 14:00, WhatsApp 8:00–16:30."
+        "hr": "Sveučilišna nastavna bolnica. Trijaža pon–pet 7:00–10:00, brojevi se dijele u 07:00; pregledi i pretrage plaćaju se. Telefon se javlja od 14:00, WhatsApp 8:00–16:30.",
+        "de": "Universitäts-Lehrklinik. Triage Mo–Fr 7.00–10.00 Uhr, Wartenummern werden um 7.00 Uhr ausgegeben; Untersuchungen und Tests sind kostenpflichtig. Telefon ab 14.00 Uhr besetzt, WhatsApp 8.00–16.30 Uhr."
       }
     },
     {
@@ -6874,7 +6875,8 @@
         "fi": "Klinikka, jolla on päivystystuki; aukioloajat ma–to 8–18, pe 8–17. Varmista päivystysajat soittamalla.",
         "nb": "Klinikk med akuttberedskap; åpningstid på hverdager mandag–torsdag kl. 8.00–18.00, fredag kl. 8.00–17.00. Ring for å bekrefte åpningstidene for nødtilfeller.",
         "sl": "Klinika z nujno pomočjo; med tednom pon–čet 8–18, pet 8–17. Čas nujne pomoči preverite s klicem.",
-        "hr": "Klinika s hitnom podrškom; radnim danom pon–čet 8:00–18:00, pet 8:00–17:00. Nazovi i provjeri radno vrijeme hitne službe."
+        "hr": "Klinika s hitnom podrškom; radnim danom pon–čet 8:00–18:00, pet 8:00–17:00. Nazovi i provjeri radno vrijeme hitne službe.",
+        "de": "Klinik mit Notfallversorgung; werktags Mo–Do 8.00–18.00 Uhr, Fr 8.00–17.00 Uhr. Notdienstzeiten bitte telefonisch bestätigen lassen."
       }
     },
     {

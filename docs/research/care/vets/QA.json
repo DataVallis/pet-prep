@@ -64,7 +64,8 @@
         "fi": "Auki 24/7; keskiyön ja klo 8 välillä vain päivystystapaukset. Päivystysnumero virka-ajan ulkopuolella: +974 3340 9300. Perjantairukouksen aikaan klo 11–13 suljettu, paitsi ehdottomissa hätätapauksissa.",
         "nb": "Åpent hele døgnet; mellom midnatt og kl. 8 kun nødtilfeller. Akuttnummer utenom åpningstid: +974 3340 9300. Stengt under fredagsbønnen kl. 11–13, unntatt absolutte nødtilfeller.",
         "sl": "Odprto 24/7; med polnočjo in 8. uro samo nujni primeri. Nujna številka zunaj delovnega časa: +974 3340 9300. Ob petkih 11–13 (petkova molitev) zaprto, razen za skrajno nujne primere.",
-        "hr": "Otvoreno 24/7; između ponoći i 8:00 samo hitni slučajevi. Broj za hitne slučajeve izvan radnog vremena: +974 3340 9300. Petkom zatvoreno zbog molitve 11:00–13:00, osim u najhitnijim slučajevima."
+        "hr": "Otvoreno 24/7; između ponoći i 8:00 samo hitni slučajevi. Broj za hitne slučajeve izvan radnog vremena: +974 3340 9300. Petkom zatvoreno zbog molitve 11:00–13:00, osim u najhitnijim slučajevima.",
+        "de": "Rund um die Uhr geöffnet; zwischen Mitternacht und 8.00 Uhr nur Notfälle. Notfallnummer außerhalb der Sprechzeiten: +974 3340 9300. Freitags 11.00–13.00 Uhr (Freitagsgebet) geschlossen, außer bei absoluten Notfällen."
       }
     },
     {
@@ -92,7 +93,8 @@
         "fi": "Päivystys 24 tuntia vuorokaudessa, 7 päivää viikossa. Tavalliset aukioloajat la–to 8–22, pe 14–21. Päivystysnumero virka-ajan ulkopuolella: +974 5584 1224.",
         "nb": "Akuttbehandling hele døgnet, sju dager i uken. Ordinær åpningstid lør–tors 8–22, fre 14–21. Akuttnummer utenom åpningstid: +974 5584 1224.",
         "sl": "Nujna oskrba 24 ur na dan, 7 dni v tednu. Redni čas sob–čet 8–22, pet 14–21. Nujna številka zunaj delovnega časa: +974 5584 1224.",
-        "hr": "Hitna skrb 24 sata dnevno, 7 dana u tjednu. Redovno radno vrijeme sub–čet 8:00–22:00, pet 14:00–21:00. Broj za hitne slučajeve izvan radnog vremena: +974 5584 1224."
+        "hr": "Hitna skrb 24 sata dnevno, 7 dana u tjednu. Redovno radno vrijeme sub–čet 8:00–22:00, pet 14:00–21:00. Broj za hitne slučajeve izvan radnog vremena: +974 5584 1224.",
+        "de": "Notfallversorgung rund um die Uhr an 7 Tagen die Woche. Reguläre Sprechzeiten Sa–Do 8.00–22.00 Uhr, Fr 14.00–21.00 Uhr. Notfallnummer außerhalb der Sprechzeiten: +974 5584 1224."
       }
     },
     {
@@ -120,7 +122,8 @@
         "fi": "la–to 8–20. Perjantaisin ja virka-ajan ulkopuolella vain päivystystapaukset, soita +974 6667 5235. Duhailin toimipiste: +974 4498 9620.",
         "nb": "Lør–tor kl. 8–20. Fredag og utenom åpningstid kun nødtilfeller, ring +974 6667 5235. Filialen i Duhail: +974 4498 9620.",
         "sl": "Sob–čet 8–20. Ob petkih in zunaj delovnega časa samo nujni primeri; pokličite +974 6667 5235. Enota Duhail: +974 4498 9620.",
-        "hr": "sub–čet 8:00–20:00. Petkom i izvan radnog vremena samo hitni slučajevi, nazovi +974 6667 5235. Podružnica Duhail: +974 4498 9620."
+        "hr": "sub–čet 8:00–20:00. Petkom i izvan radnog vremena samo hitni slučajevi, nazovi +974 6667 5235. Podružnica Duhail: +974 4498 9620.",
+        "de": "Sa–Do 8.00–20.00 Uhr. Freitags und außerhalb der Sprechzeiten nur Notfälle, Tel. +974 6667 5235. Filiale Duhail: +974 4498 9620."
       }
     },
     {
@@ -147,7 +150,8 @@
         "fi": "la–to 10–23; pe 14–23.",
         "nb": "Lør–tor kl. 10–23; fre kl. 14–23.",
         "sl": "Sob–čet 10–23; pet 14–23.",
-        "hr": "sub–čet 10:00–23:00; pet 14:00–23:00."
+        "hr": "sub–čet 10:00–23:00; pet 14:00–23:00.",
+        "de": "Sa–Do 10.00–23.00 Uhr; Fr 14.00–23.00 Uhr."
       }
     }
   ],

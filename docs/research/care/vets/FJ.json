@@ -55,7 +55,8 @@
         "fi": "Liikkuva lemmikkiklinikka kotikäynneillä ja päivystyksellä, ilmoituksen mukaan ympäri vuorokauden alueella: Suva, Nausori, Navua ja Pacific Harbour.",
         "nb": "Mobil dyreklinikk med hjemmebesøk og akuttbehandling, oppgitt som tilgjengelig hele døgnet i Suva, Nausori, Navua og Pacific Harbour.",
         "sl": "Mobilna ambulanta z obiski na domu in nujno oskrbo, na voljo 24/7 v Suvi, Nausoriju, Navui in Pacific Harbourju.",
-        "hr": "Mobilna veterinarska ambulanta s kućnim posjetima i hitnom skrbi, dostupna 24/7 na području Suva, Nausori, Navua i Pacific Harbour."
+        "hr": "Mobilna veterinarska ambulanta s kućnim posjetima i hitnom skrbi, dostupna 24/7 na području Suva, Nausori, Navua i Pacific Harbour.",
+        "de": "Mobile Tierklinik mit Hausbesuchen und Notdienst, rund um die Uhr erreichbar in Suva, Nausori, Navua und Pacific Harbour."
       }
     },
     {
@@ -79,7 +80,8 @@
         "fi": "Auki ma–la 8.00–16.30. Vain päivystystapaukset virka-ajan jälkeen klo 17.00–22.00 tekstiviestillä numeroon 992 2634.",
         "nb": "Åpent mandag til lørdag 8.00–16.30. Kun nødtilfeller utenom åpningstid, 17.00–22.00, via tekstmelding til 992 2634.",
         "sl": "Odprto pon–sob 8–16.30. Nujni primeri zunaj delovnega časa samo 17–22, s sporočilom SMS na 992 2634.",
-        "hr": "Radi pon–sub 8:00–16:30. Izvan radnog vremena samo hitni slučajevi, 17:00–22:00, SMS-om na 992 2634."
+        "hr": "Radi pon–sub 8:00–16:30. Izvan radnog vremena samo hitni slučajevi, 17:00–22:00, SMS-om na 992 2634.",
+        "de": "Mo–Sa 8.00–16.30 Uhr geöffnet. Notfälle außerhalb der Sprechzeiten nur 17.00–22.00 Uhr, per SMS an 992 2634."
       }
     },
     {
@@ -102,7 +104,8 @@
         "fi": "Auki ma–la 8.30–17.00, su suljettu. Päivystys- ja virka-ajan ulkopuolinen linja samassa numerossa; puheluihin vastataan mahdollisuuksien mukaan (ei ympärivuorokautinen palvelu).",
         "nb": "Åpent mandag til lørdag 8.30–17.00, stengt søndag. Akutt- og vaktlinje utenom åpningstid på samme nummer, besvares så langt det er mulig (ikke en døgnåpen tjeneste).",
         "sl": "Odprto pon–sob 8.30–17, ned zaprto. Nujna linija zunaj delovnega časa je na isti številki; na klice odgovarjajo po svojih zmožnostih (ni 24-urna služba).",
-        "hr": "Radi pon–sub 8:30–17:00, nedjeljom zatvoreno. Hitna linija i linija izvan radnog vremena na istom broju, javljaju se prema mogućnostima (ne radi 24 sata)."
+        "hr": "Radi pon–sub 8:30–17:00, nedjeljom zatvoreno. Hitna linija i linija izvan radnog vremena na istom broju, javljaju se prema mogućnostima (ne radi 24 sata).",
+        "de": "Mo–Sa 8.30–17.00 Uhr geöffnet, sonntags geschlossen. Notfall- und Nachttelefon unter derselben Nummer, wird nach Möglichkeit beantwortet (kein Dienst rund um die Uhr)."
       }
     },
     {
@@ -125,7 +128,8 @@
         "fi": "Auki ti–la 8.30–17.00; su ja ma suljettu.",
         "nb": "Åpent tirsdag til lørdag 8.30–17.00; stengt søndag og mandag.",
         "sl": "Odprto tor–sob 8.30–17; ned in pon zaprto.",
-        "hr": "Radi uto–sub 8:30–17:00; ned i pon zatvoreno."
+        "hr": "Radi uto–sub 8:30–17:00; ned i pon zatvoreno.",
+        "de": "Di–Sa 8.30–17.00 Uhr geöffnet; sonntags und montags geschlossen."
       }
     },
     {
@@ -148,7 +152,8 @@
         "fi": "Auki ti–pe 8.00–17.00 ja la 8.00–13.00; su ja ma suljettu.",
         "nb": "Åpent tirsdag til fredag 8.00–17.00 og lørdag 8.00–13.00; stengt søndag og mandag.",
         "sl": "Odprto tor–pet 8–17 in sob 8–13; ned in pon zaprto.",
-        "hr": "Radno vrijeme: uto–pet 8:00–17:00 i sub 8:00–13:00; ned i pon zatvoreno."
+        "hr": "Radno vrijeme: uto–pet 8:00–17:00 i sub 8:00–13:00; ned i pon zatvoreno.",
+        "de": "Di–Fr 8.00–17.00 Uhr und Sa 8.00–13.00 Uhr geöffnet; sonntags und montags geschlossen."
       }
     },
     {
@@ -171,7 +176,8 @@
         "fi": "Auki ti–pe 8.30–17.00 ja la 8.00–13.00; su ja ma suljettu.",
         "nb": "Åpent tirsdag til fredag 8.30–17.00 og lørdag 8.00–13.00; stengt søndag og mandag.",
         "sl": "Odprto tor–pet 8.30–17 in sob 8–13; ned in pon zaprto.",
-        "hr": "Radno vrijeme: uto–pet 8:30–17:00 i sub 8:00–13:00; ned i pon zatvoreno."
+        "hr": "Radno vrijeme: uto–pet 8:30–17:00 i sub 8:00–13:00; ned i pon zatvoreno.",
+        "de": "Di–Fr 8.30–17.00 Uhr und Sa 8.00–13.00 Uhr geöffnet; sonntags und montags geschlossen."
       }
     },
     {
@@ -193,7 +199,8 @@
         "fi": "Eläinten turvakoti ja eläinlääkäriklinikka, auki ti–la 8.00–17.00. Soita ja varaa aika.",
         "nb": "Dyrevern og dyreklinikk, åpen tirsdag til lørdag kl. 8.00–17.00. Ring for å bestille time.",
         "sl": "Zavetišče za reševanje in veterinarska ambulanta, odprta tor–sob 8–17. Naročite se po telefonu.",
-        "hr": "Sklonište za spašene životinje i veterinarska klinika, otvoreno uto–sub 8:00–17:00. Naručivanje telefonom."
+        "hr": "Sklonište za spašene životinje i veterinarska klinika, otvoreno uto–sub 8:00–17:00. Naručivanje telefonom.",
+        "de": "Tierheim und Tierarztpraxis, Di–Sa 8.00–17.00 Uhr geöffnet. Bitte telefonisch Termin vereinbaren."
       }
     }
   ],

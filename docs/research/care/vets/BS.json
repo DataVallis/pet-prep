@@ -73,7 +73,8 @@
         "fi": "ma–pe 8.30–17, la 9–14, su ja pyhäpäivinä suljettu. Päivystyslinja 24/7: +1 242 807 7960.",
         "nb": "man–fre 8.30–17.00, lør 9.00–14.00, stengt søndager og offentlige helligdager. Vakttelefon hele døgnet: +1 242 807 7960.",
         "sl": "Pon–pet 8.30–17, sob 9–14, ned in prazniki zaprto. Nujna številka 24/7: +1 242 807 7960.",
-        "hr": "pon–pet 8:30–17:00, sub 9:00–14:00, nedjeljom i blagdanima zatvoreno. Hitna linija 24/7: +1 242 807 7960."
+        "hr": "pon–pet 8:30–17:00, sub 9:00–14:00, nedjeljom i blagdanima zatvoreno. Hitna linija 24/7: +1 242 807 7960.",
+        "de": "Mo–Fr 8.30–17.00 Uhr, Sa 9.00–14.00 Uhr, sonn- und feiertags geschlossen. Notfallnummer rund um die Uhr: +1 242 807 7960."
       }
     },
     {
@@ -100,7 +101,8 @@
         "fi": "ma–pe 8.30–17, la 8.30–14, su suljettu. Päivystys ympäri vuorokauden aukioloaikojen ulkopuolella: +1 242 557 0911.",
         "nb": "man–fre 8.30–17.00, lør 8.30–14.00, stengt søndager. Vakttelefon utenom åpningstid hele døgnet: +1 242 557 0911.",
         "sl": "Pon–pet 8.30–17, sob 8.30–14, ned zaprto. Dežurna nujna služba 24 ur na dan zunaj delovnega časa: +1 242 557 0911.",
-        "hr": "pon–pet 8:30–17:00, sub 8:30–14:00, nedjeljom zatvoreno. Hitno dežurstvo 24 sata izvan radnog vremena: +1 242 557 0911."
+        "hr": "pon–pet 8:30–17:00, sub 8:30–14:00, nedjeljom zatvoreno. Hitno dežurstvo 24 sata izvan radnog vremena: +1 242 557 0911.",
+        "de": "Mo–Fr 8.30–17.00 Uhr, Sa 8.30–14.00 Uhr, sonntags geschlossen. Notdienst rund um die Uhr außerhalb der Öffnungszeiten (Rufbereitschaft): +1 242 557 0911."
       }
     },
     {
@@ -127,7 +129,8 @@
         "fi": "ma–pe 9–15, la ajanvarauksella, su suljettu. Päivystyslinja aukioloaikojen ulkopuolella: +1 242 468 3644.",
         "nb": "man–fre 9.00–15.00, lør etter timebestilling, stengt søndager. Vakttelefon utenom åpningstid: +1 242 468 3644.",
         "sl": "Pon–pet 9–15, sob po naročilu, ned zaprto. Nujna številka zunaj delovnega časa: +1 242 468 3644.",
-        "hr": "pon–pet 9:00–15:00, sub uz termin, nedjeljom zatvoreno. Hitna linija izvan radnog vremena: +1 242 468 3644."
+        "hr": "pon–pet 9:00–15:00, sub uz termin, nedjeljom zatvoreno. Hitna linija izvan radnog vremena: +1 242 468 3644.",
+        "de": "Mo–Fr 9.00–15.00 Uhr, Sa nach Terminvereinbarung, sonntags geschlossen. Notfallnummer außerhalb der Öffnungszeiten: +1 242 468 3644."
       }
     },
     {
@@ -154,7 +157,8 @@
         "fi": "ma–pe 9–17, la 9–13, su suljettu. Liikkuvat kotikäynnit koko New Providencen alueella.",
         "nb": "man–fre 9.00–17.00, lør 9.00–13.00, stengt søndager. Mobile hjemmebesøk i hele New Providence.",
         "sl": "Pon–pet 9–17, sob 9–13, ned zaprto. Mobilni obiski na domu po vsem območju New Providence.",
-        "hr": "pon–pet 9:00–17:00, sub 9:00–13:00, nedjeljom zatvoreno. Mobilni kućni posjeti na cijelom području New Providence."
+        "hr": "pon–pet 9:00–17:00, sub 9:00–13:00, nedjeljom zatvoreno. Mobilni kućni posjeti na cijelom području New Providence.",
+        "de": "Mo–Fr 9.00–17.00 Uhr, Sa 9.00–13.00 Uhr, sonntags geschlossen. Mobile Hausbesuche auf ganz New Providence."
       }
     },
     {
@@ -181,7 +185,8 @@
         "fi": "Klinikka ma, to ja la ajanvarauksella. Eläinten turvakoti ma–to ja la 8.30–16, pe 8.30–13.",
         "nb": "Klinikk man, tor og lør etter timebestilling. Dyrehjem man–tor og lør kl. 8.30–16.00, fre kl. 8.30–13.00.",
         "sl": "Klinika pon, čet in sob po naročilu. Zavetišče pon–čet in sob 8.30–16, pet 8.30–13.",
-        "hr": "Ambulanta pon, čet i sub uz termin. Prihvatilište pon–čet i sub 8:30–16:00, pet 8:30–13:00."
+        "hr": "Ambulanta pon, čet i sub uz termin. Prihvatilište pon–čet i sub 8:30–16:00, pet 8:30–13:00.",
+        "de": "Praxis Mo, Do und Sa nach Terminvereinbarung. Tierheim Mo–Do und Sa 8.30–16.00 Uhr, Fr 8.30–13.00 Uhr."
       }
     },
     {
@@ -208,7 +213,8 @@
         "fi": "ti–to 9–16, la 9–15, suljettu ma, pe, su ja pyhäpäivinä. Päivystystapauksissa soita tai lähetä tekstiviesti: +1 242 470 0109.",
         "nb": "Tir–tor 9.00–16.00, lør 9.00–15.00, stengt man, fre, søn og helligdager. Nødtilfeller: ring eller send tekstmelding til +1 242 470 0109.",
         "sl": "Tor–čet 9–16, sob 9–15, pon, pet, ned in prazniki zaprto. Nujni primeri: pokličite ali pišite na +1 242 470 0109.",
-        "hr": "uto–čet 9:00–16:00, sub 9:00–15:00, pon, pet, ned i blagdanima zatvoreno. Hitni slučajevi: nazovi ili pošalji poruku na +1 242 470 0109."
+        "hr": "uto–čet 9:00–16:00, sub 9:00–15:00, pon, pet, ned i blagdanima zatvoreno. Hitni slučajevi: nazovi ili pošalji poruku na +1 242 470 0109.",
+        "de": "Di–Do 9.00–16.00 Uhr, Sa 9.00–15.00 Uhr, montags, freitags, sonntags und feiertags geschlossen. Notfälle: anrufen oder SMS an +1 242 470 0109."
       }
     }
   ],

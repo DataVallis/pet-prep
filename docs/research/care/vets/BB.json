@@ -49,7 +49,8 @@
         "fi": "Päivystyslinja ympäri vuorokauden: +1 246 429 9355. Eläinlääkäripäivystys koko saarella.",
         "nb": "Akuttlinje hele døgnet: +1 246 429 9355. Akutt dyrlegehjelp over hele øya.",
         "sl": "Nujna linija 24 ur na dan: +1 246 429 9355. Nujni veterinarski primeri po vsem otoku.",
-        "hr": "Hitna linija 24 sata: +1 246 429 9355. Hitni veterinarski slučajevi na cijelom otoku."
+        "hr": "Hitna linija 24 sata: +1 246 429 9355. Hitni veterinarski slučajevi na cijelom otoku.",
+        "de": "Notfalltelefon rund um die Uhr: +1 246 429 9355. Tierärztliche Notfälle auf der ganzen Insel."
       }
     },
     {
@@ -73,7 +74,8 @@
         "fi": "Päivystyslinja: +1 246 231 0450.",
         "nb": "Akuttelefon: +1 246 231 0450.",
         "sl": "Nujna linija: +1 246 231 0450.",
-        "hr": "Hitna linija: +1 246 231 0450."
+        "hr": "Hitna linija: +1 246 231 0450.",
+        "de": "Notfalltelefon: +1 246 231 0450."
       }
     },
     {
@@ -100,7 +102,8 @@
         "fi": "Ajanvarauksella. ma–pe 8.30–17, la–su 9–11.",
         "nb": "Etter timebestilling. Man–fre kl. 8.30–17.00, lør–søn kl. 9.00–11.00.",
         "sl": "Po naročilu. Pon–pet 8.30–17, sob–ned 9–11.",
-        "hr": "Uz naručivanje. pon–pet 8:30–17:00, sub–ned 9:00–11:00."
+        "hr": "Uz naručivanje. pon–pet 8:30–17:00, sub–ned 9:00–11:00.",
+        "de": "Nur nach Terminvereinbarung. Mo–Fr 8.30–17.00 Uhr, Sa–So 9.00–11.00 Uhr."
       }
     },
     {
@@ -127,7 +130,8 @@
         "fi": "Ajanvarauksella. ma–pe 9–18, la–su 9–11.",
         "nb": "Etter timebestilling. Man–fre kl. 9.00–18.00, lør–søn kl. 9.00–11.00.",
         "sl": "Po naročilu. Pon–pet 9–18, sob–ned 9–11.",
-        "hr": "Uz naručivanje. pon–pet 9:00–18:00, sub–ned 9:00–11:00."
+        "hr": "Uz naručivanje. pon–pet 9:00–18:00, sub–ned 9:00–11:00.",
+        "de": "Nur nach Terminvereinbarung. Mo–Fr 9.00–18.00 Uhr, Sa–So 9.00–11.00 Uhr."
       }
     }
   ],

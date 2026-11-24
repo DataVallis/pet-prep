@@ -69,7 +69,8 @@
         "fi": "Auki maanantaista perjantaihin 8.30–16.00 (torstaisin kotikäynnit). Hätätapauksissa soita klinikalle.",
         "nb": "Åpent mandag til fredag 08.30–16.00 (torsdager er hjemmebesøk). Ved nødtilfeller, ring klinikken.",
         "sl": "Odprto od ponedeljka do petka 8.30–16 (ob četrtkih obiski na domu). Za nujno pomoč pokličite kliniko.",
-        "hr": "pon–pet 08:30–16:00 (četvrtkom kućni posjeti). Za hitne slučajeve nazovi kliniku."
+        "hr": "pon–pet 08:30–16:00 (četvrtkom kućni posjeti). Za hitne slučajeve nazovi kliniku.",
+        "de": "Mo–Fr 8.30–16.00 Uhr geöffnet (donnerstags Hausbesuche). Bei Notfällen bitte die Praxis anrufen."
       }
     },
     {
@@ -96,7 +97,8 @@
         "fi": "Päivystysnumero aukioloajan ulkopuolella: +255 753 520 244.",
         "nb": "Vakttelefon: +255 753 520 244.",
         "sl": "Linija zunaj delovnega časa: +255 753 520 244.",
-        "hr": "Linija izvan radnog vremena: +255 753 520 244."
+        "hr": "Linija izvan radnog vremena: +255 753 520 244.",
+        "de": "Nummer außerhalb der Öffnungszeiten: +255 753 520 244."
       }
     },
     {
@@ -123,7 +125,8 @@
         "fi": "Soita klinikalle aukioloaikojen ja ajanvarauksen tiedustelua varten.",
         "nb": "Ring klinikken for å høre åpningstider og for timebestilling.",
         "sl": "Za odpiralni čas in naročanje pokličite kliniko.",
-        "hr": "Nazovi kliniku za radno vrijeme i termine."
+        "hr": "Nazovi kliniku za radno vrijeme i termine.",
+        "de": "Öffnungszeiten und Termine bitte telefonisch erfragen."
       }
     }
   ],

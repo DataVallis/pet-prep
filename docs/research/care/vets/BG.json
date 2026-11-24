@@ -56,7 +56,8 @@
         "fi": "Auki päivittäin 8–22; päivystystapauksia otetaan vastaan näinä aikoina, uusia potilaita ei oteta klo 22 jälkeen. Vuodeosasto sairaalahoidossa oleville eläimille ympäri vuorokauden.",
         "nb": "Åpent daglig 08.00–22.00; nødtilfeller tas imot i disse åpningstidene, ingen nye pasienter etter 22.00. Døgnåpen sengepost for innlagte dyr.",
         "sl": "Odprto vsak dan 8–22; nujne primere sprejemajo v tem času, po 22. uri novih pacientov ne sprejemajo. 24-urni stacionar za hospitalizirane živali.",
-        "hr": "Otvoreno svaki dan 08:00–22:00; hitni slučajevi primaju se u tom vremenu, a nakon 22:00 ne primaju se novi pacijenti. Stacionar 24 sata za hospitalizirane životinje."
+        "hr": "Otvoreno svaki dan 08:00–22:00; hitni slučajevi primaju se u tom vremenu, a nakon 22:00 ne primaju se novi pacijenti. Stacionar 24 sata za hospitalizirane životinje.",
+        "de": "Täglich 8.00–22.00 Uhr geöffnet; Notfälle werden in dieser Zeit angenommen, nach 22.00 Uhr keine neuen Patienten. Stationäre Abteilung rund um die Uhr für aufgenommene Tiere."
       }
     },
     {
@@ -81,7 +82,8 @@
         "fi": "Auki ti–la 9.30–19; su ja ma suljettu.",
         "nb": "Åpent tir–lør 09.30–19.00; stengt søndag og mandag.",
         "sl": "Odprto tor–sob 9.30–19; ob nedeljah in ponedeljkih zaprto.",
-        "hr": "Otvoreno uto–sub 09:30–19:00; ned i pon zatvoreno."
+        "hr": "Otvoreno uto–sub 09:30–19:00; ned i pon zatvoreno.",
+        "de": "Di–Sa 9.30–19.00 Uhr geöffnet; sonntags und montags geschlossen."
       }
     }
   ],

@@ -124,7 +124,8 @@
         "fi": "Mainostaa toimivansa ympäri vuorokauden ilman vapaapäiviä. Soita etukäteen.",
         "nb": "Markedsfører drift døgnet rundt uten fridager. Ring på forhånd.",
         "sl": "Odprto 24 ur na dan, brez prostih dni. Vnaprej pokličite.",
-        "hr": "Radi non-stop, bez slobodnih dana. Nazovi unaprijed."
+        "hr": "Radi non-stop, bez slobodnih dana. Nazovi unaprijed.",
+        "de": "Rund um die Uhr geöffnet, ohne Ruhetage. Bitte vorher anrufen."
       }
     },
     {
@@ -152,7 +153,8 @@
         "fi": "Mainostaa päivystysleikkauksia 24/7, kotikäyntejä 24/7 ja ympärivuorokautisia vuodeosastoja. Soita etukäteen.",
         "nb": "Markedsfører akuttkirurgi hele døgnet, hjemmebesøk hele døgnet og døgnavdelinger for innlagte dyr. Ring på forhånd.",
         "sl": "Nujna kirurgija 24/7, obiski na domu 24/7 in bolnišnični oddelki z oskrbo 24 ur na dan. Vnaprej pokličite.",
-        "hr": "Hitna kirurgija 24/7, kućni posjeti 24/7 i stacionar non-stop. Nazovi unaprijed."
+        "hr": "Hitna kirurgija 24/7, kućni posjeti 24/7 i stacionar non-stop. Nazovi unaprijed.",
+        "de": "Notfallchirurgie und Hausbesuche rund um die Uhr sowie durchgehend betreute Stationen. Bitte vorher anrufen."
       }
     },
     {
@@ -180,7 +182,8 @@
         "fi": "Mainostaa olevansa ympärivuorokautinen klinikka. Normaali vastaanotto 9.30–20.00; klo 20.00 jälkeen vain päivystyspotilaat; 50 %:n yölisä 21.00–9.00.",
         "nb": "Markedsføres som døgnåpen klinikk. Vanlig resepsjon kl. 09.30–20.00; etter kl. 20.00 kun akuttpasienter; nattillegg på 50 % kl. 21.00–09.00.",
         "sl": "Klinika, odprta 24 ur na dan. Redni sprejem 9.30–20; po 20. uri samo nujni primeri; nočni dodatek 50 % 21–9.",
-        "hr": "Ambulanta radi non-stop. Redovni prijem 9:30–20:00; nakon 20:00 samo hitni pacijenti; noćna doplata od 50 % 21:00–09:00."
+        "hr": "Ambulanta radi non-stop. Redovni prijem 9:30–20:00; nakon 20:00 samo hitni pacijenti; noćna doplata od 50 % 21:00–09:00.",
+        "de": "Tierklinik rund um die Uhr. Reguläre Sprechzeiten 9.30–20.00 Uhr; nach 20.00 Uhr nur Notfallpatienten; 50 % Nachtzuschlag 21.00–9.00 Uhr."
       }
     },
     {
@@ -208,7 +211,8 @@
         "fi": "Mainostaa olevansa ympärivuorokautinen klinikka. Normaali vastaanotto 9.30–20.00; klo 20.00 jälkeen vain päivystyspotilaat; 50 %:n yölisä 21.00–9.00.",
         "nb": "Markedsføres som døgnåpen klinikk. Vanlig resepsjon kl. 09.30–20.00; etter kl. 20.00 kun akuttpasienter; nattillegg på 50 % kl. 21.00–09.00.",
         "sl": "Klinika, odprta 24 ur na dan. Redni sprejem 9.30–20; po 20. uri samo nujni primeri; 50 % nočni dodatek 21–9.",
-        "hr": "Ambulanta radi non-stop. Redovni prijem 9:30–20:00; nakon 20:00 samo hitni pacijenti; noćna doplata od 50 % 21:00–09:00."
+        "hr": "Ambulanta radi non-stop. Redovni prijem 9:30–20:00; nakon 20:00 samo hitni pacijenti; noćna doplata od 50 % 21:00–09:00.",
+        "de": "Tierklinik rund um die Uhr. Reguläre Sprechzeiten 9.30–20.00 Uhr; nach 20.00 Uhr nur Notfallpatienten; 50 % Nachtzuschlag 21.00–9.00 Uhr."
       }
     },
     {
@@ -236,7 +240,8 @@
         "fi": "Mainostaa ympärivuorokautisia eläinlääkäreitä, röntgeniä, apteekkia ja kauppaa; auki joka päivä. Soita etukäteen.",
         "nb": "Markedsfører dyrleger døgnet rundt, røntgen, apotek og butikk; åpent alle dager. Ring på forhånd.",
         "sl": "Veterinarji, rentgen, lekarna in trgovina 24 ur na dan; odprto vsak dan. Vnaprej pokličite.",
-        "hr": "Veterinari non-stop, rendgen, ljekarna i trgovina; otvoreno svaki dan. Nazovi unaprijed."
+        "hr": "Veterinari non-stop, rendgen, ljekarna i trgovina; otvoreno svaki dan. Nazovi unaprijed.",
+        "de": "Tierärzte, Röntgen, Apotheke und Shop rund um die Uhr; täglich geöffnet. Bitte vorher anrufen."
       }
     },
     {
@@ -264,7 +269,8 @@
         "fi": "Mainostaa toimivansa ympäri vuorokauden ilman vapaapäiviä; lyhyet tekniset tauot 8.30–9.00 ja 19.30–20.00. Soita etukäteen.",
         "nb": "Markedsføres som åpen døgnet rundt, uten fridager; korte tekniske pauser kl. 08.30–09.00 og 19.30–20.00. Ring på forhånd.",
         "sl": "Odprto 24 ur na dan, brez prostih dni; kratka tehnična odmora 8.30–9 in 19.30–20. Vnaprej pokličite.",
-        "hr": "Non-stop, bez slobodnih dana; kratke tehničke stanke 08:30–09:00 i 19:30–20:00. Nazovi unaprijed."
+        "hr": "Non-stop, bez slobodnih dana; kratke tehničke stanke 08:30–09:00 i 19:30–20:00. Nazovi unaprijed.",
+        "de": "Rund um die Uhr, ohne Ruhetage; kurze technische Pausen 8.30–9.00 und 19.30–20.00 Uhr. Bitte vorher anrufen."
       }
     },
     {
@@ -292,7 +298,8 @@
         "fi": "Auki päivittäin klo 9.00–18.00.",
         "nb": "Åpent alle dager kl. 09.00–18.00.",
         "sl": "Odprto vsak dan 9–18.",
-        "hr": "Otvoreno svaki dan 9:00–18:00."
+        "hr": "Otvoreno svaki dan 9:00–18:00.",
+        "de": "Täglich 9.00–18.00 Uhr geöffnet."
       }
     },
     {
@@ -320,7 +327,8 @@
         "fi": "Auki päivittäin 10.00–18.00.",
         "nb": "Åpent alle dager kl. 10.00–18.00.",
         "sl": "Odprto vsak dan 10–18.",
-        "hr": "Otvoreno svaki dan 10:00–18:00."
+        "hr": "Otvoreno svaki dan 10:00–18:00.",
+        "de": "Täglich 10.00–18.00 Uhr geöffnet."
       }
     },
     {
@@ -348,7 +356,8 @@
         "fi": "Auki päivittäin 10.00–18.00.",
         "nb": "Åpent alle dager kl. 10.00–18.00.",
         "sl": "Odprto vsak dan 10–18.",
-        "hr": "Otvoreno svaki dan 10:00–18:00."
+        "hr": "Otvoreno svaki dan 10:00–18:00.",
+        "de": "Täglich 10.00–18.00 Uhr geöffnet."
       }
     },
     {
@@ -376,7 +385,8 @@
         "fi": "Mainostaa toimivansa 24/7 ilman vapaapäiviä ja ympärivuorokautista vuodeosastoa. Soita etukäteen.",
         "nb": "Markedsfører drift hele døgnet uten fridager og døgnavdeling for innlagte dyr. Ring på forhånd.",
         "sl": "Odprto 24/7 brez prostih dni, bolnišnični oddelek deluje 24 ur na dan. Vnaprej pokličite.",
-        "hr": "Radi 24/7 bez slobodnih dana, uz stacionar koji radi non-stop. Nazovi unaprijed."
+        "hr": "Radi 24/7 bez slobodnih dana, uz stacionar koji radi non-stop. Nazovi unaprijed.",
+        "de": "Rund um die Uhr geöffnet, ohne Ruhetage, mit durchgehend betreuter Station. Bitte vorher anrufen."
       }
     },
     {
@@ -430,7 +440,8 @@
         "fi": "Auki seitsemän päivää viikossa ilman taukoa; päivystysaikoja tarjolla. Soita etukäteen yöllä.",
         "nb": "Åpent sju dager i uken uten pause; akutttimer tilbys. Ring på forhånd om natten.",
         "sl": "Odprto sedem dni v tednu brez odmora; nujni pregledi so možni. Ponoči vnaprej pokličite.",
-        "hr": "Otvoreno sedam dana u tjednu bez stanke; nude se hitni termini. Noću nazovi unaprijed."
+        "hr": "Otvoreno sedam dana u tjednu bez stanke; nude se hitni termini. Noću nazovi unaprijed.",
+        "de": "Sieben Tage die Woche ohne Pause geöffnet; Notfalltermine möglich. Nachts bitte vorher anrufen."
       }
     },
     {
@@ -458,7 +469,8 @@
         "fi": "ma–pe 9.00–18.00, la 9.00–15.00, su 10.00–14.00.",
         "nb": "man–fre 9.00–18.00, lør 9.00–15.00, søn 10.00–14.00.",
         "sl": "Pon–pet 9–18, sob 9–15, ned 10–14.",
-        "hr": "pon–pet 9:00–18:00, sub 9:00–15:00, ned 10:00–14:00."
+        "hr": "pon–pet 9:00–18:00, sub 9:00–15:00, ned 10:00–14:00.",
+        "de": "Mo–Fr 9.00–18.00 Uhr, Sa 9.00–15.00 Uhr, So 10.00–14.00 Uhr."
       }
     },
     {
@@ -485,7 +497,8 @@
         "fi": "Liikkuva eläinlääkäri kotikäynneillä Atyraussa ja sen alueella; mainostaa ympärivuorokautista päivystysapua. Soita etukäteen.",
         "nb": "Mobil dyrlege med hjemmebesøk i Atyrau og regionen; oppgir akutthjelp døgnet rundt. Ring på forhånd.",
         "sl": "Mobilni veterinar z obiski na domu v Atyrauu in okolici; nujna pomoč 24 ur na dan. Vnaprej pokličite.",
-        "hr": "Mobilni veterinar s kućnim posjetima u Atyrau i okolici; hitna veterinarska pomoć non-stop. Nazovi unaprijed."
+        "hr": "Mobilni veterinar s kućnim posjetima u Atyrau i okolici; hitna veterinarska pomoć non-stop. Nazovi unaprijed.",
+        "de": "Mobiler Tierarzt mit Hausbesuchen in Atyrau und Umgebung; Notfallhilfe rund um die Uhr. Bitte vorher anrufen."
       }
     },
     {
@@ -513,7 +526,8 @@
         "fi": "Auki päivittäin 9.00–21.00. Vuodeosasto ja liikkuva palvelu tarjolla.",
         "nb": "Åpent alle dager kl. 09.00–21.00. Innleggelsesavdeling og mobil tjeneste tilbys.",
         "sl": "Odprto vsak dan 9–21. Na voljo sta bolnišnični oddelek in mobilna služba.",
-        "hr": "Otvoreno svaki dan 9:00–21:00. Nude se stacionar i mobilna služba."
+        "hr": "Otvoreno svaki dan 9:00–21:00. Nude se stacionar i mobilna služba.",
+        "de": "Täglich 9.00–21.00 Uhr geöffnet. Stationäre Aufnahme und mobiler Dienst möglich."
       }
     },
     {
@@ -554,7 +568,8 @@
         "fi": "Auki päivittäin klo 9.00–21.00.",
         "nb": "Åpent alle dager kl. 09.00–21.00.",
         "sl": "Odprto vsak dan 9–21.",
-        "hr": "Otvoreno svaki dan 9:00–21:00."
+        "hr": "Otvoreno svaki dan 9:00–21:00.",
+        "de": "Täglich 9.00–21.00 Uhr geöffnet."
       }
     }
   ],

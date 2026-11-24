@@ -49,7 +49,8 @@
         "fi": "Auki päivittäin ympäri vuorokauden (valtion klinikka). Soita ensin kaupungin eläinlääkäripalvelun yhteyskeskukseen +7 495 612 12 12.",
         "nb": "Åpent hele døgnet, alle dager (statlig klinikk). Ring først kontaktsenteret for dyrlegetjenester i byen, +7 495 612 12 12.",
         "sl": "Odprto vsak dan, 24 ur na dan (državna klinika). Najprej pokličite mestni veterinarski klicni center +7 495 612 12 12.",
-        "hr": "Otvoreno svaki dan non-stop (državna klinika). Prvo nazovi gradski veterinarski kontakt-centar +7 495 612 12 12."
+        "hr": "Otvoreno svaki dan non-stop (državna klinika). Prvo nazovi gradski veterinarski kontakt-centar +7 495 612 12 12.",
+        "de": "Täglich rund um die Uhr geöffnet (staatliche Klinik). Bitte zuerst das städtische tierärztliche Kontaktcenter +7 495 612 12 12 anrufen."
       }
     },
     {
@@ -76,7 +77,8 @@
         "fi": "Päivittäin 9–21; vuodeosasto ympäri vuorokauden vakavasti sairaille eläimille.",
         "nb": "Alle dager 09.00–21.00; døgnåpen innleggelsesavdeling for alvorlig syke dyr.",
         "sl": "Vsak dan 9–21; stacionar 24 ur na dan za hudo bolne ljubljenčke.",
-        "hr": "Svaki dan 09:00–21:00; odjel za hospitalizaciju 24 sata za teško bolesne životinje."
+        "hr": "Svaki dan 09:00–21:00; odjel za hospitalizaciju 24 sata za teško bolesne životinje.",
+        "de": "Täglich 9.00–21.00 Uhr; stationäre Abteilung für schwerkranke Tiere rund um die Uhr."
       }
     },
     {
@@ -103,7 +105,8 @@
         "fi": "Valtion eläinlääkäripalvelun yhteyskeskus ympäri vuorokauden: kertoo, mitkä valtion klinikat ottavat eläimiä vastaan, ja lähettää eläinlääkärin kotikäynnille myös öisin ja viikonloppuisin.",
         "nb": "Den statlige veterinærtjenestens kontaktsenter for byen, åpent hele døgnet: opplyser hvilke statlige klinikker som tar imot dyr og sender en dyrlege hjem til deg, også om natten og i helger.",
         "sl": "Mestni klicni center državne veterinarske službe, dosegljiv 24 ur na dan: pove, katere državne klinike sprejemajo ljubljenčke, in pošlje veterinarja na dom, tudi ponoči in ob koncih tedna.",
-        "hr": "Gradski kontakt-centar državne veterinarske službe radi non-stop: informira koje državne klinike primaju životinje i šalje veterinara kući, također noću i vikendom."
+        "hr": "Gradski kontakt-centar državne veterinarske službe radi non-stop: informira koje državne klinike primaju životinje i šalje veterinara kući, također noću i vikendom.",
+        "de": "Städtisches Kontaktcenter des staatlichen Veterinärdienstes rund um die Uhr: nennt, welche staatlichen Kliniken Tiere aufnehmen, und schickt einen Tierarzt ins Haus, auch nachts und am Wochenende."
       }
     },
     {
@@ -131,7 +134,8 @@
         "fi": "Auki ympäri vuorokauden ilman vapaapäiviä. Ilmainen vartioitu pysäköinti.",
         "nb": "Åpent døgnet rundt, uten fridager. Gratis bevoktet parkering.",
         "sl": "Odprto 24 ur na dan, brez prostih dni. Brezplačno varovano parkirišče.",
-        "hr": "Otvoreno non-stop, bez slobodnih dana. Besplatno čuvano parkiralište."
+        "hr": "Otvoreno non-stop, bez slobodnih dana. Besplatno čuvano parkiralište.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet. Kostenloser bewachter Parkplatz."
       }
     },
     {
@@ -159,7 +163,8 @@
         "fi": "Auki ympäri vuorokauden ilman vapaapäiviä; teho-osasto ja vuodeosasto.",
         "nb": "Åpent døgnet rundt, uten fridager, med intensivavdeling og sengepost.",
         "sl": "Odprto 24 ur na dan, brez prostih dni, z intenzivno nego in stacionarjem.",
-        "hr": "Otvoreno non-stop, bez slobodnih dana, s intenzivnom njegom i odjelom za hospitalizaciju."
+        "hr": "Otvoreno non-stop, bez slobodnih dana, s intenzivnom njegom i odjelom za hospitalizaciju.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet, mit Intensivstation und stationärer Abteilung."
       }
     },
     {
@@ -187,7 +192,8 @@
         "fi": "Ympärivuorokautisten klinikoiden ketju; auki ympäri vuorokauden, kotikäynnit ympäri vuorokauden.",
         "nb": "Nettverk av døgnåpne klinikker; åpent hele døgnet, hjemmebesøk hele døgnet.",
         "sl": "Mreža 24-urnih klinik; odprto 24 ur na dan, obiski na domu 24 ur na dan.",
-        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata."
+        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
+        "de": "Netz von Tierkliniken rund um die Uhr; durchgehend geöffnet, Hausbesuche rund um die Uhr."
       }
     },
     {
@@ -215,7 +221,8 @@
         "fi": "Ympärivuorokautisten klinikoiden ketju; auki ympäri vuorokauden, kotikäynnit ympäri vuorokauden.",
         "nb": "Nettverk av døgnåpne klinikker; åpent hele døgnet, hjemmebesøk hele døgnet.",
         "sl": "Mreža klinik, odprtih 24 ur na dan; obiski na domu prav tako 24 ur na dan.",
-        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata."
+        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
+        "de": "Netz von Tierkliniken rund um die Uhr; durchgehend geöffnet, Hausbesuche rund um die Uhr."
       }
     },
     {
@@ -243,7 +250,8 @@
         "fi": "Ympärivuorokautisten klinikoiden ketju; auki ympäri vuorokauden, kotikäynnit ympäri vuorokauden.",
         "nb": "Nettverk av døgnåpne klinikker; åpent hele døgnet, hjemmebesøk hele døgnet.",
         "sl": "Mreža klinik, ki delujejo 24 ur na dan; odprto 24 ur na dan, obiski na domu 24 ur na dan.",
-        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata."
+        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
+        "de": "Netz rund um die Uhr geöffneter Tierkliniken; durchgehend geöffnet, Hausbesuche rund um die Uhr."
       }
     },
     {
@@ -271,7 +279,8 @@
         "fi": "Ympärivuorokautisten klinikoiden ketju; auki ympäri vuorokauden, kotikäynnit ympäri vuorokauden.",
         "nb": "Nettverk av døgnåpne klinikker; åpent hele døgnet, hjemmebesøk hele døgnet.",
         "sl": "Mreža 24-urnih klinik; odprto 24 ur na dan, obiski na domu tudi 24 ur na dan.",
-        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata."
+        "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
+        "de": "Netz von Tierkliniken rund um die Uhr; durchgehend geöffnet, Hausbesuche rund um die Uhr."
       }
     },
     {
@@ -299,7 +308,8 @@
         "fi": "Sairaalayksikkö auki ympäri vuorokauden; muut toimipisteet 9–21.",
         "nb": "Sykehusavdeling åpen døgnet rundt; andre avdelinger kl. 9.00–21.00.",
         "sl": "Bolnišnična podružnica odprta 24 ur na dan; druge podružnice 9–21.",
-        "hr": "Podružnica bolnice otvorena non-stop; ostale podružnice 09:00–21:00."
+        "hr": "Podružnica bolnice otvorena non-stop; ostale podružnice 09:00–21:00.",
+        "de": "Klinikfiliale rund um die Uhr geöffnet; übrige Filialen 9.00–21.00 Uhr."
       }
     },
     {
@@ -327,7 +337,8 @@
         "fi": "Auki 24/7 ilman vapaapäiviä; vuodeosasto ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, uten fridager, med døgnåpen sengepost.",
         "sl": "Odprto 24/7, brez prostih dni, z bolnišničnim oddelkom, odprtim 24 ur na dan.",
-        "hr": "Otvoreno 24/7, bez slobodnih dana, s odjelom za hospitalizaciju 24 sata."
+        "hr": "Otvoreno 24/7, bez slobodnih dana, s odjelom za hospitalizaciju 24 sata.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet, mit stationärer Abteilung rund um die Uhr."
       }
     },
     {
@@ -355,7 +366,8 @@
         "fi": "Auki 24/7 ilman vapaapäiviä; vuodeosasto ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, uten fridager, med døgnåpen sengepost.",
         "sl": "Odprto 24/7, brez prostih dni, s stacionarjem 24 ur na dan.",
-        "hr": "Otvoreno 24/7, bez slobodnih dana, s odjelom za hospitalizaciju 24 sata."
+        "hr": "Otvoreno 24/7, bez slobodnih dana, s odjelom za hospitalizaciju 24 sata.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet, mit stationärer Abteilung rund um die Uhr."
       }
     },
     {
@@ -383,7 +395,8 @@
         "fi": "Auki ympäri vuorokauden. Toinen toimipiste (Bukharestskaya 146 k.1) on auki päivittäin 10–20. Öisin (20–10) työskentelevät vain päivystävä eläinlääkäri ja avustaja, ja palveluvalikoima on suppeampi.",
         "nb": "Åpent hele døgnet. Den andre avdelingen (Bukharestskaya 146 k.1) er åpen 10.00–20.00 hver dag. Om natten (20.00–10.00) jobber bare vakthavende lege og en assistent, med et redusert tilbud.",
         "sl": "Odprto 24 ur na dan. Druga podružnica (Bukharestskaya 146 k.1) je odprta vsak dan 10–20. Ponoči (20–10) delata samo dežurni veterinar in pomočnik, z zmanjšanim obsegom storitev.",
-        "hr": "Otvoreno 24 sata. Druga podružnica (Bukharestskaya 146 k.1) otvorena je svaki dan 10:00–20:00. Noću (20:00–10:00) rade samo dežurni veterinar i asistent, uz smanjen opseg usluga."
+        "hr": "Otvoreno 24 sata. Druga podružnica (Bukharestskaya 146 k.1) otvorena je svaki dan 10:00–20:00. Noću (20:00–10:00) rade samo dežurni veterinar i asistent, uz smanjen opseg usluga.",
+        "de": "Rund um die Uhr geöffnet. Zweite Filiale (Bukharestskaya 146 k.1) täglich 10.00–20.00 Uhr geöffnet. Nachts (20.00–10.00 Uhr) arbeiten nur der diensthabende Arzt und eine Assistenz, mit eingeschränktem Leistungsangebot."
       }
     },
     {
@@ -411,7 +424,8 @@
         "fi": "Auki ympäri vuorokauden; klinikan mukaan ei yölisää.",
         "nb": "Åpent døgnet rundt; ifølge klinikken ikke noe nattillegg.",
         "sl": "Odprto 24 ur na dan; po navedbah klinike brez nočnega doplačila.",
-        "hr": "Otvoreno non-stop; prema podacima klinike nema noćne doplate."
+        "hr": "Otvoreno non-stop; prema podacima klinike nema noćne doplate.",
+        "de": "Rund um die Uhr geöffnet; laut Klinik kein Nachtzuschlag."
       }
     },
     {
@@ -438,7 +452,8 @@
         "fi": "Auki ympäri vuorokauden ilman vapaapäiviä.",
         "nb": "Åpent døgnet rundt, uten fridager.",
         "sl": "Odprto 24 ur na dan, brez prostih dni.",
-        "hr": "Otvoreno non-stop, bez slobodnih dana."
+        "hr": "Otvoreno non-stop, bez slobodnih dana.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet."
       }
     },
     {
@@ -465,7 +480,8 @@
         "fi": "Vastaanotto päivittäin 9–21; vuodeosasto ja teho-osasto 24/7.",
         "nb": "Resepsjon alle dager kl. 9.00–21.00; sengeavdeling og intensivavdeling hele døgnet.",
         "sl": "Sprejem vsak dan 9–21; bolnišnični oddelek in intenzivna nega 24/7.",
-        "hr": "Recepcija svaki dan 09:00–21:00; odjel za hospitalizaciju i intenzivna njega 24/7."
+        "hr": "Recepcija svaki dan 09:00–21:00; odjel za hospitalizaciju i intenzivna njega 24/7.",
+        "de": "Annahme täglich 9.00–21.00 Uhr; stationäre Abteilung und Intensivstation rund um die Uhr."
       }
     },
     {
@@ -492,7 +508,8 @@
         "fi": "Vastaanotto päivittäin 8–22; vuodeosasto ympäri vuorokauden.",
         "nb": "Resepsjon alle dager kl. 8.00–22.00; døgnåpen sengeavdeling.",
         "sl": "Sprejem vsak dan 8–22; stacionar 24 ur na dan.",
-        "hr": "Recepcija svaki dan 08:00–22:00; odjel za hospitalizaciju non-stop."
+        "hr": "Recepcija svaki dan 08:00–22:00; odjel za hospitalizaciju non-stop.",
+        "de": "Sprechstunde täglich 8.00–22.00 Uhr; stationäre Abteilung rund um die Uhr."
       }
     },
     {
@@ -520,7 +537,8 @@
         "fi": "Auki ympäri vuorokauden.",
         "nb": "Åpent hele døgnet.",
         "sl": "Odprto 24 ur na dan.",
-        "hr": "Otvoreno 24 sata."
+        "hr": "Otvoreno 24 sata.",
+        "de": "Rund um die Uhr geöffnet."
       }
     },
     {
@@ -548,7 +566,8 @@
         "fi": "Auki ympäri vuorokauden.",
         "nb": "Åpent hele døgnet.",
         "sl": "Odprto 24 ur na dan.",
-        "hr": "Otvoreno 24 sata."
+        "hr": "Otvoreno 24 sata.",
+        "de": "Rund um die Uhr geöffnet."
       }
     },
     {
@@ -576,7 +595,8 @@
         "fi": "Tämä toimipiste on auki ympäri vuorokauden.",
         "nb": "Åpent døgnet rundt ved denne avdelingen.",
         "sl": "Ta podružnica je odprta 24 ur na dan.",
-        "hr": "U ovoj podružnici otvoreno non-stop."
+        "hr": "U ovoj podružnici otvoreno non-stop.",
+        "de": "Diese Filiale ist rund um die Uhr geöffnet."
       }
     },
     {
@@ -603,7 +623,8 @@
         "fi": "Päivittäin 8–23.",
         "nb": "Alle dager kl. 8.00–23.00.",
         "sl": "Vsak dan 8–23.",
-        "hr": "Svaki dan 08:00–23:00."
+        "hr": "Svaki dan 08:00–23:00.",
+        "de": "Täglich 8.00–23.00 Uhr."
       }
     },
     {
@@ -631,7 +652,8 @@
         "fi": "Auki ympäri vuorokauden; yötaksa 21–9.",
         "nb": "Åpent døgnet rundt; nattakst 21.00–09.00.",
         "sl": "Odprto 24 ur na dan; nočna tarifa 21–9.",
-        "hr": "Otvoreno non-stop; noćna tarifa 21:00–09:00."
+        "hr": "Otvoreno non-stop; noćna tarifa 21:00–09:00.",
+        "de": "Rund um die Uhr geöffnet; Nachttarif 21.00–9.00 Uhr."
       }
     },
     {
@@ -659,7 +681,8 @@
         "fi": "Auki ympäri vuorokauden ilman vapaapäiviä; yötaksa 21–9.",
         "nb": "Åpent døgnet rundt, uten fridager; nattakst 21.00–09.00.",
         "sl": "Odprto 24 ur na dan, brez prostih dni; nočna tarifa 21–9.",
-        "hr": "Otvoreno non-stop, bez slobodnih dana; noćna tarifa 21:00–09:00."
+        "hr": "Otvoreno non-stop, bez slobodnih dana; noćna tarifa 21:00–09:00.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet; Nachttarif 21.00–9.00 Uhr."
       }
     },
     {
@@ -687,7 +710,8 @@
         "fi": "Auki 24/7 ilman vapaapäiviä. Soita ennen tuloa hätätapauksessa.",
         "nb": "Åpent hele døgnet, uten fridager. Ring før du kommer ved nødtilfeller.",
         "sl": "Odprto 24/7 brez prostih dni. V nujnem primeru pokličite, preden pridete.",
-        "hr": "Otvoreno 24/7 bez slobodnih dana. U hitnom slučaju nazovi prije dolaska."
+        "hr": "Otvoreno 24/7 bez slobodnih dana. U hitnom slučaju nazovi prije dolaska.",
+        "de": "Rund um die Uhr ohne Ruhetag geöffnet. Im Notfall bitte vorher anrufen."
       }
     },
     {
@@ -715,7 +739,8 @@
         "fi": "Ilmoittaa olevansa auki ympäri vuorokauden; leikkaus, tehohoito ja röntgen 24 h, muut palvelut päiväsaikaan.",
         "nb": "Oppgir å være døgnåpen; kirurgi, intensivbehandling og røntgen hele døgnet, andre tjenester på dagtid.",
         "sl": "Navajajo, da delujejo 24 ur na dan; kirurgija, intenzivna nega in rentgen 24 ur na dan, druge storitve podnevi.",
-        "hr": "Navodi da radi non-stop; kirurgija, intenzivna njega i rendgen 24 h, ostale usluge danju."
+        "hr": "Navodi da radi non-stop; kirurgija, intenzivna njega i rendgen 24 h, ostale usluge danju.",
+        "de": "Nach eigenen Angaben rund um die Uhr geöffnet; Chirurgie, Intensivmedizin und Röntgen rund um die Uhr, übrige Leistungen tagsüber."
       }
     },
     {
@@ -743,7 +768,8 @@
         "fi": "Auki 24/7/365, päivystys ympäri vuorokauden. Toinen toimipiste osoitteessa ul. Uralskaya 184/2 on auki 9–21.",
         "nb": "Åpent hele døgnet, 365 dager i året, akuttbehandling døgnet rundt. Den andre avdelingen på ul. Uralskaya 184/2 er åpen 09.00–21.00.",
         "sl": "Odprto 24/7/365, nujna pomoč 24 ur na dan. Druga podružnica na ul. Uralskaya 184/2 je odprta 9–21.",
-        "hr": "Otvoreno 24/7/365, hitna skrb non-stop. Druga podružnica na ul. Uralskaya 184/2 otvorena je 09:00–21:00."
+        "hr": "Otvoreno 24/7/365, hitna skrb non-stop. Druga podružnica na ul. Uralskaya 184/2 otvorena je 09:00–21:00.",
+        "de": "Rund um die Uhr an 365 Tagen geöffnet, Notfallversorgung rund um die Uhr. Zweite Filiale in der ul. Uralskaya 184/2 ist 9.00–21.00 Uhr geöffnet."
       }
     },
     {
@@ -771,7 +797,8 @@
         "fi": "Auki 24/7.",
         "nb": "Åpent hele døgnet.",
         "sl": "Odprto 24/7.",
-        "hr": "Otvoreno 24/7."
+        "hr": "Otvoreno 24/7.",
+        "de": "Rund um die Uhr geöffnet."
       }
     },
     {
@@ -798,7 +825,8 @@
         "fi": "Päivittäin 8–20; eläimiä otetaan vastaan viimeistään tuntia ennen sulkemista.",
         "nb": "Alle dager kl. 8.00–20.00; dyr tas imot til én time før stengetid.",
         "sl": "Vsak dan 8–20; sprejem do ene ure pred zaprtjem.",
-        "hr": "Svaki dan 08:00–20:00; životinje se primaju do sat vremena prije zatvaranja."
+        "hr": "Svaki dan 08:00–20:00; životinje se primaju do sat vremena prije zatvaranja.",
+        "de": "Täglich 8.00–20.00 Uhr; Tiere werden bis eine Stunde vor Schließung angenommen."
       }
     },
     {
@@ -825,7 +853,8 @@
         "fi": "Päivittäin 8–20; eläimiä otetaan vastaan viimeistään tuntia ennen sulkemista.",
         "nb": "Alle dager kl. 8.00–20.00; dyr tas imot til én time før stengetid.",
         "sl": "Vsak dan 8–20; sprejem do eno uro pred zaprtjem.",
-        "hr": "Svaki dan 08:00–20:00; životinje se primaju do sat vremena prije zatvaranja."
+        "hr": "Svaki dan 08:00–20:00; životinje se primaju do sat vremena prije zatvaranja.",
+        "de": "Täglich 8.00–20.00 Uhr; Tiere werden bis eine Stunde vor Schließung angenommen."
       }
     },
     {
@@ -852,7 +881,8 @@
         "fi": "ma–pe 9–17; la–su suljettu.",
         "nb": "Man–fre 09.00–17.00; stengt lør–søn.",
         "sl": "Pon–pet 9–17; sob–ned zaprto.",
-        "hr": "pon–pet 09:00–17:00; sub i ned zatvoreno."
+        "hr": "pon–pet 09:00–17:00; sub i ned zatvoreno.",
+        "de": "Mo–Fr 9.00–17.00 Uhr; Sa–So geschlossen."
       }
     },
     {
@@ -879,7 +909,8 @@
         "fi": "Auki joka päivä pyhät mukaan lukien; kysy tarkat aukioloajat soittamalla.",
         "nb": "Åpent alle dager, også helligdager; ring for nøyaktige åpningstider.",
         "sl": "Odprto vsak dan, tudi ob praznikih; za točen čas pokličite.",
-        "hr": "Otvoreno svaki dan, uključujući blagdane; točno radno vrijeme provjeri telefonom."
+        "hr": "Otvoreno svaki dan, uključujući blagdane; točno radno vrijeme provjeri telefonom.",
+        "de": "Täglich geöffnet, auch feiertags; genaue Öffnungszeiten bitte telefonisch erfragen."
       }
     }
   ],
