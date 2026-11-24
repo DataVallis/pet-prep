@@ -16,6 +16,9 @@
  *   until a replacement is ready. The first error asks for a fresh state once
  *   (`onMediaExpired`, expired signature) and retries the re-signed URL; a second error
  *   fails the media for 60 s, then one more try, then for good (until the file changes).
+ *   Each of those stages is reported once per session to System health (scope `pet-media`,
+ *   `modules/petMedia/mediaErrorReport.ts`: what played, local / remote, the player's message,
+ *   layer age, signature time left — never the URL).
  * - **Battery:** players pause while the app is in the background or `active` is
  *   false (screen covered); they don't keep the screen on.
  * - The child never sees a media error: pending shows a gentle "getting ready" hint,
@@ -42,12 +45,14 @@ import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPla
 import type { LockReason } from '@/modules/childPet/childPetView';
 import { useAppActive, useLocalMediaUri, useStableUrl } from '@/modules/petMedia/hooks';
 import { forgetLocalMedia, isLocalMediaUri, localMediaUri } from '@/modules/petMedia/mediaFileCache';
+import { describeClip, linkLeftMs, reportPetMediaFailure, videoErrorStage } from '@/modules/petMedia/mediaErrorReport';
 import {
   NO_VIDEO_ERRORS,
   canPlayUrl,
   isMediaPending,
   isWaitingForUrl,
   nextFailedExpiry,
+  mediaKey,
   recordVideoError,
   recordVideoReady,
   videoStateFor,
@@ -122,6 +127,17 @@ interface Layer {
   readyEarly: boolean;
   /** David 2026-10-23: start this many ms into the clip (school performing clip, short window). */
   startAtMs?: number;
+  /** 2026-11-24 `pet-media` reports: what it plays (`describeClip`) and when it was mounted (device ms). */
+  label: string;
+  createdAtMs: number;
+}
+
+/** What the player knew when it failed (2026-11-24 `pet-media` reports). */
+export interface VideoFailure {
+  /** The phone's cached copy was playing (else the remote URL). */
+  local: boolean;
+  /** expo-video's `StatusChangeEventPayload.error.message`, when it gave one. */
+  playerMessage: string | null;
 }
 
 export interface PetMediaViewProps {
@@ -197,7 +213,7 @@ interface VideoLayerProps {
   /** David 2026-10-23: start this many ms into the clip (set once, before it plays). */
   startAtMs?: number;
   onReady: (id: string) => void;
-  onError: (id: string) => void;
+  onError: (id: string, failure: VideoFailure) => void;
   onEnd?: (id: string) => void;
   testID: string;
 }
@@ -228,19 +244,21 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, s
 
   useEffect(() => {
     let fallback: ReturnType<typeof setTimeout> | null = null;
-    const handle = (status: VideoPlayerStatus) => {
+    const handle = (status: VideoPlayerStatus, playerMessage: string | null) => {
       if (status === 'error') {
         // A broken local copy is deleted; the normal retry then plays the remote URL.
         if (localSource) forgetLocalMedia(url, 'video');
-        onError(id);
+        onError(id, { local: localSource, playerMessage });
       }
       else if (status === 'readyToPlay' && fallback === null) {
         fallback = setTimeout(() => onReady(id), READY_FALLBACK_MS);
       }
     };
-    const sub = player.addListener('statusChange', (payload: StatusChangeEventPayload) => handle(payload.status));
+    const sub = player.addListener('statusChange', (payload: StatusChangeEventPayload) =>
+      handle(payload.status, typeof payload.error?.message === 'string' ? payload.error.message : null),
+    );
     // The status may have changed before we subscribed (fast cache hit / instant error).
-    handle(player.status);
+    handle(player.status, null);
     return () => {
       sub.remove();
       if (fallback !== null) clearTimeout(fallback);
@@ -290,9 +308,22 @@ function sameLayers(a: readonly Layer[], b: readonly Layer[]): boolean {
   return a.length === b.length && a.every((l, i) => l === b[i]);
 }
 
-function newLayer(key: string, url: string, loop: boolean, preload: boolean, startAtMs?: number): Layer {
+function newLayer(key: string, url: string, loop: boolean, preload: boolean, label: string, startAtMs?: number): Layer {
   layerSeq += 1;
-  return { id: `${key}#${layerSeq}`, key, url, opacity: new Animated.Value(0), phase: 'loading', errored: false, loop, preload, readyEarly: false, ...(startAtMs !== undefined ? { startAtMs } : {}) };
+  return {
+    id: `${key}#${layerSeq}`,
+    key,
+    url,
+    opacity: new Animated.Value(0),
+    phase: 'loading',
+    errored: false,
+    loop,
+    preload,
+    readyEarly: false,
+    label,
+    createdAtMs: Date.now(),
+    ...(startAtMs !== undefined ? { startAtMs } : {}),
+  };
 }
 
 function animateTo(value: Animated.Value, toValue: number, done?: () => void): void {
@@ -447,6 +478,9 @@ export default function PetMediaView({
   const targetStartAt = target.kind === 'clip' ? target.startAtMs : undefined;
   const preloadKey = preloadTarget?.kind === 'clip' ? preloadTarget.key : null;
   const preloadUrl = preloadTarget?.kind === 'clip' ? preloadTarget.url : null;
+  // 2026-11-24: labels for `pet-media` reports (derived from the same items as the keys above).
+  const targetLabel = target.kind === 'clip' ? describeClip(target, media) : '';
+  const preloadLabel = preloadTarget?.kind === 'clip' ? describeClip(preloadTarget, media) : '';
   useEffect(() => {
     const current = layersRef.current;
     // M5-T08: a preloaded loop nobody needs any more is dropped (it never showed).
@@ -458,7 +492,7 @@ export default function PetMediaView({
     // Mount the loop that follows a transition (hidden, paused at frame 0) so the switch is instant.
     const withPreload =
       preloadKey !== null && preloadUrl !== null && !promoted.some((l) => l.key === preloadKey && !l.errored)
-        ? [...promoted, newLayer(preloadKey, preloadUrl, true, true)]
+        ? [...promoted, newLayer(preloadKey, preloadUrl, true, true, preloadLabel)]
         : promoted;
     if (targetVideoKey === null || targetVideoUrl === null) {
       // No video wanted: drop what never showed, fade out what is visible — except a
@@ -501,7 +535,7 @@ export default function PetMediaView({
       return;
     }
     // New media on top (order = paint order); a transition covers its preloaded loop.
-    commit([...base, newLayer(targetVideoKey, targetVideoUrl, targetLoop, false, targetStartAt)]);
+    commit([...base, newLayer(targetVideoKey, targetVideoUrl, targetLoop, false, targetLabel, targetStartAt)]);
     // targetStartAt belongs to the clip key (a new phase instance = a new key): read when the layer is created.
   }, [targetVideoKey, targetVideoUrl, targetLoop, preloadKey, preloadUrl, errors, commit, retire]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -549,7 +583,7 @@ export default function PetMediaView({
   );
 
   const onError = useCallback(
-    (id: string) => {
+    (id: string, failure: VideoFailure) => {
       const layer = layersRef.current.find((l) => l.id === id);
       if (!layer || layer.errored) return;
       if (layer.phase === 'visible') {
@@ -559,7 +593,21 @@ export default function PetMediaView({
         layer.opacity.stopAnimation();
         commit(layersRef.current.filter((l) => l.id !== id));
       }
-      const result = recordVideoError(errorsRef.current, layer.url, expiredRef.current !== undefined, Date.now());
+      const now = Date.now();
+      const before = errorsRef.current;
+      const result = recordVideoError(before, layer.url, expiredRef.current !== undefined, now);
+      // 2026-11-24: tell System health why (technical facts only — never the URL; once per label + stage per session).
+      const stage = videoErrorStage(before, result.state, mediaKey(layer.url), result.refetch);
+      if (stage !== null) {
+        reportPetMediaFailure({
+          label: layer.label,
+          local: failure.local,
+          stage,
+          layerAgeMs: now - layer.createdAtMs,
+          linkLeftMs: linkLeftMs(layer.url, now),
+          playerMessage: failure.playerMessage,
+        });
+      }
       errorsRef.current = result.state;
       setErrors(result.state);
       if (result.refetch) expiredRef.current?.();

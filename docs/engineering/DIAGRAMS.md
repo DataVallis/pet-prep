@@ -2539,7 +2539,7 @@ No third-party SDK; release builds only. The report carries technical facts only
 
 ```mermaid
 sequenceDiagram
-  participant B as Error boundary / ErrorUtils / Hermes tracker
+  participant B as Error boundary / ErrorUtils / Hermes tracker / PetMediaView player (pet-media)
   participant R as modules/errorReporting (reporter)
   participant Q as Queue file (max 20, dedupe 10 min)
   participant S as POST /api/app-errors
