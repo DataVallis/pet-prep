@@ -170,6 +170,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-24 (mobile, `feat/M5-T20-care-beat`)
+- M5-T20 (David: ignore taps, W1): one care at a time — `careBeat.ts` keeps care buttons `busy` (never `disabled`, never in `actionRules`) from the press until the bowls / treat clip ends, ≤ 5 s, only when a clip plays; `dueCare.ts` = the one source of the glowing care button (take out › scrub › litter › feed › water when refillable and thirst < 100). JS only (OTA). Debt: not verified on a device; next: David checks Take out → Feed → Water on a phone with bowls.
+
 ### 2026-11-24 (backend, `feat/quiet-hours-change-log`)
 - Dnevnik sprememb tihih ur (David »ja naredi«): tabela `quiet_hours_changes` (prej → potem, starš, User-Agent, `X-PetPrep-Features`), piše jo samo `QuietHoursChangeLog` iz `QuietHoursController::save` in `PetQuietHoursService::change`, samo ob dejanski spremembi; admin Users → član družine → »Quiet hours (family)« (samo branje: shranjene ure + zadnjih 20 sprememb); v izvozu (`quiet_hours_changes`), izbris z družino (tudi zadnji starš izbriše račun) in z ljubljenčkom (njegove vrstice), starš, ki izbriše račun ali se z vabilom pridruži drugi družini, se v stari družini anonimizira (`removeParent` / `FamilyInviteService::joinFamily`, QA #1594); admin poišče družino enkrat na zapis; test `QuietHoursChangeLogTest`. Dolg: politika zasebnosti ga še ne omenja (David: zaenkrat ne posodabljamo) — dodati ob naslednji posodobitvi politike. Starejše spremembe (vključno z družino 19) niso zapisane.
 
