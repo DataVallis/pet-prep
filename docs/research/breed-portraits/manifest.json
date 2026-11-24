@@ -6053,6 +6053,21 @@
             "prompt_hash": "sha256:6b20f593bacfa144daa751230411bbe6fbd7ab2a68aa234b1bda8f163242ee8c",
             "generated_at": "2026-11-24T01:26:48+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "german_pinscher",
+            "species": "dog",
+            "colour": "red",
+            "colour_value": "self-coloured deer red (red to dark red-brown)",
+            "file": "dog/german-pinscher--red.webp",
+            "reference": "dog/german-pinscher.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:b7924b14ed58e7285166d43eeb109509de32410b343eb6f48dd1b4541aeb6a02",
+            "generated_at": "2026-11-24T03:28:31+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
