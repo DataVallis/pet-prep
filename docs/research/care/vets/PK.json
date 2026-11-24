@@ -49,7 +49,8 @@
         "fi": "Yliopiston opetussairaala, auki ympäri vuorokauden 7 päivää viikossa, päivystys ja tehohoito.",
         "nb": "Undervisningssykehus, åpent hele døgnet, sju dager i uken, med akutt- og intensivbehandling.",
         "sl": "Univerzitetna učna bolnišnica, odprta 24 ur na dan, 7 dni v tednu, z nujno in intenzivno oskrbo.",
-        "hr": "Sveučilišna nastavna bolnica, otvorena 24 sata dnevno, 7 dana u tjednu, s hitnom i intenzivnom skrbi."
+        "hr": "Sveučilišna nastavna bolnica, otvorena 24 sata dnevno, 7 dana u tjednu, s hitnom i intenzivnom skrbi.",
+        "de": "Universitäre Lehrklinik, rund um die Uhr an 7 Tagen die Woche geöffnet, mit Notfall- und Intensivversorgung."
       }
     },
     {
@@ -77,7 +78,8 @@
         "fi": "Päivystyslinja auki ympäri vuorokauden, 7 päivää viikossa, myös pyhäpäivinä, DHA:n ja Lake Cityn toimipisteissä. UVAS-toimipiste 9.00–3.00, UET-toimipiste 12.00–22.00.",
         "nb": "Akuttelefon åpen hele døgnet, sju dager i uken, også helligdager, ved avdelingene DHA og Lake City. Avdeling UVAS kl. 9.00–3.00, avdeling UET kl. 12.00–22.00.",
         "sl": "Nujna linija odprta 24 ur na dan, 7 dni v tednu, tudi ob praznikih, v poslovalnicah DHA in Lake City. Poslovalnica UVAS 9–3, poslovalnica UET 12–22.",
-        "hr": "Hitna linija radi 24 sata, 7 dana u tjednu, uključujući blagdane, u podružnicama DHA i Lake City. Podružnica UVAS 9:00–03:00, podružnica UET 12:00–22:00."
+        "hr": "Hitna linija radi 24 sata, 7 dana u tjednu, uključujući blagdane, u podružnicama DHA i Lake City. Podružnica UVAS 9:00–03:00, podružnica UET 12:00–22:00.",
+        "de": "Notfalltelefon rund um die Uhr an 7 Tagen die Woche, auch feiertags, in den Filialen DHA und Lake City. Filiale UVAS 9.00–3.00 Uhr, Filiale UET 12.00–22.00 Uhr."
       }
     },
     {
@@ -105,7 +107,8 @@
         "fi": "Auki joka päivä ympäri vuorokauden; päivystys 24/7.",
         "nb": "Åpent mandag til søndag døgnet rundt; akuttbehandling hele døgnet.",
         "sl": "Odprto od ponedeljka do nedelje ves čas; nujna pomoč 24/7.",
-        "hr": "Otvoreno pon–ned non-stop; hitna skrb 24/7."
+        "hr": "Otvoreno pon–ned non-stop; hitna skrb 24/7.",
+        "de": "Montag bis Sonntag rund um die Uhr geöffnet; Notfallversorgung rund um die Uhr."
       }
     },
     {
@@ -132,7 +135,8 @@
         "fi": "Auki 24/7, sairaalahoidossa olevia lemmikkejä valvotaan ympäri vuorokauden.",
         "nb": "Åpent hele døgnet, med døgnovervåking av innlagte kjæledyr.",
         "sl": "Odprto 24/7 z neprekinjenim nadzorom hospitaliziranih ljubljenčkov.",
-        "hr": "Otvoreno 24/7, hospitalizirani ljubimci nadziru se non-stop."
+        "hr": "Otvoreno 24/7, hospitalizirani ljubimci nadziru se non-stop.",
+        "de": "Rund um die Uhr geöffnet, mit Überwachung stationär aufgenommener Haustiere rund um die Uhr."
       }
     },
     {
@@ -159,7 +163,8 @@
         "fi": "Auki 24/7, Airport Road. Ajanvaraus WhatsAppilla.",
         "nb": "Åpent hele døgnet, Airport Road. Timebestilling via WhatsApp.",
         "sl": "Odprto 24/7, Airport Road. Naročanje prek WhatsAppa.",
-        "hr": "Otvoreno 24/7, Airport Road. Naručivanje putem WhatsAppa."
+        "hr": "Otvoreno 24/7, Airport Road. Naručivanje putem WhatsAppa.",
+        "de": "Rund um die Uhr geöffnet, Airport Road. Terminbuchung per WhatsApp."
       }
     },
     {
@@ -187,7 +192,8 @@
         "fi": "Auki päivittäin 11.00–23.00; päivystystapaukset 24/7. Matkapuhelin 0306 7997887.",
         "nb": "Åpent alle dager kl. 11.00–23.00; nødtilfeller hele døgnet, alle dager. Mobil 0306 7997887.",
         "sl": "Odprto vsak dan 11–23; nujni primeri 24/7. Mobilni telefon 0306 7997887.",
-        "hr": "Otvoreno svaki dan 11:00–23:00; hitni slučajevi 24/7. Mobitel 0306 7997887."
+        "hr": "Otvoreno svaki dan 11:00–23:00; hitni slučajevi 24/7. Mobitel 0306 7997887.",
+        "de": "Täglich 11.00–23.00 Uhr geöffnet; Notfälle rund um die Uhr. Mobil 0306 7997887."
       }
     },
     {
@@ -215,7 +221,8 @@
         "fi": "Avovastaanotto päivittäin 10.00–22.00; päivystys 24/7, soita milloin tahansa.",
         "nb": "Poliklinikk kl. 10.00–22.00 daglig; akutt hele døgnet, ring når som helst.",
         "sl": "Ambulanta 10–22 vsak dan; nujna pomoč 24/7, pokličite kadar koli.",
-        "hr": "Ambulantni pregledi svaki dan 10:00–22:00; hitna služba 24/7, nazovi bilo kada."
+        "hr": "Ambulantni pregledi svaki dan 10:00–22:00; hitna služba 24/7, nazovi bilo kada.",
+        "de": "Ambulante Sprechstunde täglich 10.00–22.00 Uhr; Notfälle rund um die Uhr, jederzeit anrufen."
       }
     },
     {
@@ -243,7 +250,8 @@
         "fi": "Auki ympäri vuorokauden, 24/7. Myös 0304 534 9999, 051 2653157.",
         "nb": "Åpent døgnet rundt, alle dager. Også 0304 534 9999, 051 2653157.",
         "sl": "Odprto ves čas, 24/7. Tudi 0304 534 9999, 051 2653157.",
-        "hr": "Otvoreno non-stop, 24/7. Također 0304 534 9999, 051 2653157."
+        "hr": "Otvoreno non-stop, 24/7. Također 0304 534 9999, 051 2653157.",
+        "de": "Rund um die Uhr geöffnet. Außerdem 0304 534 9999, 051 2653157."
       }
     },
     {
@@ -270,7 +278,8 @@
         "fi": "Lemmikkien päivystys 24/7, päivystystiimi valmiudessa. Myös 051 5148545.",
         "nb": "Akuttpleie for kjæledyr hele døgnet, akuttteam i beredskap. Også 051 5148545.",
         "sl": "Nujna oskrba ljubljenčkov 24/7, nujna ekipa je v pripravljenosti. Tudi 051 5148545.",
-        "hr": "Hitna skrb za ljubimce 24/7, hitni tim u pripravnosti. Također 051 5148545."
+        "hr": "Hitna skrb za ljubimce 24/7, hitni tim u pripravnosti. Također 051 5148545.",
+        "de": "Notfallversorgung für Haustiere rund um die Uhr, Notfallteam in Bereitschaft. Außerdem 051 5148545."
       }
     },
     {
@@ -297,7 +306,8 @@
         "fi": "Auki päivittäin 9.30–21.00; päivystyslinja 0315 9596162, ajanvaraus 0333 1904310.",
         "nb": "Åpent alle dager kl. 09.30–21.00; akuttlinje 0315 9596162, timebestilling 0333 1904310.",
         "sl": "Odprto vsak dan 9.30–21; nujna številka 0315 9596162, naročanje 0333 1904310.",
-        "hr": "Otvoreno svaki dan 9:30–21:00; hitna linija 0315 9596162, termini 0333 1904310."
+        "hr": "Otvoreno svaki dan 9:30–21:00; hitna linija 0315 9596162, termini 0333 1904310.",
+        "de": "Täglich 9.30–21.00 Uhr geöffnet; Notfallnummer 0315 9596162, Terminvereinbarung 0333 1904310."
       }
     },
     {
@@ -324,7 +334,8 @@
         "fi": "Auki päivittäin noin 11.00–23.30; päivystysapua tarjolla, soita etukäteen. Myös 0320 8285086.",
         "nb": "Åpent alle dager fra ca. kl. 11.00 til 23.30; akuttjeneste tilbys, ring på forhånd. Også 0320 8285086.",
         "sl": "Odprto vsak dan od približno 11 do 23.30; nujna pomoč na voljo, vnaprej pokličite. Tudi 0320 8285086.",
-        "hr": "Otvoreno svaki dan otprilike od 11:00 do 23:30; nudi podršku u hitnim slučajevima, nazovi unaprijed. Također 0320 8285086."
+        "hr": "Otvoreno svaki dan otprilike od 11:00 do 23:30; nudi podršku u hitnim slučajevima, nazovi unaprijed. Također 0320 8285086.",
+        "de": "Täglich etwa 11.00–23.30 Uhr geöffnet; Notfallhilfe wird angeboten, bitte vorher anrufen. Außerdem 0320 8285086."
       }
     },
     {
@@ -351,7 +362,8 @@
         "fi": "Auki päivittäin klo 12–24. Myös +92 304 0738738.",
         "nb": "Åpent alle dager fra kl. 12 til midnatt. Også +92 304 0738738.",
         "sl": "Odprto vsak dan od poldneva do polnoči. Tudi +92 304 0738738.",
-        "hr": "Otvoreno svaki dan od podneva do ponoći. Također +92 304 0738738."
+        "hr": "Otvoreno svaki dan od podneva do ponoći. Također +92 304 0738738.",
+        "de": "Täglich 12.00–24.00 Uhr geöffnet. Außerdem +92 304 0738738."
       }
     },
     {
@@ -379,7 +391,8 @@
         "fi": "Auki ympäri vuorokauden, päivystys 24/7.",
         "nb": "Åpent hele døgnet, med akuttberedskap hele døgnet.",
         "sl": "Odprto 24 ur na dan, nujna pomoč na voljo 24/7.",
-        "hr": "Otvoreno 24 sata, hitni slučajevi 24/7."
+        "hr": "Otvoreno 24 sata, hitni slučajevi 24/7.",
+        "de": "Rund um die Uhr geöffnet, auch für Notfälle."
       }
     },
     {
@@ -407,7 +420,8 @@
         "fi": "Perushoito päivittäin 11.00–21.00; päivystysapua saatavilla 24/7.",
         "nb": "Ordinær behandling alle dager kl. 11.00–21.00; akuttbistand hele døgnet.",
         "sl": "Redna oskrba vsak dan 11–21; nujna pomoč na voljo 24/7.",
-        "hr": "Redovita skrb svaki dan 11:00–21:00; podrška u hitnim slučajevima 24/7."
+        "hr": "Redovita skrb svaki dan 11:00–21:00; podrška u hitnim slučajevima 24/7.",
+        "de": "Routineversorgung täglich 11.00–21.00 Uhr; Notfallhilfe rund um die Uhr verfügbar."
       }
     },
     {
@@ -434,7 +448,8 @@
         "fi": "Auki päivittäin klo 15–22. WhatsApp käytössä.",
         "nb": "Åpent alle dager kl. 15.00–22.00. WhatsApp tilgjengelig.",
         "sl": "Odprto vsak dan 15–22. Na voljo WhatsApp.",
-        "hr": "Otvoreno svaki dan 15:00–22:00. WhatsApp dostupan."
+        "hr": "Otvoreno svaki dan 15:00–22:00. WhatsApp dostupan.",
+        "de": "Täglich 15.00–22.00 Uhr geöffnet. WhatsApp verfügbar."
       }
     },
     {
@@ -461,7 +476,8 @@
         "fi": "ma–pe 8.00–18.00, la 8.00–16.00; päivystys ympäri vuorokauden.",
         "nb": "man–fre 8.00–18.00, lør 8.00–16.00; akuttjeneste hele døgnet.",
         "sl": "Pon–pet 8–18, sob 8–16; nujna služba na voljo ves čas.",
-        "hr": "pon–pet 8:00–18:00, sub 8:00–16:00; hitna služba non-stop."
+        "hr": "pon–pet 8:00–18:00, sub 8:00–16:00; hitna služba non-stop.",
+        "de": "Mo–Fr 8.00–18.00 Uhr, Sa 8.00–16.00 Uhr; Notdienst rund um die Uhr verfügbar."
       }
     },
     {
@@ -489,7 +505,8 @@
         "fi": "ma–pe 8.00–20.00, la 9.00–20.00, su suljettu; päivystysapu lemmikeille ja tuotantoeläimille ilmoitettu 24/7 (myös +92 315 6300087).",
         "nb": "man–fre 8.00–20.00, lør 9.00–20.00, stengt søndag; akuttjeneste for kjæledyr og husdyr markedsføres hele døgnet, alle dager (også +92 315 6300087).",
         "sl": "Pon–pet 8–20, sob 9–20, ned zaprto; nujna pomoč za ljubljenčke in živino 24/7 (tudi +92 315 6300087).",
-        "hr": "pon–pet 8:00–20:00, sub 9:00–20:00, nedjeljom zatvoreno; podrška u hitnim slučajevima za ljubimce i stoku 24/7 (također +92 315 6300087)."
+        "hr": "pon–pet 8:00–20:00, sub 9:00–20:00, nedjeljom zatvoreno; podrška u hitnim slučajevima za ljubimce i stoku 24/7 (također +92 315 6300087).",
+        "de": "Mo–Fr 8.00–20.00 Uhr, Sa 9.00–20.00 Uhr, sonntags geschlossen; Notfallhilfe für Haustiere und Nutztiere rund um die Uhr (auch +92 315 6300087)."
       }
     },
     {
@@ -515,7 +532,8 @@
         "fi": "Auki päivittäin, Hayatabad Phase 3.",
         "nb": "Åpent alle dager, Hayatabad Phase 3.",
         "sl": "Odprto vsak dan, Hayatabad Phase 3.",
-        "hr": "Otvoreno svaki dan, Hayatabad Phase 3."
+        "hr": "Otvoreno svaki dan, Hayatabad Phase 3.",
+        "de": "Täglich geöffnet, Hayatabad Phase 3."
       }
     }
   ],

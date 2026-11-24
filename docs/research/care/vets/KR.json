@@ -186,7 +186,8 @@
         "fi": "Päivystyskeskus auki 24 h; päivystyspotilaat otetaan vastaan ilman lähetettä. Normaali aukioloaika 9.00–18.00 ajanvarauksella. Normaalin aukioloajan ulkopuolella päivystyshoitoon lisätään 30 %. Soita ennen tuloa.",
         "nb": "Akuttsenter åpent hele døgnet; akuttpasienter tas imot uten henvisning og uten avtale. Ordinær åpningstid kl. 9.00–18.00 etter timebestilling. Et tillegg på 30 % gjelder for akuttbehandling utenom ordinær åpningstid. Ring før du kommer.",
         "sl": "Nujna pomoč odprta 24 ur na dan; nujni primeri se sprejemajo brez napotnice. Redni delovni čas 9–18 po naročilu. Za nujno oskrbo zunaj rednega delovnega časa velja 30 % doplačilo. Vnaprej pokličite.",
-        "hr": "Hitni centar otvoren 24 sata; hitni pacijenti primaju se bez uputnice. Redovno radno vrijeme 9:00–18:00 uz termin. Za hitnu skrb izvan redovnog radnog vremena doplata je 30 %. Nazovi prije dolaska."
+        "hr": "Hitni centar otvoren 24 sata; hitni pacijenti primaju se bez uputnice. Redovno radno vrijeme 9:00–18:00 uz termin. Za hitnu skrb izvan redovnog radnog vremena doplata je 30 %. Nazovi prije dolaska.",
+        "de": "Notfallzentrum rund um die Uhr geöffnet; Notfallpatienten werden ohne Überweisung angenommen. Reguläre Sprechzeiten 9.00–18.00 Uhr nach Terminvereinbarung. Für Notfallversorgung außerhalb der regulären Zeiten gilt ein Zuschlag von 30 %. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://vmth.snu.ac.kr/",
@@ -216,7 +217,8 @@
         "fi": "Normaali aukioloaika arkisin 9.00–17.30 ajanvarauksella; päivystys ja yöhoito saatavilla päivystys- ja tehohoito-osastolla. Soita ennen tuloa.",
         "nb": "Ordinær åpningstid på hverdager kl. 9.00–17.30 etter timebestilling; akutt- og nattbehandling ved avdelingen for akutt- og intensivmedisin. Ring før du kommer.",
         "sl": "Redni delovni čas ob delavnikih 9–17.30 po naročilu; nujna in nočna oskrba na oddelku za nujno medicino in intenzivno nego. Vnaprej pokličite.",
-        "hr": "Redovno radno vrijeme radnim danom 9:00–17:30 uz termin; hitna i noćna skrb dostupna na odjelu hitne i intenzivne skrbi. Nazovi prije dolaska."
+        "hr": "Redovno radno vrijeme radnim danom 9:00–17:30 uz termin; hitna i noćna skrb dostupna na odjelu hitne i intenzivne skrbi. Nazovi prije dolaska.",
+        "de": "Reguläre Sprechzeiten werktags 9.00–17.30 Uhr nach Terminvereinbarung; Notfall- und Nachtversorgung in der Abteilung für Notfall- und Intensivmedizin. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://vmth.konkuk.ac.kr/vmth/index.do",
@@ -246,7 +248,8 @@
         "fi": "Päivystys auki 24 h: arkisin 18.00 – seuraavaan aamuun klo 9.00, viikonloppuisin ja pyhinä ympäri vuorokauden. Normaali aukioloaika arkisin 9.00–12.00 ja 13.00–18.00.",
         "nb": "Akuttmottak åpent hele døgnet: hverdager kl. 18.00–9.00 neste morgen, helger og helligdager døgnet rundt. Ordinær åpningstid hverdager kl. 9.00–12.00 og 13.00–18.00.",
         "sl": "Nujna pomoč 24 ur na dan: ob delavnikih 18–9 naslednje jutro, ob koncih tedna in praznikih 24 ur na dan. Redni delovni čas ob delavnikih 9–12 in 13–18.",
-        "hr": "Hitna služba otvorena 24 sata: radnim danom 18:00–09:00 sljedećeg jutra, vikendom i blagdanima non-stop. Redovno radno vrijeme radnim danom 9:00–12:00 i 13:00–18:00."
+        "hr": "Hitna služba otvorena 24 sata: radnim danom 18:00–09:00 sljedećeg jutra, vikendom i blagdanima non-stop. Redovno radno vrijeme radnim danom 9:00–12:00 i 13:00–18:00.",
+        "de": "Notaufnahme rund um die Uhr: werktags 18.00–9.00 Uhr am Folgetag, am Wochenende und feiertags durchgehend. Reguläre Sprechzeiten werktags 9.00–12.00 und 13.00–18.00 Uhr."
       },
       "small_animals": true,
       "url": "https://cnuvmth.jnu.ac.kr/",
@@ -276,7 +279,8 @@
         "fi": "Normaali aukioloaika arkisin 9.00–12.00 ja 13.30–18.00. Päivystys arkisin 18.00–9.00 ja ympäri vuorokauden viikonloppuisin ja pyhinä.",
         "nb": "Ordinær åpningstid på hverdager kl. 9.00–12.00 og 13.30–18.00. Akuttbehandling på hverdager kl. 18.00–9.00 og døgnet rundt i helger og på helligdager.",
         "sl": "Redni delovni čas ob delavnikih 9–12 in 13.30–18. Nujna oskrba ob delavnikih 18–9 ter ob koncih tedna in praznikih 24 ur na dan.",
-        "hr": "Redovno radno vrijeme radnim danom 9:00–12:00 i 13:30–18:00. Hitna skrb radnim danom 18:00–09:00, a vikendom i blagdanima non-stop."
+        "hr": "Redovno radno vrijeme radnim danom 9:00–12:00 i 13:30–18:00. Hitna skrb radnim danom 18:00–09:00, a vikendom i blagdanima non-stop.",
+        "de": "Reguläre Sprechzeiten werktags 9.00–12.00 und 13.30–18.00 Uhr. Notfallversorgung werktags 18.00–9.00 Uhr sowie am Wochenende und feiertags rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://jamc.jbnu.ac.kr/jamc/index.do",
@@ -310,7 +314,8 @@
         "fi": "Auki arkisin 9.00–18.00; suljettu viikonloppuisin ja pyhinä.",
         "nb": "Åpent ukedager kl. 09.00–18.00; stengt i helger og på helligdager.",
         "sl": "Odprto ob delavnikih 9–18; ob koncih tedna in praznikih zaprto.",
-        "hr": "Otvoreno radnim danom 9:00–18:00; vikendom i blagdanima zatvoreno."
+        "hr": "Otvoreno radnim danom 9:00–18:00; vikendom i blagdanima zatvoreno.",
+        "de": "Mo–Fr 9.00–18.00 Uhr; am Wochenende und feiertags geschlossen."
       }
     },
     {
@@ -335,7 +340,8 @@
         "fi": "Auki 24 h, 365 päivää vuodessa, eläinlääkärit paikalla. Normaali hoito 9.30–21.00, yöhoito 21.00–9.30.",
         "nb": "Åpent hele døgnet, 365 dager i året med dyrleger på stedet. Ordinær behandling 9.30–21.00, nattbehandling 21.00–9.30.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu, veterinarji so stalno prisotni. Redna oskrba 9.30–21, nočna oskrba 21–9.30.",
-        "hr": "Otvoreno 24 sata, 365 dana u godini, uz veterinare na licu mjesta. Redovna skrb 9:30–21:00, noćna skrb 21:00–9:30."
+        "hr": "Otvoreno 24 sata, 365 dana u godini, uz veterinare na licu mjesta. Redovna skrb 9:30–21:00, noćna skrb 21:00–9:30.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet, Tierärzte vor Ort. Reguläre Versorgung 9.30–21.00 Uhr, Nachtversorgung 21.00–9.30 Uhr."
       },
       "small_animals": true,
       "url": "https://youramc.co.kr/",
@@ -365,7 +371,8 @@
         "fi": "Trauma- ja päivystysleikkauskeskus auki 24 h, 365 päivää vuodessa. Soita ennen tuloa.",
         "nb": "Senter for traume- og akuttkirurgi, åpent hele døgnet, 365 dager i året. Ring før du kommer.",
         "sl": "Center za travme in nujno kirurgijo, odprt 24 ur na dan, 365 dni v letu. Vnaprej pokličite.",
-        "hr": "Centar za traumu i hitnu kirurgiju otvoren 24 sata, 365 dana u godini. Nazovi prije dolaska."
+        "hr": "Centar za traumu i hitnu kirurgiju otvoren 24 sata, 365 dana u godini. Nazovi prije dolaska.",
+        "de": "Zentrum für Trauma und Notfallchirurgie, rund um die Uhr an 365 Tagen im Jahr geöffnet. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.sncamc.co.kr/",
@@ -395,7 +402,8 @@
         "fi": "Päivystys 24 h, 365 päivää vuodessa (24 h:n päivystyspuhelin, henkilökunta valmiudessa yöllä, aamuyöllä ja pyhinä). Päivä 9.30–19.00, ilta 19.00–22.00, päivystys 22.00–8.00. Soita ennen tuloa.",
         "nb": "Akuttbehandling hele døgnet, 365 dager i året (døgnåpen akuttelefon, personell på vakt om natten, tidlig om morgenen og på helligdager). Dag kl. 9.30–19.00, kveld 19.00–22.00, akutt 22.00–8.00. Ring før du kommer.",
         "sl": "Nujna oskrba 24 ur na dan, 365 dni v letu (nujna telefonska linija 24 ur na dan, osebje je ponoči, ob zori in ob praznikih v pripravljenosti). Dan 9.30–19, večer 19–22, nujna pomoč 22–8. Vnaprej pokličite.",
-        "hr": "Hitna skrb 24 sata, 365 dana u godini (hitna linija 24 sata, osoblje u pripravnosti noću, u zoru i blagdanima). Dan 9:30–19:00, večer 19:00–22:00, hitno 22:00–8:00. Nazovi prije dolaska."
+        "hr": "Hitna skrb 24 sata, 365 dana u godini (hitna linija 24 sata, osoblje u pripravnosti noću, u zoru i blagdanima). Dan 9:30–19:00, večer 19:00–22:00, hitno 22:00–8:00. Nazovi prije dolaska.",
+        "de": "Notfallversorgung rund um die Uhr an 365 Tagen im Jahr (Notfall-Hotline rund um die Uhr, nachts, frühmorgens und feiertags Bereitschaft). Tagsüber 9.30–19.00 Uhr, abends 19.00–22.00 Uhr, Notfall 22.00–8.00 Uhr. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.thecare24.com/",
@@ -425,7 +433,8 @@
         "fi": "Auki ympäri vuorokauden, 365 päivää vuodessa.",
         "nb": "Åpent hele døgnet, 365 dager i året.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu.",
-        "hr": "Otvoreno 24 sata dnevno, 365 dana u godini."
+        "hr": "Otvoreno 24 sata dnevno, 365 dana u godini.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet."
       },
       "small_animals": true,
       "url": "https://24ftma.com/",
@@ -455,7 +464,8 @@
         "fi": "Auki 24 h, 365 päivää vuodessa, henkilökunta paikalla. Normaali hoito 9.00–20.00, ilta 20.00–24.00, yö 24.00–9.00.",
         "nb": "Åpent hele døgnet, 365 dager i året med personale på stedet. Ordinær behandling 9.00–20.00, kveld 20.00–24.00, sen natt 24.00–9.00.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu, osebje je na kraju samem. Redna oskrba 9–20, večer 20–24, pozno ponoči 24–9.",
-        "hr": "Otvoreno 24 sata, 365 dana u godini, uz osoblje na licu mjesta. Redovna skrb 9:00–20:00, večer 20:00–24:00, kasno noću 24:00–9:00."
+        "hr": "Otvoreno 24 sata, 365 dana u godini, uz osoblje na licu mjesta. Redovna skrb 9:00–20:00, večer 20:00–24:00, kasno noću 24:00–9:00.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet, Personal vor Ort. Reguläre Versorgung 9.00–20.00 Uhr, abends 20.00–24.00 Uhr, spätnachts 24.00–9.00 Uhr."
       },
       "small_animals": true,
       "url": "https://bamc365.kr/",
@@ -485,7 +495,8 @@
         "fi": "Auki 24 h, 365 päivää vuodessa. Päivä 9.00–20.00, ilta 20.00–24.00, päivystys 0.00–9.00.",
         "nb": "Åpent hele døgnet, 365 dager i året. Dag 9.00–20.00, kveld 20.00–24.00, akuttbehandling 0.00–9.00.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu. Dan 9–20, večer 20–24, nujna pomoč 0–9.",
-        "hr": "Otvoreno 24 sata, 365 dana u godini. Dan 9:00–20:00, večer 20:00–24:00, hitna skrb 0:00–9:00."
+        "hr": "Otvoreno 24 sata, 365 dana u godini. Dan 9:00–20:00, večer 20:00–24:00, hitna skrb 0:00–9:00.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet. Tagsüber 9.00–20.00 Uhr, abends 20.00–24.00 Uhr, Notfallversorgung 0.00–9.00 Uhr."
       },
       "small_animals": true,
       "url": "https://www.24leadamc.com/",
@@ -515,7 +526,8 @@
         "fi": "Auki 24 h, 365 päivää vuodessa. Päivä 10.00–19.00, ilta 21.00–24.00, päivystys 24.00–8.00; lounastauko 12.30–14.00 (päivystystapaukset silti hoidetaan). Puhelinneuvonta 24 h.",
         "nb": "Åpent hele døgnet, 365 dager i året. Dag 10.00–19.00, kveld 21.00–24.00, akutt 24.00–8.00; lunsjpause 12.30–14.00 (nødtilfeller håndteres likevel). Telefonrådgivning hele døgnet.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu. Podnevi 10–19, zvečer 21–24, nujna pomoč 24–8; odmor za kosilo 12.30–14 (nujni primeri se obravnavajo tudi takrat). Telefonsko svetovanje 24 ur na dan.",
-        "hr": "Otvoreno 24 sata, 365 dana u godini. Dan 10:00–19:00, večer 21:00–24:00, hitno 24:00–8:00; stanka za ručak 12:30–14:00 (hitni slučajevi se i dalje zbrinjavaju). Savjeti telefonom 24 sata."
+        "hr": "Otvoreno 24 sata, 365 dana u godini. Dan 10:00–19:00, večer 21:00–24:00, hitno 24:00–8:00; stanka za ručak 12:30–14:00 (hitni slučajevi se i dalje zbrinjavaju). Savjeti telefonom 24 sata.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet. Tagsüber 10.00–19.00 Uhr, abends 21.00–24.00 Uhr, Notfall 24.00–8.00 Uhr; Mittagspause 12.30–14.00 Uhr (Notfälle werden weiterhin behandelt). Telefonische Beratung rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://unamc24.com/",
@@ -545,7 +557,8 @@
         "fi": "Auki 24 h, joka päivä vuoden ympäri. Päivä 10.00–21.30, yö 21.30–10.00; päivystys- ja yökäynneistä lisämaksut.",
         "nb": "Åpent hele døgnet, alle dager i året. Dag 10.00–21.30, natt 21.30–10.00 med tilleggsgebyr for akuttbesøk og nattbesøk.",
         "sl": "Odprto 24 ur na dan, vse dni v letu. Dan 10–21.30, noč 21.30–10 z doplačilom za nujne in nočne obiske.",
-        "hr": "Otvoreno 24 sata, svaki dan u godini. Dan 10:00–21:30, noć 21:30–10:00 uz dodatne naknade za hitne i noćne posjete."
+        "hr": "Otvoreno 24 sata, svaki dan u godini. Dan 10:00–21:30, noć 21:30–10:00 uz dodatne naknade za hitne i noćne posjete.",
+        "de": "Rund um die Uhr an jedem Tag des Jahres geöffnet. Tagsüber 10.00–21.30 Uhr, nachts 21.30–10.00 Uhr; für Notfall- und Nachtbesuche werden zusätzliche Gebühren erhoben."
       },
       "small_animals": true,
       "url": "http://ysamc24.co.kr/",
@@ -575,7 +588,8 @@
         "fi": "Auki 24 h, 365 päivää vuodessa. Päivä 9.00–22.00, yö 22.00–9.00.",
         "nb": "Åpent hele døgnet, 365 dager i året. Dag 9.00–22.00, natt 22.00–9.00.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu. Dan 9–22, noč 22–9.",
-        "hr": "Otvoreno 24 sata, 365 dana u godini. Dan 9:00–22:00, noć 22:00–9:00."
+        "hr": "Otvoreno 24 sata, 365 dana u godini. Dan 9:00–22:00, noć 22:00–9:00.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet. Tagsüber 9.00–22.00 Uhr, nachts 22.00–9.00 Uhr."
       },
       "small_animals": true,
       "url": "https://amc24in.com/",
@@ -605,7 +619,8 @@
         "fi": "Yleishoito 9.00–22.00; yöpäivystys 22.00–9.00. Soita ennen tuloa.",
         "nb": "Vanlig behandling kl. 9.00–22.00; akuttbehandling om natten kl. 22.00–9.00. Ring før du kommer.",
         "sl": "Splošna oskrba 9–22; nočna nujna oskrba 22–9. Vnaprej pokličite.",
-        "hr": "Opća skrb 9:00–22:00; noćna hitna skrb 22:00–9:00. Nazovi prije dolaska."
+        "hr": "Opća skrb 9:00–22:00; noćna hitna skrb 22:00–9:00. Nazovi prije dolaska.",
+        "de": "Allgemeine Versorgung 9.00–22.00 Uhr; nächtliche Notfallversorgung 22.00–9.00 Uhr. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://www.sooamc.com/",
@@ -635,7 +650,8 @@
         "fi": "Auki 24 h, 365 päivää vuodessa; hätätapauksissa soita milloin tahansa.",
         "nb": "Åpent hele døgnet, 365 dager i året; ring når som helst ved nødtilfeller.",
         "sl": "Odprto 24 ur na dan, 365 dni v letu; v nujnih primerih pokličite kadar koli.",
-        "hr": "Otvoreno 24 sata, 365 dana u godini; za hitne slučajeve nazovi u bilo koje doba."
+        "hr": "Otvoreno 24 sata, 365 dana u godini; za hitne slučajeve nazovi u bilo koje doba.",
+        "de": "Rund um die Uhr an 365 Tagen im Jahr geöffnet; bei Notfällen jederzeit anrufen."
       },
       "small_animals": true,
       "url": "https://lieumamc.co.kr/",
@@ -665,7 +681,8 @@
         "fi": "Auki 24 h joka päivä, myös viikonloppuisin ja pyhinä. Päivä 9.00–21.00, yö 21.00–9.00 lisämaksulla.",
         "nb": "Åpent hele døgnet alle dager, også helger og offentlige helligdager. Dag 9.00–21.00, natt 21.00–9.00 med tilleggsgebyr.",
         "sl": "Odprto 24 ur na dan vse dni, tudi ob koncih tedna in praznikih. Podnevi 9–21, ponoči 21–9 z doplačilom.",
-        "hr": "Otvoreno 24 sata svaki dan, uključujući vikende i blagdane. Dan 9:00–21:00, noć 21:00–9:00 uz dodatnu naknadu."
+        "hr": "Otvoreno 24 sata svaki dan, uključujući vikende i blagdane. Dan 9:00–21:00, noć 21:00–9:00 uz dodatnu naknadu.",
+        "de": "Täglich rund um die Uhr geöffnet, auch am Wochenende und feiertags. Tagsüber 9.00–21.00 Uhr, nachts 21.00–9.00 Uhr gegen Aufpreis."
       },
       "small_animals": true,
       "url": "https://hueanimal.com/",
@@ -695,7 +712,8 @@
         "fi": "Päivähoito 10.00–22.00; yöhoito ja päivystysleikkaukset 22.00–10.00; konsultaatio 24 h.",
         "nb": "Dagtid 10.00–22.00; nattvakt og akuttkirurgi 22.00–10.00; konsultasjon hele døgnet.",
         "sl": "Dnevna oskrba 10–22; nočna oskrba in nujna kirurgija 22–10; posvet 24 ur na dan.",
-        "hr": "Dnevna skrb 10:00–22:00; noćna skrb i hitna kirurgija 22:00–10:00; konzultacije 24 sata."
+        "hr": "Dnevna skrb 10:00–22:00; noćna skrb i hitna kirurgija 22:00–10:00; konzultacije 24 sata.",
+        "de": "Tagesversorgung 10.00–22.00 Uhr; Nachtversorgung und Notfallchirurgie 22.00–10.00 Uhr; Beratung rund um die Uhr."
       },
       "small_animals": true,
       "url": "https://dogsclub24.wixsite.com/24dogsclub",
@@ -724,7 +742,8 @@
         "fi": "Auki 365 päivää, vuodeosasto 24 h. Cheongdamin toimipiste: päivä 10.00–19.00, ilta 19.00–22.00, myöhäisyö 22.00–10.00 (lisämaksu). Joillakin toimipisteillä ei ole myöhäisyöpalvelua. Soita ensin toimipisteeseen.",
         "nb": "Åpent 365 dager, innlagte pasienter hele døgnet. Cheongdam-avdelingen: dag 10.00–19.00, kveld 19.00–22.00, sen natt 22.00–10.00 (tilleggsgebyr). Noen avdelinger har ikke nattjeneste. Ring avdelingen først.",
         "sl": "Odprto 365 dni v letu, bolnišnična oskrba 24 ur na dan. Podružnica Cheongdam: dan 10–19, večer 19–22, pozno ponoči 22–10 (doplačilo). Nekatere podružnice nimajo pozne nočne službe. Najprej pokličite podružnico.",
-        "hr": "Otvoreno 365 dana, stacionarna skrb 24 sata. Podružnica Cheongdam: dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00 (dodatna naknada). Neke podružnice nemaju noćnu službu. Prvo nazovi podružnicu."
+        "hr": "Otvoreno 365 dana, stacionarna skrb 24 sata. Podružnica Cheongdam: dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00 (dodatna naknada). Neke podružnice nemaju noćnu službu. Prvo nazovi podružnicu.",
+        "de": "An 365 Tagen geöffnet, stationäre Versorgung rund um die Uhr. Filiale Cheongdam: tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr (Zuschlag). Einige Filialen bieten keine Spätnacht-Versorgung. Bitte zuerst bei der Filiale anrufen."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/",
@@ -754,7 +773,8 @@
         "fi": "Auki joka päivä 24 h. Päivä 10.00–21.00 (lounas 13.00–14.30), päivystys 21.00–10.00.",
         "nb": "Åpent hele døgnet, alle dager. Dagtid 10.00–21.00 (lunsj 13.00–14.30), akuttbehandling 21.00–10.00.",
         "sl": "Odprto vsak dan, 24 ur na dan. Podnevi 10–21 (kosilo 13–14.30), nujna pomoč 21–10.",
-        "hr": "Otvoreno svaki dan, 24 sata. Dan 10:00–21:00 (ručak 13:00–14:30), hitna skrb 21:00–10:00."
+        "hr": "Otvoreno svaki dan, 24 sata. Dan 10:00–21:00 (ručak 13:00–14:30), hitna skrb 21:00–10:00.",
+        "de": "Täglich rund um die Uhr geöffnet. Tagsüber 10.00–21.00 Uhr (Mittagspause 13.00–14.30 Uhr), Notfallversorgung 21.00–10.00 Uhr."
       },
       "small_animals": true,
       "url": "https://jejusamc.com/",
@@ -782,7 +802,8 @@
         "fi": "Auki 365 päivää vuodessa, 24 h. Päivä 10.30–19.00, yö 19.00–22.00 (yömaksu), myöhäisyö 22.00–10.00.",
         "nb": "Åpent 365 dager i året, hele døgnet. Dag 10.30–19.00, natt 19.00–22.00 (nattillegg), sen natt 22.00–10.00.",
         "sl": "Odprto 365 dni v letu, 24 ur na dan. Dan 10.30–19, noč 19–22 (nočno doplačilo), pozno ponoči 22–10.",
-        "hr": "Otvoreno 365 dana u godini, 24 sata. Dan 10:30–19:00, večer 19:00–22:00 (noćna naknada), kasno noću 22:00–10:00."
+        "hr": "Otvoreno 365 dana u godini, 24 sata. Dan 10:30–19:00, večer 19:00–22:00 (noćna naknada), kasno noću 22:00–10:00.",
+        "de": "An 365 Tagen im Jahr rund um die Uhr geöffnet. Tagsüber 10.30–19.00 Uhr, nachts 19.00–22.00 Uhr (Nachtzuschlag), spätnachts 22.00–10.00 Uhr."
       },
       "small_animals": true,
       "url": "https://blog.24samc.co.kr/",
@@ -811,7 +832,8 @@
         "fi": "Varmista aukioloajat soittamalla.",
         "nb": "Ring for å bekrefte åpningstidene.",
         "sl": "Delovni čas potrdite po telefonu.",
-        "hr": "Nazovi i provjeri radno vrijeme."
+        "hr": "Nazovi i provjeri radno vrijeme.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
@@ -840,7 +862,8 @@
         "fi": "Varmista aukioloajat soittamalla.",
         "nb": "Ring for å bekrefte åpningstidene.",
         "sl": "Delovni čas potrdite po telefonu.",
-        "hr": "Nazovi i provjeri radno vrijeme."
+        "hr": "Nazovi i provjeri radno vrijeme.",
+        "de": "Öffnungszeiten bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041aad643af8",
@@ -869,7 +892,8 @@
         "fi": "Auki 24 h, 365 päivää. Vastaanotto 9.30–18.30, päivystys 18.30–9.30 (päivystyslisä).",
         "nb": "Åpent hele døgnet, 365 dager. Poliklinikk 09.30–18.30, akuttbehandling 18.30–09.30 (tillegg for akuttbehandling).",
         "sl": "Odprto 24 ur na dan, 365 dni. Ambulanta 9.30–18.30, nujna pomoč 18.30–9.30 (velja doplačilo za nujno oskrbo).",
-        "hr": "Otvoreno 24 sata, 365 dana. Ambulanta 09:30–18:30, hitna skrb 18:30–09:30 (uz doplatu za hitnu skrb)."
+        "hr": "Otvoreno 24 sata, 365 dana. Ambulanta 09:30–18:30, hitna skrb 18:30–09:30 (uz doplatu za hitnu skrb).",
+        "de": "Rund um die Uhr an 365 Tagen geöffnet. Ambulante Sprechstunde 9.30–18.30 Uhr, Notfallversorgung 18.30–9.30 Uhr (Notfallzuschlag)."
       },
       "small_animals": true,
       "url": "https://noahamc.co.kr/",
@@ -899,7 +923,8 @@
         "fi": "Auki 24 h, 365 päivää. Yleishoito 10.00–20.00, päivystys 20.00–10.00.",
         "nb": "Åpent hele døgnet, 365 dager. Vanlig behandling 10.00–20.00, akuttbehandling 20.00–10.00.",
         "sl": "Odprto 24 ur na dan, 365 dni. Splošna oskrba 10–20, nujna pomoč 20–10.",
-        "hr": "Otvoreno 24 sata, 365 dana. Opća skrb 10:00–20:00, hitna skrb 20:00–10:00."
+        "hr": "Otvoreno 24 sata, 365 dana. Opća skrb 10:00–20:00, hitna skrb 20:00–10:00.",
+        "de": "Rund um die Uhr an 365 Tagen geöffnet. Allgemeine Versorgung 10.00–20.00 Uhr, Notfallversorgung 20.00–10.00 Uhr."
       },
       "small_animals": true,
       "url": "https://www.namc.co.kr/",
@@ -933,7 +958,8 @@
         "fi": "Päivä 10.00–19.00, ilta 19.00–22.00, yö 22.00–10.00. Ei toiminnassa sunnuntaisin (laajuus epäselvä). Soita ensin.",
         "nb": "Dag 10.00–19.00, kveld 19.00–22.00, natt 22.00–10.00. Ikke åpent på søndager (uklart omfang). Ring først.",
         "sl": "Dan 10–19, večer 19–22, pozno ponoči 22–10. Ob nedeljah ne obratuje. Najprej pokličite.",
-        "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi."
+        "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi.",
+        "de": "Tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen."
       }
     },
     {
@@ -958,7 +984,8 @@
         "fi": "Päivä 10.00–19.00, ilta 19.00–22.00, yö 22.00–10.00. Varmista soittamalla ensin.",
         "nb": "Dag 10.00–19.00, kveld 19.00–22.00, natt 22.00–10.00. Ring først for å bekrefte.",
         "sl": "Podnevi 10–19, zvečer 19–22, pozno ponoči 22–10. Za potrditev najprej pokličite.",
-        "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Prvo nazovi i provjeri."
+        "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Prvo nazovi i provjeri.",
+        "de": "Tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Bitte vorher zur Bestätigung anrufen."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/cheongdam",
@@ -988,7 +1015,8 @@
         "fi": "Päivä 10.00–19.00, ilta 19.00–22.00, yö 22.00–10.00. Varmista soittamalla ensin.",
         "nb": "Dag 10.00–19.00, kveld 19.00–22.00, natt 22.00–10.00. Ring først for å bekrefte.",
         "sl": "Dan 10–19, večer 19–22, pozno ponoči 22–10. Za potrditev najprej pokličite.",
-        "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Prvo nazovi i provjeri."
+        "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Prvo nazovi i provjeri.",
+        "de": "Tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Bitte vorher zur Bestätigung anrufen."
       },
       "small_animals": true,
       "url": "https://www.vipah.co.kr/kr/medical/branches/nowon",
@@ -1022,7 +1050,8 @@
         "fi": "Päivä 10.00–18.00, ilta 18.00–22.00, yö 22.00–10.00. Ei toiminnassa sunnuntaisin (laajuus epäselvä). Soita ensin.",
         "nb": "Dag 10.00–18.00, kveld 18.00–22.00, natt 22.00–10.00. Ikke åpent på søndager (uklart omfang). Ring først.",
         "sl": "Dan 10–18, večer 18–22, pozno ponoči 22–10. Ob nedeljah ne obratuje. Najprej pokličite.",
-        "hr": "Dan 10:00–18:00, večer 18:00–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi."
+        "hr": "Dan 10:00–18:00, večer 18:00–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi.",
+        "de": "Tagsüber 10.00–18.00 Uhr, abends 18.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen."
       }
     },
     {
@@ -1051,7 +1080,8 @@
         "fi": "Päivä 10.00–18.30, ilta 18.30–22.00, yö 22.00–10.00. Ei toiminnassa sunnuntaisin (laajuus epäselvä). Soita ensin.",
         "nb": "Dag 10.00–18.30, kveld 18.30–22.00, natt 22.00–10.00. Ikke åpent på søndager (uklart omfang). Ring først.",
         "sl": "Podnevi 10–18.30, zvečer 18.30–22, pozno ponoči 22–10. Ob nedeljah ne obratuje. Najprej pokličite.",
-        "hr": "Dan 10:00–18:30, večer 18:30–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi."
+        "hr": "Dan 10:00–18:30, večer 18:30–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi.",
+        "de": "Tagsüber 10.00–18.30 Uhr, abends 18.30–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen."
       }
     },
     {
@@ -1076,7 +1106,8 @@
         "fi": "Auki 24 h joka päivä. Yöpäivystys 21.00–10.00.",
         "nb": "Åpent hele døgnet, alle dager. Akuttbehandling om natten 21.00–10.00.",
         "sl": "Odprto 24 ur na dan, vsak dan. Nočna nujna oskrba 21–10.",
-        "hr": "Otvoreno 24 sata, svaki dan. Noćna hitna skrb 21:00–10:00."
+        "hr": "Otvoreno 24 sata, svaki dan. Noćna hitna skrb 21:00–10:00.",
+        "de": "Täglich rund um die Uhr geöffnet. Nächtliche Notfallversorgung 21.00–10.00 Uhr."
       },
       "small_animals": true,
       "url": "https://24worldpet.com/",
@@ -1106,7 +1137,8 @@
         "fi": "Auki 24 h ympäri vuoden. Ajanvaraus 9.30–21.30, yöpäivystys 21.30–9.30.",
         "nb": "Åpent hele døgnet, hele året. Timer 09.30–21.30, akuttbehandling om natten 21.30–09.30.",
         "sl": "Odprto 24 ur na dan, vse leto. Pregledi po naročilu 9.30–21.30, nočna nujna oskrba 21.30–9.30.",
-        "hr": "Otvoreno 24 sata, tijekom cijele godine. Termini 09:30–21:30, noćna hitna skrb 21:30–09:30."
+        "hr": "Otvoreno 24 sata, tijekom cijele godine. Termini 09:30–21:30, noćna hitna skrb 21:30–09:30.",
+        "de": "Ganzjährig rund um die Uhr geöffnet. Termine 9.30–21.30 Uhr, nächtliche Notfallversorgung 21.30–9.30 Uhr."
       },
       "small_animals": true,
       "url": "https://www.seoulyes24.com/28",
@@ -1136,7 +1168,8 @@
         "fi": "Auki 24 h ympäri vuoden. Päivä 10.00–19.00, ilta 19.00–22.00, päivystys 22.00–10.00 (yömaksut).",
         "nb": "Åpent hele døgnet, hele året. Dag 10.00–19.00, kveld 19.00–22.00, akutt 22.00–10.00 (nattakst gjelder).",
         "sl": "Odprto 24 ur na dan, vse leto. Dan 10–19, večer 19–22, nujna pomoč 22–10 (velja nočno doplačilo).",
-        "hr": "Otvoreno 24 sata, tijekom cijele godine. Dan 10:00–19:00, večer 19:00–22:00, hitno 22:00–10:00 (vrijede noćne naknade)."
+        "hr": "Otvoreno 24 sata, tijekom cijele godine. Dan 10:00–19:00, večer 19:00–22:00, hitno 22:00–10:00 (vrijede noćne naknade).",
+        "de": "Ganzjährig rund um die Uhr geöffnet. Tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, Notfall 22.00–10.00 Uhr (Nachtzuschläge)."
       },
       "small_animals": true,
       "url": "https://24myamc.com/",
@@ -1166,7 +1199,8 @@
         "fi": "Päivystys 24 h. Päivähoito 9.30–21.30, yöhoito 21.30–9.30.",
         "nb": "Akuttbehandling hele døgnet. Dagvakt kl. 9.30–21.30, nattvakt 21.30–9.30.",
         "sl": "Nujna oskrba 24 ur na dan. Dnevna oskrba 9.30–21.30, nočna oskrba 21.30–9.30.",
-        "hr": "Hitna skrb 24 sata. Dnevna skrb 9:30–21:30, noćna skrb 21:30–9:30."
+        "hr": "Hitna skrb 24 sata. Dnevna skrb 9:30–21:30, noćna skrb 21:30–9:30.",
+        "de": "Notfallversorgung rund um die Uhr. Tagesversorgung 9.30–21.30 Uhr, Nachtversorgung 21.30–9.30 Uhr."
       },
       "small_animals": true,
       "url": "https://okayamc.com/",
@@ -1196,7 +1230,8 @@
         "fi": "Auki 24 h, 365 päivää. Päivähoito 9.30–22.00, yöhoito 22.00–9.00 30 %:n lisämaksulla. Kissaklinikka vain ajanvarauksella.",
         "nb": "Åpent hele døgnet, 365 dager. Dagvakt 9.30–22.00, nattvakt 22.00–9.00 med 30 % tillegg. Kattklinikk kun etter timebestilling.",
         "sl": "Odprto 24 ur na dan, 365 dni. Dnevna oskrba 9.30–22, nočna oskrba 22–9 s 30 % doplačilom. Ambulanta za mačke samo po naročilu.",
-        "hr": "Otvoreno 24 sata, 365 dana. Dnevna skrb 9:30–22:00, noćna skrb 22:00–9:00 uz doplatu od 30 %. Ambulanta za mačke samo uz termin."
+        "hr": "Otvoreno 24 sata, 365 dana. Dnevna skrb 9:30–22:00, noćna skrb 22:00–9:00 uz doplatu od 30 %. Ambulanta za mačke samo uz termin.",
+        "de": "Rund um die Uhr an 365 Tagen geöffnet. Tagesversorgung 9.30–22.00 Uhr, Nachtversorgung 22.00–9.00 Uhr mit 30 % Zuschlag. Katzenklinik nur nach Terminvereinbarung."
       },
       "small_animals": true,
       "url": "https://ysamc.co.kr/",
@@ -1226,7 +1261,8 @@
         "fi": "Auki joka päivä 10.00–20.00, lounastauko 13.00–14.00.",
         "nb": "Åpent alle dager kl. 10.00–20.00, lunsjpause 13.00–14.00.",
         "sl": "Odprto vsak dan 10–20, odmor za kosilo 13–14.",
-        "hr": "Otvoreno svaki dan 10:00–20:00, stanka za ručak 13:00–14:00."
+        "hr": "Otvoreno svaki dan 10:00–20:00, stanka za ručak 13:00–14:00.",
+        "de": "Täglich 10.00–20.00 Uhr, Mittagspause 13.00–14.00 Uhr."
       },
       "small_animals": true,
       "url": "https://www.dodamamc.com/",
@@ -1256,7 +1292,8 @@
         "fi": "Arkisin 9.30–21.00, viikonloppuisin ja pyhinä 9.30–20.00, lounastauko 13.00–14.30. Vuodeosaston potilaiden seuranta 24 h vain sairaalahoidossa oleville.",
         "nb": "Hverdager 9.30–21.00, helger og helligdager 9.30–20.00, lunsjpause 13.00–14.30. Døgnovervåking kun for innlagte pasienter.",
         "sl": "Ob delavnikih 9.30–21, ob koncih tedna in praznikih 9.30–20, odmor za kosilo 13–14.30. Bolnišnični nadzor 24 ur na dan samo za hospitalizirane paciente.",
-        "hr": "Radnim danom 9:30–21:00, vikendom i blagdanima 9:30–20:00, stanka za ručak 13:00–14:30. Stacionarni nadzor 24 sata samo za hospitalizirane pacijente."
+        "hr": "Radnim danom 9:30–21:00, vikendom i blagdanima 9:30–20:00, stanka za ručak 13:00–14:30. Stacionarni nadzor 24 sata samo za hospitalizirane pacijente.",
+        "de": "Mo–Fr 9.30–21.00 Uhr, am Wochenende und feiertags 9.30–20.00 Uhr, Mittagspause 13.00–14.30 Uhr. Überwachung rund um die Uhr nur für stationär aufgenommene Tiere."
       },
       "small_animals": true,
       "url": "https://africaamc.com/",
@@ -1286,7 +1323,8 @@
         "fi": "Auki joka päivä 10.00–20.00, 365 päivää; iltahoito painottuu päivystykseen.",
         "nb": "Åpent alle dager kl. 10.00–20.00, 365 dager i året; kveldsbehandling med vekt på nødtilfeller.",
         "sl": "Odprto vsak dan 10–20, 365 dni v letu; večerna oskrba za nujne primere.",
-        "hr": "Otvoreno svaki dan 10:00–20:00, 365 dana; večernja skrb usmjerena na hitne slučajeve."
+        "hr": "Otvoreno svaki dan 10:00–20:00, 365 dana; večernja skrb usmjerena na hitne slučajeve.",
+        "de": "Täglich 10.00–20.00 Uhr an 365 Tagen; abendliche Versorgung mit Schwerpunkt Notfälle."
       },
       "small_animals": true,
       "url": "https://juohospital.imweb.me/",
@@ -1316,7 +1354,8 @@
         "fi": "Arkisin 10.00–19.00 (keskiviikkoisin 14.00 alkaen), la 10.00–18.00, suljettu sunnuntaisin ja pyhinä. Lounastauko 12.00–14.00.",
         "nb": "Hverdager 10.00–19.00 (onsdag fra 14.00), lørdag 10.00–18.00, stengt søndager og helligdager. Lunsjpause 12.00–14.00.",
         "sl": "Ob delavnikih 10–19 (ob sredah od 14), sob 10–18, ob nedeljah in praznikih zaprto. Odmor za kosilo 12–14.",
-        "hr": "Radnim danom 10:00–19:00 (srijedom od 14:00), subotom 10:00–18:00, nedjeljom i blagdanima zatvoreno. Stanka za ručak 12:00–14:00."
+        "hr": "Radnim danom 10:00–19:00 (srijedom od 14:00), subotom 10:00–18:00, nedjeljom i blagdanima zatvoreno. Stanka za ručak 12:00–14:00.",
+        "de": "Mo–Fr 10.00–19.00 Uhr (mittwochs ab 14.00 Uhr), Sa 10.00–18.00 Uhr, sonn- und feiertags geschlossen. Mittagspause 12.00–14.00 Uhr."
       },
       "small_animals": true,
       "url": "https://imvet96.wixsite.com/joeunac",
@@ -1346,7 +1385,8 @@
         "fi": "Auki joka päivä, 365 päivää, 9.30–23.00 (lounastauko 13.00–14.00).",
         "nb": "Åpent alle dager, 365 dager i året, kl. 9.30–23.00 (lunsjpause 13.00–14.00).",
         "sl": "Odprto vsak dan, 365 dni, 9.30–23 (odmor za kosilo 13–14).",
-        "hr": "Otvoreno svaki dan, 365 dana, 9:30–23:00 (stanka za ručak 13:00–14:00)."
+        "hr": "Otvoreno svaki dan, 365 dana, 9:30–23:00 (stanka za ručak 13:00–14:00).",
+        "de": "Täglich an 365 Tagen 9.30–23.00 Uhr geöffnet (Mittagspause 13.00–14.00 Uhr)."
       },
       "small_animals": true,
       "url": "https://laonamc.com/",
@@ -1376,7 +1416,8 @@
         "fi": "Arkisin 9.30–19.00, la ja pyhinä 9.30–17.00, suljettu sunnuntaisin. Lounastauko 13.00–14.00. Pyhistä ja päivystystapauksista (lisämaksu) soita etukäteen.",
         "nb": "Hverdager 9.30–19.00, lørdager og helligdager 9.30–17.00, stengt søndager. Lunsjpause 13.00–14.00. Ring på forhånd for helligdager og nødtilfeller (tilleggsgebyr).",
         "sl": "Ob delavnikih 9.30–19, ob sobotah in praznikih 9.30–17, ob nedeljah zaprto. Odmor za kosilo 13–14. Za praznike in nujne primere (doplačilo) vnaprej pokličite.",
-        "hr": "Radnim danom 9:30–19:00, subotom i blagdanima 9:30–17:00, nedjeljom zatvoreno. Stanka za ručak 13:00–14:00. Za blagdane i hitne slučajeve nazovi unaprijed (dodatna naknada)."
+        "hr": "Radnim danom 9:30–19:00, subotom i blagdanima 9:30–17:00, nedjeljom zatvoreno. Stanka za ručak 13:00–14:00. Za blagdane i hitne slučajeve nazovi unaprijed (dodatna naknada).",
+        "de": "Mo–Fr 9.30–19.00 Uhr, Sa und feiertags 9.30–17.00 Uhr, sonntags geschlossen. Mittagspause 13.00–14.00 Uhr. An Feiertagen und bei Notfällen bitte vorher anrufen (Zuschlag)."
       },
       "small_animals": true,
       "url": "https://sonagikr.wixsite.com/smallpethospital/blank-82",
@@ -1406,7 +1447,8 @@
         "fi": "Päivähoito 10.00–19.00 (lounas 12.30–14.00). Yöpäivystys 19.00–10.00, 365 päivää vuodessa, yölisämaksulla. Soita etukäteen.",
         "nb": "Dagtid 10.00–19.00 (lunsj 12.30–14.00). Akutt nattvakt 19.00–10.00, 365 dager i året, med nattillegg. Ring på forhånd.",
         "sl": "Dnevna oskrba 10–19 (kosilo 12.30–14). Nočna nujna oskrba 19–10, 365 dni v letu, z nočnimi doplačili. Vnaprej pokličite.",
-        "hr": "Dnevna skrb 10:00–19:00 (ručak 12:30–14:00). Noćna hitna skrb 19:00–10:00, 365 dana u godini, uz noćne doplate. Nazovi unaprijed."
+        "hr": "Dnevna skrb 10:00–19:00 (ručak 12:30–14:00). Noćna hitna skrb 19:00–10:00, 365 dana u godini, uz noćne doplate. Nazovi unaprijed.",
+        "de": "Tagesversorgung 10.00–19.00 Uhr (Mittagspause 12.30–14.00 Uhr). Nächtliche Notfallversorgung 19.00–10.00 Uhr an 365 Tagen im Jahr, mit Nachtzuschlag. Bitte vorher anrufen."
       },
       "small_animals": true,
       "url": "https://vamc.co.kr/",
@@ -1436,7 +1478,8 @@
         "fi": "Auki keskiviikosta sunnuntaihin 10.00–19.00, lounas 12.00–13.00. Suljettu maanantaisin ja tiistaisin.",
         "nb": "Åpent onsdag til søndag 10.00–19.00, lunsj 12.00–13.00. Stengt mandag og tirsdag.",
         "sl": "Odprto sre–ned 10–19, kosilo 12–13. V ponedeljek in torek zaprto.",
-        "hr": "Otvoreno od srijede do nedjelje 10:00–19:00, ručak 12:00–13:00. Ponedjeljkom i utorkom zatvoreno."
+        "hr": "Otvoreno od srijede do nedjelje 10:00–19:00, ručak 12:00–13:00. Ponedjeljkom i utorkom zatvoreno.",
+        "de": "Mi–So 10.00–19.00 Uhr, Mittagspause 12.00–13.00 Uhr. Montag und Dienstag geschlossen."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012742",
@@ -1466,7 +1509,8 @@
         "fi": "Suljettu sunnuntaisin sekä Seollalin ja Chuseokin aikaan. Lounastauko 13.00–14.00. Kysy aukioloajat soittamalla.",
         "nb": "Stengt på søndager og under høytidene Seollal og Chuseok. Lunsjpause kl. 13.00–14.00. Ring for å høre åpningstidene.",
         "sl": "Ob nedeljah ter med praznikoma Seollal in Chuseok zaprto. Odmor za kosilo 13–14. Za delovni čas pokličite.",
-        "hr": "Zatvoreno nedjeljom te tijekom blagdana Seollal i Chuseok. Stanka za ručak 13:00–14:00. Za radno vrijeme nazovi."
+        "hr": "Zatvoreno nedjeljom te tijekom blagdana Seollal i Chuseok. Stanka za ručak 13:00–14:00. Za radno vrijeme nazovi.",
+        "de": "Sonntags sowie während der Feiertage Seollal und Chuseok geschlossen. Mittagspause 13.00–14.00 Uhr. Öffnungszeiten bitte telefonisch erfragen."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012747",
@@ -1496,7 +1540,8 @@
         "fi": "Keskiviikkoisin 9.30–13.00, suljettu sunnuntaisin, tauko 13.00–14.30. Ei yö- eikä päivystyshoitoa.",
         "nb": "Onsdag 9.30–13.00, stengt søndager, pause 13.00–14.30. Ingen natt- eller akuttbehandling.",
         "sl": "Sre 9.30–13, ob nedeljah zaprto, odmor 13–14.30. Brez nočne in nujne oskrbe.",
-        "hr": "Srijedom 9:30–13:00, nedjeljom zatvoreno, stanka 13:00–14:30. Nema noćne ni hitne skrbi."
+        "hr": "Srijedom 9:30–13:00, nedjeljom zatvoreno, stanka 13:00–14:30. Nema noćne ni hitne skrbi.",
+        "de": "Mittwoch 9.30–13.00 Uhr, sonntags geschlossen, Pause 13.00–14.30 Uhr. Kein Nacht- oder Notdienst."
       },
       "small_animals": true,
       "url": "https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012748",
@@ -1526,7 +1571,8 @@
         "fi": "Suljettu sunnuntaisin. Lounastauko 12.00–13.30. Ei yö- eikä päivystyshoitoa.",
         "nb": "Stengt på søndager. Lunsjpause kl. 12.00–13.30. Ingen natt- eller akuttbehandling.",
         "sl": "Ob nedeljah zaprto. Odmor za kosilo 12–13.30. Brez nočne in nujne oskrbe.",
-        "hr": "Nedjeljom zatvoreno. Stanka za ručak 12:00–13:30. Nema noćne ni hitne skrbi."
+        "hr": "Nedjeljom zatvoreno. Stanka za ručak 12:00–13:30. Nema noćne ni hitne skrbi.",
+        "de": "Sonntags geschlossen. Mittagspause 12.00–13.30 Uhr. Kein Nacht- oder Notdienst."
       },
       "small_animals": true,
       "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012749",

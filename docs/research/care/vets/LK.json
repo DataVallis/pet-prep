@@ -75,7 +75,8 @@
         "fi": "Yliopiston opetussairaala seura-, villi- ja eläintarhaeläimille. Päivystys ja tehohoito 24 h; vastaanotto ma–la 8.00–20.00, su ja pyhinä 8.00–12.00. Erikoistuvat lääkärit päivystysvalmiudessa hätätapauksille 19.30–8.00. Vastaanotto ajanvarauksella, jonka tekee lähettävä eläinlääkäri.",
         "nb": "Undervisningssykehus for kjæledyr, viltlevende dyr og dyrehagedyr. Akutt- og intensivbehandling hele døgnet; poliklinikk man–lør 8.00–20.00, søn og helligdager 8.00–12.00. Klinikere på vakt ved nødtilfeller 19.30–8.00. Innleggelse etter timebestilling, bestilt av henvisende dyrlege.",
         "sl": "Univerzitetna učna bolnišnica za hišne ljubljenčke ter divje živali in živali iz živalskih vrtov. Nujna in intenzivna oskrba 24 ur na dan; ambulanta pon–sob 8–20, ned in prazniki 8–12. Dežurni specializanti so za nujne primere dosegljivi 19.30–8. Sprejem po naročilu, ki ga uredi napotni veterinar.",
-        "hr": "Sveučilišna nastavna bolnica za kućne ljubimce, divlje i zoološke životinje. Hitna i intenzivna skrb 24 sata; ambulanta pon–sub 8:00–20:00, ned i blagdanima 8:00–12:00. Specijalizanti u pripravnosti za hitne slučajeve 19:30–08:00. Prijem uz termin koji zakazuje veterinar koji upućuje."
+        "hr": "Sveučilišna nastavna bolnica za kućne ljubimce, divlje i zoološke životinje. Hitna i intenzivna skrb 24 sata; ambulanta pon–sub 8:00–20:00, ned i blagdanima 8:00–12:00. Specijalizanti u pripravnosti za hitne slučajeve 19:30–08:00. Prijem uz termin koji zakazuje veterinar koji upućuje.",
+        "de": "Universitäts-Lehrklinik für Haus-, Wild- und Zootiere. Notfall- und Intensivversorgung rund um die Uhr; ambulant Mo–Sa 8.00–20.00 Uhr, So und feiertags 8.00–12.00 Uhr. Klinikärzte in Rufbereitschaft für Notfälle 19.30–8.00 Uhr. Aufnahme nur nach Terminvereinbarung durch eine überweisende Tierarztpraxis."
       }
     },
     {
@@ -104,7 +105,8 @@
         "fi": "Vastaanotto 6.00–22.00 ajanvarauksella; päivystys ja tehohoito auki 24 h, seitsemän päivää viikossa.",
         "nb": "Poliklinikk kl. 6.00–22.00 etter timebestilling; akutt- og intensivbehandling åpent hele døgnet, sju dager i uken.",
         "sl": "Ambulanta 6–22 po naročilu; nujna in intenzivna oskrba odprta 24 ur na dan, sedem dni v tednu.",
-        "hr": "Ambulanta 6:00–22:00 uz termin; hitna i intenzivna skrb otvorena 24 sata, sedam dana u tjednu."
+        "hr": "Ambulanta 6:00–22:00 uz termin; hitna i intenzivna skrb otvorena 24 sata, sedam dana u tjednu.",
+        "de": "Ambulante Sprechstunde 6.00–22.00 Uhr nach Terminvereinbarung; Notfall- und Intensivversorgung rund um die Uhr, sieben Tage die Woche."
       }
     },
     {
@@ -131,7 +133,8 @@
         "fi": "Sri Lankan ilmavoimien ylläpitämä pieneläinsairaala Borellassa. Kysy aukioloajat ja päivystys soittamalla etukäteen.",
         "nb": "Smådyrsykehus drevet av Sri Lanka Air Force i Borella. Ring på forhånd for åpningstider og nødtilfeller.",
         "sl": "Bolnišnica za male živali, ki jo upravljajo letalske sile Šrilanke, v Borelli. Za delovni čas in nujne primere vnaprej pokličite.",
-        "hr": "Bolnica za male životinje koju vodi ratno zrakoplovstvo Šri Lanke u Borelli. Za radno vrijeme i hitne slučajeve nazovi unaprijed."
+        "hr": "Bolnica za male životinje koju vodi ratno zrakoplovstvo Šri Lanke u Borelli. Za radno vrijeme i hitne slučajeve nazovi unaprijed.",
+        "de": "Kleintierklinik der Sri Lanka Air Force in Borella. Öffnungszeiten und Notfälle bitte telefonisch erfragen."
       }
     }
   ],

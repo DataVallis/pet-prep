@@ -50,7 +50,8 @@
         "fi": "Liikkuva eläinlääkäri, joka tekee kotikäyntejä koirille ja kissoille; auki ympäri vuorokauden, 7 päivää viikossa, myös päivystys. Palvelualueet: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
         "nb": "Mobil dyrlege med hjemmebesøk for hunder og katter; åpen hele døgnet, sju dager i uken, også for nødtilfeller. Dekningsområder: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
         "sl": "Mobilni veterinar z obiski na domu za pse in mačke; odprto 24 ur na dan, 7 dni v tednu, tudi za nujne primere. Območja: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
-        "hr": "Mobilni veterinar za kućne posjete, za pse i mačke; radi 24 sata, 7 dana u tjednu, uključujući hitne slučajeve. Područja: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
+        "hr": "Mobilni veterinar za kućne posjete, za pse i mačke; radi 24 sata, 7 dana u tjednu, uključujući hitne slučajeve. Područja: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
+        "de": "Mobiler Tierarzt mit Hausbesuchen für Hunde und Katzen; rund um die Uhr erreichbar, 7 Tage die Woche, auch bei Notfällen. Einzugsgebiet: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
       }
     },
     {
@@ -75,7 +76,8 @@
         "fi": "ma–la 8.00–18.00; su pyynnöstä. Soita etukäteen päivystystapauksissa.",
         "nb": "man–lør 8.00–18.00; søndag etter avtale. Ring på forhånd ved nødtilfeller.",
         "sl": "Pon–sob 8–18; ned na zahtevo. Za nujne primere vnaprej pokličite.",
-        "hr": "pon–sub 08:00–18:00; nedjeljom na zahtjev. Za hitne slučajeve nazovi unaprijed."
+        "hr": "pon–sub 08:00–18:00; nedjeljom na zahtjev. Za hitne slučajeve nazovi unaprijed.",
+        "de": "Mo–Sa 8.00–18.00 Uhr; sonntags auf Anfrage. Bei Notfällen bitte vorher anrufen."
       }
     },
     {
@@ -99,7 +101,8 @@
         "fi": "Yliopiston opetus- ja erikoissairaala eläimille; soita etukäteen ja kysy aukioloajat.",
         "nb": "Universitetets undervisnings- og henvisningssykehus for dyr; ring på forhånd for åpningstider.",
         "sl": "Univerzitetna učna in napotna veterinarska bolnišnica; za delovni čas pokličite.",
-        "hr": "Sveučilišna nastavna i referentna bolnica za životinje; nazovi unaprijed za radno vrijeme."
+        "hr": "Sveučilišna nastavna i referentna bolnica za životinje; nazovi unaprijed za radno vrijeme.",
+        "de": "Universitäre Lehr- und Überweisungsklinik für Tiere; Öffnungszeiten bitte telefonisch erfragen."
       }
     },
     {
@@ -122,7 +125,8 @@
         "fi": "Yliopiston opetussairaala lemmikeille, tuotantoeläimille ja luonnonvaraisille eläimille; soita etukäteen ja kysy aukioloajat.",
         "nb": "Undervisningssykehus for kjæledyr, matproduserende dyr og viltlevende dyr; ring på forhånd for åpningstider.",
         "sl": "Univerzitetna učna bolnišnica za ljubljenčke, gospodarske živali in divjad; za delovni čas pokličite.",
-        "hr": "Sveučilišna nastavna bolnica za kućne ljubimce, gospodarske i divlje životinje; nazovi unaprijed za radno vrijeme."
+        "hr": "Sveučilišna nastavna bolnica za kućne ljubimce, gospodarske i divlje životinje; nazovi unaprijed za radno vrijeme.",
+        "de": "Universitäre Lehrklinik für Haustiere, Nutztiere und Wildtiere; Öffnungszeiten bitte telefonisch erfragen."
       }
     },
     {
@@ -146,7 +150,8 @@
         "fi": "Pieneläinklinikka, jolla on tehohoito ja tartuntatautiosasto; soita etukäteen ja kysy aukioloajat.",
         "nb": "Smådyrklinikk med intensivavdeling og avdeling for smittsomme sykdommer; ring på forhånd for åpningstider.",
         "sl": "Ambulanta za male živali z intenzivno oskrbo in oddelkom za nalezljive bolezni; za delovni čas pokličite.",
-        "hr": "Klinika za male životinje s intenzivnom njegom i odjelom za zarazne bolesti; nazovi unaprijed za radno vrijeme."
+        "hr": "Klinika za male životinje s intenzivnom njegom i odjelom za zarazne bolesti; nazovi unaprijed za radno vrijeme.",
+        "de": "Kleintierklinik mit Intensivstation und Infektionsstation; Öffnungszeiten bitte telefonisch erfragen."
       }
     }
   ],
