@@ -140,9 +140,9 @@ describe('breed, config and database', function () {
 
         $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
-            // Other names are no breed keys (only search keywords).
+            // Other names are no breed keys (only search keywords; the German Pinscher is its own breed since M5-R10-137).
             ->and($refused(['breed_type' => 'zwergpinscher']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'german_pinscher']))->toThrow(QueryException::class);
+            ->and($refused(['breed_type' => 'deutscher_pinscher']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2027_02_11_120000_add_miniature_pinscher_breed.php');
         // down() refuses while a Miniature Pinscher exists (no silent data loss).
