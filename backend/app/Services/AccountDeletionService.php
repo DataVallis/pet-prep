@@ -568,6 +568,9 @@ class AccountDeletionService
         }
         // The family keeps its quiet hours change log (David 2026-11-24), but without this
         // parent: who saved and their phone's User-Agent / app features go.
+        // Deliberately not scoped to $familyId: the user row is deleted right after,
+        // so every row of theirs in any family must lose these fields now (user_id
+        // would be nulled by the FK anyway, User-Agent / features would not).
         QuietHoursChange::where('user_id', $parentId)->update(['user_id' => null, 'user_agent' => null, 'client_features' => null]);
 
         // Deprecated mirrors that would cascade: the family's children and

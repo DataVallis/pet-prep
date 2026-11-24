@@ -25,9 +25,30 @@ class QuietHoursPanel
 
     private const DAY_NAMES = [1 => 'Mon', 2 => 'Tue', 3 => 'Wed', 4 => 'Thu', 5 => 'Fri', 6 => 'Sat', 7 => 'Sun'];
 
+    /**
+     * Family per record instance, so one render (visible() + both Placeholders)
+     * looks it up once instead of once per callback. Weak keys: an entry goes
+     * with its User object (next Livewire request = fresh record = fresh lookup).
+     *
+     * Values are wrapped in a one-element array: WeakMap::offsetExists() is
+     * false for a stored null (a user without a family).
+     *
+     * @var \WeakMap<User, array{0: Family|null}>|null
+     */
+    private static ?\WeakMap $families = null;
+
     public static function familyOf(?User $user): ?Family
     {
-        return $user?->exists ? app(FamilyService::class)->familyOf($user) : null;
+        if ($user === null || ! $user->exists) {
+            return null;
+        }
+
+        self::$families ??= new \WeakMap;
+        if (! self::$families->offsetExists($user)) {
+            self::$families[$user] = [app(FamilyService::class)->familyOf($user)];
+        }
+
+        return self::$families[$user][0];
     }
 
     public static function current(?User $user): HtmlString

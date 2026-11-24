@@ -321,7 +321,8 @@ class AccountExportService
      * The quiet hours change log (David 2026-11-24), oldest first: who saved
      * (parent id), which schedule (family / pet), before → after (pet after
      * null = follows the family again), the app's User-Agent and features
-     * header — the parent's own request data.
+     * header — the request data of the family's parents who saved (a parent
+     * who deleted their account or left for another family shows as null).
      *
      * @return list<array<string, mixed>>
      */

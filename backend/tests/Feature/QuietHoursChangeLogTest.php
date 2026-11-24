@@ -2,6 +2,7 @@
 
 use App\Enums\QuietHoursChangeScope;
 use App\Filament\Resources\UserResource\Pages\EditUser;
+use App\Filament\Resources\UserResource\QuietHoursPanel;
 use App\Models\Family;
 use App\Models\Pet;
 use App\Models\QuietHours;
@@ -11,6 +12,7 @@ use App\Services\AccountDeletionService;
 use App\Services\FamilyInviteService;
 use App\Services\FamilyService;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Testing\TestResponse;
 use Livewire\Livewire;
 
@@ -223,4 +225,115 @@ it('admin: a superadmin sees the family\'s stored quiet hours and the latest cha
         ->assertSee('pet #'.$f['pet']->id)
         ->assertSee('follows family')
         ->assertSee(QHC_UA);
+});
+
+it('a timezone-only save writes no row', function () {
+    $f = qhcFamily();
+
+    qhcPutFamily($f['parent'], ['timezone' => 'Europe/Vienna'])->assertOk()
+        ->assertJsonPath('timezone', 'Europe/Vienna');
+
+    expect(QuietHoursChange::count())->toBe(0);
+});
+
+it('deleting a pet removes its pet rows; the family rows stay', function () {
+    $f = qhcFamily();
+    qhcPutFamily($f['parent'], QHC_SCHOOL)->assertOk();
+    qhcPutPet($f['parent'], $f['pet'], QHC_SCHOOL)->assertOk();
+    expect(QuietHoursChange::where('pet_id', $f['pet']->id)->count())->toBe(1);
+
+    // The child is the pet's only caretaker → the pet goes with the child profile.
+    app(AccountDeletionService::class)->deleteChildProfile($f['parent'], $f['child'], acknowledgePaidChallenge: true);
+
+    expect(Pet::whereKey($f['pet']->id)->exists())->toBeFalse()
+        ->and(QuietHoursChange::where('pet_id', $f['pet']->id)->count())->toBe(0)
+        ->and(QuietHoursChange::where('family_id', $f['family']->id)->sole()->scope)->toBe(QuietHoursChangeScope::Family);
+});
+
+it('the last parent deleting their account takes the family\'s change log with it', function () {
+    $f = qhcFamily();
+    $other = qhcFamily();
+    qhcPutFamily($f['parent'], QHC_SCHOOL)->assertOk();
+    qhcPutPet($f['parent'], $f['pet'], QHC_SCHOOL)->assertOk();
+    qhcPutFamily($other['parent'], QHC_SCHOOL)->assertOk();
+
+    app(AccountDeletionService::class)->deleteParentAccount($f['parent']->fresh(), acknowledgePaidChallenge: true);
+
+    expect(Family::whereKey($f['family']->id)->exists())->toBeFalse()
+        ->and(QuietHoursChange::where('family_id', $f['family']->id)->count())->toBe(0)
+        ->and(QuietHoursChange::where('family_id', $other['family']->id)->count())->toBe(1);
+});
+
+it('a parent who joins another family is anonymised in the old family; the remaining parent\'s export has none of their data', function () {
+    $families = app(FamilyService::class);
+    $invites = app(FamilyInviteService::class);
+
+    // Family X: parents A and B, no children / pets.
+    $a = User::factory()->parent()->create();
+    $x = $families->ensureFamilyFor($a);
+    $b = User::factory()->parent()->create();
+    $invites->joinFamily($b, $invites->createInvite($a)['code']);
+    expect($families->familyOf($b->refresh())->id)->toBe($x->id);
+
+    qhcPutFamily($a, QHC_SCHOOL)->assertOk();
+    actingAs($b, 'sanctum');
+    putJson('/api/parent/quiet-hours', ['bedtime_start' => '22:00'], ['User-Agent' => 'PetPrep/B'])->assertOk();
+    expect(QuietHoursChange::where('family_id', $x->id)->where('user_id', $a->id)->count())->toBe(1);
+
+    // A moves to family Y.
+    $c = User::factory()->parent()->create();
+    $y = $families->ensureFamilyFor($c);
+    $invites->joinFamily($a->refresh(), $invites->createInvite($c)['code']);
+    expect($families->familyOf($a->refresh())->id)->toBe($y->id);
+
+    $rows = QuietHoursChange::where('family_id', $x->id)->orderBy('id')->get();
+    expect($rows)->toHaveCount(2)
+        ->and($rows[0]->user_id)->toBeNull()
+        ->and($rows[0]->user_agent)->toBeNull()
+        ->and($rows[0]->client_features)->toBeNull()
+        // The schedule history itself stays with the family.
+        ->and($rows[0]->after['school_start'])->toBe('08:00')
+        ->and($rows[1]->user_id)->toBe($b->id)
+        ->and($rows[1]->user_agent)->toBe('PetPrep/B');
+
+    actingAs($b->refresh(), 'sanctum');
+    $export = getJson('/api/parent/account/export')->assertOk()
+        ->assertJsonCount(2, 'quiet_hours_changes')
+        ->assertJsonPath('quiet_hours_changes.0.by_user_id', null)
+        ->assertJsonPath('quiet_hours_changes.0.user_agent', null)
+        ->assertJsonPath('quiet_hours_changes.0.client_features', null)
+        ->assertJsonPath('quiet_hours_changes.1.by_user_id', $b->id);
+    // Nowhere in the whole export: A's phone User-Agent / app features.
+    expect(json_encode($export->json(), JSON_UNESCAPED_SLASHES))->not->toContain(QHC_UA)
+        ->not->toContain(QHC_FEATURES);
+});
+
+it('admin: a non-superadmin cannot open a user\'s edit page', function () {
+    $f = qhcFamily();
+
+    actingAs(User::factory()->parent()->create())
+        ->get('/admin/users/'.$f['parent']->getRouteKey().'/edit')
+        ->assertForbidden();
+});
+
+it('admin: the panel looks the family up once per record', function () {
+    $f = qhcFamily();
+    $record = $f['parent']->fresh();
+
+    expect(QuietHoursPanel::familyOf($record)?->id)->toBe($f['family']->id);
+
+    DB::enableQueryLog();
+    QuietHoursPanel::familyOf($record);
+    QuietHoursPanel::familyOf($record);
+    expect(DB::getQueryLog())->toBe([]);
+    DB::disableQueryLog();
+
+    // A user without a family is remembered too (null), not looked up again.
+    $loner = User::factory()->child()->create();
+    expect(QuietHoursPanel::familyOf($loner))->toBeNull();
+    DB::flushQueryLog();
+    DB::enableQueryLog();
+    QuietHoursPanel::familyOf($loner);
+    expect(DB::getQueryLog())->toBe([]);
+    DB::disableQueryLog();
 });
