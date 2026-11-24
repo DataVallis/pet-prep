@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "57e16e5d2d11d888d6bf8bdfc0e314a52ac54ad84f9c95df24e18f5e8e8a36b3"
+      "sha256": "f1079d6cc70a71e155970572b6c659cad076ae12eef6174339ca79889f5aef88"
     }
   },
   "suitability_vocabulary": {
@@ -79137,7 +79137,12 @@
           "S1028"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bracco-italiano.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
