@@ -1660,6 +1660,19 @@
             "prompt_hash": "sha256:37aa672cf13afd97399190618e7b0ace0822aa6d3882fdb5bda41ad3c787fecb",
             "generated_at": "2026-11-23T06:46:34+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bracco_italiano",
+            "species": "dog",
+            "colour": "orange-white",
+            "file": "dog/bracco-italiano.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:56475c05f5a706f9279991df8457506a309a579302f50186802cbfda63d2783c",
+            "generated_at": "2026-11-24T01:14:29+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
