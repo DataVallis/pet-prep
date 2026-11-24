@@ -6081,6 +6081,51 @@
             "prompt_hash": "sha256:b7924b14ed58e7285166d43eeb109509de32410b343eb6f48dd1b4541aeb6a02",
             "generated_at": "2026-11-24T03:28:31+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bedlington_terrier",
+            "species": "dog",
+            "colour": "liver",
+            "colour_value": "liver (warm brown)",
+            "file": "dog/bedlington-terrier--liver.webp",
+            "reference": "dog/bedlington-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:bd71663960d8577a068ff41865d019d3f15158ebac24a9c98122a548ba37ab0e",
+            "generated_at": "2026-11-24T07:17:23+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bedlington_terrier",
+            "species": "dog",
+            "colour": "blue-tan",
+            "colour_value": "blue with tan markings (blue and tan)",
+            "file": "dog/bedlington-terrier--blue-tan.webp",
+            "reference": "dog/bedlington-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:5854c8ae7547fcd3c480b4a35b347f48bc543fee6fb3e49c96b99535bbf04b43",
+            "generated_at": "2026-11-24T07:17:57+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bedlington_terrier",
+            "species": "dog",
+            "colour": "liver-tan",
+            "colour_value": "liver with tan markings (liver and tan)",
+            "file": "dog/bedlington-terrier--liver-tan.webp",
+            "reference": "dog/bedlington-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:55d821c9c29a0115fa16097fd2f84dc8a003bb2611b06bcd4de71e0df9ca446b",
+            "generated_at": "2026-11-24T07:18:15+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
