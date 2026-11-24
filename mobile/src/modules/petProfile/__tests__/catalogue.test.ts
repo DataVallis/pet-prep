@@ -731,8 +731,8 @@ describe('breed search', () => {
     expect(find('cane corso')).toEqual(['cane_corso']);
     expect(find('korzo')).toEqual(['cane_corso']);
     // M5-R10-60: … and the Italian Greyhound (»mali italijanski hrt«) shares the adjective.
-    // M5-R10-124: … and the Spinone Italiano (»italijanski ostrodlaki ptičar«).
-    expect(find('italijanski')).toEqual(['cane_corso', 'italian_greyhound', 'spinone_italiano']);
+    // M5-R10-124: … and the Spinone Italiano (»italijanski ostrodlaki ptičar«); M5-R10-136: … and the Bracco Italiano (»italijanski ptičar«).
+    expect(find('italijanski')).toEqual(['cane_corso', 'italian_greyhound', 'spinone_italiano', 'bracco_italiano']);
     // "Italian mastiff" is left out on purpose — it usually means the Neapolitan Mastiff.
     expect(find('italian mastiff')).toEqual([]);
   });
@@ -754,12 +754,12 @@ describe('breed search', () => {
     // M5-R10-55: … and the Wirehaired Pointing Griffon (»francoski ostrodlaki ptičar«).
     // M5-R10-59: … and the Weimaraner (»weimarski ptičar«).
     // M5-R10-65: … and the German Wirehaired Pointer (»nemški ostrodlaki ptičar«).
-    // M5-R10-124: the Spinone Italiano is a »ptičar« too (»italijanski ostrodlaki ptičar«).
-    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla', 'wirehaired_pointing_griffon', 'weimaraner', 'german_wirehaired_pointer', 'spinone_italiano']);
+    // M5-R10-124: the Spinone Italiano is a »ptičar« too (»italijanski ostrodlaki ptičar«); M5-R10-136: so is the Bracco Italiano (»italijanski ptičar«).
+    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla', 'wirehaired_pointing_griffon', 'weimaraner', 'german_wirehaired_pointer', 'spinone_italiano', 'bracco_italiano']);
     expect(find('kurzhaar')).toEqual(['german_shorthaired_pointer']);
     // M5-R10-124: … and the Spinone Italiano (»Italian Wire-haired Pointer«).
-    // M5-R10-125: … and the Pointer itself.
-    expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla', 'german_wirehaired_pointer', 'spinone_italiano', 'pointer']);
+    // M5-R10-125: … and the Pointer itself. M5-R10-136: … and the Bracco Italiano (»Italian Pointer«).
+    expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla', 'german_wirehaired_pointer', 'spinone_italiano', 'pointer', 'bracco_italiano']);
     expect(find('gsp')).toEqual(['german_shorthaired_pointer']);
   });
 

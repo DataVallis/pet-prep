@@ -147,6 +147,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   finnish_lapphund: 'dog',
   norfolk_terrier: 'dog',
   belgian_sheepdog: 'dog',
+  bracco_italiano: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -296,6 +297,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'finnish_lapphund',
   'norfolk_terrier',
   'belgian_sheepdog',
+  'bracco_italiano',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
