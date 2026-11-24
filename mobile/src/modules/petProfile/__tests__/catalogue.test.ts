@@ -712,8 +712,8 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('doberman')).toEqual(['dobermann']);
     expect(find('dobermann')).toEqual(['dobermann']);
-    // M5-R10-77: the Miniature Pinscher matches »pinscher« too.
-    expect(find('pinscher')).toEqual(['dobermann', 'miniature_pinscher']);
+    // M5-R10-77: the Miniature Pinscher matches »pinscher« too; M5-R10-137: so does the German Pinscher.
+    expect(find('pinscher')).toEqual(['dobermann', 'miniature_pinscher', 'german_pinscher']);
   });
 
   it('M5-R10-24: finds the Pembroke Welsh Corgi by its SL / EN names and nicknames', () => {
