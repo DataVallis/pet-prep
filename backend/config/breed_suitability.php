@@ -3229,5 +3229,27 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1032'], 'refs' => ['german_pinscher.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-138 Bedlington Terrier (data.json proposed_game_parameters.bedlington_terrier.suitability_tags; S1037, S1038,
+        // S1040), runbook rules. Copper toxicosis is inherited, not a conformation problem → no welfare chip; PDSA names a very
+        // strong prey drive → chases_small_pets last; in marketing. No new vocabulary key. Never hypoallergenic (low_shedding).
+        'bedlington_terrier' => [
+            'suits' => [
+                // S1038 "Yes, Bedlingtons can make good family dogs – if their needs are met and they've been well socialised from an early age."
+                ['tag' => 'family_pet', 'source_ids' => ['S1038'], 'refs' => ['bedlington_terrier.behaviour.family']],
+                // S1037 "They're not huge shedders …"; Woodgreen S1038 "Shedding | Minimal"
+                ['tag' => 'low_shedding', 'source_ids' => ['S1037', 'S1038'], 'refs' => ['bedlington_terrier.suitability.pdsa_shedding']],
+            ],
+            'consider' => [
+                // S1038 "We recommend brushing two to three times a week, along with a professional groom every six to eight weeks"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1038'], 'refs' => ['bedlington_terrier.suitability.woodgreen_grooming']],
+                // S1040 "Bedlington Terriers are suited for families with older children who understand how to interact gently …"
+                ['tag' => 'older_children', 'source_ids' => ['S1040'], 'refs' => ['bedlington_terrier.behaviour.children']],
+                // S1037 "they also suffer with separation anxiety so need someone around all the time."
+                ['tag' => 'needs_company', 'source_ids' => ['S1037'], 'refs' => ['bedlington_terrier.behaviour.time_alone']],
+                // S1037 "they do have very strong prey drive so you should never leave your Bedlington unattended with other pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S1037'], 'refs' => ['bedlington_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

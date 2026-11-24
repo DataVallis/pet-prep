@@ -4528,6 +4528,37 @@
         }
       ],
       "notes": "RKC breed page (dog-data S1031, 2026-11-24, M5-R10-137): under 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' only 'Prioritising genetic diversity'; 'Good Practice schemes and tests' lists no named test; 'We don't currently offer a breed-specific DNA testing package for this breed'. No new test key. PetMD / WebMD name hip dysplasia, cataracts and von Willebrand disease (background in dog-data) — no A/B breeding rule, not added."
+    },
+    "bedlington_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K44",
+        "quote": "strongly recommends that all Bedlington Terriers undergo specific health screenings"
+      },
+      "tests": [
+        {
+          "key": "dna_commd1",
+          "level": "other_scheme",
+          "name": "Copper toxicosis test by an approved laboratory (US breed club recommendation)",
+          "source_id": "K44",
+          "quote": "A test conducted by an approved laboratory to detect copper toxicosis"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Patellar luxation evaluation by a vet (US breed club recommendation)",
+          "source_id": "K44",
+          "quote": "A veterinary evaluation to assess the presence of patellar luxation"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination from 12 months of age (US breed club recommendation)",
+          "source_id": "K44",
+          "quote": "An eye examination per-forms once the dog reaches 12 months of age"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (display.aspx?id=3061 → royalkennelclub.com …/terrier/bedlington-terrier) and the RKC Assured Breeder / COMMD1 DNA-test pages could not be fetched on 2026-11-24 (redirect refused) → no minimum / best_practice level. Bedlington Terrier Club of America health statement (K44, hosted by the AKC, reaffirmed January 19, 2026): copper toxicosis test, patellar luxation evaluation, eye examination (quotes as extracted; 'per-forms' is a PDF line-break artefact). New test key dna_commd1. PDSA / Woodgreen / PetMD name copper toxicosis, retinal dysplasia and patellar luxation (background in dog-data)."
     }
   }
 }

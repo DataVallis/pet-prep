@@ -518,6 +518,7 @@ const SPECIES = [
       { id: 'belgian_sheepdog', synonyms: { en: ['Groenendael', 'Belgian Shepherd Groenendael', 'Belgian Shepherd Dog (Groenendael)', 'Belgian Groenendael'], sl: ['groenendael', 'belgijski ovcar groenendael', 'belgijski ovčar'] } },
       { id: 'bracco_italiano', synonyms: { en: ['Italian Pointer', 'Italian Pointing Dog', 'Bracco'], sl: ['bracco italiano', 'italijanski pticar', 'bracco'] } },
       { id: 'german_pinscher', synonyms: { en: ['Deutscher Pinscher', 'Standard Pinscher', 'Pinscher'], sl: ['nemški pinč', 'srednji pinč', 'pinč'] } },
+      { id: 'bedlington_terrier', synonyms: { en: ['Bedlington'], sl: ['bedlingtonski terier', 'bedlington terrier', 'bedlington'] } },
     ],
   },
   {
@@ -3476,6 +3477,27 @@ const DOG_FACTS = {
       ['bleeding_disorder_vwd', 'health.von_willebrand'],
     ],
   },
+  // M5-R10-138. The RKC page was not reachable → PDSA (S1037): exercise 'a minimum of an hour' (at_least, the game value),
+  // coat 'Medium', shedding (not huge shedders → No), lifespan 'Over 10 years'; grooming = Woodgreen 'two to three times a
+  // week' (More than once a week, S1038); lifespan = McMillan 2024 via the Dogs Trust table (S123, 13.7 y); height / weight
+  // = FCI-Standard N°9 (S1035). Coren rank 40 (S35). FCI origin Great Britain (GB). Not exported: adult_weight alternatives
+  // (PDSA / Woodgreen), lifespan.woodgreen / petmd (spans next to the median), senior_from (derived), the WebMD / PDSA care
+  // texts (care tasks / grooming rule come from the game). New health keys copper_liver_disease, retinal_eye_conditions.
+  bedlington_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'more_than']],
+    exercise: [['@proposed_game_parameters.bedlington_terrier.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.woodgreen_grooming', 'grooming_frequency']],
+    shedding: ['suitability.pdsa_shedding'],
+    food_motivation: null,
+    health: [
+      ['copper_liver_disease', 'health.copper_toxicosis'],
+      ['retinal_eye_conditions', 'health.eyes'],
+      ['kneecap_luxation', 'health.patella'],
+    ],
+  },
 
 
 
@@ -3570,6 +3592,7 @@ export const DOG_CARE_TASKS = {
   norfolk_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norfolk_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.norfolk_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.norfolk_terrier.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.norfolk_terrier.professional_grooming']],
   belgian_sheepdog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.belgian_sheepdog.tooth_brushing'], ['ear_cleaning', 1, 28, 'proposed_game_parameters.belgian_sheepdog.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_sheepdog.bathing']],
   german_pinscher: [['ear_cleaning', 1, 7, 'proposed_game_parameters.german_pinscher.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.german_pinscher.nail_trimming'], ['bath', 1, 42, 'proposed_game_parameters.german_pinscher.bathing']],
+  bedlington_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.bedlington_terrier.tooth_brushing'], ['groomer_visit', 1, 42, 'proposed_game_parameters.bedlington_terrier.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4616,6 +4639,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.german_pinscher.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.german_pinscher.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.german_pinscher.exercise_minutes_senior',
+  },
+  bedlington_terrier: {
+    adult_minutes: ['proposed_game_parameters.bedlington_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bedlington_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bedlington_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bedlington_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bedlington_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bedlington_terrier.exercise_minutes_senior',
   },
 
 

@@ -136,6 +136,7 @@ return [
     'belgian_sheepdog' => 'Belgian Sheepdog',
     'bracco_italiano' => 'Bracco Italiano',
     'german_pinscher' => 'German Pinscher',
+    'bedlington_terrier' => 'Bedlington Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

@@ -892,6 +892,12 @@
 | long-haired variety with an abundant ruff, breeches and a plumed tail, rather small erect triangular ears, black nose. Not
 | flat-faced; RKC Breed Watch Category 1 (S1019). One colour (the portrait default); weight unsourced → `verified => false`.
 |
+| Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
+| without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
+| low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
+| livers / sandies. Not flat-faced. Blue first with the highest weight (the portrait default); weights unsourced →
+| `verified => false`.
+|
 | German Pinscher (M5-R10-137, docs/research/dog-data german_pinscher.appearance): "Self coloured : Deer red, reddish-brown
 | to dark red brown." / "Black and Tan : Lacquer black with red or brown markings." (FCI-Standard N° 184, S1030; the RKC's
 | blue and tan / fawn are not FCI colours → not drawn); short, dense, smooth, shiny coat, natural V-shaped drop ears, natural
@@ -5811,6 +5817,43 @@ return [
             'muzzle' => ['a strong, blunt wedge-shaped muzzle with a well-developed black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-138 (docs/research/dog-data/data.json bedlington_terrier.appearance; runbook rules 2026-10-10: standard colours only —
+    // blue, liver or sandy, with or without tan (FCI S1035)).
+    'bedlington_terrier' => [
+        'display_name' => 'Bedlington Terrier',
+        // Colour frequencies are in no source (bedlington_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N°9 Bedlington Terrier (S1035, https://www.kutya-tar.hu/standard/en/pdf/009-1998-en.pdf), PDSA (S1037) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1037 "Size: Small"; S1035 "Height about 41 cm ( 16 inches ) at withers."',
+            'build' => 'S1035 "A graceful, lithe, muscular dog, with no signs of either weakness or coarseness."',
+            'coat_length' => 'S1035 "Very distinctive. Thick and linty, standing well out from skin, but not wiry."',
+            'coat_color' => 'S1035 "Blue, liver, or sandy with or without tan. Darker pigment to be encouraged." (weights unsourced)',
+            'ear_carriage' => 'S1035 "Moderately sized, filbert-shaped, set on low, and hanging flat to cheek."',
+            'eye_color' => 'S1035 "Small, bright and deep set." / "Blues have a dark eye; blue and tans have lighter eye with amber lights, livers and sandies a light hazel eye."',
+            'tail' => 'S1035 "Moderate length, thick at root, tapering to a point and gracefully curved."',
+            'nose' => 'S1035 "Blues and blue and tans must have black noses, liver and sandies must have brown noses."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'graceful, lithe, muscular lamb-like terrier with a narrow, deep, rounded pear-shaped head and a nearly white silky topknot', 'weight' => 3], 'lithe, slightly arched terrier with a lamb-like outline and long legs'],
+            'coat_length' => ['thick, linty, crisp curly coat standing well out from the skin, trimmed close, not wiry'],
+            // Standard colours only (S1035, never white, black, merle or parti-colour); blue highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'blue (slate blue-grey to silvery blue)', 'weight' => 35],
+                ['value' => 'liver (warm brown)', 'weight' => 20],
+                ['value' => 'sandy (light fawn)', 'weight' => 15],
+                ['value' => 'blue with tan markings (blue and tan)', 'weight' => 15],
+                ['value' => 'liver with tan markings (liver and tan)', 'weight' => 8],
+                ['value' => 'sandy with tan markings (sandy and tan)', 'weight' => 7],
+            ],
+            'ear_carriage' => ['moderately sized, low-set filbert-shaped ears hanging flat to the cheeks with a silky tassel at the tip'],
+            'eye_color' => ['small, bright, deep-set almond eyes, dark in blues, lighter hazel in livers and sandies'],
+            'tail' => ['moderate-length tail, thick at the root, tapering to a point and gracefully curved'],
+            'nose' => ['a black nose in blues, a brown nose in livers and sandies'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
