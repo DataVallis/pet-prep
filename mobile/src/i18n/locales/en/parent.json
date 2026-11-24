@@ -263,6 +263,7 @@
     "groupOff": "{{group}}: off",
     "schoolDays": "School days",
     "schoolDaysHint": "School applies only on the selected days. Bedtime applies every day.",
+    "noNightWarning": "Without bedtime your pet never sleeps: at night it can still make a mess, the water bowl empties and notifications arrive. Turn on “Bedtime” (e.g. 21:00–7:00) and tap Save.",
     "summarySchoolDays": "School {{range}} ({{days}})",
     "weekdays": {
       "short": {

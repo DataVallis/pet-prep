@@ -180,6 +180,14 @@ export default function QuietHoursForm({ value, onChange, testID, showActive = f
             )}
           </>
         )}
+        {/* David 2026-11-24 (tester asked to care for the pet at 1–2 am): with quiet hours on but
+            no night window the pet never sleeps — messes, »Pelji ven«, the water bowl and pushes
+            run all night. Say so where the switch is, before »Shrani«. */}
+        {group === 'bedtime' && !on && value.is_active && (
+          <View style={styles.warning} accessibilityRole="alert" testID={`${testID}-no-night`}>
+            <Text style={styles.warningText}>{S.noNightWarning}</Text>
+          </View>
+        )}
       </View>
     );
   };
@@ -241,5 +249,7 @@ const styles = StyleSheet.create({
   chipText: { fontSize: 14, fontWeight: '700', color: C.text },
   chipTextOn: { color: C.card },
   hint: { fontSize: 12, color: C.muted, lineHeight: 17 },
+  warning: { borderRadius: radius.button, backgroundColor: palette.warnSoft, borderWidth: 1, borderColor: palette.warnBorder, padding: 10 },
+  warningText: { fontSize: 13, color: palette.warn, lineHeight: 18 },
   pressed: { opacity: 0.85 },
 });

@@ -267,6 +267,7 @@
     "groupOff": "{{group}}: izklopljeno",
     "schoolDays": "Šolski dnevi",
     "schoolDaysHint": "Šola velja samo izbrane dni. Nočno spanje velja vsak dan.",
+    "noNightWarning": "Brez nočnega spanja ljubljenček nikoli ne spi: tudi ponoči lahko naredi nered, posoda z vodo se prazni in prihajajo obvestila. Vklopite »Spanje« (npr. 21:00–7:00) in tapnite Shrani.",
     "summarySchoolDays": "Šola {{range}} ({{days}})",
     "weekdays": {
       "short": {
