@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | M5-R13), puppy socialisation with the PetMD quote (S1032, M5-R17), ear cleaning every week + a bath reminder every 6 weeks
 | (PetMD S1032) and a nail trim every 4 weeks (WebMD S1033); no tooth task (daily brushing only one option), no groomer task,
 | no meal gap, no heat walk ban. No welfare chip, in marketing; suits family_pet, children; consider
-| independent_experienced_owner, needs_mental_stimulation, sheds, chases_small_pets; black and tan portrait (one of two standard colours).
+| needs_mental_stimulation, sheds, chases_small_pets; black and tan portrait (one of two standard colours).
 */
 
 beforeEach(function () {
@@ -385,7 +385,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('german_pinscher')['search_keywords'], 'sort_order' => 1280,
             'suitability' => [
                 'suits' => ['family_pet', 'children'],
-                'consider' => ['independent_experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
+                'consider' => ['needs_mental_stimulation', 'sheds', 'chases_small_pets'],
             ],
         ]);
     });
@@ -458,12 +458,12 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('suits families and children; consider an independent dog for an experienced owner, mental stimulation, shedding and small pets', function () {
+    it('suits families and children; consider mental stimulation, shedding and small pets', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::GermanPinscher);
         expect($tags['suits'])->toBe(['family_pet', 'children'])
-            ->and($tags['consider'])->toBe(['independent_experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'])
+            ->and($tags['consider'])->toBe(['needs_mental_stimulation', 'sheds', 'chases_small_pets'])
             ->and($tags['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('other_pets')->not->toContain('low_shedding')
-            ->and($tags['consider'])->not->toContain('needs_company')->not->toContain('secure_fencing')->not->toContain('experienced_owner')->not->toContain('frequent_grooming')->not->toContain('long_daily_exercise');
+            ->and($tags['consider'])->not->toContain('needs_company')->not->toContain('secure_fencing')->not->toContain('experienced_owner')->not->toContain('independent_experienced_owner')->not->toContain('frequent_grooming')->not->toContain('long_daily_exercise');
 
         expect(gpData('german_pinscher.suitability.rkc_size_of_home.quote'))->toBe('Small house')
             ->and(gpData('german_pinscher.suitability.rkc_shedding.quote'))->toBe('Yes')

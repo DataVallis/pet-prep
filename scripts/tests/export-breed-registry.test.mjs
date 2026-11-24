@@ -4289,7 +4289,7 @@ test('German Pinscher (M5-R10-137): RKC up to 1 h, FCI height + weight, RKC over
   assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
   assert.ok(!d.game.rules.some((r) => r.key === 'meal_exercise_gap'));
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['independent_experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'sheds', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'cataracts', 'bleeding_disorder_vwd']);
   assert.equal(d.breeder_checklist.status, 'listed');
   const json = JSON.stringify(d);

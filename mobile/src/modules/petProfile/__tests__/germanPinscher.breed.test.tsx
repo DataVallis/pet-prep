@@ -58,7 +58,7 @@ describe('M5-R10-137 German Pinscher', () => {
     expect(dog?.search_keywords).toEqual(['german pinscher', 'deutscher pinscher', 'standard pinscher', 'pinscher', 'nemški pinč', 'nemski pinc', 'srednji pinč', 'pinč']);
     expect(dog?.suitability).toEqual({
       suits: ['family_pet', 'children'],
-      consider: ['independent_experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
+      consider: ['needs_mental_stimulation', 'sheds', 'chases_small_pets'],
     });
   });
 
@@ -82,7 +82,7 @@ describe('M5-R10-137 German Pinscher', () => {
     expect(suits).toHaveTextContent(/družinsko življenje/);
     expect(suits).toHaveTextContent(/družino z otroki/);
     const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
-    expect(consider).toHaveTextContent(/samostojen in trmast/);
+    expect(consider).not.toHaveTextContent(/izkušen/);
     expect(consider).toHaveTextContent(/miselne izzive/);
     expect(consider).toHaveTextContent(/izpada mu dlaka/);
     expect(consider).toHaveTextContent(/lovski nagon/);
@@ -109,7 +109,7 @@ describe('M5-R10-137 German Pinscher', () => {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
       expect(screen.getByTestId(`breed-suitability-${KEY}-suits`)).toHaveTextContent(/family life/);
-      expect(consider).toHaveTextContent(/independent and stubborn/);
+      expect(consider).toHaveTextContent(/mental challenges/);
       expect(consider).toHaveTextContent(/strong prey drive/);
       expect(consider).not.toHaveTextContent(/hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%/);

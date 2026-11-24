@@ -3221,8 +3221,6 @@ return [
                 ['tag' => 'children', 'source_ids' => ['S1032'], 'refs' => ['german_pinscher.behaviour.children']],
             ],
             'consider' => [
-                // S1033 "best suited for an experienced dog owner." (manipulative and mischievous, challenging to train)
-                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S1033'], 'refs' => ['german_pinscher.behaviour.owner']],
                 // S1032 "Daily walks, engaging playtime, and opportunities for mental stimulation are important to keep them happy and fulfilled."
                 ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S1032'], 'refs' => ['german_pinscher.exercise.daily_text']],
                 // S1031 "Sheds: Yes"; PetMD S1032 moderate shedder

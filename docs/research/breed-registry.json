@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "5544c0a9b7eea81a74c09d4413803e8bd6f081689bb2d731821a0e5ccd6d26fe"
+      "sha256": "a0f4c7285de49cb1aaed87de43a314c7f2b6fb9efa36c7209eba9edacfafde62"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "0774393a2f142e5e7655cf09e7ca8a91a2a6faf0fd2f13a94b631cc08955368f"
+      "sha256": "8881080ff1880f5af6c11aee8b5d6245d949e56be7e1a9e43b9bce20bf0945fb"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -79493,15 +79493,6 @@
           }
         ],
         "consider": [
-          {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S1033"
-            ],
-            "refs": [
-              "german_pinscher.behaviour.owner"
-            ]
-          },
           {
             "tag": "needs_mental_stimulation",
             "source_ids": [
