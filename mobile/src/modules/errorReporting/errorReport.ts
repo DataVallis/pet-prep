@@ -16,7 +16,8 @@
  * `__tests__/noNamesInErrors.test.ts`).
  */
 
-export type AppErrorScope = 'app' | 'child-hud' | 'locked-overlay' | 'global' | 'unhandled-rejection';
+/** `pet-media` (2026-11-24): a pet video player failed (`modules/petMedia/mediaErrorReport.ts`). */
+export type AppErrorScope = 'app' | 'child-hud' | 'locked-overlay' | 'global' | 'unhandled-rejection' | 'pet-media';
 
 export type AppErrorPlatform = 'ios' | 'android';
 
