@@ -90,8 +90,9 @@ it('a family save that changes the schedule writes one row with before, after, t
         ->and($row->pet_id)->toBeNull()
         ->and($row->user_id)->toBe($f['parent']->id)
         ->and($row->scope)->toBe(QuietHoursChangeScope::Family)
-        ->and($row->before)->toBe(QuietHours::normaliseValues(QuietHours::DEFAULTS))
-        ->and($row->after)->toBe([
+        // jsonb does not keep key order → compare as maps.
+        ->and($row->before)->toEqual(QuietHours::normaliseValues(QuietHours::DEFAULTS))
+        ->and($row->after)->toEqual([
             'school_start' => '08:00', 'school_end' => '13:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
             'is_active' => true, 'school_days' => [1, 2, 3, 4, 5],
         ])

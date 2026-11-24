@@ -335,8 +335,9 @@ class AccountExportService
             'scope' => $c->scope->value,
             'pet_id' => $c->pet_id,
             'by_user_id' => $c->user_id,
-            'before' => $c->before,
-            'after' => $c->after,
+            // jsonb reorders keys — re-normalise so the export reads in the schedule's own order.
+            'before' => $c->before === null ? null : QuietHours::normaliseValues($c->before),
+            'after' => $c->after === null ? null : QuietHours::normaliseValues($c->after),
             'user_agent' => $c->user_agent,
             'client_features' => $c->client_features,
         ])->values()->all();
