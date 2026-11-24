@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "ff28b235bc297b93ffd884ed63116613f6c2f7ce9a881f9951612e6227e16516"
+      "sha256": "243d02e2b0a13b47aca0405f3e0cf7d072080554a9be4b28b8b4c64e3bad946a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -79998,11 +79998,11 @@
           "group": "grooming",
           "field": "shedding",
           "kind": "category",
-          "value": "no",
+          "value": "minimal",
           "source_ids": [
-            "S1037"
+            "S1038"
           ],
-          "ref": "bedlington_terrier.suitability.pdsa_shedding",
+          "ref": "bedlington_terrier.suitability.woodgreen_shedding",
           "confidence": "high"
         },
         {

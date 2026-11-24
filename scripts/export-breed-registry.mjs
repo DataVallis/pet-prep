@@ -3478,7 +3478,7 @@ const DOG_FACTS = {
     ],
   },
   // M5-R10-138. The RKC page was not reachable → PDSA (S1037): exercise 'a minimum of an hour' (at_least, the game value),
-  // coat 'Medium', shedding (not huge shedders → No), lifespan 'Over 10 years'; grooming = Woodgreen 'two to three times a
+  // coat 'Medium', lifespan 'Over 10 years'; shedding = Woodgreen 'Minimal'; grooming = Woodgreen 'two to three times a
   // week' (More than once a week, S1038); lifespan = McMillan 2024 via the Dogs Trust table (S123, 13.7 y); height / weight
   // = FCI-Standard N°9 (S1035). Coren rank 40 (S35). FCI origin Great Britain (GB). Not exported: adult_weight alternatives
   // (PDSA / Woodgreen), lifespan.woodgreen / petmd (spans next to the median), senior_from (derived), the WebMD / PDSA care
@@ -3490,7 +3490,8 @@ const DOG_FACTS = {
     exercise: [['@proposed_game_parameters.bedlington_terrier.exercise_minutes_adult', 'at_least']],
     coat: ['suitability.pdsa_coat_length'],
     grooming: [['suitability.woodgreen_grooming', 'grooming_frequency']],
-    shedding: ['suitability.pdsa_shedding'],
+    // Woodgreen 'Minimal' (S1038) — PDSA 'not huge shedders' would read as 'does not shed'.
+    shedding: ['suitability.woodgreen_shedding'],
     food_motivation: null,
     health: [
       ['copper_liver_disease', 'health.copper_toxicosis'],

@@ -71259,6 +71259,14 @@
         "confidence": "high",
         "notes": "PDSA (S1037); Woodgreen (S1038) 'Shedding | Minimal'; Dogs Trust Ireland (S1039) 'Short length with low shedding' → low_shedding chip (never hypoallergenic)."
       },
+      "woodgreen_shedding": {
+        "value": "Minimal",
+        "unit": "—",
+        "source_id": "S1038",
+        "quote": "Shedding | Minimal",
+        "confidence": "high",
+        "notes": "Woodgreen 'At a glance' (S1038) — the register's shedding fact (PDSA 'not huge shedders' is not a plain no; Dogs Trust Ireland S1039 'low shedding' agrees). Never hypoallergenic."
+      },
       "pdsa_lifespan": {
         "value": "Over 10 years",
         "unit": "—",
