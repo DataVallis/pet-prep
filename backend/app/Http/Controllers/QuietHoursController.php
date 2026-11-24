@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\QuietHoursChangeScope;
 use App\Exceptions\TimezoneChangeTooSoonException;
 use App\Http\Requests\UpdateQuietHoursRequest;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\FamilyService;
 use App\Services\FamilySettingsService;
+use App\Services\QuietHoursChangeLog;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 
@@ -16,6 +18,7 @@ class QuietHoursController extends Controller
     public function __construct(
         private readonly FamilySettingsService $settings,
         private readonly FamilyService $families,
+        private readonly QuietHoursChangeLog $changeLog,
     ) {}
 
     /**
@@ -107,16 +110,31 @@ class QuietHoursController extends Controller
                 // unique — a second insert would be a 500).
                 ?? QuietHours::where('parent_id', $parent->id)->whereNull('family_id')->lockForUpdate()->first();
             if ($existing !== null) {
+                $before = QuietHours::normaliseValues($existing->only(QuietHours::SCHEDULE_KEYS));
                 $existing->update(array_merge($values, ['family_id' => $family->id]));
-
-                return $existing;
+                $saved = $existing;
+            } else {
+                $before = null; // no row yet
+                // parent_id = the parent who created the family's configuration.
+                $saved = QuietHours::create(array_merge($values, [
+                    'family_id' => $family->id,
+                    'parent_id' => $parent->id,
+                ]));
             }
 
-            // parent_id = the parent who created the family's configuration.
-            return QuietHours::create(array_merge($values, [
-                'family_id' => $family->id,
-                'parent_id' => $parent->id,
-            ]));
+            // David 2026-11-24: every save that changes the schedule leaves one
+            // `quiet_hours_changes` row (same values again → none).
+            $this->changeLog->record(
+                $family->id,
+                null,
+                $parent,
+                QuietHoursChangeScope::Family,
+                $before,
+                QuietHours::normaliseValues($saved->refresh()->only(QuietHours::SCHEDULE_KEYS)),
+                $request,
+            );
+
+            return $saved;
         });
     }
 

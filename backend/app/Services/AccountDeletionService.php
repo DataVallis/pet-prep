@@ -23,6 +23,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\Phase2Interest;
 use App\Models\QuietHours;
+use App\Models\QuietHoursChange;
 use App\Models\User;
 use App\Models\UserSocialAccount;
 use App\Services\Auth\SocialIdentity;
@@ -44,11 +45,12 @@ use Laravel\Sanctum\PersonalAccessToken;
  *
  *  - deleteParentAccount(): the parent's own account. The LAST parent of a
  *    family takes the whole family with them (children, pets, media files,
- *    contracts incl. signatures, logs, tokens, push devices, PINs, invites, quiet hours,
- *    dashboard opens + Phase-2 answers and their »Obvestite me« e-mail (VALIDATION_PLAN §4),
+ *    contracts incl. signatures, logs, tokens, push devices, PINs, invites, quiet hours
+ *    + their change log, dashboard opens + Phase-2 answers and their »Obvestite me« e-mail (VALIDATION_PLAN §4),
  *    routines, M2-01d certificates + their PDFs) — plus orphaned legacy child accounts that point at one of its
  *    parents (users.parent_id) but belong to no family. If another parent
- *    remains, only this parent goes (user, tokens, invites); the deprecated
+ *    remains, only this parent goes (user, tokens, invites; their rows in the
+ *    quiet hours change log lose user id + User-Agent); the deprecated
  *    mirrors that point at them are handed to the remaining parent first,
  *    because `users.parent_id`, `pets.user_id` and `quiet_hours.parent_id`
  *    CASCADE on delete. Legacy pets the parent owns in ANOTHER family are
@@ -535,6 +537,8 @@ class AccountDeletionService
         $pets = $this->deletePets($petIds->all());
 
         QuietHours::where('family_id', $familyId)->orWhereIn('parent_id', $userIds)->delete();
+        // David 2026-11-24: the change log goes with the family (the FK cascades too; explicit, like quiet_hours).
+        QuietHoursChange::where('family_id', $familyId)->delete();
         ChildLoginPin::where('family_id', $familyId)->delete();
         FamilyInvite::where('family_id', $familyId)->delete();
         FamilyMember::where('family_id', $familyId)->delete();
@@ -562,6 +566,9 @@ class AccountDeletionService
             QuietHours::where('parent_id', $heirId)->whereNull('family_id')->delete();
             QuietHours::where('parent_id', $parentId)->where('family_id', $familyId)->update(['parent_id' => $heirId]);
         }
+        // The family keeps its quiet hours change log (David 2026-11-24), but without this
+        // parent: who saved and their phone's User-Agent / app features go.
+        QuietHoursChange::where('user_id', $parentId)->update(['user_id' => null, 'user_agent' => null, 'client_features' => null]);
 
         // Deprecated mirrors that would cascade: the family's children and
         // orphaned legacy children (users.parent_id) go to the remaining

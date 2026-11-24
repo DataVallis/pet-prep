@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Enums\UserRole;
 use App\Exceptions\AccountDeletionException;
 use App\Filament\Resources\UserResource\Pages;
+use App\Filament\Resources\UserResource\QuietHoursPanel;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\User;
@@ -139,6 +140,21 @@ class UserResource extends Resource
                 Forms\Components\Placeholder::make('app_features_at')
                     ->label('App features reported at (UTC)')
                     ->content(fn (?User $record): string => $record?->client_features_at?->utc()->format('Y-m-d H:i:s') ?? '—')
+                    ->hiddenOn('create'),
+
+                // David 2026-11-24: the family's stored quiet hours + the change log
+                // (`quiet_hours_changes`, QuietHoursChangeLog) — read-only.
+                Forms\Components\Section::make('Quiet hours (family)')
+                    ->schema([
+                        Forms\Components\Placeholder::make('quiet_hours_current')
+                            ->label('Stored quiet hours')
+                            ->content(fn (?User $record) => QuietHoursPanel::current($record)),
+                        Forms\Components\Placeholder::make('quiet_hours_changes')
+                            ->label('Latest changes (newest first, max '.QuietHoursPanel::CHANGES_SHOWN.')')
+                            ->content(fn (?User $record) => QuietHoursPanel::changes($record)),
+                    ])
+                    ->collapsible()
+                    ->visible(fn (?User $record): bool => QuietHoursPanel::familyOf($record) !== null)
                     ->hiddenOn('create'),
             ]);
     }

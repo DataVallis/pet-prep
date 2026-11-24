@@ -169,6 +169,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-24 (backend, `feat/quiet-hours-change-log`)
+- Dnevnik sprememb tihih ur (David »ja naredi«): tabela `quiet_hours_changes` (prej → potem, starš, User-Agent, `X-PetPrep-Features`), piše jo samo `QuietHoursChangeLog` iz `QuietHoursController::save` in `PetQuietHoursService::change`, samo ob dejanski spremembi; admin Users → član družine → »Quiet hours (family)« (samo branje: shranjene ure + zadnjih 20 sprememb); v izvozu (`quiet_hours_changes`), izbris z družino, starš, ki zapusti družino, se anonimizira; test `QuietHoursChangeLogTest`. Dolg: politika zasebnosti ga še ne omenja (David: zaenkrat ne posodabljamo) — dodati ob naslednji posodobitvi politike. Starejše spremembe (vključno z družino 19) niso zapisane.
+
 ### 2026-11-24 (mobile, `fix/quiet-hours-night-warning`)
 - Tihe ure: opozorilo pod »Spanje«, ko so tihe ure vklopljene brez nočnega okna (tester ob 1–2 ponoči; David možnost A). Samo JS / OTA, test `QuietHoursForm.test.tsx`. Vzrok pri testerju ni potrjen — strežnik sam ne ustvari vklopljenih ur brez spanja; preveri shranjeno vrstico (`quiet_hours.updated_at`).
 
