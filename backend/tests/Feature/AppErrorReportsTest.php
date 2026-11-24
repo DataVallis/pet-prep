@@ -119,6 +119,21 @@ describe('POST /api/app-errors', function () {
         expect(AppErrorReport::sole()->anonymous_count)->toBe(1);
     });
 
+    it('2026-11-24: accepts the pet-media scope (pet video player failures) and stores it under the CHECK', function () {
+        $this->postJson('/api/app-errors', aeBody([
+            'scope' => 'pet-media',
+            'name' => 'PetMediaError',
+            'message' => 'pet-media item:toy_1 src=remote stage=refetch layer=3s link=-12m player=The operation could not be completed',
+            'stack' => "PetMediaError: pet-media item:toy_1\n    at reportPetMediaFailure (address at index.android.bundle:1:23456)",
+        ]))->assertNoContent();
+
+        $fp = AppErrorFingerprint::sole();
+        expect($fp->scope)->toBe('pet-media')
+            ->and($fp->error_name)->toBe('PetMediaError')
+            ->and($fp->message)->toBe('pet-media item:toy_1 src=remote stage=refetch layer=3s link=-12m player=The operation could not be completed')
+            ->and(AppErrorReport::sole()->sample['scope'])->toBe('pet-media');
+    });
+
     it('validates every field strictly', function (array $override, string $field) {
         $this->postJson('/api/app-errors', aeBody($override))
             ->assertUnprocessable()

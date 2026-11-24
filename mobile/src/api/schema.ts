@@ -2644,10 +2644,10 @@ export interface components {
         };
         /**
          * AppErrorScope
-         * @description Where an app error report comes from (M5-05). Error-boundary scopes mirror the app's `RenderErrorScope` (`app`, `child-hud`, `locked-overlay`); the global handlers report `global` (ErrorUtils: uncaught JS error) and `unhandled-rejection` (promise without a catch). Mirrored in the `app_error_fingerprints_scope_check` constraint.
+         * @description Where an app error report comes from (M5-05). Error-boundary scopes mirror the app's `RenderErrorScope` (`app`, `child-hud`, `locked-overlay`); the global handlers report `global` (ErrorUtils: uncaught JS error) and `unhandled-rejection` (promise without a catch); `pet-media` = a pet video player failed on the device (2026-11-24). Mirrored in the `app_error_fingerprints_scope_check` constraint.
          * @enum {string}
          */
-        AppErrorScope: "app" | "child-hud" | "locked-overlay" | "global" | "unhandled-rejection";
+        AppErrorScope: "app" | "child-hud" | "locked-overlay" | "global" | "unhandled-rejection" | "pet-media";
         /** BreedCatalogResource */
         BreedCatalogResource: {
             /**
