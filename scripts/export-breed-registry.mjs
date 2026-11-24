@@ -517,6 +517,7 @@ const SPECIES = [
       { id: 'norfolk_terrier', synonyms: { en: ['Norfolk'], sl: ['norfolški terier', 'norfolk terrier'] } },
       { id: 'belgian_sheepdog', synonyms: { en: ['Groenendael', 'Belgian Shepherd Groenendael', 'Belgian Shepherd Dog (Groenendael)', 'Belgian Groenendael'], sl: ['groenendael', 'belgijski ovcar groenendael', 'belgijski ovčar'] } },
       { id: 'bracco_italiano', synonyms: { en: ['Italian Pointer', 'Italian Pointing Dog', 'Bracco'], sl: ['bracco italiano', 'italijanski pticar', 'bracco'] } },
+      { id: 'german_pinscher', synonyms: { en: ['Deutscher Pinscher', 'Standard Pinscher', 'Pinscher'], sl: ['nemški pinč', 'srednji pinč', 'pinč'] } },
     ],
   },
   {
@@ -3454,6 +3455,27 @@ const DOG_FACTS = {
       ['itchy_skin_allergy', 'health.skin_allergies'],
     ],
   },
+  // M5-R10-137. RKC Breeds A–Z page reached (S1031): exercise 'Up to 1 hour per day', coat 'Short', grooming 'Once a week',
+  // sheds 'Yes', lifespan 'Over 10 years' + PetMD 12–14 y (S1032); height / weight = FCI-Standard N° 184 (S1030). Not ranked
+  // by Coren (S35). FCI origin Germany (DE). Not exported: lifespan.median_uk (null), senior_from (derived), health.breed_watch
+  // (Category 1), the PetMD / WebMD care texts (care tasks / grooming rule come from the game). No new health key.
+  german_pinscher: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['cataracts', 'health.eyes'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+    ],
+  },
 
 
 
@@ -3547,6 +3569,7 @@ export const DOG_CARE_TASKS = {
   finnish_lapphund: [['tooth_brushing', 7, 7, 'proposed_game_parameters.finnish_lapphund.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.finnish_lapphund.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.finnish_lapphund.bathing']],
   norfolk_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.norfolk_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.norfolk_terrier.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.norfolk_terrier.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.norfolk_terrier.professional_grooming']],
   belgian_sheepdog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.belgian_sheepdog.tooth_brushing'], ['ear_cleaning', 1, 28, 'proposed_game_parameters.belgian_sheepdog.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_sheepdog.bathing']],
+  german_pinscher: [['ear_cleaning', 1, 7, 'proposed_game_parameters.german_pinscher.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.german_pinscher.nail_trimming'], ['bath', 1, 42, 'proposed_game_parameters.german_pinscher.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4585,6 +4608,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bracco_italiano.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bracco_italiano.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bracco_italiano.exercise_minutes_senior',
+  },
+  german_pinscher: {
+    adult_minutes: ['proposed_game_parameters.german_pinscher.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.german_pinscher.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.german_pinscher.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.german_pinscher.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.german_pinscher.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.german_pinscher.exercise_minutes_senior',
   },
 
 

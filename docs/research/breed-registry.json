@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "3ddd2f34f3f3b0a3811846f8112f036b923639f6ef9db62a7d62ca93475f4639"
+      "sha256": "5544c0a9b7eea81a74c09d4413803e8bd6f081689bb2d731821a0e5ccd6d26fe"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "e1aa0a17a95d7eb5032c094398bec4b45072eddb6fc201391d7b9d637fe4374e"
+      "sha256": "ed59bc21111a6ee049003812df69a6c8f1580ddf13f9f1c6fb994af58c9904df"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "b6e96e07677c9b02970003e7b6dc4484ebf5952bab4558521b615036210e0589"
+      "sha256": "0774393a2f142e5e7655cf09e7ca8a91a2a6faf0fd2f13a94b631cc08955368f"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1bf2bec6d92f5c7ee489dff2396c1ea94541b9506a22226598d0924c0f93d981"
+      "sha256": "51dc9c23556072913f220adb8023b35dd7ff2d5f87e050ed29a63eaea3df7a0c"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "b499b57ef7e47e299a71027915261fdd00d71b2cdc15872ecf3589edbcf64170"
+      "sha256": "d3091c4561c0ccd4804d1286a1fd96a6bd1daa196223a794770192c66e27edb7"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "081858e39c8e2954907b8a49fea39d410d3994af844964cce1b878bc5678a4fc"
+      "sha256": "47d6aeb5626c88f131ba3f7b04d2cb6ca39890742e308a31ec0feb0b843a7baa"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "fe5dbd1ab11ad975b8494e45661ad6f7846ea33c75520d833787a85e8ac3a827"
+      "sha256": "3aa76b4ec1943ad7f131cdbeb59a95645eb7bd3a10a57bf1e6a3eb7260b06492"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 127,
+      "breed_count": 128,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -79243,6 +79243,581 @@
       ]
     },
     {
+      "id": "german_pinscher",
+      "species": "dog",
+      "order": 127,
+      "availability": "coming_soon",
+      "name": {
+        "en": "German Pinscher",
+        "sl": "Nemški pinč"
+      },
+      "slug": {
+        "en": "german-pinscher",
+        "sl": "nemski-pinc"
+      },
+      "synonyms": {
+        "en": [
+          "Deutscher Pinscher",
+          "Standard Pinscher",
+          "Pinscher"
+        ],
+        "sl": [
+          "nemški pinč",
+          "srednji pinč",
+          "pinč"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S1031"
+          ],
+          "ref": "german_pinscher.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              45,
+              50
+            ],
+            "female": [
+              45,
+              50
+            ]
+          },
+          "source_ids": [
+            "S1030"
+          ],
+          "ref": "german_pinscher.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              14,
+              20
+            ],
+            "female": [
+              14,
+              20
+            ]
+          },
+          "source_ids": [
+            "S1030"
+          ],
+          "ref": "german_pinscher.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "german_pinscher.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S1031"
+          ],
+          "ref": "german_pinscher.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S1032"
+          ],
+          "ref": "german_pinscher.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S1031"
+          ],
+          "ref": "german_pinscher.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S1031"
+          ],
+          "ref": "german_pinscher.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S1031"
+          ],
+          "ref": "german_pinscher.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1031"
+          ],
+          "ref": "german_pinscher.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 184,
+            "group": 2,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S1030"
+          ],
+          "ref": "german_pinscher.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S1033"
+          ],
+          "ref": "german_pinscher.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S1033"
+          ],
+          "ref": "german_pinscher.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S1033"
+          ],
+          "ref": "german_pinscher.health.von_willebrand",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1031"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "independent_experienced_owner",
+            "source_ids": [
+              "S1033"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.owner"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1031"
+            ],
+            "refs": [
+              "german_pinscher.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1032"
+            ],
+            "refs": [
+              "german_pinscher.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 42
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1031"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1031 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1031"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y, S1031; provisional until McMillan 2024 is checked)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.grooming",
+            "basis_source_ids": [
+              "S1031"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.ear_care",
+            "basis_source_ids": [
+              "S1032"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »Weekly ear cleanings« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.nail_trimming",
+            "basis_source_ids": [
+              "S1033"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev vsake 4 tedne (WebMD »monthly«)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_pinscher.bathing",
+            "basis_source_ids": [
+              "S1032"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): kopanje vsakih 6 tednov (PetMD »about every six to eight weeks« → spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1031",
+          "S1032",
+          "S1033"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S1031"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S1031"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1030",
+        "S1031",
+        "S1032",
+        "S1033",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -86530,6 +87105,34 @@
       "publisher": "Bracco Italiano Club of America (AKC parent club; PDF hosted by the AKC)",
       "title": "Bracco Italiano Club of America Health Statement (approved by the club board November 16, 2025)",
       "url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2025/11/19123111/Bracco-Italiano-Club-of-America-Health-Statement-FINAL.pdf"
+    },
+    {
+      "id": "S1030",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 184: German Pinscher (Deutscher Pinscher) (18.04.2007/EN; valid standard 06.03.2007) (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/184g02-en.pdf"
+    },
+    {
+      "id": "S1031",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "German Pinscher — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/german-pinscher/"
+    },
+    {
+      "id": "S1032",
+      "tier": "B",
+      "publisher": "PetMD — Georgina Ushi, DVM (published Jan. 30, 2024)",
+      "title": "German Pinscher",
+      "url": "https://www.petmd.com/dog/breeds/german-pinscher"
+    },
+    {
+      "id": "S1033",
+      "tier": "B",
+      "publisher": "WebMD Pets — Logan Smith, medically reviewed by Shruthi N, MD (April 27, 2026)",
+      "title": "What to Know About German Pinschers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-german-pinschers"
     },
     {
       "id": "C1",
