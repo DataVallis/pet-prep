@@ -556,6 +556,10 @@ return [
         'brown-roan' => 'dogs/bracco-italiano--brown-roan.webp',
         'white' => 'dogs/bracco-italiano--white.webp',
     ],
+    'german_pinscher' => [
+        'black-tan' => 'dogs/german-pinscher.webp',
+        'red' => 'dogs/german-pinscher--red.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

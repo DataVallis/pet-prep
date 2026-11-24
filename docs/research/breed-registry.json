@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "85290aa1ca193bdd05f26fe18a128a79d3e84cb25bbd1403522c8410e9d24072"
+      "sha256": "75b9a116b61b1270e45878660fa6f11a05f21cf70668b0f1ddb0d0c4956d1207"
     }
   },
   "suitability_vocabulary": {
@@ -79769,7 +79769,26 @@
         "file": "german-pinscher.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn s porjavelimi oznakami"
+            },
+            "file": "dog/german-pinscher.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/german-pinscher--red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
