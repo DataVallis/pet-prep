@@ -250,6 +250,7 @@ describe('migration backfill', function () {
         // M6-U01 purchase intents reference challenge_credits / families / pets too.
         // M6-S01 gift vouchers reference families / challenge_credits too.
         // VALIDATION_PLAN §4: dashboard opens / Phase-2 interests reference families too.
+        (require database_path('migrations/2027_05_08_120500_create_quiet_hours_changes_table.php'))->down();
         (require database_path('migrations/2027_04_30_150000_create_validation_signals.php'))->down();
         (require database_path('migrations/2027_03_25_120000_create_gift_vouchers.php'))->down();
         (require database_path('migrations/2027_03_21_120000_free_pet_challenge_upgrade.php'))->down();
@@ -282,6 +283,7 @@ describe('migration backfill', function () {
         // M6-U01 purchase intents reference challenge_credits / families / pets too.
         // M6-S01 gift vouchers reference families / challenge_credits too.
         // VALIDATION_PLAN §4: dashboard opens / Phase-2 interests reference families too.
+        (require database_path('migrations/2027_05_08_120500_create_quiet_hours_changes_table.php'))->down();
         (require database_path('migrations/2027_04_30_150000_create_validation_signals.php'))->down();
         (require database_path('migrations/2027_03_25_120000_create_gift_vouchers.php'))->down();
         (require database_path('migrations/2027_03_21_120000_free_pet_challenge_upgrade.php'))->down();
