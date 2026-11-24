@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bedlington_terrier` (viri S1035–S1042; ponovno S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: BTCA (K44) |
 | Izvor | FCI št. 9 »Bedlington Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S1035, S1036) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 134. mesto »Bedlington Terrier« (S174, prebrano 2026-11-24) |
-| PR-ji | pet-prep #1572 (pasma, združen `c4dd55a`) · portret pet-prep PR `feat/M5-R10-138-bedlington-terrier-portrait` (zagon `breed-portraits.yml` 45345261978, sprejet v prvem poskusu) · barvne različice pet-prep PR `feat/M5-R10-138-bedlington-terrier-colours` · spletna stran: pet-prep-website `feat/register-bedlington-terrier` |
+| PR-ji | pet-prep #1572 (pasma, združen `c4dd55a`) · portret pet-prep PR `feat/M5-R10-138-bedlington-terrier-portrait` (zagon `breed-portraits.yml` 45345261978, sprejet v prvem poskusu) · portret PR #1574 (združen `06a5416`) · barvne različice pet-prep PR `feat/M5-R10-138-bedlington-terrier-colours` (zagona `breed-portraits.yml` 45346734251 in 45347091933: jetrno rjav, moder s porjavelimi oznakami, jetrno rjav s porjavelimi oznakami odobril Claude; peščen in peščen s porjavelimi oznakami čakata Davida) · spletna stran: pet-prep-website `feat/register-bedlington-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -39,7 +39,7 @@
 | Pasma v izbirniku (značka »Izziv«, namig »Del 12-tedenskega izziva · česanje 3× na teden«, iskanje »bedlington«, oznake, starostni namigi) | 🛠 | 💶 izziv | M5-R10-138 | 2026-11-24 |
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 123. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-138 | 2026-11-24 |
 | Česanje 3× na teden, ščetkanje zob vsak dan, opomnik za frizerja vsakih 6 tednov, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R14 / M5-R17 | 2026-11-24 |
-| Barva (izbirnik: 6 barv po standardu FCI) | 🛠 | 💶 izziv | M5-R21 | 2026-11-24 |
+| Barva (izbirnik: 6 barv po standardu FCI; fotografije: moder = portret, jetrno rjav, moder s porjavelimi oznakami, jetrno rjav s porjavelimi oznakami — 2026-11-24 odobril Claude; peščena dva brez fotografije) | 🛠 | 💶 izziv | M5-R21 | 2026-11-24 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), moder, bel čop na glavi, nizko nameščena ušesa, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-24 |
 | Stran na petprep.si (`/animals/dogs/bedlington-terrier`, `/sl/zivali/psi/bedlington-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -55,5 +55,6 @@
 - **Česanje 3× na teden:** Woodgreen »two to three times a week« (zgornja meja po pravilu); PDSA in WebMD pišeta enkrat na teden (naraven videz). Potrdite ali izberite 1.
 - **Stran RKC:** ni bila dosegljiva (preusmeritev na royalkennelclub.com zavrnjena) — gibanje, velikost in seznam za vzreditelja (RKC minimum, npr. DNK test COMMD1) sta zato iz PDSA / BTCA.
 - **Standard FCI:** uporabljeno besedilo iz leta 1998 (zrcalo); FCI navaja novejši veljaven standard (objava 2026), ki ga nisem prebral.
+- **colours needing David:** `sandy`, `sandy-tan` — obe urejanji (tudi ponovitev) sta dali črn nos, standard FCI pa za peščene zahteva rjavega; barva dlake je bila prava. Fotografij nisem shranil (vrstici v `docs/research/breed-portraits/COLOUR_REVIEW.md`).
 - **Ime:** »Bedlington terier« v slovenščini ni preverjen na straneh KZS. Potrdite ali popravite.
 - **Skupni dokumenti:** število pasem psov v FEATURES / predstavitvah se po pravilu »Own files only« ne spreminja v tem zagonu.

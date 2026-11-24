@@ -19,3 +19,5 @@ here with `needs-david` is skipped by the backfill until David decides (delete t
 | finnish_lapphund | wolf-sable | needs-david | Both edits (byte-identical on the redo) gave a warm brown-gold sable that looks like the `sable` variant — no cool grey wolf-sable banding. | 45093638196, 45093894254 | 2026-11-23 |
 | irish_wolfhound | grey-brindle | needs-david | Both edits (redo practically identical) returned the grey portrait unchanged — no visible brindle striping. | 45282352195, 45283585758 | 2026-11-23 |
 | cairn_terrier | brindle | needs-david | Both edits (redo practically identical) only darkened the face of the grey variant — looks like `grey`, no brindle striping or warm base. | 45282352195, 45283609294 | 2026-11-23 |
+| bedlington_terrier | sandy | needs-david | Both edits gave a black nose; the FCI standard (S1035) asks for brown noses in sandies — coat colour itself was right. | 45346734251, 45347091933 | 2026-11-24 |
+| bedlington_terrier | sandy-tan | needs-david | Both edits gave a black nose; the FCI standard (S1035) asks for brown noses in sandies — coat colour itself was right. | 45346734251, 45347091933 | 2026-11-24 |

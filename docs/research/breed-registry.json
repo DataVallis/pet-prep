@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f0dd9e6527a8a52893305cebfec6ea6a418faa9404836178a3012a0001d08915"
+      "sha256": "c5261f8c8b2fbbf05989603bc9db579cde908b82f83ced918257bf522094e646"
     }
   },
   "suitability_vocabulary": {
@@ -80360,7 +80360,42 @@
         "file": "bedlington-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder"
+            },
+            "file": "dog/bedlington-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Jetrno rjav"
+            },
+            "file": "dog/bedlington-terrier--liver.webp"
+          },
+          {
+            "key": "blue-tan",
+            "label": {
+              "en": "Blue and tan",
+              "sl": "Moder s porjavelimi oznakami"
+            },
+            "file": "dog/bedlington-terrier--blue-tan.webp"
+          },
+          {
+            "key": "liver-tan",
+            "label": {
+              "en": "Liver and tan",
+              "sl": "Jetrno rjav s porjavelimi oznakami"
+            },
+            "file": "dog/bedlington-terrier--liver-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
