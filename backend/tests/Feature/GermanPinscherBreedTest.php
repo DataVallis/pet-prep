@@ -133,7 +133,7 @@ describe('breed, config and database', function () {
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
             ->and($refused(['breed_type' => 'german_pincher']))->toThrow(QueryException::class);
 
-        $migration = require database_path('migrations/2027_05_03_120000_add_german_pinscher_breed.php');
+        $migration = require database_path('migrations/2027_05_06_120000_add_german_pinscher_breed.php');
         expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);
         $migration->down();
@@ -269,7 +269,7 @@ describe('life-stage data against data.json', function () {
             StageParamKey::ExerciseMinutesPerAgeMonth, StageParamKey::AdultWeightKg, StageParamKey::GrowthEndMonths,
             StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears,
             StageParamKey::GroomingSessionsPerWeek, StageParamKey::SocialisationTasksPerWeek,
-            StageParamKey::ToothBrushingFrequency, StageParamKey::EarCleaningFrequency, StageParamKey::BathFrequency, StageParamKey::GroomerVisitFrequency,
+            StageParamKey::EarCleaningFrequency, StageParamKey::NailTrimFrequency, StageParamKey::BathFrequency,
         ];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)

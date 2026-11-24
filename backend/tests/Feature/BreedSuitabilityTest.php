@@ -656,6 +656,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::AmericanHairlessTerrier->value => 'american_hairless_terrier.behaviour.other_pets',
         // M5-R10-134: Woodgreen S1013 "They have a strong prey drive, so small pets like rabbits or guinea pigs may not be safe around them."
         BreedType::NorfolkTerrier->value => 'norfolk_terrier.behaviour.other_pets',
+        // M5-R10-137: PetMD S1032 "However, their strong prey drive necessitates caution around smaller pets and neighborhood critters."
+        BreedType::GermanPinscher->value => 'german_pinscher.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
