@@ -171,9 +171,10 @@ describe('import provenance', function () {
         // M5-R10-129: the American Hairless Terrier's senior boundary / senior arrival 126 (PetMD lower bound) — same precedent.
         // M5-R10-132: the Neapolitan Mastiff's senior boundary / senior arrival 74 (Bell & Hesketh 2021 mean, S1000) — same precedent.
         // M5-R10-112: the Toy Fox Terrier's senior boundary / senior arrival 117 (PetMD lower bound, no A/B median) — Claude's
-        // suggestion, open for David (Rat Terrier precedent).
+        // suggestion, open for David (Rat Terrier precedent). M5-R10-136: the Bracco Italiano's senior 99 (0.75 × the breed-club
+        // median 11 y, S1028; RKC "Under 10 years" has no lower bound) — the same.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier', 'xoloitzcuintli', 'norwegian-elkhound', 'american-hairless-terrier', 'neapolitan-mastiff'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier', 'xoloitzcuintli', 'norwegian-elkhound', 'american-hairless-terrier', 'neapolitan-mastiff', 'bracco-italiano'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);

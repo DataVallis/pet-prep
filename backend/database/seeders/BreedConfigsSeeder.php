@@ -2694,6 +2694,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.belgian_sheepdog',
                 'search_keywords' => ['belgian sheepdog', 'groenendael', 'belgijski ovčar groenendael', 'belgijski ovcar groenendael', 'belgian shepherd groenendael', 'belgian shepherd dog groenendael', 'grunendal'],
             ],
+            // M5-R10-136 Bracco Italiano (docs/research/dog-data/data.json bracco_italiano, sources S1022–S1028; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.bracco_italiano.step_goal_adult: 120 min × 100 steps/min — RKC S1024 "More than 2 hours
+            // per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BraccoItaliano->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1270,
+                'label_key' => 'breeds.bracco_italiano',
+                'search_keywords' => ['bracco italiano', 'italijanski ptičar', 'italijanski pticar', 'italian pointer', 'italian pointing dog', 'bracco', 'braco'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

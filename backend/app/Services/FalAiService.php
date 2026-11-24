@@ -1026,6 +1026,13 @@ class FalAiService
                 .'a long wedge-shaped muzzle with a black nose, natural tail reaching the hock carried low, watchful expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-136: FCI-Standard N° 202 (S1023) — white with orange markings (the portrait default), short glossy coat,
+            // long pendant ears, pink to flesh-coloured nose (never black), natural tail.
+            BreedType::BraccoItaliano => 'A large, strong, harmonious and powerful Bracco Italiano (Italian pointing dog) with a short, dense, glossy '
+                .'white coat with orange markings, long low-set pendant ears reaching the tip of the nose, gentle ochre eyes, a large flesh-coloured '
+                .'nose, a long head with a slightly arched muzzle, a deep chest, natural tail carried horizontally, calm, intelligent expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2399,6 +2406,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'long, smooth coat with a dense undercoat, a ruff, breeches and a plumed tail',
                 'markings' => 'uniformly black coat without white marks, black nose, erect triangular ears',
+            ],
+            // M5-R10-136: the portrait-default colour of FCI standard 202 (S1023), never black pigment.
+            BreedType::BraccoItaliano => [
+                'color_scheme' => 'white with orange markings',
+                'eye_color' => 'ochre',
+                'fur_texture' => 'short, dense and glossy coat',
+                'markings' => 'orange patches on a white coat, flesh-coloured nose, long pendant ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

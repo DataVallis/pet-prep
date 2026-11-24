@@ -888,6 +888,14 @@ return [
     'belgian_sheepdog' => [
         ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-136: FCI-Standard N° 202 (S1023) — the five standard colours, same order and values as breed_appearance.php.
+    'bracco_italiano' => [
+        ['key' => 'orange-white', 'value' => 'white with orange markings', 'en' => 'White and orange', 'sl' => 'Belo-oranžen'],
+        ['key' => 'brown-white', 'value' => 'white with brown markings', 'en' => 'White and brown', 'sl' => 'Belo-rjav'],
+        ['key' => 'orange-roan', 'value' => 'orange roan', 'en' => 'Orange roan', 'sl' => 'Oranžno lisast'],
+        ['key' => 'brown-roan', 'value' => 'brown roan', 'en' => 'Brown roan', 'sl' => 'Rjavo lisast'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
