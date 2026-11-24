@@ -516,6 +516,7 @@ const SPECIES = [
       { id: 'finnish_lapphund', synonyms: { en: ['Finnish Lapponian Dog', 'Lapinkoira', 'Suomenlapinkoira', 'Lappie'], sl: ['finski laponski pes', 'laponski pes', 'finski lapphund'] } },
       { id: 'norfolk_terrier', synonyms: { en: ['Norfolk'], sl: ['norfolški terier', 'norfolk terrier'] } },
       { id: 'belgian_sheepdog', synonyms: { en: ['Groenendael', 'Belgian Shepherd Groenendael', 'Belgian Shepherd Dog (Groenendael)', 'Belgian Groenendael'], sl: ['groenendael', 'belgijski ovcar groenendael', 'belgijski ovčar'] } },
+      { id: 'bracco_italiano', synonyms: { en: ['Italian Pointer', 'Italian Pointing Dog', 'Bracco'], sl: ['bracco italiano', 'italijanski pticar', 'bracco'] } },
     ],
   },
   {
@@ -3427,6 +3428,32 @@ const DOG_FACTS = {
       ['epilepsy', 'health.epilepsy'],
     ],
   },
+  // M5-R10-136. Height = FCI-Standard N° 202 preferred sizes (S1023), weight = FCI 'Between 25 and 40 kg depending on size.'
+  // (S1023), lifespan = RKC 'Under 10 years' (S1024; the BICA median 11 y, S1028, is a breed-club survey and only the basis
+  // of the senior boundary), exercise = RKC 'More than 2 hours per day' (S1024), grooming / shedding / coat = RKC key facts
+  // (S1024). Not ranked by Coren (S35). FCI origin Italy (IT). Not exported: adult_weight alternatives (AKC / PetMD),
+  // lifespan.petmd / bica_health_statement / senior_from, the PetMD care texts. No new health key.
+  bracco_italiano: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_sheds'],
+    food_motivation: null,
+    // Not ranked by Coren (S35) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['kidney_disease_urine_screening', 'health.kidney_disease'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['ear_infections_prone', 'health.ear_infections'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['eyelids_turned', 'health.eyelids'],
+      ['itchy_skin_allergy', 'health.skin_allergies'],
+    ],
+  },
 
 
 
@@ -4550,6 +4577,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.belgian_sheepdog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.belgian_sheepdog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.belgian_sheepdog.exercise_minutes_senior',
+  },
+  bracco_italiano: {
+    adult_minutes: ['proposed_game_parameters.bracco_italiano.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bracco_italiano.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bracco_italiano.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bracco_italiano.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bracco_italiano.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bracco_italiano.exercise_minutes_senior',
   },
 
 

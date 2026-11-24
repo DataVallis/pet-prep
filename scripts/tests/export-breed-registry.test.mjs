@@ -260,6 +260,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.finnish_lapphund.slug, { en: 'finnish-lapphund', sl: 'finski-laponski-pes' });
   assert.deepEqual(byId.norfolk_terrier.slug, { en: 'norfolk-terrier', sl: 'norfolk-terier' });
   assert.deepEqual(byId.belgian_sheepdog.slug, { en: 'belgian-sheepdog', sl: 'belgijski-ovcar-groenendael' });
+  assert.deepEqual(byId.bracco_italiano.slug, { en: 'bracco-italiano', sl: 'italijanski-pticar' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -482,6 +483,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     finnish_lapphund: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
     norfolk_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 0.7 },
     belgian_sheepdog: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1.5 },
+    bracco_italiano: { adult: 12000, senior: 9000, seniorFrom: 99, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -958,7 +960,9 @@ test('every dog breed has a Coren rank fact except the explicitly unranked Havan
     // Neapolitan Mastiff: not found in S35 (IPFS mirror 2026-11-21, M5-R10-132 — open for David).
     'neapolitan_mastiff',
     // Finnish Lapphund: unranked (S35 not re-read by name, M5-R10-133 — open for David).
-    'finnish_lapphund'];
+    'finnish_lapphund',
+    // Bracco Italiano: not ranked (S35 not reachable 2026-11-24; the 2026-11-18 reading had no Bracco, M5-R10-136 — open for David).
+    'bracco_italiano'];
   for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
     const has = b.facts.some((f) => f.field === 'coren_rank');
     assert.equal(has, !unranked.includes(b.id), `${b.id} coren_rank fact`);
@@ -4233,4 +4237,28 @@ test('Belgian Sheepdog (M5-R10-135): RKC more than 2 h, FCI height + weight, RKC
   assert.equal(d.breeder_checklist.status, 'listed');
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle/i);
+});
+
+test('Bracco Italiano (M5-R10-136): RKC more than 2 h, FCI height + weight, RKC under 10 y (senior 99 = proposal), unranked → 1.0, brushing 1×, no care task, chips, RKC schemes', () => {
+  const d = registry.breeds.find((b) => b.id === 'bracco_italiano');
+  assert.deepEqual(d.name, { en: 'Bracco Italiano', sl: 'Italijanski ptičar' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S1024']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 202, group: 7, section: 1, origin: 'IT' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [25, 40], female: [25, 40] }, ['S1023']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [58, 67], female: [55, 62] }, ['S1023']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.value, f.qualifier, f.source_ids]), [[10, 'less_than', ['S1024']]]);
+  assert.equal(d.facts.find((f) => f.field === 'shedding').value, 'yes');
+  assert.ok(!d.facts.some((f) => f.field === 'coren_rank'));
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 99 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 1 });
+  assert.ok(!d.game.rules.some((r) => r.key === 'care_task'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'children', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'needs_company', 'sheds', 'shorter_lifespan']);
+  assert.deepEqual(d.health.map((h) => h.key), ['kidney_disease_urine_screening', 'hip_elbow_dysplasia', 'bloat_gdv', 'ear_infections_prone', 'pra_inherited_blindness', 'eyelids_turned', 'itchy_skin_allergy']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle|26\.6/i);
 });

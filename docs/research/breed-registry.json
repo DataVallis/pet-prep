@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "abbeb75f0203f40a72a11e10e92a7198f5e1a756e13b9c37d2547a0e11c33922"
+      "sha256": "3ddd2f34f3f3b0a3811846f8112f036b923639f6ef9db62a7d62ca93475f4639"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "3c76eb306ff2c20e69498fc91b1519ae2765f82325dda47fcc4de6e69039884b"
+      "sha256": "e1aa0a17a95d7eb5032c094398bec4b45072eddb6fc201391d7b9d637fe4374e"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "14176d07eb8528a4295bb1054a1340bd213f4d651d1cbdb7b268ec313840914b"
+      "sha256": "b6e96e07677c9b02970003e7b6dc4484ebf5952bab4558521b615036210e0589"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4eb431e7fcf40717b2c5f5d897608c98a301d950fd1fb51f2c1629de39f8f609"
+      "sha256": "1bf2bec6d92f5c7ee489dff2396c1ea94541b9506a22226598d0924c0f93d981"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a19c3e929153d50246feb363deae436778e66bf45669c71e7bee6beaf9b7ea54"
+      "sha256": "b499b57ef7e47e299a71027915261fdd00d71b2cdc15872ecf3589edbcf64170"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "178efeaf296580a87f69e5b6a9a9a5a74f4b42f9c8d9febcbe1ea808ea30c8e0"
+      "sha256": "081858e39c8e2954907b8a49fea39d410d3994af844964cce1b878bc5678a4fc"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "65379e27a39f38aa1e38eded5ab2054bfb176c9aca08ad2b4c91eb3551f6ddcf"
+      "sha256": "fe5dbd1ab11ad975b8494e45661ad6f7846ea33c75520d833787a85e8ac3a827"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 126,
+      "breed_count": 127,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -78626,6 +78626,575 @@
       ]
     },
     {
+      "id": "bracco_italiano",
+      "species": "dog",
+      "order": 126,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bracco Italiano",
+        "sl": "Italijanski ptičar"
+      },
+      "slug": {
+        "en": "bracco-italiano",
+        "sl": "italijanski-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Italian Pointer",
+          "Italian Pointing Dog",
+          "Bracco"
+        ],
+        "sl": [
+          "bracco italiano",
+          "italijanski pticar",
+          "bracco"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S1024"
+          ],
+          "ref": "bracco_italiano.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              67
+            ],
+            "female": [
+              55,
+              62
+            ]
+          },
+          "source_ids": [
+            "S1023"
+          ],
+          "ref": "bracco_italiano.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              25,
+              40
+            ],
+            "female": [
+              25,
+              40
+            ]
+          },
+          "source_ids": [
+            "S1023"
+          ],
+          "ref": "bracco_italiano.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bracco_italiano.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S1024"
+          ],
+          "ref": "bracco_italiano.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S1024"
+          ],
+          "ref": "bracco_italiano.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S1024"
+          ],
+          "ref": "bracco_italiano.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S1024"
+          ],
+          "ref": "bracco_italiano.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1024"
+          ],
+          "ref": "bracco_italiano.suitability.rkc_sheds",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 202,
+            "group": 7,
+            "section": 1,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S1023"
+          ],
+          "ref": "bracco_italiano.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kidney_disease_urine_screening",
+          "source_ids": [
+            "S1027"
+          ],
+          "ref": "bracco_italiano.health.kidney_disease",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S1027"
+          ],
+          "ref": "bracco_italiano.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S1027"
+          ],
+          "ref": "bracco_italiano.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "ear_infections_prone",
+          "source_ids": [
+            "S1027"
+          ],
+          "ref": "bracco_italiano.health.ear_infections",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S1027"
+          ],
+          "ref": "bracco_italiano.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "eyelids_turned",
+          "source_ids": [
+            "S1028"
+          ],
+          "ref": "bracco_italiano.health.eyelids",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S1027"
+          ],
+          "ref": "bracco_italiano.health.skin_allergies",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.exercise.adult",
+              "bracco_italiano.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1027"
+            ],
+            "refs": [
+              "bracco_italiano.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.exercise.adult",
+              "bracco_italiano.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1027"
+            ],
+            "refs": [
+              "bracco_italiano.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.suitability.rkc_sheds"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.lifespan.rkc",
+              "bracco_italiano.suitability.rkc_lifespan"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 99
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 99
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bracco_italiano.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1024"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S1024 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.bracco_italiano.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.bracco_italiano.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1028"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (senior: see senior_boundary_months — predlog Claude)"
+          },
+          {
+            "ref": "proposed_game_parameters.bracco_italiano.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bracco_italiano.grooming",
+            "basis_source_ids": [
+              "S1024"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1024",
+          "S1028"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S1024"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1024"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1024"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S1024"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1023",
+        "S1024",
+        "S1027",
+        "S1028",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -85885,6 +86454,34 @@
       "publisher": "WebMD Pets — Mallika Bhattacharya, medically reviewed by Amy Flowers, DVM (2025-03-24)",
       "title": "What to Know About Belgian Sheepdogs",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-belgian-sheepdogs"
+    },
+    {
+      "id": "S1023",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 202 — Italian Pointing Dog (Bracco Italiano), EN 17.12.2015 (official valid standard published 13.11.2015) (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/202g07-en.pdf"
+    },
+    {
+      "id": "S1024",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Bracco Italiano — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/bracco-italiano/"
+    },
+    {
+      "id": "S1027",
+      "tier": "B",
+      "publisher": "PetMD — Erica Vasquez, reviewed by Jo Cornett, DVM (updated Nov. 18, 2024)",
+      "title": "Bracco Italiano",
+      "url": "https://www.petmd.com/dog/breeds/bracco-italiano"
+    },
+    {
+      "id": "S1028",
+      "tier": "B",
+      "publisher": "Bracco Italiano Club of America (AKC parent club; PDF hosted by the AKC)",
+      "title": "Bracco Italiano Club of America Health Statement (approved by the club board November 16, 2025)",
+      "url": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2025/11/19123111/Bracco-Italiano-Club-of-America-Health-Statement-FINAL.pdf"
     },
     {
       "id": "C1",
