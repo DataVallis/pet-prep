@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "75b9a116b61b1270e45878660fa6f11a05f21cf70668b0f1ddb0d0c4956d1207"
+      "sha256": "f0dd9e6527a8a52893305cebfec6ea6a418faa9404836178a3012a0001d08915"
     }
   },
   "suitability_vocabulary": {
@@ -80356,7 +80356,12 @@
           "S1041"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bedlington-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

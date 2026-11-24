@@ -1686,6 +1686,19 @@
             "prompt_hash": "sha256:64695f2f46d8d33daae31e935c5a22fdd938d8bf8c5e24fef967685050425274",
             "generated_at": "2026-11-24T03:15:24+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bedlington_terrier",
+            "species": "dog",
+            "colour": "blue",
+            "file": "dog/bedlington-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:735e16f68741d66ef3fd7d9dab9ddb4f5662e56533b4b447972153c95034e732",
+            "generated_at": "2026-11-24T07:05:53+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
