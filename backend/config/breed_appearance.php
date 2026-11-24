@@ -892,6 +892,12 @@
 | long-haired variety with an abundant ruff, breeches and a plumed tail, rather small erect triangular ears, black nose. Not
 | flat-faced; RKC Breed Watch Category 1 (S1019). One colour (the portrait default); weight unsourced → `verified => false`.
 |
+| Bracco Italiano (M5-R10-136, docs/research/dog-data bracco_italiano.appearance): "White." / "White with patches of varied
+| size of an orange or more or less dark amber colour." / "White with more or less large brown patches." / orange roan /
+| liver roan (FCI-Standard N° 202, S1023; black, tricolour, fawn, hazel and tan markings disqualify); short, dense, glossy
+| coat, long ears reaching the tip of the nose, pink to brown nose (never black), natural tail. Not flat-faced; RKC Breed
+| Watch Category 1 (S1024). White with orange markings first (portrait default); weights unsourced → `verified => false`.
+|
 | Norfolk Terrier (M5-R10-134, docs/research/dog-data norfolk_terrier.appearance): "All shades of red, wheaten, black and
 | tan or grizzle." (FCI-Standard N° 272, S1010; any other colour unacceptable, no white patches in the game); hard, wiry,
 | straight coat, longer and rougher on the neck and shoulders, V-shaped drop ears dropping forward close to the cheek, natural
@@ -5730,6 +5736,42 @@ return [
             'tail' => ['natural plumed tail reaching the hock, carried low at rest with the tip curved slightly back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-136 (docs/research/dog-data/data.json bracco_italiano.appearance; runbook rules 2026-10-10: the five colours of
+    // FCI-Standard N° 202 (S1023), white with orange markings first = the portrait default; natural tail, never black).
+    'bracco_italiano' => [
+        'display_name' => 'Bracco Italiano',
+        // Colour frequencies are in no source (bracco_italiano.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 202 (S1023), RKC Breeds A–Z (S1024), RKC standard (S1025) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1024 "Large"; S1023 "Preferred size for males: 58 – 67 cm." (females 55–62 cm); S1023 "Weight: Between 25 and 40 kg depending on size."',
+            'build' => 'S1023 "Of strong and harmonious construction, powerful appearance."',
+            'coat_length' => 'S1023 "Hair: Short, dense and glossy, finer and shorter on the head, the ears, front part of the legs and feet."',
+            'coat_color' => 'S1023 "White." / "White with patches of varied size of an orange or more or less dark amber colour." / "White with more or less large brown patches." / "White speckled with pale orange, i.e. orange roan." / "White speckled with brown, i.e. liver roan." (weights unsourced; never black / tricolour / fawn / tan markings)',
+            'ear_carriage' => 'S1023 "Long, they should reach the tip of the nose without being stretched."',
+            'eye_color' => 'S1023 "The iris is of a more or less dark ochre or brown colour depending on the coat colour."',
+            'nose' => 'S1023 "Colour is more or less pink – to flesh-coloured or brown, depending on the colour of the coat."',
+            'tail' => 'S1023 "The natural tail should not extend below the hock"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'strong, harmonious and powerful pointing dog with a deep chest and a lean, athletic body in healthy working condition', 'weight' => 3], 'powerful, athletic gundog standing calmly'],
+            'coat_length' => ['short, dense and glossy coat, finer and shorter on the head and ears'],
+            // FCI standard (S1023): the five standard colours; white with orange markings first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'white with orange markings', 'weight' => 30],
+                ['value' => 'white with brown markings', 'weight' => 25],
+                ['value' => 'orange roan', 'weight' => 20],
+                ['value' => 'brown roan', 'weight' => 15],
+                ['value' => 'white', 'weight' => 10],
+            ],
+            'ear_carriage' => ['long, low-set pendant ears with slightly folded edges'],
+            'eye_color' => ['gentle ochre to brown eyes matching the coat'],
+            'nose' => ['large pink to flesh-coloured or brown nose matching the coat'],
+            'tail' => ['natural tail reaching the hock, thick at the base, carried horizontally'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'nose', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

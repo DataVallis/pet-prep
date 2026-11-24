@@ -69764,6 +69764,537 @@
       }
     }
   },
+  "bracco_italiano": {
+    "_note": "Added 2026-11-24 (M5-R10-136, unattended run — appended after the Belgian Sheepdog: AKC 2024 No. 132 'Bracco Italiano', S174 full-list table recorded 2026-11-23 in row 135 '131 Belgian Sheepdog', '132 Bracco Italiano'). Quotes as returned by the web-fetch tool on 2026-11-24 (after web searches; non-preapproved pages give fragments up to ~125 characters); paraphrase only in notes, marked '(paraphrase)'. Sources S1022–S1028 (reused S10, S11, S14, S35, S45, S174). No health percentages anywhere (the BICA health statement S1028 gives causes of death in % — not copied). Standard: FCI-Standard N° 202 Italian Pointing Dog (Bracco Italiano) (S1023, English text 17.12.2015, 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 13.11.2015.'), the RKC breed standard (S1025, 'Last updated 1 April 2025') and the AKC standard (S1026, 'Effective July 3, 2019'). RKC Breeds A–Z page reached (S1024, URL from a web search): 'More than 2 hours per day' → 120, 'Once a week' grooming, 'Under 10 years' lifespan (no lower bound), Large house / Large garden, Sheds 'Yes', Breed Watch 'Category 1'. Lifespan: no McMillan 2024 / VetCompass value reachable (Dogs Trust table refused, client error) → closest row: the Bracco Italiano Club of America health statement 'The median lifespan of this breed is 11 years.' (S1028, AKC parent club, not peer-reviewed) → senior 99 = Claude's suggestion (verified=false, open for David). Coren: not ranked (S35 not reachable this run — 'PROVENANCE_REQUIRED'; the 2026-11-18 reading for the Spinone found the Italian Greyhound as the only Italian breed) → 1.0. No PDSA / Woodgreen / Dogs Trust / WebMD breed page found. Never hypoallergenic. Slovenian »italijanski ptičar« (literal FCI 'Italian Pointing Dog'; no KZS page or Slovenian club page found — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 202, Group 7 Section 1.1 (Continental Pointing Dogs, Braque type), Italy",
+      "unit": "—",
+      "source_id": "S1023",
+      "quote": "Section 1 Continental pointing dogs, Type \"Braque\".",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 202 (S1023): 'FCI-CLASSIFICATION: Group 7 Pointing Dogs.', 'Section 1 Continental pointing dogs, Type \"Braque\".', 'With working trial.', 'ORIGIN: Italy.' FCI nomenclature page (S1022): 'Group : n°7 - Pointing Dogs', 'Section | Continental Pointing Dogs', 'Subsection | «Braque»Type', 'Country of origin of the breed | ITALY', 'Date of acceptance on a definitive basis by the FCI | 6/7/1956', English name 'ITALIAN POINTING DOG'; varieties 'a) WHITE-ORANGE' and 'b) CHESTNUT ROAN'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S1024",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S1024). FCI weight 25–40 kg (S1023) ≈ 55–88 lb → mostly the 'Large (59–99 pounds)' class of S10."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            58,
+            67
+          ],
+          "female": [
+            55,
+            62
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1023",
+        "quote": "Preferred size for males: 58 – 67 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 202 (S1023): 'Height at the withers: 55 – 67 cm.', 'Preferred size for males: 58 – 67 cm.', 'Preferred size for females: 55 – 62 cm.' — the register value. RKC standard (S1025): 'Height at withers: dogs 58-67 cms (22¾-26¼ ins), bitches 55-62 cms (21¾ -24½ ins).' (the same); AKC standard (S1026): 'Preferred size for males: 23 to 27 inches; preferred size for females: 21 to 25 inches.'; PetMD (S1027) 'The dogs typically stand 21–27 inches tall and weigh 55–88 pounds.'"
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            40
+          ],
+          "female": [
+            25,
+            40
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1023",
+        "quote": "Weight: Between 25 and 40 kg depending on size.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 202 (S1023) — one range for both sexes, 'depending on size'; the game / register value. RKC standard (S1025): 'Weight 25-40 kgs (55-88 lbs), in proportion to height.' (the same).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                24.9,
+                40.8
+              ],
+              "female": [
+                24.9,
+                40.8
+              ]
+            },
+            "unit": "kg (converted from 55–90 lb)",
+            "source_id": "S1026",
+            "quote": "Weight between 55 to 90 pounds, depending on height.",
+            "notes": "AKC standard (S1026), both sexes."
+          },
+          {
+            "value": {
+              "male": [
+                24.9,
+                39.9
+              ],
+              "female": [
+                24.9,
+                39.9
+              ]
+            },
+            "unit": "kg (converted from 55–88 lb)",
+            "source_id": "S1027",
+            "quote": "The dogs typically stand 21–27 inches tall and weigh 55–88 pounds.",
+            "notes": "PetMD (S1027), both sexes."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 25–40 kg ≈ 55–88 lb (S1023) — the lightest dogs fall just under 59 lb; the RKC size 'Large' (S1024) → 'Large (59–99 pounds)'. The puppy cap of 120 min is reached at 12 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bracco Italiano growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S1024",
+        "quote": "Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact 'Lifespan' (S1024): an upper bound only — no lower bound for the runbook rule; basis of the shorter_lifespan chip (runbook). Conflicts with the PetMD (S1027) '10–14 years' and the BICA median 11 y (S1028) — open for David."
+      },
+      "bica_health_statement": {
+        "value": 11,
+        "unit": "years (median, breed-club survey)",
+        "source_id": "S1028",
+        "quote": "The median lifespan of this breed is 11 years.",
+        "confidence": "medium",
+        "notes": "Bracco Italiano Club of America health statement (S1028, approved by the club board 'on November 16, 2025'; AKC parent club, hosted by the AKC; not peer-reviewed, the survey method is not described). The closest breed median → basis of the senior boundary (verified=false, Bernese / Neapolitan Mastiff precedent). Background only — never shown as a statistic in the app."
+      },
+      "petmd": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S1027",
+        "quote": "an average lifespan of 10–14 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1027, vet-reviewed). Lower bound 10 y → 90 would be an alternative senior boundary (open for David)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the Dogs Trust McMillan 2024 table (S123 / 'shortest and longest table' PDF) failed with a client error on 2026-11-24; Wikipedia (fetched 2026-11-24) gives no lifespan for the breed."
+      },
+      "senior_from": {
+        "value": 8.25,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the BICA median 11 y (S1028) = 8.25 y → 99 months (verified=false, Claude's suggestion — see proposed_game_parameters.bracco_italiano.senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S1028"
+        ],
+        "months": 99,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S1024",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S1024) → 120 min ('more than N' → N). PetMD (S1027) names no minutes ('requires daily activities such as long walks, playtime, or field training sessions').",
+        "alternatives": [
+          {
+            "value": null,
+            "unit": "—",
+            "source_id": "S1027",
+            "quote": "requires daily activities such as long walks, playtime, or field training sessions",
+            "notes": "PetMD (S1027) — no minutes."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "high energy, thrives on having a job (ideally bird hunting); calm indoors when exercised enough",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "Outdoors, they are tireless. But indoors, they are calm dogs—if they've had enough physical activity.",
+        "confidence": "high",
+        "notes": "PetMD (S1027); also 'Bracchi Italiani are high-energy dogs that thrive on having a job, ideally bird hunting.' and 'access to fenced outdoor spaces for running and play' (fragment)."
+      },
+      "after_meals": {
+        "value": "limit exercise directly before or after eating (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "limiting exercise directly before or after eating",
+        "confidence": "high",
+        "notes": "PetMD (S1027), in the GDV section ('GDV affects deep-chested breeds like the Bracco Italiano'); also smaller, more frequent meals and no elevated food bowls (paraphrase). Basis of the meal / exercise gap (M5-R16, David 60 min) — proposed_game_parameters.bracco_italiano.meal_exercise_gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "hardy and adaptable, gentle and even tempered; reliable, docile and easy to train",
+        "unit": "—",
+        "source_id": "S1025",
+        "quote": "Hardy and adaptable, gentle and even tempered.",
+        "confidence": "high",
+        "notes": "RKC standard (S1025). FCI (S1023): 'Tough and adapted to all types of hunting, reliable, endowed with an excellent ability to understand,' / 'docile and easy to train.'; AKC (S1026): 'The Bracco is tough and adapted to all types of hunting, reliable, docile, and intelligent.'; PetMD (S1027): 'The Bracco Italiano temperament is playful, intelligent, gentle, and affectionate.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific family statement in an A/B source (the RKC 'ideal all-round family dogs' line describes the whole gundog group, S1024) → no family_pet chip."
+      },
+      "children": {
+        "value": "generally good with children (easygoing, patient)",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "Bracchi Italiani are generally good with other dogs and with children, thanks to their easygoing and patient nature.",
+        "confidence": "high",
+        "notes": "PetMD (S1027) — explicit statement, no supervision caveat on the page, but no explicit rating for small children → children chip, not small_children. Vetstreet (tier C, background): 'Young children and dogs should never be left alone together, no matter how well they get along.'"
+      },
+      "other_pets": {
+        "value": "generally good with other dogs; prey drive may tempt it to chase smaller animals",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "But their hunting history and prey drive might tempt them to chase smaller animals, like neighborhood squirrels.",
+        "confidence": "medium",
+        "notes": "PetMD (S1027) — not a 'high prey drive' statement → no chases_small_pets (runbook). Hill's (tier C) table 'Prey Drive: 4 (High Drive)' — tier C, never alone."
+      },
+      "time_alone": {
+        "value": "a 'Velcro dog' that wants to be by your side; not for a family that is frequently away",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "a home that lacks sufficient space for exercise or where the family is frequently away from home may not be suitable for this breed.",
+        "confidence": "high",
+        "notes": "PetMD (S1027); also 'Bracchi Italiani are Velcro dogs that will want to be by your side' (quoting a breeder) → needs_company chip."
+      },
+      "socialisation": {
+        "value": "early socialisation for well-rounded development; may develop anxiety if not properly socialised",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "ensure early socialization for well-rounded development",
+        "confidence": "high",
+        "notes": "PetMD (S1027, a need — training section); also 'may develop anxiety if not properly socialized' → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "intelligent and eager to please; responds well to positive reinforcement",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "Known for their intelligence and eagerness to please, Bracchi respond well to positive reinforcement techniques",
+        "confidence": "high",
+        "notes": "PetMD (S1027). FCI (S1023): 'docile and easy to train.'"
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found (PetMD S1027: puppies three small meals, adults twice a day — background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch 'Category 1' (S1024: 'Currently no points of concern specific to this breed have been identified …') → no welfare chip. Breeder checklist: RKC best-practice hip and elbow schemes (S1024).",
+      "kidney_disease": {
+        "value": "kidney disease (renal amyloidosis) — the main problem breeders see; parents should have kidney checks before breeding",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "The number one problem we are seeing in the breed is kidney disease",
+        "confidence": "high",
+        "notes": "PetMD (S1027, quoting a breed expert). BICA health statement (S1028): 'Kidney Health Testing – … a serum creatinine and urine protein/creatinine ratio should be performed within six months of breeding' (renal amyloidosis). Register health key kidney_disease."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — joints that do not develop properly",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "is a common condition in large dogs like the Bracco Italiano",
+        "confidence": "high",
+        "notes": "PetMD (S1027) on hip dysplasia; elbow dysplasia 'occurs when the elbow joint doesn't develop properly'. RKC best-practice BVA/KC hip and elbow schemes (S1024); BICA (S1028) OFA hips / elbows. Register health key hip_elbow_dysplasia."
+      },
+      "gdv": {
+        "value": "gastric dilatation and volvulus (GDV, bloat) — affects deep-chested breeds; an emergency",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "GDV affects deep-chested breeds like the Bracco Italiano",
+        "confidence": "high",
+        "notes": "PetMD (S1027); BICA (S1028) names gastric dilatation-volvulus and advises considering a preventive gastropexy (paraphrase). Register health key bloat_gdv."
+      },
+      "ear_infections": {
+        "value": "ear infections — long ears; regular ear cleaning",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "prone to ear infections",
+        "confidence": "high",
+        "notes": "PetMD (S1027): 'Regular ear cleaning is important' (no frequency). BICA (S1028) also names ear infections. Register health key ear_infections."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — an inherited eye condition",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "is an inherited eye condition",
+        "confidence": "high",
+        "notes": "PetMD (S1027). Register health key pra."
+      },
+      "eyelids": {
+        "value": "eyelid and other inherited eye problems — entropion, ectropion, cataracts (eye screening)",
+        "unit": "—",
+        "source_id": "S1028",
+        "quote": "OFA Eyes – an eye screening to rule out entropion, ectropion, cataracts, and other hereditary eye diseases",
+        "confidence": "medium",
+        "notes": "BICA health statement (S1028). Register health key eyelids_turned."
+      },
+      "skin_allergies": {
+        "value": "skin allergies",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "Bracchi Italiani can be prone to skin allergies",
+        "confidence": "high",
+        "notes": "PetMD (S1027); BICA (S1028) names allergies. Register health key itchy_skin_allergy."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: S35 could not be fetched on 2026-11-24 (PROVENANCE_REQUIRED); the reading of 2026-11-18 (Spinone Italiano run, M5-R10-124) found the Italian Greyhound (rank 60) as the only Italian breed and no row for 'Bracco', 'Italian Pointer' or 'Italian Pointing Dog'. Unranked → learning multiplier 1.0 (open for David if he finds a rank)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked (S35) → no tier."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bracco_italiano.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strong, harmonious, powerful pointing dog with a short, dense, glossy coat",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "Of strong and harmonious construction, powerful appearance.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023)."
+      },
+      "colours": {
+        "value": [
+          "white with orange markings",
+          "white with brown markings",
+          "orange roan",
+          "brown roan",
+          "white"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S1023",
+        "quote": "White with patches of varied size of an orange or more or less dark amber colour.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023): 'White.' / 'White with patches of varied size of an orange or more or less dark amber colour.' / 'White with more or less large brown patches.' / 'White speckled with pale orange, i.e. orange roan.' / 'White speckled with brown, i.e. liver roan.'; disqualifying: 'Coat black, white and black, tricolour, fawn, hazel, unicolour and tan markings.' RKC (S1025): 'White. White with orange, amber or chestnut markings. White may be speckled. Roan with solid markings.' / 'Tricolour highly undesirable.'; AKC (S1026) 'solid white, white with orange markings, or white with brown markings.' The game draws the five FCI colours (white with orange markings first — FCI variety 'a) WHITE-ORANGE', S1022 — as the portrait default); 'liver roan' is labelled brown roan. Never black, tricolour, fawn, hazel or tan markings."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). White with orange markings first with the highest weight → the portrait default; draft weights 30 / 25 / 20 / 15 / 10."
+      },
+      "coat": {
+        "value": "short, dense and glossy; finer and shorter on the head, ears, front of the legs and feet",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "Hair: Short, dense and glossy, finer and shorter on the head, the ears, front part of the legs and feet.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023); RKC key fact 'Coat length' 'Short' (S1024)."
+      },
+      "ears": {
+        "value": "long — reaching the tip of the nose without being stretched",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "Long, they should reach the tip of the nose without being stretched.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023)."
+      },
+      "eyes": {
+        "value": "iris more or less dark ochre or brown depending on the coat colour",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "The iris is of a more or less dark ochre or brown colour depending on the coat colour.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023)."
+      },
+      "nose": {
+        "value": "pink to flesh-coloured or brown depending on the coat colour; never black",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "Colour is more or less pink – to flesh-coloured or brown, depending on the colour of the coat.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023); 'Pigmentation of skin and annexes with traces of black.' is disqualifying."
+      },
+      "tail": {
+        "value": "natural tail not below the hock, thick at the base, carried horizontally",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "The natural tail should not extend below the hock",
+        "confidence": "high",
+        "notes": "FCI standard (S1023); docking allowed for hunting where the law permits (paraphrase); AKC (S1026) 'Carried horizontally; length of the undocked tail is to the hock.' The game shows the natural tail."
+      },
+      "mask": {
+        "value": "a symmetrical facial mask is preferred; no mask tolerated",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": "A symmetrical facial mask is preferred, but the absence of a mask is tolerated.",
+        "confidence": "high",
+        "notes": "FCI standard (S1023)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S1024), PetMD (S1027). No PDSA / Woodgreen / WebMD breed page found.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S1024)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1024) → 120 min; long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S1024) → large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S1024)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S1024) → brushing 1× a week (M5-R13). PetMD (S1027) 'Brushing once a week is generally enough to remove loose hair' agrees."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S1024)."
+      },
+      "rkc_sheds": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S1024); PetMD (S1027) 'They shed moderately year-round.' agrees → sheds chip."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact 'Lifespan' (S1024) → shorter_lifespan chip (see lifespan.rkc)."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Country",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S1024)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S1024): 'Currently no points of concern specific to this breed have been identified for special attention by judges...' → no welfare chip, in marketing."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; routine nail trimming, dental care and regular ear cleaning (no frequencies)",
+        "unit": "—",
+        "source_id": "S1027",
+        "quote": "Brushing once a week is generally enough to remove loose hair",
+        "confidence": "high",
+        "notes": "PetMD (S1027): 'routine nail trimming and dental care should be part of their grooming routine.'; 'Regular ear cleaning is important' — no frequency → no nail / tooth / ear task; no bath statement → no bath reminder."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -104545,6 +105076,279 @@
         "confidence": "high",
         "notes": "FCI standard 15 (S831). Not a welfare breed → no welfare trait. Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): solid black (the only standard colour) is the portrait default; never white marks beyond the forechest / toes, never grey, red or fawn"
+      }
+    },
+    "bracco_italiano": {
+      "_note": "Unattended run M5-R10-136 (2026-11-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1024 'More than 2 hours per day' → 120). Senior boundary 99 = Claude's suggestion (closest rule row: 0.75 × the BICA median 11 y, S1028; RKC 'Under 10 years' has no lower bound; no McMillan 2024 / VetCompass median reachable) → verified=false, open for David. Learning 1.0 (unranked, S35). Built: brushing once a week (RKC 'Once a week', M5-R13), puppy socialisation with the PetMD quote (M5-R17), 60-min meal gap with the PetMD GDV quote (M5-R16). No ear / nail / tooth / bath / groomer task (no frequency in an A/B source). No heat warning (not flat-faced). No new vocabulary key. Welfare: Breed Watch Category 1 → no welfare chip; in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S1024",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1024) → rule 'more than N' → 120. PetMD (S1027) gives no minutes.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S1024 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S1024",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 99
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds) — runbook rule. senior 99 = round(0.75 × 11 y × 12) — Claude's suggestion (see senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1028"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_10_y": 90
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (senior: see senior_boundary_months — predlog Claude)"
+      },
+      "senior_boundary_months": {
+        "value": 99,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNCONFIRMED suggestion (Claude, waiting for David): RKC 'Under 10 years' (S1024) has no lower bound and no McMillan 2024 / VetCompass median is reachable → the closest rule row: 0.75 × the breed-club median 11 y (BICA health statement, S1028) × 12 = 99. Alternatives: PetMD lower bound 10 y (S1027) → 90; Dogs Trust > 7 y (S14) → 84.",
+        "derived_from": [
+          "S11",
+          "S1028"
+        ],
+        "decision": "predlog Claude 2026-11-24 (najbližja vrstica pravila runbooka, M5-R10-136) — čaka Davida: 99 mesecev (0,75 × 11 let, S1028)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 99
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (senior = Claude's suggestion 99, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 99 — senior: predlog Claude)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not found in Coren's ranking (S35 — see bracco_italiano.trainability.coren_rank) → unranked rule → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1024",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "bracco_italiano.suitability.rkc_grooming. RKC 'Once a week' (S1024) → 1 (runbook »Dog grooming«); PetMD (S1027) 'Brushing once a week is generally enough to remove loose hair' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S1027",
+            "quote": "Brushing once a week is generally enough to remove loose hair",
+            "notes": "PetMD — the same number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (RKC »Once a week« → 1); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1027",
+        "quote": "ensure early socialization for well-rounded development",
+        "confidence": "high",
+        "notes": "bracco_italiano.behaviour.socialisation (PetMD S1027, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1027)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S1027",
+        "quote": "limiting exercise directly before or after eating",
+        "confidence": "high",
+        "notes": "PetMD (S1027), bracco_italiano.exercise.after_meals; the same page names GDV in deep-chested breeds (health.gdv). Built in M5-R16: warning only, steps still count, no penalty.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-136); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.exercise.adult",
+              "bracco_italiano.suitability.rkc_exercise"
+            ],
+            "quote": "S1024 'More than 2 hours per day'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1027"
+            ],
+            "refs": [
+              "bracco_italiano.behaviour.children"
+            ],
+            "quote": "S1027 'Bracchi Italiani are generally good with other dogs and with children, thanks to their easygoing and patient nature.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.suitability.rkc_size_of_home"
+            ],
+            "quote": "S1024 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.exercise.adult",
+              "bracco_italiano.suitability.rkc_exercise"
+            ],
+            "quote": "S1024 'More than 2 hours per day'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1027"
+            ],
+            "refs": [
+              "bracco_italiano.behaviour.time_alone"
+            ],
+            "quote": "S1027 'a home that lacks sufficient space for exercise or where the family is frequently away from home may not be suitable for this breed.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.suitability.rkc_sheds"
+            ],
+            "quote": "S1024 'Yes' (Sheds); PetMD S1027 'They shed moderately year-round.'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S1024"
+            ],
+            "refs": [
+              "bracco_italiano.lifespan.rkc",
+              "bracco_italiano.suitability.rkc_lifespan"
+            ],
+            "quote": "S1024 'Under 10 years'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No breed-specific family statement (the RKC line is about the gundog group).",
+          "small_children": "No explicit rating for small children.",
+          "apartment": "RKC 'Large house' (S1024).",
+          "other_pets": "PetMD (S1027) prey drive may tempt it to chase smaller animals — not proposed.",
+          "chases_small_pets": "PetMD (S1027) 'prey drive might tempt them to chase smaller animals' — not a 'high prey drive' statement (runbook); Hill's 'High Drive' is tier C.",
+          "frequent_grooming": "RKC / PetMD once a week.",
+          "secure_fencing": "PetMD 'access to fenced outdoor spaces for running and play' is about space to run, not escaping.",
+          "drools": "No A/B statement.",
+          "hips_hind_legs": "Hip dysplasia listed (PetMD) — Breed Watch Category 1, no veterinary association names a conformation welfare problem.",
+          "eyelid_problems": "BICA eye screening (S1028) — no Breed Watch point → not a welfare chip.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch Category 1 (S1024) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, children, large_home; consider long_daily_exercise, needs_company, sheds, shorter_lifespan"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1024",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S1024); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never promises its health and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Bracco Italiano, white with orange markings: strong, harmonious, powerful pointing dog with a short, dense, glossy coat; long ears reaching the tip of the nose; ochre eyes; pink to flesh-coloured nose matching the coat; natural tail carried horizontally; healthy lean working condition",
+        "unit": "—",
+        "source_id": "S1023",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S1023) as in bracco_italiano.appearance. Five standard colours; weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with orange markings is the portrait default (FCI variety a) WHITE-ORANGE, S1022 / S1023; weights unsourced); natural tail, never docked; never black / tricolour / fawn / tan (disqualifying)"
       }
     }
   }

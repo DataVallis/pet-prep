@@ -3185,5 +3185,29 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S1019', 'S1020'], 'refs' => ['belgian_sheepdog.suitability.rkc_grooming', 'belgian_sheepdog.suitability.petmd_grooming']],
             ],
         ],
+
+        // M5-R10-136 Bracco Italiano (data.json proposed_game_parameters.bracco_italiano.suitability_tags; S1024, S1027),
+        // runbook rules. RKC Breed Watch Category 1 → no welfare chip; no breed-specific family statement → no family_pet;
+        // PetMD prey drive without "high" → no chases_small_pets; in marketing. No new vocabulary key. Never hypoallergenic.
+        'bracco_italiano' => [
+            'suits' => [
+                // S1024 "More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S1024'], 'refs' => ['bracco_italiano.exercise.adult', 'bracco_italiano.suitability.rkc_exercise']],
+                // S1027 "Bracchi Italiani are generally good with other dogs and with children, thanks to their easygoing and patient nature."
+                ['tag' => 'children', 'source_ids' => ['S1027'], 'refs' => ['bracco_italiano.behaviour.children']],
+                // S1024 "Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S1024'], 'refs' => ['bracco_italiano.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S1024 "More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S1024'], 'refs' => ['bracco_italiano.exercise.adult', 'bracco_italiano.suitability.rkc_exercise']],
+                // S1027 "… where the family is frequently away from home may not be suitable for this breed."
+                ['tag' => 'needs_company', 'source_ids' => ['S1027'], 'refs' => ['bracco_italiano.behaviour.time_alone']],
+                // S1024 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S1024'], 'refs' => ['bracco_italiano.suitability.rkc_sheds']],
+                // S1024 "Lifespan: Under 10 years"
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S1024'], 'refs' => ['bracco_italiano.lifespan.rkc', 'bracco_italiano.suitability.rkc_lifespan']],
+            ],
+        ],
     ],
 ];
