@@ -135,6 +135,7 @@ return [
     'norfolk_terrier' => 'Norfolk Terrier',
     'belgian_sheepdog' => 'Belgian Sheepdog',
     'bracco_italiano' => 'Bracco Italiano',
+    'german_pinscher' => 'German Pinscher',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

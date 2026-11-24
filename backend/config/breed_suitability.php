@@ -3209,5 +3209,27 @@ return [
                 ['tag' => 'shorter_lifespan', 'source_ids' => ['S1024'], 'refs' => ['bracco_italiano.lifespan.rkc', 'bracco_italiano.suitability.rkc_lifespan']],
             ],
         ],
+
+        // M5-R10-137 German Pinscher (data.json proposed_game_parameters.german_pinscher.suitability_tags; S1031, S1032,
+        // S1033), runbook rules. RKC Breed Watch Category 1 → no welfare chip; PetMD names a strong prey drive →
+        // chases_small_pets last; in marketing. No new vocabulary key. Never hypoallergenic.
+        'german_pinscher' => [
+            'suits' => [
+                // S1031 "needing little grooming and fitting well into family life"
+                ['tag' => 'family_pet', 'source_ids' => ['S1031'], 'refs' => ['german_pinscher.behaviour.family']],
+                // S1032 "A well-trained and socialized German Pinscher can be good with children and other pets." (supervision caveat in data.json)
+                ['tag' => 'children', 'source_ids' => ['S1032'], 'refs' => ['german_pinscher.behaviour.children']],
+            ],
+            'consider' => [
+                // S1033 "best suited for an experienced dog owner." (manipulative and mischievous, challenging to train)
+                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S1033'], 'refs' => ['german_pinscher.behaviour.owner']],
+                // S1032 "Daily walks, engaging playtime, and opportunities for mental stimulation are important to keep them happy and fulfilled."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S1032'], 'refs' => ['german_pinscher.exercise.daily_text']],
+                // S1031 "Sheds: Yes"; PetMD S1032 moderate shedder
+                ['tag' => 'sheds', 'source_ids' => ['S1031'], 'refs' => ['german_pinscher.suitability.rkc_shedding']],
+                // S1032 "However, their strong prey drive necessitates caution around smaller pets and neighborhood critters."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S1032'], 'refs' => ['german_pinscher.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

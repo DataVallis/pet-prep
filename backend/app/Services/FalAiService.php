@@ -1033,6 +1033,13 @@ class FalAiService
                 .'nose, a long head with a slightly arched muzzle, a deep chest, natural tail carried horizontally, calm, intelligent expression, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-137: FCI-Standard N° 184 (S1030) — black and tan (the portrait default), short smooth shiny coat,
+            // natural V-shaped drop ears (never cropped), natural tail.
+            BreedType::GermanPinscher => 'A medium-sized, smooth-haired, square and elegant German Pinscher with proud carriage, a short, dense, shiny '
+                .'lacquer black coat with red-brown tan markings, dark oval eyes with black eyelids, a black nose, a strong elongated head, '
+                .'natural high-set V-shaped drop ears close to the cheeks, natural tail in a sabre carriage, lively, alert, self-assured expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2413,6 +2420,13 @@ class FalAiService
                 'eye_color' => 'ochre',
                 'fur_texture' => 'short, dense and glossy coat',
                 'markings' => 'orange patches on a white coat, flesh-coloured nose, long pendant ears',
+            ],
+            // M5-R10-137: standard colours only (FCI S1030: black and tan, or self-coloured red) — never blue, fawn or white.
+            BreedType::GermanPinscher => [
+                'color_scheme' => 'black and tan',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, dense, smooth, close and shiny coat',
+                'markings' => 'lacquer black with red-brown tan markings, black nose, natural V-shaped drop ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

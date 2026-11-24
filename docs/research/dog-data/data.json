@@ -70500,7 +70500,7 @@
         "source_id": "S1032",
         "quote": "A fenced yard is a must when they are outside and unsupervised.",
         "confidence": "high",
-        "notes": "PetMD (S1032); the sentence goes on: their history as hunters means a strong prey drive (paraphrase). Basis of secure_fencing (Norfolk Terrier precedent)."
+        "notes": "PetMD (S1032); the sentence goes on: their history as hunters means a strong prey drive (paraphrase). About the prey drive, not escaping → no secure_fencing chip (its label says 'escapes easily')."
       },
       "owner": {
         "value": "best suited for an experienced dog owner; can be manipulative and mischievous to train",
@@ -70508,7 +70508,7 @@
         "source_id": "S1033",
         "quote": "best suited for an experienced dog owner.",
         "confidence": "high",
-        "notes": "WebMD (S1033, fragment); also 'German Pinschers can be manipulative and mischievous, making them challenging to train.' Basis of experienced_owner."
+        "notes": "WebMD (S1033, fragment); also 'German Pinschers can be manipulative and mischievous, making them challenging to train.' Basis of independent_experienced_owner (not experienced_owner — that chip names a powerful dog)."
       },
       "time_alone": {
         "value": null,
@@ -105857,7 +105857,7 @@
       }
     },
     "german_pinscher": {
-      "_note": "Unattended run M5-R10-137 (2026-11-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1031 'Up to 1 hour per day' → 60). Senior 90 from the RKC lower bound 'Over 10 years' (no McMillan 2024 / VetCompass value reachable; provisional). Learning 1.0 (unranked, S35). Built: brushing once a week (RKC, M5-R13), puppy socialisation with the PetMD quote (M5-R17), ear cleaning weekly (PetMD, M5-R20), nail trim monthly (WebMD, M5-R19), bath reminder every 6 weeks (PetMD, M5-R18). No tooth task (daily brushing only one option, WebMD), no groomer task, no meal gap, no heat warning. No new vocabulary key. Breed Watch Category 1 → no welfare chip; in marketing. Never hypoallergenic.",
+      "_note": "Unattended run M5-R10-137 (2026-11-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1031 'Up to 1 hour per day' → 60). Senior 90 from the RKC lower bound 'Over 10 years' (no McMillan 2024 / VetCompass value reachable; provisional). Learning 1.0 (unranked, S35). Built: brushing once a week (RKC, M5-R13), puppy socialisation with the PetMD quote (M5-R17), ear cleaning weekly (PetMD, M5-R20), nail trim monthly (WebMD, M5-R19), bath reminder every 6 weeks (PetMD, M5-R18). No tooth task (daily brushing only one option, WebMD), no groomer task, no meal gap, no heat warning. No new vocabulary key (independent_experienced_owner reused). Breed Watch Category 1 → no welfare chip; in marketing. Never hypoallergenic.",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -106064,14 +106064,14 @@
         ],
         "consider": [
           {
-            "tag": "experienced_owner",
+            "tag": "independent_experienced_owner",
             "source_ids": [
               "S1033"
             ],
             "refs": [
               "german_pinscher.behaviour.owner"
             ],
-            "quote": "S1033 'best suited for an experienced dog owner.'"
+            "quote": "S1033 'best suited for an experienced dog owner.'; 'German Pinschers can be manipulative and mischievous, making them challenging to train.'"
           },
           {
             "tag": "needs_mental_stimulation",
@@ -106082,16 +106082,6 @@
               "german_pinscher.exercise.daily_text"
             ],
             "quote": "S1032 'Daily walks, engaging playtime, and opportunities for mental stimulation are important to keep them happy and fulfilled.'"
-          },
-          {
-            "tag": "secure_fencing",
-            "source_ids": [
-              "S1032"
-            ],
-            "refs": [
-              "german_pinscher.behaviour.containment"
-            ],
-            "quote": "S1032 'A fenced yard is a must when they are outside and unsupervised.'"
           },
           {
             "tag": "sheds",
@@ -106124,9 +106114,11 @@
           "frequent_grooming": "RKC / PetMD / WebMD once a week.",
           "shorter_lifespan": "RKC 'Over 10 years'; PetMD 12–14 y.",
           "welfare_chip": "RKC Breed Watch Category 1 (S1031) → no chip.",
-          "hypoallergenic": "Never a tag (runbook)."
+          "hypoallergenic": "Never a tag (runbook).",
+          "experienced_owner": "That chip names a powerful dog; WebMD (S1033) gives the reason as being manipulative, mischievous and challenging to train → independent_experienced_owner (Shiba Inu precedent).",
+          "secure_fencing": "PetMD (S1032) 'A fenced yard is a must when they are outside and unsupervised' is about the prey drive, not escaping — the chip says 'escapes easily' → not proposed (kept as a fact in behaviour.containment)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider experienced_owner, needs_mental_stimulation, secure_fencing, sheds, chases_small_pets (David 2026-10-12: chases_small_pets at the end)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider independent_experienced_owner, needs_mental_stimulation, sheds, chases_small_pets (David 2026-10-12: chases_small_pets at the end)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes",

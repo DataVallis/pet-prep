@@ -896,6 +896,11 @@ return [
         ['key' => 'brown-roan', 'value' => 'brown roan', 'en' => 'Brown roan', 'sl' => 'Rjavo lisast'],
         ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-137: FCI-Standard N° 184 (S1030) black and tan / self-coloured red; same order and values as breed_appearance.php.
+    'german_pinscher' => [
+        ['key' => 'black-tan', 'value' => 'lacquer black with red-brown markings (black and tan)', 'en' => 'Black and tan', 'sl' => 'Črn s porjavelimi oznakami'],
+        ['key' => 'red', 'value' => 'self-coloured deer red (red to dark red-brown)', 'en' => 'Red', 'sl' => 'Rdeč'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

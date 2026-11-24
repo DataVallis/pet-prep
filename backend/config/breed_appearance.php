@@ -892,6 +892,12 @@
 | long-haired variety with an abundant ruff, breeches and a plumed tail, rather small erect triangular ears, black nose. Not
 | flat-faced; RKC Breed Watch Category 1 (S1019). One colour (the portrait default); weight unsourced → `verified => false`.
 |
+| German Pinscher (M5-R10-137, docs/research/dog-data german_pinscher.appearance): "Self coloured : Deer red, reddish-brown
+| to dark red brown." / "Black and Tan : Lacquer black with red or brown markings." (FCI-Standard N° 184, S1030; the RKC's
+| blue and tan / fawn are not FCI colours → not drawn); short, dense, smooth, shiny coat, natural V-shaped drop ears, natural
+| tail. Not flat-faced; RKC Breed Watch Category 1 (S1031). Black and tan first with the highest weight (the portrait
+| default); weights unsourced → `verified => false`.
+|
 | Bracco Italiano (M5-R10-136, docs/research/dog-data bracco_italiano.appearance): "White." / "White with patches of varied
 | size of an orange or more or less dark amber colour." / "White with more or less large brown patches." / orange roan /
 | liver roan (FCI-Standard N° 202, S1023; black, tricolour, fawn, hazel and tan markings disqualify); short, dense, glossy
@@ -5772,6 +5778,39 @@ return [
             'tail' => ['natural tail reaching the hock, thick at the base, carried horizontally'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'nose', 'tail'],
+    ],
+    // M5-R10-137 (docs/research/dog-data/data.json german_pinscher.appearance; runbook rules 2026-10-10: standard colours only —
+    // black and tan or self-coloured red (FCI S1030); natural drop ears and tail, never cropped or docked).
+    'german_pinscher' => [
+        'display_name' => 'German Pinscher',
+        // Colour frequencies are in no source (german_pinscher.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 184 German Pinscher (S1030, https://dev.fci.be/Nomenclature/Standards/184g02-en.pdf), RKC Breeds A–Z (S1031) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1031 "Size: Medium"; S1030 "Height at withers : Dogs and bitches: 45 to 50 cm ."',
+            'build' => 'S1030 "The German Pinscher is smoothhaired, medium in size with proud carriage, flowing outlines, elegant and square build."',
+            'coat_length' => 'S1030 "HAIR : Short and dense, smooth, close and shiny without bald patches."',
+            'coat_color' => 'S1030 "Self coloured : Deer red, reddish-brown to dark red brown." / "Black and Tan : Lacquer black with red or brown markings." (weights unsourced)',
+            'ear_carriage' => 'S1030 "Drop ears, set high, V-shaped,with inner edges lying close to the cheeks, turned forward towards temples." (natural, never cropped)',
+            'eye_color' => 'S1030 "Dark, oval, with black pigmented, close fitting eyelids."',
+            'tail' => 'S1030 "TAIL : Natural; a sabre or sickle carriage is sought after."',
+            'muzzle' => 'S1030 "Nose leather well developed and always black."',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'medium-sized, smooth-haired, square and elegant pinscher with proud carriage and flowing outlines', 'weight' => 3], 'muscular, athletic, square-built medium pinscher with a lively, alert stance'],
+            'coat_length' => ['short, dense, smooth, close-lying shiny coat'],
+            // Standard colours only (S1030, never blue, fawn, chocolate, merle or white); black and tan highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'lacquer black with red-brown markings (black and tan)', 'weight' => 55],
+                ['value' => 'self-coloured deer red (red to dark red-brown)', 'weight' => 45],
+            ],
+            'ear_carriage' => ['natural uncropped high-set V-shaped drop ears folded close to the cheeks'],
+            'eye_color' => ['dark oval eyes with black close-fitting eyelids'],
+            'tail' => ['natural undocked tail carried in a sabre or sickle curve'],
+            'muzzle' => ['a strong, blunt wedge-shaped muzzle with a well-developed black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
