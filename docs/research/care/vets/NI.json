@@ -56,7 +56,8 @@
         "nb": "Åpent hele døgnet, også nødtilfeller. Telefon/WhatsApp +505 8966-5221.",
         "sl": "Odprto 24 ur na dan, tudi za nujne primere. Telefon/WhatsApp +505 8966-5221.",
         "hr": "Radi 24 sata, uključujući hitne slučajeve. Telefon/WhatsApp +505 8966-5221.",
-        "de": "Rund um die Uhr geöffnet, auch für Notfälle. Telefon/WhatsApp +505 8966-5221."
+        "de": "Rund um die Uhr geöffnet, auch für Notfälle. Telefon/WhatsApp +505 8966-5221.",
+        "fr": "Ouvert 24 h/24, urgences comprises. Téléphone/WhatsApp : +505 8966-5221."
       }
     },
     {
@@ -81,7 +82,8 @@
         "nb": "Åpent mandag til lørdag 8.00–18.00.",
         "sl": "Odprto pon–sob 8–18.",
         "hr": "Radi pon–sub 8:00–18:00.",
-        "de": "Mo–Sa 8.00–18.00 Uhr geöffnet."
+        "de": "Mo–Sa 8.00–18.00 Uhr geöffnet.",
+        "fr": "Ouvert du lundi au samedi 8 h–18 h."
       }
     },
     {
@@ -106,7 +108,8 @@
         "nb": "Åpent mandag til fredag 9.00–17.00, stengt lørdag og søndag.",
         "sl": "Odprto pon–pet 9–17, ob sobotah in nedeljah zaprto.",
         "hr": "Radi pon–pet 9:00–17:00, subotom i nedjeljom zatvoreno.",
-        "de": "Mo–Fr 9.00–17.00 Uhr geöffnet, samstags und sonntags geschlossen."
+        "de": "Mo–Fr 9.00–17.00 Uhr geöffnet, samstags und sonntags geschlossen.",
+        "fr": "Ouvert du lundi au vendredi 9 h–17 h, fermé le samedi et le dimanche."
       }
     }
   ],

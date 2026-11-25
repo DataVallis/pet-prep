@@ -61,7 +61,8 @@
         "nb": "Medisinsk behandling sju dager i uken, hele døgnet.",
         "sl": "Veterinarska oskrba 7 dni v tednu, 24 ur na dan.",
         "hr": "Medicinska skrb 7 dana u tjednu, 24 sata dnevno.",
-        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr."
+        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr.",
+        "fr": "Soins vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -91,7 +92,8 @@
         "nb": "Medisinsk behandling sju dager i uken, hele døgnet.",
         "sl": "Veterinarska oskrba 7 dni v tednu, 24 ur na dan.",
         "hr": "Medicinska skrb 7 dana u tjednu, 24 sata dnevno.",
-        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr."
+        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr.",
+        "fr": "Soins vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -121,7 +123,8 @@
         "nb": "Medisinsk behandling sju dager i uken, hele døgnet.",
         "sl": "Veterinarska oskrba 7 dni v tednu, 24 ur na dan.",
         "hr": "Medicinska skrb 7 dana u tjednu, 24 sata dnevno.",
-        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr."
+        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr.",
+        "fr": "Soins vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -151,7 +154,8 @@
         "nb": "Medisinsk behandling sju dager i uken, hele døgnet.",
         "sl": "Zdravstvena oskrba 7 dni v tednu, 24 ur na dan.",
         "hr": "Medicinska skrb 7 dana u tjednu, 24 sata dnevno.",
-        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr."
+        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr.",
+        "fr": "Soins vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -181,7 +185,8 @@
         "nb": "Medisinsk behandling sju dager i uken, hele døgnet.",
         "sl": "Zdravstvena oskrba 7 dni v tednu, 24 ur na dan.",
         "hr": "Medicinska skrb 7 dana u tjednu, 24 sata dnevno.",
-        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr."
+        "de": "Tierärztliche Versorgung an 7 Tagen pro Woche rund um die Uhr.",
+        "fr": "Soins vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -211,7 +216,8 @@
         "nb": "Nødtilfeller hele døgnet; ordinære konsultasjoner mandag til lørdag 8.00–20.00.",
         "sl": "Nujni primeri 24 ur na dan; redni pregledi pon–sob 8–20.",
         "hr": "Hitni slučajevi 24 sata; redoviti pregledi pon–sub 8:00–20:00.",
-        "de": "Notfälle rund um die Uhr; reguläre Sprechzeiten Mo–Sa 8.00–20.00 Uhr."
+        "de": "Notfälle rund um die Uhr; reguläre Sprechzeiten Mo–Sa 8.00–20.00 Uhr.",
+        "fr": "Urgences 24 h/24 ; consultations courantes du lundi au samedi 8 h–20 h."
       }
     },
     {
@@ -241,7 +247,8 @@
         "nb": "Nødtilfeller hele døgnet; ordinære konsultasjoner mandag til lørdag 8.00–20.00.",
         "sl": "Nujni primeri 24 ur na dan; redni pregledi pon–sob 8–20.",
         "hr": "Hitni slučajevi 24 sata; redoviti pregledi pon–sub 8:00–20:00.",
-        "de": "Notfälle rund um die Uhr; reguläre Sprechzeiten Mo–Sa 8.00–20.00 Uhr."
+        "de": "Notfälle rund um die Uhr; reguläre Sprechzeiten Mo–Sa 8.00–20.00 Uhr.",
+        "fr": "Urgences 24 h/24 ; consultations courantes du lundi au samedi 8 h–20 h."
       }
     },
     {
@@ -271,7 +278,8 @@
         "nb": "Nødtilfeller hele døgnet; ordinære konsultasjoner mandag til lørdag 8.00–20.00.",
         "sl": "Nujni primeri 24 ur na dan; redni pregledi pon–sob 8–20.",
         "hr": "Hitni slučajevi 24 sata; redoviti pregledi pon–sub 8:00–20:00.",
-        "de": "Notfälle rund um die Uhr; reguläre Sprechzeiten Mo–Sa 8.00–20.00 Uhr."
+        "de": "Notfälle rund um die Uhr; reguläre Sprechzeiten Mo–Sa 8.00–20.00 Uhr.",
+        "fr": "Urgences 24 h/24 ; consultations courantes du lundi au samedi 8 h–20 h."
       }
     },
     {
@@ -301,7 +309,8 @@
         "nb": "Åpent mandag til søndag, hele døgnet.",
         "sl": "Odprto od ponedeljka do nedelje, 24 ur na dan.",
         "hr": "Otvoreno pon–ned, 24 sata.",
-        "de": "Mo–So rund um die Uhr geöffnet."
+        "de": "Mo–So rund um die Uhr geöffnet.",
+        "fr": "Ouvert du lundi au dimanche, 24 h/24."
       }
     },
     {
@@ -331,7 +340,8 @@
         "nb": "Åpent mandag til søndag, hele døgnet.",
         "sl": "Odprto od ponedeljka do nedelje, 24 ur na dan.",
         "hr": "Otvoreno pon–ned, 24 sata.",
-        "de": "Mo–So rund um die Uhr geöffnet."
+        "de": "Mo–So rund um die Uhr geöffnet.",
+        "fr": "Ouvert 24 h/24, 7 j/7."
       }
     },
     {
@@ -361,7 +371,8 @@
         "nb": "Dyrlegevakt hele døgnet; innleggelse døgnet rundt.",
         "sl": "Veterinarska nujna pomoč 24 ur na dan; hospitalizacija ves čas.",
         "hr": "Hitna veterinarska služba 24 sata; hospitalizacija non-stop.",
-        "de": "Tierärztlicher Notdienst rund um die Uhr; stationäre Aufnahme rund um die Uhr."
+        "de": "Tierärztlicher Notdienst rund um die Uhr; stationäre Aufnahme rund um die Uhr.",
+        "fr": "Urgences vétérinaires 24 h/24 ; hospitalisation 24 h/24."
       }
     },
     {
@@ -391,7 +402,8 @@
         "nb": "Dyrlegevakt hele døgnet.",
         "sl": "Veterinarska nujna služba 24 ur na dan.",
         "hr": "Hitna veterinarska služba 24 sata.",
-        "de": "Tierärztlicher Notdienst rund um die Uhr."
+        "de": "Tierärztlicher Notdienst rund um die Uhr.",
+        "fr": "Service d’urgences vétérinaires 24 h/24."
       }
     },
     {
@@ -421,7 +433,8 @@
         "nb": "Akuttbehandling og innleggelse hele døgnet.",
         "sl": "Nujna oskrba in hospitalizacija 24 ur na dan.",
         "hr": "Hitna skrb i hospitalizacija 24 sata.",
-        "de": "Notdienst und stationäre Aufnahme rund um die Uhr."
+        "de": "Notdienst und stationäre Aufnahme rund um die Uhr.",
+        "fr": "Urgences et hospitalisation 24 h/24."
       }
     },
     {
@@ -451,7 +464,8 @@
         "nb": "Dyrlegehjelp hele døgnet, sju dager i uken.",
         "sl": "Veterinarska oskrba 24 ur na dan, 7 dni v tednu.",
         "hr": "Veterinarska skrb 24 sata dnevno, 7 dana u tjednu.",
-        "de": "Tierärztliche Versorgung rund um die Uhr, 7 Tage die Woche."
+        "de": "Tierärztliche Versorgung rund um die Uhr, 7 Tage die Woche.",
+        "fr": "Soins vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -481,7 +495,8 @@
         "nb": "Døgnpleie; akuttlinje 993 737 420.",
         "sl": "24-urna oskrba; nujna številka 993 737 420.",
         "hr": "Skrb 24 sata; hitna linija 993 737 420.",
-        "de": "Rund um die Uhr geöffnet; Notfallnummer 993 737 420."
+        "de": "Rund um die Uhr geöffnet; Notfallnummer 993 737 420.",
+        "fr": "Soins 24 h/24 ; ligne d’urgence : 993 737 420."
       }
     },
     {
@@ -511,7 +526,8 @@
         "nb": "Dyrlegevakt hele døgnet, sju dager i uken.",
         "sl": "Veterinarska nujna pomoč 24 ur na dan, 7 dni v tednu.",
         "hr": "Hitna veterinarska služba 24 sata, 7 dana u tjednu.",
-        "de": "Tierärztlicher Notdienst rund um die Uhr, 7 Tage die Woche."
+        "de": "Tierärztlicher Notdienst rund um die Uhr, 7 Tage die Woche.",
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -541,7 +557,8 @@
         "nb": "Dyrlegevakt hele døgnet, sju dager i uken.",
         "sl": "Veterinarska nujna pomoč 24 ur na dan, 7 dni v tednu.",
         "hr": "Hitna veterinarska služba 24 sata, 7 dana u tjednu.",
-        "de": "Tierärztlicher Notdienst rund um die Uhr, 7 Tage die Woche."
+        "de": "Tierärztlicher Notdienst rund um die Uhr, 7 Tage die Woche.",
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -571,7 +588,8 @@
         "nb": "Dyrlegevakt hele døgnet, sju dager i uken.",
         "sl": "Veterinarska nujna pomoč 24 ur na dan, 7 dni v tednu.",
         "hr": "Hitna veterinarska služba 24 sata, 7 dana u tjednu.",
-        "de": "Tierärztlicher Notdienst rund um die Uhr, 7 Tage die Woche."
+        "de": "Tierärztlicher Notdienst rund um die Uhr, 7 Tage die Woche.",
+        "fr": "Urgences vétérinaires 24 h/24, 7 j/7."
       }
     },
     {
@@ -601,7 +619,8 @@
         "nb": "Åpent mandag til lørdag kl. 8.00–20.30; klinikken oppgir også døgnåpen tjeneste, så ring på forhånd for å bekrefte.",
         "sl": "Pon–sob 8–20.30; ambulanta oglašuje tudi 24-urno službo, zato za potrditev vnaprej pokličite.",
         "hr": "Radno vrijeme pon–sub 8:00–20:30; klinika oglašava i uslugu 24 sata, zato nazovi unaprijed i provjeri.",
-        "de": "Mo–Sa 8.00–20.30 Uhr; die Praxis wirbt zudem mit einem Rund-um-die-Uhr-Service, daher bitte vorher telefonisch bestätigen."
+        "de": "Mo–Sa 8.00–20.30 Uhr; die Praxis wirbt zudem mit einem Rund-um-die-Uhr-Service, daher bitte vorher telefonisch bestätigen.",
+        "fr": "Lun.–sam. 8 h–20 h 30 ; la clinique annonce aussi un service 24 h/24 ; appelez pour confirmer."
       }
     },
     {
@@ -631,7 +650,8 @@
         "nb": "Nødtilfeller hele døgnet; ordinær åpningstid mandag til lørdag 9.00–20.00, søndag 10.00–18.00.",
         "sl": "Nujni primeri 24 ur na dan; redni čas pon–sob 9–20, ned 10–18.",
         "hr": "Hitni slučajevi 24 sata; redovno radno vrijeme pon–sub 9:00–20:00, ned 10:00–18:00.",
-        "de": "Notfälle rund um die Uhr; reguläre Öffnungszeiten Mo–Sa 9.00–20.00 Uhr, So 10.00–18.00 Uhr."
+        "de": "Notfälle rund um die Uhr; reguläre Öffnungszeiten Mo–Sa 9.00–20.00 Uhr, So 10.00–18.00 Uhr.",
+        "fr": "Urgences 24 h/24 ; horaires habituels : lun.–sam. 9 h–20 h, dim. 10 h–18 h."
       }
     },
     {
@@ -661,7 +681,8 @@
         "nb": "Akuttelefon hele døgnet, 365 dager i året; åpent daglig kl. 8.00–22.00.",
         "sl": "Nujna številka 24 ur na dan, 365 dni v letu; splošni delovni čas vsak dan 8–22.",
         "hr": "Hitna linija 24 sata, 365 dana u godini; opće radno vrijeme svaki dan 8:00–22:00.",
-        "de": "Notfallnummer rund um die Uhr, an 365 Tagen im Jahr; allgemeine Öffnungszeiten täglich 8.00–22.00 Uhr."
+        "de": "Notfallnummer rund um die Uhr, an 365 Tagen im Jahr; allgemeine Öffnungszeiten täglich 8.00–22.00 Uhr.",
+        "fr": "Ligne d’urgence 24 h/24, 365 jours par an ; horaires généraux : tous les jours 8 h–22 h."
       }
     },
     {
@@ -691,7 +712,8 @@
         "nb": "Akuttelefon hele døgnet, 365 dager i året; åpent daglig kl. 8.00–22.00.",
         "sl": "Nujna številka 24 ur na dan, 365 dni v letu; splošni delovni čas vsak dan 8–22.",
         "hr": "Hitna linija 24 sata, 365 dana u godini; opće radno vrijeme svaki dan 8:00–22:00.",
-        "de": "Notfallnummer rund um die Uhr, an 365 Tagen im Jahr; allgemeine Öffnungszeiten täglich 8.00–22.00 Uhr."
+        "de": "Notfallnummer rund um die Uhr, an 365 Tagen im Jahr; allgemeine Öffnungszeiten täglich 8.00–22.00 Uhr.",
+        "fr": "Ligne d’urgence 24 h/24, 365 jours par an ; horaires généraux : tous les jours 8 h–22 h."
       }
     },
     {
@@ -721,7 +743,8 @@
         "nb": "Presenterer seg som en klinikk som er åpen hele døgnet; ring på forhånd.",
         "sl": "24-urna ambulanta; vnaprej pokličite.",
         "hr": "Klinika radi 24 sata; nazovi unaprijed.",
-        "de": "Rund um die Uhr geöffnete Tierklinik; bitte vorher anrufen."
+        "de": "Rund um die Uhr geöffnete Tierklinik; bitte vorher anrufen.",
+        "fr": "Clinique ouverte 24 h/24 ; appelez avant de venir."
       }
     },
     {
@@ -751,7 +774,8 @@
         "nb": "Akuttelefon annonseres som døgnåpen; åpningstid mandag til fredag kl. 9.00–18.00; ring på forhånd.",
         "sl": "Nujna številka 24 ur na dan; delovni čas pon–pet 9–18; vnaprej pokličite.",
         "hr": "Hitna kontakt linija 24 sata; radno vrijeme pon–pet 9:00–18:00; nazovi unaprijed.",
-        "de": "Notfallnummer rund um die Uhr; Öffnungszeiten Mo–Fr 9.00–18.00 Uhr; bitte vorher anrufen."
+        "de": "Notfallnummer rund um die Uhr; Öffnungszeiten Mo–Fr 9.00–18.00 Uhr; bitte vorher anrufen.",
+        "fr": "Ligne d’urgence 24 h/24 ; horaires d’ouverture : lun.–ven. 9 h–18 h ; appelez avant de venir."
       }
     },
     {
@@ -781,7 +805,8 @@
         "nb": "Universitetsklinikk for smådyr. Mandag–fredag 7.00–19.00. Vakttelefon: (01) 435 3348.",
         "sl": "Univerzitetna ambulanta za male živali. Pon–pet 7–19. Klinična nujna številka (01) 435 3348.",
         "hr": "Sveučilišna klinika za male životinje. pon–pet 7:00–19:00. Hitna klinička linija (01) 435 3348.",
-        "de": "Universitäts-Kleintierklinik. Mo–Fr 7.00–19.00 Uhr. Klinische Notfallnummer (01) 435 3348."
+        "de": "Universitäts-Kleintierklinik. Mo–Fr 7.00–19.00 Uhr. Klinische Notfallnummer (01) 435 3348.",
+        "fr": "Clinique universitaire pour petits animaux. Lun.–ven. 7 h–19 h. Ligne d’urgence de la clinique : (01) 435 3348."
       }
     },
     {
@@ -811,7 +836,8 @@
         "nb": "Universitetsklinikk for undervisning. Mandag–fredag 8.00–17.30, lørdag 9.00–16.30; stengt søndager og helligdager.",
         "sl": "Univerzitetna učna ambulanta. Pon–pet 8–17.30, sob 9–16.30; ob nedeljah in praznikih zaprto.",
         "hr": "Sveučilišna nastavna klinika. pon–pet 8:00–17:30, sub 9:00–16:30; nedjeljom i blagdanima zatvoreno.",
-        "de": "Universitäts-Lehrklinik. Mo–Fr 8.00–17.30 Uhr, Sa 9.00–16.30 Uhr; sonn- und feiertags geschlossen."
+        "de": "Universitäts-Lehrklinik. Mo–Fr 8.00–17.30 Uhr, Sa 9.00–16.30 Uhr; sonn- und feiertags geschlossen.",
+        "fr": "Clinique universitaire d’enseignement. Lun.–ven. 8 h–17 h 30, sam. 9 h–16 h 30 ; fermée le dimanche et les jours fériés."
       }
     },
     {
@@ -841,7 +867,8 @@
         "nb": "Universitetsklinikk for undervisning. Mandag–fredag 8.00–17.00, stengt i helgene; nødtilfeller i samme tidsrom.",
         "sl": "Univerzitetna učna ambulanta. Pon–pet 8–17, ob koncih tedna zaprto; nujni primeri v istem času.",
         "hr": "Sveučilišna nastavna klinika. pon–pet 8:00–17:00, vikendom zatvoreno; hitni slučajevi u istom radnom vremenu.",
-        "de": "Universitäts-Lehrklinik. Mo–Fr 8.00–17.00 Uhr, am Wochenende geschlossen; Notfälle zu denselben Zeiten."
+        "de": "Universitäts-Lehrklinik. Mo–Fr 8.00–17.00 Uhr, am Wochenende geschlossen; Notfälle zu denselben Zeiten.",
+        "fr": "Clinique universitaire d’enseignement. Lun.–ven. 8 h–17 h, fermée le week-end ; urgences aux mêmes horaires."
       }
     },
     {
@@ -870,7 +897,8 @@
         "nb": "Kommunal klinikk med lave priser. Mandag til fredag 8.00–13.00 og 14.00–17.00; etter timebestilling.",
         "sl": "Občinska ambulanta z nizkimi cenami. Pon–pet 8–13 in 14–17; po naročilu.",
         "hr": "Jeftina općinska klinika. pon–pet 8:00–13:00 i 14:00–17:00; uz prethodno naručivanje.",
-        "de": "Städtische Klinik mit günstigen Preisen. Mo–Fr 8.00–13.00 und 14.00–17.00 Uhr; nur nach Terminvereinbarung."
+        "de": "Städtische Klinik mit günstigen Preisen. Mo–Fr 8.00–13.00 und 14.00–17.00 Uhr; nur nach Terminvereinbarung.",
+        "fr": "Clinique municipale à tarifs réduits. Lun.–ven. 8 h–13 h et 14 h–17 h ; sur rendez-vous."
       }
     },
     {
@@ -900,7 +928,8 @@
         "nb": "Ring på forhånd.",
         "sl": "Vnaprej pokličite.",
         "hr": "Nazovi unaprijed.",
-        "de": "Bitte vorher anrufen."
+        "de": "Bitte vorher anrufen.",
+        "fr": "Appelez avant de venir."
       }
     },
     {
@@ -930,7 +959,8 @@
         "nb": "mandag–lørdag 8.00–20.00, søndag 8.00–15.00; nødtilfeller nevnes, men ingen oppgitt døgnåpen tjeneste.",
         "sl": "Pon–sob 8–20, ned 8–15; nujni primeri.",
         "hr": "pon–sub 8:00–20:00, ned 8:00–15:00; hitni slučajevi.",
-        "de": "Mo–Sa 8.00–20.00 Uhr, So 8.00–15.00 Uhr; auch Notfälle."
+        "de": "Mo–Sa 8.00–20.00 Uhr, So 8.00–15.00 Uhr; auch Notfälle.",
+        "fr": "Lun.–sam. 8 h–20 h, dim. 8 h–15 h ; urgences acceptées."
       }
     },
     {
@@ -960,7 +990,8 @@
         "nb": "mandag–lørdag 9.00–19.00.",
         "sl": "Pon–sob 9–19.",
         "hr": "pon–sub 9:00–19:00.",
-        "de": "Mo–Sa 9.00–19.00 Uhr."
+        "de": "Mo–Sa 9.00–19.00 Uhr.",
+        "fr": "Lun.–sam. 9 h–19 h."
       }
     },
     {
@@ -989,7 +1020,8 @@
         "nb": "Åpningstid oppgitt som hele dagen, hver dag; ring på forhånd.",
         "sl": "Odprto ves dan, vsak dan; vnaprej pokličite.",
         "hr": "Otvoreno cijeli dan, svaki dan; nazovi unaprijed.",
-        "de": "Täglich ganztägig geöffnet; bitte vorher anrufen."
+        "de": "Täglich ganztägig geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert toute la journée, tous les jours ; appelez avant de venir."
       }
     },
     {
@@ -1019,7 +1051,8 @@
         "nb": "mandag–lørdag 9.00–21.00, søndag 9.00–12.00.",
         "sl": "Pon–sob 9–21, ned 9–12.",
         "hr": "pon–sub 9:00–21:00, ned 9:00–12:00.",
-        "de": "Mo–Sa 9.00–21.00 Uhr, So 9.00–12.00 Uhr."
+        "de": "Mo–Sa 9.00–21.00 Uhr, So 9.00–12.00 Uhr.",
+        "fr": "Lun.–sam. 9 h–21 h, dim. 9 h–12 h."
       }
     }
   ],

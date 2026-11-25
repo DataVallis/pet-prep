@@ -60,7 +60,8 @@
         "nb": "Åpent hele døgnet, alle dager.",
         "sl": "Odprto 24 ur na dan, vsak dan.",
         "hr": "Otvoreno 24 sata, svaki dan.",
-        "de": "Täglich rund um die Uhr geöffnet."
+        "de": "Täglich rund um die Uhr geöffnet.",
+        "fr": "Ouvert 24 h/24, tous les jours."
       }
     },
     {
@@ -89,7 +90,8 @@
         "nb": "Åpent hele døgnet, alle dager.",
         "sl": "Odprto 24 ur na dan, vsak dan.",
         "hr": "Otvoreno 24 sata, svaki dan.",
-        "de": "Täglich rund um die Uhr geöffnet."
+        "de": "Täglich rund um die Uhr geöffnet.",
+        "fr": "Ouvert 24 h/24, tous les jours."
       }
     },
     {
@@ -116,7 +118,8 @@
         "nb": "Åpent hele døgnet lørdag til torsdag; fredag kl. 4.00–16.00, kun nødtilfeller.",
         "sl": "Odprto 24 ur na dan od sobote do četrtka; ob petkih 4–16, samo nujna pomoč.",
         "hr": "Otvoreno sub–čet non-stop; pet 4:00–16:00, samo hitni slučajevi.",
-        "de": "Sa–Do rund um die Uhr geöffnet; Fr 4.00–16.00 Uhr, nur Notfälle."
+        "de": "Sa–Do rund um die Uhr geöffnet; Fr 4.00–16.00 Uhr, nur Notfälle.",
+        "fr": "Ouvert 24 h/24 du samedi au jeudi ; vendredi 4 h–16 h, urgences uniquement."
       }
     },
     {
@@ -145,7 +148,8 @@
         "nb": "Akuttjeneste hele døgnet; ring på forhånd.",
         "sl": "Nujna služba 24/7; vnaprej pokličite.",
         "hr": "Hitna služba 24/7; nazovi unaprijed.",
-        "de": "Notdienst rund um die Uhr; bitte vorher anrufen."
+        "de": "Notdienst rund um die Uhr; bitte vorher anrufen.",
+        "fr": "Urgences 24 h/24, 7 j/7 ; appelez avant de venir."
       }
     },
     {
@@ -174,7 +178,8 @@
         "nb": "Lør–ons kl. 8–22; tor–fre kl. 16–22. Akuttelefon hele døgnet: +966 50 229 6655.",
         "sl": "Sob–sre 8–22; čet–pet 16–22. Nujna linija 24/7: +966 50 229 6655.",
         "hr": "sub–sri 8:00–22:00; čet–pet 16:00–22:00. Hitna linija 24/7: +966 50 229 6655.",
-        "de": "Sa–Mi 8.00–22.00 Uhr; Do–Fr 16.00–22.00 Uhr. Notfalltelefon rund um die Uhr: +966 50 229 6655."
+        "de": "Sa–Mi 8.00–22.00 Uhr; Do–Fr 16.00–22.00 Uhr. Notfalltelefon rund um die Uhr: +966 50 229 6655.",
+        "fr": "Sam.–mer. 8 h–22 h ; jeu.–ven. 16 h–22 h. Ligne d’urgences 24 h/24, 7 j/7 : +966 50 229 6655."
       }
     },
     {
@@ -203,7 +208,8 @@
         "nb": "Søn–tor og lør 10–23; fre 15–23. Hjemmebesøk tilbys.",
         "sl": "Ned–čet in sob 10–23; pet 15–23. Možni obiski na domu.",
         "hr": "ned–čet i sub 10:00–23:00; pet 15:00–23:00. Mogući su kućni posjeti.",
-        "de": "So–Do und Sa 10.00–23.00 Uhr; Fr 15.00–23.00 Uhr. Hausbesuche möglich."
+        "de": "So–Do und Sa 10.00–23.00 Uhr; Fr 15.00–23.00 Uhr. Hausbesuche möglich.",
+        "fr": "Dim.–jeu. et sam. 10 h–23 h ; ven. 15 h–23 h. Visites à domicile possibles."
       }
     },
     {
@@ -231,7 +237,8 @@
         "nb": "Lør–tor kl. 9–24; fre kl. 16–24. Ingen akuttbehandling etter midnatt; ring før du kommer.",
         "sl": "Sob–čet 9–24; pet 16–24. Po polnoči nujne pomoči ni; pred prihodom pokličite.",
         "hr": "sub–čet 9:00–24:00; pet 16:00–24:00. Nakon ponoći nema hitne službe; nazovi prije dolaska.",
-        "de": "Sa–Do 9.00–24.00 Uhr; Fr 16.00–24.00 Uhr. Keine Notfallversorgung nach Mitternacht; bitte vorher anrufen."
+        "de": "Sa–Do 9.00–24.00 Uhr; Fr 16.00–24.00 Uhr. Keine Notfallversorgung nach Mitternacht; bitte vorher anrufen.",
+        "fr": "Sam.–jeu. 9 h–minuit ; ven. 16 h–minuit. Pas de prise en charge des urgences après minuit ; appelez avant de venir."
       }
     },
     {
@@ -259,7 +266,8 @@
         "nb": "Åpent alle dager kl. 15.30–23.30.",
         "sl": "Odprto vsak dan 15.30–23.30.",
         "hr": "Otvoreno svaki dan 15:30–23:30.",
-        "de": "Täglich 15.30–23.30 Uhr geöffnet."
+        "de": "Täglich 15.30–23.30 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 15 h 30–23 h 30."
       }
     },
     {
@@ -315,7 +323,8 @@
         "nb": "man–tor og lør 14.00–22.00; fre 16.00–22.00; stengt søndag.",
         "sl": "Pon–čet in sob 14–22; pet 16–22; ned zaprto.",
         "hr": "pon–čet i sub 14:00–22:00; pet 16:00–22:00; nedjeljom zatvoreno.",
-        "de": "Mo–Do und Sa 14.00–22.00 Uhr; Fr 16.00–22.00 Uhr; sonntags geschlossen."
+        "de": "Mo–Do und Sa 14.00–22.00 Uhr; Fr 16.00–22.00 Uhr; sonntags geschlossen.",
+        "fr": "Lun.–jeu. et sam. 14 h–22 h ; ven. 16 h–22 h ; fermé le dimanche."
       }
     },
     {
@@ -344,7 +353,8 @@
         "nb": "Lør–tor kl. 9–23; fre kl. 14–23.",
         "sl": "Sob–čet 9–23; pet 14–23.",
         "hr": "sub–čet 9:00–23:00; pet 14:00–23:00.",
-        "de": "Sa–Do 9.00–23.00 Uhr; Fr 14.00–23.00 Uhr."
+        "de": "Sa–Do 9.00–23.00 Uhr; Fr 14.00–23.00 Uhr.",
+        "fr": "Sam.–jeu. 9 h–23 h ; ven. 14 h–23 h."
       }
     },
     {
@@ -372,7 +382,8 @@
         "nb": "Lør–tor kl. 9–22; akuttjeneste annonseres som døgnåpen, ring på forhånd.",
         "sl": "Sob–čet 9–22; nujno službo oglašujejo 24/7, vnaprej pokličite.",
         "hr": "sub–čet 9:00–22:00; hitna služba oglašena kao 24/7, nazovi unaprijed.",
-        "de": "Sa–Do 9.00–22.00 Uhr; Notdienst nach eigenen Angaben rund um die Uhr, bitte vorher anrufen."
+        "de": "Sa–Do 9.00–22.00 Uhr; Notdienst nach eigenen Angaben rund um die Uhr, bitte vorher anrufen.",
+        "fr": "Sam.–jeu. 9 h–22 h ; service d’urgence annoncé 24 h/24, 7 j/7, appelez avant de venir."
       }
     },
     {
@@ -401,7 +412,8 @@
         "nb": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akuttelefon: 0500521717.",
         "sl": "Sob–čet 8.30–22; pet 16–22. Nujna linija: 0500521717.",
         "hr": "sub–čet 8:30–22:00; pet 16:00–22:00. Hitna linija: 0500521717.",
-        "de": "Sa–Do 8.30–22.00 Uhr; Fr 16.00–22.00 Uhr. Notfalltelefon: 0500521717."
+        "de": "Sa–Do 8.30–22.00 Uhr; Fr 16.00–22.00 Uhr. Notfalltelefon: 0500521717.",
+        "fr": "Sam.–jeu. 8 h 30–22 h ; ven. 16 h–22 h. Ligne d’urgences : 0500521717."
       }
     },
     {
@@ -430,7 +442,8 @@
         "nb": "Søn–tor og lør 8.30–23; fre 16–21. Vakttelefon: 0559171818.",
         "sl": "Ned–čet in sob 8.30–23; pet 16–21. Nujna linija: 0559171818.",
         "hr": "ned–čet i sub 8:30–23:00; pet 16:00–21:00. Hitna linija: 0559171818.",
-        "de": "So–Do und Sa 8.30–23.00 Uhr; Fr 16.00–21.00 Uhr. Notfalltelefon: 0559171818."
+        "de": "So–Do und Sa 8.30–23.00 Uhr; Fr 16.00–21.00 Uhr. Notfalltelefon: 0559171818.",
+        "fr": "Dim.–jeu. et sam. 8 h 30–23 h ; ven. 16 h–21 h. Ligne d’urgence : 0559171818."
       }
     },
     {
@@ -459,7 +472,8 @@
         "nb": "Lør–tor kl. 8.30–22; fre kl. 16–22. Akuttelefon: 0559825550.",
         "sl": "Sob–čet 8.30–22; pet 16–22. Nujna linija: 0559825550.",
         "hr": "sub–čet 8:30–22:00; pet 16:00–22:00. Hitna linija: 0559825550.",
-        "de": "Sa–Do 8.30–22.00 Uhr; Fr 16.00–22.00 Uhr. Notfalltelefon: 0559825550."
+        "de": "Sa–Do 8.30–22.00 Uhr; Fr 16.00–22.00 Uhr. Notfalltelefon: 0559825550.",
+        "fr": "Sam.–jeu. 8 h 30–22 h ; ven. 16 h–22 h. Ligne d’urgences : 0559825550."
       }
     },
     {
@@ -488,7 +502,8 @@
         "nb": "Lør–tor kl. 9–22; fre kl. 14–22.",
         "sl": "Sob–čet 9–22; pet 14–22.",
         "hr": "sub–čet 9:00–22:00; pet 14:00–22:00.",
-        "de": "Sa–Do 9.00–22.00 Uhr; Fr 14.00–22.00 Uhr."
+        "de": "Sa–Do 9.00–22.00 Uhr; Fr 14.00–22.00 Uhr.",
+        "fr": "Sam.–jeu. 9 h–22 h ; ven. 14 h–22 h."
       }
     },
     {

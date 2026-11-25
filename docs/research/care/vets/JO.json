@@ -54,7 +54,8 @@
         "nb": "Åpent hele døgnet; døgnåpen akuttlinje på samme nummer.",
         "sl": "Odprto 24 ur na dan; nujna linija 24 ur na dan je na isti številki.",
         "hr": "Otvoreno 24 sata; hitna linija 24 sata na istom broju.",
-        "de": "Rund um die Uhr geöffnet; Notfallnummer rund um die Uhr unter derselben Nummer."
+        "de": "Rund um die Uhr geöffnet; Notfallnummer rund um die Uhr unter derselben Nummer.",
+        "fr": "Ouvert 24 h/24 ; ligne d’urgences 24 h/24 au même numéro."
       }
     },
     {
@@ -82,7 +83,8 @@
         "nb": "Åpent hele døgnet, sju dager i uken; akuttleger på stedet om natten.",
         "sl": "Odprto 24 ur na dan, 7 dni v tednu; ponoči so na kraju na voljo zdravniki za nujne primere.",
         "hr": "Otvoreno 24 sata, 7 dana u tjednu; hitni veterinari u klinici i preko noći.",
-        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche; nachts Notfallärzte vor Ort."
+        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche; nachts Notfallärzte vor Ort.",
+        "fr": "Ouvert 24 h/24, 7 j/7 ; vétérinaires d’urgence sur place la nuit."
       }
     },
     {
@@ -111,7 +113,8 @@
         "nb": "Smådyravdeling med akutt- og intensivbehandling; ring på forhånd for åpningstider.",
         "sl": "Oddelek za male živali z nujno in intenzivno oskrbo; za delovni čas pokličite.",
         "hr": "Odjel za male životinje s hitnom i intenzivnom skrbi; za radno vrijeme nazovi unaprijed.",
-        "de": "Kleintierabteilung mit Notfall- und Intensivversorgung; Zeiten bitte vorher telefonisch erfragen."
+        "de": "Kleintierabteilung mit Notfall- und Intensivversorgung; Zeiten bitte vorher telefonisch erfragen.",
+        "fr": "Service pour petits animaux avec urgences et soins intensifs ; appelez pour connaître les horaires."
       }
     },
     {
@@ -139,7 +142,8 @@
         "nb": "Alle dager 10.00–22.00; fredag 14.00–22.00.",
         "sl": "Vsak dan 10–22; ob petkih 14–22.",
         "hr": "Svaki dan 10:00–22:00; petkom 14:00–22:00.",
-        "de": "Täglich 10.00–22.00 Uhr; freitags 14.00–22.00 Uhr."
+        "de": "Täglich 10.00–22.00 Uhr; freitags 14.00–22.00 Uhr.",
+        "fr": "Tous les jours 10 h–22 h ; vendredi 14 h–22 h."
       }
     },
     {
@@ -168,7 +172,8 @@
         "nb": "Alle dager 11.00–19.00; ring på forhånd ved nødtilfeller.",
         "sl": "Vsak dan 11–19; za nujne primere vnaprej pokličite.",
         "hr": "Svaki dan 11:00–19:00; za hitne slučajeve nazovi unaprijed.",
-        "de": "Täglich 11.00–19.00 Uhr; bei Notfällen bitte vorher anrufen."
+        "de": "Täglich 11.00–19.00 Uhr; bei Notfällen bitte vorher anrufen.",
+        "fr": "Tous les jours 11 h–19 h ; appelez avant de venir en cas d’urgence."
       }
     },
     {
@@ -196,7 +201,8 @@
         "nb": "Lør–ons kl. 8.00–20.00 (tirsdager til kl. 19.30).",
         "sl": "Sob–sre 8–20 (tor do 19.30).",
         "hr": "sub–sri 08:00–20:00 (uto do 19:30).",
-        "de": "Sa–Mi 8.00–20.00 Uhr (Di bis 19.30 Uhr)."
+        "de": "Sa–Mi 8.00–20.00 Uhr (Di bis 19.30 Uhr).",
+        "fr": "Sam.–mer. 8 h–20 h (mar. jusqu’à 19 h 30)."
       }
     },
     {
@@ -224,7 +230,8 @@
         "nb": "Lør–ons kl. 9.00–18.00.",
         "sl": "Sob–sre 9–18.",
         "hr": "sub–sri 09:00–18:00.",
-        "de": "Sa–Mi 9.00–18.00 Uhr."
+        "de": "Sa–Mi 9.00–18.00 Uhr.",
+        "fr": "Sam.–mer. 9 h–18 h."
       }
     },
     {
@@ -252,7 +259,8 @@
         "nb": "Lør–ons kl. 9.30–18.00.",
         "sl": "Sob–sre 9.30–18.",
         "hr": "sub–sri 09:30–18:00.",
-        "de": "Sa–Mi 9.30–18.00 Uhr."
+        "de": "Sa–Mi 9.30–18.00 Uhr.",
+        "fr": "Sam.–mer. 9 h 30–18 h."
       }
     },
     {
@@ -281,7 +289,8 @@
         "nb": "Hastebehandling samme dag; ring på forhånd for åpningstider.",
         "sl": "Nujna oskrba še isti dan; za delovni čas pokličite.",
         "hr": "Hitna skrb istoga dana; za radno vrijeme nazovi unaprijed.",
-        "de": "Dringende Fälle am selben Tag; Zeiten bitte vorher telefonisch erfragen."
+        "de": "Dringende Fälle am selben Tag; Zeiten bitte vorher telefonisch erfragen.",
+        "fr": "Soins urgents le jour même ; appelez pour connaître les horaires."
       }
     }
   ],

@@ -315,7 +315,8 @@
         "nb": "Åpent ukedager kl. 09.00–18.00; stengt i helger og på helligdager.",
         "sl": "Odprto ob delavnikih 9–18; ob koncih tedna in praznikih zaprto.",
         "hr": "Otvoreno radnim danom 9:00–18:00; vikendom i blagdanima zatvoreno.",
-        "de": "Mo–Fr 9.00–18.00 Uhr; am Wochenende und feiertags geschlossen."
+        "de": "Mo–Fr 9.00–18.00 Uhr; am Wochenende und feiertags geschlossen.",
+        "fr": "Ouvert en semaine 9 h–18 h ; fermé le week-end et les jours fériés."
       }
     },
     {
@@ -959,7 +960,8 @@
         "nb": "Dag 10.00–19.00, kveld 19.00–22.00, natt 22.00–10.00. Ikke åpent på søndager (uklart omfang). Ring først.",
         "sl": "Dan 10–19, večer 19–22, pozno ponoči 22–10. Ob nedeljah ne obratuje. Najprej pokličite.",
         "hr": "Dan 10:00–19:00, večer 19:00–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi.",
-        "de": "Tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen."
+        "de": "Tagsüber 10.00–19.00 Uhr, abends 19.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen.",
+        "fr": "Jour 10 h–19 h, soirée 19 h–22 h, nuit 22 h–10 h. Fermé le dimanche. Appelez d’abord."
       }
     },
     {
@@ -1051,7 +1053,8 @@
         "nb": "Dag 10.00–18.00, kveld 18.00–22.00, natt 22.00–10.00. Ikke åpent på søndager (uklart omfang). Ring først.",
         "sl": "Dan 10–18, večer 18–22, pozno ponoči 22–10. Ob nedeljah ne obratuje. Najprej pokličite.",
         "hr": "Dan 10:00–18:00, večer 18:00–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi.",
-        "de": "Tagsüber 10.00–18.00 Uhr, abends 18.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen."
+        "de": "Tagsüber 10.00–18.00 Uhr, abends 18.00–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen.",
+        "fr": "Journée 10 h–18 h, soirée 18 h–22 h, nuit 22 h–10 h. Fermé le dimanche. Appelez d’abord."
       }
     },
     {
@@ -1081,7 +1084,8 @@
         "nb": "Dag 10.00–18.30, kveld 18.30–22.00, natt 22.00–10.00. Ikke åpent på søndager (uklart omfang). Ring først.",
         "sl": "Podnevi 10–18.30, zvečer 18.30–22, pozno ponoči 22–10. Ob nedeljah ne obratuje. Najprej pokličite.",
         "hr": "Dan 10:00–18:30, večer 18:30–22:00, kasno noću 22:00–10:00. Ne radi nedjeljom. Prvo nazovi.",
-        "de": "Tagsüber 10.00–18.30 Uhr, abends 18.30–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen."
+        "de": "Tagsüber 10.00–18.30 Uhr, abends 18.30–22.00 Uhr, spätnachts 22.00–10.00 Uhr. Sonntags geschlossen. Bitte vorher anrufen.",
+        "fr": "Jour 10 h–18 h 30, soirée 18 h 30–22 h, nuit 22 h–10 h. Fermé le dimanche. Appelez d’abord."
       }
     },
     {
