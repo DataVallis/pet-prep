@@ -72446,6 +72446,446 @@
       }
     }
   },
+  "bluetick_coonhound": {
+    "_note": "Added 2026-11-25 (M5-R10-141, unattended run — appended after the Irish Terrier: AKC 2024 No. 137 'Bluetick Coonhound', S174 full-list table recorded 2026-11-25 '136 Irish Terrier', '137 Bluetick Coonhound'). Quotes as returned by the web-fetch tool on 2026-11-25 (after web searches; the tool limits quotes to ~125 characters — longer passages were returned as fragments, marked as such); paraphrase only in notes, marked '(paraphrase)'. Sources S1060–S1061 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. An American coonhound: AKC Hound Group, USA — not FCI- or RKC-recognised (Toy Fox Terrier / American Hairless Terrier precedent) → no RKC key facts, no Breed Watch, no PDSA / Woodgreen / Dogs Trust page. Exercise from the Dogs NSW breed page (S1061, kennel-club breed page, tier B — American Hairless Terrier precedent) '40 min/day' → 40. Lifespan only as the PetMD span '11–12 years' (S1060) → senior 99 = Claude's suggestion (closest rule row, verified=false). Weight / height from the breed standard printed by Dogs NSW (S1061). Brushing once a week (PetMD). Not ranked by Coren (S35, en.wikipedia.org read 2026-11-25: only 'Black and Tan Coonhound', rank 44 — a different breed) → 1.0. VCA's breed page (vcahospitals.com/know-your-pet/bluetick-coonhound) came back only as a model summary (no verbatim text) → not used.",
+    "identity": {
+      "value": "AKC Hound Group, USA — not FCI",
+      "unit": "—",
+      "source_id": "S1061",
+      "quote": "The Bluetick Coonhound is a breed of Coonhound originating in the United States.",
+      "confidence": "medium",
+      "notes": "Dogs NSW (S1061) history section. Not FCI- or RKC-recognised per the sources read (Dogs NSW prints its own standard, last updated 24 Mar 2017; the FCI nomenclature was not checked this run — open for David). The export carries no fci_standard fact (DOG_FACTS fci_standard: false)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S1061",
+      "quote": "Medium (11kg - 27kg)",
+      "confidence": "medium",
+      "notes": "Dogs NSW Quick Glance 'Size' (S1061). The standard's weight (males 55–80 lb, females 45–65 lb) reaches the PetMD 'Large (59–99 pounds)' class (S10) for most males — used for growth."
+    },
+    "height": {
+      "standard": {
+        "value": {
+          "male": [
+            55.9,
+            68.6
+          ],
+          "female": [
+            53.3,
+            63.5
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1061",
+        "quote": "Height at withers for adult males, 22 to 27 inches. For adult females, 21 to 25 inches.",
+        "confidence": "high",
+        "notes": "Breed standard printed by Dogs NSW (S1061): 22–27 in = 55.9–68.6 cm, 21–25 in = 53.3–63.5 cm (our conversion). PetMD (S1060) 'Males can be as big as 80 pounds and 27 inches tall, while females max out at 65 pounds and 25 inches.' agrees on the upper bounds."
+      }
+    },
+    "adult_weight": {
+      "standard": {
+        "value": {
+          "male": [
+            24.9,
+            36.3
+          ],
+          "female": [
+            20.4,
+            29.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1061",
+        "quote": "Weight for males 55 to 80 pounds, females 45 to 65 pounds.",
+        "confidence": "high",
+        "notes": "Breed standard printed by Dogs NSW (S1061): 55–80 lb = 24.9–36.3 kg, 45–65 lb = 20.4–29.5 kg (our conversion) — the game / register range. PetMD (S1060) gives the same upper bounds (80 / 65 lb).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                null,
+                36.3
+              ],
+              "female": [
+                null,
+                29.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1060",
+            "quote": "Males can be as big as 80 pounds and 27 inches tall, while females max out at 65 pounds and 25 inches.",
+            "confidence": "medium",
+            "notes": "PetMD (S1060) — upper bounds only."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. The standard's 55–80 lb males / 45–65 lb females (S1061) fall mostly into the Large class (females partly Medium '12–15 months'). The puppy cap of 40 min is reached at 4 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no breed growth curve found."
+      }
+    },
+    "lifespan": {
+      "petmd": {
+        "value": "11–12",
+        "unit": "years",
+        "source_id": "S1060",
+        "quote": "average lifespan of 11–12 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1060, vet-reviewed; fragment as returned). The lower bound 11 y is the basis of the senior boundary (closest rule row, verified=false — Toy Fox Terrier / American Hairless Terrier precedent)."
+      },
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the breed is not RKC-registered; no McMillan 2024 / VetCompass breed median found (UK data; the Dogs Trust table S123 not fetched). VCA (model summary only, not verbatim) '12 to 14 years' — not used."
+      },
+      "senior_from": {
+        "value": 8.25,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: last 25 % of lifespan (S11) × the PetMD lower bound 11 y (S1060) = 8.25 y = 99 months (verified=false, Claude's suggestion — see proposed_game_parameters.bluetick_coonhound.senior_boundary_months).",
+        "derived_from": [
+          "S11",
+          "S1060"
+        ],
+        "months": 99,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 40,
+        "unit": "minutes/day",
+        "source_id": "S1061",
+        "quote": "40 min/day",
+        "confidence": "medium",
+        "notes": "Dogs NSW breed page Quick Glance 'Exercise: 40 min/day' (S1061, kennel-club breed page, tier B) → 40 (runbook rule: one number N → N; American Hairless Terrier precedent). No RKC / PDSA page exists. PetMD (S1060) asks for 'extensive mental stimulation and physical exercise every day' with no minutes; VCA (summary only) 'Very high' — the breed is described as very energetic, so 40 min may be low; open for David."
+      },
+      "daily_text": {
+        "value": "lots of exercise and mental stimulation every day, on a leash or in a securely fenced area",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "so prospective owners should be prepared to provide extensive mental stimulation and physical exercise every day.",
+        "confidence": "high",
+        "notes": "PetMD (S1060, fragment; the sentence begins 'The breed was built to use their brain while traversing great distances,'). Also: 'this exercise needs to take place either on a leash or within a securely fenced area.' (fragment). Dogs NSW (S1061): 'They are athletic, hardy, and need a full-time job or activity such as hunting, obedience, or agility to stay happy.'"
+      },
+      "scent_drive": {
+        "value": "follows its nose relentlessly — leashes and fenced yards are a must",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "And because Blueticks can be relentless in their pursuit of a scent that intrigues them, leashes and fenced yards are a must.",
+        "confidence": "high",
+        "notes": "PetMD (S1060). Dogs NSW (S1061): 'If allowed, they will tree almost any animal smaller than them.' Basis of the secure_fencing chip."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S1060) names bloat / GDV and lists 'exercising right after eating' among risk factors ('Eating large amounts of food and water too quickly, exercising right after eating, eating from elevated food bowls, and' — fragment) but gives no advice to leave a gap → no meal gap (M5-R16 needs a verbatim gap advice; never invent a quote) — open for David."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "athletic, hardy, independent and affectionate scent hound; needs a job",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "They are athletic, hardy, and need a full-time job or activity such as hunting, obedience, or agility to stay happy.",
+        "confidence": "high",
+        "notes": "Dogs NSW (S1061); Quick Glance 'Personality: Independent + affectionate'. PetMD (S1060): 'Bluetick Coonhounds are highly trainable thanks to their bright intellect and desire to please.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No 'family pet / family dog' statement → no family_pet chip."
+      },
+      "children": {
+        "value": "gets along well with children (Dogs NSW); may be better with older children and experienced owners (PetMD)",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "In normal conditions, the Bluetick Coonhound gets along well with children.",
+        "confidence": "medium",
+        "notes": "Conflicts with PetMD (S1060) 'Blueticks may be better suited for older children, and experienced pet parents who know how to train and manage a dog' (fragment; continues 'with their intelligence and strength.') → neither the children chip nor an older-children chip (conflicting sources)."
+      },
+      "experienced_owner": {
+        "value": "better with experienced owners who can train and manage a strong, intelligent dog",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "Blueticks may be better suited for older children, and experienced pet parents who know how to train and manage a dog",
+        "confidence": "high",
+        "notes": "PetMD (S1060, fragment; continues 'with their intelligence and strength.'). Basis of the experienced_owner chip."
+      },
+      "other_pets": {
+        "value": "enjoys other dogs; monitor around cats and small animals",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "They can be challenging to train and they should be monitored around cats or other small animals.",
+        "confidence": "medium",
+        "notes": "Dogs NSW (S1061). PetMD (S1060): 'Blueticks also tend to enjoy the companionship of other dogs.' No 'high / strong prey drive' quote → no chases_small_pets chip (runbook)."
+      },
+      "time_alone": {
+        "value": "can develop separation anxiety and chew when left alone for long periods",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "When left alone for long periods, Blueticks can experience separation anxiety and engage in unwanted destructive behaviors",
+        "confidence": "medium",
+        "notes": "PetMD (S1060, fragment; ends 'like chewing.'). Dogs NSW Quick Glance (S1061) 'Time at home: Often alone' — conflicting → no needs_company chip (open for David)."
+      },
+      "socialisation": {
+        "value": "the breeder's socialisation approach matters; the socialisation window lasts to about 16 weeks",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "Talk to your Bluetick Coonhound breeder about how they approach socialization.",
+        "confidence": "medium",
+        "notes": "PetMD (S1060); 'During this socialization window, they learn how to interact with humans and other animals.' Advice to ask the breeder — not a need / condition statement for the dog itself → no DOG_SOCIALISATION quote row; the puppy keeps David's general socialisation row (M5-R17, every puppy)."
+      },
+      "barking": {
+        "value": "baying — a loud, yodel-like howl; louder than average",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "prospective pet parents should be prepared for a louder-than-average dog.",
+        "confidence": "high",
+        "notes": "PetMD (S1060, fragment; begins 'While training can help keep their howls and bays to a minimum,'). Also 'They have a reputation for baying—a loud howl that sounds more like a yodel.' (fragment). No vocabulary chip for barking — register text only."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Only as a sign of separation anxiety (see time_alone) — no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": "food and garbage should never be left out",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "food and garbage should never be left out unattended.",
+        "confidence": "medium",
+        "notes": "Dogs NSW (S1061, fragment). No obesity statement → no food_motivated_weight chip."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not RKC-registered → no Breed Watch category; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. PetMD (S1060): 'Blueticks aren’t predisposed to any eye conditions.' VCA (summary only) names cataracts and hip dysplasia — not verbatim, not used.",
+      "bloat_gdv": {
+        "value": "bloat / gastric dilatation and volvulus — more common in large, deep-chested dogs",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "Any dog can experience bloat, but it’s more common in large and deep-chested breeds.",
+        "confidence": "high",
+        "notes": "PetMD (S1060) lists bloat / GDV as a health issue of the breed (own section); feeding advice 'Breaking up feedings can also help protect against bloat.'"
+      },
+      "ear_infections": {
+        "value": "long, floppy hound ears are prone to infection",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "The Bluetick’s characteristic long, floppy hound ears are prone to infection.",
+        "confidence": "high",
+        "notes": "PetMD (S1060). Ear cleaning: 'Talk to your veterinarian about how and how often you should clean your dog’s ears.' — no frequency → no ear task (runbook »Breed care tasks«)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, en.wikipedia.org read 2026-11-25) does not list 'Bluetick' — only 'Black and Tan Coonhound' (rank 44, Average), a different breed. Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "highly trainable, bright and eager to please; can be challenging (independent scent hound)",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "Bluetick Coonhounds are highly trainable thanks to their bright intellect and desire to please.",
+        "confidence": "medium",
+        "notes": "PetMD (S1060); Dogs NSW (S1061) 'They can be challenging to train' (fragment) and 'Training: Daily'. The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bluetick_coonhound.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "speedy, well-muscled hound with a neat, compact body, a glossy coat and clear, keen eyes",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "The Bluetick should have the appearance of a speedy and well-muscled hound.",
+        "confidence": "high",
+        "notes": "Standard printed by Dogs NSW (S1061): 'He has a neat, compact body, a glossy coat and clear, keen eyes.'"
+      },
+      "colours": {
+        "value": [
+          "dark blue ticked (thickly mottled) with black spots, a black head and tan markings",
+          "dark blue ticked (thickly mottled) with black spots and a black head"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S1061",
+        "quote": "Preferred color is a dark blue, thickly mottled body, spotted by various shaped black spots on back, ears and sides.",
+        "confidence": "high",
+        "notes": "Standard (S1061): 'Head and ears predominately black.'; 'With or without tan markings (over eyes, on cheeks, chest and below tail) and red ticking on feet and lower legs.'; 'No other colors allowed.'; disqualification 'Any color other than that described in the standard. Albinism.' Two looks: with tan markings (first — PetMD S1060 'they commonly sport tan markings as well.') and without. Our wording."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no frequency data; tan-marked first because PetMD says they 'commonly' have tan markings (Claude) → verified=false."
+      },
+      "coat": {
+        "value": "medium coarse, lying close to the body, smooth and glossy",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Medium coarse and lying close to the body, appearing smooth and glossy. Not rough or too short.",
+        "confidence": "high",
+        "notes": "Standard (S1061). PetMD (S1060): 'be prepared for moderate shedding' (fragment)."
+      },
+      "ears": {
+        "value": "set low, thin with a slight roll, long — reaching well towards the end of the nose",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Set low and devoid of erectile power.",
+        "confidence": "high",
+        "notes": "Standard (S1061): 'Should be thin with a slight roll, taper well towards a point, and reach well towards the end of the nose when pulled f' (fragment, continues 'orward.')."
+      },
+      "eyes": {
+        "value": "rather large, round, dark brown; pleading hound expression",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Round in shape and dark brown in color (never lighter than light brown).",
+        "confidence": "high",
+        "notes": "Standard (S1061): 'Rather large, set wide apart in skull.'; 'Expression is a typical pleading hound expression, never wild or cowering.'"
+      },
+      "nose": {
+        "value": "large, black, with well opened nostrils",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Nose: large with well opened nostrils. Fully pigmented, black in colour.",
+        "confidence": "high",
+        "notes": "Standard (S1061)."
+      },
+      "head": {
+        "value": "broad, slightly domed skull, prominent stop, long, broad and deep square muzzle with flews",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Muzzle is long, broad and deep, square in profile with flews that well cover the line of the lower jaw.",
+        "confidence": "high",
+        "notes": "Standard (S1061): 'The head is broad between the ears with a slightly domed skull.' 'Stop is prominent.'"
+      },
+      "tail": {
+        "value": "moderate length, carried high with a forward half-moon curve, well coated without flag",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Carried high with a forward half-moon curve.",
+        "confidence": "high",
+        "notes": "Standard (S1061): 'Well coated but without flag.'; set on slightly below the line of the back (fragment)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PetMD (S1060), Dogs NSW (S1061). No RKC / PDSA / Woodgreen page (not RKC-recognised).",
+      "petmd_grooming": {
+        "value": "once-a-week brushing",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "The Bluetick’s short fur needs only a once-a-week brushing to control shedding.",
+        "confidence": "high",
+        "notes": "PetMD (S1060). Dogs NSW (S1061) 'Grooming: Low maintenance'. Basis of the weekly brushing routine (M5-R13)."
+      },
+      "petmd_shedding": {
+        "value": "moderate shedding",
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "The Bluetick’s characteristic short, glossy coat is a breeze to care for, though be prepared for moderate shedding.",
+        "confidence": "medium",
+        "notes": "PetMD (S1060). Single source, 'moderate' — no sheds chip (Claude: a moderate shedder, not a heavy one; open for David)."
+      },
+      "petmd_bath": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "How often you bathe your hound will depend on how they spend their time outdoors (and where their nose leads them).",
+        "confidence": "medium",
+        "notes": "No frequency → no bath reminder (runbook »Breed care tasks«)."
+      },
+      "petmd_ears": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S1060",
+        "quote": "Talk to your veterinarian about how and how often you should clean your dog’s ears.",
+        "confidence": "medium",
+        "notes": "No frequency → no ear task."
+      },
+      "nsw_home": {
+        "value": "house with garden",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "House with garden",
+        "confidence": "medium",
+        "notes": "Dogs NSW Quick Glance 'Size of home' (S1061) — not RKC 'Large house' → no large_home chip; no apartment chip."
+      },
+      "nsw_time_alone": {
+        "value": "often alone",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Often alone",
+        "confidence": "low",
+        "notes": "Dogs NSW Quick Glance 'Time at home' (S1061) — conflicts with PetMD separation anxiety (S1060) → no often_alone / needs_company chip."
+      },
+      "nsw_barking": {
+        "value": "moderate",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Moderate",
+        "confidence": "low",
+        "notes": "Dogs NSW Quick Glance 'Barking preference' (S1061)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -108652,6 +109092,212 @@
         "confidence": "high",
         "notes": "FCI standard (S1051) as in irish_terrier.appearance. Three standard colours; weights unsourced (verified=false). Not a welfare breed; dog breeds have no features key — `nose` trait for the black nose if the build adds one (Kerry Blue precedent).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default (the FCI names it first; RKC 'bright red coat' — Claude's reading; weights unsourced); FCI standard colours only; natural tail"
+      }
+    },
+    "bluetick_coonhound": {
+      "_note": "Unattended run M5-R10-141 (2026-11-25): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the Dogs NSW breed page (S1061 '40 min/day' → 40; no RKC / PDSA page exists — American Hairless Terrier precedent). Senior boundary 99 = Claude's suggestion (0.75 × PetMD lower bound 11 y, S1060; no McMillan 2024 / VetCompass / RKC value) — verified=false, open for David. Learning 1.0 (not ranked by Coren, S35). Built: brushing once a week (PetMD S1060, M5-R13); puppy socialisation = David's general row (no breed quote, M5-R17). No tooth / ear / nail / bath / groomer task (no frequency), no meal gap (PetMD names exercise after eating only as a bloat risk factor — no gap advice; open for David), no heat warning (not flat-faced). No new vocabulary key. Not a welfare breed → in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 40,
+        "unit": "minutes/day",
+        "source_id": "S1061",
+        "quote": "40 min/day",
+        "confidence": "medium",
+        "notes": "Dogs NSW Quick Glance (S1061) → rule 'one number N' → 40. No RKC / PDSA page. PetMD (S1060) 'extensive mental stimulation and physical exercise every day' gives no minutes.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 40 min/day (Dogs NSW S1061 '40 min/day'; no RKC / PDSA page)"
+      },
+      "step_goal_adult": {
+        "value": 4000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 40 min × 100 steps/min (S45) = 4,000.",
+        "derived_from": [
+          "S1061",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 40 min × 100 steps/min → 4,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 40) = 30 min → 3,000 steps.",
+        "steps": 3000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min → 3,000 steps (75 % of 40)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 40,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 40 reached at 4 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 40 min (reached at 4 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 99
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 99 = round(0.75 × 11 y × 12) (S11 + the PetMD lower bound '11–12 years', S1060 — no McMillan 2024 / VetCompass row, no RKC page). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1060"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 99 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 99,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Closest rule row (Toy Fox Terrier / American Hairless Terrier precedent): 0.75 × the PetMD lower bound 11 y (S1060) × 12 = 99. VCA '12 to 14 years' came back only as a model summary (not verbatim) → 108 would follow from it — alternative for David. No McMillan 2024 / VetCompass median (the breed is rare in the UK).",
+        "derived_from": [
+          "S11",
+          "S1060"
+        ],
+        "decision": "predlog Claude 2026-11-25 (najbližja vrstica pravila runbooka, M5-R10-141) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 99
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (senior = Claude's suggested boundary 99, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36; senior 99 follows the unconfirmed boundary)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35 — only the Black and Tan Coonhound, a different breed) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked by Coren, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1060",
+        "quote": "The Bluetick’s short fur needs only a once-a-week brushing to control shedding.",
+        "confidence": "high",
+        "notes": "bluetick_coonhound.suitability.petmd_grooming. 'once-a-week' → 1 (runbook »Dog grooming«). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed. Dogs NSW (S1061) 'Grooming: Low maintenance' (no number).",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PetMD »once-a-week brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-141); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S1060"
+            ],
+            "refs": [
+              "bluetick_coonhound.behaviour.experienced_owner"
+            ],
+            "quote": "S1060 'Blueticks may be better suited for older children, and experienced pet parents who know how to train and manage a dog' (… 'with their intelligence and strength.')",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): a strong dog for experienced owners (Rottweiler / Boxer precedent)"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1060"
+            ],
+            "refs": [
+              "bluetick_coonhound.exercise.daily_text"
+            ],
+            "quote": "S1060 'so prospective owners should be prepared to provide extensive mental stimulation and physical exercise every day.'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): sourced need for mental challenges"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1060"
+            ],
+            "refs": [
+              "bluetick_coonhound.exercise.scent_drive"
+            ],
+            "quote": "S1060 'And because Blueticks can be relentless in their pursuit of a scent that intrigues them, leashes and fenced yards are a must.'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): follows a scent off — a secure fence is a must (Siberian Husky / Basenji precedent)"
+          }
+        ],
+        "not_proposed": {
+          "children": "Dogs NSW 'gets along well with children' (S1061) vs PetMD 'may be better suited for older children' (S1060) — conflicting → neither children nor an older-children chip.",
+          "family_pet": "No 'family pet / family dog' statement.",
+          "active_family": "40 min/day (Dogs NSW S1061) — no 'active family' statement (American Hairless Terrier precedent).",
+          "long_daily_exercise": "40 min/day — the chip is for 2 hours or more.",
+          "apartment": "No RKC 'Flat/ Apartment' (no RKC page); Dogs NSW 'House with garden'.",
+          "large_home": "No RKC 'Large house'; Dogs NSW 'House with garden' only.",
+          "needs_company": "PetMD separation anxiety (S1060) vs Dogs NSW 'Time at home: Often alone' (S1061) — conflicting → no chip (open for David).",
+          "chases_small_pets": "No 'high / strong prey drive' quote (Dogs NSW: monitor around cats and small animals; trees smaller animals).",
+          "sheds": "PetMD 'moderate shedding' only (S1060) — not a heavy shedder; no chip (open for David).",
+          "welfare_chip": "Not RKC-registered (no Breed Watch); no veterinary body names a conformation concern.",
+          "shorter_lifespan": "PetMD '11–12 years' — upper bound above 10.",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); not RKC-registered (no Breed Watch). Marketing never promises the breed's health; a loud, scent-driven hound — never shown as an easy dog for small children or first-time owners (PetMD S1060).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no conformation welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Bluetick Coonhound, blue ticked with tan markings (default): speedy, well-muscled hound with a neat, compact body; short, glossy, medium-coarse coat lying close; dark blue thickly mottled body spotted with black, head and ears predominantly black, tan markings over the eyes, on the cheeks, chest and below the tail, red ticking on the feet and lower legs; long, thin, low-set ears with a slight roll; rather large round dark brown eyes with a pleading hound expression; large black nose; long, broad, square muzzle with flews; tail carried high with a forward half-moon curve; never any other colour",
+        "unit": "—",
+        "source_id": "S1061",
+        "quote": "Preferred color is a dark blue, thickly mottled body, spotted by various shaped black spots on back, ears and sides.",
+        "confidence": "high",
+        "notes": "Standard (S1061) as in bluetick_coonhound.appearance. Two looks (with / without tan); weights unsourced (verified=false). Not a welfare breed; dog breeds have no features key — `nose` trait (Irish Terrier precedent).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue ticked with tan is the portrait default (PetMD S1060 'commonly sport tan markings' — Claude's reading; weights unsourced); standard colours only; natural tail"
       }
     }
   }

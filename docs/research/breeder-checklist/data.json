@@ -4617,6 +4617,11 @@
         }
       ],
       "notes": "RKC breed page (dog-data S1053, 2026-11-25, M5-R10-140): under 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the 'DNA test for hereditary footpad hyperkeratosis (HFH)' (labels as returned); 'We don't currently offer a breed-specific DNA testing package for this breed' (fragment). RKC Breed Watch (S1054) point of concern 'Cracked and/or corny pads'. New test key dna_hfh (website words needed in src/content/registry/{en,sl}.ts → checklist.tests). PDSA (S1055) advises checking that the parents were screened under the Canine Health Schemes (paraphrase; no named scheme). PetMD / WebMD name cystinuria, hip dysplasia and cataracts (background in dog-data) — no A/B breeding rule, not added."
+    },
+    "bluetick_coonhound": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "Not RKC-recognised → no RKC Breeds A–Z health-testing section; the OFA CHIC breed requirements page (ofa.org browse-by-breed) was refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-25); PetMD (dog-data S1060) and Dogs NSW (S1061) name no breeding tests. Show the general dog checklist only (M5-R10-141)."
     }
   }
 }
