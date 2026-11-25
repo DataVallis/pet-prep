@@ -101,7 +101,8 @@
         "nb": "Åpent hele døgnet, sju dager i uken, med døgnåpen akuttjeneste; bestill time via de digitale kanalene.",
         "sl": "Odprto 24 ur na dan, 7 dni v tednu, z nujno službo 24/7; naročite se prek digitalnih kanalov.",
         "hr": "Radi 24 sata, 7 dana u tjednu, uz hitnu službu 24/7; termine naruči putem digitalnih kanala.",
-        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche, mit Notdienst rund um die Uhr; Termine über die digitalen Kanäle buchen."
+        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche, mit Notdienst rund um die Uhr; Termine über die digitalen Kanäle buchen.",
+        "fr": "Ouvert 24 h/24, 7 j/7, avec un service d’urgence permanent ; rendez-vous via ses canaux numériques."
       }
     },
     {
@@ -131,7 +132,8 @@
         "nb": "Sykehusbehandling og akuttbehandling hele døgnet; WhatsApp +506 6453 2349.",
         "sl": "Bolnišnična oskrba in nujna pomoč 24 ur na dan; WhatsApp +506 6453 2349.",
         "hr": "Bolnička skrb i hitna služba dostupne 24 sata; WhatsApp +506 6453 2349.",
-        "de": "Stationäre Versorgung und Notfälle rund um die Uhr; WhatsApp +506 6453 2349."
+        "de": "Stationäre Versorgung und Notfälle rund um die Uhr; WhatsApp +506 6453 2349.",
+        "fr": "Soins hospitaliers et urgences 24 h/24 ; WhatsApp : +506 6453 2349."
       }
     },
     {
@@ -160,7 +162,8 @@
         "nb": "Akuttjeneste hele døgnet, ingen oppringing eller timebestilling nødvendig; butikkene er åpne mandag til lørdag kl. 08.00–20.00 og søndag kl. 08.00–19.00.",
         "sl": "Nujna služba 24/7, brez klica ali naročanja; trgovine odprte pon–sob 8–20 in ned 8–19.",
         "hr": "Hitna služba 24/7, bez poziva i termina; trgovine rade pon–sub 8:00–20:00 i ned 8:00–19:00.",
-        "de": "Notdienst rund um die Uhr, ohne Anruf oder Termin; Geschäfte Mo–Sa 8.00–20.00 Uhr und So 8.00–19.00 Uhr geöffnet."
+        "de": "Notdienst rund um die Uhr, ohne Anruf oder Termin; Geschäfte Mo–Sa 8.00–20.00 Uhr und So 8.00–19.00 Uhr geöffnet.",
+        "fr": "Service d’urgence 24 h/24, 7 j/7, sans appel préalable ni rendez-vous ; magasins ouverts du lundi au samedi 8 h–20 h et le dimanche 8 h–19 h."
       }
     },
     {
@@ -189,7 +192,8 @@
         "nb": "Akuttjeneste hele døgnet, ingen oppringing eller timebestilling nødvendig; butikkene er åpne mandag til lørdag kl. 08.00–20.00 og søndag kl. 08.00–19.00.",
         "sl": "Nujna služba 24/7, brez klica ali naročanja; trgovine odprte pon–sob 8–20 in ned 8–19.",
         "hr": "Hitna služba 24/7, bez poziva i termina; trgovine rade pon–sub 8:00–20:00 i ned 8:00–19:00.",
-        "de": "Notdienst rund um die Uhr, ohne Anruf oder Termin; Geschäfte Mo–Sa 8.00–20.00 Uhr und So 8.00–19.00 Uhr geöffnet."
+        "de": "Notdienst rund um die Uhr, ohne Anruf oder Termin; Geschäfte Mo–Sa 8.00–20.00 Uhr und So 8.00–19.00 Uhr geöffnet.",
+        "fr": "Service d’urgence 24 h/24, 7 j/7, sans appel ni rendez-vous ; magasins ouverts du lundi au samedi 8 h–20 h et le dimanche 8 h–19 h."
       }
     },
     {
@@ -219,7 +223,8 @@
         "nb": "Universitetssykehus for smådyr og viltlevende dyr: mandag–fredag 9.00–19.00; i helgene kun nødtilfeller, 10.00–17.00. Ikke døgnåpent; ring på forhånd.",
         "sl": "Univerzitetna bolnišnica za male in divje živali: pon–pet 9–19; ob koncih tedna samo nujni primeri, 10–17. Ni odprta 24 ur na dan; vnaprej pokličite.",
         "hr": "Sveučilišna bolnica za male i divlje životinje: pon–pet 9:00–19:00; vikendom samo hitni slučajevi, 10:00–17:00. Ne radi 24 sata; nazovi unaprijed.",
-        "de": "Universitätsklinik für Kleintiere und Wildtiere: Mo–Fr 9.00–19.00 Uhr; am Wochenende nur Notfälle, 10.00–17.00 Uhr. Kein Dienst rund um die Uhr; bitte vorher anrufen."
+        "de": "Universitätsklinik für Kleintiere und Wildtiere: Mo–Fr 9.00–19.00 Uhr; am Wochenende nur Notfälle, 10.00–17.00 Uhr. Kein Dienst rund um die Uhr; bitte vorher anrufen.",
+        "fr": "Hôpital universitaire pour petits animaux et faune sauvage : du lundi au vendredi 9 h–19 h ; le week-end, urgences uniquement, 10 h–17 h. Pas de service 24 h/24 ; appelez avant de venir."
       }
     },
     {
@@ -249,7 +254,8 @@
         "nb": "Åpent alle dager kl. 08.00–22.00.",
         "sl": "Odprto vsak dan 8–22.",
         "hr": "Radi svaki dan 8:00–22:00.",
-        "de": "Täglich 8.00–22.00 Uhr geöffnet."
+        "de": "Täglich 8.00–22.00 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 8 h–22 h."
       }
     },
     {
@@ -279,7 +285,8 @@
         "nb": "Åpent alle dager kl. 09.00–21.00.",
         "sl": "Odprto vsak dan 9–21.",
         "hr": "Radi svaki dan 9:00–21:00.",
-        "de": "Täglich 9.00–21.00 Uhr geöffnet."
+        "de": "Täglich 9.00–21.00 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 9 h–21 h."
       }
     },
     {
@@ -309,7 +316,8 @@
         "nb": "mandag–lørdag 9.00–12.00 og 14.00–19.00, kun etter timebestilling; nødnummer 8301 3271 (WhatsApp).",
         "sl": "Pon–sob 9–12 in 14–19, samo po naročilu; nujna številka 8301 3271 (WhatsApp).",
         "hr": "pon–sub 9:00–12:00 i 14:00–19:00, samo uz termin; broj za hitne slučajeve 8301 3271 (WhatsApp).",
-        "de": "Mo–Sa 9.00–12.00 und 14.00–19.00 Uhr, nur nach Terminvereinbarung; Notfallnummer 8301 3271 (WhatsApp)."
+        "de": "Mo–Sa 9.00–12.00 und 14.00–19.00 Uhr, nur nach Terminvereinbarung; Notfallnummer 8301 3271 (WhatsApp).",
+        "fr": "Du lundi au samedi 9 h–12 h et 14 h–19 h, sur rendez-vous uniquement ; numéro d’urgence : 8301 3271 (WhatsApp)."
       }
     },
     {
@@ -339,7 +347,8 @@
         "nb": "Sykehus åpent daglig 8.00–20.00, også på helligdager, med akuttbehandling for hunder og katter hele døgnet; ekstra telefon +506 4700 1898.",
         "sl": "Bolnišnica odprta vsak dan 8–20, tudi ob praznikih, z nujno oskrbo za pse in mačke 24 ur na dan; druga številka +506 4700 1898.",
         "hr": "Bolnica radi svaki dan 8:00–20:00, uključujući blagdane, uz hitnu skrb 24 sata za pse i mačke; drugi telefon +506 4700 1898.",
-        "de": "Klinik täglich 8.00–20.00 Uhr geöffnet, auch feiertags, mit Notdienst für Hunde und Katzen rund um die Uhr; zweite Rufnummer +506 4700 1898."
+        "de": "Klinik täglich 8.00–20.00 Uhr geöffnet, auch feiertags, mit Notdienst für Hunde und Katzen rund um die Uhr; zweite Rufnummer +506 4700 1898.",
+        "fr": "Hôpital ouvert tous les jours 8 h–20 h, jours fériés compris, avec urgences 24 h/24 pour chiens et chats ; second numéro : +506 4700 1898."
       }
     },
     {
@@ -369,7 +378,8 @@
         "nb": "mandag–fredag 8.00–21.00, lørdag 9.00–19.00, søndag og helligdager 9.00–17.00. Annet telefonnummer +506 4700 0518.",
         "sl": "Pon–pet 8–21, sob 9–19, ned in prazniki 9–17. Druga številka +506 4700 0518.",
         "hr": "pon–pet 8:00–21:00, sub 9:00–19:00, ned i blagdani 9:00–17:00. Drugi telefon +506 4700 0518.",
-        "de": "Mo–Fr 8.00–21.00 Uhr, Sa 9.00–19.00 Uhr, So und feiertags 9.00–17.00 Uhr. Zweite Rufnummer +506 4700 0518."
+        "de": "Mo–Fr 8.00–21.00 Uhr, Sa 9.00–19.00 Uhr, So und feiertags 9.00–17.00 Uhr. Zweite Rufnummer +506 4700 0518.",
+        "fr": "Du lundi au vendredi 8 h–21 h, samedi 9 h–19 h, dimanche et jours fériés 9 h–17 h. Second numéro : +506 4700 0518."
       }
     },
     {
@@ -399,7 +409,8 @@
         "nb": "mandag–lørdag 7.30–19.00, søndag 8.00–14.00; nødtelefon +506 8817 0000; WhatsApp +506 8661 1717.",
         "sl": "Pon–sob 7.30–19, ned 8–14; nujna številka +506 8817 0000; WhatsApp +506 8661 1717.",
         "hr": "pon–sub 7:30–19:00, ned 8:00–14:00; hitna linija +506 8817 0000; WhatsApp +506 8661 1717.",
-        "de": "Mo–Sa 7.30–19.00 Uhr, So 8.00–14.00 Uhr; Notfallnummer +506 8817 0000; WhatsApp +506 8661 1717."
+        "de": "Mo–Sa 7.30–19.00 Uhr, So 8.00–14.00 Uhr; Notfallnummer +506 8817 0000; WhatsApp +506 8661 1717.",
+        "fr": "Du lundi au samedi 7 h 30–19 h, dimanche 8 h–14 h ; ligne d’urgence : +506 8817 0000 ; WhatsApp : +506 8661 1717."
       }
     },
     {
@@ -429,7 +440,8 @@
         "nb": "Åpent hele døgnet, sju dager i uken, med døgnåpen dyrlegevakt; WhatsApp på samme nummer.",
         "sl": "Odprto 24 ur na dan, 7 dni v tednu, z veterinarsko nujno pomočjo 24/7; WhatsApp na isti številki.",
         "hr": "Radi 24 sata, 7 dana u tjednu, uz veterinarsku hitnu službu 24/7; WhatsApp na istom broju.",
-        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche, mit tierärztlichem Notdienst rund um die Uhr; WhatsApp unter derselben Nummer."
+        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche, mit tierärztlichem Notdienst rund um die Uhr; WhatsApp unter derselben Nummer.",
+        "fr": "Ouvert 24 h/24, 7 j/7, urgences vétérinaires comprises ; WhatsApp sur le même numéro."
       }
     },
     {
@@ -459,7 +471,8 @@
         "nb": "Åpent hele døgnet, sju dager i uken, med døgnåpen dyrlegevakt; WhatsApp på samme nummer.",
         "sl": "Odprto 24 ur na dan, 7 dni v tednu, z veterinarsko nujno pomočjo 24/7; WhatsApp na isti številki.",
         "hr": "Radi 24 sata, 7 dana u tjednu, uz veterinarsku hitnu službu 24/7; WhatsApp na istom broju.",
-        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche, mit tierärztlichem Notdienst rund um die Uhr; WhatsApp unter derselben Nummer."
+        "de": "Rund um die Uhr geöffnet, 7 Tage die Woche, mit tierärztlichem Notdienst rund um die Uhr; WhatsApp unter derselben Nummer.",
+        "fr": "Ouvert 24 h/24, 7 j/7, avec urgences vétérinaires 24 h/24, 7 j/7 ; WhatsApp sur le même numéro."
       }
     },
     {
@@ -489,7 +502,8 @@
         "nb": "Akuttjeneste hele døgnet; annen telefon +506 2203 1944.",
         "sl": "Nujna služba 24/7; druga številka +506 2203 1944.",
         "hr": "Hitna služba 24/7; drugi telefon +506 2203 1944.",
-        "de": "Notdienst rund um die Uhr; zweite Rufnummer +506 2203 1944."
+        "de": "Notdienst rund um die Uhr; zweite Rufnummer +506 2203 1944.",
+        "fr": "Service d’urgence 24 h/24, 7 j/7 ; second numéro : +506 2203 1944."
       }
     },
     {
@@ -519,7 +533,8 @@
         "nb": "Akuttjeneste hele døgnet; annen telefon +506 2278 2681.",
         "sl": "Nujna služba 24/7; druga številka +506 2278 2681.",
         "hr": "Hitna služba 24/7; drugi telefon +506 2278 2681.",
-        "de": "Notdienst rund um die Uhr; zweite Rufnummer +506 2278 2681."
+        "de": "Notdienst rund um die Uhr; zweite Rufnummer +506 2278 2681.",
+        "fr": "Service d’urgence 24 h/24, 7 j/7 ; second numéro : +506 2278 2681."
       }
     },
     {
@@ -548,7 +563,8 @@
         "nb": "Akuttbehandling for hunder og katter hele døgnet, også på helligdager; WhatsApp +506 8780 5273.",
         "sl": "Nujna oskrba za pse in mačke 24/7, tudi ob praznikih; WhatsApp +506 8780 5273.",
         "hr": "Hitna skrb 24/7 za pse i mačke, uključujući blagdane; WhatsApp +506 8780 5273.",
-        "de": "Notdienst für Hunde und Katzen rund um die Uhr, auch feiertags; WhatsApp +506 8780 5273."
+        "de": "Notdienst für Hunde und Katzen rund um die Uhr, auch feiertags; WhatsApp +506 8780 5273.",
+        "fr": "Urgences 24 h/24, 7 j/7 pour chiens et chats, jours fériés compris ; WhatsApp : +506 8780 5273."
       }
     },
     {
@@ -577,7 +593,8 @@
         "nb": "mandag–lørdag 8.00–20.30; akuttjeneste hele døgnet utenom ordinær åpningstid; WhatsApp og annet telefonnummer +506 4070 0543.",
         "sl": "Pon–sob 8–20.30; nujna služba 24/7 zunaj rednega delovnega časa; WhatsApp in druga številka +506 4070 0543.",
         "hr": "pon–sub 8:00–20:30; hitna služba 24/7 izvan redovnog radnog vremena; WhatsApp i drugi telefon +506 4070 0543.",
-        "de": "Mo–Sa 8.00–20.30 Uhr; außerhalb der regulären Zeiten Notdienst rund um die Uhr; WhatsApp und zweite Rufnummer +506 4070 0543."
+        "de": "Mo–Sa 8.00–20.30 Uhr; außerhalb der regulären Zeiten Notdienst rund um die Uhr; WhatsApp und zweite Rufnummer +506 4070 0543.",
+        "fr": "Du lundi au samedi 8 h–20 h 30 ; service d’urgence 24 h/24, 7 j/7 en dehors des heures habituelles ; WhatsApp et second numéro : +506 4070 0543."
       }
     },
     {
@@ -620,7 +637,8 @@
         "nb": "Nødtilfeller på natt 18.00–06.00 daglig og kun nødtilfeller på søndager; WhatsApp +506 8764 0777. Ring på forhånd for å bekrefte åpningstider.",
         "sl": "Nočna nujna pomoč vsak dan 18–6, ob nedeljah samo nujni primeri; WhatsApp +506 8764 0777. Delovni čas preverite s klicem.",
         "hr": "Noćni hitni slučajevi 18:00–06:00 svaki dan, a nedjeljom samo hitni slučajevi; WhatsApp +506 8764 0777. Nazovi unaprijed i provjeri radno vrijeme.",
-        "de": "Nachtnotdienst täglich 18.00–6.00 Uhr und sonntags nur Notfälle; WhatsApp +506 8764 0777. Zeiten bitte vorher telefonisch bestätigen."
+        "de": "Nachtnotdienst täglich 18.00–6.00 Uhr und sonntags nur Notfälle; WhatsApp +506 8764 0777. Zeiten bitte vorher telefonisch bestätigen.",
+        "fr": "Urgences de nuit tous les jours 18 h–6 h ; le dimanche, urgences uniquement ; WhatsApp : +506 8764 0777. Appelez pour confirmer les horaires."
       }
     }
   ],

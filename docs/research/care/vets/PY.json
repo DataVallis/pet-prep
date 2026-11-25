@@ -56,7 +56,8 @@
         "nb": "Åpent hele døgnet for alle tjenester; du trenger ikke ringe på forhånd.",
         "sl": "Vse storitve odprte 24 ur na dan; vnaprejšnji klic ni potreben.",
         "hr": "Otvoreno 24 sata, sve usluge; nije potrebno zvati unaprijed.",
-        "de": "In allen Bereichen rund um die Uhr geöffnet; Anruf vorab nicht nötig."
+        "de": "In allen Bereichen rund um die Uhr geöffnet; Anruf vorab nicht nötig.",
+        "fr": "Ouvert 24 h/24 pour tous les services ; inutile d’appeler avant de venir."
       }
     },
     {
@@ -81,7 +82,8 @@
         "nb": "Ring klinikken for behandling eller nødtilfeller.",
         "sl": "Za oskrbo ali nujno pomoč pokličite kliniko.",
         "hr": "Za skrb ili hitne slučajeve nazovi kliniku.",
-        "de": "Für Behandlung oder Notfälle bitte die Tierarztpraxis anrufen."
+        "de": "Für Behandlung oder Notfälle bitte die Tierarztpraxis anrufen.",
+        "fr": "Pour des soins ou une urgence, appelez la clinique."
       }
     },
     {
@@ -119,7 +121,8 @@
         "nb": "man–fre 8.00–19.00, lør 8.00–17.30.",
         "sl": "Pon–pet 8–19, sob 8–17.30.",
         "hr": "pon–pet 8:00–19:00, sub 8:00–17:30.",
-        "de": "Mo–Fr 8.00–19.00 Uhr, Sa 8.00–17.30 Uhr."
+        "de": "Mo–Fr 8.00–19.00 Uhr, Sa 8.00–17.30 Uhr.",
+        "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–17 h 30."
       }
     },
     {
@@ -144,7 +147,8 @@
         "nb": "man–lør 8.00–17.00.",
         "sl": "Pon–sob 8–17.",
         "hr": "pon–sub 8:00–17:00.",
-        "de": "Mo–Sa 8.00–17.00 Uhr."
+        "de": "Mo–Sa 8.00–17.00 Uhr.",
+        "fr": "Lun.–sam. 8 h–17 h."
       }
     },
     {
@@ -182,7 +186,8 @@
         "nb": "man–lør 8.00–12.00 og 13.00–17.00.",
         "sl": "Pon–sob 8–12 in 13–17.",
         "hr": "pon–sub 8:00–12:00 i 13:00–17:00.",
-        "de": "Mo–Sa 8.00–12.00 und 13.00–17.00 Uhr."
+        "de": "Mo–Sa 8.00–12.00 und 13.00–17.00 Uhr.",
+        "fr": "Lun.–sam. 8 h–12 h et 13 h–17 h."
       }
     }
   ],

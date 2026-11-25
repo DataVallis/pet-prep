@@ -70,7 +70,8 @@
         "nb": "Markedsføres som åpen hele døgnet ved klinikken i Albion. Ring på forhånd ved nødtilfeller.",
         "sl": "Odprto 24/7 v kliniki Albion. Za nujne primere vnaprej pokličite.",
         "hr": "Otvoreno 24/7 u ambulanti Albion. Za hitne slučajeve nazovi unaprijed.",
-        "de": "Rund um die Uhr in der Klinik Albion geöffnet. Bei Notfällen bitte vorher anrufen."
+        "de": "Rund um die Uhr in der Klinik Albion geöffnet. Bei Notfällen bitte vorher anrufen.",
+        "fr": "Ouvert 24 h/24, 7 j/7 à la clinique d’Albion. Appelez avant de venir en cas d’urgence."
       }
     },
     {
@@ -99,7 +100,8 @@
         "nb": "Ring klinikken for å høre åpningstider og vakt for nødtilfeller.",
         "sl": "Za urnik in nujne primere pokličite kliniko.",
         "hr": "Za radno vrijeme i hitne slučajeve nazovi ambulantu.",
-        "de": "Öffnungszeiten und Notfälle bitte telefonisch bei der Klinik erfragen."
+        "de": "Öffnungszeiten und Notfälle bitte telefonisch bei der Klinik erfragen.",
+        "fr": "Appelez la clinique pour connaître les horaires et la prise en charge des urgences."
       }
     },
     {
@@ -126,7 +128,8 @@
         "nb": "Nettstedets tittel nevner døgnåpne dyreklinikker på Mauritius, men det er ingen opplysning om døgnåpent for den enkelte klinikk; ring klinikken for å bekrefte.",
         "sl": "Za urnik pokličite kliniko.",
         "hr": "Nazovi ambulantu i provjeri radno vrijeme.",
-        "de": "Öffnungszeiten bitte telefonisch bei der Klinik bestätigen."
+        "de": "Öffnungszeiten bitte telefonisch bei der Klinik bestätigen.",
+        "fr": "Appelez la clinique pour confirmer les horaires."
       }
     },
     {
@@ -153,7 +156,8 @@
         "nb": "Ring klinikken for å høre åpningstidene.",
         "sl": "Za urnik pokličite kliniko.",
         "hr": "Za radno vrijeme nazovi ambulantu.",
-        "de": "Öffnungszeiten bitte telefonisch bei der Klinik erfragen."
+        "de": "Öffnungszeiten bitte telefonisch bei der Klinik erfragen.",
+        "fr": "Appelez la clinique pour connaître les horaires d’ouverture."
       }
     },
     {
@@ -182,7 +186,8 @@
         "nb": "Åpent man–fre kl. 9–21, lør kl. 9–18, søn og helligdager kl. 9–12. Akuttlinje +230 5947 2244 (nettsiden: nødtilfeller kl. 9–21).",
         "sl": "Odprto pon–pet 9–21, sob 9–18, ned in prazniki 9–12. Nujna linija +230 5947 2244.",
         "hr": "Otvoreno pon–pet 9:00–21:00, sub 9:00–18:00, ned i blagdanima 9:00–12:00. Hitna linija +230 5947 2244.",
-        "de": "Mo–Fr 9.00–21.00 Uhr, Sa 9.00–18.00 Uhr, So und feiertags 9.00–12.00 Uhr geöffnet. Notfalltelefon +230 5947 2244."
+        "de": "Mo–Fr 9.00–21.00 Uhr, Sa 9.00–18.00 Uhr, So und feiertags 9.00–12.00 Uhr geöffnet. Notfalltelefon +230 5947 2244.",
+        "fr": "Ouvert lun.–ven. 9 h–21 h, sam. 9 h–18 h, dim. et jours fériés 9 h–12 h. Ligne d’urgences : +230 5947 2244."
       }
     },
     {
@@ -211,7 +216,8 @@
         "nb": "Åpent man–fre kl. 13–19, lør kl. 9–15, stengt søndager og helligdager.",
         "sl": "Odprto pon–pet 13–19, sob 9–15, ned in prazniki zaprto.",
         "hr": "Otvoreno pon–pet 13:00–19:00, sub 9:00–15:00, nedjeljom i blagdanima zatvoreno.",
-        "de": "Mo–Fr 13.00–19.00 Uhr, Sa 9.00–15.00 Uhr geöffnet, sonn- und feiertags geschlossen."
+        "de": "Mo–Fr 13.00–19.00 Uhr, Sa 9.00–15.00 Uhr geöffnet, sonn- und feiertags geschlossen.",
+        "fr": "Ouvert lun.–ven. 13 h–19 h, sam. 9 h–15 h, fermé le dimanche et les jours fériés."
       }
     },
     {
@@ -240,7 +246,8 @@
         "nb": "Åpent alle dager, ca. kl. 8–21; innleggelse hele døgnet og akutte hjemmebesøk tilbys. Ring på forhånd.",
         "sl": "Odprto vsak dan, približno 8–21; nudijo bolnišnično oskrbo 24/7 in nujne obiske na domu. Vnaprej pokličite.",
         "hr": "Otvoreno svaki dan, otprilike 8:00–21:00; nude se stacionarna skrb 24/7 i hitni kućni posjeti. Nazovi unaprijed.",
-        "de": "Täglich geöffnet, ungefähr 8.00–21.00 Uhr; stationäre Versorgung rund um die Uhr und Notfall-Hausbesuche möglich. Bitte vorher anrufen."
+        "de": "Täglich geöffnet, ungefähr 8.00–21.00 Uhr; stationäre Versorgung rund um die Uhr und Notfall-Hausbesuche möglich. Bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours, environ 8 h–21 h ; hospitalisation 24 h/24, 7 j/7 et visites d’urgence à domicile. Appelez avant de venir."
       }
     },
     {
@@ -268,7 +275,8 @@
         "nb": "Åpent alle dager, dyrleger er tilgjengelige kl. 7–21. Nødtilfeller: +230 5736 2402.",
         "sl": "Odprto vsak dan, zdravniki so na voljo 7–21. Nujni primeri: +230 5736 2402.",
         "hr": "Otvoreno svaki dan, veterinari dostupni 7:00–21:00. Hitni slučajevi: +230 5736 2402.",
-        "de": "Täglich geöffnet, Tierärzte 7.00–21.00 Uhr erreichbar. Notfälle: +230 5736 2402."
+        "de": "Täglich geöffnet, Tierärzte 7.00–21.00 Uhr erreichbar. Notfälle: +230 5736 2402.",
+        "fr": "Ouvert tous les jours, vétérinaires disponibles 7 h–21 h. Urgences : +230 5736 2402."
       }
     }
   ],

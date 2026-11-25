@@ -60,7 +60,8 @@
         "nb": "Åpent alle dager kl. 10.00–19.00; ved nødtilfeller åpent hele døgnet, sju dager i uken, på samme nummer.",
         "sl": "Odprto vsak dan 10–19; za nujno pomoč je na isti številki odprto 24 ur na dan, 7 dni v tednu.",
         "hr": "Otvoreno svaki dan 10:00–19:00; za hitne slučajeve otvoreno 24 sata, 7 dana u tjednu na istom broju.",
-        "de": "Täglich 10.00–19.00 Uhr geöffnet; für Notfälle rund um die Uhr an 7 Tagen die Woche unter derselben Nummer erreichbar."
+        "de": "Täglich 10.00–19.00 Uhr geöffnet; für Notfälle rund um die Uhr an 7 Tagen die Woche unter derselben Nummer erreichbar.",
+        "fr": "Ouvert tous les jours 10 h–19 h ; urgences 24 h/24, 7 j/7 au même numéro."
       }
     },
     {
@@ -89,7 +90,8 @@
         "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd ved nødtilfeller.",
         "sl": "Odprto vsak dan 10–19; za nujno pomoč vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 10:00–19:00; za hitne slučajeve nazovi unaprijed.",
-        "de": "Täglich 10.00–19.00 Uhr geöffnet; bei Notfällen bitte vorher anrufen."
+        "de": "Täglich 10.00–19.00 Uhr geöffnet; bei Notfällen bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 10 h–19 h ; appelez avant de venir en cas d’urgence."
       }
     },
     {
@@ -118,7 +120,8 @@
         "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd ved nødtilfeller.",
         "sl": "Odprto vsak dan 10–19; za nujno pomoč vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 10:00–19:00; za hitne slučajeve nazovi unaprijed.",
-        "de": "Täglich 10.00–19.00 Uhr geöffnet; bei Notfällen bitte vorher anrufen."
+        "de": "Täglich 10.00–19.00 Uhr geöffnet; bei Notfällen bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 10 h–19 h ; appelez avant de venir en cas d’urgence."
       }
     },
     {
@@ -146,7 +149,8 @@
         "nb": "Drop-in velkommen; også klinikk i Busia. Ring eller send melding på WhatsApp på forhånd ved nødtilfeller.",
         "sl": "Sprejem brez naročanja; klinika je tudi v Busii. Za nujno pomoč vnaprej pokličite ali pišite na WhatsApp.",
         "hr": "Dobrodošli i bez najave; ambulanta je i u Busiji. Za hitne slučajeve unaprijed nazovi ili piši na WhatsApp.",
-        "de": "Ohne Termin willkommen; weitere Praxis in Busia. Bei Notfällen bitte vorher anrufen oder per WhatsApp schreiben."
+        "de": "Ohne Termin willkommen; weitere Praxis in Busia. Bei Notfällen bitte vorher anrufen oder per WhatsApp schreiben.",
+        "fr": "Consultations sans rendez-vous acceptées ; autre clinique à Busia. Appelez ou écrivez sur WhatsApp avant de venir en cas d’urgence."
       }
     },
     {
@@ -175,7 +179,8 @@
         "nb": "Man–fre 08.00–18.00; søndager kun nødtilfeller; tilleggsgebyr for nødtilfeller utenom åpningstiden.",
         "sl": "Pon–pet 8–18; ob nedeljah samo nujna pomoč; za nujno pomoč zunaj delovnega časa velja doplačilo.",
         "hr": "pon–pet 08:00–18:00; nedjeljom samo hitni slučajevi; izvan radnog vremena dodatna naknada za hitne slučajeve.",
-        "de": "Mo–Fr 8.00–18.00 Uhr; sonntags nur Notfälle; außerhalb der Öffnungszeiten zusätzliche Notfallgebühr."
+        "de": "Mo–Fr 8.00–18.00 Uhr; sonntags nur Notfälle; außerhalb der Öffnungszeiten zusätzliche Notfallgebühr.",
+        "fr": "Lun.–ven. 8 h–18 h ; le dimanche, urgences uniquement ; supplément d’urgence hors horaires."
       }
     },
     {
@@ -203,7 +208,8 @@
         "nb": "Smådyravdeling ved universitetssykehus; ring på forhånd for åpningstider.",
         "sl": "Oddelek za male živali v univerzitetni bolnišnici; za odpiralni čas vnaprej pokličite.",
         "hr": "Odjel za male životinje nastavne bolnice; za radno vrijeme nazovi unaprijed.",
-        "de": "Kleintierabteilung der Lehrklinik; Öffnungszeiten bitte vorher telefonisch erfragen."
+        "de": "Kleintierabteilung der Lehrklinik; Öffnungszeiten bitte vorher telefonisch erfragen.",
+        "fr": "Service des petits animaux de l’hôpital universitaire ; appelez pour connaître les horaires."
       }
     }
   ],

@@ -66,7 +66,8 @@
         "nb": "Døgnavdeling med lege på vakt døgnet rundt, uten fridager. Poliklinikk (Ivasyuk Ave. 4, +380 50 537 10 00) daglig 9.00–21.00.",
         "sl": "Bolniški oddelek z dežurnim zdravnikom ves čas, brez prostih dni. Ambulanta (Ivasyuk Ave. 4, +380 50 537 10 00) vsak dan 9–21.",
         "hr": "Stacionar s dežurnim liječnikom non-stop, bez slobodnih dana. Ambulanta (Ivasyuk Ave. 4, +380 50 537 10 00) svaki dan 9:00–21:00.",
-        "de": "Stationäre Abteilung mit diensthabendem Tierarzt rund um die Uhr, ohne Ruhetage. Ambulanz (Ivasyuk Ave. 4, +380 50 537 10 00) täglich 9.00–21.00 Uhr."
+        "de": "Stationäre Abteilung mit diensthabendem Tierarzt rund um die Uhr, ohne Ruhetage. Ambulanz (Ivasyuk Ave. 4, +380 50 537 10 00) täglich 9.00–21.00 Uhr.",
+        "fr": "Service d’hospitalisation avec vétérinaire de garde 24 h/24, sans jour de fermeture. Consultations externes (av. Ivasiouk, 4 ; +380 50 537 10 00) : tous les jours 9 h–21 h."
       }
     },
     {
@@ -97,7 +98,8 @@
         "nb": "Akuttbehandling for katter og hunder hele døgnet; på Dmytrivska 39 akuttinngang nr. 3 kl. 8.00–20.00, inngang nr. 2 kl. 20.00–8.00.",
         "sl": "Nujna pomoč za mačke in pse 24 ur na dan; Dmytrivska 39: nujni vhod št. 3 od 8 do 20, vhod št. 2 od 20 do 8.",
         "hr": "Hitna skrb za mačke i pse 24 sata dnevno; na adresi Dmytrivska 39 hitni ulaz br. 3 8:00–20:00, ulaz br. 2 20:00–8:00.",
-        "de": "Notfallversorgung für Katzen und Hunde rund um die Uhr; in der Dmytrivska 39 Notaufnahme über Eingang Nr. 3 8.00–20.00 Uhr, über Eingang Nr. 2 20.00–8.00 Uhr."
+        "de": "Notfallversorgung für Katzen und Hunde rund um die Uhr; in der Dmytrivska 39 Notaufnahme über Eingang Nr. 3 8.00–20.00 Uhr, über Eingang Nr. 2 20.00–8.00 Uhr.",
+        "fr": "Urgences pour chats et chiens 24 h/24 ; au 39, rue Dmytrivska : entrée des urgences n° 3 de 8 h à 20 h, entrée n° 2 de 20 h à 8 h."
       }
     },
     {
@@ -128,7 +130,8 @@
         "nb": "Akuttbehandling for katter og hunder hele døgnet.",
         "sl": "Nujna pomoč za mačke in pse 24 ur na dan.",
         "hr": "Hitna skrb za mačke i pse 24 sata dnevno.",
-        "de": "Notfallversorgung für Katzen und Hunde rund um die Uhr."
+        "de": "Notfallversorgung für Katzen und Hunde rund um die Uhr.",
+        "fr": "Urgences pour chats et chiens 24 h/24."
       }
     },
     {
@@ -159,7 +162,8 @@
         "nb": "Åpent døgnet rundt etter avtale på forhånd; under portforbud tas bare akutte pasienter imot.",
         "sl": "Odprto ves čas po predhodnem naročilu; med policijsko uro sprejemajo samo nujne primere.",
         "hr": "Radi non-stop uz prethodni termin; za vrijeme policijskog sata primaju se samo hitni pacijenti.",
-        "de": "Rund um die Uhr nach vorheriger Terminvereinbarung geöffnet; während der Ausgangssperre werden nur dringende Fälle aufgenommen."
+        "de": "Rund um die Uhr nach vorheriger Terminvereinbarung geöffnet; während der Ausgangssperre werden nur dringende Fälle aufgenommen.",
+        "fr": "Ouvert 24 h/24 sur rendez-vous ; pendant le couvre-feu, seuls les cas urgents sont admis."
       }
     },
     {
@@ -189,7 +193,8 @@
         "nb": "Oppgitt åpningstid kl. 9.00–21.00, 364 dager i året; ring på forhånd ved hastetilfeller.",
         "sl": "Delovni čas 9–21, 364 dni v letu; za nujne primere vnaprej pokličite.",
         "hr": "Radno vrijeme 9:00–21:00, 364 dana u godini; za hitne slučajeve nazovi unaprijed.",
-        "de": "9.00–21.00 Uhr, 364 Tage im Jahr; bei dringenden Fällen bitte vorher anrufen."
+        "de": "9.00–21.00 Uhr, 364 Tage im Jahr; bei dringenden Fällen bitte vorher anrufen.",
+        "fr": "Ouvert 9 h–21 h, 364 jours par an ; cas urgents : appelez avant de venir."
       }
     },
     {
@@ -219,7 +224,8 @@
         "nb": "Klinikker kl. 9.00–19.00 (Darnytsia) og kl. 9.00–20.00 (Troyeshchyna, Pechersk); sengeavdelingen er åpen døgnet rundt.",
         "sl": "Ambulante 9–19 (Darnytsia) in 9–20 (Troyeshchyna, Pechersk); bolniški oddelek deluje ves čas.",
         "hr": "Klinike 9:00–19:00 (Darnytsia) i 9:00–20:00 (Troyeshchyna, Pechersk); stacionar radi non-stop.",
-        "de": "Kliniken 9.00–19.00 Uhr (Darnytsia) und 9.00–20.00 Uhr (Troyeshchyna, Pechersk); stationäre Abteilung rund um die Uhr."
+        "de": "Kliniken 9.00–19.00 Uhr (Darnytsia) und 9.00–20.00 Uhr (Troyeshchyna, Pechersk); stationäre Abteilung rund um die Uhr.",
+        "fr": "Cliniques : 9 h–19 h (Darnytsia) et 9 h–20 h (Troïechtchyna, Petchersk) ; service d’hospitalisation ouvert 24 h/24."
       }
     },
     {
@@ -262,7 +268,8 @@
         "nb": "Åpent hele døgnet, alle ukedager.",
         "sl": "Odprto 24/7, vsak dan v tednu.",
         "hr": "Otvoreno 24/7, svaki dan u tjednu.",
-        "de": "Rund um die Uhr geöffnet, an allen Wochentagen."
+        "de": "Rund um die Uhr geöffnet, an allen Wochentagen.",
+        "fr": "Ouvert 24 h/24, 7 j/7."
       }
     },
     {
@@ -293,7 +300,8 @@
         "nb": "Åpent hele døgnet, uten fridager eller helligdager.",
         "sl": "Odprto 24/7, brez prostih dni in praznikov.",
         "hr": "Otvoreno 24/7, bez slobodnih dana i blagdana.",
-        "de": "Rund um die Uhr geöffnet, ohne Ruhetage und auch feiertags."
+        "de": "Rund um die Uhr geöffnet, ohne Ruhetage und auch feiertags.",
+        "fr": "Ouvert 24 h/24, 7 j/7, sans jour de fermeture ni jour férié."
       }
     },
     {
@@ -324,7 +332,8 @@
         "nb": "Åpent hele døgnet, uten fridager eller helligdager.",
         "sl": "Odprto 24/7, brez prostih dni in praznikov.",
         "hr": "Otvoreno 24/7, bez slobodnih dana i blagdana.",
-        "de": "Rund um die Uhr geöffnet, ohne Ruhetage und auch feiertags."
+        "de": "Rund um die Uhr geöffnet, ohne Ruhetage und auch feiertags.",
+        "fr": "Ouvert 24 h/24, 7 j/7, sans jour de fermeture ni jour férié."
       }
     },
     {
@@ -355,7 +364,8 @@
         "nb": "Konsultasjoner etter timebestilling kl. 10.00–20.00; akutt innleggelse og hastetilfeller døgnet rundt; hele døgnet kun etter forhåndsavtale.",
         "sl": "Naročeni pregledi 10–20; nujna hospitalizacija in nujni primeri ves čas; 24/7 samo po predhodnem naročilu.",
         "hr": "Zakazani pregledi 10:00–20:00; hitna hospitalizacija i hitni slučajevi non-stop; 24/7 samo uz prethodni termin.",
-        "de": "Termine 10.00–20.00 Uhr; dringende stationäre Aufnahmen und Notfälle rund um die Uhr; rund um die Uhr nur nach vorheriger Terminvereinbarung."
+        "de": "Termine 10.00–20.00 Uhr; dringende stationäre Aufnahmen und Notfälle rund um die Uhr; rund um die Uhr nur nach vorheriger Terminvereinbarung.",
+        "fr": "Rendez-vous programmés 10 h–20 h ; hospitalisation d’urgence et cas urgents 24 h/24 ; accueil 24 h/24, 7 j/7 uniquement sur rendez-vous."
       }
     },
     {
@@ -385,7 +395,8 @@
         "nb": "Kl. 09.00–21.00; flere filialer i Lviv, Vynnyky og Busk.",
         "sl": "9–21; več poslovalnic v Lvivu, Vynnyki in Busku.",
         "hr": "9:00–21:00; nekoliko podružnica u Lvivu, Vynnyky i Busku.",
-        "de": "9.00–21.00 Uhr; mehrere Standorte in Lwiw, Vynnyky und Busk."
+        "de": "9.00–21.00 Uhr; mehrere Standorte in Lwiw, Vynnyky und Busk.",
+        "fr": "9 h–21 h ; plusieurs cliniques à Lviv, Vynnyky et Busk."
       }
     },
     {
@@ -416,7 +427,8 @@
         "nb": "Døgnåpen dyreklinikk; akuttmottak hele døgnet.",
         "sl": "Veterinarska ambulanta, odprta 24 ur na dan; nujni sprejem 24 ur na dan.",
         "hr": "Veterinarska klinika koja radi non-stop; hitni prijam non-stop.",
-        "de": "Tierklinik rund um die Uhr geöffnet; Notaufnahme rund um die Uhr."
+        "de": "Tierklinik rund um die Uhr geöffnet; Notaufnahme rund um die Uhr.",
+        "fr": "Clinique vétérinaire ouverte 24 h/24 ; accueil des urgences 24 h/24."
       }
     },
     {
@@ -446,7 +458,8 @@
         "nb": "Pasienter tas imot daglig kl. 9.00–21.00; hjemmebesøk om natten kl. 19.00–9.00; innlagte pasienter får pleie døgnet rundt.",
         "sl": "Pacienti se sprejemajo vsak dan 9–21; nočni obiski na domu 19–9; hospitalizirani pacienti oskrbovani ves čas.",
         "hr": "Pacijenti se primaju svaki dan 9:00–21:00; noćni kućni posjeti 19:00–9:00; hospitalizirani ljubimci pod skrbi su non-stop.",
-        "de": "Sprechstunde täglich 9.00–21.00 Uhr; nächtliche Hausbesuche 19.00–9.00 Uhr; stationäre Patienten werden rund um die Uhr betreut."
+        "de": "Sprechstunde täglich 9.00–21.00 Uhr; nächtliche Hausbesuche 19.00–9.00 Uhr; stationäre Patienten werden rund um die Uhr betreut.",
+        "fr": "Consultations tous les jours 9 h–21 h ; visites à domicile de nuit 19 h–9 h ; animaux hospitalisés suivis 24 h/24."
       }
     },
     {
@@ -476,7 +489,8 @@
         "nb": "Oppgitt åpningstid kl. 9.00–20.00 alle dager, ingen fridager; ring på forhånd ved hastetilfeller.",
         "sl": "Delovni čas 9–20 vsak dan, brez prostih dni; za nujne primere vnaprej pokličite.",
         "hr": "Radno vrijeme svaki dan 9:00–20:00, bez slobodnih dana; za hitne slučajeve nazovi unaprijed.",
-        "de": "Täglich 9.00–20.00 Uhr, ohne Ruhetage; bei dringenden Fällen bitte vorher anrufen."
+        "de": "Täglich 9.00–20.00 Uhr, ohne Ruhetage; bei dringenden Fällen bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–20 h, sans jour de fermeture ; cas urgents : appelez avant de venir."
       }
     },
     {
@@ -506,7 +520,8 @@
         "nb": "man–lør 9.00–19.00, stengt søndag; hastehjelp tilbys, ring på forhånd.",
         "sl": "Pon–sob 9–19, ned zaprto; nujna pomoč na voljo, vnaprej pokličite.",
         "hr": "pon–sub 9:00–19:00, nedjeljom zatvoreno; nude hitnu pomoć, nazovi unaprijed.",
-        "de": "Mo–Sa 9.00–19.00 Uhr, sonntags geschlossen; dringende Hilfe wird angeboten, bitte vorher anrufen."
+        "de": "Mo–Sa 9.00–19.00 Uhr, sonntags geschlossen; dringende Hilfe wird angeboten, bitte vorher anrufen.",
+        "fr": "Lun.–sam. 9 h–19 h, fermé le dimanche ; soins urgents possibles, appelez avant de venir."
       }
     },
     {
@@ -537,7 +552,8 @@
         "nb": "Åpent hele døgnet.",
         "sl": "Odprto 24/7.",
         "hr": "Otvoreno 24/7.",
-        "de": "Rund um die Uhr geöffnet."
+        "de": "Rund um die Uhr geöffnet.",
+        "fr": "Ouvert 24 h/24, 7 j/7."
       }
     },
     {
@@ -568,7 +584,8 @@
         "nb": "Dyreklinikk åpen døgnet rundt (dyrebutikk og laboratorium 9.00–20.00).",
         "sl": "Veterinarska ambulanta, odprta ves čas (trgovina za ljubljenčke in laboratorij 9–20).",
         "hr": "Veterinarska klinika radi non-stop (trgovina za ljubimce i laboratorij 9:00–20:00).",
-        "de": "Tierklinik rund um die Uhr geöffnet (Zoofachgeschäft und Labor 9.00–20.00 Uhr)."
+        "de": "Tierklinik rund um die Uhr geöffnet (Zoofachgeschäft und Labor 9.00–20.00 Uhr).",
+        "fr": "Clinique vétérinaire ouverte 24 h/24 (animalerie et laboratoire 9 h–20 h)."
       }
     },
     {
@@ -599,7 +616,8 @@
         "nb": "Avdelingen på Oleksiivska 14 er åpen 9.00–21.00; avdelingen i Saltivka har døgnåpent dyreapotek. Ring på forhånd.",
         "sl": "Poslovalnica Oleksiivska 14 odprta 9–21; poslovalnica Saltivka ima 24-urno veterinarsko lekarno. Vnaprej pokličite.",
         "hr": "Podružnica Oleksiivska 14 radi 9:00–21:00; podružnica Saltivka ima veterinarsku ljekarnu koja radi 24 sata. Nazovi unaprijed.",
-        "de": "Standort Oleksiivska 14 9.00–21.00 Uhr geöffnet; der Standort Saltivka hat eine Tierapotheke rund um die Uhr. Bitte vorher anrufen."
+        "de": "Standort Oleksiivska 14 9.00–21.00 Uhr geöffnet; der Standort Saltivka hat eine Tierapotheke rund um die Uhr. Bitte vorher anrufen.",
+        "fr": "Site du 14, rue Oleksiivska : 9 h–21 h ; le site de Saltivka dispose d’une pharmacie vétérinaire ouverte 24 h/24. Appelez avant de venir."
       }
     },
     {
@@ -629,7 +647,8 @@
         "nb": "Åpent alle dager kl. 09.00–22.00; nattimer etter forhåndsbestilling; innleggelsesavdeling.",
         "sl": "Odprto vsak dan 9–22; nočni termini po predhodnem naročilu; oddelek za hospitalizacijo.",
         "hr": "Otvoreno svaki dan 9:00–22:00; noćni termini uz prethodno naručivanje; stacionar.",
-        "de": "Täglich 9.00–22.00 Uhr geöffnet; nächtliche Termine nach vorheriger Buchung; stationäre Abteilung."
+        "de": "Täglich 9.00–22.00 Uhr geöffnet; nächtliche Termine nach vorheriger Buchung; stationäre Abteilung.",
+        "fr": "Ouvert tous les jours 9 h–22 h ; rendez-vous de nuit à réserver à l’avance ; service d’hospitalisation."
       }
     },
     {
@@ -659,7 +678,8 @@
         "nb": "man–tor, lør–søn 9.00–19.00, fre 11.00–19.00; innlagte pasienter følges opp hele døgnet.",
         "sl": "Pon–čet, sob–ned 9–19, pet 11–19; hospitalizacija ves čas.",
         "hr": "pon–čet, sub–ned 9:00–19:00, pet 11:00–19:00; stacionarna skrb non-stop.",
-        "de": "Mo–Do, Sa–So 9.00–19.00 Uhr, Fr 11.00–19.00 Uhr; stationäre Betreuung rund um die Uhr."
+        "de": "Mo–Do, Sa–So 9.00–19.00 Uhr, Fr 11.00–19.00 Uhr; stationäre Betreuung rund um die Uhr.",
+        "fr": "Lun.–jeu., sam.–dim. 9 h–19 h, ven. 11 h–19 h ; hospitalisation 24 h/24."
       }
     },
     {
@@ -689,7 +709,8 @@
         "nb": "man–lør 9.00–16.00.",
         "sl": "Pon–sob 9–16.",
         "hr": "pon–sub 9:00–16:00.",
-        "de": "Mo–Sa 9.00–16.00 Uhr."
+        "de": "Mo–Sa 9.00–16.00 Uhr.",
+        "fr": "Lun.–sam. 9 h–16 h."
       }
     },
     {
@@ -718,7 +739,8 @@
         "nb": "Alle dager 9.00–17.00.",
         "sl": "Vsak dan 9–17.",
         "hr": "Svaki dan 9:00–17:00.",
-        "de": "Täglich 9.00–17.00 Uhr."
+        "de": "Täglich 9.00–17.00 Uhr.",
+        "fr": "Tous les jours 9 h–17 h."
       }
     },
     {
@@ -763,7 +785,8 @@
         "nb": "Døgnsykehus åpent døgnet rundt, hastetilfeller tas imot uten timebestilling; poliklinikken i Reshetylivka daglig 9.00–15.00 etter timebestilling.",
         "sl": "Bolnišnica s hospitalizacijo, odprta ves čas, nujne primere sprejmejo brez naročila; ambulanta Reshetylivka vsak dan 9–15 po naročilu.",
         "hr": "Stacionar radi non-stop, hitni slučajevi primaju se bez naručivanja; ambulanta u Reshetylivki svaki dan 9:00–15:00 uz naručivanje.",
-        "de": "Tierklinik mit stationärer Aufnahme rund um die Uhr geöffnet, dringende Fälle ohne Termin; Ambulanz Reshetylivka täglich 9.00–15.00 Uhr nach Terminvereinbarung."
+        "de": "Tierklinik mit stationärer Aufnahme rund um die Uhr geöffnet, dringende Fälle ohne Termin; Ambulanz Reshetylivka täglich 9.00–15.00 Uhr nach Terminvereinbarung.",
+        "fr": "Hôpital avec hospitalisation ouvert 24 h/24, cas urgents reçus sans rendez-vous ; consultations externes à Reshetylivka tous les jours 9 h–15 h sur rendez-vous."
       }
     },
     {
@@ -793,7 +816,8 @@
         "nb": "Alle dager 9.00–19.00.",
         "sl": "Vsak dan 9–19.",
         "hr": "Svaki dan 9:00–19:00.",
-        "de": "Täglich 9.00–19.00 Uhr."
+        "de": "Täglich 9.00–19.00 Uhr.",
+        "fr": "Tous les jours 9 h–19 h."
       }
     },
     {
@@ -823,7 +847,8 @@
         "nb": "Alle dager 9.00–19.00 etter forhåndsbestilling; innleggelse og pleie hele døgnet.",
         "sl": "Vsak dan 9–19 po predhodnem naročilu; hospitalizacija ves čas.",
         "hr": "Svaki dan 9:00–19:00 uz prethodno naručivanje; stacionarna skrb non-stop.",
-        "de": "Täglich 9.00–19.00 Uhr nach vorheriger Buchung; stationäre Betreuung rund um die Uhr."
+        "de": "Täglich 9.00–19.00 Uhr nach vorheriger Buchung; stationäre Betreuung rund um die Uhr.",
+        "fr": "Tous les jours 9 h–19 h sur réservation ; hospitalisation 24 h/24."
       }
     },
     {
@@ -853,7 +878,8 @@
         "nb": "man–fre 9.00–18.30, lør 10.00–15.00, søndag stengt; akutt kirurgi mulig, ring på forhånd.",
         "sl": "Pon–pet 9–18.30, sob 10–15, ned zaprto; nujna operacija mogoča, vnaprej pokličite.",
         "hr": "pon–pet 9:00–18:30, sub 10:00–15:00, nedjeljom zatvoreno; moguća hitna operacija, nazovi unaprijed.",
-        "de": "Mo–Fr 9.00–18.30 Uhr, Sa 10.00–15.00 Uhr, sonntags geschlossen; dringende Operationen möglich, bitte vorher anrufen."
+        "de": "Mo–Fr 9.00–18.30 Uhr, Sa 10.00–15.00 Uhr, sonntags geschlossen; dringende Operationen möglich, bitte vorher anrufen.",
+        "fr": "Lun.–ven. 9 h–18 h 30, sam. 10 h–15 h, fermé le dimanche ; chirurgie d’urgence possible, appelez avant de venir."
       }
     },
     {
@@ -883,7 +909,8 @@
         "nb": "Alle dager 9.00–20.00.",
         "sl": "Vsak dan 9–20.",
         "hr": "Svaki dan 9:00–20:00.",
-        "de": "Täglich 9.00–20.00 Uhr."
+        "de": "Täglich 9.00–20.00 Uhr.",
+        "fr": "Tous les jours 9 h–20 h."
       }
     },
     {
@@ -913,7 +940,8 @@
         "nb": "man–fre 9.00–18.00, lør–søn 10.00–14.00.",
         "sl": "Pon–pet 9–18, sob–ned 10–14.",
         "hr": "pon–pet 9:00–18:00, sub–ned 10:00–14:00.",
-        "de": "Mo–Fr 9.00–18.00 Uhr, Sa–So 10.00–14.00 Uhr."
+        "de": "Mo–Fr 9.00–18.00 Uhr, Sa–So 10.00–14.00 Uhr.",
+        "fr": "Lun.–ven. 9 h–18 h, sam.–dim. 10 h–14 h."
       }
     },
     {
@@ -943,7 +971,8 @@
         "nb": "Etter timebestilling: man–lør kl. 9.00–20.00, søn kl. 10.00–18.00.",
         "sl": "Po naročilu: pon–sob 9–20, ned 10–18.",
         "hr": "Uz naručivanje: pon–sub 9:00–20:00, ned 10:00–18:00.",
-        "de": "Nach Terminvereinbarung: Mo–Sa 9.00–20.00 Uhr, So 10.00–18.00 Uhr."
+        "de": "Nach Terminvereinbarung: Mo–Sa 9.00–20.00 Uhr, So 10.00–18.00 Uhr.",
+        "fr": "Sur rendez-vous : lun.–sam. 9 h–20 h, dim. 10 h–18 h."
       }
     },
     {
@@ -973,7 +1002,8 @@
         "nb": "Alle dager 9.00–19.00.",
         "sl": "Vsak dan 9–19.",
         "hr": "Svaki dan 9:00–19:00.",
-        "de": "Täglich 9.00–19.00 Uhr."
+        "de": "Täglich 9.00–19.00 Uhr.",
+        "fr": "Tous les jours 9 h–19 h."
       }
     },
     {
@@ -1003,7 +1033,8 @@
         "nb": "man–fre 9.00–19.00, lør–søn 9.00–16.00.",
         "sl": "Pon–pet 9–19, sob–ned 9–16.",
         "hr": "pon–pet 9:00–19:00, sub–ned 9:00–16:00.",
-        "de": "Mo–Fr 9.00–19.00 Uhr, Sa–So 9.00–16.00 Uhr."
+        "de": "Mo–Fr 9.00–19.00 Uhr, Sa–So 9.00–16.00 Uhr.",
+        "fr": "Lun.–ven. 9 h–19 h, sam.–dim. 9 h–16 h."
       }
     },
     {
@@ -1033,7 +1064,8 @@
         "nb": "Filial 1 alle dager kl. 8.00–20.00; filial 2 (Zluky Ave. 18/178, +380 96 05 52 200) tor–man kl. 9.00–18.00.",
         "sl": "Poslovalnica 1 vsak dan 8–20; poslovalnica 2 (Zluky Ave. 18/178, +380 96 05 52 200) čet–pon 9–18.",
         "hr": "Podružnica 1 svaki dan 8:00–20:00; podružnica 2 (Zluky Ave. 18/178, +380 96 05 52 200) čet–pon 9:00–18:00.",
-        "de": "Standort 1 täglich 8.00–20.00 Uhr; Standort 2 (Zluky Ave. 18/178, +380 96 05 52 200) Do–Mo 9.00–18.00 Uhr."
+        "de": "Standort 1 täglich 8.00–20.00 Uhr; Standort 2 (Zluky Ave. 18/178, +380 96 05 52 200) Do–Mo 9.00–18.00 Uhr.",
+        "fr": "Site 1 : tous les jours 8 h–20 h ; site 2 (av. Zlouky, 18/178 ; +380 96 05 52 200) : jeu.–lun. 9 h–18 h."
       }
     }
   ],

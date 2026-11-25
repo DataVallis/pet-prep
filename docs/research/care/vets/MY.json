@@ -121,7 +121,8 @@
         "nb": "Akutt- og intensivsykehus åpent hele døgnet; ring på forhånd.",
         "sl": "Bolnišnica za nujno in intenzivno oskrbo 24 ur na dan; vnaprej pokličite.",
         "hr": "Bolnica za hitne i kritične slučajeve, 24 sata; nazovi unaprijed.",
-        "de": "Tierklinik für Notfälle und Intensivversorgung rund um die Uhr; bitte vorher anrufen."
+        "de": "Tierklinik für Notfälle und Intensivversorgung rund um die Uhr; bitte vorher anrufen.",
+        "fr": "Hôpital d’urgences et de soins intensifs ouvert 24 h/24 ; appelez avant de venir."
       }
     },
     {
@@ -165,7 +166,8 @@
         "nb": "Dyresykehus for katter og hunder hele døgnet. Konsultasjoner kl. 07.00–18.00, akuttmottak kl. 18.00–23.00, nattlig akuttmottak kl. 23.00–08.00 (ring før du kommer); akutte tilfeller trenger ikke timebestilling.",
         "sl": "Bolnišnica za mačke in pse 24 ur na dan. Pregledi 7–18, nujna pomoč 18–23, nočna nujna pomoč 23–8 (pred obiskom pokličite); za nujne primere naročanje ni potrebno.",
         "hr": "Bolnica za mačke i pse, 24 sata. Pregledi 07:00–18:00, hitna služba 18:00–23:00, noćna hitna služba 23:00–08:00 (nazovi prije dolaska); za hitne slučajeve termin nije potreban.",
-        "de": "Tierklinik für Katzen und Hunde, rund um die Uhr geöffnet. Sprechstunde 7.00–18.00 Uhr, Notdienst 18.00–23.00 Uhr, Nachtnotdienst 23.00–8.00 Uhr (bitte vor dem Besuch anrufen); Notfälle ohne Termin."
+        "de": "Tierklinik für Katzen und Hunde, rund um die Uhr geöffnet. Sprechstunde 7.00–18.00 Uhr, Notdienst 18.00–23.00 Uhr, Nachtnotdienst 23.00–8.00 Uhr (bitte vor dem Besuch anrufen); Notfälle ohne Termin.",
+        "fr": "Hôpital pour chats et chiens ouvert 24 h/24. Consultations 7 h–18 h, urgences 18 h–23 h, urgences de nuit 23 h–8 h (appelez avant de venir) ; pas de rendez-vous nécessaire pour les urgences."
       }
     },
     {
@@ -195,7 +197,8 @@
         "nb": "Akuttjeneste utenom åpningstid hele døgnet (vakttelefon utenom åpningstid +604 227 2984 eller 019-474 1262). Klinikken er åpen man–lør kl. 09.00–12.00, 14.00–17.00, 20.00–21.30; søn og helligdager kl. 09.00–12.00, 14.00–17.00.",
         "sl": "Nujna služba zunaj delovnega časa 24 ur na dan (telefon zunaj delovnega časa +604 227 2984 ali 019-474 1262). Ordinacija pon–sob 9–12, 14–17, 20–21.30; ned in prazniki 9–12, 14–17.",
         "hr": "Hitna služba izvan radnog vremena 24 sata (telefon izvan radnog vremena +604 227 2984 ili 019-474 1262). Radno vrijeme ambulante pon–sub 09:00–12:00, 14:00–17:00, 20:00–21:30; ned i blagdani 09:00–12:00, 14:00–17:00.",
-        "de": "Notdienst außerhalb der Sprechzeiten rund um die Uhr (Notfalltelefon +604 227 2984 oder 019-474 1262). Sprechzeiten Mo–Sa 9.00–12.00, 14.00–17.00, 20.00–21.30 Uhr; So und feiertags 9.00–12.00, 14.00–17.00 Uhr."
+        "de": "Notdienst außerhalb der Sprechzeiten rund um die Uhr (Notfalltelefon +604 227 2984 oder 019-474 1262). Sprechzeiten Mo–Sa 9.00–12.00, 14.00–17.00, 20.00–21.30 Uhr; So und feiertags 9.00–12.00, 14.00–17.00 Uhr.",
+        "fr": "Service d’urgence 24 h/24 en dehors des horaires (téléphone : +604 227 2984 ou 019-474 1262). Horaires de la clinique : lun.–sam. 9 h–12 h, 14 h–17 h, 20 h–21 h 30 ; dim. et jours fériés 9 h–12 h, 14 h–17 h."
       }
     },
     {
@@ -225,7 +228,8 @@
         "nb": "Klinikk man–fre kl. 10.00–18.00, lør–søn kl. 10.00–17.00; akuttklinikk alle dager kl. 18.00–22.00 (akuttillegg gjelder). Timebestilling for nødtilfeller på WhatsApp 011-3700 4549.",
         "sl": "Klinika pon–pet 10–18, sob–ned 10–17; nujna ambulanta vsak dan 18–22 (nujna pomoč se dodatno zaračuna). Naročanje nujnih primerov prek WhatsAppa 011-3700 4549.",
         "hr": "Ambulanta pon–pet 10:00–18:00, sub–ned 10:00–17:00; hitna ambulanta svaki dan 18:00–22:00 (uz doplatu za hitnu uslugu). Hitni termin preko WhatsAppa 011-3700 4549.",
-        "de": "Klinik Mo–Fr 10.00–18.00 Uhr, Sa–So 10.00–17.00 Uhr; Notfallklinik täglich 18.00–22.00 Uhr (Notfallgebühren fallen an). Notfalltermin per WhatsApp 011-3700 4549."
+        "de": "Klinik Mo–Fr 10.00–18.00 Uhr, Sa–So 10.00–17.00 Uhr; Notfallklinik täglich 18.00–22.00 Uhr (Notfallgebühren fallen an). Notfalltermin per WhatsApp 011-3700 4549.",
+        "fr": "Clinique lun.–ven. 10 h–18 h, sam.–dim. 10 h–17 h ; urgences tous les jours 18 h–22 h (tarif d’urgence applicable). Rendez-vous d’urgence par WhatsApp : 011-3700 4549."
       }
     },
     {
@@ -255,7 +259,8 @@
         "nb": "Konsultasjoner alle dager kl. 10.30–16.30 etter timebestilling (åpent alle dager, også helligdager); vakttelefon 012-686 7363.",
         "sl": "Pregledi vsak dan 10.30–16.30 po naročilu (odprto vsak dan, tudi ob praznikih); nujna linija 012-686 7363.",
         "hr": "Pregledi svaki dan 10:30–16:30 po terminu (radi svaki dan, i blagdanima); hitna linija 012-686 7363.",
-        "de": "Sprechstunde täglich 10.30–16.30 Uhr nach Terminvereinbarung (an jedem Tag geöffnet, auch feiertags); Notfallnummer 012-686 7363."
+        "de": "Sprechstunde täglich 10.30–16.30 Uhr nach Terminvereinbarung (an jedem Tag geöffnet, auch feiertags); Notfallnummer 012-686 7363.",
+        "fr": "Consultations tous les jours 10 h 30–16 h 30 sur rendez-vous (ouvert tous les jours, jours fériés compris) ; ligne d’urgence 012-686 7363."
       }
     },
     {
@@ -285,7 +290,8 @@
         "nb": "Åpent alle dager kl. 09.00–21.00; stengt på helligdager.",
         "sl": "Odprto vsak dan 9–21; ob praznikih zaprto.",
         "hr": "Radi svaki dan 09:00–21:00; blagdanima zatvoreno.",
-        "de": "Täglich 9.00–21.00 Uhr geöffnet; an Feiertagen geschlossen."
+        "de": "Täglich 9.00–21.00 Uhr geöffnet; an Feiertagen geschlossen.",
+        "fr": "Ouvert tous les jours 9 h–21 h ; fermé les jours fériés."
       }
     },
     {
@@ -315,7 +321,8 @@
         "nb": "Nattlige dyrlegetjenester 14.30–22.30 (pause 17.30–18.30).",
         "sl": "Večerna veterinarska služba 14.30–22.30 (odmor 17.30–18.30).",
         "hr": "Noćna veterinarska služba 14:30–22:30 (pauza 17:30–18:30).",
-        "de": "Tierärztlicher Abenddienst 14.30–22.30 Uhr (Pause 17.30–18.30 Uhr)."
+        "de": "Tierärztlicher Abenddienst 14.30–22.30 Uhr (Pause 17.30–18.30 Uhr).",
+        "fr": "Services vétérinaires de nuit 14 h 30–22 h 30 (pause 17 h 30–18 h 30)."
       }
     },
     {
@@ -344,7 +351,8 @@
         "nb": "Dagtid 09.30–18.30 (pause 13.00–14.00).",
         "sl": "Podnevi 9.30–18.30 (odmor 13–14).",
         "hr": "Dnevna smjena 09:30–18:30 (pauza 13:00–14:00).",
-        "de": "Tagsüber 9.30–18.30 Uhr (Pause 13.00–14.00 Uhr)."
+        "de": "Tagsüber 9.30–18.30 Uhr (Pause 13.00–14.00 Uhr).",
+        "fr": "En journée 9 h 30–18 h 30 (pause 13 h–14 h)."
       }
     },
     {
@@ -373,7 +381,8 @@
         "nb": "Dagtid 09.30–18.30 (pause 13.00–14.00).",
         "sl": "Podnevi 9.30–18.30 (odmor 13–14).",
         "hr": "Dnevna smjena 09:30–18:30 (pauza 13:00–14:00).",
-        "de": "Tagsüber 9.30–18.30 Uhr (Pause 13.00–14.00 Uhr)."
+        "de": "Tagsüber 9.30–18.30 Uhr (Pause 13.00–14.00 Uhr).",
+        "fr": "En journée 9 h 30–18 h 30 (pause 13 h–14 h)."
       }
     },
     {
@@ -403,7 +412,8 @@
         "nb": "Åpent alle dager; ring for å bekrefte tilgjengelighet utenom åpningstid.",
         "sl": "Odprto vsak dan; za razpoložljivost zunaj delovnega časa pokličite.",
         "hr": "Radi svaki dan; za dostupnost izvan radnog vremena nazovi.",
-        "de": "Täglich geöffnet; Erreichbarkeit außerhalb der Öffnungszeiten bitte telefonisch erfragen."
+        "de": "Täglich geöffnet; Erreichbarkeit außerhalb der Öffnungszeiten bitte telefonisch erfragen.",
+        "fr": "Ouvert tous les jours ; appelez pour confirmer la disponibilité en dehors des horaires."
       }
     },
     {
@@ -432,7 +442,8 @@
         "nb": "Alle dager 10.00–21.00.",
         "sl": "Vsak dan 10–21.",
         "hr": "Svaki dan 10:00–21:00.",
-        "de": "Täglich 10.00–21.00 Uhr."
+        "de": "Täglich 10.00–21.00 Uhr.",
+        "fr": "Tous les jours 10 h–21 h."
       }
     },
     {
@@ -462,7 +473,8 @@
         "nb": "Alle dager 10.00–23.00 (siste time 22.30).",
         "sl": "Vsak dan 10–23 (zadnji termin 22.30).",
         "hr": "Svaki dan 10:00–23:00 (zadnji termin 22:30).",
-        "de": "Täglich 10.00–23.00 Uhr (letzter Termin 22.30 Uhr)."
+        "de": "Täglich 10.00–23.00 Uhr (letzter Termin 22.30 Uhr).",
+        "fr": "Tous les jours 10 h–23 h (dernier rendez-vous 22 h 30)."
       }
     },
     {
@@ -492,7 +504,8 @@
         "nb": "Alle dager 10.00–19.00 (siste time 18.30).",
         "sl": "Vsak dan 10–19 (zadnji termin 18.30).",
         "hr": "Svaki dan 10:00–19:00 (zadnji termin 18:30).",
-        "de": "Täglich 10.00–19.00 Uhr (letzter Termin 18.30 Uhr)."
+        "de": "Täglich 10.00–19.00 Uhr (letzter Termin 18.30 Uhr).",
+        "fr": "Tous les jours 10 h–19 h (dernier rendez-vous 18 h 30)."
       }
     },
     {
@@ -521,7 +534,8 @@
         "nb": "Alle dager 10.00–21.30.",
         "sl": "Vsak dan 10–21.30.",
         "hr": "Svaki dan 10:00–21:30.",
-        "de": "Täglich 10.00–21.30 Uhr."
+        "de": "Täglich 10.00–21.30 Uhr.",
+        "fr": "Tous les jours 10 h–21 h 30."
       }
     },
     {
@@ -550,7 +564,8 @@
         "nb": "Alle dager 10.00–19.00 (siste time 18.30).",
         "sl": "Vsak dan 10–19 (zadnji termin 18.30).",
         "hr": "Svaki dan 10:00–19:00 (zadnji termin 18:30).",
-        "de": "Täglich 10.00–19.00 Uhr (letzter Termin 18.30 Uhr)."
+        "de": "Täglich 10.00–19.00 Uhr (letzter Termin 18.30 Uhr).",
+        "fr": "Tous les jours 10 h–19 h (dernier rendez-vous 18 h 30)."
       }
     },
     {
@@ -580,7 +595,8 @@
         "nb": "Hverdager 10.00–20.00; helger og helligdager 10.00–16.00.",
         "sl": "Ob delavnikih 10–20; ob koncih tedna in praznikih 10–16.",
         "hr": "Radnim danom 10:00–20:00; vikendom i blagdanima 10:00–16:00.",
-        "de": "Werktags 10.00–20.00 Uhr; am Wochenende und feiertags 10.00–16.00 Uhr."
+        "de": "Werktags 10.00–20.00 Uhr; am Wochenende und feiertags 10.00–16.00 Uhr.",
+        "fr": "En semaine 10 h–20 h ; week-ends et jours fériés 10 h–16 h."
       }
     },
     {
@@ -609,7 +625,8 @@
         "nb": "man–tor 9.00–11.30, 13.00–16.30, 18.00–21.30; fre–søn 9.00–11.30, 13.00–16.30, 18.00–20.00.",
         "sl": "Pon–čet 9–11.30, 13–16.30, 18–21.30; pet–ned 9–11.30, 13–16.30, 18–20.",
         "hr": "pon–čet 09:00–11:30, 13:00–16:30, 18:00–21:30; pet–ned 09:00–11:30, 13:00–16:30, 18:00–20:00.",
-        "de": "Mo–Do 9.00–11.30, 13.00–16.30, 18.00–21.30 Uhr; Fr–So 9.00–11.30, 13.00–16.30, 18.00–20.00 Uhr."
+        "de": "Mo–Do 9.00–11.30, 13.00–16.30, 18.00–21.30 Uhr; Fr–So 9.00–11.30, 13.00–16.30, 18.00–20.00 Uhr.",
+        "fr": "Lun.–jeu. 9 h–11 h 30, 13 h–16 h 30, 18 h–21 h 30 ; ven.–dim. 9 h–11 h 30, 13 h–16 h 30, 18 h–20 h."
       }
     },
     {
@@ -638,7 +655,8 @@
         "nb": "man–tor 8.30–11.30, 12.00–16.30, 18.00–21.30; fre–søn 8.30–12.00, 13.30–16.30.",
         "sl": "Pon–čet 8.30–11.30, 12–16.30, 18–21.30; pet–ned 8.30–12, 13.30–16.30.",
         "hr": "pon–čet 08:30–11:30, 12:00–16:30, 18:00–21:30; pet–ned 08:30–12:00, 13:30–16:30.",
-        "de": "Mo–Do 8.30–11.30, 12.00–16.30, 18.00–21.30 Uhr; Fr–So 8.30–12.00, 13.30–16.30 Uhr."
+        "de": "Mo–Do 8.30–11.30, 12.00–16.30, 18.00–21.30 Uhr; Fr–So 8.30–12.00, 13.30–16.30 Uhr.",
+        "fr": "Lun.–jeu. 8 h 30–11 h 30, 12 h–16 h 30, 18 h–21 h 30 ; ven.–dim. 8 h 30–12 h, 13 h 30–16 h 30."
       }
     },
     {
@@ -667,7 +685,8 @@
         "nb": "Hverdager 9.30–19.30; helger 8.30–17.00 (lunsj 13.00–14.00).",
         "sl": "Ob delavnikih 9.30–19.30; ob koncih tedna 8.30–17 (kosilo 13–14).",
         "hr": "Radnim danom 09:30–19:30; vikendom 08:30–17:00 (pauza za ručak 13:00–14:00).",
-        "de": "Werktags 9.30–19.30 Uhr; am Wochenende 8.30–17.00 Uhr (Mittagspause 13.00–14.00 Uhr)."
+        "de": "Werktags 9.30–19.30 Uhr; am Wochenende 8.30–17.00 Uhr (Mittagspause 13.00–14.00 Uhr).",
+        "fr": "En semaine 9 h 30–19 h 30 ; week-ends 8 h 30–17 h (pause déjeuner 13 h–14 h)."
       }
     },
     {
@@ -697,7 +716,8 @@
         "nb": "Man–fre 10.00–18.00, lør 10.00–16.00 (lunsj 13.00–14.00).",
         "sl": "Pon–pet 10–18, sob 10–16 (kosilo 13–14).",
         "hr": "pon–pet 10:00–18:00, sub 10:00–16:00 (pauza za ručak 13:00–14:00).",
-        "de": "Mo–Fr 10.00–18.00 Uhr, Sa 10.00–16.00 Uhr (Mittagspause 13.00–14.00 Uhr)."
+        "de": "Mo–Fr 10.00–18.00 Uhr, Sa 10.00–16.00 Uhr (Mittagspause 13.00–14.00 Uhr).",
+        "fr": "Lun.–ven. 10 h–18 h, sam. 10 h–16 h (pause déjeuner 13 h–14 h)."
       }
     },
     {

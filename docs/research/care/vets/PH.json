@@ -131,7 +131,8 @@
         "nb": "Akutt, kirurgi og innleggelse hele døgnet, hver dag; vakttelefon hele døgnet +63 956 308 6855, også +63 32 425 9197.",
         "sl": "Nujna pomoč, kirurgija in bolnišnična oskrba 24 ur na dan; linija 24 ur na dan +63 956 308 6855, tudi +63 32 425 9197.",
         "hr": "Hitni slučajevi, operacije i hospitalizacija 24 sata dnevno; linija 24/7 +63 956 308 6855, također +63 32 425 9197.",
-        "de": "Notfallversorgung, Operationen und stationäre Aufnahme rund um die Uhr; Telefon rund um die Uhr +63 956 308 6855, außerdem +63 32 425 9197."
+        "de": "Notfallversorgung, Operationen und stationäre Aufnahme rund um die Uhr; Telefon rund um die Uhr +63 956 308 6855, außerdem +63 32 425 9197.",
+        "fr": "Urgences, chirurgie et hospitalisation 24 h/24, tous les jours ; ligne 24 h/24, 7 j/7 : +63 956 308 6855 ou +63 32 425 9197."
       }
     },
     {
@@ -161,7 +162,8 @@
         "nb": "Konsultasjoner og oppmøte uten timebestilling man–lør kl. 8.00–20.00, søn kl. 9.00–17.00; for nødtilfeller hele døgnet bruk sykehuset i Banilad.",
         "sl": "Pregledi in sprejem brez naročanja pon–sob 8–20, ned 9–17; za nujne primere 24 ur na dan obiščite bolnišnico Banilad.",
         "hr": "Pregledi i dolasci bez termina pon–sub 8:00–20:00, ned 9:00–17:00; za hitne slučajeve 24 sata obrati se bolnici Banilad.",
-        "de": "Sprechstunde und Behandlung ohne Termin Mo–Sa 8.00–20.00 Uhr, So 9.00–17.00 Uhr; für Notfälle rund um die Uhr bitte die Klinik in Banilad aufsuchen."
+        "de": "Sprechstunde und Behandlung ohne Termin Mo–Sa 8.00–20.00 Uhr, So 9.00–17.00 Uhr; für Notfälle rund um die Uhr bitte die Klinik in Banilad aufsuchen.",
+        "fr": "Consultations avec ou sans rendez-vous lun.–sam. 8 h–20 h, dim. 9 h–17 h ; pour les urgences 24 h/24, adressez-vous à l’hôpital de Banilad."
       }
     },
     {
@@ -191,7 +193,8 @@
         "nb": "Konsultasjoner og oppmøte uten timebestilling man–lør kl. 8.00–20.00, søn kl. 9.00–17.00; for nødtilfeller hele døgnet bruk sykehuset i Banilad.",
         "sl": "Pregledi in obiski brez naročanja pon–sob 8–20, ned 9–17; za nujne primere 24 ur na dan obiščite bolnišnico Banilad.",
         "hr": "Pregledi i dolasci bez termina pon–sub 8:00–20:00, ned 9:00–17:00; za hitne slučajeve 24 sata obrati se bolnici Banilad.",
-        "de": "Sprechstunde und Behandlung ohne Termin Mo–Sa 8.00–20.00 Uhr, So 9.00–17.00 Uhr; für Notfälle rund um die Uhr bitte die Klinik in Banilad aufsuchen."
+        "de": "Sprechstunde und Behandlung ohne Termin Mo–Sa 8.00–20.00 Uhr, So 9.00–17.00 Uhr; für Notfälle rund um die Uhr bitte die Klinik in Banilad aufsuchen.",
+        "fr": "Consultations et accueil sans rendez-vous lun.–sam. 8 h–20 h, dim. 9 h–17 h ; pour les urgences 24 h/24, adressez-vous à l’hôpital de Banilad."
       }
     },
     {
@@ -221,7 +224,8 @@
         "nb": "Åpent man–søn 8.00–17.00; ring på forhånd.",
         "sl": "Odprto pon–ned 8–17; vnaprej pokličite.",
         "hr": "Otvoreno pon–ned 8:00–17:00; nazovi unaprijed.",
-        "de": "Mo–So 8.00–17.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Mo–So 8.00–17.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 8 h–17 h ; appelez avant de venir."
       }
     },
     {
@@ -251,7 +255,8 @@
         "nb": "Åpent man–lør 9.00–18.00; ring på forhånd for søndager.",
         "sl": "Odprto pon–sob 9–18; za nedelje vnaprej pokličite.",
         "hr": "Otvoreno pon–sub 9:00–18:00; za nedjelju nazovi unaprijed.",
-        "de": "Mo–Sa 9.00–18.00 Uhr geöffnet; sonntags bitte vorher anrufen."
+        "de": "Mo–Sa 9.00–18.00 Uhr geöffnet; sonntags bitte vorher anrufen.",
+        "fr": "Ouvert lun.–sam. 9 h–18 h ; le dimanche, appelez avant de venir."
       }
     },
     {
@@ -281,7 +286,8 @@
         "nb": "Åpent man–lør 9.00–18.00; ring på forhånd for søndager.",
         "sl": "Odprto pon–sob 9–18; za nedelje vnaprej pokličite.",
         "hr": "Otvoreno pon–sub 9:00–18:00; za nedjelju nazovi unaprijed.",
-        "de": "Mo–Sa 9.00–18.00 Uhr geöffnet; sonntags bitte vorher anrufen."
+        "de": "Mo–Sa 9.00–18.00 Uhr geöffnet; sonntags bitte vorher anrufen.",
+        "fr": "Ouvert lun.–sam. 9 h–18 h ; appelez avant de venir le dimanche."
       }
     },
     {
@@ -310,7 +316,8 @@
         "nb": "Åpent man–lør 9.00–18.00; stengt søndager.",
         "sl": "Odprto pon–sob 9–18; ob nedeljah zaprto.",
         "hr": "Otvoreno pon–sub 9:00–18:00; nedjeljom zatvoreno.",
-        "de": "Mo–Sa 9.00–18.00 Uhr geöffnet; sonntags geschlossen."
+        "de": "Mo–Sa 9.00–18.00 Uhr geöffnet; sonntags geschlossen.",
+        "fr": "Ouvert lun.–sam. 9 h–18 h ; fermé le dimanche."
       }
     },
     {
@@ -339,7 +346,8 @@
         "nb": "Åpent man–lør 8.00–17.00; stengt søndager; se nettsiden for telefonnummer.",
         "sl": "Odprto pon–sob 8–17; ob nedeljah zaprto; telefon je na spletni strani.",
         "hr": "Otvoreno pon–sub 8:00–17:00; nedjeljom zatvoreno; telefon potraži na web-stranici.",
-        "de": "Mo–Sa 8.00–17.00 Uhr geöffnet; sonntags geschlossen; Telefonnummer siehe Website."
+        "de": "Mo–Sa 8.00–17.00 Uhr geöffnet; sonntags geschlossen; Telefonnummer siehe Website.",
+        "fr": "Ouvert lun.–sam. 8 h–17 h ; fermé le dimanche ; téléphone sur le site web."
       }
     },
     {
@@ -368,7 +376,8 @@
         "nb": "Akuttvakt for kunder hele døgnet; besøkstid kl. 09.30–20.30; ring på forhånd.",
         "sl": "Dežurna nujna služba 24 ur na dan za stranke; čas obiskov 9.30–20.30; vnaprej pokličite.",
         "hr": "Hitna služba za klijente 24 sata, na pozivu; vrijeme posjeta 9:30–20:30; nazovi unaprijed.",
-        "de": "Notdienst rund um die Uhr für Kunden; Besuchszeiten 9.30–20.30 Uhr; bitte vorher anrufen."
+        "de": "Notdienst rund um die Uhr für Kunden; Besuchszeiten 9.30–20.30 Uhr; bitte vorher anrufen.",
+        "fr": "Service d’urgence de garde 24 h/24 pour les clients ; horaires d’accueil 9 h 30–20 h 30 ; appelez avant de venir."
       }
     },
     {
@@ -396,7 +405,8 @@
         "nb": "Markedsfører akuttbehandling hele døgnet; generell åpningstid man–lør kl. 08.00–20.00, søn kl. 09.00–17.00; opplysninger om filialer via henvendelsesskjema eller e-post pethubvetclinic@gmail.com.",
         "sl": "Nujna pomoč 24 ur na dan; redni čas pon–sob 8–20, ned 9–17; podatke o poslovalnici dobite prek obrazca za povpraševanje ali na pethubvetclinic@gmail.com.",
         "hr": "Oglašava hitnu skrb 24/7; opće radno vrijeme pon–sub 8:00–20:00, ned 9:00–17:00; podatke o podružnicama dobit ćeš putem obrasca za upit ili e-poštom na pethubvetclinic@gmail.com.",
-        "de": "Wirbt mit Notfallversorgung rund um die Uhr; allgemeine Öffnungszeiten Mo–Sa 8.00–20.00 Uhr, So 9.00–17.00 Uhr; Angaben zu den Standorten über das Anfrageformular oder per E-Mail an pethubvetclinic@gmail.com."
+        "de": "Wirbt mit Notfallversorgung rund um die Uhr; allgemeine Öffnungszeiten Mo–Sa 8.00–20.00 Uhr, So 9.00–17.00 Uhr; Angaben zu den Standorten über das Anfrageformular oder per E-Mail an pethubvetclinic@gmail.com.",
+        "fr": "Annonce des urgences 24 h/24, 7 j/7 ; horaires habituels lun.–sam. 8 h–20 h, dim. 9 h–17 h ; coordonnées des sites via le formulaire ou par e-mail : pethubvetclinic@gmail.com."
       }
     },
     {
@@ -424,7 +434,8 @@
         "nb": "Gruppen oppgir akuttjeneste; kontakt nærmeste avdeling for å bekrefte åpningstider.",
         "sl": "Skupina oglašuje nujno pomoč; delovni čas preverite pri najbližji poslovalnici.",
         "hr": "Grupa oglašava hitne usluge; radno vrijeme provjeri u najbližoj podružnici.",
-        "de": "Die Gruppe wirbt mit Notdiensten; Öffnungszeiten bitte beim nächstgelegenen Standort erfragen."
+        "de": "Die Gruppe wirbt mit Notdiensten; Öffnungszeiten bitte beim nächstgelegenen Standort erfragen.",
+        "fr": "Le groupe annonce un service d’urgences ; contactez la clinique la plus proche pour confirmer les horaires."
       }
     },
     {
@@ -454,7 +465,8 @@
         "nb": "Åpent alle dager kl. 09.00–19.00; tar imot nødtilfeller utenom åpningstid over natten; ring på forhånd.",
         "sl": "Odprto vsak dan 9–19; nujne primere sprejema tudi ponoči; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 9:00–19:00; noću prima hitne slučajeve izvan radnog vremena; nazovi unaprijed.",
-        "de": "Täglich 9.00–19.00 Uhr geöffnet; Notfälle außerhalb der Öffnungszeiten werden auch über Nacht angenommen; bitte vorher anrufen."
+        "de": "Täglich 9.00–19.00 Uhr geöffnet; Notfälle außerhalb der Öffnungszeiten werden auch über Nacht angenommen; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–19 h ; accepte les urgences la nuit, hors horaires ; appelez avant de venir."
       }
     },
     {
@@ -483,7 +495,8 @@
         "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
         "sl": "Odprto vsak dan 9–19; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 9:00–19:00; nazovi unaprijed.",
-        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–19 h ; appelez avant de venir."
       }
     },
     {
@@ -512,7 +525,8 @@
         "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
         "sl": "Odprto vsak dan 9–19; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 9:00–19:00; nazovi unaprijed.",
-        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–19 h ; appelez avant de venir."
       }
     },
     {
@@ -541,7 +555,8 @@
         "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
         "sl": "Odprto vsak dan 9–19; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 9:00–19:00; nazovi unaprijed.",
-        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–19 h ; appelez avant de venir."
       }
     },
     {
@@ -570,7 +585,8 @@
         "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
         "sl": "Odprto vsak dan 9–19; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 9:00–19:00; nazovi unaprijed.",
-        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–19 h ; appelez avant de venir."
       }
     },
     {
@@ -600,7 +616,8 @@
         "nb": "Åpent alle dager kl. 10.00–19.00; ring på forhånd.",
         "sl": "Odprto vsak dan 10–19; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 10:00–19:00; nazovi unaprijed.",
-        "de": "Täglich 10.00–19.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Täglich 10.00–19.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 10 h–19 h ; appelez avant de venir."
       }
     },
     {
@@ -630,7 +647,8 @@
         "nb": "Åpent alle dager kl. 09.00–19.00; ring på forhånd.",
         "sl": "Odprto vsak dan 9–19; vnaprej pokličite.",
         "hr": "Otvoreno svaki dan 9:00–19:00; nazovi unaprijed.",
-        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen."
+        "de": "Täglich 9.00–19.00 Uhr geöffnet; bitte vorher anrufen.",
+        "fr": "Ouvert tous les jours 9 h–19 h ; appelez avant de venir."
       }
     },
     {
@@ -660,7 +678,8 @@
         "nb": "Timebestilling på telefon eller via sykehusets Facebook-side.",
         "sl": "Naročanje po telefonu ali prek bolnišnične strani na Facebooku.",
         "hr": "Naručivanje telefonom ili preko Facebook stranice bolnice.",
-        "de": "Termine telefonisch oder über die Facebook-Seite der Tierklinik."
+        "de": "Termine telefonisch oder über die Facebook-Seite der Tierklinik.",
+        "fr": "Rendez-vous par téléphone ou via la page Facebook de l’hôpital."
       }
     },
     {
@@ -689,7 +708,8 @@
         "nb": "Vanlig drift i kontortiden; ring på forhånd.",
         "sl": "Redni delovni čas; vnaprej pokličite.",
         "hr": "Radi u uobičajenom uredskom radnom vremenu; nazovi unaprijed.",
-        "de": "Reguläre Bürozeiten; bitte vorher anrufen."
+        "de": "Reguläre Bürozeiten; bitte vorher anrufen.",
+        "fr": "Horaires de bureau habituels ; appelez avant de venir."
       }
     },
     {
@@ -719,7 +739,8 @@
         "nb": "Åpent man–lør 8.00–17.00, også helligdager; ring på forhånd.",
         "sl": "Odprto pon–sob 8–17, tudi ob praznikih; vnaprej pokličite.",
         "hr": "Otvoreno pon–sub 8:00–17:00, uključujući blagdane; nazovi unaprijed.",
-        "de": "Mo–Sa 8.00–17.00 Uhr geöffnet, auch feiertags; bitte vorher anrufen."
+        "de": "Mo–Sa 8.00–17.00 Uhr geöffnet, auch feiertags; bitte vorher anrufen.",
+        "fr": "Ouvert lun.–sam. 8 h–17 h, jours fériés compris ; appelez avant de venir."
       }
     },
     {
@@ -749,7 +770,8 @@
         "nb": "Offentlig kontor åpent man–fre 8.00–17.00; registrering, vaksinasjon og programmer for sterilisering/kastrering, ikke et akuttsykehus.",
         "sl": "Državni urad, odprt pon–pet 8–17; registracija, cepljenje in programi sterilizacije/kastracije; ni bolnišnica za nujne primere.",
         "hr": "Državni ured, otvoreno pon–pet 8:00–17:00; registracija, cijepljenje i programi sterilizacije/kastracije, nije hitna bolnica.",
-        "de": "Behörde, Mo–Fr 8.00–17.00 Uhr geöffnet; Registrierung, Impfungen und Kastrationsprogramme, keine Notfallklinik."
+        "de": "Behörde, Mo–Fr 8.00–17.00 Uhr geöffnet; Registrierung, Impfungen und Kastrationsprogramme, keine Notfallklinik.",
+        "fr": "Service public ouvert lun.–ven. 8 h–17 h ; enregistrement, vaccination et programmes de stérilisation ; ce n’est pas un hôpital d’urgences."
       }
     },
     {
@@ -779,7 +801,8 @@
         "nb": "Offentlig kontor åpent 8.00–17.00; ikke et akuttsykehus.",
         "sl": "Državni urad, odprt 8–17; ni nujna bolnišnica.",
         "hr": "Državni ured, otvoreno 8:00–17:00; nije hitna bolnica.",
-        "de": "Behörde, 8.00–17.00 Uhr geöffnet; keine Notfallklinik."
+        "de": "Behörde, 8.00–17.00 Uhr geöffnet; keine Notfallklinik.",
+        "fr": "Service public ouvert 8 h–17 h ; pas un hôpital d’urgence."
       }
     },
     {
@@ -809,7 +832,8 @@
         "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
         "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico.",
         "hr": "Nazovi podružnicu za aktualno radno vrijeme i dogovor za hitne slučajeve izvan radnog vremena.",
-        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen."
+        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen.",
+        "fr": "Appelez l’établissement pour connaître les horaires actuels et les modalités d’urgence hors horaires."
       }
     },
     {
@@ -839,7 +863,8 @@
         "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
         "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico.",
         "hr": "Nazovi podružnicu za aktualno radno vrijeme i dogovor za hitne slučajeve izvan radnog vremena.",
-        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen."
+        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen.",
+        "fr": "Appelez le site pour connaître les horaires actuels et la prise en charge des urgences hors horaires."
       }
     },
     {
@@ -869,7 +894,8 @@
         "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
         "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico.",
         "hr": "Nazovi podružnicu za aktualno radno vrijeme i dogovor za hitne slučajeve izvan radnog vremena.",
-        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte bei der Filiale erfragen."
+        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte bei der Filiale erfragen.",
+        "fr": "Appelez l’établissement pour connaître les horaires actuels et les modalités d’urgence hors horaires."
       }
     },
     {
@@ -899,7 +925,8 @@
         "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
         "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico.",
         "hr": "Nazovi podružnicu za aktualno radno vrijeme i dogovor za hitne slučajeve izvan radnog vremena.",
-        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen."
+        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen.",
+        "fr": "Appelez le site pour connaître les horaires actuels et la prise en charge des urgences hors horaires."
       }
     },
     {
@@ -929,7 +956,8 @@
         "nb": "Ring filialen for å høre gjeldende åpningstider og vaktordning utenfor åpningstid.",
         "sl": "Za trenutni delovni čas in nujno pomoč zunaj rednega časa pokličite poslovalnico.",
         "hr": "Nazovi podružnicu za aktualno radno vrijeme i dogovor za hitne slučajeve izvan radnog vremena.",
-        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen."
+        "de": "Aktuelle Öffnungszeiten und Notdienstregelung außerhalb der Sprechzeiten bitte beim Standort erfragen.",
+        "fr": "Appelez l’établissement pour connaître les horaires actuels et les modalités d’urgence hors horaires."
       }
     },
     {
@@ -959,7 +987,8 @@
         "nb": "Kun katter. Åpent alle dager kl. 8.00–20.00; nødtilfeller tas imot til kl. 23.00.",
         "sl": "Samo mačke. Odprto vsak dan 8–20; nujni primeri do 23.",
         "hr": "Samo mačke. Otvoreno svaki dan 8:00–20:00; hitni slučajevi primaju se do 23:00.",
-        "de": "Nur Katzen. Täglich 8.00–20.00 Uhr geöffnet; Notfälle werden bis 23.00 Uhr angenommen."
+        "de": "Nur Katzen. Täglich 8.00–20.00 Uhr geöffnet; Notfälle werden bis 23.00 Uhr angenommen.",
+        "fr": "Chats uniquement. Ouvert tous les jours 8 h–20 h ; urgences acceptées jusqu’à 23 h."
       }
     },
     {
@@ -989,7 +1018,8 @@
         "nb": "Kun katter. Åpent søn–fre kl. 9.00–20.00, lør kl. 8.00–20.00; nødtilfeller tas imot til kl. 21.00.",
         "sl": "Samo mačke. Ned–pet 9–20, sob 8–20; nujni primeri do 21.",
         "hr": "Samo mačke. Otvoreno ned–pet 9:00–20:00, sub 8:00–20:00; hitni slučajevi primaju se do 21:00.",
-        "de": "Nur Katzen. So–Fr 9.00–20.00 Uhr, Sa 8.00–20.00 Uhr geöffnet; Notfälle werden bis 21.00 Uhr angenommen."
+        "de": "Nur Katzen. So–Fr 9.00–20.00 Uhr, Sa 8.00–20.00 Uhr geöffnet; Notfälle werden bis 21.00 Uhr angenommen.",
+        "fr": "Chats uniquement. Ouvert dim.–ven. 9 h–20 h, sam. 8 h–20 h ; urgences acceptées jusqu’à 21 h."
       }
     },
     {
@@ -1019,7 +1049,8 @@
         "nb": "Kun katter. Åpent alle dager kl. 9.00–19.00; kl. 18.00–19.00 er forbeholdt nødtilfeller.",
         "sl": "Samo mačke. Odprto vsak dan 9–19; čas 18–19 je namenjen nujnim primerom.",
         "hr": "Samo mačke. Otvoreno svaki dan 9:00–19:00; 18:00–19:00 rezervirano za hitne slučajeve.",
-        "de": "Nur Katzen. Täglich 9.00–19.00 Uhr geöffnet; 18.00–19.00 Uhr sind Notfällen vorbehalten."
+        "de": "Nur Katzen. Täglich 9.00–19.00 Uhr geöffnet; 18.00–19.00 Uhr sind Notfällen vorbehalten.",
+        "fr": "Chats uniquement. Ouvert tous les jours 9 h–19 h ; créneau 18 h–19 h réservé aux urgences."
       }
     },
     {
@@ -1049,7 +1080,8 @@
         "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd.",
         "sl": "Običajno odprto vsak dan 9–18; na veliki petek zaprto; vnaprej pokličite.",
         "hr": "Obično otvoreno svaki dan 9:00–18:00; na Veliki petak zatvoreno; nazovi unaprijed.",
-        "de": "In der Regel täglich 9.00–18.00 Uhr geöffnet; am Karfreitag geschlossen; bitte vorher anrufen."
+        "de": "In der Regel täglich 9.00–18.00 Uhr geöffnet; am Karfreitag geschlossen; bitte vorher anrufen.",
+        "fr": "En général ouvert tous les jours 9 h–18 h ; fermé le Vendredi saint ; appelez avant de venir."
       }
     },
     {
@@ -1079,7 +1111,8 @@
         "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd.",
         "sl": "Običajno odprto vsak dan 9–18; na veliki petek zaprto; vnaprej pokličite.",
         "hr": "Obično otvoreno svaki dan 9:00–18:00; na Veliki petak zatvoreno; nazovi unaprijed.",
-        "de": "In der Regel täglich 9.00–18.00 Uhr geöffnet; am Karfreitag geschlossen; bitte vorher anrufen."
+        "de": "In der Regel täglich 9.00–18.00 Uhr geöffnet; am Karfreitag geschlossen; bitte vorher anrufen.",
+        "fr": "En général ouvert tous les jours 9 h–18 h ; fermé le Vendredi saint ; appelez avant de venir."
       }
     },
     {
@@ -1109,7 +1142,8 @@
         "nb": "Vanligvis åpent daglig 9.00–18.00; stengt langfredag; ring på forhånd.",
         "sl": "Običajno odprto vsak dan 9–18; na veliki petek zaprto; vnaprej pokličite.",
         "hr": "Obično otvoreno svaki dan 9:00–18:00; na Veliki petak zatvoreno; nazovi unaprijed.",
-        "de": "In der Regel täglich 9.00–18.00 Uhr geöffnet; am Karfreitag geschlossen; bitte vorher anrufen."
+        "de": "In der Regel täglich 9.00–18.00 Uhr geöffnet; am Karfreitag geschlossen; bitte vorher anrufen.",
+        "fr": "En général ouvert tous les jours 9 h–18 h ; fermé le Vendredi saint ; appelez avant de venir."
       }
     },
     {
@@ -1139,7 +1173,8 @@
         "nb": "Ring på forhånd for å høre åpningstidene.",
         "sl": "Za delovni čas vnaprej pokličite.",
         "hr": "Za radno vrijeme nazovi unaprijed.",
-        "de": "Öffnungszeiten bitte vorher telefonisch erfragen."
+        "de": "Öffnungszeiten bitte vorher telefonisch erfragen.",
+        "fr": "Appelez pour connaître les horaires d’ouverture."
       }
     },
     {
@@ -1169,7 +1204,8 @@
         "nb": "Åpent alle dager kl. 09.00–24.00; pasienter uten time og nødtilfeller tas imot i åpningstiden, tillegg utenom ordinær tid 21.00–24.00; hastetelefon +63 2 8459 7100.",
         "sl": "Odprto vsak dan 9–24; sprejem brez naročanja in nujni primeri v delovnem času, doplačilo od 21 do 24; linija za nujno oskrbo +63 2 8459 7100.",
         "hr": "Otvoreno svaki dan 9:00–24:00; dolasci bez termina i hitni slučajevi primaju se tijekom radnog vremena, doplata izvan radnog vremena 21:00–24:00; linija za hitnu skrb +63 2 8459 7100.",
-        "de": "Täglich 9.00–24.00 Uhr geöffnet; Behandlung ohne Termin und Notfälle während der Öffnungszeiten, Zuschlag 21.00–24.00 Uhr; Hotline für dringende Fälle +63 2 8459 7100."
+        "de": "Täglich 9.00–24.00 Uhr geöffnet; Behandlung ohne Termin und Notfälle während der Öffnungszeiten, Zuschlag 21.00–24.00 Uhr; Hotline für dringende Fälle +63 2 8459 7100.",
+        "fr": "Ouvert tous les jours 9 h–minuit ; consultations sans rendez-vous et urgences pendant les heures d’ouverture, supplément hors horaires 21 h–minuit ; ligne d’urgence : +63 2 8459 7100."
       }
     },
     {
@@ -1199,7 +1235,8 @@
         "nb": "Offentlig kontor; ikke et akuttsykehus; ring på forhånd.",
         "sl": "Državni urad; ni bolnišnica za nujne primere; vnaprej pokličite.",
         "hr": "Državni ured; nije hitna bolnica; nazovi unaprijed.",
-        "de": "Behörde; keine Notfallklinik; bitte vorher anrufen."
+        "de": "Behörde; keine Notfallklinik; bitte vorher anrufen.",
+        "fr": "Service public ; ce n’est pas un hôpital d’urgences ; appelez avant de venir."
       }
     },
     {
@@ -1229,7 +1266,8 @@
         "nb": "Offentlig kontor; ikke et akuttsykehus; ring på forhånd.",
         "sl": "Državni urad; ni nujna bolnišnica; vnaprej pokličite.",
         "hr": "Državni ured; nije hitna bolnica; nazovi unaprijed.",
-        "de": "Behörde; keine Notfallklinik; bitte vorher anrufen."
+        "de": "Behörde; keine Notfallklinik; bitte vorher anrufen.",
+        "fr": "Service public ; pas un hôpital d’urgence ; appelez avant de venir."
       }
     }
   ],
