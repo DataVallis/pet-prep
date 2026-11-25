@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Log;
  *   nickname never appears in any push (Expo / APNs / FCM are third parties,
  *   and lock screens are public).
  * - Phase 1 / 2 hunger texts are the spec wording; the other metrics follow
- *   the same pattern. Energy is the daily walk, not on the phase ladder: one
+ *   the same pattern. Phase 2 hunger / thirst never threaten illness (David
+ *   2026-11-25: hunger and thirst never make the pet ill — only hygiene and the
+ *   walk do; the old "zbolel v 30 minutah" text was untrue). Energy is the daily walk, not on the phase ladder: one
  *   `walk_reminder` per day (PR #35) — no "zbolel v 30 minutah"
  *   (a walk can't be missed in 30 min, DECISIONS 2026-10-03).
  * - Phase 3 = the spec sentence for the parent plus what is missing.

@@ -20,8 +20,8 @@ return [
     ],
 
     'critical' => [
-        'hunger' => 'Če ga ne nahraniš v 30 minutah, bo zbolel.',
-        'thirst' => 'Če mu ne daš vode v 30 minutah, bo zbolel.',
+        'hunger' => 'Tvoj kuža je zelo lačen. Nahrani ga čim prej.',
+        'thirst' => 'Tvoj kuža je zelo žejen. Daj mu vodo čim prej.',
         'hygiene' => 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.',
     ],
 
@@ -137,8 +137,8 @@ return [
         ],
 
         'critical' => [
-            'hunger' => 'Če muce ne nahraniš v 30 minutah, bo zbolela.',
-            'thirst' => 'Če muci ne daš vode v 30 minutah, bo zbolela.',
+            'hunger' => 'Tvoja muca je zelo lačna. Nahrani jo čim prej.',
+            'thirst' => 'Tvoja muca je zelo žejna. Daj ji vodo čim prej.',
             'hygiene' => 'Muca je naredila nered zraven peska! Počisti ga čim prej, sicer bo zbolela.',
         ],
 

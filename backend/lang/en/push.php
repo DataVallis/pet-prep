@@ -19,8 +19,8 @@ return [
     ],
 
     'critical' => [
-        'hunger' => 'If you don’t feed your dog within 30 minutes, it will get sick.',
-        'thirst' => 'If you don’t give your dog water within 30 minutes, it will get sick.',
+        'hunger' => 'Your dog is very hungry. Feed it as soon as you can.',
+        'thirst' => 'Your dog is very thirsty. Give it water as soon as you can.',
         'hygiene' => 'Your dog made a mess! Clean it up as soon as you can, or it will get sick.',
     ],
 
@@ -134,8 +134,8 @@ return [
         ],
 
         'critical' => [
-            'hunger' => 'If you don’t feed your cat within 30 minutes, it will get sick.',
-            'thirst' => 'If you don’t give your cat water within 30 minutes, it will get sick.',
+            'hunger' => 'Your cat is very hungry. Feed it as soon as you can.',
+            'thirst' => 'Your cat is very thirsty. Give it water as soon as you can.',
             'hygiene' => 'Your cat made a mess next to the litter tray! Clean it up as soon as you can, or it will get sick.',
         ],
 

@@ -36,7 +36,7 @@ use Illuminate\Support\Str;
 |
 | David on a device, 2026-10-07 12:11 (Ljubljana, CEST = UTC+2): a legacy
 | mutt at 0 % hunger, the feed button said "ob 17:00" (06–10 window missed),
-| and the push said "feed it within 30 minutes or it gets sick". Agreed the
+| and the push said "feed it within 30 minutes or it gets sick" (an untrue text, replaced 2026-11-25). Agreed the
 | same day: (1) at displayed hunger ≤ 20 % the child may feed outside a meal
 | window — it never makes the missed window "on time" and does not use up
 | the next window (David 2026-10-20: unless the next window starts within
@@ -600,7 +600,7 @@ function efPush(Pet $pet, PushType $type, string $metric): PushNotification
 
 const EF_FEED_NOW_TEXTS = [
     'Tvoj kuža te milo gleda in kaže na posodo s hrano.',
-    'Če ga ne nahraniš v 30 minutah, bo zbolel.',
+    'Tvoj kuža je zelo lačen. Nahrani ga čim prej.',
 ];
 
 describe('pushes never ask for a refused action', function () {
@@ -612,7 +612,7 @@ describe('pushes never ask for a refused action', function () {
         $row = efPush($pet, PushType::CriticalAlert, 'hunger');
 
         expect($row->status)->toBe(PushNotification::STATUS_SENT)
-            ->and($sent[0]['body'])->toBe('Če ga ne nahraniš v 30 minutah, bo zbolel.');
+            ->and($sent[0]['body'])->toBe('Tvoj kuža je zelo lačen. Nahrani ga čim prej.');
         // …and feeding is really possible right now.
         $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
     });
@@ -799,7 +799,7 @@ describe('pushes never ask for a refused action', function () {
         app(EscalationService::class)->processPetEscalation($pet->fresh());
         $deliverAll();
         expect(Pet::findOrFail($pet->id)->escalation_level)->toBe(2)
-            ->and(collect($sent->getArrayCopy())->pluck('body')->all())->toBe(['Če ga ne nahraniš v 30 minutah, bo zbolel.']);
+            ->and(collect($sent->getArrayCopy())->pluck('body')->all())->toBe(['Tvoj kuža je zelo lačen. Nahrani ga čim prej.']);
 
         // 0 % for more than an hour → phase 3 to the parent.
         efAt('2026-10-07 21:00:00');

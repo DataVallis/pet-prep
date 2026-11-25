@@ -277,8 +277,8 @@ describe('rendering per species (EN + SL)', function () {
         'soft hunger' => [PushType::SoftWarning, 'hunger', 'child', null, 'Your cat is giving you a gentle look and sitting by the empty food bowl.', 'Tvoja muca te milo gleda in sedi ob prazni posodi za hrano.'],
         'soft thirst' => [PushType::SoftWarning, 'thirst', 'child', null, 'Your cat is giving you a gentle look and sitting by the empty water bowl.', 'Tvoja muca te milo gleda in sedi ob prazni posodi za vodo.'],
         'soft hygiene' => [PushType::SoftWarning, 'hygiene', 'child', null, 'Your cat is giving you a gentle look — there’s a mess next to the litter tray that needs cleaning up.', 'Tvoja muca te milo gleda — zraven peska je nered, ki ga je treba počistiti.'],
-        'critical hunger' => [PushType::CriticalAlert, 'hunger', 'child', null, 'If you don’t feed your cat within 30 minutes, it will get sick.', 'Če muce ne nahraniš v 30 minutah, bo zbolela.'],
-        'critical thirst' => [PushType::CriticalAlert, 'thirst', 'child', null, 'If you don’t give your cat water within 30 minutes, it will get sick.', 'Če muci ne daš vode v 30 minutah, bo zbolela.'],
+        'critical hunger' => [PushType::CriticalAlert, 'hunger', 'child', null, 'Your cat is very hungry. Feed it as soon as you can.', 'Tvoja muca je zelo lačna. Nahrani jo čim prej.'],
+        'critical thirst' => [PushType::CriticalAlert, 'thirst', 'child', null, 'Your cat is very thirsty. Give it water as soon as you can.', 'Tvoja muca je zelo žejna. Daj ji vodo čim prej.'],
         'critical hygiene' => [PushType::CriticalAlert, 'hygiene', 'child', null, 'Your cat made a mess next to the litter tray! Clean it up as soon as you can, or it will get sick.', 'Muca je naredila nered zraven peska! Počisti ga čim prej, sicer bo zbolela.'],
         'wait hunger' => [PushType::SoftWarning, 'hunger', 'child', PushCopy::VARIANT_WAIT, 'Your cat is getting hungry. The next meal is at 17:00 — don’t forget it.', 'Tvoja muca postaja lačna. Naslednji obrok je ob 17:00 — ne pozabi nanj.'],
         'wait thirst' => [PushType::CriticalAlert, 'thirst', 'child', PushCopy::VARIANT_WAIT, 'Your cat is thirsty. You can give it water again at 17:00 — don’t forget it.', 'Tvoja muca je žejna. Vodo ji lahko spet daš ob 17:00 — ne pozabi nanjo.'],
@@ -349,12 +349,12 @@ describe('rendering per species (EN + SL)', function () {
         }
     });
 
-    it('agrees in gender in Slovenian: "muca je lačna / žejna", "bo zbolela"', function () {
+    it('agrees in gender in Slovenian: "muca je lačna / žejna", "je zbolela"', function () {
         $sl = fn (PushType $t, string $m, ?string $v = null): string => PushCopy::body($t, $m, 'child', 'sl', $v, ['time' => '17:00'], Species::Cat);
         expect($sl(PushType::SoftWarning, 'hunger', PushCopy::VARIANT_CLEAN_FIRST))->toContain('muca je lačna')
             ->and($sl(PushType::SoftWarning, 'thirst', PushCopy::VARIANT_WAIT))->toContain('muca je žejna')
-            ->and($sl(PushType::CriticalAlert, 'hunger'))->toBe('Če muce ne nahraniš v 30 minutah, bo zbolela.')
-            ->and($sl(PushType::CriticalAlert, 'thirst'))->toContain('muci ne daš')
+            ->and($sl(PushType::CriticalAlert, 'hunger'))->toBe('Tvoja muca je zelo lačna. Nahrani jo čim prej.')
+            ->and($sl(PushType::CriticalAlert, 'thirst'))->toContain('muca je zelo žejna')
             ->and($sl(PushType::Illness, 'hygiene'))->toContain('živela')->toContain('je zbolela');
     });
 });
