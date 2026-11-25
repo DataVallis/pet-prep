@@ -3251,5 +3251,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1037'], 'refs' => ['bedlington_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-139 Kerry Blue Terrier (data.json proposed_game_parameters.kerry_blue_terrier.suitability_tags; S1046, S1047,
+        // S1048), runbook rules. PNA, hip dysplasia, eye and skin conditions are inherited / general, not conformation → no welfare
+        // chip; in marketing. "May be tempted to chase smaller animals" names no high prey drive → no chases_small_pets; no source
+        // says it escapes → no secure_fencing. No new vocabulary key. Never hypoallergenic (low_shedding).
+        'kerry_blue_terrier' => [
+            'suits' => [
+                // S1046 "make wonderful pets for families who can keep up with their grooming requirements and exercise needs"
+                ['tag' => 'family_pet', 'source_ids' => ['S1046'], 'refs' => ['kerry_blue_terrier.behaviour.family']],
+                // S1047 "Kerries are affectionate and good with children."
+                ['tag' => 'children', 'source_ids' => ['S1047'], 'refs' => ['kerry_blue_terrier.behaviour.children']],
+                // S1047 "The Kerry Blue Terrier coat sheds very little"
+                ['tag' => 'low_shedding', 'source_ids' => ['S1047'], 'refs' => ['kerry_blue_terrier.suitability.webmd_shedding']],
+            ],
+            'consider' => [
+                // S1048 "Brush and comb every other day, clip nails, clean ears, brush teeth"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1048'], 'refs' => ['kerry_blue_terrier.suitability.vca_grooming']],
+                // S1046 "However, this is a social breed that may develop separation anxiety if left alone for long periods with nothing to do."
+                ['tag' => 'needs_company', 'source_ids' => ['S1046'], 'refs' => ['kerry_blue_terrier.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];

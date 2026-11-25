@@ -892,6 +892,12 @@
 | long-haired variety with an abundant ruff, breeches and a plumed tail, rather small erect triangular ears, black nose. Not
 | flat-faced; RKC Breed Watch Category 1 (S1019). One colour (the portrait default); weight unsourced → `verified => false`.
 |
+| Kerry Blue Terrier (M5-R10-139, docs/research/dog-data kerry_blue_terrier.appearance): "COLOUR : Blue of any shade with
+| or without black points." (FCI-Standard N° 3, S1043; AKC S1045 "any shade of blue gray or gray blue from the deep slate to
+| light blue gray" — black only up to 18 months, so never drawn for the adult); soft, plentiful, wavy coat, plenty of hair
+| on the head with a beard, thin V-shaped ears carried forward, thin tail set high and carried erect, black nose. Not
+| flat-faced. Blue first with the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 | Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
 | without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
 | low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
@@ -5852,6 +5858,41 @@ return [
             'eye_color' => ['small, bright, deep-set almond eyes, dark in blues, lighter hazel in livers and sandies'],
             'tail' => ['moderate-length tail, thick at the root, tapering to a point and gracefully curved'],
             'nose' => ['a black nose in blues, a brown nose in livers and sandies'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-139 (docs/research/dog-data/data.json kerry_blue_terrier.appearance; runbook rules 2026-10-10: standard colours only —
+    // blue of any shade, with or without black points (FCI S1043; AKC S1045 deep slate to light blue grey)).
+    'kerry_blue_terrier' => [
+        'display_name' => 'Kerry Blue Terrier',
+        // Colour frequencies are in no source (kerry_blue_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 3 Kerry Blue Terrier (S1043, https://www.kutya-tar.hu/standard/en/pdf/003-2005-en.pdf), AKC standard (S1045) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1043 "Section 1 Large and medium sized Terriers." / "Dogs : 18 - 19,5 inches (45,5 to 49,5 cm)."',
+            'build' => 'S1043 "The typical Kerry Blue Terrier should be upstanding, well-knit and well proportionated,"',
+            'coat_length' => 'S1043 "HAIR : Soft, plentiful and wavy."',
+            'coat_color' => 'S1043 "COLOUR : Blue of any shade with or without black points." (weights unsourced)',
+            'ear_carriage' => 'S1043 "Ears : Thin and not large, carried in front or close to the sides of the head,"',
+            'eye_color' => 'S1043 "Eyes : Dark or dark hazel, medium in size and well placed, keen in expression."',
+            'tail' => 'S1043 "TAIL : Thin, well placed and carried erect and gaily."',
+            'nose' => 'S1043 "Nose : Black, nostrils large and wide."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'upstanding, well-knit, muscular terrier with a long lean head, plenty of hair on the head and a full beard', 'weight' => 3], 'compact, well-proportioned muscular terrier with a level back and straight legs'],
+            'coat_length' => ['soft, dense, wavy coat, trimmed to a neat terrier outline, not harsh or wiry'],
+            // Standard colours only (S1043 / S1045 — never black, tan or white for an adult); blue highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'blue (blue-grey)', 'weight' => 40],
+                ['value' => 'blue with black points (darker muzzle, head, ears, tail and feet)', 'weight' => 30],
+                ['value' => 'deep slate blue', 'weight' => 15],
+                ['value' => 'light blue grey', 'weight' => 15],
+            ],
+            'ear_carriage' => ['thin, small V-shaped ears carried forward close to the sides of the head'],
+            'eye_color' => ['dark or dark hazel medium-sized eyes with a keen expression'],
+            'tail' => ['thin tail set on high and carried erect and gaily'],
+            'nose' => ['a black nose with large, wide nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],

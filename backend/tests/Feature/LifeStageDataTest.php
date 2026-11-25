@@ -173,12 +173,14 @@ describe('import provenance', function () {
         // M5-R10-112: the Toy Fox Terrier's senior boundary / senior arrival 117 (PetMD lower bound, no A/B median) — Claude's
         // suggestion, open for David (Rat Terrier precedent). M5-R10-136: the Bracco Italiano's senior 99 (0.75 × the breed-club
         // median 11 y, S1028; RKC "Under 10 years" has no lower bound) — the same.
+        // M5-R10-139: the Kerry Blue Terrier's senior 112 (0.75 × McMillan 2024 12.4 y, only via Wikipedia S1050) and its brushing
+        // (VCA "every other day" → 4 per week) — Claude's suggestions, open for David.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier', 'xoloitzcuintli', 'norwegian-elkhound', 'american-hairless-terrier', 'neapolitan-mastiff', 'bracco-italiano'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier', 'xoloitzcuintli', 'norwegian-elkhound', 'american-hairless-terrier', 'neapolitan-mastiff', 'bracco-italiano', 'kerry-blue-terrier'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);
-        expect((clone $dogOpen)->where('key', StageParamKey::GroomingSessionsPerWeek->value)->pluck('breed_slug')->sort()->values()->all())->toBe(['belgian-malinois', 'brussels-griffon', 'lagotto-romagnolo', 'pyrenean-mountain-dog'])
+        expect((clone $dogOpen)->where('key', StageParamKey::GroomingSessionsPerWeek->value)->pluck('breed_slug')->sort()->values()->all())->toBe(['belgian-malinois', 'brussels-griffon', 'kerry-blue-terrier', 'lagotto-romagnolo', 'pyrenean-mountain-dog'])
             ->and((clone $dogOpen)->where('breed_slug', 'belgian-malinois')->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->all())
             ->toBe(['all.'.StageParamKey::GroomingSessionsPerWeek->value])
             ->and((clone $dogOpen)->where('key', StageParamKey::SocialisationTasksPerWeek->value)->count())->toBe(0);

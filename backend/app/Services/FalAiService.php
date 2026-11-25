@@ -1047,6 +1047,13 @@ class FalAiService
                 .'deep-set dark eyes, a black nose, low-set filbert-shaped ears hanging flat to the cheeks, a moderate tapering curved tail, '
                 .'gentle, alert, confident expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-139: FCI-Standard N° 3 (S1043) — blue (the portrait default), soft, plentiful, wavy coat, plenty of hair on the
+            // head with a beard, thin V-shaped ears carried forward, thin tail carried erect; never black, tan or white as an adult.
+            BreedType::KerryBlueTerrier => 'A medium-sized, upstanding, well-knit and muscular Kerry Blue Terrier with a long lean head, plenty of '
+                .'hair on the head and a full beard, a soft, dense, wavy blue-grey coat, dark keen eyes, a black nose with large nostrils, thin '
+                .'V-shaped ears carried forward close to the head, a thin tail set high and carried erect, alert, keen, confident expression, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -2441,6 +2448,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'thick, linty, crisp coat standing well out from the skin',
                 'markings' => 'slate blue-grey coat with a nearly white silky topknot, black nose, low-set filbert-shaped ears',
+            ],
+            // M5-R10-139: standard colours only (FCI S1043: blue of any shade, with or without black points) — never black, tan or white.
+            BreedType::KerryBlueTerrier => [
+                'color_scheme' => 'blue',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'soft, dense, wavy coat',
+                'markings' => 'blue-grey coat with a full beard, black nose, thin V-shaped ears carried forward',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
