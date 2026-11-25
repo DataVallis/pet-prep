@@ -404,3 +404,22 @@ describe('Energy is not an hourly neglect metric (daily walk rule, David 2026-10
         expect($fresh->pet_state)->toBe(PetStateEnum::LowEnergy);
     });
 });
+
+describe('A walk refreshes the mood at once (David 2026-11-25, »Tired — needs a walk« at 100 %)', function () {
+    it('moves pet_state off low energy in the same sync, not at the next tick', function () {
+        // The state the last tick stored before the walk (energy 0 %).
+        $pet = stepsPet(pet: [
+            'hunger_level' => 100, 'thirst_level' => 100, 'hygiene_level' => 100,
+            'pet_state' => PetStateEnum::LowEnergy,
+        ]);
+        expect($pet->fresh()->pet_state)->toBe(PetStateEnum::LowEnergy);
+
+        // 10:00 UTC = 12:00 local; the anti-cheat allows 200 steps / min since local midnight.
+        expect(steps($pet->fresh(), 4000))->toBe(ActionResult::ACCEPTED);
+
+        $fresh = $pet->fresh();
+        expect($fresh->energy_level)->toBe(100.0);
+        expect($fresh->pet_state)->not->toBe(PetStateEnum::LowEnergy);
+        expect($fresh->pet_state)->toBe(PetStateEnum::Playing);
+    });
+});
