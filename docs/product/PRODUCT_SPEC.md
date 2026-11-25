@@ -186,7 +186,7 @@
 | Faza | Sprožilec | Kaj se zgodi |
 |---|---|---|
 | 1 — Blag opomnik | metrika ≤ 30 % | push otroku: "Tvoj kuža te milo gleda in kaže na posodo s hrano." |
-| 2 — Kritično | metrika ≤ 10 % | push z močno vibracijo in cviljenjem: "Če ga ne nahraniš v 30 minutah, bo zbolel." |
+| 2 — Kritično | metrika ≤ 10 % | nujen push (visoka prioriteta, Android kanal »alarm«): hrana »Tvoj kuža je zelo lačen. Nahrani ga čim prej.«, voda »Tvoj kuža je zelo žejen. Daj mu vodo čim prej.« (muca: »Tvoja muca je zelo lačna. Nahrani jo čim prej.« / »Tvoja muca je zelo žejna. Daj ji vodo čim prej.«) — **brez groženj z boleznijo** (David 25. 11. 2026: lakota in žeja ljubljenčka nikoli ne pripeljeta do bolezni — bolezen pride samo iz čistoče 0 % > 6 h ali zamujenega dnevnega sprehoda; pri 0 % sledi alarm staršu po 1 h in game over po 24 h; prejšnje besedilo »Če ga ne nahraniš v 30 minutah, bo zbolel.« ni bilo res) |
 | 3 — Intervencija | metrika 0 % > 1 h | alarm na telefonu starša (Reverb + push): "Vaš otrok danes ni poskrbel za psa." (staršem vikamo — David 9. 10. 2026) |
 
 Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.

@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\PushType;
+use App\Enums\Species;
 use App\Jobs\CheckPushReceipts;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
@@ -358,7 +359,7 @@ describe('Escalation pushes — recipients and copy', function () {
 
         expect($sent)->toHaveCount(1)
             ->and($sent[0])->toMatchArray([
-                'body' => 'Če mu ne daš vode v 30 minutah, bo zbolel.',
+                'body' => 'Tvoj kuža je zelo žejen. Daj mu vodo čim prej.',
                 'priority' => 'high',
                 'sound' => 'default',
                 'channelId' => 'alarm',
@@ -971,7 +972,7 @@ describe('PR #35 re-review — energy is off the phase ladder', function () {
         expect($pet->refresh()->escalation_level)->toBe(2)
             ->and($sent)->toHaveCount(2)
             ->and($sent[1])->toMatchArray([
-                'body' => 'Če ga ne nahraniš v 30 minutah, bo zbolel.',
+                'body' => 'Tvoj kuža je zelo lačen. Nahrani ga čim prej.',
                 'priority' => 'high',
                 'channelId' => 'alarm',
                 'data' => ['type' => 'critical_alert', 'pet_id' => $pet->id],
@@ -1286,7 +1287,8 @@ describe('Escalation pushes — copy per install language (M1-18)', function () 
 });
 
 describe('PushCopy languages (M1-18)', function () {
-    // The Slovenian texts exactly as PushCopy had them before M1-18 — must stay byte-identical.
+    // The Slovenian texts exactly as PushCopy had them before M1-18 — must stay byte-identical
+    // (except phase 2 hunger / thirst, made truthful by David 2026-11-25).
     it('keeps every Slovenian text byte-identical', function (PushType $type, ?string $metric, string $audience, string $text) {
         expect(PushCopy::body($type, $metric, $audience, 'sl'))->toBe($text)
             ->and(PushCopy::title('sl'))->toBe('PetPrep');
@@ -1295,8 +1297,8 @@ describe('PushCopy languages (M1-18)', function () {
         [PushType::SoftWarning, 'thirst', 'child', 'Tvoj kuža te milo gleda in kaže na prazno posodo za vodo.'],
         [PushType::SoftWarning, 'hygiene', 'child', 'Tvoj kuža te milo gleda in kaže na nered, ki ga je treba počistiti.'],
         [PushType::SoftWarning, null, 'child', 'Tvoj kuža te milo gleda in kaže na posodo s hrano.'],
-        [PushType::CriticalAlert, 'hunger', 'child', 'Če ga ne nahraniš v 30 minutah, bo zbolel.'],
-        [PushType::CriticalAlert, 'thirst', 'child', 'Če mu ne daš vode v 30 minutah, bo zbolel.'],
+        [PushType::CriticalAlert, 'hunger', 'child', 'Tvoj kuža je zelo lačen. Nahrani ga čim prej.'],
+        [PushType::CriticalAlert, 'thirst', 'child', 'Tvoj kuža je zelo žejen. Daj mu vodo čim prej.'],
         [PushType::CriticalAlert, 'hygiene', 'child', 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.'],
         [PushType::WalkReminder, 'energy', 'child', 'Tvoj kuža si želi na pravi sprehod. Gremo?'],
         [PushType::ParentAlarm, 'hunger', 'parent', 'Vaš otrok danes ni poskrbel za psa. Kuža je že več kot uro brez hrane.'],
@@ -1336,5 +1338,33 @@ describe('PushCopy languages (M1-18)', function () {
         $keys = fn (string $locale): array => array_keys(Arr::dot(require lang_path("{$locale}/push.php")));
 
         expect($keys('sl'))->toBe($keys('en'));
+    });
+});
+
+describe('phase 2 hunger / thirst push tells the truth (David 2026-11-25)', function () {
+    // Hunger and thirst never make the pet ill (illness = hygiene 0 % > 6 h or a missed
+    // daily walk); 0 % only leads to the parent alarm after 1 h and game over after 24 h.
+    // The old "feed it within 30 minutes or it will get sick" was untrue (PRODUCT_SPEC §6).
+    it('never mentions sickness or a 30-minute deadline', function (string $locale, string $metric, Species $species, string $text) {
+        $body = PushCopy::body(PushType::CriticalAlert, $metric, 'child', $locale, null, [], $species);
+
+        expect($body)->toBe($text)
+            ->and(mb_strtolower($body))->not->toContain('zbolel')
+            ->not->toContain('sick')
+            ->not->toContain('30');
+    })->with([
+        'sl dog hunger' => ['sl', 'hunger', Species::Dog, 'Tvoj kuža je zelo lačen. Nahrani ga čim prej.'],
+        'sl dog thirst' => ['sl', 'thirst', Species::Dog, 'Tvoj kuža je zelo žejen. Daj mu vodo čim prej.'],
+        'sl cat hunger' => ['sl', 'hunger', Species::Cat, 'Tvoja muca je zelo lačna. Nahrani jo čim prej.'],
+        'sl cat thirst' => ['sl', 'thirst', Species::Cat, 'Tvoja muca je zelo žejna. Daj ji vodo čim prej.'],
+        'en dog hunger' => ['en', 'hunger', Species::Dog, 'Your dog is very hungry. Feed it as soon as you can.'],
+        'en dog thirst' => ['en', 'thirst', Species::Dog, 'Your dog is very thirsty. Give it water as soon as you can.'],
+        'en cat hunger' => ['en', 'hunger', Species::Cat, 'Your cat is very hungry. Feed it as soon as you can.'],
+        'en cat thirst' => ['en', 'thirst', Species::Cat, 'Your cat is very thirsty. Give it water as soon as you can.'],
+    ]);
+
+    it('keeps the urgent delivery of phase 2 — only the text changed', function () {
+        expect(PushType::CriticalAlert->isUrgent())->toBeTrue()
+            ->and(PushType::CriticalAlert->androidChannel())->toBe('alarm');
     });
 });
