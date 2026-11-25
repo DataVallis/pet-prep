@@ -415,7 +415,7 @@ describe('A walk refreshes the mood at once (David 2026-11-25, »Tired — needs
         expect($pet->fresh()->pet_state)->toBe(PetStateEnum::LowEnergy);
 
         // 10:00 UTC = 12:00 local; the anti-cheat allows 200 steps / min since local midnight.
-        expect(steps($pet->fresh(), 4000))->toBe(ActionResult::ACCEPTED);
+        expect(steps($pet->fresh(), 4000)->status)->toBe(ActionResult::ACCEPTED);
 
         $fresh = $pet->fresh();
         expect($fresh->energy_level)->toBe(100.0);
