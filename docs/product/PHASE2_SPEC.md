@@ -31,7 +31,30 @@
 - Že zgrajeno (11. 10. 2026, M5-R11-06): seznam »Pred nakupom: kaj preveriti pri vzreditelju« na strani vsake pasme v registru.
 - Ne zdaj: vzrejni modul za vzreditelje (pravila, pregledi, roki po pasmi).
 
+### 2c. Dnevna skrb za pravo žival — ideje iz pregleda konkurence (David, 25. 11. 2026; *načrt*)
+
+**Odločitev:** Fazo 2 gradimo **sami**, brez partnerstva s pasjimi aplikacijami za lastnike (pregledan Furrkie, furrkie.com — slovenska aplikacija za lastnike: profil in zdravstveni karton, dnevna skrb, skupnost, tržnica varuhov/sprehajalcev/hotelov, posvojitve »kmalu«). **Zakaj:** partnerstvo bi prineslo kvečjemu enkratno provizijo za napotitev, lastna Faza 2 pa **ponavljajoče se prihodke** (naročnina skozi življenje psa — poslovni cilj zgoraj). Furrkie je usmerjen v Slovenijo, PetPrep je v 15 jezikih in cilja svetovni trg; družino imamo že po 12-tednem izzivu (plačilni odnos, certifikat, podatki o navadah).
+
+Funkcije, ki jih uporabniki pri aplikaciji za pravo žival pričakujejo (osnova za naročnino):
+
+| Funkcija | Opis (PetPrep različica) |
+|---|---|
+| **Profil in zdravstveni karton** | Pasma, starost, teža, alergije, prehrana, veterinar; opomniki za cepljenja, zaščito pred zajedavci, zdravila in preglede. Nadgradi obstoječe pravilo zajedavcev / veterinarja iz simulacije na resnične datume. |
+| **Spremljanje teže** | Vnos teže, graf (npr. zadnjih 30 dni), opozorilo ob odstopanju; poveže se z »Rast in prehrana« (§2). |
+| **Beleženje sprehodov** | Sprehod s trajanjem, koraki, fotografijo in opombo; primerjava s prejšnjim tednom. Nadaljuje logiko korakov iz izziva (Apple Zdravje / Health Connect). |
+| **Dnevne naloge po vrsti** | Pes: sprehodi, šolanje; mačka: igra, pesek; kasneje druge vrste. Časovniki in hiter vnos. |
+| **Tedenski cilji, nizi dni in značke** | Nadaljevanje dosežkov iz izziva; **opomnik, preden se niz prekine** (nežen opomnik, nikoli kazen). |
+| **Več skrbnikov** | Starš, partner in otroci vidijo in delijo naloge — že obstoječi družinski model (ADR-012). |
+| **Kartice za deljenje** | Slika sprehoda ali dosežka za družbena omrežja; deli **starš**, brez otrokovega obraza ali imena (#walkyourpet). |
+
+**Naša prednost (pozicioniranje):** aplikacije za lastnike so narejene za odrasle (Furrkie skupnost samo 18+). PetPrep **otroka obdrži vključenega**: naloge iz simulacije se prenesejo na pravo žival, otrok jih odkljuka, starš vidi, ali jih res opravlja. To je naravno nadaljevanje certifikata odgovornosti.
+
+**Ne prevzamemo:** tržnice storitev (varuhi, hoteli, sprehajalci), javne skupnosti z objavami (otroci), rezervacij mladičev z aro — vsaj ne v prvi različici Faze 2.
+
+**Ideje za spletno stran petprep.si** iz istega pregleda (ločeno od Faze 2): sekcija »Kaj je novega« v zadnji verziji, vrtiljak pravih posnetkov aplikacije, ločeni poti »Šola / partner« in »Vzreditelj«, seznam čakanja za trgovino, ki še ni na voljo, števec »X družin se pripravlja na to pasmo« na strani pasme (iz anonimnih števcev kviza).
+
 ## 3. Monetizacija
+- **Naročnina za pravo žival** (David, 11. 11. in 25. 11. 2026): glavni vir ponavljajočih se prihodkov — dnevna skrb, zdravstveni karton, sprehodi, cilji in več skrbnikov (§2c); brez partnerstva z drugimi aplikacijami za lastnike.
 - **AI naročnina (SaaS):** osnovni tracker podatki brezplačni; "Osebni AI pasji inštruktor" (neomejen chat, analitika obnašanja) npr. **3,99 €/mes**.
 - **In-app affiliate trgovina:** priporočila ob prehodu faz (npr. večja ovratnica) s povezavami do partnerjev (npr. Mr. Pet, 10 % popust, provizija).
 - **Zavarovanja (lead gen):** ponudbe partnerskih zavarovalnic glede na pasmo (npr. predispozicije Border Collieja za težave s kolki).
