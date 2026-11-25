@@ -4559,6 +4559,37 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (display.aspx?id=3061 → royalkennelclub.com …/terrier/bedlington-terrier) and the RKC Assured Breeder / COMMD1 DNA-test pages could not be fetched on 2026-11-24 (redirect refused) → no minimum / best_practice level. Bedlington Terrier Club of America health statement (K44, hosted by the AKC, reaffirmed January 19, 2026): copper toxicosis test, patellar luxation evaluation, eye examination (quotes as extracted; 'per-forms' is a PDF line-break artefact). New test key dna_commd1. PDSA / Woodgreen / PetMD name copper toxicosis, retinal dysplasia and patellar luxation (background in dog-data)."
+    },
+    "kerry_blue_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K45",
+        "quote": "Accredited Breeder Health Tests for the KERRY BLUE TERRIER"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation of breeding dogs (US breed club recommendation; mandatory for Dogs NZ accredited breeders)",
+          "source_id": "K33",
+          "quote": "Hip Evaluation"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination by a veterinary ophthalmologist (US breed club recommendation)",
+          "source_id": "K33",
+          "quote": "Ophthalmologist Evaluation"
+        },
+        {
+          "key": "dna_vwd1",
+          "level": "other_scheme",
+          "name": "DNA test for von Willebrand disease type 1 (mandatory for Dogs NZ accredited breeders)",
+          "source_id": "K45",
+          "quote": "DNA - von Willebrand Disease 1 (vWD1)"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (display.aspx?id=3071 → royalkennelclub.com …/terrier/kerry-blue-terrier) could not be fetched on 2026-11-25 (redirect refused) → no RKC minimum / best_practice level. AKC Terrier Group health-testing page (K33, re-read 2026-11-25): 'Recommended Health Tests from the National Breed Club:' 'Hip Evaluation', 'Ophthalmologist Evaluation' (no DNA test listed; the linked KBTC health statement PDF was refused). Dogs NZ accredited-breeder table (K45): 'Hip Dysplasia' 'Mandatory', 'DNA - von Willebrand Disease 1 (vWD1)' 'Mandatory', 'DNA - Profile' 'Mandatory' (identity, not a health test — not taken), 'Elbow Dysplasia', 'DNA - Degenerative Myelopathy (DM)', 'DNA - Factor IX Deficiency (Hemophilia B)' 'Optional' (not taken). WebMD (dog-data S1047): 'The club recommends that all Kerries be checked for hip dysplasia and also see an ophthalmologist.' No new test key (dna_vwd1 exists). No PNA DNA test named by any source read."
     }
   }
 }

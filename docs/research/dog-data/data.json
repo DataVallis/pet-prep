@@ -71301,6 +71301,504 @@
       }
     }
   },
+  "kerry_blue_terrier": {
+    "_note": "Added 2026-11-25 (M5-R10-139, unattended run — appended after the Bedlington Terrier: AKC 2024 No. 135 'Kerry Blue Terrier', S174 full-list table read 2026-11-25 '134 Bedlington Terrier', '135 Kerry Blue Terrier', '136 Irish Terrier'). Quotes as returned by the web-fetch tool on 2026-11-25 (after web searches); paraphrase only in notes, marked '(paraphrase)'. Sources S1043–S1050 (reused S10, S11, S14, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 3 / 11. 05. 2005 / GB (S1043, via the kutya-tar.hu mirror of the FCI PDF; the FCI nomenclature page S1044 gives 'Date of publication of the official valid standard 4/19/2005') + the AKC standard (S1045, approved October 10, 2005). The RKC Breeds A–Z page and the RKC breed standard were refused (display.aspx?id=3071 → royalkennelclub.com, PROVENANCE_REQUIRED); no PDSA, Woodgreen or Dogs Trust breed page exists / was reachable for this breed → PetMD (S1046, written by Virginia LaMon, DVM) is the exercise source: 'they need about one hour of exercise every day' → 60. Lifespan: the McMillan 2024 value (12.4 y) was reachable only through Wikipedia (S1050, tier C) — the Dogs Trust table (S123), the PMC copy and the supplementary table were refused / behind a captcha, the Nature PDF and the LJMU Author Correction have no Kerry value; no RKC lower bound, no VetCompass median → the senior boundary 112 (0.75 × 12.4 × 12) is seeded verified=false as a Claude proposal (see proposed_game_parameters.kerry_blue_terrier.senior_boundary_months). A/B lifespans: WebMD 12–15 y (S1047), VCA 10–12 y (S1048). Coren rank 35 (S35, IPFS mirror read 2026-11-25: tier 'Above Average Working Dogs', listed between 'Cairn Terrier' and 'Irish Setter' — rank 35 shared, as recorded on 2026-11-03) → Above average → 1.2. Puppies are born black and clear to blue (AKC S1045) — the portrait is the adult blue. Never hypoallergenic (low_shedding only; PetMD's 'a good fit for some people with allergies' stays a note). Slovenian »kerry blue terier« (KZS-style, like »bedlington terier«; no KZS page fetched — open for David).",
+    "identity": {
+      "value": "FCI No. 3, Group 3 Section 1 (Large and medium-sized Terriers), Ireland",
+      "unit": "—",
+      "source_id": "S1043",
+      "quote": "ORIGIN : Ireland.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 3 (S1043): 'CLASSIFICATION F.C.I. : Group 3 Terriers.', 'Section 1 Large and medium sized Terriers.', 'Without working trial.', 'ORIGIN : Ireland.' FCI nomenclature page (S1044): 'KERRY BLUE TERRIER' (French 'TERRIER KERRY BLUE'), FCI number 3, 'Country of origin of the breed: IRELAND', 'Date of acceptance on a definitive basis by the FCI: 4/2/1963'. Ireland is in FCI_ORIGINS (IE)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S1043",
+      "quote": "Section 1 Large and medium sized Terriers.",
+      "confidence": "medium",
+      "notes": "No RKC 'Size:' or PDSA key fact reachable (runbook: RKC / PDSA). FCI section 'Large and medium sized Terriers' (S1043) and FCI weight dogs 15–18 kg (≈ 33–40 lb, S1043) → the 'Medium (26–57 pounds)' class of S10. AKC breed page (S1049): 'Among the largest of AKC terriers, the Kerry Blue Terrier is famous for his show-stopping blue coat.' Claude's reading of the size class — not a key fact."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            45.5,
+            49.5
+          ],
+          "female": [
+            44.5,
+            48
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1043",
+        "quote": "Dogs : 18 - 19,5 inches (45,5 to 49,5 cm).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 3 (S1043) 'Height at the withers :' — dogs as quoted; 'Bitches: 17,5 - 19 inches (44,5 to 48 cm).' AKC standard (S1045): 'a height of 18 to 19½ inches for a dog, and 17½ to 19 inches for a bitch,' agrees. WebMD (S1047) 'from 17 to 20 inches at the withers', VCA (S1048) 'about 17.5 to 19.5 inches'."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            15,
+            18
+          ],
+          "female": [
+            15,
+            18
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1043",
+        "quote": "Dogs : 33 lbs to 40 lbs (15 to 18 kg).",
+        "confidence": "medium",
+        "notes": "FCI-Standard N° 3 (S1043): males 15–18 kg (high confidence); 'Bitches : proportionately less.' — no number in any A/B source (AKC standard S1045: 'The most desirable weight for a fully developed dog is from 33 to 40 pounds, bitches weighing proportionately less.'; WebMD S1047: 'Males should weigh from 33 to 40 pounds. Females can weigh less.'). The female range is stored as the breed-wide VCA range (S1048 'should weigh about 33 to 40 pounds' ≈ 15–18 kg, one range for the breed) — an upper estimate; open for David. Wikipedia (S1050, tier C) males 12–15 kg, females 10–13 kg — not used (conflicts with the standards).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                15,
+                18.1
+              ],
+              "female": [
+                15,
+                18.1
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1048",
+            "quote": "should weigh about 33 to 40 pounds",
+            "notes": "VCA (S1048) — one range for the breed (pounds × 0.4536 by us, rounded)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (26–57 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 15–18 kg ≈ 33–40 lb (S1043). The puppy cap of 60 min is reached at 6 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Kerry Blue Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No McMillan 2024 value at an A/B source this run: the Dogs Trust table (S123, https://www.dogstrust.org.uk/downloads/life-expectancy-breeds-table-2024.pdf) refused (PROVENANCE_REQUIRED; direct download blocked by the proxy), PMC10834484 behind a captcha, the Nature PDF names the breed only as a Fig. 5 label, the LJMU Author Correction (S54) has no Kerry value. See mcmillan_2024_wikipedia (tier C)."
+      },
+      "mcmillan_2024_wikipedia": {
+        "value": 12.4,
+        "unit": "years",
+        "source_id": "S1050",
+        "quote": "A 2024 UK study found a median lifespan of 12.4 years for the breed, compared to an overall average of 12.5.",
+        "confidence": "low",
+        "notes": "Wikipedia (S1050, tier C) citing McMillan et al. 2024 (Sci Rep, 'Longevity of companion dog breeds: those at risk from early death'). Tier C — only next to A/B; basis of the senior PROPOSAL (verified=false) because no McMillan A/B copy, VetCompass median or RKC lower bound was reachable (Black Russian Terrier / Norfolk Terrier precedent: Wikipedia's McMillan value open for David)."
+      },
+      "webmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1047",
+        "quote": "The Kerry Blue Terrier's lifespan is typically from 12 to 15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S1047, tier B, US; medically reviewed)."
+      },
+      "vca": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S1048",
+        "quote": "10 to 12 years",
+        "confidence": "medium",
+        "notes": "VCA (S1048, tier B, US) breed overview 'Life span'."
+      },
+      "senior_from": {
+        "value": 9.3,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12.4 y (McMillan 2024 via Wikipedia S1050, tier C) → 0.75 × 12.4 × 12 = 111.6 → 112 months — verified=false, Claude's proposal (see proposed_game_parameters.kerry_blue_terrier.senior_boundary_months). Alternatives: 90 (VCA lower bound 10 y, S1048), 108 (WebMD lower bound 12 y, S1047), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S1050"
+        ],
+        "months": 112
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1046",
+        "quote": "(they need about one hour of exercise every day)",
+        "confidence": "medium",
+        "notes": "PetMD (S1046, Virginia LaMon, DVM) — 'about one hour' → 60 (runbook rule: one number N → N). The RKC page was refused and no PDSA / Woodgreen / Dogs Trust breed page was found, so PetMD (tier B, vet-written) is the strongest A/B source.",
+        "alternatives": [
+          {
+            "value": "daily walk or play",
+            "unit": "—",
+            "source_id": "S1048",
+            "quote": "Moderate - needs to walk or play every day",
+            "notes": "VCA (S1048) 'Energy level' — no number."
+          },
+          {
+            "value": null,
+            "unit": "—",
+            "source_id": "S1047",
+            "quote": "Kerries are also an athletic breed and require exercise.",
+            "notes": "WebMD (S1047) — no number."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "athletic, moderately energetic; daily walks or play",
+        "unit": "—",
+        "source_id": "S1048",
+        "quote": "Moderate - needs to walk or play every day",
+        "confidence": "high",
+        "notes": "VCA (S1048); WebMD (S1047) 'Kerries are also an athletic breed and require exercise.' VCA also: 'Kerries also need lots of exercise every day, preferably in partnership with you, to stay strong, healthy, and fit.' Not long_daily_exercise (about one hour, S1046)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PetMD S1046 asked: not mentioned) → no meal / exercise gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "terrier character, keen and alert; affectionate; intelligent, headstrong, feisty",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "Terrier character throughout.",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); also 'The all-important factor-expression must be keen and alert.' and 'A good watch dog and loyal companion.' PetMD (S1046): 'Kerry Blue Terriers are extremely affectionate dogs'. VCA (S1048) personality 'Intelligent, Headstrong, Feisty'."
+      },
+      "family": {
+        "value": "wonderful family pets for families who can keep up with their grooming and exercise needs",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "make wonderful pets for families who can keep up with their grooming requirements and exercise needs",
+        "confidence": "high",
+        "notes": "PetMD (S1046, fragment as returned). AKC breed page (S1049): 'today an alert, adaptable, and animated watchdog and family companion.' Basis of family_pet."
+      },
+      "children": {
+        "value": "affectionate and good with children; patient with kids when properly introduced",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "Kerries are affectionate and good with children.",
+        "confidence": "high",
+        "notes": "WebMD (S1047) — an explicit statement → children chip (runbook). Caveats kept here: PetMD (S1046) 'When properly introduced to children, most Kerry Blue Terriers are patient with kids.'; VCA (S1048) 'Good with children' row 'Fine if raised with them'. No rating for small children → no small_children."
+      },
+      "other_pets": {
+        "value": "may chase smaller animals such as squirrels or cats; can be wary of / scrappy with other dogs",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "Kerry Blue Terriers may be tempted to chase smaller animals, like neighborhood squirrels or cats.",
+        "confidence": "high",
+        "notes": "PetMD (S1046); also 'They can be wary of other dogs if not introduced at a young age'. VCA (S1048): 'will chase small animals' and 'sometimes scrappy with other dogs (always pair them with the opposite sex for household peace)'. WebMD (S1047): 'Kerries love their humans but aren't always friendly to other dogs.' No source names a high prey drive → no chases_small_pets (runbook: chasing / supervision alone is not enough — Shetland Sheepdog precedent); not other_pets."
+      },
+      "containment": {
+        "value": "keep within a securely fenced space or on a leash",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "always keep your dog within a securely fenced space or on a leash",
+        "confidence": "medium",
+        "notes": "PetMD (S1046, fragment). No source says the breed escapes → no secure_fencing chip (Bedlington precedent)."
+      },
+      "time_alone": {
+        "value": "social breed — may develop separation anxiety if left alone for long periods with nothing to do",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "However, this is a social breed that may develop separation anxiety if left alone for long periods with nothing to do.",
+        "confidence": "high",
+        "notes": "PetMD (S1046) → needs_company chip (Tibetan Terrier precedent 'can develop separation anxiety if left alone for long periods')."
+      },
+      "socialisation": {
+        "value": "early exposure to new people, animals, sounds, smells and situations is vital",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "Owners must be willing to spend time training and socializing their pets.",
+        "confidence": "high",
+        "notes": "WebMD (S1047, a need) → breed DOG_SOCIALISATION entry (M5-R17). PetMD (S1046): 'It’s vital to expose dogs to new people, animals, sounds, smells, and situations early in life' (the same advice without the word, kept as background). VCA (S1048): 'Train Kerry puppies from day one'."
+      },
+      "training": {
+        "value": "very smart and eager to please; short, positive sessions",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "Kerries are intelligent and easy to train.",
+        "confidence": "high",
+        "notes": "WebMD (S1047); short sessions mixed with play, positive reinforcement (paraphrase). PetMD (S1046): their intelligence and eagerness to please make them easier to train than many breeds (paraphrase — the tool did not return the sentence verbatim)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. No conformation-related welfare problem named by a veterinary body → no welfare chip; in marketing. RKC Breed Watch category not read (RKC page refused). Breeder checklist: AKC Terrier Group page (K33 re-read) — hip and eye evaluation recommended by the US breed club; Dogs NZ accredited-breeder tests (K45) — hip dysplasia, DNA profile and von Willebrand disease 1 DNA test mandatory.",
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "The club recommends that all Kerries be checked for hip dysplasia and also see an ophthalmologist.",
+        "confidence": "high",
+        "notes": "WebMD (S1047); PetMD (S1046) lists hip dysplasia (paraphrase); VCA (S1048): 'chronic ear infections, skin cysts, degenerative hip disease'. Register health key hip_dysplasia."
+      },
+      "eyes": {
+        "value": "dry eye, cataracts and other eye problems",
+        "unit": "—",
+        "source_id": "S1048",
+        "quote": "dry eye, cataracts, and other eye problems",
+        "confidence": "high",
+        "notes": "VCA (S1048, fragment); PetMD (S1046) lists dry eye (keratoconjunctivitis sicca) (paraphrase). Register health key dry_eye."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand disease (an inherited bleeding disorder)",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "von Willebrand disease",
+        "confidence": "medium",
+        "notes": "PetMD (S1046) health list (list item as returned). Dogs NZ (breeder-checklist K45) 'DNA - von Willebrand Disease 1 (vWD1)' 'Mandatory'. Register health key bleeding_disorder_vwd."
+      },
+      "pna": {
+        "value": "progressive neuronal abiotrophy (PNA) — a rare, fatal inherited nervous-system disease of young puppies",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "This rare but fatal disease strikes Kerry puppies, usually before they are 16 weeks old.",
+        "confidence": "high",
+        "notes": "WebMD (S1047); VCA (S1048): 'Progressive Neuronal Abiotrophy or PNA' ('a serious, untreatable nervous system disease'). Register health key inherited_ataxia (cerebellar disease of puppies, Spinone Italiano precedent) — Claude's mapping, open for David."
+      },
+      "skin": {
+        "value": "skin problems — cysts, warts, skin tumours, hot spots, spiculosis; footpad corns",
+        "unit": "—",
+        "source_id": "S1048",
+        "quote": "chronic ear infections, skin cysts, degenerative hip disease",
+        "confidence": "medium",
+        "notes": "VCA (S1048, fragment); WebMD (S1047) lists cysts, warts, skin tumors, dermatitis (hot spots) and spiculosis (paraphrase); PetMD (S1046) skin issues incl. foot pad corns (paraphrase); Wikipedia (S1050, tier C): 'Spiculosis is a painful condition that causes follicular hyperkeratosis.', 'The breed is predisposed to footpad keratosis and hair follicle tumors.' Register health key: none fits exactly (itchy_skin_allergy is about allergies) — a new key (e.g. skin_cysts_spiculosis) would need website words; open for the build step."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 35,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Kerry Blue Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): rank 35, shared with 'Cairn Terrier' and 'Irish Setter' (read 2026-11-03, M5-R10-89 — continuation line under the '35 Cairn Terrier' row). Re-read 2026-11-25 via the IPFS mirror (https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/The_Intelligence_of_Dogs): tier list 'Above Average Working Dogs' with 'Cairn Terrier', 'Kerry Blue Terrier', 'Irish Setter' in that order (the mirror shows no rank numbers). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Above Average Working Dogs",
+        "confidence": "medium",
+        "notes": "S35 tier for ranks 27–39: 'Understanding of new commands: 15 to 25 repetitions.', 'Obey first command: 70% of the time or better.' (as returned)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.kerry_blue_terrier.learning_multiplier (1.2, runbook rule: Above average).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "upstanding, well-knit, well-proportioned muscular terrier with a soft, wavy blue coat",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "The typical Kerry Blue Terrier should be upstanding, well-knit and well proportionated,",
+        "confidence": "high",
+        "notes": "FCI standard (S1043, fragment); continues 'showing well developed muscular body with definite terrier style.'"
+      },
+      "colours": {
+        "value": [
+          "blue",
+          "blue with black points",
+          "deep slate blue",
+          "light blue grey"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S1043",
+        "quote": "COLOUR : Blue of any shade with or without black points.",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); 'Black is permissible only up to the age of 18 months, as is also a shade of tan.' AKC standard (S1045): 'The correct mature color is any shade of blue gray or gray blue from the deep slate to light blue gray,' — the shade names 'deep slate' / 'light blue gray' are the AKC's range ends; 'A black dog 18 months of age or older is to be disqualified.' Puppies: 'an apparent black at birth to the mature gray blue or blue gray.' (AKC S1045) — the portrait shows the adult blue; never black, tan, white or any other colour for an adult. Blue first as the portrait default (the FCI names it first — Claude's reading)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): blue 40 (the portrait default), blue with black points 30, deep slate blue 15, light blue grey 15."
+      },
+      "coat": {
+        "value": "soft, plentiful (dense) and wavy; not harsh or wiry",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "HAIR : Soft, plentiful and wavy.",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); AKC standard (S1045): 'Correct coat is important it is to be soft, dense and wavy.' (a harsh, wire or bristle coat is penalised — paraphrase). FCI head: 'Showing plenty of hair.'"
+      },
+      "ears": {
+        "value": "thin, not large, V-shaped, carried forward close to the sides of the head",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "Ears : Thin and not large, carried in front or close to the sides of the head,",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); AKC (S1045): 'Ears - V-shaped, small but not out of proportion to the size of the dog, of moderate thickness,'."
+      },
+      "eyes": {
+        "value": "dark or dark hazel, medium-sized, keen expression",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "Eyes : Dark or dark hazel, medium in size and well placed, keen in expression.",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); AKC (S1045): 'Eyes - Dark, small, not prominent, well placed and with a keen terrier expression.'"
+      },
+      "nose": {
+        "value": "black, nostrils large and wide",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "Nose : Black, nostrils large and wide.",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); AKC (S1045) 'Nose - Black, nostrils large and wide.'"
+      },
+      "tail": {
+        "value": "thin, set high, carried erect and gaily",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "TAIL : Thin, well placed and carried erect and gaily.",
+        "confidence": "high",
+        "notes": "FCI standard (S1043); AKC (S1045): 'Tail should be set on high, of moderate length and carried gaily erect, the straighter the tail the better.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = PetMD (S1046), WebMD (S1047), VCA (S1048), AKC breed page (S1049). The RKC Breeds A–Z page was refused (PROVENANCE_REQUIRED); no PDSA / Woodgreen / Dogs Trust breed page was found.",
+      "petmd_exercise": {
+        "value": "about one hour a day",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "(they need about one hour of exercise every day)",
+        "confidence": "medium",
+        "notes": "PetMD (S1046) → 60 min."
+      },
+      "petmd_grooming": {
+        "value": "at least weekly",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "A Kerry Blue Terrier's coat should be brushed at least weekly.",
+        "confidence": "high",
+        "notes": "PetMD (S1046). WebMD (S1047): 'You should also brush your Kerry thoroughly at least once a week.' — alternative to VCA every other day (see vca_grooming)."
+      },
+      "vca_grooming": {
+        "value": "brush and comb every other day",
+        "unit": "—",
+        "source_id": "S1048",
+        "quote": "Brush and comb every other day, clip nails, clean ears, brush teeth",
+        "confidence": "high",
+        "notes": "VCA (S1048) → frequent_grooming; brushing every other day = 3.5 per week → 4 (half up; Soft Coated Wheaten / Lhasa Apso alternatives precedent) — the grooming value is a Claude proposal (verified=false), see proposed_game_parameters.kerry_blue_terrier.grooming. Nails / ears / teeth: no frequency in this fragment."
+      },
+      "petmd_groomer": {
+        "value": "professional grooming about every six weeks",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "Professional grooming is recommended about every six weeks to trim the coat and shape the Kerry Blue's beard.",
+        "confidence": "high",
+        "notes": "PetMD (S1046) → groomer reminder every 6 weeks (M5-R14, parent reminder, never scored). WebMD (S1047) 'Kerries need a full grooming about every six to eight weeks.' (lower bound 6) agrees; VCA (S1048) 'take the Kerry to a professional groomer (or learn to clip him yourself) about once a month' (alternative)."
+      },
+      "petmd_teeth": {
+        "value": "daily toothbrushing",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "The best way to prevent dental disease is with daily toothbrushing with a dog-specific toothpaste.",
+        "confidence": "high",
+        "notes": "PetMD (S1046) → tooth brushing every day (M5-R15 child task). VCA 'brush teeth' (no frequency), WebMD routine tooth brushing (no frequency)."
+      },
+      "petmd_ears": {
+        "value": "ears cleaned every two to four weeks",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "clean your dog’s ears every two to four weeks",
+        "confidence": "high",
+        "notes": "PetMD (S1046, fragment; also after swimming or bathing — paraphrase) → ear cleaning every 2 weeks (range lower bound, M5-R18 child task)."
+      },
+      "petmd_bath": {
+        "value": "bathed about once a month",
+        "unit": "—",
+        "source_id": "S1046",
+        "quote": "They do best when bathed about once a month with a gentle conditioning shampoo.",
+        "confidence": "high",
+        "notes": "PetMD (S1046) → bath reminder every 4 weeks (M5-R19, parent reminder, never scored)."
+      },
+      "vca_nails": {
+        "value": "clip nails",
+        "unit": "—",
+        "source_id": "S1048",
+        "quote": "Brush and comb every other day, clip nails, clean ears, brush teeth",
+        "confidence": "medium",
+        "notes": "VCA (S1048) — no frequency for nails; WebMD (S1047) 'Your Kerry needs routine care like tooth brushing, ear cleaning, and toenail clipping.' (no frequency) → no nail task (runbook »Breed care tasks«)."
+      },
+      "webmd_shedding": {
+        "value": "sheds very little",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "The Kerry Blue Terrier coat sheds very little",
+        "confidence": "high",
+        "notes": "WebMD (S1047); also 'Their distinctive coats don't shed, but they do require regular grooming.' PetMD (S1046): 'Because Kerry Blues do not shed their coat' / 'doesn't shed a lot' → low_shedding chip. PetMD 'so Kerry Blues can be a good fit for some people with allergies' — never hypoallergenic (runbook)."
+      },
+      "vca_home": {
+        "value": "anything goes with enough exercise",
+        "unit": "—",
+        "source_id": "S1048",
+        "quote": "Anything goes with enough exercise",
+        "confidence": "medium",
+        "notes": "VCA (S1048) home row — not the RKC 'Flat/ Apartment' key fact → no apartment chip (runbook)."
+      },
+      "webmd_lifespan": {
+        "value": "12–15 years",
+        "unit": "—",
+        "source_id": "S1047",
+        "quote": "The Kerry Blue Terrier's lifespan is typically from 12 to 15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S1047)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -106899,6 +107397,319 @@
         "confidence": "high",
         "notes": "FCI (S1035). Not a welfare breed → `nose` trait for the colour-matched nose. Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue is the portrait default (the FCI lists it first — Claude's reading); FCI standard colours only"
+      }
+    },
+    "kerry_blue_terrier": {
+      "_note": "Unattended run M5-R10-139 (2026-11-25): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PetMD (S1046 'about one hour of exercise every day' → 60; the RKC page was refused, no PDSA / Woodgreen page). Senior 112 = PROPOSAL (verified=false): McMillan 2024 12.4 y only via Wikipedia (S1050, tier C). Learning 1.2 (Coren rank 35, Above average, S35). Grooming 4× a week = PROPOSAL (VCA 'every other day', S1048; PetMD / WebMD 'at least weekly'). Built: puppy socialisation with the WebMD quote (S1047, M5-R17), tooth brushing every day (PetMD, M5-R15), ear cleaning every 2 weeks (PetMD, M5-R18), groomer reminder every 6 weeks (PetMD, M5-R14), bath reminder every 4 weeks (PetMD, M5-R19). No nail task (no frequency), no meal gap, no heat warning. No new vocabulary key. Not a conformation welfare breed → in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1046",
+        "quote": "(they need about one hour of exercise every day)",
+        "confidence": "medium",
+        "notes": "PetMD (S1046) → rule 'one number N' → 60 (RKC not reachable; no PDSA / Woodgreen page). VCA (S1048) 'Moderate - needs to walk or play every day' (no number).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S1046 'about one hour of exercise every day'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S1046",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 112
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds) — rule. senior 112 = round(0.75 × 12.4 y × 12) = round(111.6) — PROPOSAL, verified=false (see senior_boundary_months): no McMillan A/B copy, VetCompass median or RKC lower bound reachable.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1050"
+        ],
+        "alternatives": {
+          "senior_vca_10_y": 90,
+          "senior_webmd_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (senior: see senior_boundary_months — predlog Claude)"
+      },
+      "senior_boundary_months": {
+        "value": 112,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNCONFIRMED suggestion (Claude, waiting for David): round(0.75 × 12.4 × 12) = round(111.6) = 112. The runbook chain (McMillan 2024 via S54 / S123 → VetCompass median → RKC lower bound) found nothing reachable at A/B: S123 refused, PMC captcha, Nature PDF Fig. 5 label only, LJMU correction no value, RKC page refused. Closest row = the peer-reviewed McMillan median, seen only through Wikipedia (tier C) → seeded verified=false (Bernese Mountain Dog / Bracco Italiano precedent). Alternatives: 90 (VCA lower bound 10 y, S1048), 108 (WebMD lower bound 12 y, S1047). Open for David. The senior arrival age follows (112, verified=false).",
+        "derived_from": [
+          "S11",
+          "S1050"
+        ],
+        "alternatives": [
+          {
+            "value": 90,
+            "source_id": "S1048",
+            "quote": "10 to 12 years",
+            "notes": "VCA lower bound × 0.75 × 12."
+          },
+          {
+            "value": 108,
+            "source_id": "S1047",
+            "quote": "The Kerry Blue Terrier's lifespan is typically from 12 to 15 years.",
+            "notes": "WebMD lower bound × 0.75 × 12."
+          }
+        ],
+        "decision": "predlog Claude 2026-11-25 (M5-R10-139): senior od 112 mesecev (0,75 × 12,4 leta, McMillan 2024 prek Wikipedije — vir C; A/B kopija, VetCompass in RKC niso bili dosegljivi) — čaka Davida"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 112
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage; the senior arrival age (112) is seeded verified=false with the senior boundary (proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36; senior 112 = predlog Claude 2026-11-25, čaka Davida)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 35, 'Above Average Working Dogs' (S35 — see kerry_blue_terrier.trainability.coren_rank) → Above average rule (ranks 27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 35, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 4,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1048",
+        "quote": "Brush and comb every other day, clip nails, clean ears, brush teeth",
+        "confidence": "medium",
+        "notes": "kerry_blue_terrier.suitability.vca_grooming. VCA 'every other day' (S1048) = 3.5 a week → 4 (half up; the value used for 'every other day' in the Soft Coated Wheaten Terrier / Lhasa Apso alternatives). The runbook »Dog grooming« rule has no line for 'every other day' and PetMD (S1046) / WebMD (S1047) say 'at least weekly' (a minimum, which every other day satisfies) → seeded verified=false as a Claude proposal (spirit of the rule: the most frequent sourced number wins, as with a range's upper bound). Built in M5-R13; matted coat at ceil(4 / 2) = 2 missed. Open for David.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S1046",
+            "quote": "A Kerry Blue Terrier's coat should be brushed at least weekly.",
+            "notes": "PetMD — 'at least weekly' → 1 (Beauceron precedent); WebMD (S1047) 'at least once a week' agrees."
+          }
+        ],
+        "decision": "predlog Claude 2026-11-25 (M5-R10-139): 4× na teden (VCA »every other day« = 3,5 → 4; PetMD / WebMD »at least weekly« = 1 kot alternativa); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«) — čaka Davida"
+      },
+      "tooth_brushing": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R15)",
+        "source_id": "S1046",
+        "quote": "The best way to prevent dental disease is with daily toothbrushing with a dog-specific toothpaste.",
+        "confidence": "high",
+        "notes": "kerry_blue_terrier.suitability.petmd_teeth. 'daily' → every day (7 per program week; Norfolk Terrier precedent). Built: DOG_CARE_TASKS tooth_brushing [7, day].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (PetMD »daily toothbrushing«)"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          14
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S1046",
+        "quote": "clean your dog’s ears every two to four weeks",
+        "confidence": "high",
+        "notes": "kerry_blue_terrier.suitability.petmd_ears. 'every two to four weeks' → the lower bound, every 2 weeks (14 program days). Built: DOG_CARE_TASKS ear_cleaning [1, two_weeks].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes vsaka 2 tedna (PetMD »every two to four weeks« → spodnja meja)"
+      },
+      "professional_grooming": {
+        "value": [
+          1,
+          42
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R14)",
+        "source_id": "S1046",
+        "quote": "Professional grooming is recommended about every six weeks to trim the coat and shape the Kerry Blue's beard.",
+        "confidence": "high",
+        "notes": "kerry_blue_terrier.suitability.petmd_groomer. 'about every six weeks' → 6 weeks (42 program days); WebMD (S1047) 'about every six to eight weeks' (lower bound 6) agrees. Built: DOG_CARE_TASKS groomer_visit [1, six_weeks].",
+        "alternatives": [
+          {
+            "value": [
+              1,
+              28
+            ],
+            "source_id": "S1048",
+            "quote": "take the Kerry to a professional groomer (or learn to clip him yourself) about once a month",
+            "notes": "VCA — monthly; PetMD (vet-authored) chosen, agrees with WebMD — open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): obisk pri frizerju vsakih 6 tednov (PetMD »about every six weeks«)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R19)",
+        "source_id": "S1046",
+        "quote": "They do best when bathed about once a month with a gentle conditioning shampoo.",
+        "confidence": "high",
+        "notes": "kerry_blue_terrier.suitability.petmd_bath. 'about once a month' → every 4 weeks (28 program days). Built: DOG_CARE_TASKS bath [1, month].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): kopanje vsake 4 tedne (PetMD »about once a month«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1047",
+        "quote": "Owners must be willing to spend time training and socializing their pets.",
+        "confidence": "high",
+        "notes": "kerry_blue_terrier.behaviour.socialisation (WebMD S1047, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat WebMD S1047)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-139); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1046"
+            ],
+            "refs": [
+              "kerry_blue_terrier.behaviour.family"
+            ],
+            "quote": "S1046 'make wonderful pets for families who can keep up with their grooming requirements and exercise needs'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1047"
+            ],
+            "refs": [
+              "kerry_blue_terrier.behaviour.children"
+            ],
+            "quote": "S1047 'Kerries are affectionate and good with children.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S1047"
+            ],
+            "refs": [
+              "kerry_blue_terrier.suitability.webmd_shedding"
+            ],
+            "quote": "S1047 'The Kerry Blue Terrier coat sheds very little'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1048"
+            ],
+            "refs": [
+              "kerry_blue_terrier.suitability.vca_grooming"
+            ],
+            "quote": "S1048 'Brush and comb every other day, clip nails, clean ears, brush teeth'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1046"
+            ],
+            "refs": [
+              "kerry_blue_terrier.behaviour.time_alone"
+            ],
+            "quote": "S1046 'However, this is a social breed that may develop separation anxiety if left alone for long periods with nothing to do.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating; PetMD 'When properly introduced', VCA 'Fine if raised with them' (caveats).",
+          "apartment": "RKC page not reachable; VCA 'Anything goes with enough exercise' is not the RKC key fact.",
+          "active_family": "About one hour a day (S1046).",
+          "long_daily_exercise": "About one hour a day (S1046).",
+          "other_pets": "May chase smaller animals (PetMD), scrappy with other dogs (VCA).",
+          "chases_small_pets": "PetMD 'may be tempted to chase smaller animals', VCA 'will chase small animals' — no source names a high prey drive (runbook; Shetland Sheepdog precedent).",
+          "shorter_lifespan": "WebMD 12–15 y; VCA 10–12 y (upper bound > 10).",
+          "welfare_chip": "PNA, hip dysplasia, eye and skin conditions are inherited / general, not conformation-related; no veterinary body names a conformation problem → no chip.",
+          "hypoallergenic": "Never a tag (runbook) — PetMD 'a good fit for some people with allergies' stays a note.",
+          "secure_fencing": "PetMD 'always keep your dog within a securely fenced space or on a leash' — no source says the breed escapes (Bedlington precedent).",
+          "experienced_owner": "VCA 'Headstrong, Feisty' — no source says a powerful dog / experienced owner."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed; no veterinary association advises against showing this type of dog in advertising → in marketing (runbook §3). PNA is a rare inherited disease (no DNA test named by our sources) — marketing never promises the breed's health.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da"
+      },
+      "ai_appearance": {
+        "value": "adult Kerry Blue Terrier, blue (default): upstanding, well-knit, muscular medium-sized terrier; soft, dense, wavy blue coat (any shade from deep slate to light blue grey, darker points on muzzle, head, ears, tail and feet allowed); plenty of hair on the head with a beard; dark or dark hazel keen eyes; black nose with large nostrils; small thin V-shaped ears carried forward; thin tail set high and carried erect; never black, tan or white as an adult",
+        "unit": "—",
+        "source_id": "S1043",
+        "quote": "COLOUR : Blue of any shade with or without black points.",
+        "confidence": "high",
+        "notes": "FCI (S1043) + AKC (S1045). Puppies are born black and clear gradually (AKC 'an apparent black at birth to the mature gray blue or blue gray.') — the portrait is the adult blue; puppy-stage images may be darker (open for David). Not a welfare breed → `nose` trait for the black nose. Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue is the portrait default (the FCI names it first — Claude's reading); FCI / AKC standard colours only"
       }
     }
   }
