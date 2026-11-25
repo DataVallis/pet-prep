@@ -226,6 +226,7 @@
       "bracco_italiano": "Part of the 12-week challenge · brushing 1× a week",
       "german_pinscher": "Part of the 12-week challenge · brushing 1× a week",
       "bedlington_terrier": "Part of the 12-week challenge · brushing 3× a week",
+      "kerry_blue_terrier": "Part of the 12-week challenge · brushing 4× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -856,6 +857,12 @@
         "senior": "2 meals a day; shorter walks — 4,500 steps a day."
       },
       "bedlington_terrier": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "kerry_blue_terrier": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
         "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
         "adult": "2 meals a day; walks of 6,000 steps a day.",

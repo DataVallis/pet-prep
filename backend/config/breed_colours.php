@@ -910,6 +910,14 @@ return [
         ['key' => 'liver-tan', 'value' => 'liver with tan markings (liver and tan)', 'en' => 'Liver and tan', 'sl' => 'Jetrno rjav s porjavelimi oznakami'],
         ['key' => 'sandy-tan', 'value' => 'sandy with tan markings (sandy and tan)', 'en' => 'Sandy and tan', 'sl' => 'Peščen s porjavelimi oznakami'],
     ],
+    // M5-R10-139: FCI-Standard N° 3 (S1043) blue of any shade, with or without black points (AKC S1045 deep slate to light blue
+    // grey); same order and values as breed_appearance.php.
+    'kerry_blue_terrier' => [
+        ['key' => 'blue', 'value' => 'blue (blue-grey)', 'en' => 'Blue', 'sl' => 'Moder'],
+        ['key' => 'blue-black-points', 'value' => 'blue with black points (darker muzzle, head, ears, tail and feet)', 'en' => 'Blue with black points', 'sl' => 'Moder s črnimi odtenki'],
+        ['key' => 'deep-slate-blue', 'value' => 'deep slate blue', 'en' => 'Deep slate blue', 'sl' => 'Temno skrilasto moder'],
+        ['key' => 'light-blue-grey', 'value' => 'light blue grey', 'en' => 'Light blue-grey', 'sl' => 'Svetlo modrosiv'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
