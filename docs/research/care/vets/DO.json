@@ -46,7 +46,8 @@
         "nb": "Innlagte kjæledyr overvåkes hele døgnet.",
         "sl": "Hospitalizirani ljubljenčki so pod nadzorom 24 ur na dan.",
         "hr": "Hospitalizirani ljubimci pod nadzorom 24 sata.",
-        "de": "Stationär aufgenommene Haustiere werden rund um die Uhr überwacht."
+        "de": "Stationär aufgenommene Haustiere werden rund um die Uhr überwacht.",
+        "fr": "Les animaux hospitalisés sont surveillés 24 h/24."
       }
     },
     {
@@ -76,7 +77,8 @@
         "nb": "Man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje utenom åpningstiden for veiledning ved akutte symptomer.",
         "sl": "Pon–pet 7–18, sob 9–15. Telefonska linija zunaj delovnega časa za nujno svetovanje o simptomih.",
         "hr": "pon–pet 7:00–18:00, sub 9:00–15:00. Izvan radnog vremena telefonska linija za savjete o hitnim simptomima.",
-        "de": "Mo–Fr 7.00–18.00 Uhr, Sa 9.00–15.00 Uhr. Telefonische Beratung bei dringenden Symptomen außerhalb der Öffnungszeiten."
+        "de": "Mo–Fr 7.00–18.00 Uhr, Sa 9.00–15.00 Uhr. Telefonische Beratung bei dringenden Symptomen außerhalb der Öffnungszeiten.",
+        "fr": "Lun.–ven. 7 h–18 h, sam. 9 h–15 h. Hors horaires, ligne téléphonique de conseil en cas de signes urgents."
       }
     },
     {
@@ -106,7 +108,8 @@
         "nb": "Man–fre 7.00–18.00, lør 9.00–15.00. Telefonlinje utenom åpningstiden for veiledning ved akutte symptomer.",
         "sl": "Pon–pet 7–18, sob 9–15. Telefonska linija zunaj delovnega časa za nujno svetovanje o simptomih.",
         "hr": "pon–pet 7:00–18:00, sub 9:00–15:00. Izvan radnog vremena telefonska linija za savjete o hitnim simptomima.",
-        "de": "Mo–Fr 7.00–18.00 Uhr, Sa 9.00–15.00 Uhr. Telefonische Beratung bei dringenden Symptomen außerhalb der Öffnungszeiten."
+        "de": "Mo–Fr 7.00–18.00 Uhr, Sa 9.00–15.00 Uhr. Telefonische Beratung bei dringenden Symptomen außerhalb der Öffnungszeiten.",
+        "fr": "Lun.–ven. 7 h–18 h, sam. 9 h–15 h. Hors horaires, ligne téléphonique de conseil en cas de signes d’urgence."
       }
     },
     {
@@ -136,7 +139,8 @@
         "nb": "man–fre 8.00–17.00. Telefonlinje utenom åpningstid for veiledning ved akutte symptomer.",
         "sl": "Pon–pet 8–17. Telefonska linija zunaj delovnega časa za nujno svetovanje o simptomih.",
         "hr": "pon–pet 8:00–17:00. Izvan radnog vremena telefonska linija za savjete o hitnim simptomima.",
-        "de": "Mo–Fr 8.00–17.00 Uhr. Telefonische Beratung bei dringenden Symptomen außerhalb der Öffnungszeiten."
+        "de": "Mo–Fr 8.00–17.00 Uhr. Telefonische Beratung bei dringenden Symptomen außerhalb der Öffnungszeiten.",
+        "fr": "Lun.–ven. 8 h–17 h. Hors horaires, ligne téléphonique de conseil en cas de signes urgents."
       }
     },
     {
@@ -166,7 +170,8 @@
         "nb": "man–fre 9.00–18.00, lør 9.00–14.00, stengt søndager og helligdager. Vakttelefon hele døgnet, alle dager, kun for registrerte pasienter.",
         "sl": "Pon–pet 9–18, sob 9–14, ob nedeljah in praznikih zaprto. Nujna telefonska linija 24/7 samo za registrirane paciente.",
         "hr": "pon–pet 9:00–18:00, sub 9:00–14:00, nedjeljom i blagdanima zatvoreno. Telefonska hitna linija 24/7 samo za registrirane pacijente.",
-        "de": "Mo–Fr 9.00–18.00 Uhr, Sa 9.00–14.00 Uhr, sonn- und feiertags geschlossen. Telefonischer Notdienst rund um die Uhr nur für registrierte Patienten."
+        "de": "Mo–Fr 9.00–18.00 Uhr, Sa 9.00–14.00 Uhr, sonn- und feiertags geschlossen. Telefonischer Notdienst rund um die Uhr nur für registrierte Patienten.",
+        "fr": "Lun.–ven. 9 h–18 h, sam. 9 h–14 h, fermé le dimanche et les jours fériés. Ligne téléphonique d’urgence 24 h/24, 7 j/7, réservée aux patients inscrits."
       }
     }
   ],

@@ -57,7 +57,8 @@
         "nb": "Åpent døgnet rundt. Også +375 29 392 80 81.",
         "sl": "Odprto 24 ur na dan. Tudi +375 29 392 80 81.",
         "hr": "Otvoreno non-stop. Također +375 29 392 80 81.",
-        "de": "Rund um die Uhr geöffnet. Auch +375 29 392 80 81."
+        "de": "Rund um die Uhr geöffnet. Auch +375 29 392 80 81.",
+        "fr": "Ouvert 24 h/24. Aussi : +375 29 392 80 81."
       }
     },
     {
@@ -83,7 +84,8 @@
         "nb": "Åpent hele døgnet, alle dager. Leger uten timebestilling 09.00–19.00; etter 21.00 vakthavende lege til nattakst.",
         "sl": "Odprto 24 ur na dan, vsak dan. Zdravniki brez naročanja 9–19; po 21. uri dežurni zdravnik po nočni tarifi.",
         "hr": "Otvoreno 24 sata, svaki dan. Pregledi bez najave 09:00–19:00; nakon 21:00 dežurni veterinar po noćnoj tarifi.",
-        "de": "Täglich rund um die Uhr geöffnet. Sprechstunde ohne Termin 9.00–19.00 Uhr; nach 21.00 Uhr diensthabender Tierarzt zum Nachttarif."
+        "de": "Täglich rund um die Uhr geöffnet. Sprechstunde ohne Termin 9.00–19.00 Uhr; nach 21.00 Uhr diensthabender Tierarzt zum Nachttarif.",
+        "fr": "Ouvert 24 h/24, tous les jours. Consultations sans rendez-vous 9 h–19 h ; après 21 h, vétérinaire de garde au tarif de nuit."
       }
     },
     {
@@ -109,7 +111,8 @@
         "nb": "Åpent hele døgnet, alle dager. Leger uten timebestilling 09.00–19.00; etter 21.00 vakthavende lege til nattakst.",
         "sl": "Odprto 24 ur na dan, vsak dan. Zdravniki brez naročanja 9–19; po 21. uri dežurni zdravnik po nočni tarifi.",
         "hr": "Otvoreno 24 sata, svaki dan. Pregledi bez najave 09:00–19:00; nakon 21:00 dežurni veterinar po noćnoj tarifi.",
-        "de": "Täglich rund um die Uhr geöffnet. Sprechstunde ohne Termin 9.00–19.00 Uhr; nach 21.00 Uhr diensthabender Tierarzt zum Nachttarif."
+        "de": "Täglich rund um die Uhr geöffnet. Sprechstunde ohne Termin 9.00–19.00 Uhr; nach 21.00 Uhr diensthabender Tierarzt zum Nachttarif.",
+        "fr": "Ouvert 24 h/24, tous les jours. Consultations sans rendez-vous 9 h–19 h ; après 21 h, vétérinaire de garde au tarif de nuit."
       }
     },
     {
@@ -135,7 +138,8 @@
         "nb": "Kontakt klinikken for å høre gjeldende åpningstider.",
         "sl": "Za aktualni delovni čas se obrnite na ambulanto.",
         "hr": "Za aktualno radno vrijeme obrati se ambulanti.",
-        "de": "Aktuelle Öffnungszeiten bitte bei der Tierarztpraxis erfragen."
+        "de": "Aktuelle Öffnungszeiten bitte bei der Tierarztpraxis erfragen.",
+        "fr": "Contactez la clinique pour connaître les horaires actuels."
       }
     },
     {
@@ -161,7 +165,8 @@
         "nb": "Kontakt klinikken for å høre gjeldende åpningstider.",
         "sl": "Za aktualni delovni čas se obrnite na ambulanto.",
         "hr": "Za aktualno radno vrijeme obrati se ambulanti.",
-        "de": "Aktuelle Öffnungszeiten bitte bei der Tierarztpraxis erfragen."
+        "de": "Aktuelle Öffnungszeiten bitte bei der Tierarztpraxis erfragen.",
+        "fr": "Contactez la clinique pour connaître les horaires actuels."
       }
     },
     {
@@ -187,7 +192,8 @@
         "nb": "Åpent alle dager kl. 09.00–21.00.",
         "sl": "Odprto vsak dan 9–21.",
         "hr": "Otvoreno svaki dan 09:00–21:00.",
-        "de": "Täglich 9.00–21.00 Uhr geöffnet."
+        "de": "Täglich 9.00–21.00 Uhr geöffnet.",
+        "fr": "Ouvert tous les jours 9 h–21 h."
       }
     },
     {
@@ -213,7 +219,8 @@
         "nb": "Åpent hele døgnet; pause på onsdager 11.00–14.00.",
         "sl": "Odprto 24 ur na dan; odmor ob sredah 11–14.",
         "hr": "Otvoreno 24 sata; stanka srijedom 11:00–14:00.",
-        "de": "Rund um die Uhr geöffnet; mittwochs Pause 11.00–14.00 Uhr."
+        "de": "Rund um die Uhr geöffnet; mittwochs Pause 11.00–14.00 Uhr.",
+        "fr": "Ouvert 24 h/24 ; pause le mercredi 11 h–14 h."
       }
     },
     {
@@ -239,7 +246,8 @@
         "nb": "Åpent alle dager kl. 09.00–21.00; pause onsdager kl. 11.00–14.00.",
         "sl": "Odprto vsak dan 9–21; odmor ob sredah 11–14.",
         "hr": "Otvoreno svaki dan 09:00–21:00; stanka srijedom 11:00–14:00.",
-        "de": "Täglich 9.00–21.00 Uhr geöffnet; mittwochs Pause 11.00–14.00 Uhr."
+        "de": "Täglich 9.00–21.00 Uhr geöffnet; mittwochs Pause 11.00–14.00 Uhr.",
+        "fr": "Ouvert tous les jours 9 h–21 h ; pause le mercredi 11 h–14 h."
       }
     },
     {
@@ -265,7 +273,8 @@
         "nb": "Åpent alle dager kl. 09.00–21.00; pause onsdager kl. 11.00–14.00.",
         "sl": "Odprto vsak dan 9–21; odmor ob sredah 11–14.",
         "hr": "Otvoreno svaki dan 09:00–21:00; stanka srijedom 11:00–14:00.",
-        "de": "Täglich 9.00–21.00 Uhr geöffnet; mittwochs Pause 11.00–14.00 Uhr."
+        "de": "Täglich 9.00–21.00 Uhr geöffnet; mittwochs Pause 11.00–14.00 Uhr.",
+        "fr": "Ouvert tous les jours 9 h–21 h ; pause le mercredi 11 h–14 h."
       }
     },
     {
@@ -291,7 +300,8 @@
         "nb": "Åpent døgnet rundt, alle dager; ikke alle spesialister er på vakt om natten – ring først.",
         "sl": "Odprto 24 ur na dan, vsak dan; ponoči niso na voljo vsi specialisti, zato najprej pokličite.",
         "hr": "Otvoreno non-stop, svaki dan; noću nisu dežurni svi specijalisti – nazovi prije dolaska.",
-        "de": "Täglich rund um die Uhr geöffnet; nachts sind nicht alle Fachärzte im Dienst – bitte zuerst anrufen."
+        "de": "Täglich rund um die Uhr geöffnet; nachts sind nicht alle Fachärzte im Dienst – bitte zuerst anrufen.",
+        "fr": "Ouvert 24 h/24, tous les jours ; tous les spécialistes ne sont pas de garde la nuit, appelez d’abord."
       }
     }
   ],

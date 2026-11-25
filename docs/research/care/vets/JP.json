@@ -566,7 +566,8 @@
         "nb": "Undervisningssykehus. Hverdager 9.00–16.00; bestill først på bestillingslinjen.",
         "sl": "Univerzitetna učna bolnišnica. Ob delavnikih 9–16; najprej se naročite na številki za rezervacije.",
         "hr": "Sveučilišna nastavna bolnica. Radnim danom 9:00–16:00; prvo naruči termin na liniji za rezervacije.",
-        "de": "Universitäre Lehrklinik. Werktags 9.00–16.00 Uhr; bitte zuerst über die Terminvergabe-Hotline anmelden."
+        "de": "Universitäre Lehrklinik. Werktags 9.00–16.00 Uhr; bitte zuerst über die Terminvergabe-Hotline anmelden.",
+        "fr": "Hôpital universitaire d’enseignement. En semaine 9 h–16 h ; réservez d’abord sur la ligne de réservation."
       }
     },
     {
@@ -1429,7 +1430,8 @@
         "nb": "Dagklinikk 9.00–12.00 og 13.30–18.00; stengt onsdag, søndag og helligdager. Tar for tiden ikke imot nye pasienter.",
         "sl": "Dnevna ambulanta 9–12 in 13.30–18; ob sredah, nedeljah in praznikih zaprto. Novih pacientov trenutno ne sprejemajo.",
         "hr": "Dnevna klinika 9:00–12:00 i 13:30–18:00; srijedom, nedjeljom i blagdanima zatvoreno. Novi pacijenti trenutačno se ne primaju.",
-        "de": "Tagesklinik 9.00–12.00 und 13.30–18.00 Uhr; mittwochs, sonntags und feiertags geschlossen. Derzeit keine Neupatienten."
+        "de": "Tagesklinik 9.00–12.00 und 13.30–18.00 Uhr; mittwochs, sonntags und feiertags geschlossen. Derzeit keine Neupatienten.",
+        "fr": "Clinique de jour 9 h–12 h et 13 h 30–18 h ; fermée le mercredi, le dimanche et les jours fériés. Aucun nouveau patient accepté pour le moment."
       }
     },
     {
@@ -1552,7 +1554,8 @@
         "nb": "Tilbyr akuttbehandling hele døgnet, alle dager i året. Ring før du kommer; besøk uten å ringe først kan bli avvist.",
         "sl": "Nudi nujno pomoč 24 ur na dan, vsak dan v letu. Pred prihodom pokličite; obiskov brez klica morda ne sprejmejo.",
         "hr": "Pruža hitnu skrb 24 sata, svaki dan u godini. Nazovi prije dolaska; dolazak bez poziva možda neće biti prihvaćen.",
-        "de": "Notfallversorgung rund um die Uhr an allen Tagen des Jahres. Bitte vorher anrufen; Besuche ohne Anruf werden möglicherweise nicht angenommen."
+        "de": "Notfallversorgung rund um die Uhr an allen Tagen des Jahres. Bitte vorher anrufen; Besuche ohne Anruf werden möglicherweise nicht angenommen.",
+        "fr": "Urgences 24 h/24, tous les jours de l’année. Appelez avant de venir ; une visite sans appel peut être refusée."
       }
     },
     {
@@ -1737,7 +1740,8 @@
         "nb": "Behandler dyr hele døgnet, også på helligdager, med akuttbehandling om natten. Ring før du kommer.",
         "sl": "Veterinarska oskrba 24 ur na dan, tudi ob praznikih, z nočno nujno pomočjo. Pred prihodom pokličite.",
         "hr": "Liječi životinje 24 sata dnevno, uključujući blagdane, s noćnom hitnom skrbi. Nazovi prije dolaska.",
-        "de": "Behandlung rund um die Uhr, auch feiertags, mit nächtlichem Notdienst. Bitte vorher anrufen."
+        "de": "Behandlung rund um die Uhr, auch feiertags, mit nächtlichem Notdienst. Bitte vorher anrufen.",
+        "fr": "Soins aux animaux 24 h/24, jours fériés compris, avec urgences de nuit. Appelez avant de venir."
       }
     },
     {
@@ -1953,7 +1957,8 @@
         "nb": "Behandler syke dyr hele døgnet: ordinær åpningstid 9.00–11.30 og 17.00–19.00, akuttmottak 19.00–9.00 og 11.30–17.00 (kun nødtilfeller tir/tor ettermiddag). Ring først.",
         "sl": "Zdravi bolne živali 24 ur na dan: redni delovni čas 9–11.30 in 17–19, nujni sprejem 19–9 in 11.30–17 (ob torkih in četrtkih popoldne samo nujni primeri). Najprej pokličite.",
         "hr": "Liječi bolesne životinje 24 sata dnevno: redovno radno vrijeme 9:00–11:30 i 17:00–19:00, hitni prijem 19:00–09:00 i 11:30–17:00 (utorkom i četvrtkom poslijepodne samo hitni slučajevi). Prvo nazovi.",
-        "de": "Behandlung kranker Tiere rund um die Uhr: reguläre Sprechzeiten 9.00–11.30 und 17.00–19.00 Uhr, Notfallannahme 19.00–9.00 und 11.30–17.00 Uhr (dienstag- und donnerstagnachmittags nur Notfälle). Bitte zuerst anrufen."
+        "de": "Behandlung kranker Tiere rund um die Uhr: reguläre Sprechzeiten 9.00–11.30 und 17.00–19.00 Uhr, Notfallannahme 19.00–9.00 und 11.30–17.00 Uhr (dienstag- und donnerstagnachmittags nur Notfälle). Bitte zuerst anrufen.",
+        "fr": "Soigne les animaux malades 24 h/24 : horaires habituels 9 h–11 h 30 et 17 h–19 h, accueil des urgences 19 h–9 h et 11 h 30–17 h (urgences uniquement les mardis et jeudis après-midi). Appelez d’abord."
       }
     },
     {
@@ -1982,7 +1987,8 @@
         "nb": "Tilbyr akuttbehandling om natten og på helligdager for dyr som blir syke; ring før besøk.",
         "sl": "Nudi nočno nujno pomoč in nujno pomoč ob praznikih za ljubljenčke, ki zbolijo; pred obiskom pokličite.",
         "hr": "Pruža hitnu skrb noću i na blagdane za životinje koje se razbole; nazovi prije dolaska.",
-        "de": "Nacht- und Feiertagsnotdienst für plötzlich erkrankte Tiere; bitte vor dem Besuch anrufen."
+        "de": "Nacht- und Feiertagsnotdienst für plötzlich erkrankte Tiere; bitte vor dem Besuch anrufen.",
+        "fr": "Urgences de nuit et jours fériés pour les animaux malades ; appelez avant de venir."
       }
     },
     {
@@ -2136,7 +2142,8 @@
         "nb": "Akuttbehandling tilgjengelig hele døgnet, alle dager i året; kvelds- og nattkonsultasjoner kl. 20.00–8.00. Ring først.",
         "sl": "Nujna pomoč 24 ur na dan, vsak dan v letu; večerni in nočni posveti 20–8. Najprej pokličite.",
         "hr": "Hitna skrb dostupna 24 sata, svaki dan u godini; večernje i noćne konzultacije 20:00–08:00. Prvo nazovi.",
-        "de": "Notversorgung rund um die Uhr an allen Tagen des Jahres; abendliche und nächtliche Sprechstunde 20.00–8.00 Uhr. Bitte zuerst anrufen."
+        "de": "Notversorgung rund um die Uhr an allen Tagen des Jahres; abendliche und nächtliche Sprechstunde 20.00–8.00 Uhr. Bitte zuerst anrufen.",
+        "fr": "Urgences 24 h/24, tous les jours de l’année ; consultations de soirée et de nuit 20 h–8 h. Appelez d’abord."
       }
     },
     {
@@ -2195,7 +2202,8 @@
         "nb": "Akuttbehandling (natt) tilbys, og sykehuset har full pleie og innleggelse hele døgnet. Ring før du kommer.",
         "sl": "Ponuja (nočno) nujno pomoč, bolnišnica pa ima 24-urno polno bolniško nego (hospitalizacijo). Pred prihodom pokličite.",
         "hr": "Nudi hitnu (noćnu) skrb, a bolnica ima 24-satni sustav potpune njege (hospitalizacije). Nazovi prije dolaska.",
-        "de": "Notdienst (nachts) wird angeboten; die Klinik verfügt über stationäre Vollpflege rund um die Uhr. Bitte vorher anrufen."
+        "de": "Notdienst (nachts) wird angeboten; die Klinik verfügt über stationäre Vollpflege rund um die Uhr. Bitte vorher anrufen.",
+        "fr": "Urgences (de nuit) proposées ; l’hôpital dispose d’un service d’hospitalisation avec soins infirmiers 24 h/24. Appelez avant de venir."
       }
     },
     {
@@ -2349,7 +2357,8 @@
         "nb": "Undervisningssykehus, hverdager på dagtid, kun etter timebestilling (nettbestilling siden april 2026).",
         "sl": "Univerzitetna učna bolnišnica, pon–pet čez dan, samo po naročilu (spletno naročanje od aprila 2026).",
         "hr": "Sveučilišna nastavna bolnica, pon–pet danju, samo uz termin (mrežno naručivanje od travnja 2026.).",
-        "de": "Universitäre Lehrklinik, Montag bis Freitag tagsüber, nur nach Terminvereinbarung (Online-Buchung seit April 2026)."
+        "de": "Universitäre Lehrklinik, Montag bis Freitag tagsüber, nur nach Terminvereinbarung (Online-Buchung seit April 2026).",
+        "fr": "Hôpital universitaire d’enseignement, du lundi au vendredi en journée, sur rendez-vous uniquement (réservation en ligne depuis avril 2026)."
       }
     },
     {
@@ -2905,7 +2914,8 @@
         "nb": "Hverdager 9.00–12.00 og 16.00–19.00; lør og søn 9.00–12.00 og 15.00–16.00; stengt onsdager og helligdager.",
         "sl": "Ob delavnikih 9–12 in 16–19; sob in ned 9–12 in 15–16; ob sredah in praznikih zaprto.",
         "hr": "Radnim danom 9:00–12:00 i 16:00–19:00; sub i ned 9:00–12:00 i 15:00–16:00; srijedom i blagdanima zatvoreno.",
-        "de": "Werktags 9.00–12.00 und 16.00–19.00 Uhr; Sa und So 9.00–12.00 und 15.00–16.00 Uhr; mittwochs und feiertags geschlossen."
+        "de": "Werktags 9.00–12.00 und 16.00–19.00 Uhr; Sa und So 9.00–12.00 und 15.00–16.00 Uhr; mittwochs und feiertags geschlossen.",
+        "fr": "En semaine 9 h–12 h et 16 h–19 h ; sam. et dim. 9 h–12 h et 15 h–16 h ; fermé le mercredi et les jours fériés."
       }
     },
     {
@@ -2965,7 +2975,8 @@
         "nb": "Universitetets henvisningssykehus (andrelinje), kun etter timebestilling via din egen dyrlege (unntatt eksotiske dyr). Stengt i helger og på helligdager.",
         "sl": "Univerzitetna bolnišnica sekundarne oskrbe, popolnoma po naročilu prek vašega veterinarja (izjema so eksotične živali). Ob koncih tedna in praznikih zaprto.",
         "hr": "Sveučilišna bolnica sekundarne skrbi, isključivo uz termin preko tvog veterinara (osim egzotičnih životinja). Vikendom i blagdanima zatvoreno.",
-        "de": "Universitäre Klinik der Zweitversorgung, ausschließlich nach Termin über die eigene Tierarztpraxis (außer Exoten). Am Wochenende und an Feiertagen geschlossen."
+        "de": "Universitäre Klinik der Zweitversorgung, ausschließlich nach Termin über die eigene Tierarztpraxis (außer Exoten). Am Wochenende und an Feiertagen geschlossen.",
+        "fr": "Hôpital universitaire de référence, uniquement sur rendez-vous via votre vétérinaire (sauf animaux exotiques). Fermé le week-end et les jours fériés."
       }
     },
     {
@@ -2995,7 +3006,8 @@
         "nb": "Hverdager 9.00–17.00 (resepsjonen stenger 16.00), stengt i helger og på helligdager. Kun etter timebestilling via din egen dyrlege.",
         "sl": "Ob delavnikih 9–17 (sprejem se zapre ob 16), ob koncih tedna in praznikih zaprto. Samo po naročilu, prek vašega veterinarja.",
         "hr": "Radnim danom 9:00–17:00 (prijem se zatvara u 16:00), vikendom i blagdanima zatvoreno. Samo uz termin, preko tvog veterinara.",
-        "de": "Werktags 9.00–17.00 Uhr (Annahmeschluss 16.00 Uhr), am Wochenende und feiertags geschlossen. Nur nach Termin über die eigene Tierarztpraxis."
+        "de": "Werktags 9.00–17.00 Uhr (Annahmeschluss 16.00 Uhr), am Wochenende und feiertags geschlossen. Nur nach Termin über die eigene Tierarztpraxis.",
+        "fr": "En semaine 9 h–17 h (accueil jusqu’à 16 h), fermé le week-end et les jours fériés. Sur rendez-vous uniquement, par l’intermédiaire de votre vétérinaire."
       }
     },
     {
@@ -3056,7 +3068,8 @@
         "nb": "Timebestilling på telefon på hverdager kl. 9.00–17.00. Behandler smådyr og kjæledyr.",
         "sl": "Naročanje po telefonu ob delavnikih 9–17. Zdravi male živali in ljubljenčke.",
         "hr": "Termin se dogovara telefonom radnim danom 9:00–17:00. Liječi male životinje i kućne ljubimce.",
-        "de": "Telefonische Terminvergabe werktags 9.00–17.00 Uhr. Behandelt Kleintiere und Haustiere."
+        "de": "Telefonische Terminvergabe werktags 9.00–17.00 Uhr. Behandelt Kleintiere und Haustiere.",
+        "fr": "Rendez-vous par téléphone en semaine 9 h–17 h. Soigne les petits animaux et les animaux de compagnie."
       }
     },
     {

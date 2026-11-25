@@ -50,7 +50,8 @@
         "nb": "Nødtilfeller håndteres i og utenfor klinikkens åpningstid; for nødtilfeller utenom åpningstid ring før kl. 22 for å nå vakthavende dyrlege.",
         "sl": "Nujne primere obravnavajo med ordinacijskim časom in po njem; za nujne primere po zaprtju pokličite pred 22. uro, da dosežete dežurnega zdravnika.",
         "hr": "Hitni slučajevi primaju se tijekom i nakon radnog vremena klinike; za hitne slučajeve izvan radnog vremena nazovi prije 22:00 da bi se javio dežurni veterinar.",
-        "de": "Notfälle werden während und außerhalb der Sprechzeiten behandelt; bei Notfällen außerhalb der Sprechzeiten bitte vor 22.00 Uhr anrufen, um den diensthabenden Tierarzt zu erreichen."
+        "de": "Notfälle werden während und außerhalb der Sprechzeiten behandelt; bei Notfällen außerhalb der Sprechzeiten bitte vor 22.00 Uhr anrufen, um den diensthabenden Tierarzt zu erreichen.",
+        "fr": "Urgences prises en charge pendant et après les heures d’ouverture ; pour une urgence hors horaires, appelez avant 22 h pour joindre le vétérinaire de garde."
       }
     },
     {
@@ -79,7 +80,8 @@
         "nb": "Akuttbehandling tilbys; akuttmobil +1 876-469-1260.",
         "sl": "Nudijo nujno pomoč; nujna mobilna številka +1 876-469-1260.",
         "hr": "Nudi hitnu skrb; mobitel za hitne slučajeve +1 876-469-1260.",
-        "de": "Notfallversorgung wird angeboten; Notfall-Handynummer +1 876-469-1260."
+        "de": "Notfallversorgung wird angeboten; Notfall-Handynummer +1 876-469-1260.",
+        "fr": "Urgences prises en charge ; mobile d’urgence : +1 876-469-1260."
       }
     },
     {
@@ -108,7 +110,8 @@
         "nb": "Åpent mandag til lørdag.",
         "sl": "Odprto pon–sob.",
         "hr": "Otvoreno pon–sub.",
-        "de": "Montag bis Samstag geöffnet."
+        "de": "Montag bis Samstag geöffnet.",
+        "fr": "Ouvert du lundi au samedi."
       }
     },
     {
@@ -137,7 +140,8 @@
         "nb": "mandag–fredag 8–19, lørdag 9–16, søndag 10–15.",
         "sl": "Pon–pet 8–19, sob 9–16, ned 10–15.",
         "hr": "pon–pet 8:00–19:00, sub 9:00–16:00, ned 10:00–15:00.",
-        "de": "Mo–Fr 8.00–19.00 Uhr, Sa 9.00–16.00 Uhr, So 10.00–15.00 Uhr."
+        "de": "Mo–Fr 8.00–19.00 Uhr, Sa 9.00–16.00 Uhr, So 10.00–15.00 Uhr.",
+        "fr": "Lun.–ven. 8 h–19 h, sam. 9 h–16 h, dim. 10 h–15 h."
       }
     },
     {
@@ -166,7 +170,8 @@
         "nb": "Klinikk åpen for publikum.",
         "sl": "Klinika je odprta za javnost.",
         "hr": "Klinika otvorena za javnost.",
-        "de": "Klinik für den Publikumsverkehr geöffnet."
+        "de": "Klinik für den Publikumsverkehr geöffnet.",
+        "fr": "Clinique ouverte au public."
       }
     }
   ],
