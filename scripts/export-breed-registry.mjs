@@ -519,6 +519,7 @@ const SPECIES = [
       { id: 'bracco_italiano', synonyms: { en: ['Italian Pointer', 'Italian Pointing Dog', 'Bracco'], sl: ['bracco italiano', 'italijanski pticar', 'bracco'] } },
       { id: 'german_pinscher', synonyms: { en: ['Deutscher Pinscher', 'Standard Pinscher', 'Pinscher'], sl: ['nemški pinč', 'srednji pinč', 'pinč'] } },
       { id: 'bedlington_terrier', synonyms: { en: ['Bedlington'], sl: ['bedlingtonski terier', 'bedlington terrier', 'bedlington'] } },
+      { id: 'kerry_blue_terrier', synonyms: { en: ['Kerry Blue', 'Kerry'], sl: ['kerry blue terier', 'kerry'] } },
     ],
   },
   {
@@ -3499,6 +3500,31 @@ const DOG_FACTS = {
       ['kneecap_luxation', 'health.patella'],
     ],
   },
+  // M5-R10-139. The RKC page was refused and no PDSA / Woodgreen / Dogs Trust page exists → PetMD (S1046): exercise 'about one
+  // hour of exercise every day' (about, the game value); lifespan = WebMD 12–15 y (S1047) and VCA 10–12 y (S1048) as spans
+  // (no McMillan A/B copy — median_uk null; the 12.4 y value is Wikipedia, tier C, only the basis of the senior proposal);
+  // height / weight = FCI-Standard N° 3 (S1043; bitches 'proportionately less' → the breed-wide range). Coren rank 35 (S35).
+  // FCI origin Ireland (IE). Not exported: coat / grooming / shedding (no RKC / PDSA key fact — PetMD / WebMD / VCA free text,
+  // the game's brushing rule and the app's low_shedding chip carry it; Miniature American Shepherd precedent),
+  // lifespan.mcmillan_2024_wikipedia (tier C), senior_from (derived), the PetMD / WebMD / VCA care texts (care tasks / grooming
+  // rule come from the game), health.skin (cysts / spiculosis — no register key fits, itchy_skin_allergy is an allergy).
+  // No new health key (PNA → inherited_ataxia, Spinone Italiano precedent).
+  kerry_blue_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.webmd', 'span'], ['lifespan.vca', 'span']],
+    exercise: [['exercise.adult', 'about']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['dry_eye', 'health.eyes'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['inherited_ataxia', 'health.pna'],
+    ],
+  },
 
 
 
@@ -3594,6 +3620,7 @@ export const DOG_CARE_TASKS = {
   belgian_sheepdog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.belgian_sheepdog.tooth_brushing'], ['ear_cleaning', 1, 28, 'proposed_game_parameters.belgian_sheepdog.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.belgian_sheepdog.bathing']],
   german_pinscher: [['ear_cleaning', 1, 7, 'proposed_game_parameters.german_pinscher.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.german_pinscher.nail_trimming'], ['bath', 1, 42, 'proposed_game_parameters.german_pinscher.bathing']],
   bedlington_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.bedlington_terrier.tooth_brushing'], ['groomer_visit', 1, 42, 'proposed_game_parameters.bedlington_terrier.professional_grooming']],
+  kerry_blue_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.kerry_blue_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.kerry_blue_terrier.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.kerry_blue_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.kerry_blue_terrier.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4648,6 +4675,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bedlington_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bedlington_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bedlington_terrier.exercise_minutes_senior',
+  },
+  kerry_blue_terrier: {
+    adult_minutes: ['proposed_game_parameters.kerry_blue_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.kerry_blue_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.kerry_blue_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.kerry_blue_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.kerry_blue_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.kerry_blue_terrier.exercise_minutes_senior',
   },
 
 

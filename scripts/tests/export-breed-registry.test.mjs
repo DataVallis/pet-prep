@@ -263,6 +263,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.bracco_italiano.slug, { en: 'bracco-italiano', sl: 'italijanski-pticar' });
   assert.deepEqual(byId.german_pinscher.slug, { en: 'german-pinscher', sl: 'nemski-pinc' });
   assert.deepEqual(byId.bedlington_terrier.slug, { en: 'bedlington-terrier', sl: 'bedlington-terier' });
+  assert.deepEqual(byId.kerry_blue_terrier.slug, { en: 'kerry-blue-terrier', sl: 'kerry-blue-terier' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -488,6 +489,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     bracco_italiano: { adult: 12000, senior: 9000, seniorFrom: 99, learning: 1 },
     german_pinscher: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
     bedlington_terrier: { adult: 6000, senior: 4500, seniorFrom: 123, learning: 1 },
+    kerry_blue_terrier: { adult: 6000, senior: 4500, seniorFrom: 112, learning: 1.2 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -4320,6 +4322,44 @@ test('Bedlington Terrier (M5-R10-138): PDSA minimum 1 h, FCI height + weight, Mc
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'low_shedding']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'older_children', 'needs_company', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['copper_liver_disease', 'retinal_eye_conditions', 'kneecap_luxation']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle/i);
+});
+
+test('Kerry Blue Terrier (M5-R10-139): PetMD about 1 h, FCI height + weight, WebMD / VCA spans → senior 112 (proposal), Coren 35 → 1.2, brushing 4×, teeth + ears + groomer + bath, chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'kerry_blue_terrier');
+  assert.deepEqual(d.name, { en: 'Kerry Blue Terrier', sl: 'Kerry blue terier' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'about', ['S1046']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 3, group: 3, section: 1, origin: 'IE' });
+  assert.deepEqual(d.facts.find((f) => f.field === 'coren_rank').value, 35);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [15, 18], female: [15, 18] }, ['S1043']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [45.5, 49.5], female: [44.5, 48] }, ['S1043']]]);
+  // No McMillan A/B copy: only the WebMD / VCA spans — never a median, never the tier-C Wikipedia value.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.value, f.qualifier, f.source_ids]), [
+    [[12, 15], 'span', ['S1047']],
+    [[10, 12], 'span', ['S1048']],
+  ]);
+  assert.ok(!JSON.stringify(d.facts).includes('S1050'));
+  // No RKC / PDSA key facts: no coat, grooming or shedding category (free text only).
+  assert.deepEqual(d.facts.filter((f) => ['coat', 'grooming_frequency', 'grooming_level', 'shedding'].includes(f.field)), []);
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 112 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1.2 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 4 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => [r.params.task, r.params.actor, r.params.times, r.params.period_days]), [
+    ['tooth_brushing', 'child', 7, 7],
+    ['ear_cleaning', 'child', 1, 14],
+    ['groomer_visit', 'parent', 1, 42],
+    ['bath', 'parent', 1, 28],
+  ]);
+  assert.ok(!d.game.rules.some((r) => r.key === 'nail_trim' || r.params?.task === 'nail_trim'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'meal_exercise_gap'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children', 'low_shedding']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'needs_company']);
+  // The skin conditions (cysts, spiculosis) have no fitting register key → left out.
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'dry_eye', 'bleeding_disorder_vwd', 'inherited_ataxia']);
   assert.equal(d.breeder_checklist.status, 'listed');
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle/i);
