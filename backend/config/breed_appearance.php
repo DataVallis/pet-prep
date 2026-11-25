@@ -898,6 +898,12 @@
 | on the head with a beard, thin V-shaped ears carried forward, thin tail set high and carried erect, black nose. Not
 | flat-faced. Blue first with the highest weight (the portrait default); weights unsourced → `verified => false`.
 |
+| Irish Terrier (M5-R10-140, docs/research/dog-data irish_terrier.appearance): "Colour: Should be “whole coloured” being red,
+| red-wheaten or yellow-red." (FCI-Standard N° 139, S1051; a small white patch on the chest allowed, any other colour
+| disqualifying); dense, wiry, broken but flat-lying coat, slight beard, small V-shaped ears dropping forward, dark small
+| eyes, black nose; natural (undocked) tail. Not a welfare breed (RKC Breed Watch Category 2, cracked / corny pads, S1054).
+| Red first (the portrait default); weights unsourced → `verified => false`.
+|
 | Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
 | without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
 | low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
@@ -5893,6 +5899,40 @@ return [
             'eye_color' => ['dark or dark hazel medium-sized eyes with a keen expression'],
             'tail' => ['thin tail set on high and carried erect and gaily'],
             'nose' => ['a black nose with large, wide nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-140 (docs/research/dog-data/data.json irish_terrier.appearance; runbook rules 2026-10-10: standard colours only —
+    // whole-coloured red, red wheaten or yellow red (FCI S1051); a small white chest patch allowed, never any other colour).
+    'irish_terrier' => [
+        'display_name' => 'Irish Terrier',
+        // Colour frequencies are in no source (irish_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 139 Irish Terrier (S1051) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1051 "Height at the withers: Approximately 18 inches (45.5cm)." / "Weight: Dogs 27lbs (12.25kg)."',
+            'build' => 'S1051 "The dog must present an active, lively, lithe and wiry appearance; lots of substance, at the same time"',
+            'coat_length' => 'S1051 "Hair: Should be dense and wiry in texture, having a broken appearance but still lying flat,"',
+            'coat_color' => 'S1051 "Colour: Should be “whole coloured” being red, red-wheaten or yellow-red." (weights unsourced)',
+            'ear_carriage' => 'S1051 "EARS: Small and V-shaped, of moderate thickness, set well on the head and dropping forward closely to the cheek."',
+            'eye_color' => 'S1051 "EYES: Should be dark in colour, small, not prominent and full of life, fire and intelligence."',
+            'tail' => 'S1051 "TAIL: Should be set on rather high, carried gaily but not over the back or curled." (natural tail — undocked)',
+            'nose' => 'S1051 "Nose: Must be black."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'active, lively, lithe and wiry terrier with a graceful, racy outline, a long flat head and a slight beard', 'weight' => 3], 'well-muscled, moderately long-legged terrier built for speed and endurance'],
+            'coat_length' => ['dense, wiry, broken coat lying flat, short almost smooth hair on the face'],
+            // Standard colours only (S1051 — whole-coloured; any other colour disqualifies); red highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'red', 'weight' => 50],
+                ['value' => 'red wheaten', 'weight' => 30],
+                ['value' => 'yellow red', 'weight' => 20],
+            ],
+            'ear_carriage' => ['small V-shaped ears dropping forward close to the cheek, with short, slightly darker hair'],
+            'eye_color' => ['small dark eyes full of life and fire'],
+            'tail' => ['natural undocked tail set rather high and carried gaily, not curled'],
+            'nose' => ['a black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],

@@ -918,6 +918,13 @@ return [
         ['key' => 'deep-slate-blue', 'value' => 'deep slate blue', 'en' => 'Deep slate blue', 'sl' => 'Temno skrilasto moder'],
         ['key' => 'light-blue-grey', 'value' => 'light blue grey', 'en' => 'Light blue-grey', 'sl' => 'Svetlo modrosiv'],
     ],
+    // M5-R10-140: FCI-Standard N° 139 (S1051) whole-coloured red, red wheaten or yellow red; same order and values as
+    // breed_appearance.php.
+    'irish_terrier' => [
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'red-wheaten', 'value' => 'red wheaten', 'en' => 'Red wheaten', 'sl' => 'Rdeče pšeničen'],
+        ['key' => 'yellow-red', 'value' => 'yellow red', 'en' => 'Yellow red', 'sl' => 'Rumeno rdeč'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
