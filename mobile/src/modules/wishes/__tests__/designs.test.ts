@@ -100,7 +100,7 @@ describe('request payloads', () => {
     expect(defaultDesigns(['bowls'], items, { bowls: 'gone' })).toEqual({ bowls: 'b1' });
   });
 
-  describe('bundle picker (David 2026-11-19: »Vse tri« = three, preselect what the child waits for)', () => {
+  describe('bundle picker (David 2026-11-19: the bundle = all three, preselect what the child waits for)', () => {
     const items = [
       { key: 'bed' as const, designs: readDesigns([{ key: 'bed_round', name: 'Round' }, { key: 'bed_navy', name: 'Navy' }]) },
       { key: 'bowls' as const, designs: readDesigns([{ key: 'bowls_steel', name: 'Steel' }, { key: 'bowls_wood', name: 'Wood' }]) },

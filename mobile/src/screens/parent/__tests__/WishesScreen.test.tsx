@@ -1,5 +1,5 @@
-/** M6-W05 parent »Želje«: store prices, »Nakup še ni na voljo«, bundle offer, buy → redeem, »Ne zdaj«, »Komu?«, old server. */
-import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+/** M6-W05 parent »Želje«: store prices, »Nakup še ni na voljo«, the bundle section (David 2026-11-25), buy → redeem, »Ne zdaj«, »Komu?«, old server. */
+import { act, fireEvent, screen, waitFor, within } from '@testing-library/react-native';
 import Purchases from 'react-native-purchases';
 
 import { ApiError, api } from '@/api/client';
@@ -36,6 +36,8 @@ const BODY = {
   unassigned_credits: [],
 };
 const product = (identifier: string, priceString: string) => ({ identifier, priceString });
+/** A store product with the numeric price + currency (what »Posamezno skupaj …« reads). */
+const priced = (identifier: string, price: number) => ({ identifier, price, currencyCode: 'EUR', priceString: `${price.toFixed(2).replace('.', ',')}\u00a0€` });
 
 // The first render loads the RevenueCat mock + i18n bundles (~5 s cold on CI runners).
 jest.setTimeout(20_000);
@@ -64,10 +66,11 @@ describe('WishesScreen', () => {
     expect(screen.getByText('Skledi za hrano in vodo')).toBeTruthy();
     expect(screen.getByTestId('wish-buy-31')).toBeDisabled();
     expect(screen.getAllByText('Nakup še ni na voljo').length).toBeGreaterThan(0);
-    expect(screen.queryByTestId('wish-bundle-31')).toBeNull();
+    expect(screen.queryByTestId('bundle-section')).toBeNull();
+    expect(screen.queryByTestId('bundle-buy-12')).toBeNull();
   });
 
-  it('store prices → »Kupi za …« and »Vse tri za …«; buying redeems with the wish and the transaction id', async () => {
+  it('store prices → »Kupi za …« in the wish card, the bundle in its OWN section; buying redeems with the wish and the transaction id', async () => {
     getParentWishes.mockResolvedValue(BODY);
     getProducts.mockResolvedValue([product('petprep_wish_bowls', '5,99 €'), product('petprep_wish_bundle_welcome', '15,99 €')]);
     purchaseStoreProduct.mockResolvedValue({ productIdentifier: 'petprep_wish_bowls', customerInfo: {}, transaction: { transactionIdentifier: 'tx-9' } });
@@ -75,10 +78,59 @@ describe('WishesScreen', () => {
     renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
     await flush();
     expect(screen.getByText('Kupi za 5,99 €')).toBeTruthy();
-    expect(screen.getByText('Vse tri za 15,99 €')).toBeTruthy();
+    // David 2026-11-25: the bundle is its own section, not a button inside the wish card.
+    expect(screen.getByTestId('bundle-section')).toHaveTextContent('Paket »Dobrodošlica«');
+    expect(within(screen.getByTestId('wish-31')).queryByTestId('bundle-buy-12')).toBeNull();
+    expect(within(screen.getByTestId('bundle-12')).getByText('Kupi paket za 15,99 €')).toBeTruthy();
+    expect(screen.getByTestId('bundle-12-contents')).toHaveTextContent('Paket za Suki: postelja, skledi in vrv za vlečenje');
+    // Not all three single prices in the store → no saving line.
+    expect(screen.queryByTestId('bundle-12-separately')).toBeNull();
+    expect(screen.queryByText(/Vse tri/)).toBeNull();
     fireEvent.press(screen.getByTestId('wish-buy-31'));
     expect(await screen.findByText('Kupljeno — stvar je dodana.')).toBeTruthy();
     expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bowls', wish_id: 31 }, 'tx-9', expect.anything());
+  });
+
+  it('bundle section for a cat: basket, bowls and plush mouse; »Posamezno skupaj …« only from all three store prices', async () => {
+    const catWish = { ...WISH, id: 41, pet_id: 20, pet_name: 'Mici', species: 'cat', item_key: 'bed', variant: 'cat_basket', product_id: 'petprep_wish_bed' };
+    const catPet = {
+      pet_id: 20,
+      pet_name: 'Mici',
+      species: 'cat',
+      bundle_eligible: true,
+      items: [
+        { key: 'bed', variant: 'cat_basket', product_id: 'petprep_wish_bed', owned: false, media_ready: false },
+        { key: 'bowls', variant: 'cat_bowls', product_id: 'petprep_wish_bowls', owned: false, media_ready: false },
+        { key: 'toy_1', variant: 'cat_mouse', product_id: 'petprep_wish_toy_1', owned: false, media_ready: false },
+      ],
+    };
+    getParentWishes.mockResolvedValue({ ...BODY, wishes: [catWish], pets: [catPet] });
+    getProducts.mockResolvedValue([priced('petprep_wish_bed', 5.99), priced('petprep_wish_bowls', 5.99), priced('petprep_wish_toy_1', 5.99), priced('petprep_wish_bundle_welcome', 15.99)]);
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('bundle-20-contents')).toHaveTextContent('Paket za Mici: košara, skledi in plišasta miška');
+    expect(screen.getByTestId('bundle-20-separately')).toHaveTextContent('Posamezno skupaj 17,97\u00a0€');
+    expect(screen.getByTestId('bundle-buy-20')).toHaveTextContent('Kupi paket za 15,99\u00a0€');
+    expect(screen.getByLabelText('Kupi paket »Dobrodošlica« (košara, skledi in plišasta miška) za Mici za 15,99\u00a0€')).toBeTruthy();
+    expect(screen.queryByText(/postelja/)).toBeNull();
+    expect(screen.queryByText(/Vse tri/)).toBeNull();
+  });
+
+  it('bundle section in English names the dog items; no bundle_product_id on the wish → no section', async () => {
+    await i18n.changeLanguage('en');
+    getParentWishes.mockResolvedValue(BODY);
+    getProducts.mockResolvedValue([priced('petprep_wish_bed', 5.99), priced('petprep_wish_bowls', 5.99), priced('petprep_wish_toy_1', 5.99), priced('petprep_wish_bundle_welcome', 15.99)]);
+    const view = renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('bundle-section')).toHaveTextContent('Welcome pack');
+    expect(screen.getByTestId('bundle-12-contents')).toHaveTextContent('Pack for Suki: bed, bowls and rope tug toy');
+    expect(screen.getByTestId('bundle-12-separately')).toHaveTextContent('Separately 17,97\u00a0€ in total');
+    expect(screen.queryByText(/All three/)).toBeNull();
+    view.unmount();
+    getParentWishes.mockResolvedValue({ ...BODY, wishes: [{ ...WISH, bundle_product_id: null }] });
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('bundle-section')).toBeNull();
   });
 
   it('QA #416 m4: re-checks fresh data before the store sheet; already owned → clear text, nothing charged', async () => {
@@ -236,21 +288,21 @@ describe('WishesScreen — designs (M6-W03)', () => {
     redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
     renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
     await flush();
-    fireEvent.press(screen.getByTestId('wish-bundle-31'));
+    fireEvent.press(screen.getByTestId('bundle-buy-12'));
     expect(purchaseStoreProduct).not.toHaveBeenCalled();
-    expect(screen.getByTestId('design-choice-wish-31')).toBeTruthy();
-    // All three — the bowls of the card it was opened from included.
+    expect(screen.getByTestId('design-choice-bundle-12')).toBeTruthy();
+    // All three — the bowls of the wish it resolves included.
     expect(screen.getByText('Izberite videz: Pasja postelja')).toBeTruthy();
     expect(screen.getByText('Izberite videz: Skledi za hrano in vodo')).toBeTruthy();
     expect(screen.getByText('Izberite videz: Vrv za vlečenje')).toBeTruthy();
     // Preselected = what the child is waiting for, not the first design.
-    expect(screen.getByTestId('design-choice-wish-31-bed-bed_box')).toBeSelected();
-    expect(screen.getByTestId('design-choice-wish-31-bed-bed_round')).not.toBeSelected();
-    expect(screen.getByTestId('design-choice-wish-31-bowls-bowls_clay')).toBeSelected();
-    expect(screen.getByTestId('design-choice-wish-31-toy_1-rope_blue')).toBeSelected();
+    expect(screen.getByTestId('design-choice-bundle-12-bed-bed_box')).toBeSelected();
+    expect(screen.getByTestId('design-choice-bundle-12-bed-bed_round')).not.toBeSelected();
+    expect(screen.getByTestId('design-choice-bundle-12-bowls-bowls_clay')).toBeSelected();
+    expect(screen.getByTestId('design-choice-bundle-12-toy_1-rope_blue')).toBeSelected();
     // The parent may still change any look.
-    fireEvent.press(screen.getByTestId('design-choice-wish-31-bowls-bowls_steel'));
-    fireEvent.press(screen.getByTestId('design-choice-confirm-wish-31'));
+    fireEvent.press(screen.getByTestId('design-choice-bundle-12-bowls-bowls_steel'));
+    fireEvent.press(screen.getByTestId('design-choice-confirm-bundle-12'));
     expect(await screen.findByText('Kupljeno — stvar je dodana.')).toBeTruthy();
     expect(redeemPetItem).toHaveBeenCalledWith(
       12,

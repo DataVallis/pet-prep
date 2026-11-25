@@ -639,6 +639,12 @@
         "bodyNoChildNoName": "Your child has been looking after the cat for 7 days. Time for the real test?",
         "hint": "You can start the 12-week challenge with the same cat: a week-by-week programme, a certificate and the full history."
       }
+    },
+    "wishes": {
+      "parent": {
+        "bundleA11y": "Buy the welcome pack (basket, bowls and plush mouse) for {{pet}} for {{price}}",
+        "bundleContents": "Pack for {{pet}}: basket, bowls and plush mouse"
+      }
     }
   },
   "account": {

@@ -647,6 +647,12 @@
         "bodyNoChildNoName": "Vaš otrok že 7 dni skrbi za muco. Je čas za pravi preizkus?",
         "hint": "Z isto muco lahko začnete 12-tedenski izziv: program po tednih, potrdilo in celotna zgodovina."
       }
+    },
+    "wishes": {
+      "parent": {
+        "bundleA11y": "Kupi paket »Dobrodošlica« (košara, skledi in plišasta miška) za {{pet}} za {{price}}",
+        "bundleContents": "Paket za {{pet}}: košara, skledi in plišasta miška"
+      }
     }
   },
   "account": {
