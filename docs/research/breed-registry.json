@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "be45c71fee62acd735af7bfba9b42482c883acb7cb98e8f4d0efc01ecbc1b73d"
+      "sha256": "e7dcae66a4652586a65119de715e5fc374118c74d51254d5bb6e841246769a5a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "9922e8690f42eb1feb12aa780501292518b75dc7300b070265b30f0d1e199340"
+      "sha256": "483c7dfeda00e006396fa9bbeb78a3c1cdd17ebbd35153c0925cdca080c6ca2f"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "1d0b0c85132725f946f1f3a6d33445330805b317aadadf62bcde1156c1d1c0d3"
+      "sha256": "0584b554cb01d23cf67caf955a124a879a8efeef0d9df5b51effcfadc24d2d20"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ac629e5795306f224f919969612cd7f3fe44e0565b7f8ea0053f2258c300b5d4"
+      "sha256": "5e56c4d634ed7641094071ec08c5d8f5488222e882f3a551d591b2bd44f43521"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1ac2baeb858bea8ed5fec46c04fd803a32936ea3449294845f7a4eaaea4871c7"
+      "sha256": "63f24c2aa95b6f8f9085135a1159a600788c33394738721d656bd5e0d690859e"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "b6a49b8d021f4d6bd43658a1146314ab502b887370202bd77d8716e151ee600b"
+      "sha256": "fe905c3d6eb453475e6809461665aca7e22dafce63eadfb01148309e95b31eab"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "a21978876045ea6f4861f00a8d140afc411b9e362ec5597dfa82a0e060bc00c1"
+      "sha256": "f0bcc1dcf0798990b8dec471508219214ccefd452ef72c9307a48bfcdd9ddc12"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 130,
+      "breed_count": 131,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -81449,6 +81449,573 @@
       ]
     },
     {
+      "id": "irish_terrier",
+      "species": "dog",
+      "order": 130,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Irish Terrier",
+        "sl": "Irski terier"
+      },
+      "slug": {
+        "en": "irish-terrier",
+        "sl": "irski-terier"
+      },
+      "synonyms": {
+        "en": [],
+        "sl": [
+          "irski terier",
+          "irish terrier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S1053"
+          ],
+          "ref": "irish_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              45.5,
+              45.5
+            ],
+            "female": [
+              45.5,
+              45.5
+            ]
+          },
+          "source_ids": [
+            "S1051"
+          ],
+          "ref": "irish_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              12.25,
+              12.25
+            ],
+            "female": [
+              11.4,
+              11.4
+            ]
+          },
+          "source_ids": [
+            "S1051"
+          ],
+          "ref": "irish_terrier.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "irish_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S1053"
+          ],
+          "ref": "irish_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            13,
+            15
+          ],
+          "source_ids": [
+            "S1057"
+          ],
+          "ref": "irish_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S1053"
+          ],
+          "ref": "irish_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S1053"
+          ],
+          "ref": "irish_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S1053"
+          ],
+          "ref": "irish_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1053"
+          ],
+          "ref": "irish_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 139,
+            "group": 3,
+            "section": 1,
+            "origin": "IE"
+          },
+          "source_ids": [
+            "S1051"
+          ],
+          "ref": "irish_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "footpad_hyperkeratosis",
+          "source_ids": [
+            "S1055"
+          ],
+          "ref": "irish_terrier.health.footpad_hyperkeratosis",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S1055"
+          ],
+          "ref": "irish_terrier.health.bladder_stones",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1053",
+              "S1055"
+            ],
+            "refs": [
+              "irish_terrier.exercise.adult",
+              "irish_terrier.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1056"
+            ],
+            "refs": [
+              "irish_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1056"
+            ],
+            "refs": [
+              "irish_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1053",
+              "S1055"
+            ],
+            "refs": [
+              "irish_terrier.suitability.rkc_grooming",
+              "irish_terrier.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1056"
+            ],
+            "refs": [
+              "irish_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 56
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1053"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1053 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1053"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S1053)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 'Average' tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.grooming",
+            "basis_source_ids": [
+              "S1055"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »2 or 3 times per week« → 3); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S1058"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (WebMD »on a daily basis«)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.ear_care",
+            "basis_source_ids": [
+              "S1056"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes enkrat na teden (Woodgreen »checked weekly«)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S1056"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): obisk pri frizerju vsakih 8 tednov (Woodgreen »every couple of months«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1053",
+          "S1055",
+          "S1056",
+          "S1058"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S1053"
+            ]
+          },
+          {
+            "key": "dna_hfh",
+            "level": "best_practice",
+            "source_ids": [
+              "S1053"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S1053"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1051",
+        "S1053",
+        "S1055",
+        "S1056",
+        "S1057",
+        "S1058",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -88834,6 +89401,48 @@
       "publisher": "Wikipedia",
       "title": "Kerry Blue Terrier",
       "url": "https://en.wikipedia.org/wiki/Kerry_Blue_Terrier"
+    },
+    {
+      "id": "S1051",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 139 Irish Terrier (English PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/139g03-en.pdf"
+    },
+    {
+      "id": "S1053",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Irish Terrier — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/irish-terrier/"
+    },
+    {
+      "id": "S1055",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Irish Terrier Breed Information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/irish-terrier"
+    },
+    {
+      "id": "S1056",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity",
+      "title": "Pet Explorer — Irish Terrier",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/irish-terrier"
+    },
+    {
+      "id": "S1057",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Nov. 27, 2023)",
+      "title": "Irish Terrier",
+      "url": "https://www.petmd.com/dog/breeds/irish-terrier"
+    },
+    {
+      "id": "S1058",
+      "tier": "B",
+      "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Amy Flowers, DVM (June 12, 2024)",
+      "title": "What to Know About Irish Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-irish-terriers"
     },
     {
       "id": "C1",

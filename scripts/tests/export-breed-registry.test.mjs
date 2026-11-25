@@ -264,6 +264,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.german_pinscher.slug, { en: 'german-pinscher', sl: 'nemski-pinc' });
   assert.deepEqual(byId.bedlington_terrier.slug, { en: 'bedlington-terrier', sl: 'bedlington-terier' });
   assert.deepEqual(byId.kerry_blue_terrier.slug, { en: 'kerry-blue-terrier', sl: 'kerry-blue-terier' });
+  assert.deepEqual(byId.irish_terrier.slug, { en: 'irish-terrier', sl: 'irski-terier' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -490,6 +491,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     german_pinscher: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
     bedlington_terrier: { adult: 6000, senior: 4500, seniorFrom: 123, learning: 1 },
     kerry_blue_terrier: { adult: 6000, senior: 4500, seniorFrom: 112, learning: 1.2 },
+    irish_terrier: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -970,7 +972,9 @@ test('every dog breed has a Coren rank fact except the explicitly unranked Havan
     // Bracco Italiano: not ranked (S35 not reachable 2026-11-24; the 2026-11-18 reading had no Bracco, M5-R10-136 — open for David).
     'bracco_italiano',
     // German Pinscher: not in S35 (re-read 2026-11-24: Doberman Pinscher, Affenpinscher, Miniature Pinscher only, M5-R10-137).
-    'german_pinscher'];
+    'german_pinscher',
+    // Irish Terrier: S35 lists it under 'Average' without a readable rank number (M5-R10-140, Welsh Terrier precedent).
+    'irish_terrier'];
   for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
     const has = b.facts.some((f) => f.field === 'coren_rank');
     assert.equal(has, !unranked.includes(b.id), `${b.id} coren_rank fact`);
@@ -4360,6 +4364,42 @@ test('Kerry Blue Terrier (M5-R10-139): PetMD about 1 h, FCI height + weight, Web
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'needs_company']);
   // The skin conditions (cysts, spiculosis) have no fitting register key → left out.
   assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'dry_eye', 'bleeding_disorder_vwd', 'inherited_ataxia']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle/i);
+});
+
+test('Irish Terrier (M5-R10-140): RKC up to 1 h, FCI height + weight, RKC over 12 y → senior 108, Coren Average → 1.0, brushing 3×, teeth + ears + groomer, chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'irish_terrier');
+  assert.deepEqual(d.name, { en: 'Irish Terrier', sl: 'Irski terier' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S1053']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 139, group: 3, section: 1, origin: 'IE' });
+  // Rank number not readable (only the 'Average' tier) → no coren_rank fact.
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank'), undefined);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [12.25, 12.25], female: [11.4, 11.4] }, ['S1051']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [45.5, 45.5], female: [45.5, 45.5] }, ['S1051']]]);
+  // The tier-C Wikipedia McMillan value is never exported.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.value, f.qualifier, f.source_ids]), [
+    [12, 'more_than', ['S1053']],
+    [[13, 15], 'span', ['S1057']],
+  ]);
+  assert.ok(!JSON.stringify(d.facts).includes('S1059'));
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 3 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => [r.params.task, r.params.actor, r.params.times, r.params.period_days]), [
+    ['tooth_brushing', 'child', 7, 7],
+    ['ear_cleaning', 'child', 1, 7],
+    ['groomer_visit', 'parent', 1, 56],
+  ]);
+  assert.ok(!d.game.rules.some((r) => r.params?.task === 'nail_trim' || r.params?.task === 'bath'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'meal_exercise_gap'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'chases_small_pets']);
+  // Hip dysplasia and the WebMD list are paraphrases only → left out; new key footpad_hyperkeratosis.
+  assert.deepEqual(d.health.map((h) => h.key), ['footpad_hyperkeratosis', 'bladder_stones']);
   assert.equal(d.breeder_checklist.status, 'listed');
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle/i);
