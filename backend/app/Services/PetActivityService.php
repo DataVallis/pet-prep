@@ -219,6 +219,9 @@ class PetActivityService
                 'last_step_sync_at' => $at,
                 'energy_zero_since' => null,
             ]);
+            // David 2026-11-25: the mood label (»Tired — needs a walk«) follows pet_state, so a
+            // walk must refresh it at once like every other care action — not a minute later.
+            $locked->pet_state = $this->decay->derivePetState($locked, $now);
             $locked->saveQuietly();
 
             if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
@@ -337,6 +340,7 @@ class PetActivityService
             'energy_level' => max((float) $locked->energy_level, self::energyForSteps($newCount, $goal)),
             'energy_zero_since' => null,
         ]);
+        $locked->pet_state = $this->decay->derivePetState($locked, $now);
         $locked->saveQuietly();
         if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
             $this->logActivity($locked, ActivityType::WalkedPet, $newCount, $child->id);
