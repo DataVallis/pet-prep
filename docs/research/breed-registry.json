@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "c737877f5d60d7edc0b0f03a261a4b4744c21121f399f5c9d51d5a410d828546"
+      "sha256": "980a41a67d7fa214289e0129c2cccbb7ec07f9e931a21c839fad0d04fe724f25"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -79008,7 +79008,7 @@
       "id": "bracco_italiano",
       "species": "dog",
       "order": 126,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bracco Italiano",
         "sl": "Italijanski ptičar"
@@ -79625,7 +79625,7 @@
       "id": "german_pinscher",
       "species": "dog",
       "order": 127,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "German Pinscher",
         "sl": "Nemški pinč"
@@ -80215,7 +80215,7 @@
       "id": "bedlington_terrier",
       "species": "dog",
       "order": 128,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bedlington Terrier",
         "sl": "Bedlington terier"
@@ -80839,7 +80839,7 @@
       "id": "kerry_blue_terrier",
       "species": "dog",
       "order": 129,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Kerry Blue Terrier",
         "sl": "Kerry blue terier"
@@ -81452,7 +81452,7 @@
       "id": "irish_terrier",
       "species": "dog",
       "order": 130,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Irish Terrier",
         "sl": "Irski terier"
@@ -82043,7 +82043,7 @@
       "id": "bluetick_coonhound",
       "species": "dog",
       "order": 131,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bluetick Coonhound",
         "sl": "Bluetick coonhound"
