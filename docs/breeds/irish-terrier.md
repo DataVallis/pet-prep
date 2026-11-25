@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `irish_terrier` (viri S1051–S1059; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1053) |
 | Izvor | FCI št. 139 »Irish Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Irska (S1051, S1052) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 136. mesto »Irish Terrier« (S174, prebrano 2026-11-25) |
-| PR-ji | pet-prep #1614 (pasma, združen `812c811`) · portret pet-prep PR `feat/M5-R10-140-irish-terrier-portrait` (zagon `breed-portraits.yml` 45538467491, sprejet v prvem poskusu) · barvne različice pet-prep PR `feat/M5-R10-140-irish-terrier-colours` · spletna stran: pet-prep-website `feat/register-irish-terrier` |
+| PR-ji | pet-prep #1614 (pasma, združen `812c811`) · portret pet-prep PR `feat/M5-R10-140-irish-terrier-portrait` (zagon `breed-portraits.yml` 45538467491, sprejet v prvem poskusu) · portret PR #1616 (združen `f49be27`) · barvne različice pet-prep PR `feat/M5-R10-140-irish-terrier-colours` (zagon `breed-portraits.yml` 45539899518: rumeno rdeč odobril Claude; rdeče pšeničen čaka Davida — ponovitev 45540107404) · spletna stran: pet-prep-website `feat/register-irish-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -39,7 +39,7 @@
 | Pasma v izbirniku (značka »Izziv«, namig »Del 12-tedenskega izziva · česanje 3× na teden«, iskanje »irski terier«, »irish terrier«, oznake, starostni namigi) | 🛠 | 💶 izziv | M5-R10-140 | 2026-11-25 |
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-140 | 2026-11-25 |
 | Česanje 3× na teden, ščetkanje zob vsak dan, čiščenje ušes vsak teden, opomnik za frizerja vsaka 2 meseca, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R14 / M5-R17 | 2026-11-25 |
-| Barva (izbirnik: rdeč, rdeče pšeničen, rumeno rdeč) | 🛠 | 💶 izziv | M5-R21 | 2026-11-25 |
+| Barva (izbirnik: rdeč, rdeče pšeničen, rumeno rdeč; fotografiji: rdeč = portret, rumeno rdeč odobril Claude 2026-11-25; rdeče pšeničen brez fotografije) | 🛠 | 💶 izziv | M5-R21 | 2026-11-25 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-25 |
 | Stran na petprep.si (`/animals/dogs/irish-terrier`, `/sl/zivali/psi/irski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
@@ -55,5 +55,6 @@
 - **Coren:** številka mesta ni bila berljiva (le skupina »Average«); drugo zrcalo namiguje na isto mesto kot bostonski terier (54) — skupina in množitelj 1,0 ostaneta enaka.
 - **Ušesa:** Woodgreen piše »checked weekly« (pregled); kot pri drugih pasmah je to tedensko čiščenje ušes. Potrdite.
 - **Družba:** Woodgreen piše, da so raje ob ljudeh kot sami dlje časa; čipa `needs_company` nisem dodal (ni navedbe o ločitveni tesnobi).
+- **colours needing David:** `red-wheaten` — obe urejanji (zagona 45539899518, 45540107404) sta dali temnejšo, bolj rdečo dlako od rdečega portreta namesto svetlejše pšenično rdeče; ni v commitu (vrstica v `COLOUR_REVIEW.md`).
 - **Ime:** »Irski terier« v slovenščini ni preverjen na straneh KZS. Potrdite ali popravite.
 - **Skupni dokumenti:** število pasem psov v FEATURES / predstavitvah se po pravilu »Own files only« ne spreminja v tem zagonu.
