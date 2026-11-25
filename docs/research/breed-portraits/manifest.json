@@ -1725,6 +1725,19 @@
             "prompt_hash": "sha256:3c027dc46b3cd2c73cc7a5a7eca56d87c28b20041d7dd1c8d99f1e4d35a17625",
             "generated_at": "2026-11-25T03:14:19+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "bluetick_coonhound",
+            "species": "dog",
+            "colour": "blue-ticked-tan",
+            "file": "dog/bluetick-coonhound.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d08d5ce4ead15f729c5a62646be7588014f3c608ab4a35c0b0db73947de364a6",
+            "generated_at": "2026-11-25T07:01:44+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
