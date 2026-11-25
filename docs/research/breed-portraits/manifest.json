@@ -1699,6 +1699,19 @@
             "prompt_hash": "sha256:735e16f68741d66ef3fd7d9dab9ddb4f5662e56533b4b447972153c95034e732",
             "generated_at": "2026-11-24T07:05:53+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "kerry_blue_terrier",
+            "species": "dog",
+            "colour": "blue",
+            "file": "dog/kerry-blue-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:04751a2336ab69471e3947572cd696996faee70383a32a17faafaf16d83d2e2c",
+            "generated_at": "2026-11-25T01:29:53+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

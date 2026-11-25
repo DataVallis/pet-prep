@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c394eb62dfbf6e8e9e88cd5d57f4cd0f52fc0609625c1cb9ed58e755e664f597"
+      "sha256": "b44be8fe17e478526997f3e20090623898c0401c0a8698581775f9b9ba260cb9"
     }
   },
   "suitability_vocabulary": {
@@ -81356,7 +81356,12 @@
           "S1050"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "kerry-blue-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

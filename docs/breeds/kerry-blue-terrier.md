@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `kerry_blue_terrier` (viri S1043–S1050; ponovno S10, S11, S14, S35, S45, S174); seznam za vzreditelja: AKC (K33), Dogs NZ (K45) |
 | Izvor | FCI št. 3 »Kerry Blue Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Irska (S1043, S1044) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 135. mesto »Kerry Blue Terrier« (S174, prebrano 2026-11-25) |
-| PR-ji | pet-prep #1607 (pasma) · portret: pet-prep `feat/M5-R10-139-kerry-blue-terrier-portrait` · barvne različice: pet-prep `feat/M5-R10-139-kerry-blue-terrier-colours` · spletna stran: pet-prep-website `feat/register-kerry-blue-terrier` |
+| PR-ji | pet-prep #1607 (pasma, združen `2e4dfc7`) · portret pet-prep PR `feat/M5-R10-139-kerry-blue-terrier-portrait` (zagon `breed-portraits.yml` 45526087468, sprejet v prvem poskusu) · barvne različice: pet-prep `feat/M5-R10-139-kerry-blue-terrier-colours` · spletna stran: pet-prep-website `feat/register-kerry-blue-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 112. meseca — predlog; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-139 | 2026-11-25 |
 | Česanje 4× na teden, ščetkanje zob vsak dan, čiščenje ušes vsaka 2 tedna, opomnika za frizerja (6 tednov) in kopanje (4 tedne), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R14 / M5-R19 / M5-R17 | 2026-11-25 |
 | Barva (izbirnik: 4 odtenki modre po standardu) | 🛠 | 💶 izziv | M5-R21 | 2026-11-25 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), moder (modrosiv), brada, ušesa v obliki črke V, pokonci nošen rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-25 |
 | Stran na petprep.si (`/animals/dogs/kerry-blue-terrier`, `/sl/zivali/psi/kerry-blue-terier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
