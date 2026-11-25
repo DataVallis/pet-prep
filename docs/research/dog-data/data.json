@@ -71956,8 +71956,8 @@
         "notes": "No McMillan 2024 value at an A/B source this run: the Dogs Trust table (S123) refused (PROVENANCE_REQUIRED), the Dogs Trust summary page (S15) does not name the breed, PMC10834484 behind a captcha, the Nature PDF names 'Irish Terrier' only as a Fig. 5 label (no number). No VetCompass median found → the RKC lower bound decides (runbook)."
       },
       "rkc": {
-        "value": 12,
-        "unit": "years (lower bound)",
+        "value": "> 12",
+        "unit": "years",
         "source_id": "S1053",
         "quote": "Over 12 years",
         "confidence": "high",
@@ -72011,7 +72011,7 @@
     },
     "exercise": {
       "adult": {
-        "value": 60,
+        "value": "≤ 60",
         "unit": "minutes/day",
         "source_id": "S1053",
         "quote": "Up to 1 hour per day",
@@ -72309,7 +72309,7 @@
         "notes": "RKC key fact 'Size of garden' (S1053)."
       },
       "rkc_grooming": {
-        "value": "more than once a week",
+        "value": "More than once a week",
         "unit": "—",
         "source_id": "S1053",
         "quote": "More than once a week",
@@ -72317,7 +72317,7 @@
         "notes": "RKC key fact 'Grooming' (S1053) — no number → PDSA '2 or 3 times per week' (runbook »Dog grooming«)."
       },
       "rkc_coat_length": {
-        "value": "medium",
+        "value": "Medium",
         "unit": "—",
         "source_id": "S1053",
         "quote": "Medium",
@@ -72325,7 +72325,7 @@
         "notes": "RKC key fact 'Coat length' (S1053)."
       },
       "rkc_shedding": {
-        "value": "yes",
+        "value": "Yes",
         "unit": "—",
         "source_id": "S1053",
         "quote": "Yes",
@@ -108534,7 +108534,7 @@
         "source_id": "S1056",
         "quote": "Many owners choose to have the coat clipped every couple of months by a professional groomer to keep it manageable.",
         "confidence": "high",
-        "notes": "irish_terrier.suitability.woodgreen_groomer. 'every couple of months' → 8 weeks (56 program days, runbook mapping). Built: DOG_CARE_TASKS groomer_visit [1, eight_weeks].",
+        "notes": "irish_terrier.suitability.woodgreen_groomer. 'every couple of months' → 8 weeks (56 program days, runbook mapping). Built: DOG_CARE_TASKS groomer_visit [1, two_months].",
         "alternatives": [
           {
             "value": [
@@ -108594,6 +108594,19 @@
           }
         ],
         "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1053",
+              "S1055"
+            ],
+            "refs": [
+              "irish_terrier.suitability.rkc_grooming",
+              "irish_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S1053 'More than once a week'; S1055 'They have a medium length coat, which requires grooming 2 or 3 times per week.'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): brushing clearly more than once a week (Golden Retriever / Bedlington Terrier precedent)"
+          },
           {
             "tag": "chases_small_pets",
             "source_ids": [
