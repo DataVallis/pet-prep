@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e7dcae66a4652586a65119de715e5fc374118c74d51254d5bb6e841246769a5a"
+      "sha256": "0b1fc1c0a6da6b1ad9469bbf20d0354b1c3145e1cbfe79172d8ce154b632189e"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "483c7dfeda00e006396fa9bbeb78a3c1cdd17ebbd35153c0925cdca080c6ca2f"
+      "sha256": "88ad33bb23626f422224ec14d0f2c44f10f70e34577adfdf1160d08fe8c583b8"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "0584b554cb01d23cf67caf955a124a879a8efeef0d9df5b51effcfadc24d2d20"
+      "sha256": "33f21051fe7e2861406d65956a4245ac34817744e4bb022acc98867102bfbd6d"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5e56c4d634ed7641094071ec08c5d8f5488222e882f3a551d591b2bd44f43521"
+      "sha256": "f88e9c4c2e877a055025ef5464d0028114cdf66e61dc545a71f8c213a2ce6767"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "63f24c2aa95b6f8f9085135a1159a600788c33394738721d656bd5e0d690859e"
+      "sha256": "7d3b2fddf17985ccbf15499f29631ec528d4923b36eda01e09528bea08b3ef47"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "fe905c3d6eb453475e6809461665aca7e22dafce63eadfb01148309e95b31eab"
+      "sha256": "8567236dc36b7470d5eecbbc9471a6b97b8e7c509f13307f0b550774a580e228"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "f0bcc1dcf0798990b8dec471508219214ccefd452ef72c9307a48bfcdd9ddc12"
+      "sha256": "fe22efcc261354cc4da690731ffae44846713c6c5379a7a7f8f35e8e3d226dbc"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 131,
+      "breed_count": 132,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -82040,6 +82040,428 @@
       ]
     },
     {
+      "id": "bluetick_coonhound",
+      "species": "dog",
+      "order": 131,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bluetick Coonhound",
+        "sl": "Bluetick coonhound"
+      },
+      "slug": {
+        "en": "bluetick-coonhound",
+        "sl": "bluetick-coonhound"
+      },
+      "synonyms": {
+        "en": [
+          "Bluetick",
+          "Blue Tick Coonhound"
+        ],
+        "sl": [
+          "bluetick coonhound",
+          "bluetick"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S1061"
+          ],
+          "ref": "bluetick_coonhound.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              55.9,
+              68.6
+            ],
+            "female": [
+              53.3,
+              63.5
+            ]
+          },
+          "source_ids": [
+            "S1061"
+          ],
+          "ref": "bluetick_coonhound.height.standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              24.9,
+              36.3
+            ],
+            "female": [
+              20.4,
+              29.5
+            ]
+          },
+          "source_ids": [
+            "S1061"
+          ],
+          "ref": "bluetick_coonhound.adult_weight.standard",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bluetick_coonhound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            11,
+            12
+          ],
+          "source_ids": [
+            "S1060"
+          ],
+          "ref": "bluetick_coonhound.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 40,
+          "source_ids": [
+            "S1061"
+          ],
+          "ref": "bluetick_coonhound.exercise.adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S1060"
+          ],
+          "ref": "bluetick_coonhound.suitability.petmd_grooming",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S1060"
+          ],
+          "ref": "bluetick_coonhound.health.bloat_gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "ear_infections_long_ears",
+          "source_ids": [
+            "S1060"
+          ],
+          "ref": "bluetick_coonhound.health.ear_infections",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": [
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S1060"
+            ],
+            "refs": [
+              "bluetick_coonhound.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1060"
+            ],
+            "refs": [
+              "bluetick_coonhound.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1060"
+            ],
+            "refs": [
+              "bluetick_coonhound.exercise.scent_drive"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 4000,
+              "cap_month": 4
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 99
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 4000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 40,
+              "steps": 4000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 99
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bluetick_coonhound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1061"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 40 min/day (Dogs NSW S1061 '40 min/day'; no RKC / PDSA page)"
+          },
+          {
+            "ref": "proposed_game_parameters.bluetick_coonhound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min → 3,000 steps (75 % of 40)"
+          },
+          {
+            "ref": "proposed_game_parameters.bluetick_coonhound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1060"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 99 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.bluetick_coonhound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bluetick_coonhound.grooming",
+            "basis_source_ids": [
+              "S1060"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PetMD »once-a-week brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1060",
+          "S1061"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1060",
+        "S1061",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -89467,6 +89889,20 @@
       "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Amy Flowers, DVM (June 12, 2024)",
       "title": "What to Know About Irish Terriers",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-irish-terriers"
+    },
+    {
+      "id": "S1060",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Mouton Dowdy, MA, reviewed by Barri J. Morrison, DVM (updated Nov. 1, 2023)",
+      "title": "Bluetick Coonhound",
+      "url": "https://www.petmd.com/dog/breeds/bluetick-coonhound"
+    },
+    {
+      "id": "S1061",
+      "tier": "B",
+      "publisher": "Dogs NSW (Australia)",
+      "title": "Bluetick Coonhound — breed page with the breed standard (last updated 24 Mar 2017)",
+      "url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/bluetick-coonhound/"
     },
     {
       "id": "C1",
