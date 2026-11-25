@@ -628,6 +628,11 @@ return [
         'blue-tan' => 'dogs/bedlington-terrier--blue-tan.webp',
         'liver-tan' => 'dogs/bedlington-terrier--liver-tan.webp',
     ],
+    'kerry_blue_terrier' => [
+        'blue' => 'dogs/kerry-blue-terrier.webp',
+        'deep-slate-blue' => 'dogs/kerry-blue-terrier--deep-slate-blue.webp',
+        'light-blue-grey' => 'dogs/kerry-blue-terrier--light-blue-grey.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

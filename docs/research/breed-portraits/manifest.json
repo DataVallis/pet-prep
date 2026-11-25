@@ -6664,6 +6664,36 @@
             "prompt_hash": "sha256:3321c65a03ca7e0c283be062073a0ce1ff768a4fd638811dc7d962bb29cd0fc8",
             "generated_at": "2026-11-24T22:51:11+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "kerry_blue_terrier",
+            "species": "dog",
+            "colour": "deep-slate-blue",
+            "colour_value": "deep slate blue",
+            "file": "dog/kerry-blue-terrier--deep-slate-blue.webp",
+            "reference": "dog/kerry-blue-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:609e6823746515b4d40c63ac8917f0f5d93720fca187ee0d3a9042a9017bf26e",
+            "generated_at": "2026-11-25T01:41:58+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "kerry_blue_terrier",
+            "species": "dog",
+            "colour": "light-blue-grey",
+            "colour_value": "light blue grey",
+            "file": "dog/kerry-blue-terrier--light-blue-grey.webp",
+            "reference": "dog/kerry-blue-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:0ef871a1689149f8b1b5c80ee108bdc5813d6aafbf40aa80e1f3082335442188",
+            "generated_at": "2026-11-25T01:42:15+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
