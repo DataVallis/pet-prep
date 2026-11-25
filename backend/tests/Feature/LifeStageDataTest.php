@@ -175,8 +175,9 @@ describe('import provenance', function () {
         // median 11 y, S1028; RKC "Under 10 years" has no lower bound) — the same.
         // M5-R10-139: the Kerry Blue Terrier's senior 112 (0.75 × McMillan 2024 12.4 y, only via Wikipedia S1050) and its brushing
         // (VCA "every other day" → 4 per week) — Claude's suggestions, open for David.
+        // M5-R10-141: the Bluetick Coonhound's senior 99 (0.75 × PetMD lower bound 11 y, S1060) — Claude's suggestion, open for David.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier', 'xoloitzcuintli', 'norwegian-elkhound', 'american-hairless-terrier', 'neapolitan-mastiff', 'bracco-italiano', 'kerry-blue-terrier'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond', 'borzoi', 'toy-fox-terrier', 'xoloitzcuintli', 'norwegian-elkhound', 'american-hairless-terrier', 'neapolitan-mastiff', 'bracco-italiano', 'kerry-blue-terrier', 'bluetick-coonhound'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);

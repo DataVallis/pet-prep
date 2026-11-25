@@ -139,6 +139,7 @@ return [
     'bedlington_terrier' => 'Bedlington terier',
     'kerry_blue_terrier' => 'Kerry blue terier',
     'irish_terrier' => 'Irski terier',
+    'bluetick_coonhound' => 'Bluetick coonhound',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

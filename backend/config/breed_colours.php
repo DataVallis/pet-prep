@@ -925,6 +925,12 @@ return [
         ['key' => 'red-wheaten', 'value' => 'red wheaten', 'en' => 'Red wheaten', 'sl' => 'Rdeče pšeničen'],
         ['key' => 'yellow-red', 'value' => 'yellow red', 'en' => 'Yellow red', 'sl' => 'Rumeno rdeč'],
     ],
+    // M5-R10-141: Bluetick Coonhound standard (S1061) dark blue thickly mottled with black spots, with or without tan
+    // markings; same order and values as breed_appearance.php.
+    'bluetick_coonhound' => [
+        ['key' => 'blue-ticked-tan', 'value' => 'dark blue ticked (thickly mottled) with black spots, a black head and tan markings', 'en' => 'Blue ticked with tan', 'sl' => 'Modro pegast z rjavimi oznakami'],
+        ['key' => 'blue-ticked', 'value' => 'dark blue ticked (thickly mottled) with black spots and a black head', 'en' => 'Blue ticked', 'sl' => 'Modro pegast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

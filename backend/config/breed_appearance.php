@@ -904,6 +904,12 @@
 | eyes, black nose; natural (undocked) tail. Not a welfare breed (RKC Breed Watch Category 2, cracked / corny pads, S1054).
 | Red first (the portrait default); weights unsourced → `verified => false`.
 |
+| Bluetick Coonhound (M5-R10-141, docs/research/dog-data bluetick_coonhound.appearance): "Preferred color is a dark blue,
+| thickly mottled body, spotted by various shaped black spots on back, ears and sides." + "With or without tan markings (over
+| eyes, on cheeks, chest and below tail) and red ticking on feet and lower legs." (breed standard printed by Dogs NSW, S1061;
+| "No other colors allowed."); short glossy coat, long low-set ears, dark brown eyes, black nose, tail carried high. Not a
+| welfare breed. Tan-marked first (the portrait default, PetMD S1060 "commonly"); weights unsourced → `verified => false`.
+|
 | Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
 | without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
 | low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
@@ -5933,6 +5939,39 @@ return [
             'eye_color' => ['small dark eyes full of life and fire'],
             'tail' => ['natural undocked tail set rather high and carried gaily, not curled'],
             'nose' => ['a black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-141 (docs/research/dog-data/data.json bluetick_coonhound.appearance; runbook rules 2026-10-10: standard colours only —
+    // dark blue thickly mottled with black spots, black head and ears, with or without tan markings (S1061); never any other colour).
+    'bluetick_coonhound' => [
+        'display_name' => 'Bluetick Coonhound',
+        // Colour frequencies are in no source (bluetick_coonhound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Bluetick Coonhound breed standard printed by Dogs NSW (S1061) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1061 "Height at withers for adult males, 22 to 27 inches. For adult females, 21 to 25 inches." / "Weight for males 55 to 80 pounds, females 45 to 65 pounds."',
+            'build' => 'S1061 "The Bluetick should have the appearance of a speedy and well-muscled hound."',
+            'coat_length' => 'S1061 "Medium coarse and lying close to the body, appearing smooth and glossy. Not rough or too short."',
+            'coat_color' => 'S1061 "Preferred color is a dark blue, thickly mottled body, spotted by various shaped black spots on back, ears and sides." / "With or without tan markings (over eyes, on cheeks, chest and below tail) and red ticking on feet and lower legs." (weights unsourced)',
+            'ear_carriage' => 'S1061 "Set low and devoid of erectile power." (thin with a slight roll, reaching well towards the end of the nose)',
+            'eye_color' => 'S1061 "Round in shape and dark brown in color (never lighter than light brown)."',
+            'tail' => 'S1061 "Carried high with a forward half-moon curve."',
+            'nose' => 'S1061 "Nose: large with well opened nostrils. Fully pigmented, black in colour."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'speedy, well-muscled hound with a neat, compact body, a broad slightly domed head and a long, square muzzle with flews', 'weight' => 3], 'athletic, hardy scent hound with a deep chest and strong legs'],
+            'coat_length' => ['short, glossy, medium-coarse coat lying close to the body'],
+            // Standard colours only (S1061 — "No other colors allowed."); tan-marked highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'dark blue ticked (thickly mottled) with black spots, a black head and tan markings', 'weight' => 60],
+                ['value' => 'dark blue ticked (thickly mottled) with black spots and a black head', 'weight' => 40],
+            ],
+            'ear_carriage' => ['long, thin, low-set hanging ears with a slight roll'],
+            'eye_color' => ['rather large, round dark brown eyes with a pleading hound expression'],
+            'tail' => ['natural tail of moderate length carried high with a forward half-moon curve'],
+            'nose' => ['a large black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],

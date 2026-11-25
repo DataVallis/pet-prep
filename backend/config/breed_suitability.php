@@ -3293,5 +3293,21 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1056'], 'refs' => ['irish_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-141 Bluetick Coonhound (data.json proposed_game_parameters.bluetick_coonhound.suitability_tags; S1060), runbook
+        // rules. Not RKC-registered (no Breed Watch), no conformation concern → no welfare chip; in marketing. children: Dogs NSW
+        // "gets along well with children" vs PetMD "better suited for older children" → no child chip. needs_company: PetMD
+        // separation anxiety vs Dogs NSW "Often alone" → no chip. No "high prey drive" quote → no chases_small_pets. No new key.
+        'bluetick_coonhound' => [
+            'suits' => [],
+            'consider' => [
+                // S1060 "Blueticks may be better suited for older children, and experienced pet parents who know how to train and manage a dog"
+                ['tag' => 'experienced_owner', 'source_ids' => ['S1060'], 'refs' => ['bluetick_coonhound.behaviour.experienced_owner']],
+                // S1060 "so prospective owners should be prepared to provide extensive mental stimulation and physical exercise every day."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S1060'], 'refs' => ['bluetick_coonhound.exercise.daily_text']],
+                // S1060 "And because Blueticks can be relentless in their pursuit of a scent that intrigues them, leashes and fenced yards are a must."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S1060'], 'refs' => ['bluetick_coonhound.exercise.scent_drive']],
+            ],
+        ],
     ],
 ];
