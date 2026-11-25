@@ -6707,6 +6707,21 @@
             "prompt_hash": "sha256:0ef871a1689149f8b1b5c80ee108bdc5813d6aafbf40aa80e1f3082335442188",
             "generated_at": "2026-11-25T01:42:15+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "irish_terrier",
+            "species": "dog",
+            "colour": "yellow-red",
+            "colour_value": "yellow red",
+            "file": "dog/irish-terrier--yellow-red.webp",
+            "reference": "dog/irish-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:296f16fd272a40440c8458b958743f4941ab6f657f5ea1324e13e0f09850552b",
+            "generated_at": "2026-11-25T03:26:42+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

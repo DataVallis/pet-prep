@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a77d77912367e2bbb29a70605131981084611b3730e5d62e6d60a03124cf6237"
+      "sha256": "ec0016193a0379d9bd1081ea5643c2def453b11834170026abdd74690e0fd3db"
     }
   },
   "suitability_vocabulary": {
@@ -81967,7 +81967,26 @@
         "file": "irish-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/irish-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "yellow-red",
+            "label": {
+              "en": "Yellow red",
+              "sl": "Rumeno rdeč"
+            },
+            "file": "dog/irish-terrier--yellow-red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

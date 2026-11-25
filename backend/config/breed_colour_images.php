@@ -633,6 +633,10 @@ return [
         'deep-slate-blue' => 'dogs/kerry-blue-terrier--deep-slate-blue.webp',
         'light-blue-grey' => 'dogs/kerry-blue-terrier--light-blue-grey.webp',
     ],
+    'irish_terrier' => [
+        'red' => 'dogs/irish-terrier.webp',
+        'yellow-red' => 'dogs/irish-terrier--yellow-red.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
