@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `irish_terrier` (viri S1051–S1059; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: RKC (S1053) |
 | Izvor | FCI št. 139 »Irish Terrier«, skupina 3, sekcija 1 (veliki in srednji terierji), Irska (S1051, S1052) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 136. mesto »Irish Terrier« (S174, prebrano 2026-11-25) |
-| PR-ji | pet-prep #1614 (pasma) · portret: glej vrstico v `BREED_QUEUE.md` · spletna stran: pet-prep-website `feat/register-irish-terrier` |
+| PR-ji | pet-prep #1614 (pasma, združen `812c811`) · portret pet-prep PR `feat/M5-R10-140-irish-terrier-portrait` (zagon `breed-portraits.yml` 45538467491, sprejet v prvem poskusu) · barvne različice pet-prep PR `feat/M5-R10-140-irish-terrier-colours` · spletna stran: pet-prep-website `feat/register-irish-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-140 | 2026-11-25 |
 | Česanje 3× na teden, ščetkanje zob vsak dan, čiščenje ušes vsak teden, opomnik za frizerja vsaka 2 meseca, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R14 / M5-R17 | 2026-11-25 |
 | Barva (izbirnik: rdeč, rdeče pšeničen, rumeno rdeč) | 🛠 | 💶 izziv | M5-R21 | 2026-11-25 |
-| AI portret v registru | 🗓 po združitvi (runbook §8) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/irish-terrier`, `/sl/zivali/psi/irski-terier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč, naraven rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-25 |
+| Stran na petprep.si (`/animals/dogs/irish-terrier`, `/sl/zivali/psi/irski-terier`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

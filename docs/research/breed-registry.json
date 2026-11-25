@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d425e134ccd102dd2fb5811d82eb48577595c65eb2674b6b13c0d5f2a4e4df1a"
+      "sha256": "a77d77912367e2bbb29a70605131981084611b3730e5d62e6d60a03124cf6237"
     }
   },
   "suitability_vocabulary": {
@@ -81963,7 +81963,12 @@
           "S1058"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "irish-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
