@@ -347,7 +347,7 @@ it('gives the Siberian Husky the new secure_fencing tag, active_family, large_ho
     // Only the Siberian Husky, the Samoyed (PDSA S467 "very accomplished escape artists", M5-R10-57), the Basenji (WebMD
     // S646 "need very high fences or constant supervision", M5-R10-84) and the Border Terrier (AKC S777 "cannot be trusted off-leash or in an unfenced area", M5-R10-102) and the Norwich Terrier (PetMD S814 "A secure leash and a well-fenced yard are a must.", M5-R10-108) and the Pointer (PetMD S945 "kept in an enclosed yard so that they do not wander off", M5-R10-125) and the Welsh Terrier (WebMD S959 "Fences should extend 6\" belowground …", M5-R10-127) and the Norwegian Elkhound (PetMD S963 "Always keep this dog inside a secure, fenced area or on a leash …", M5-R10-128) and the Tibetan Spaniel (WebMD S982 "a secure fenced yard", M5-R10-130) and the Norfolk Terrier (Woodgreen S1013 "a secure garden with an escape-proof fence is a must.", M5-R10-134) carry the chip.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::SiberianHusky, BreedType::Samoyed, BreedType::Basenji, BreedType::BorderTerrier, BreedType::NorwichTerrier, BreedType::Pointer, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::TibetanSpaniel, BreedType::NorfolkTerrier], true)) {
+        if (! in_array($breed, [BreedType::SiberianHusky, BreedType::Samoyed, BreedType::Basenji, BreedType::BorderTerrier, BreedType::NorwichTerrier, BreedType::Pointer, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::TibetanSpaniel, BreedType::NorfolkTerrier, BreedType::BluetickCoonhound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('secure_fencing');
         }
     }
@@ -370,7 +370,7 @@ it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_
 
     // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23), the Dobermann (PDSA S211, M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Belgian Malinois (AKC S316 / PetMD S317, M5-R10-38), the Hungarian Vizsla (PDSA S329, M5-R10-40), the Rhodesian Ridgeback (PDSA S390, M5-R10-47), the Weimaraner (PDSA S480, M5-R10-59), the Giant Schnauzer (PDSA S496, M5-R10-61), the Bloodhound (PDSA S503, M5-R10-62) and the Akita (PDSA S508, M5-R10-63) carry the chip so far (also the Bullmastiff and the Alaskan Malamute, PDSA S639, M5-R10-83).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::RhodesianRidgeback, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::AlaskanMalamute, BreedType::DogueDeBordeaux, BreedType::Borzoi], true)) {
+        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::RhodesianRidgeback, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::AlaskanMalamute, BreedType::DogueDeBordeaux, BreedType::Borzoi, BreedType::BluetickCoonhound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
         }
     }

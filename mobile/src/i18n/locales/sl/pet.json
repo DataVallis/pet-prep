@@ -236,6 +236,7 @@
       "bedlington_terrier": "Del 12-tedenskega izziva · česanje 3× na teden",
       "kerry_blue_terrier": "Del 12-tedenskega izziva · česanje 4× na teden",
       "irish_terrier": "Del 12-tedenskega izziva · česanje 3× na teden",
+      "bluetick_coonhound": "Del 12-tedenskega izziva · česanje 1× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -882,6 +883,12 @@
         "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
+      "bluetick_coonhound": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 4.000 pri 4 mesecih.",
+        "young": "2 obroka na dan; sprehod 4.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 4.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 3.000 korakov na dan."
       },
       "afghan_hound": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",

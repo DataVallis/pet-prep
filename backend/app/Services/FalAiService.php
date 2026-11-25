@@ -1059,6 +1059,13 @@ class FalAiService
                 .'head with a slight beard, a dense, wiry, broken whole-coloured red coat lying flat, small dark eyes, a black nose, small '
                 .'V-shaped ears dropping forward close to the cheek, a natural tail set rather high and carried gaily, alert, bold expression, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-141: breed standard printed by Dogs NSW (S1061) — dark blue thickly mottled with black spots, black head and
+            // ears, tan markings (the portrait default), long low-set ears, dark brown eyes, black nose, tail carried high.
+            BreedType::BluetickCoonhound => 'A large, speedy and well-muscled Bluetick Coonhound with a neat, compact body, a short, glossy '
+                .'coat that is dark blue and thickly mottled with black spots, a predominantly black head and ears, tan markings over the '
+                .'eyes, on the cheeks and chest, long thin low-set ears with a slight roll, rather large round dark brown eyes with a pleading '
+                .'hound expression, a large black nose, a long, broad, square muzzle with flews, a tail carried high with a forward half-moon '
+                .'curve, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2468,6 +2475,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'dense, wiry, broken coat',
                 'markings' => 'whole-coloured red coat with a slight beard, black nose, small V-shaped ears dropping forward',
+            ],
+            // M5-R10-141: standard colours only (S1061: dark blue thickly mottled with black spots, with or without tan markings).
+            BreedType::BluetickCoonhound => [
+                'color_scheme' => 'dark blue ticked with black spots and tan markings',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, glossy, medium-coarse coat lying close',
+                'markings' => 'black head and ears, tan markings over the eyes and on the cheeks and chest, long low-set hound ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -139,6 +139,7 @@ return [
     'bedlington_terrier' => 'Bedlington Terrier',
     'kerry_blue_terrier' => 'Kerry Blue Terrier',
     'irish_terrier' => 'Irish Terrier',
+    'bluetick_coonhound' => 'Bluetick Coonhound',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

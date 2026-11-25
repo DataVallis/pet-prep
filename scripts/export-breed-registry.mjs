@@ -521,6 +521,7 @@ const SPECIES = [
       { id: 'bedlington_terrier', synonyms: { en: ['Bedlington'], sl: ['bedlingtonski terier', 'bedlington terrier', 'bedlington'] } },
       { id: 'kerry_blue_terrier', synonyms: { en: ['Kerry Blue', 'Kerry'], sl: ['kerry blue terier', 'kerry'] } },
       { id: 'irish_terrier', synonyms: { en: [], sl: ['irski terier', 'irish terrier'] } },
+      { id: 'bluetick_coonhound', synonyms: { en: ['Bluetick', 'Blue Tick Coonhound'], sl: ['bluetick coonhound', 'bluetick'] } },
     ],
   },
   {
@@ -3543,6 +3544,26 @@ const DOG_FACTS = {
       ['bladder_stones', 'health.bladder_stones'],
     ],
   },
+  // M5-R10-141. American breed, not FCI / RKC → Dogs NSW (S1061): exercise '40 min/day' (about 40), breed standard height
+  // + weight (males 22–27 in / 55–80 lb, females 21–25 in / 45–65 lb, our conversion); PetMD (S1060): lifespan span
+  // '11–12 years', 'once-a-week brushing'. Not ranked by Coren (S35). Not exported: suitability.petmd_shedding ('moderate',
+  // single source), lifespan.senior_from (derived), lifespan.median_uk (null). No new health key.
+  bluetick_coonhound: {
+    height: ['height.standard'],
+    weight: [['adult_weight.standard', null]],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'about']],
+    coat: [],
+    grooming: [['suitability.petmd_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    fci_standard: false,
+    health: [
+      ['bloat_gdv', 'health.bloat_gdv'],
+      ['ear_infections_long_ears', 'health.ear_infections'],
+    ],
+  },
 
 
 
@@ -4710,6 +4731,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.irish_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.irish_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.irish_terrier.exercise_minutes_senior',
+  },
+  bluetick_coonhound: {
+    adult_minutes: ['proposed_game_parameters.bluetick_coonhound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bluetick_coonhound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bluetick_coonhound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bluetick_coonhound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bluetick_coonhound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bluetick_coonhound.exercise_minutes_senior',
   },
 
 
