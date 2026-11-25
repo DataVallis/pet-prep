@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bluetick_coonhound` (viri S1060–S1061; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: `not_found` |
 | Izvor | ZDA (Dogs NSW S1061: »originating in the United States«); AKC skupina goničev. **Ni priznan pri FCI in RKC** (po prebranih virih) → v registru brez podatka FCI, brez strani RKC / PDSA |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 137. mesto »Bluetick Coonhound« (S174, vrstica 141 čakalne vrste) |
-| PR-ji | pet-prep #1620 (pasma) · portret in barvne različice: sledita · spletna stran: pet-prep-website `feat/register-bluetick-coonhound` |
+| PR-ji | pet-prep #1620 (pasma, združen `19faae1`) · portret: zagon `breed-portraits.yml` 45564868015, sprejet v prvem poskusu · barvne različice: sledijo · spletna stran: pet-prep-website `feat/register-bluetick-coonhound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,7 +42,7 @@
 | Pravila po starosti (2.000 → 4.000 korakov do 4. meseca, odrasel 4.000, starejši 3.000 od 99. meseca — predlog; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-141 | 2026-11-25 |
 | Tedensko česanje, »nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / R17 | 2026-11-25 |
 | Barve (izbirnik: 2 barvi) | 🛠 | 💶 izziv | M5-R21 | 2026-11-25 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), modro pegast z rjavimi oznakami, črna glava, dolga ušesa, rep visoko, na svetlo sivem ozadju | — | M5-R11-04 | 2026-11-25 |
 | Stran na petprep.si (`/animals/dogs/bluetick-coonhound`, `/sl/zivali/psi/bluetick-coonhound`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)

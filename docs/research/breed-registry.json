@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "ec0016193a0379d9bd1081ea5643c2def453b11834170026abdd74690e0fd3db"
+      "sha256": "834963abd7bde0a5a9d4f513da4d6fbc29fa7c8b7e38acbfe3c1e1afb3915d37"
     }
   },
   "suitability_vocabulary": {
@@ -82430,7 +82430,12 @@
           "S1061"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bluetick-coonhound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
