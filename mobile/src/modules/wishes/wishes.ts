@@ -224,7 +224,7 @@ export interface DesignPicker {
 /**
  * The picker of a product on a pet, or null when nothing is left to choose (buy at once).
  * - A single item: `fixed` (the wish's design) is bought as is; otherwise one choice.
- * - The welcome bundle (David 2026-11-19, »Vse tri« = three): ALWAYS all three items with designs,
+ * - The welcome bundle (David 2026-11-19, all three items): ALWAYS all three items with designs,
  *   also the one of the wish it was opened from — nothing fixed, the parent may change any look.
  * Preselection per item: the fixed design, else the look an open wish of this pet asks for
  * (`wanted`, see `wantedDesigns`), else the item's first design.
@@ -634,11 +634,109 @@ export function readWishesOpenCount(dashboard: unknown): number | null {
 }
 
 /**
- * »Vse tri za …« next to a wish: only when the server set `bundle_product_id` (the wish is
+ * The bundle offer for a wish (shown in its own »Paket Dobrodošlica« section): only when the server set `bundle_product_id` (the wish is
  * for bed / bowls / toy_1 and the pet owns none of the three) and the store has the bundle.
  */
 export function showBundleOffer(wish: Pick<ParentWish, 'bundle_product_id'>, storeHas: (productId: string) => boolean): boolean {
   return wish.bundle_product_id !== null && storeHas(wish.bundle_product_id);
+}
+
+/**
+ * The separate »Paket Dobrodošlica« section (David 2026-11-25): one offer per pet that has an
+ * open wish the server attached the bundle to (`bundle_product_id`) and the store has the bundle.
+ * The first such wish of the pet (list order) is the one the purchase resolves — its design is
+ * the fixed pick of the bundle picker, as before when the button sat under the wish card.
+ */
+export interface BundleOffer {
+  pet_id: number;
+  species: 'dog' | 'cat';
+  pet_name: string | null;
+  productId: string;
+  wish: ParentWish;
+}
+
+export function bundleOffersOf(data: ParentWishes | null, storeHas: (productId: string) => boolean): BundleOffer[] {
+  const out: BundleOffer[] = [];
+  for (const wish of data?.wishes ?? []) {
+    if (!showBundleOffer(wish, storeHas) || wish.bundle_product_id === null) continue;
+    if (out.some((o) => o.pet_id === wish.pet_id)) continue;
+    out.push({ pet_id: wish.pet_id, species: wish.species, pet_name: wish.pet_name, productId: wish.bundle_product_id, wish });
+  }
+  return out;
+}
+
+/** Store product ids of the bundle's three single items for a pet (its items' ids; fallback the known ids). */
+export function bundleItemProductIds(pet: Pick<ParentWishPet, 'items'> | null): string[] {
+  return BUNDLE_KEYS.map((key) => pet?.items.find((i) => i.key === key)?.product_id ?? WISH_PRODUCT_IDS[key]);
+}
+
+/** The store fields the saving line reads (RevenueCat `PurchasesStoreProduct`). */
+export interface StorePrice {
+  price: number;
+  currencyCode: string;
+  priceString: string;
+}
+
+interface PriceShape {
+  prefix: string;
+  suffix: string;
+  decimals: number;
+  decimalSep: string;
+  groupSep: string;
+}
+
+const PRICE_NUMBER = /\d(?:[\d.,\s\u00a0\u202f']*\d)?/;
+
+function renderAmount(minor: number, shape: Pick<PriceShape, 'decimals' | 'decimalSep' | 'groupSep'>): string {
+  const factor = 10 ** shape.decimals;
+  const whole = String(Math.floor(minor / factor)).replace(/\B(?=(\d{3})+(?!\d))/g, shape.groupSep);
+  if (shape.decimals === 0) return whole;
+  return `${whole}${shape.decimalSep}${String(minor % factor).padStart(shape.decimals, '0')}`;
+}
+
+/** How the store printed this price — only a shape that reproduces `priceString` exactly from `price`. */
+function priceShapeOf(product: StorePrice): PriceShape | null {
+  if (!Number.isFinite(product.price) || product.price <= 0) return null;
+  const match = PRICE_NUMBER.exec(product.priceString);
+  if (match === null) return null;
+  const digits = match[0];
+  const prefix = product.priceString.slice(0, match.index);
+  const suffix = product.priceString.slice(match.index + digits.length);
+  for (const decimals of [2, 0, 3, 1]) {
+    for (const decimalSep of decimals === 0 ? [''] : [',', '.']) {
+      for (const groupSep of ['', '.', ',', ' ', '\u00a0', '\u202f', "'"]) {
+        if (groupSep !== '' && groupSep === decimalSep) continue;
+        const shape = { prefix, suffix, decimals, decimalSep, groupSep };
+        if (renderAmount(Math.round(product.price * 10 ** decimals), shape) === digits) return shape;
+      }
+    }
+  }
+  return null;
+}
+
+/**
+ * »Posamezno …« under the bundle (David 2026-11-25): the sum of the three single store prices,
+ * printed the way the store printed them. Any single price missing, a different currency or a
+ * price string this can't reproduce → null (no line) — never an invented or hard-coded price.
+ */
+export function bundleSeparateTotal(products: readonly (StorePrice | null)[]): string | null {
+  if (products.length !== BUNDLE_KEYS.length) return null;
+  const shapes: PriceShape[] = [];
+  for (const product of products) {
+    if (product === null) return null;
+    const shape = priceShapeOf(product);
+    if (shape === null) return null;
+    shapes.push(shape);
+  }
+  const first = shapes[0];
+  const currency = (products[0] as StorePrice).currencyCode;
+  const same = shapes.every(
+    (s, i) => s.prefix === first.prefix && s.suffix === first.suffix && s.decimals === first.decimals && s.decimalSep === first.decimalSep && (products[i] as StorePrice).currencyCode === currency,
+  );
+  if (!same) return null;
+  const groupSep = shapes.find((s) => s.groupSep !== '')?.groupSep ?? (first.decimalSep === ',' ? '.' : ',');
+  const minor = (products as StorePrice[]).reduce((sum, p) => sum + Math.round(p.price * 10 ** first.decimals), 0);
+  return `${first.prefix}${renderAmount(minor, { ...first, groupSep })}${first.suffix}`;
 }
 
 /** What the surprise list shows for one item of a pet. */
@@ -654,11 +752,18 @@ export function productIdsOf(data: ParentWishes | null): string[] {
   const ids = new Set<string>();
   for (const w of data?.wishes ?? []) {
     ids.add(w.product_id);
-    if (w.bundle_product_id) ids.add(w.bundle_product_id);
+    if (w.bundle_product_id) {
+      ids.add(w.bundle_product_id);
+      // »Posamezno …« under the bundle needs the three single prices too.
+      for (const id of bundleItemProductIds(data?.pets.find((p) => p.pet_id === w.pet_id) ?? null)) ids.add(id);
+    }
   }
   for (const p of data?.pets ?? []) {
     for (const i of p.items) ids.add(i.product_id);
-    if (p.bundle_eligible && p.bundle_product_id) ids.add(p.bundle_product_id);
+    if (p.bundle_eligible && p.bundle_product_id) {
+      ids.add(p.bundle_product_id);
+      for (const id of bundleItemProductIds(p)) ids.add(id);
+    }
   }
   return [...ids].sort();
 }

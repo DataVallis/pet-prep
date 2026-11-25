@@ -172,6 +172,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-25 (mobile, `fix/wishes-bundle-label`)
+- Starševske »Želje«: paket »Dobrodošlica« ni več zavajajoč gumb »Vse tri za …« pod zadnjo prošnjo, ampak svoj razdelek z vsebino za psa / muco, »Kupi paket za …« in »Posamezno skupaj …« (samo iz vseh treh cen trgovine). Testi v `wishes.test.ts`, `WishesScreen.test.tsx`. Potrebna preverba na telefonu (prave cene iz trgovine).
+
 ### 2026-11-25 (backend, `fix/critical-push-text`)
 - Push faze 2 (≤ 10 %) za hrano / vodo ne grozi več z boleznijo (ni bilo res): »Tvoj kuža je zelo lačen. Nahrani ga čim prej.« ipd., pes + muca, SL + EN (strežnik govori samo en / sl). Mehanika (alarm kanal) nespremenjena. Test v `PushNotificationTest`.
 

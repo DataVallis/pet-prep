@@ -2,7 +2,10 @@
  * WishesScreen — the parent »Želje« list (M6-W05, SHOP_SPEC §3, WISHES_API §4).
  *
  * - **Prošnje:** open wishes (item, pet, child, when) with »Kupi za <store price>« and »Ne zdaj«;
- *   when the server set `bundle_product_id` also »Vse tri za <price>« (the welcome bundle).
+ *   when the server set `bundle_product_id` the welcome bundle is offered in its OWN section
+ *   »Paket »Dobrodošlica«« below »Prošnje« (David 2026-11-25: never a button inside a wish card):
+ *   what it contains for this pet's species, »Kupi paket za <price>«, and »Posamezno skupaj <sum>«
+ *   only when all three single store prices are known (`bundleSeparateTotal`).
  * - **Kupi brez prošnje:** a surprise — the parent picks the pet first, then the item.
  * - **Kupljeno, še ni dodeljeno:** `unassigned_credits` → »Komu?« (pick the pet, redeem only).
  * Prices only from the store (RevenueCat product `priceString`, localized) — a product the
@@ -12,7 +15,7 @@
  * M6-W03 designs (David 2026-11-03): a wish shows the requested design's picture + name and is
  * bought as exactly that design; a surprise purchase, the welcome bundle (one design per item)
  * and »Komu?« ask for the design(s) first (`DesignChoice`). A server without designs → as before.
- * Bundle picker (David 2026-11-19): »Vse tri« always shows all three items (also the one of the
+ * Bundle picker (David 2026-11-19): the bundle always shows all three items (also the one of the
  * wish it was opened from); every picker preselects the look the pet's open wish asks for.
  */
 
@@ -26,7 +29,7 @@ import type { PurchasesStoreProduct } from 'react-native-purchases';
 import { ApiError } from '@/api/client';
 import { Text } from '@/components/ui/Text';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import { currentLanguageTag, t } from '@/i18n';
+import { currentLanguageTag, t, tSpecies } from '@/i18n';
 import { dateTimeText } from '@/modules/childPet/familyTime';
 import { useDeclineWish, useParentWishes, useWishProducts } from '@/hooks/queries/useWishes';
 import type { FamilyOverview } from '@/modules/family/family';
@@ -39,6 +42,9 @@ import { isGoodResult, useWishPurchase, wishResultText, type WishPurchaseResult 
 import { useAppStore } from '@/store/appStore';
 import { retryPendingPurchases } from '@/modules/wishes/redeem';
 import {
+  bundleItemProductIds,
+  bundleOffersOf,
+  bundleSeparateTotal,
   designChoiceFor,
   designOf,
   designPickerFor,
@@ -46,7 +52,6 @@ import {
   isFeatureMissing,
   parentItemState,
   productIdsOf,
-  showBundleOffer,
   variantFor,
   wantedDesigns,
   wishDesign,
@@ -324,6 +329,53 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
     );
   };
 
+  /**
+   * The welcome bundle (S12, David 2026-11-25): what it contains for THIS pet's species, its own
+   * buy button and — only with all three single store prices — »Posamezno skupaj …«. The same
+   * block in the »Paket »Dobrodošlica«« section and in »Kupi brez prošnje«.
+   */
+  const renderBundle = (opts: {
+    anchor: string;
+    productId: string;
+    petId: number;
+    wishId: number | null;
+    species: 'dog' | 'cat';
+    petText: string;
+    fixed: Partial<Record<WishItemKey, string>>;
+    /** Prefix of the block's text test ids. */
+    testID: string;
+    buyTestID: string;
+  }) => {
+    const separately = bundleSeparateTotal(bundleItemProductIds(petOf(opts.petId)).map(productOf));
+    return (
+      <>
+        <View style={styles.itemRow}>
+          <WishIcon variant="welcome_bundle" tone="light" size={44} />
+          <View style={styles.flex}>
+            <Text style={[styles.body, styles.bold]} testID={`${opts.testID}-contents`}>
+              {tSpecies('wishes:parent.bundleContents', opts.species, { pet: opts.petText })}
+            </Text>
+            {separately !== null && (
+              <Text style={styles.muted} testID={`${opts.testID}-separately`}>
+                {t('wishes:parent.bundleSeparately', { sum: separately })}
+              </Text>
+            )}
+          </View>
+        </View>
+        {priceButton({
+          productId: opts.productId,
+          label: (price) => t('wishes:parent.bundle', { price }),
+          a11y: (price) => tSpecies('wishes:parent.bundleA11y', opts.species, { pet: opts.petText, price }),
+          onPress: () => buy(opts.anchor, opts.productId, opts.petId, opts.wishId, opts.species, opts.fixed),
+          testID: opts.buyTestID,
+          secondary: true,
+        })}
+        {renderChoice(opts.anchor)}
+      </>
+    );
+  };
+
+  const bundleOffers = bundleOffersOf(data, storeHas);
   const surprise = data?.pets.find((p) => p.pet_id === surprisePet) ?? null;
 
   return (
@@ -446,16 +498,6 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                       onPress: () => buy(`wish-${wish.id}`, wish.product_id, wish.pet_id, wish.id, wish.species, fixed),
                       testID: `wish-buy-${wish.id}`,
                     })}
-                    {showBundleOffer(wish, storeHas) &&
-                      wish.bundle_product_id !== null &&
-                      priceButton({
-                        productId: wish.bundle_product_id,
-                        label: (price) => t('wishes:parent.bundle', { price }),
-                        a11y: (price) => t('wishes:parent.bundleA11y', { pet, price }),
-                        onPress: () => buy(`wish-${wish.id}`, wish.bundle_product_id ?? '', wish.pet_id, wish.id, wish.species, fixed),
-                        testID: `wish-bundle-${wish.id}`,
-                        secondary: true,
-                      })}
                     {renderChoice(`wish-${wish.id}`)}
                     <Pressable
                       style={({ pressed }) => [styles.textButton, busy && styles.disabled, pressed && styles.pressed]}
@@ -470,6 +512,30 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                   </Card>
                 );
               })
+            )}
+
+            {bundleOffers.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle} accessibilityRole="header" testID="bundle-section">
+                  {t('wishes:items.welcome_bundle')}
+                </Text>
+                <Text style={styles.muted}>{t('wishes:parent.bundleIntro')}</Text>
+                {bundleOffers.map((offer) => (
+                  <Card key={offer.pet_id} testID={`bundle-${offer.pet_id}`}>
+                    {renderBundle({
+                      anchor: `bundle-${offer.pet_id}`,
+                      productId: offer.productId,
+                      petId: offer.pet_id,
+                      wishId: offer.wish.id,
+                      species: offer.species,
+                      petText: petName(offer.pet_id, offer.pet_name, offer.species),
+                      fixed: offer.wish.design !== null ? { [offer.wish.item_key]: offer.wish.design } : {},
+                      testID: `bundle-${offer.pet_id}`,
+                      buyTestID: `bundle-buy-${offer.pet_id}`,
+                    })}
+                  </Card>
+                ))}
+              </>
             )}
 
             {data.pets.length > 0 && (
@@ -499,19 +565,17 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                   <Card testID={`surprise-items-${surprise.pet_id}`}>
                     {surprise.bundle_eligible && surprise.bundle_product_id !== null && (
                       <View style={styles.surpriseRow}>
-                        <View style={styles.itemRow}>
-                          <WishIcon variant="welcome_bundle" tone="light" size={44} />
-                          <Text style={[styles.body, styles.bold]}>{t('wishes:items.welcome_bundle')}</Text>
-                        </View>
-                        {priceButton({
+                        {renderBundle({
+                          anchor: `surprise-${surprise.pet_id}-welcome_bundle`,
                           productId: surprise.bundle_product_id,
-                          label: (price) => t('wishes:parent.bundle', { price }),
-                          a11y: (price) => t('wishes:parent.bundleA11y', { pet: petName(surprise.pet_id, surprise.pet_name, surprise.species), price }),
-                          onPress: () => buy(`surprise-${surprise.pet_id}-welcome_bundle`, surprise.bundle_product_id ?? '', surprise.pet_id, null, surprise.species),
-                          testID: `surprise-buy-${surprise.pet_id}-welcome_bundle`,
-                          secondary: true,
+                          petId: surprise.pet_id,
+                          wishId: null,
+                          species: surprise.species,
+                          petText: petName(surprise.pet_id, surprise.pet_name, surprise.species),
+                          fixed: {},
+                          testID: `surprise-bundle-${surprise.pet_id}`,
+                          buyTestID: `surprise-buy-${surprise.pet_id}-welcome_bundle`,
                         })}
-                        {renderChoice(`surprise-${surprise.pet_id}-welcome_bundle`)}
                       </View>
                     )}
                     {surprise.items.map((item) => {

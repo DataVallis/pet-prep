@@ -6,6 +6,9 @@ import {
   isFeatureMissing,
   keysOfProduct,
   parentItemState,
+  bundleItemProductIds,
+  bundleOffersOf,
+  bundleSeparateTotal,
   productIdsOf,
   purchaseStillPossible,
   readChildWishes,
@@ -216,7 +219,8 @@ describe('parent list', () => {
   });
 
   it('asks the store for every product it may show', () => {
-    expect(productIdsOf(data)).toEqual(['petprep_wish_bed', 'petprep_wish_bowls', 'petprep_wish_bundle_welcome', 'petprep_wish_toy_2', 'petprep_wish_treats_10']);
+    // The bundle's three single products too (»Posamezno skupaj …«, David 2026-11-25).
+    expect(productIdsOf(data)).toEqual(['petprep_wish_bed', 'petprep_wish_bowls', 'petprep_wish_bundle_welcome', 'petprep_wish_toy_1', 'petprep_wish_toy_2', 'petprep_wish_treats_10']);
     expect(productIdsOf(null)).toEqual([]);
   });
 
@@ -235,6 +239,41 @@ describe('parent list', () => {
     expect(purchaseStillPossible(data, { petId: 12, productId: 'petprep_wish_bundle_welcome', wishId: null })).toBe('ok');
     const notEligible = { ...data, pets: [{ ...data.pets[0], bundle_eligible: false }] };
     expect(purchaseStillPossible(notEligible, { petId: 12, productId: 'petprep_wish_bundle_welcome', wishId: 31 })).toBe('bundle_not_eligible');
+  });
+
+  it('bundle offers: one per pet with a bundle wish the store has, the first wish of the pet', () => {
+    const has = (id: string) => id === 'petprep_wish_bundle_welcome';
+    const offers = bundleOffersOf(data, has);
+    expect(offers.map((o) => [o.pet_id, o.wish.id, o.productId])).toEqual([[12, data.wishes[0].id, 'petprep_wish_bundle_welcome']]);
+    expect(bundleOffersOf(data, () => false)).toEqual([]);
+    expect(bundleOffersOf(null, has)).toEqual([]);
+    const twice = { ...data, wishes: [data.wishes[0], { ...data.wishes[0], id: 99 }] };
+    expect(bundleOffersOf(twice, has)).toHaveLength(1);
+  });
+
+  it('bundle single products: the pet items\' ids, the known ids as fallback', () => {
+    expect(bundleItemProductIds(null)).toEqual(['petprep_wish_bed', 'petprep_wish_bowls', 'petprep_wish_toy_1']);
+    expect(bundleItemProductIds({ items: [{ ...data.pets[0].items[0], key: 'bed', product_id: 'store_bed_v2' }] })).toEqual(['store_bed_v2', 'petprep_wish_bowls', 'petprep_wish_toy_1']);
+  });
+
+  describe('»Posamezno skupaj …« (David 2026-11-25): only from all three store prices', () => {
+    const eur = (price: number, priceString: string) => ({ price, currencyCode: 'EUR', priceString });
+    it('sums in the store\'s own format', () => {
+      expect(bundleSeparateTotal([eur(5.99, '5,99\u00a0€'), eur(5.99, '5,99\u00a0€'), eur(5.99, '5,99\u00a0€')])).toBe('17,97\u00a0€');
+      expect(bundleSeparateTotal([eur(2.99, '€2.99'), eur(5.99, '€5.99'), eur(5.99, '€5.99')])).toBe('€14.97');
+      const usd = (price: number) => ({ price, currencyCode: 'USD', priceString: `$${price.toFixed(2)}` });
+      expect(bundleSeparateTotal([usd(499.99), usd(499.99), usd(99.99)])).toBe('$1,099.97');
+      const yen = (price: number) => ({ price, currencyCode: 'JPY', priceString: `¥${price}` });
+      expect(bundleSeparateTotal([yen(900), yen(900), yen(300)])).toBe('¥2,100');
+    });
+    it('missing price, other currency or an unreadable price string → null', () => {
+      expect(bundleSeparateTotal([eur(5.99, '5,99 €'), null, eur(5.99, '5,99 €')])).toBeNull();
+      expect(bundleSeparateTotal([eur(5.99, '5,99 €'), eur(5.99, '5,99 €')])).toBeNull();
+      expect(bundleSeparateTotal([eur(5.99, '5,99 €'), eur(5.99, '5,99 €'), { price: 5.99, currencyCode: 'USD', priceString: '5,99 €' }])).toBeNull();
+      expect(bundleSeparateTotal([eur(5.99, '5,99 €'), eur(5.99, '5,99 €'), eur(5.99, 'free')])).toBeNull();
+      expect(bundleSeparateTotal([eur(5.99, '5,99 €'), eur(5.99, '5,99 €'), eur(4.99, '5,99 €')])).toBeNull();
+      expect(bundleSeparateTotal([eur(5.99, '5,99 €'), eur(5.99, '5,99 €'), eur(Number.NaN, '5,99 €')])).toBeNull();
+    });
   });
 
   it('the bundle covers bed + bowls + toy_1', () => {
