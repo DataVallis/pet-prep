@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "b44be8fe17e478526997f3e20090623898c0401c0a8698581775f9b9ba260cb9"
+      "sha256": "d425e134ccd102dd2fb5811d82eb48577595c65eb2674b6b13c0d5f2a4e4df1a"
     }
   },
   "suitability_vocabulary": {
@@ -81360,7 +81360,34 @@
         "file": "kerry-blue-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder"
+            },
+            "file": "dog/kerry-blue-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "deep-slate-blue",
+            "label": {
+              "en": "Deep slate blue",
+              "sl": "Temno skrilasto moder"
+            },
+            "file": "dog/kerry-blue-terrier--deep-slate-blue.webp"
+          },
+          {
+            "key": "light-blue-grey",
+            "label": {
+              "en": "Light blue-grey",
+              "sl": "Svetlo modrosiv"
+            },
+            "file": "dog/kerry-blue-terrier--light-blue-grey.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
