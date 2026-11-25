@@ -1636,6 +1636,15 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_KERRY_BLUE_TERRIER_SENIOR = 'predlog Claude 2026-11-25 (M5-R10-139): senior od 112 mesecev (0,75 × 12,4 leta, McMillan 2024 prek Wikipedije — vir C; A/B kopija, VetCompass in RKC niso bili dosegljivi) — čaka Davida';
 
     /**
+     * M5-R10-140 Irish Terrier (unattended run 2026-11-25, data.json proposed_game_parameters.irish_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S1053 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 108 (0.75 × RKC lower bound "Over 12 years", S1053), arrival 2 / 9 / 36 / 108, learning
+     * multiplier 1.0 (Coren tier Average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_IRISH_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-140)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -2104,6 +2113,11 @@ class BreedStageParamsSeeder extends Seeder
             'groomer_visit' => [1, 'six_weeks', 'S1046', 'Professional grooming is recommended about every six weeks to trim the coat and shape the Kerry Blue\'s beard.', 'proposed_game_parameters.kerry_blue_terrier.professional_grooming', '"about every six weeks" → 6 weeks (WebMD "about every six to eight weeks" agrees; VCA "about once a month" is the alternative)'],
             'bath' => [1, 'month', 'S1046', 'They do best when bathed about once a month with a gentle conditioning shampoo.', 'proposed_game_parameters.kerry_blue_terrier.bathing', '"about once a month" → every 4 weeks (nails: no frequency in any source → no task)'],
         ],
+        'irish_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S1058', 'Brush their teeth on a daily basis.', 'proposed_game_parameters.irish_terrier.tooth_brushing', '"on a daily basis" → every day'],
+            'ear_cleaning' => [1, 'week', 'S1056', 'Eyes, ears and mouth should be checked weekly, and getting puppies comfortable with handling early makes ongoing grooming much easier.', 'proposed_game_parameters.irish_terrier.ear_care', '"checked weekly" → once a week'],
+            'groomer_visit' => [1, 'two_months', 'S1056', 'Many owners choose to have the coat clipped every couple of months by a professional groomer to keep it manageable.', 'proposed_game_parameters.irish_terrier.professional_grooming', '"every couple of months" → 2 months (8 program weeks; nails: "on a regular basis", no frequency → no task; bath: no source)'],
+        ],
     ];
 
     /**
@@ -2260,6 +2274,7 @@ class BreedStageParamsSeeder extends Seeder
         'german_pinscher' => [1, 'S1031', 'Once a week', 'high', false],
         'bedlington_terrier' => [3, 'S1038', 'We recommend brushing two to three times a week, along with a professional groom every six to eight weeks', 'high', false],
         'kerry_blue_terrier' => [4, 'S1048', 'Brush and comb every other day, clip nails, clean ears, brush teeth', 'medium', true, self::PROPOSED_R13_KERRY_BLUE_TERRIER, 'VCA "every other day" (S1048) = 3.5 a week → 4 (half up) — Claude\'s proposal (the runbook grooming rule has no line for "every other day"; PetMD S1046 / WebMD S1047 "at least weekly" → 1 is the alternative), open for David.'],
+        'irish_terrier' => [3, 'S1055', 'They have a medium length coat, which requires grooming 2 or 3 times per week.', 'high', false],
     ];
 
     /**
@@ -2466,13 +2481,14 @@ class BreedStageParamsSeeder extends Seeder
         'german_pinscher' => ['S1032', 'German Pinscher puppies need to be socialized consistently from a young age'],
         'bedlington_terrier' => ['S1040', 'Consistent socialization is important for Bedlington Terrier puppies to grow comfortable around new people.'],
         'kerry_blue_terrier' => ['S1047', 'Owners must be willing to spend time training and socializing their pets.'],
+        'irish_terrier' => ['S1055', 'socialisation and training at a young age are very important'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3330,6 +3346,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::GermanPinscher => self::germanPinscherProfile(),
             BreedType::BedlingtonTerrier => self::bedlingtonTerrierProfile(),
             BreedType::KerryBlueTerrier => self::kerryBlueTerrierProfile(),
+            BreedType::IrishTerrier => self::irishTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -13119,6 +13136,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'kerry_blue_terrier.lifespan.mcmillan_2024_wikipedia',
                 'quote' => 'A 2024 UK study found a median lifespan of 12.4 years for the breed, compared to an overall average of 12.5.',
                 'notes' => 'McMillan et al. 2024 as cited by Wikipedia (S1050, tier C — the Dogs Trust table S123 and the PMC copy were not reachable). WebMD 12–15 y (S1047), VCA 10–12 y (S1048). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Irish Terrier (M5-R10-140). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_IRISH_TERRIER); weight, growth and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function irishTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_IRISH_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S1053', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.irish_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S1053; PDSA S1055 agrees) = 9 y = 108 months. No McMillan 2024 / VetCompass median was reachable. Not chosen: 117 (PetMD / WebMD 13 y lower bound), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S1053', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 1 hour per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 1 hour per day" (S1053) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S1055), Woodgreen (S1056) and PetMD (S1057) agree on about an hour.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[11.4, 12.25], [
+                'unit' => 'kg', 'source_id' => 'S1051', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'irish_terrier.adult_weight.fci',
+                'quote' => 'Weight: Dogs 27lbs (12.25kg).',
+                'notes' => 'FCI-Standard N° 139 (S1051): dogs 12.25 kg, "Bitches 25lbs (11.4kg)." (single values per sex). PDSA 11–12 kg (S1055), Woodgreen 11–15 kg (S1056).',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'irish_terrier.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 12.25 / 11.4 kg ≈ 27 / 25 lb, S1051 → the Medium class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'irish_terrier.trainability.coren_rank',
+                'notes' => 'Listed under "Average Working/Obedience Intelligence" (S35, read 2026-11-25 through a Wikipedia mirror without rank numbers) — rank number not recorded; the tier decides the multiplier (Welsh Terrier precedent).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.irish_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren tier "Average" (S35) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S1053', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'irish_terrier.lifespan.rkc',
+                'quote' => 'Over 12 years',
+                'notes' => 'RKC lower bound (S1053; PDSA S1055 agrees) — the runbook\'s third choice after McMillan 2024 and a VetCompass median (neither reachable). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

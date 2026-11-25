@@ -4590,6 +4590,33 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (display.aspx?id=3071 → royalkennelclub.com …/terrier/kerry-blue-terrier) could not be fetched on 2026-11-25 (redirect refused) → no RKC minimum / best_practice level. AKC Terrier Group health-testing page (K33, re-read 2026-11-25): 'Recommended Health Tests from the National Breed Club:' 'Hip Evaluation', 'Ophthalmologist Evaluation' (no DNA test listed; the linked KBTC health statement PDF was refused). Dogs NZ accredited-breeder table (K45): 'Hip Dysplasia' 'Mandatory', 'DNA - von Willebrand Disease 1 (vWD1)' 'Mandatory', 'DNA - Profile' 'Mandatory' (identity, not a health test — not taken), 'Elbow Dysplasia', 'DNA - Degenerative Myelopathy (DM)', 'DNA - Factor IX Deficiency (Hemophilia B)' 'Optional' (not taken). WebMD (dog-data S1047): 'The club recommends that all Kerries be checked for hip dysplasia and also see an ophthalmologist.' No new test key (dna_vwd1 exists). No PNA DNA test named by any source read."
+    },
+    "irish_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S1053",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S1053",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_hfh",
+          "level": "best_practice",
+          "name": "DNA test for hereditary footpad hyperkeratosis (HFH)",
+          "source_id": "S1053",
+          "quote": "DNA test for hereditary footpad hyperkeratosis (HFH)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S1053, 2026-11-25, M5-R10-140): under 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' only 'Prioritising genetic diversity'; under 'Best Practice schemes and tests' the 'DNA test for hereditary footpad hyperkeratosis (HFH)' (labels as returned); 'We don't currently offer a breed-specific DNA testing package for this breed' (fragment). RKC Breed Watch (S1054) point of concern 'Cracked and/or corny pads'. New test key dna_hfh (website words needed in src/content/registry/{en,sl}.ts → checklist.tests). PDSA (S1055) advises checking that the parents were screened under the Canine Health Schemes (paraphrase; no named scheme). PetMD / WebMD name cystinuria, hip dysplasia and cataracts (background in dog-data) — no A/B breeding rule, not added."
     }
   }
 }

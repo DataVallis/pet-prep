@@ -3272,5 +3272,26 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S1046'], 'refs' => ['kerry_blue_terrier.behaviour.time_alone']],
             ],
         ],
+
+        // M5-R10-140 Irish Terrier (data.json proposed_game_parameters.irish_terrier.suitability_tags; S1053, S1055, S1056),
+        // runbook rules. RKC Breed Watch Category 2 (cracked / corny pads, S1054) is an inherited footpad condition, not
+        // conformation → no welfare chip; in marketing. Sheds: RKC "Yes" vs Woodgreen "Minimal" → neither shedding tag.
+        // small_children: WebMD "fantastic with young children" vs Woodgreen older children → no chip. No new vocabulary key.
+        'irish_terrier' => [
+            'suits' => [
+                // S1053 "Up to 1 hour per day"; S1055 "Irish Terriers have high energy levels and require around an hour of exercise per day."
+                ['tag' => 'active_family', 'source_ids' => ['S1053', 'S1055'], 'refs' => ['irish_terrier.exercise.adult', 'irish_terrier.suitability.pdsa_exercise']],
+                // S1056 "Irish Terriers can make excellent family dogs and are typically gentle and affectionate with the children in their own household."
+                ['tag' => 'family_pet', 'source_ids' => ['S1056'], 'refs' => ['irish_terrier.behaviour.family']],
+                // S1056 "… typically gentle and affectionate with the children in their own household." (supervision caveat in notes)
+                ['tag' => 'children', 'source_ids' => ['S1056'], 'refs' => ['irish_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S1053 "More than once a week"; S1055 "They have a medium length coat, which requires grooming 2 or 3 times per week."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1053', 'S1055'], 'refs' => ['irish_terrier.suitability.rkc_grooming', 'irish_terrier.suitability.pdsa_grooming']],
+                // S1056 "Their strong prey drive is triggered by small animals, so secure environments and careful management around cats or other pets is important."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S1056'], 'refs' => ['irish_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

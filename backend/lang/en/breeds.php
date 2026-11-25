@@ -138,6 +138,7 @@ return [
     'german_pinscher' => 'German Pinscher',
     'bedlington_terrier' => 'Bedlington Terrier',
     'kerry_blue_terrier' => 'Kerry Blue Terrier',
+    'irish_terrier' => 'Irish Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

@@ -520,6 +520,7 @@ const SPECIES = [
       { id: 'german_pinscher', synonyms: { en: ['Deutscher Pinscher', 'Standard Pinscher', 'Pinscher'], sl: ['nemški pinč', 'srednji pinč', 'pinč'] } },
       { id: 'bedlington_terrier', synonyms: { en: ['Bedlington'], sl: ['bedlingtonski terier', 'bedlington terrier', 'bedlington'] } },
       { id: 'kerry_blue_terrier', synonyms: { en: ['Kerry Blue', 'Kerry'], sl: ['kerry blue terier', 'kerry'] } },
+      { id: 'irish_terrier', synonyms: { en: [], sl: ['irski terier', 'irish terrier'] } },
     ],
   },
   {
@@ -3524,7 +3525,25 @@ const DOG_FACTS = {
       ['bleeding_disorder_vwd', 'health.von_willebrand'],
       ['inherited_ataxia', 'health.pna'],
     ],
+  },  irish_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    // Rank number not readable (S35 lists the breed under 'Average' only) → no coren_rank fact.
+    coren_rank: false,
+    food_motivation: null,
+    // Hip dysplasia and the WebMD list are paraphrases only (no verbatim quote) → left out. New health key:
+    // footpad_hyperkeratosis (RKC Breed Watch point of concern, PDSA S1055).
+    health: [
+      ['footpad_hyperkeratosis', 'health.footpad_hyperkeratosis'],
+      ['bladder_stones', 'health.bladder_stones'],
+    ],
   },
+
 
 
 
@@ -3621,6 +3640,7 @@ export const DOG_CARE_TASKS = {
   german_pinscher: [['ear_cleaning', 1, 7, 'proposed_game_parameters.german_pinscher.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.german_pinscher.nail_trimming'], ['bath', 1, 42, 'proposed_game_parameters.german_pinscher.bathing']],
   bedlington_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.bedlington_terrier.tooth_brushing'], ['groomer_visit', 1, 42, 'proposed_game_parameters.bedlington_terrier.professional_grooming']],
   kerry_blue_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.kerry_blue_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.kerry_blue_terrier.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.kerry_blue_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.kerry_blue_terrier.bathing']],
+  irish_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.irish_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_terrier.ear_care'], ['groomer_visit', 1, 56, 'proposed_game_parameters.irish_terrier.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4683,7 +4703,15 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.kerry_blue_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.kerry_blue_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.kerry_blue_terrier.exercise_minutes_senior',
+  },  irish_terrier: {
+    adult_minutes: ['proposed_game_parameters.irish_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.irish_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.irish_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.irish_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.irish_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.irish_terrier.exercise_minutes_senior',
   },
+
 
 
 

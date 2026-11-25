@@ -660,6 +660,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::GermanPinscher->value => 'german_pinscher.behaviour.other_pets',
         // M5-R10-138: PDSA S1037 "they do have very strong prey drive so you should never leave your Bedlington unattended with other pets."
         BreedType::BedlingtonTerrier->value => 'bedlington_terrier.behaviour.other_pets',
+        // M5-R10-140: Woodgreen S1056 "Their strong prey drive is triggered by small animals, so secure environments and careful management around cats or other pets is important."
+        BreedType::IrishTerrier->value => 'irish_terrier.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

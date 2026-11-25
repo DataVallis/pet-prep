@@ -71799,6 +71799,653 @@
       }
     }
   },
+  "irish_terrier": {
+    "_note": "Added 2026-11-25 (M5-R10-140, unattended run — appended after the Kerry Blue Terrier: AKC 2024 No. 136 'Irish Terrier', S174 full-list table read 2026-11-25 '135 Kerry Blue Terrier', '136 Irish Terrier'). Quotes as returned by the web-fetch tool on 2026-11-25 (after web searches; the tool limits quotes to ~125 characters — longer passages were returned as fragments or summaries); paraphrase only in notes, marked '(paraphrase)'. Sources S1051–S1059 (reused S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Standard: FCI-Standard N° 139 (S1051, the English PDF on fci.be; the FCI nomenclature page S1052 gives 'Date of publication of the official valid standard: 3/13/2001'). The RKC Breeds A–Z page (S1053) was reachable this run: Exercise 'Up to 1 hour per day' → 60; Lifespan 'Over 12 years' → senior 108 (no McMillan 2024 / VetCompass row reachable: the Dogs Trust table S123 refused (PROVENANCE_REQUIRED), PMC behind a captcha, the Nature PDF names the breed only as a Fig. 5 label). Grooming: RKC 'More than once a week' has no number → PDSA (S1055) '2 or 3 times per week' → 3. Coren: tier 'Average Working/Obedience Intelligence' (S35 IPFS mirror; rank number not readable — Welsh Terrier precedent) → 1.0. Shedding: RKC 'Sheds' 'Yes' vs Woodgreen 'Minimal' → conflicting → neither sheds nor low_shedding (runbook). Never hypoallergenic. RKC Breed Watch Category 2 (S1054): 'Cracked and/or corny pads' (hereditary footpad hyperkeratosis — an inherited pad condition, not an exaggerated conformation → no welfare chip; in marketing). Slovenian »irski terier« (KZS-style, like »kerry blue terier«; no KZS page fetched).",
+    "identity": {
+      "value": "FCI No. 139, Group 3 Section 1 (Large and medium sized Terriers), Ireland",
+      "unit": "—",
+      "source_id": "S1051",
+      "quote": "COUNTRY OF ORIGIN: Ireland.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 139 (S1051): 'FCI-CLASSIFICATION: Group 3 Terriers.' (section 1 and 'Without working trial.' as summarised by the tool — paraphrase). FCI nomenclature page (S1052): 'IRISH TERRIER' (French 'TERRIER IRLANDAIS'), Group 'n°3 - Terriers', section 'Large and medium sized Terriers', country of origin 'IRELAND', definitive acceptance 1/28/1955, official valid standard published 3/13/2001, not subject to a working trial. Ireland is in FCI_ORIGINS (IE)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S1053",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S1053) — runbook first choice. PDSA (S1055) 'Medium' and Woodgreen (S1056) 'Medium' (alternatives). FCI dogs 12.25 kg / bitches 11.4 kg (≈ 27 / 25 lb, S1051) → the 'Medium (24–59 pounds)' class of S10 for growth (Welsh Terrier precedent: RKC size for the class, weight for growth).",
+      "alternatives": [
+        {
+          "value": "medium",
+          "unit": "—",
+          "source_id": "S1055",
+          "quote": "Medium",
+          "confidence": "medium",
+          "notes": "PDSA key fact 'Size' (S1055)."
+        },
+        {
+          "value": "medium",
+          "unit": "—",
+          "source_id": "S1056",
+          "quote": "Medium",
+          "confidence": "medium",
+          "notes": "Woodgreen at-a-glance 'Size' (S1056)."
+        }
+      ]
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            45.5,
+            45.5
+          ],
+          "female": [
+            45.5,
+            45.5
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1051",
+        "quote": "Height at the withers: Approximately 18 inches (45.5cm).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 139 (S1051) 'SIZE AND WEIGHT:' — one approximate height for both sexes (stored per sex). PDSA (S1055) 'Average height' '46-48 cm'; PetMD (S1057) 'The Irish Terrier size is about 18 inches tall and 25–27 pounds.'; WebMD (S1058) 'an average height of 18 inches at their shoulders.'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                46,
+                48
+              ],
+              "female": [
+                46,
+                48
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S1055",
+            "quote": "46-48 cm",
+            "confidence": "medium",
+            "notes": "PDSA key fact 'Average height' (S1055)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            12.25,
+            12.25
+          ],
+          "female": [
+            11.4,
+            11.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1051",
+        "quote": "Weight: Dogs 27lbs (12.25kg).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 139 (S1051): dogs 12.25 kg as quoted; 'Bitches 25lbs (11.4kg).' — single values per sex (stored as [x, x]). WebMD (S1058): 'Healthy males weigh an average of 27 pounds.', 'Healthy females are slightly smaller, weighing an average of 25 pounds.' (agrees). No AKC standard PDF reachable this run (AKC breed page S174 family only; akc.org breed page returned only the introduction).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                11,
+                12
+              ],
+              "female": [
+                11,
+                12
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1055",
+            "quote": "11-12kg",
+            "confidence": "medium",
+            "notes": "PDSA key fact 'Average weight' (S1055) — one range for the breed."
+          },
+          {
+            "value": {
+              "male": [
+                11,
+                15
+              ],
+              "female": [
+                11,
+                15
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1056",
+            "quote": "11-15 kg",
+            "confidence": "medium",
+            "notes": "Woodgreen at-a-glance 'Weight' (S1056) — one range for the breed."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 12.25 / 11.4 kg ≈ 27 / 25 lb (S1051) → Medium. The puppy cap of 60 min is reached at 6 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Irish Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No McMillan 2024 value at an A/B source this run: the Dogs Trust table (S123) refused (PROVENANCE_REQUIRED), the Dogs Trust summary page (S15) does not name the breed, PMC10834484 behind a captcha, the Nature PDF names 'Irish Terrier' only as a Fig. 5 label (no number). No VetCompass median found → the RKC lower bound decides (runbook)."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S1053",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S1053) — the runbook's third choice (McMillan / VetCompass not reachable). PDSA (S1055) 'Average lifespan' 'Over 12 years' agrees."
+      },
+      "woodgreen": {
+        "value": "12–16",
+        "unit": "years",
+        "source_id": "S1056",
+        "quote": "12-16 years",
+        "confidence": "medium",
+        "notes": "Woodgreen at-a-glance 'Life expectancy' (S1056)."
+      },
+      "petmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S1057",
+        "quote": "average lifespan of 13–15 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1057, fragment)."
+      },
+      "webmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S1058",
+        "quote": "They live an average of 13 to 15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S1058, medically reviewed)."
+      },
+      "wikipedia_2024_study": {
+        "value": 13.5,
+        "unit": "years",
+        "source_id": "S1059",
+        "quote": "A 2024 UK study found a life expectancy of 13.5 years for the breed compared to an average of 12.7",
+        "confidence": "low",
+        "notes": "Wikipedia (S1059, tier C) — a 'life expectancy', not labelled a McMillan median; cross-check only, never used for a game value."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × the RKC lower bound 12 y (S1053) → 0.75 × 12 × 12 = 108 months. Alternatives: 84 (Dogs Trust > 7 y, S14); 117 (PetMD / WebMD lower bound 13 y, S1057 / S1058).",
+        "derived_from": [
+          "S11",
+          "S1053"
+        ],
+        "months": 108
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S1053",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S1053) → rule 'up to N' → 60. All A/B sources agree on about an hour.",
+        "alternatives": [
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S1055",
+            "quote": "Irish Terriers have high energy levels and require around an hour of exercise per day.",
+            "notes": "PDSA (S1055) — the same number; RKC preferred."
+          },
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S1056",
+            "quote": "At least an hour of exercise a day is recommended, combined with games, enrichment toys and opportunities to dig and use their nose.",
+            "notes": "Woodgreen (S1056); at-a-glance 'Exercise needs' '60-90 minutes' (lower bound 60)."
+          },
+          {
+            "value": 60,
+            "unit": "minutes/day",
+            "source_id": "S1057",
+            "quote": "This breed needs at least 60–90 minutes of exercise every day.",
+            "notes": "PetMD (S1057) — range lower bound 60."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "high energy; around an hour a day with games, enrichment and chances to dig and sniff",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "Irish Terriers have high energy levels and require around an hour of exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S1055); Woodgreen (S1056) adds games, enrichment toys, digging and nose work; WebMD (S1058) 'They need plenty of exercise every single day.' Basis of active_family (Welsh Terrier precedent). Not long_daily_exercise (about one hour)."
+      },
+      "recall": {
+        "value": "recall can be unreliable",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Recall isn't always a reliable way of getting this breed back when something interesting catches their attention.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1056); WebMD (S1058): a dog may 'take off after something that looks like prey' off-leash (fragment). No source says the breed escapes a garden → no secure_fencing chip (Bedlington / Kerry Blue precedent)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PDSA S1055 and PetMD S1057 asked: not mentioned; WebMD S1058 bloat not mentioned) → no meal / exercise gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "game, loyal, good-tempered and affectionate with people; easily trained, a gentle pet; comical",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "loyal, good tempered and affectionate with mankind, but once he is attacked, he has the courage of a lion",
+        "confidence": "high",
+        "notes": "FCI standard (S1051, fragment): 'The Irish Terrier, while being game and capable of holding his own with other dogs, is remarkably' … ; 'trained and a gentle pet, living up to his early description as “the poor man’s sentinel,'. PDSA (S1055): 'Irish Terriers are known to be quite comical dogs, with gentle and loving attitudes towards their owners.' RKC tagline (S1053): 'A fiery spirit and daredevil nature match its bright red coat'."
+      },
+      "family": {
+        "value": "can make excellent family dogs; gentle and affectionate with the children in their own household",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Irish Terriers can make excellent family dogs and are typically gentle and affectionate with the children in their own household.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1056). Basis of family_pet."
+      },
+      "children": {
+        "value": "gentle and affectionate with the children in their own household; best with older, dog-aware children; supervision always",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Irish Terriers can make excellent family dogs and are typically gentle and affectionate with the children in their own household.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1056) — an explicit statement → children chip (runbook). Caveats kept here: Woodgreen 'They tend to suit families with older, dog-aware children, as they can lack patience if handled roughly' (fragment; continues 'or grabbed unexpectedly.') and 'Supervision is always recommended during interactions between dogs and children, regardless of breed.'; PetMD (S1057): 'Their smaller size and high-energy personality mesh well with children who understand appropriate play with dogs.' WebMD (S1058): 'These dogs are fantastic with young children.' — conflicts with Woodgreen's older-children advice → neither small_children nor an older-children chip (runbook: conflicting sources → neither tag)."
+      },
+      "other_pets": {
+        "value": "strong prey drive towards small animals; can be argumentative with other dogs, especially of the same sex",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Their strong prey drive is triggered by small animals, so secure environments and careful management around cats or other pets is important.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1056) names a strong prey drive → chases_small_pets (runbook). Also Woodgreen: 'They can be argumentative with other dogs, particularly of the same sex, and tend to have a strong prey drive towards smaller animals.'; 'Sociable with pets' 'Low'. PetMD (S1057): 'they may see cats, small pets such as hamsters, and neighborhood wildlife as something to chase.', 'Irish Terriers may prefer to be the only dog in the household.' PDSA (S1055): 'They can be a little reckless when it comes to interaction with their canine companions,'. Not other_pets."
+      },
+      "time_alone": {
+        "value": "prefers to be close to their people rather than left alone for long periods",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "they typically prefer to be close to their people rather than left to entertain themselves for long periods.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1056, fragment). A preference, no separation-anxiety statement (the needs_company chip names separation anxiety — Boxer / Kerry Blue) → not tagged; open for David."
+      },
+      "socialisation": {
+        "value": "socialisation and training at a young age are very important",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "socialisation and training at a young age are very important",
+        "confidence": "high",
+        "notes": "PDSA (S1055, fragment of 'They can be a little reckless when it comes to interaction with their canine companions, so socialisation and training at a young age are very important.') — a need → breed DOG_SOCIALISATION entry (M5-R17). Woodgreen (S1056): 'socialisation from an early age is essential.'; PetMD (S1057): 'Irish Terrier puppies need to be socialized early and consistently, just like every other dog.'; WebMD (S1058): 'Start their training and socialization as early as possible' (fragment)."
+      },
+      "training": {
+        "value": "easily trained (FCI) but independent; short, varied, reward-based sessions",
+        "unit": "—",
+        "source_id": "S1058",
+        "quote": "they're independent dogs that can be tough to train.",
+        "confidence": "medium",
+        "notes": "WebMD (S1058, fragment; positive reinforcement recommended — paraphrase). FCI (S1051): 'the Irish Terrier is easily' … 'trained and a gentle pet'. Woodgreen (S1056) training 'Moderately easy'; short, varied, reward-based sessions; can be independent (paraphrase)."
+      },
+      "digging": {
+        "value": "natural desire to dig",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "A secure garden allows them to get a bit of daily exercise and provides an outlet for their natural desire to dig.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1056). Background only — no vocabulary key for digging; no escape statement → no secure_fencing chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 2 (S1054) — one point of concern: 'Cracked and/or corny pads' (hereditary footpad hyperkeratosis; the RKC Best Practice DNA test for HFH, S1053). An inherited pad condition, not an exaggerated conformation (Siberian Husky precedent: a Category 2 point that is not conformation → no welfare chip) → in marketing. Breeder checklist: RKC 'Prioritising genetic diversity' (minimum) and 'DNA test for hereditary footpad hyperkeratosis (HFH)' (best practice).",
+      "footpad_hyperkeratosis": {
+        "value": "hereditary footpad hyperkeratosis (HFH) — abnormal, thickened foot pads that can crack",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "Hyperkeratosis – abnormal development of the foot pad.",
+        "confidence": "high",
+        "notes": "PDSA (S1055) health list. RKC Breed Watch (S1054) point of concern 'Cracked and/or corny pads'; RKC breed page (S1053) Best Practice 'DNA test for hereditary footpad hyperkeratosis (HFH)'; PetMD (S1057) and WebMD (S1058) list hereditary footpad hyperkeratosis / thickened foot pads (paraphrase). The FCI standard (S1051) disqualifies 'Feet: Corny excrescence or cracks on pads.' Register health key: none exists — a new key (e.g. footpad_hyperkeratosis) needs website words; open for the build step."
+      },
+      "bladder_stones": {
+        "value": "bladder stones; predisposed to cystinuria",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "Bladder stones – a collection of minerals that form in the bladder.",
+        "confidence": "high",
+        "notes": "PDSA (S1055) health list. PetMD (S1057): 'Irish Terriers are predisposed to cystinuria.'; WebMD (S1058) bladder and kidney stones (paraphrase). Register health key bladder_stones."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1057",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S1057) and WebMD (S1058) name hip dysplasia (paraphrase — no verbatim sentence returned). Background only; no register key taken from a paraphrase."
+      },
+      "other": {
+        "value": "cataracts, patellar luxation, pyometra, hypothyroidism",
+        "unit": "—",
+        "source_id": "S1058",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S1058) list of conditions to watch for (paraphrase); 'In general, Irish Terriers are a healthy breed.' (WebMD). Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia list of Coren's ranking (S35, read 2026-11-25 through the IPFS mirror https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/The_Intelligence_of_Dogs): 'Irish Terrier' is listed under 'Average Working/Obedience Intelligence' between 'Welsh Terrier' and 'Boston Terrier'; the mirrors show no rank numbers (the dweb.link mirror prints 'Irish Terrier - Boston Terrier' on one line, which suggests a shared rank with the Boston Terrier, rank 54 — not verbatim, not used); en.wikipedia.org refused (PROVENANCE_REQUIRED). Rank number not recorded; the tier decides the multiplier (Average, ranks 40–54 → 1.0; Welsh Terrier precedent). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average Working/Obedience Intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Average Working/Obedience Intelligence",
+        "confidence": "medium",
+        "notes": "S35 tier (ranks 40–54): 'Understanding of new commands: 25 to 40 repetitions.', 'Obey first command: 50% of the time or better.' (as returned)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.irish_terrier.learning_multiplier (1.0, runbook rule: Average).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "active, lively, lithe and wiry terrier with plenty of substance, framed on the lines of speed — a graceful, racy outline",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "The dog must present an active, lively, lithe and wiry appearance; lots of substance, at the same time",
+        "confidence": "high",
+        "notes": "FCI standard (S1051, fragment); continues 'free of clumsiness, as speed and endurance as well as power is very essential.' and 'showing a graceful racy outline.'"
+      },
+      "colours": {
+        "value": [
+          "red",
+          "red wheaten",
+          "yellow red"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S1051",
+        "quote": "Colour: Should be “whole coloured” being red, red-wheaten or yellow-red.",
+        "confidence": "high",
+        "notes": "FCI standard (S1051); 'White sometimes on the chest.'; disqualifying 'Colour: Any other than red, yellow red or red wheaten.' with 'A small patch of white on chest is permissible as in other whole-coloured breeds.' Red first as the portrait default (the FCI names it first; RKC tagline S1053 'bright red coat' — Claude's reading). Never any other colour; the ear hair is 'darker in colour than that on the body' (S1051)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): red 50 (the portrait default), red wheaten 30, yellow red 20."
+      },
+      "coat": {
+        "value": "dense and wiry, broken appearance but lying flat; short, almost smooth hair on the face with a slight beard",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "Hair: Should be dense and wiry in texture, having a broken appearance but still lying flat,",
+        "confidence": "high",
+        "notes": "FCI standard (S1051); 'free of softness and silkiness and not so long as to hide the outlines of the body,' (fragment); face hair short, 'a slight beard is the only long hair' (fragment). RKC (S1053) 'Coat length' 'Medium'."
+      },
+      "ears": {
+        "value": "small, V-shaped, of moderate thickness, dropping forward close to the cheek; short, darker hair",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "EARS: Small and V-shaped, of moderate thickness, set well on the head and dropping forward closely to the cheek.",
+        "confidence": "high",
+        "notes": "FCI standard (S1051); 'The hair on the ear should be short and darker in colour than that on the body.'"
+      },
+      "eyes": {
+        "value": "dark, small, not prominent, full of life, fire and intelligence",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "EYES: Should be dark in colour, small, not prominent and full of life, fire and intelligence.",
+        "confidence": "high",
+        "notes": "FCI standard (S1051); 'A yellow or light eye is most objectionable.'"
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "Nose: Must be black.",
+        "confidence": "high",
+        "notes": "FCI standard (S1051); disqualifying 'Nose: Any colour other than black.'"
+      },
+      "tail": {
+        "value": "set rather high, carried gaily but not over the back or curled; natural (undocked) tail in the game",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "TAIL: Should be set on rather high, carried gaily but not over the back or curled.",
+        "confidence": "high",
+        "notes": "FCI standard (S1051); 'Customarily the tail is docked so that two-thirds of its original length remains.' and 'Only a natural tail (undocked) is allowed in countries where docking is banned by law.' — the portrait shows a natural tail (Welsh Terrier precedent)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S1053), RKC Breed Watch (S1054), PDSA (S1055), Woodgreen (S1056), PetMD (S1057), WebMD (S1058).",
+      "rkc_exercise": {
+        "value": "up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1053) → 60 min."
+      },
+      "rkc_size_of_home": {
+        "value": "small house",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S1053) — not 'Flat/ Apartment' → no apartment chip; not 'Large house'."
+      },
+      "rkc_size_of_garden": {
+        "value": "small / medium garden",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S1053)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S1053) — no number → PDSA '2 or 3 times per week' (runbook »Dog grooming«)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S1053)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S1053). Conflicts with Woodgreen 'Minimal' (woodgreen_shedding) → neither sheds nor low_shedding (runbook)."
+      },
+      "rkc_lifespan": {
+        "value": "over 12 years",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S1053) — not 'Under 10 years' → no shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "either",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S1053)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "no",
+        "unit": "—",
+        "source_id": "S1053",
+        "quote": "No",
+        "confidence": "medium",
+        "notes": "RKC key fact 'Vulnerable native breed' (S1053, value as summarised by the tool)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2 — cracked and/or corny pads",
+        "unit": "—",
+        "source_id": "S1054",
+        "quote": "Cracked and/or corny pads",
+        "confidence": "high",
+        "notes": "RKC Breed Watch page (S1054) heading 'Irish Terrier - Category 2'; RKC breed page (S1053) 'Category 2' and 'This breed can be affected by conformational concerns, more information can be found here.'; PDSA (S1055): 'Irish Terriers are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.'"
+      },
+      "pdsa_exercise": {
+        "value": "around an hour a day",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "Irish Terriers have high energy levels and require around an hour of exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S1055) → 60 min; basis of active_family with the RKC value."
+      },
+      "pdsa_grooming": {
+        "value": "2 or 3 times per week",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "They have a medium length coat, which requires grooming 2 or 3 times per week.",
+        "confidence": "high",
+        "notes": "PDSA (S1055) → brushing 3× a week (range upper bound, runbook »Dog grooming«)."
+      },
+      "woodgreen_grooming": {
+        "value": "brushing a couple of times a week",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Brushing a couple of times a week helps to manage loose hair and keep the coat tidy.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1056) → 2 (alternative). PetMD (S1057): 'Spend time brushing your Irish Terrier at least once a week to remove dirt, debris, and loose hair.' → 1 (alternative)."
+      },
+      "woodgreen_groomer": {
+        "value": "coat clipped every couple of months by a professional groomer",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Many owners choose to have the coat clipped every couple of months by a professional groomer to keep it manageable.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1056) → groomer reminder every 8 weeks ('every couple of months' → 56 program days, runbook »Breed care tasks«; M5-R14, parent reminder, never scored). PetMD (S1057): 'you'll need to strip them (a process where hair is removed at the root instead of trimmed) twice a year.' (hand stripping — no runbook mapping for 'twice a year'; alternative)."
+      },
+      "woodgreen_ears": {
+        "value": "eyes, ears and mouth checked weekly",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Eyes, ears and mouth should be checked weekly, and getting puppies comfortable with handling early makes ongoing grooming much easier.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1056) → ear care once a week (child mini-game; Black Russian Terrier / Coton de Tulear / Alaskan Malamute precedent for a weekly check). PetMD (S1057) 'Routine ear cleaning' (no frequency)."
+      },
+      "woodgreen_shedding": {
+        "value": "minimal",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Minimal",
+        "confidence": "high",
+        "notes": "Woodgreen at-a-glance 'Shedding' (S1056). Conflicts with RKC 'Sheds' 'Yes' → neither chip."
+      },
+      "woodgreen_home": {
+        "value": "adapts to a range of homes, including smaller properties; a secure garden",
+        "unit": "—",
+        "source_id": "S1056",
+        "quote": "Irish Terriers can adapt well to a range of homes, including smaller properties",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1056, fragment) — regular access to open space (paraphrase). Not the RKC 'Flat/ Apartment' key fact → no apartment chip."
+      },
+      "webmd_teeth": {
+        "value": "tooth brushing every day",
+        "unit": "—",
+        "source_id": "S1058",
+        "quote": "Brush their teeth on a daily basis.",
+        "confidence": "high",
+        "notes": "WebMD (S1058) → tooth brushing every day (M5-R15 child task)."
+      },
+      "webmd_nails": {
+        "value": "nails trimmed regularly",
+        "unit": "—",
+        "source_id": "S1058",
+        "quote": "Trim your dog's nails on a regular basis.",
+        "confidence": "medium",
+        "notes": "WebMD (S1058) — no frequency → no nail task (runbook »Breed care tasks«). No bath frequency in any source → no bath reminder."
+      },
+      "pdsa_lifespan": {
+        "value": "over 12 years",
+        "unit": "—",
+        "source_id": "S1055",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S1055)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -107710,6 +108357,301 @@
         "confidence": "high",
         "notes": "FCI (S1043) + AKC (S1045). Puppies are born black and clear gradually (AKC 'an apparent black at birth to the mature gray blue or blue gray.') — the portrait is the adult blue; puppy-stage images may be darker (open for David). Not a welfare breed → `nose` trait for the black nose. Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue is the portrait default (the FCI names it first — Claude's reading); FCI / AKC standard colours only"
+      }
+    },
+    "irish_terrier": {
+      "_note": "Unattended run M5-R10-140 (2026-11-25): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1053 'Up to 1 hour per day' → 60). Senior boundary 108 from the RKC lower bound 'Over 12 years' (S1053; McMillan 2024 / VetCompass not reachable). Learning 1.0 (Coren 'Average' tier, S35). Built: brushing 3× a week (RKC 'More than once a week' → PDSA '2 or 3 times per week', M5-R13), puppy socialisation with the PDSA quote (S1055, M5-R17), tooth brushing every day (WebMD S1058, M5-R15), ear care once a week (Woodgreen S1056 'checked weekly', M5-R18), groomer reminder every 8 weeks (Woodgreen S1056 'every couple of months', M5-R14). No nail task (no frequency), no bath reminder (no frequency), no meal gap (no quote), no heat warning (not flat-faced). No new vocabulary key. Sheds: RKC yes vs Woodgreen minimal → no shedding chip. Not a conformation welfare breed → in marketing. Never hypoallergenic. No proposal (verified=false) in this breed.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1053",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1053) → rule 'up to N' → 60. PDSA (S1055) 'around an hour', Woodgreen (S1056) 'At least an hour' / '60-90 minutes', PetMD (S1057) 'at least 60–90 minutes' (lower bound) agree.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S1055",
+            "quote": "Irish Terriers have high energy levels and require around an hour of exercise per day.",
+            "notes": "PDSA — the same number; RKC preferred."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1053 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S1053",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the RKC lower bound 'Over 12 years', S1053 — no McMillan 2024 / VetCompass row reachable). PDSA 'Over 12 years' (S1055) gives the same lower bound.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1053"
+        ],
+        "alternatives": {
+          "senior_petmd_webmd_13_y": 117,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × RKC lower bound 'Over 12 years', S1053)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren tier 'Average Working/Obedience Intelligence' (S35; ranks 40–54 — see irish_terrier.trainability.coren_tier) → 1.0. Rank number not readable in the mirrors (unranked would give 1.0 too). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 'Average' tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1055",
+        "quote": "They have a medium length coat, which requires grooming 2 or 3 times per week.",
+        "confidence": "high",
+        "notes": "irish_terrier.suitability.pdsa_grooming. RKC 'More than once a week' (S1053) has no number → the most specific number of another A/B source: PDSA '2 or 3 times per week' → the upper bound 3 (runbook »Dog grooming«; Welsh Terrier precedent). Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S1056",
+            "quote": "Brushing a couple of times a week helps to manage loose hair and keep the coat tidy.",
+            "notes": "Woodgreen — 'a couple of times a week' → 2; not used (the PDSA number is the rule's)."
+          },
+          {
+            "value": 1,
+            "source_id": "S1057",
+            "quote": "Spend time brushing your Irish Terrier at least once a week to remove dirt, debris, and loose hair.",
+            "notes": "PetMD — 'at least once a week' → 1."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »2 or 3 times per week« → 3); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R15)",
+        "source_id": "S1058",
+        "quote": "Brush their teeth on a daily basis.",
+        "confidence": "high",
+        "notes": "irish_terrier.suitability.webmd_teeth. 'on a daily basis' → every day (7 per program week). Built: DOG_CARE_TASKS tooth_brushing [7, day].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (WebMD »on a daily basis«)"
+      },
+      "ear_care": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S1056",
+        "quote": "Eyes, ears and mouth should be checked weekly, and getting puppies comfortable with handling early makes ongoing grooming much easier.",
+        "confidence": "high",
+        "notes": "irish_terrier.suitability.woodgreen_ears. 'checked weekly' → once a week (7 program days; Black Russian Terrier / Coton de Tulear / Alaskan Malamute precedent for a weekly check). Built: DOG_CARE_TASKS ear_cleaning [1, week].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes enkrat na teden (Woodgreen »checked weekly«)"
+      },
+      "professional_grooming": {
+        "value": [
+          1,
+          56
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R14)",
+        "source_id": "S1056",
+        "quote": "Many owners choose to have the coat clipped every couple of months by a professional groomer to keep it manageable.",
+        "confidence": "high",
+        "notes": "irish_terrier.suitability.woodgreen_groomer. 'every couple of months' → 8 weeks (56 program days, runbook mapping). Built: DOG_CARE_TASKS groomer_visit [1, two_months].",
+        "alternatives": [
+          {
+            "value": [
+              2,
+              364
+            ],
+            "source_id": "S1057",
+            "quote": "you'll need to strip them (a process where hair is removed at the root instead of trimmed) twice a year.",
+            "notes": "PetMD — hand stripping twice a year (no runbook mapping; owner or groomer) — not used."
+          }
+        ],
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): obisk pri frizerju vsakih 8 tednov (Woodgreen »every couple of months«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1055",
+        "quote": "socialisation and training at a young age are very important",
+        "confidence": "high",
+        "notes": "irish_terrier.behaviour.socialisation (PDSA S1055, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S1055)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-140); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1053",
+              "S1055"
+            ],
+            "refs": [
+              "irish_terrier.exercise.adult",
+              "irish_terrier.suitability.pdsa_exercise"
+            ],
+            "quote": "S1053 'Up to 1 hour per day'; S1055 'Irish Terriers have high energy levels and require around an hour of exercise per day.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1056"
+            ],
+            "refs": [
+              "irish_terrier.behaviour.family"
+            ],
+            "quote": "S1056 'Irish Terriers can make excellent family dogs and are typically gentle and affectionate with the children in their own household.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1056"
+            ],
+            "refs": [
+              "irish_terrier.behaviour.children"
+            ],
+            "quote": "S1056 '… typically gentle and affectionate with the children in their own household.' (older, dog-aware children and supervision advised — caveats in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1053",
+              "S1055"
+            ],
+            "refs": [
+              "irish_terrier.suitability.rkc_grooming",
+              "irish_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S1053 'More than once a week'; S1055 'They have a medium length coat, which requires grooming 2 or 3 times per week.'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): brushing clearly more than once a week (Golden Retriever / Bedlington Terrier precedent)"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1056"
+            ],
+            "refs": [
+              "irish_terrier.behaviour.other_pets"
+            ],
+            "quote": "S1056 'Their strong prey drive is triggered by small animals, so secure environments and careful management around cats or other pets is important.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "WebMD 'fantastic with young children' vs Woodgreen 'older, dog-aware children' — conflicting sources → neither small_children nor an older-children chip.",
+          "apartment": "RKC 'Small house' (S1053), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S1053).",
+          "long_daily_exercise": "About an hour a day (RKC S1053) — the chip is for 2 hours or more.",
+          "sheds": "RKC 'Sheds' 'Yes' vs Woodgreen 'Minimal' — conflicting → neither tag (runbook).",
+          "low_shedding": "Conflicting shedding sources (see sheds).",
+          "frequent_grooming": "3× a week (PDSA S1055), not daily (Welsh Terrier precedent).",
+          "other_pets": "Woodgreen 'Sociable with pets' 'Low'; strong prey drive.",
+          "needs_company": "Woodgreen 'prefer to be close to their people rather than left to entertain themselves for long periods' — a preference, no separation-anxiety statement (the chip names separation anxiety); open for David.",
+          "secure_fencing": "Recall unreliable and a secure garden for digging (Woodgreen) — no source says the breed escapes (Bedlington / Kerry Blue precedent).",
+          "experienced_owner": "That chip names a powerful dog — the Irish Terrier is small / medium.",
+          "shorter_lifespan": "RKC 'Over 12 years'.",
+          "welfare_chip": "RKC Breed Watch Category 2 'Cracked and/or corny pads' = hereditary footpad hyperkeratosis (inherited pad condition, DNA test exists), not an exaggerated conformation; no veterinary body names a conformation problem → no chip (Siberian Husky precedent).",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1054",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 2 (S1054) with one point 'Cracked and/or corny pads' (inherited footpad hyperkeratosis — not a conformation exaggeration). Marketing never promises the breed's health and never calls it hypoallergenic.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no conformation welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Irish Terrier, red (default): active, lively, lithe and wiry medium-small terrier with a graceful, racy outline; whole-coloured bright red dense wiry coat with a broken but flat-lying texture (red wheaten and yellow red also standard; a small white patch on the chest allowed); short almost smooth hair on the face with a slight beard; small V-shaped ears of moderate thickness dropping forward close to the cheek, hair slightly darker than the body; small dark eyes full of fire; black nose; natural tail set rather high, carried gaily, not curled; never any other colour",
+        "unit": "—",
+        "source_id": "S1051",
+        "quote": "Colour: Should be “whole coloured” being red, red-wheaten or yellow-red.",
+        "confidence": "high",
+        "notes": "FCI standard (S1051) as in irish_terrier.appearance. Three standard colours; weights unsourced (verified=false). Not a welfare breed; dog breeds have no features key — `nose` trait for the black nose if the build adds one (Kerry Blue precedent).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default (the FCI names it first; RKC 'bright red coat' — Claude's reading; weights unsourced); FCI standard colours only; natural tail"
       }
     }
   }

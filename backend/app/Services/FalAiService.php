@@ -1053,6 +1053,12 @@ class FalAiService
                 .'hair on the head and a full beard, a soft, dense, wavy blue-grey coat, dark keen eyes, a black nose with large nostrils, thin '
                 .'V-shaped ears carried forward close to the head, a thin tail set high and carried erect, alert, keen, confident expression, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-140: FCI-Standard N° 139 (S1051) — red (the portrait default), dense wiry broken coat lying flat, slight
+            // beard, small V-shaped ears dropping forward, small dark eyes, black nose, natural tail; never any other colour.
+            BreedType::IrishTerrier => 'A medium-sized, active, lively, lithe and wiry Irish Terrier with a graceful racy outline, a long flat '
+                .'head with a slight beard, a dense, wiry, broken whole-coloured red coat lying flat, small dark eyes, a black nose, small '
+                .'V-shaped ears dropping forward close to the cheek, a natural tail set rather high and carried gaily, alert, bold expression, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2455,6 +2461,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'soft, dense, wavy coat',
                 'markings' => 'blue-grey coat with a full beard, black nose, thin V-shaped ears carried forward',
+            ],
+            // M5-R10-140: standard colours only (FCI S1051: whole-coloured red, red wheaten or yellow red).
+            BreedType::IrishTerrier => [
+                'color_scheme' => 'red',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'dense, wiry, broken coat',
+                'markings' => 'whole-coloured red coat with a slight beard, black nose, small V-shaped ears dropping forward',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
