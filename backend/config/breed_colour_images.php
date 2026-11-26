@@ -637,6 +637,9 @@ return [
         'red' => 'dogs/irish-terrier.webp',
         'yellow-red' => 'dogs/irish-terrier--yellow-red.webp',
     ],
+    'welsh_springer_spaniel' => [
+        'red-white' => 'dogs/welsh-springer-spaniel.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
