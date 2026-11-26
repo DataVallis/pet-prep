@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `welsh_springer_spaniel` (viri S1062–S1069; ponovno S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: RKC (S1064) |
 | Izvor | FCI št. 126 »Welsh Springer Spaniel«, skupina 8, sekcija 2 (psi za dviganje divjadi), Velika Britanija (S1062, S1063) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 138. mesto »Welsh Springer Spaniel« (S174, prebrano 2026-11-26) |
-| PR-ji | pet-prep #1647 (pasma) · portret: sledi · barvne različice: niso potrebne (ena standardna barva) · spletna stran: pet-prep-website `feat/register-welsh-springer-spaniel` |
+| PR-ji | pet-prep #1647 (pasma, odprt — CI blokiran) · portret: še ni · barvne različice: niso potrebne (ena standardna barva) · spletna stran: pet-prep-website `feat/register-welsh-springer-spaniel` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -51,6 +51,7 @@
 
 ## Odprto za Davida
 
+- **Zagon ustavljen — GitHub Actions:** od ~25. 11. 2026 22:40 UTC GitHub ne zažene nobenega opravila (»recent account payments have failed or your spending limit needs to be increased«; CI 45728741556, enkrat ponovljen). PR #1647 je zato odprt brez `CI OK`; portreta (`breed-portraits.yml`) in spletne strani ni. Ko bo plačilo urejeno: znova zaženite CI na PR #1647, ga združite ob zelenem `CI OK`, nato portret (runbook §8) in spletna stran (§9) — ali pa naslednji nočni zagon, ko PR ne bo več odprt.
 - **Coren:** številka mesta ni bila berljiva (le skupina »Above Average Working Dogs«) — množitelj 1,2 velja za celo skupino.
 - **Teža:** standarda FCI in AKC teže ne navajata; uporabljen je PetMD (35–55 lb). VCA (35–45 lb) in WebMD (samci 50–55 lb) se razlikujeta.
 - **Družba:** ločitveno tesnobo navaja le Wikipedija (vir C); PetMD piše »need a family that is present«. Čipa `needs_company` nisem dodal.
