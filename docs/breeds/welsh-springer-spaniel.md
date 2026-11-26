@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `welsh_springer_spaniel` (viri S1062–S1069; ponovno S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: RKC (S1064) |
 | Izvor | FCI št. 126 »Welsh Springer Spaniel«, skupina 8, sekcija 2 (psi za dviganje divjadi), Velika Britanija (S1062, S1063) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 138. mesto »Welsh Springer Spaniel« (S174, prebrano 2026-11-26) |
-| PR-ji | pet-prep #1647 (pasma, odprt — CI blokiran) · portret: še ni · barvne različice: niso potrebne (ena standardna barva) · spletna stran: pet-prep-website `feat/register-welsh-springer-spaniel` |
+| PR-ji | pet-prep #1647 (pasma, združen `fcaae14` 2026-11-26 po odpravi blokade GitHub Actions) · portret: zagon `breed-portraits.yml` 45894404810 (rdeče-bel, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-142-welsh-springer-spaniel-portrait` · barvne različice: niso potrebne (ena standardna barva) · spletna stran: pet-prep-website `feat/register-welsh-springer-spaniel` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,8 +40,8 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 126. meseca; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-142 | 2026-11-26 |
 | Česanje 2× na teden, ščetkanje zob vsak dan, striženje krempljev vsak mesec, opomnik za kopanje vsak mesec, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R19 / M5-R14 / M5-R17 | 2026-11-26 |
 | Barva (izbirnik: rdeče-bel — edina standardna barva) | 🛠 | 💶 izziv | M5-R21 | 2026-11-26 |
-| AI portret v registru | 🗓 sledi v tem zagonu | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/welsh-springer-spaniel`, `/sl/zivali/psi/velski-springer-spanjel`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeče-bel, naraven operjen rep, sivo studijsko ozadje | — | M5-R11-04 | 2026-11-26 |
+| Stran na petprep.si (`/animals/dogs/welsh-springer-spaniel`, `/sl/zivali/psi/velski-springer-spanjel`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -51,7 +51,7 @@
 
 ## Odprto za Davida
 
-- **Zagon ustavljen — GitHub Actions:** od ~25. 11. 2026 22:40 UTC GitHub ne zažene nobenega opravila (»recent account payments have failed or your spending limit needs to be increased«; CI 45728741556, enkrat ponovljen). PR #1647 je zato odprt brez `CI OK`; portreta (`breed-portraits.yml`) in spletne strani ni. Ko bo plačilo urejeno: znova zaženite CI na PR #1647, ga združite ob zelenem `CI OK`, nato portret (runbook §8) in spletna stran (§9) — ali pa naslednji nočni zagon, ko PR ne bo več odprt.
+- **Zagon je stal ~20 ur zaradi GitHub Actions** (25.–26. 11. 2026: »recent account payments have failed …«). Po odpravi blokade je CI odkril, da sta testa velškega terierja in angleškega springerja za neveljavno vrednost uporabljala `welsh_springer_spaniel` — popravljeno v PR #1647 (zdaj zatipkana vrednost).
 - **Coren:** številka mesta ni bila berljiva (le skupina »Above Average Working Dogs«) — množitelj 1,2 velja za celo skupino.
 - **Teža:** standarda FCI in AKC teže ne navajata; uporabljen je PetMD (35–55 lb). VCA (35–45 lb) in WebMD (samci 50–55 lb) se razlikujeta.
 - **Družba:** ločitveno tesnobo navaja le Wikipedija (vir C); PetMD piše »need a family that is present«. Čipa `needs_company` nisem dodal.
