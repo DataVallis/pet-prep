@@ -172,6 +172,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-26 (mobile, `fix/busy-button-fade`)
+- Zaposlen gumb za nego (»ena skrb naenkrat«) zdaj rahlo zbledi skupaj z napisom in ne sveti več kot »na vrsti« (David: svetel, a neklikabilen gumb je izgledal kot napaka). Samo JS / OTA.
+
 ### 2026-11-25 (mobile, `fix/wishes-bundle-label`)
 - Starševske »Želje«: paket »Dobrodošlica« ni več zavajajoč gumb »Vse tri za …« pod zadnjo prošnjo, ampak svoj razdelek z vsebino za psa / muco, »Kupi paket za …« in »Posamezno skupaj …« (samo iz vseh treh cen trgovine). Testi v `wishes.test.ts`, `WishesScreen.test.tsx`. Potrebna preverba na telefonu (prave cene iz trgovine).
 

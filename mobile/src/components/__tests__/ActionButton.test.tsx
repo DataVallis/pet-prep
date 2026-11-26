@@ -6,7 +6,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Beef } from 'lucide-react-native';
-import ActionButton from '@/components/ActionButton';
+import ActionButton, { BUSY_OPACITY } from '@/components/ActionButton';
 import { configure } from '@testing-library/react-native';
 // Dock label/hint texts are hidden from the screen reader (the button's accessibilityLabel
 // carries the full phrase, asserted separately); these tests still query the visible text.
@@ -24,6 +24,19 @@ describe('ActionButton', () => {
     due.unmount();
     const blocked = render(<ActionButton testID="b" icon={<Beef />} label="Feed" onPress={jest.fn()} due disabled />);
     expect(bg('b', blocked)).not.toBe('#7FE0B4');
+  });
+
+  // David 2026-11-26: a lit button you can't press looked like a bug — busy fades and never glows.
+  it('busy → no due glow, faded button and texts, press blocked', () => {
+    const onPress = jest.fn();
+    const r = render(<ActionButton testID="b" icon={<Beef />} label="Feed" onPress={onPress} due busy />);
+    expect(StyleSheet.flatten(r.getByTestId('b').props.style).backgroundColor).not.toBe('#7FE0B4');
+    expect(StyleSheet.flatten(r.getByText('Feed').props.style).color).not.toBe('#7FE0B4');
+    expect(StyleSheet.flatten(r.getByTestId('b-texts').props.style).opacity).toBe(BUSY_OPACITY);
+    fireEvent.press(r.getByTestId('b'));
+    expect(onPress).not.toHaveBeenCalled();
+    r.rerender(<ActionButton testID="b" icon={<Beef />} label="Feed" onPress={onPress} due />);
+    expect(StyleSheet.flatten(r.getByTestId('b').props.style).backgroundColor).toBe('#7FE0B4');
   });
 
   it('renders with icon and label', () => {
