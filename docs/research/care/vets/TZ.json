@@ -71,7 +71,8 @@
         "sl": "Odprto od ponedeljka do petka 8.30–16 (ob četrtkih obiski na domu). Za nujno pomoč pokličite kliniko.",
         "hr": "pon–pet 08:30–16:00 (četvrtkom kućni posjeti). Za hitne slučajeve nazovi kliniku.",
         "de": "Mo–Fr 8.30–16.00 Uhr geöffnet (donnerstags Hausbesuche). Bei Notfällen bitte die Praxis anrufen.",
-        "fr": "Ouvert du lundi au vendredi 8 h 30–16 h (le jeudi, visites à domicile). En cas d’urgence, appelez la clinique."
+        "fr": "Ouvert du lundi au vendredi 8 h 30–16 h (le jeudi, visites à domicile). En cas d’urgence, appelez la clinique.",
+        "es": "Abierto de lunes a viernes 8:30–16:00 h (los jueves, visitas a domicilio). Para urgencias, llama a la clínica."
       }
     },
     {
@@ -100,7 +101,8 @@
         "sl": "Linija zunaj delovnega časa: +255 753 520 244.",
         "hr": "Linija izvan radnog vremena: +255 753 520 244.",
         "de": "Nummer außerhalb der Öffnungszeiten: +255 753 520 244.",
-        "fr": "Ligne hors horaires : +255 753 520 244."
+        "fr": "Ligne hors horaires : +255 753 520 244.",
+        "es": "Línea fuera de horario: +255 753 520 244."
       }
     },
     {
@@ -129,7 +131,8 @@
         "sl": "Za odpiralni čas in naročanje pokličite kliniko.",
         "hr": "Nazovi kliniku za radno vrijeme i termine.",
         "de": "Öffnungszeiten und Termine bitte telefonisch erfragen.",
-        "fr": "Appelez la clinique pour connaître les horaires et prendre rendez-vous."
+        "fr": "Appelez la clinique pour connaître les horaires et prendre rendez-vous.",
+        "es": "Llama a la clínica para consultar el horario y pedir cita."
       }
     }
   ],

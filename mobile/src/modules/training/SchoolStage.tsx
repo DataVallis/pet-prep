@@ -25,7 +25,7 @@ import { Image, Platform, StyleSheet, View } from 'react-native';
 import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPlayer, type VideoPlayerStatus } from 'expo-video';
 
 import { useAppActive, useLocalMediaUri } from '@/modules/petMedia/hooks';
-import { forgetLocalMedia, isLocalMediaUri, localMediaUri } from '@/modules/petMedia/mediaFileCache';
+import { forgetLocalMedia, isLocalMediaUri, localMediaUri, videoSourceFor } from '@/modules/petMedia/mediaFileCache';
 import type { PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { schoolStageClips, schoolStageStill, type SchoolRole, type SchoolSegment, type SchoolStageClip } from '@/modules/petMedia/phasePlayer';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
@@ -59,10 +59,7 @@ interface StagePlayerProps {
 /** One persistent player + view for a role. Its source is fixed for the stage's life. */
 const StagePlayer = memo(function StagePlayer({ clip, shown, onPlayer, onSettled, testID }: StagePlayerProps) {
   const { role, url, loop } = clip;
-  const [source] = useState(() => {
-    const uri = localMediaUri(url, 'video') ?? url;
-    return isLocalMediaUri(uri) ? { uri } : { uri, useCaching: true };
-  });
+  const [source] = useState(() => videoSourceFor(localMediaUri(url, 'video') ?? url));
   const localSource = isLocalMediaUri(source.uri);
   const player = useVideoPlayer(source, (p) => {
     p.loop = loop;

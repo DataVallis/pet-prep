@@ -15,11 +15,13 @@
  * - Size cap: oldest copies beyond `MAX_CACHE_BYTES` are deleted; older versions of
  *   the same media are deleted when a new one lands. The OS may also clear the cache
  *   folder (it is `Paths.cache`). `clearMediaCache()` on logout.
- * Only our own `/api/media/…` URLs are cached. Without the native module (Expo Go, web,
+ * Only our own `/api/media/{id}`, `/api/media/history/{id}` and (2026-11-26) bought-item
+ * `/api/media/items/{id}` URLs are cached. Without the native module (Expo Go, web,
  * a binary built without it) everything just stays remote — the old behaviour.
  */
 
 import { requireOptionalNativeModule } from 'expo';
+import { Platform } from 'react-native';
 
 import { mediaKey } from '@/modules/petMedia/petMedia';
 
@@ -127,12 +129,14 @@ export function setMediaFileStoreForTests(fake: MediaFileStore | null | undefine
 }
 
 /**
- * File name for a media URL: `media_123_<v>` / `media_history_45_<v>`; null for a URL
+ * File name for a media URL: `media_123_<v>` / `media_history_45_<v>` / `media_items_9_<v>`
+ * (bought-item pictures / clips, 2026-11-26 — before that they were never copied and every
+ * play went through expo-video's iOS caching loader, see `videoSourceFor`); null for a URL
  * that isn't ours or has no version (never cached).
  */
 export function cacheNameFor(url: string): string | null {
   const key = mediaKey(url);
-  const match = /\/api\/media\/((?:history\/)?\d+)\?v=([A-Za-z0-9]{1,40})$/.exec(key);
+  const match = /\/api\/media\/((?:history\/|items\/)?\d+)\?v=([A-Za-z0-9]{1,40})$/.exec(key);
   if (!match) return null;
   return `media_${match[1].replace('/', '_')}_${match[2]}`;
 }
@@ -218,6 +222,32 @@ export function localMediaUri(url: string | null, kind: MediaKind): string | nul
     pump();
   }
   return url;
+}
+
+/** expo-video source of a clip (subset of expo-video's `VideoSource` object form). */
+export interface VideoPlayerSource {
+  uri: string;
+  useCaching?: boolean;
+}
+
+/**
+ * The expo-video source for `uri` (a local copy from `localMediaUri`, or the remote URL).
+ * Every pet-media player builds its source here — never `useCaching` by hand.
+ *
+ * iOS: a remote clip is streamed by AVPlayer itself, WITHOUT expo-video's caching resource
+ * loader (fix 2026-11-26, `pet-media item:toy_1 … layer=0s player=Failed to load the player
+ * item: Operation Stopped`). expo-video 57.0.4's iOS cache breaks the SECOND player of the same
+ * extension-less URL (ours: `/api/media/…?…` has no `.mp4`): the first load stores its data in
+ * `<sha(url)>` and its byte ranges in `<sha(url)>&mediaInfo`; the next load of that URL derives
+ * the extension from the saved mime type and opens a NEW, empty data file `<sha(url)>.mp4`, but
+ * reads the ranges of the first file (`CacheVideoAssetTransportProvider.makeLoadPlan` vs.
+ * `MediaInfo(forResourceUrl:)` / `CachedResource`) — it answers AVFoundation's requests with
+ * zero bytes and the item fails at once, for as long as that signed URL lives. Our own local
+ * copy (`localMediaUri`) is the cache across plays; Android keeps ExoPlayer's cache.
+ */
+export function videoSourceFor(uri: string): VideoPlayerSource {
+  if (isLocalMediaUri(uri) || Platform.OS !== 'android') return { uri };
+  return { uri, useCaching: true };
 }
 
 /** Is this URI a local copy made by this module? */
