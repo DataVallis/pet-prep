@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "834963abd7bde0a5a9d4f513da4d6fbc29fa7c8b7e38acbfe3c1e1afb3915d37"
+      "sha256": "5205a12891d00828fcf53c2b17b33d275a294c68942cba61d394e0f0c779f00e"
     }
   },
   "suitability_vocabulary": {
@@ -83020,7 +83020,12 @@
           "S1067"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "welsh-springer-spaniel.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
