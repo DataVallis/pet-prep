@@ -153,6 +153,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   kerry_blue_terrier: 'dog',
   irish_terrier: 'dog',
   bluetick_coonhound: 'dog',
+  welsh_springer_spaniel: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -308,6 +309,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'kerry_blue_terrier',
   'irish_terrier',
   'bluetick_coonhound',
+  'welsh_springer_spaniel',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
