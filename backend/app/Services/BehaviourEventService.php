@@ -37,6 +37,14 @@ use Random\Randomizer;
  *    `behaviour.puppy.night_take_out_counts_minutes` (60) of the night must
  *    go out within `behaviour.puppy.morning_take_out_minutes` (30) of
  *    non-quiet time — night until 07:00 → due 07:30, not 07:00 + hold.
+ *    Evening rule (David 2026-11-26 »pred spanjem mora še ven«): when the
+ *    normal due instant would fall into / past the night (bedtime start,
+ *    nightStartOn), a puppy whose clock started before the evening window
+ *    (`behaviour.puppy.evening_window_minutes`, 120, before bedtime) must go
+ *    out by the start of the night — and if nobody does, the accident happens
+ *    at the END of the night (»Luža zjutraj«), never at bedtime; a clock
+ *    start inside the window counts as the evening outing (the midnight
+ *    restart + morning rule follow as before).
  *    Daytime quiet stretches only pause the clock. A freeze (hard stop, vet, game
  *    over) holds the clock at its end (the tick moves it while frozen).
  *    When the due instant passes without a take-out, the tick writes an
@@ -160,10 +168,14 @@ class BehaviourEventService
     /**
      * The puppy's bladder clock as it stands: hold hours, when the clock
      * (re)started and when the accident is due. Null when the pet has no
-     * clock (legacy, unborn, not a puppy). `morning` = the end of the night
-     * when the due instant is the morning take-out deadline, else null.
+     * clock (legacy, unborn, not a puppy). `due_at` = the take-out deadline,
+     * `accident_at` = when the accident happens without a take-out (the same
+     * instant, except for the evening rule: deadline = the night's start,
+     * accident = the night's end). `morning` = the end of the night when the
+     * deadline is the morning take-out deadline, `evening` = the start of the
+     * night when it is the evening one (David 2026-11-26), else null.
      *
-     * @return array{hold_hours: int, started_at: CarbonImmutable, due_at: CarbonImmutable, morning: CarbonImmutable|null}|null
+     * @return array{hold_hours: int, started_at: CarbonImmutable, due_at: CarbonImmutable, accident_at: CarbonImmutable, morning: CarbonImmutable|null, evening: CarbonImmutable|null}|null
      */
     public function pottyClock(Pet $pet, ?QuietHours $quiet): ?array
     {
@@ -209,11 +221,12 @@ class BehaviourEventService
 
         for ($i = 0; $i < self::MAX_ACCIDENTS_PER_TICK; $i++) {
             $clock = $this->pottyClock($pet, $quiet);
-            if ($clock === null || $clock['due_at']->greaterThan($now)) {
+            // The evening rule (David 2026-11-26): the deadline is bedtime, the accident the night's end.
+            if ($clock === null || $clock['accident_at']->greaterThan($now)) {
                 break;
             }
 
-            $due = $clock['due_at'];
+            $due = $clock['accident_at'];
             if ($due->lessThanOrEqualTo($from)) {
                 $pet->potty_clock_started_at = $from;
 
@@ -240,7 +253,7 @@ class BehaviourEventService
                 'updated_at' => $now,
             ]]);
             HygieneEventService::logSystemEvent($pet, ActivityType::PetAccident, $due);
-            Log::info('BehaviourEventService: puppy accident', ['pet_id' => $pet->id, 'at' => $due->toIso8601String(), 'hold_hours' => $clock['hold_hours'], 'morning' => $clock['morning'] !== null]);
+            Log::info('BehaviourEventService: puppy accident', ['pet_id' => $pet->id, 'at' => $due->toIso8601String(), 'hold_hours' => $clock['hold_hours'], 'morning' => $clock['morning'] !== null, 'evening' => $clock['evening'] !== null]);
 
             $first ??= Carbon::instance($due);
             $pet->potty_clock_started_at = $due;
@@ -296,6 +309,63 @@ class BehaviourEventService
     }
 
     /**
+     * Start of the pet's NIGHT on a pet-local date (David 2026-11-26): that
+     * date's bedtime start, pet-local, when bedtime runs over midnight (e.g.
+     * 21:00–07:00). Only the bedtime window — never school. Null when quiet
+     * hours are off, bedtime is not set, or bedtime starts at / after
+     * midnight (00:30–07:00: the midnight restart already covers that night).
+     */
+    public function nightStartOn(Pet $pet, ?QuietHours $quiet, string $localDate): ?CarbonImmutable
+    {
+        if ($quiet === null || ! $quiet->is_active || ! $quiet->bedtime_start || ! $quiet->bedtime_end) {
+            return null;
+        }
+        $start = substr((string) $quiet->bedtime_start, 0, 5);
+        if ($start <= substr((string) $quiet->bedtime_end, 0, 5)) {
+            return null;
+        }
+
+        $at = CarbonImmutable::parse($localDate.' '.$start, $pet->effectiveTimezone())->utc();
+
+        return $quiet->isQuietNow($at) ? $at : null;
+    }
+
+    /**
+     * The evening take-out deadline for a clock that started at $start and
+     * whose normal due instant is $due (David 2026-11-26): when $due falls
+     * into / past the night of the start's pet-local date and the clock
+     * started before the evening window (`evening_window_minutes` before the
+     * night's start), the puppy must go out before bed — deadline = the
+     * night's start; without a take-out the accident follows at the end of
+     * that night (nightEndOn of the next day). Null when the rule does not
+     * apply: switched off, no night, the clock (re)started inside the window
+     * or later (that start is the evening outing), or the night has no end
+     * the next day.
+     *
+     * @return array{night_starts_at: CarbonImmutable, accident_at: CarbonImmutable}|null
+     */
+    private function eveningDue(Pet $pet, CarbonImmutable $start, CarbonImmutable $due, ?QuietHours $quiet): ?array
+    {
+        $minutes = (int) config('behaviour.puppy.evening_window_minutes', 0);
+        if ($minutes <= 0) {
+            return null;
+        }
+
+        $localDate = $pet->localDate($start);
+        $nightStart = $this->nightStartOn($pet, $quiet, $localDate);
+        if ($nightStart === null || $due->lessThan($nightStart) || $start->greaterThanOrEqualTo($nightStart->subMinutes($minutes))) {
+            return null;
+        }
+
+        $nightEnd = $this->nightEndOn($pet, $quiet, CarbonImmutable::parse($localDate)->addDay()->toDateString());
+        if ($nightEnd === null || ! $nightEnd->greaterThan($nightStart)) {
+            return null;
+        }
+
+        return ['night_starts_at' => $nightStart, 'accident_at' => $nightEnd];
+    }
+
+    /**
      * The morning take-out deadline for a clock that started at $start (David
      * 2026-11-08 »ja, daj 30 min«): the night ended without the bladder being
      * emptied late in the night, so the puppy must go out within
@@ -333,9 +403,12 @@ class BehaviourEventService
      * out of quiet hours; the clock restarts at every family-local midnight
      * it would run through (the night is the parents'). After the night the
      * morning deadline applies when it is earlier (morningDue) — `morning`
-     * carries the night's end then, else null.
+     * carries the night's end then, else null. Before the night the evening
+     * deadline applies when the hold would run into it (eveningDue) — no
+     * midnight restart then: `evening` carries the night's start (= due_at)
+     * and `accident_at` the night's end.
      *
-     * @return array{hold_hours: int, started_at: CarbonImmutable, due_at: CarbonImmutable, morning: CarbonImmutable|null}|null
+     * @return array{hold_hours: int, started_at: CarbonImmutable, due_at: CarbonImmutable, accident_at: CarbonImmutable, morning: CarbonImmutable|null, evening: CarbonImmutable|null}|null
      */
     private function dueFrom(Pet $pet, CarbonImmutable $start, ?QuietHours $quiet): ?array
     {
@@ -358,6 +431,11 @@ class BehaviourEventService
             }
             if ($morning !== null) {
                 $due = $morning['due_at'];
+            } else {
+                $evening = $this->eveningDue($pet, $start, $due, $quiet);
+                if ($evening !== null) {
+                    return ['hold_hours' => $hold, 'started_at' => $start, 'due_at' => $evening['night_starts_at'], 'accident_at' => $evening['accident_at'], 'morning' => null, 'evening' => $evening['night_starts_at']];
+                }
             }
 
             $midnight = CarbonImmutable::parse($pet->localDate($due), $tz)->startOfDay()->utc();
@@ -367,7 +445,7 @@ class BehaviourEventService
                 continue;
             }
 
-            return ['hold_hours' => $hold, 'started_at' => $start, 'due_at' => $due, 'morning' => $morning['night_ended_at'] ?? null];
+            return ['hold_hours' => $hold, 'started_at' => $start, 'due_at' => $due, 'accident_at' => $due, 'morning' => $morning['night_ended_at'] ?? null, 'evening' => null];
         }
 
         return null;

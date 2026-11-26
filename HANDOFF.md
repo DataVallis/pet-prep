@@ -172,6 +172,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-26 (backend + mobile, `feat/puppy-evening-take-out`)
+- Mladiček mora zvečer pred spanjem ven (David): zadnji 2 uri pred nočnimi tihimi urami; rok = začetek noči, brez izhoda luža zjutraj ob koncu noči; push ob začetku okna; `take_out.kind`; napis »Pred spanjem ven — najkasneje ob 21:00«. `schema.ts` ročno dopolnjen — ob prvem zelenem CI preveri artefakt `api-schema`. Testi `PuppyEveningTakeOutTest` (Pest samo v CI).
+
 ### 2026-11-25 (mobile, `fix/wishes-bundle-label`)
 - Starševske »Želje«: paket »Dobrodošlica« ni več zavajajoč gumb »Vse tri za …« pod zadnjo prošnjo, ampak svoj razdelek z vsebino za psa / muco, »Kupi paket za …« in »Posamezno skupaj …« (samo iz vseh treh cen trgovine). Testi v `wishes.test.ts`, `WishesScreen.test.tsx`. Potrebna preverba na telefonu (prave cene iz trgovine).
 

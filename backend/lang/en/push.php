@@ -84,6 +84,10 @@ return [
     // Children only, no names; no minute count (the deadline is counted outside quiet hours).
     'take_out_reminder' => 'Good morning! After the night your pup needs to go out soon. Press “Take out”.',
 
+    // David 2026-11-26: start of the evening window (2 h before the night's quiet hours) — the
+    // puppy must go out once more before bed. Children only, no names, once a day.
+    'take_out_reminder_evening' => 'Your pup needs to go out once more before bed. Press “Take out”.',
+
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 
     'parent_alarm_detail' => [
