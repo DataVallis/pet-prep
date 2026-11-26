@@ -85,7 +85,8 @@
         "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu. Vnaprej pokličite.",
         "hr": "Hitna skrb 24 sata, 365 dana u godini. Nazovi unaprijed.",
         "de": "Notversorgung rund um die Uhr, 365 Tage im Jahr. Bitte vorher anrufen.",
-        "fr": "Urgences 24 h/24, 365 jours par an. Appelez avant de venir."
+        "fr": "Urgences 24 h/24, 365 jours par an. Appelez avant de venir.",
+        "es": "Urgencias las 24 horas, 365 días al año. Llama antes."
       }
     },
     {
@@ -115,7 +116,8 @@
         "sl": "Samo divje živali: nujna pomoč odprta 24 ur na dan, 365 dni v letu, brezplačno.",
         "hr": "Samo divlje životinje: hitni slučajevi 24 sata, 365 dana u godini, besplatno.",
         "de": "Nur Wildtiere: Notfälle rund um die Uhr, 365 Tage im Jahr, kostenlos.",
-        "fr": "Animaux sauvages uniquement : urgences 24 h/24, 365 jours par an, gratuites."
+        "fr": "Animaux sauvages uniquement : urgences 24 h/24, 365 jours par an, gratuites.",
+        "es": "Solo fauna silvestre: abierto las 24 horas, los 365 días del año, para urgencias, de forma gratuita."
       }
     },
     {
@@ -145,7 +147,8 @@
         "sl": "Brezplačna občinska klinika. Pregledi od ponedeljka do petka 8–16.30. Za nujno pomoč vnaprej pokličite.",
         "hr": "Besplatna gradska klinika. Pregledi pon–pet 08:00–16:30. Za hitne slučajeve nazovi unaprijed.",
         "de": "Kostenlose städtische Klinik. Sprechstunde Mo–Fr 8.00–16.30 Uhr. Bei Notfällen bitte vorher anrufen.",
-        "fr": "Clinique municipale gratuite. Consultations du lundi au vendredi 8 h–16 h 30. Urgences : appelez avant de venir."
+        "fr": "Clinique municipale gratuite. Consultations du lundi au vendredi 8 h–16 h 30. Urgences : appelez avant de venir.",
+        "es": "Clínica municipal gratuita. Consultas de lunes a viernes 8:00–16:30 h. Para urgencias, llama antes."
       }
     },
     {
@@ -173,7 +176,8 @@
         "sl": "Odprto od ponedeljka do petka 8–16; sprejem do približno 15, naročanje ni potrebno. Ima prostor za nujne primere; nočna služba ni navedena.",
         "hr": "Radi pon–pet 08:00–16:00; pacijenti se primaju do oko 15:00, bez termina. Ima hitni prijem; noćna služba nije navedena.",
         "de": "Mo–Fr 8.00–16.00 Uhr geöffnet; Annahme bis etwa 15.00 Uhr, ohne Termin. Mit Notfallbereich; ein Nachtdienst ist nicht angegeben.",
-        "fr": "Ouvert du lundi au vendredi 8 h–16 h ; patients admis jusqu’à 15 h environ, sans rendez-vous. Espace d’urgences ; service de nuit non indiqué."
+        "fr": "Ouvert du lundi au vendredi 8 h–16 h ; patients admis jusqu’à 15 h environ, sans rendez-vous. Espace d’urgences ; service de nuit non indiqué.",
+        "es": "Abierto de lunes a viernes 8:00–16:00 h; se admiten pacientes hasta aprox. las 15:00 h, sin cita previa. Tiene zona de urgencias; no se indica servicio nocturno."
       }
     },
     {
@@ -202,7 +206,8 @@
         "sl": "Občinska bolnišnica za pse in mačke. Od ponedeljka do petka 8–17, ob koncih tedna in praznikih zaprto.",
         "hr": "Gradska bolnica za pse i mačke. pon–pet 08:00–17:00, vikendom i blagdanima zatvoreno.",
         "de": "Städtische Tierklinik für Hunde und Katzen. Mo–Fr 8.00–17.00 Uhr, am Wochenende und feiertags geschlossen.",
-        "fr": "Hôpital municipal pour chiens et chats. Du lundi au vendredi 8 h–17 h, fermé le week-end et les jours fériés."
+        "fr": "Hôpital municipal pour chiens et chats. Du lundi au vendredi 8 h–17 h, fermé le week-end et les jours fériés.",
+        "es": "Hospital municipal para perros y gatos. Lunes a viernes 8:00–17:00 h; cerrado fines de semana y festivos."
       }
     }
   ],
