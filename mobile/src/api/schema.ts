@@ -5991,6 +5991,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -7054,6 +7056,8 @@ export interface operations {
                                 clock_started_at: string;
                                 next_due_at: string;
                                 last_taken_out_at: string | null;
+                                /** @enum {string} */
+                                kind: "regular" | "morning" | "evening";
                             } | null;
                             active_events: {
                                 id: number;
@@ -8138,6 +8142,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -9220,6 +9226,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -10302,6 +10310,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -11384,6 +11394,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -12466,6 +12478,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -13552,6 +13566,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -14638,6 +14654,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -15724,6 +15742,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -16810,6 +16830,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -17896,6 +17918,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -18978,6 +19002,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -20060,6 +20086,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -21146,6 +21174,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -22228,6 +22258,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -23314,6 +23346,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -24396,6 +24430,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -25482,6 +25518,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -26568,6 +26606,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -27654,6 +27694,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -28740,6 +28782,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -29826,6 +29870,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -31597,6 +31643,8 @@ export interface operations {
                                         clock_started_at: string;
                                         next_due_at: string;
                                         last_taken_out_at: string | null;
+                                        /** @enum {string} */
+                                        kind: "regular" | "morning" | "evening";
                                     } | null;
                                     /**
                                      * @description Open messes, oldest first. kind: poop | accident | chewing (dog);
@@ -32239,6 +32287,8 @@ export interface operations {
                                         clock_started_at: string;
                                         next_due_at: string;
                                         last_taken_out_at: string | null;
+                                        /** @enum {string} */
+                                        kind: "regular" | "morning" | "evening";
                                     } | null;
                                     /**
                                      * @description Open messes, oldest first. kind: poop | accident | chewing (dog);
@@ -34645,6 +34695,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -35709,6 +35761,8 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
+                                    /** @enum {string} */
+                                    kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
                                     id: number;

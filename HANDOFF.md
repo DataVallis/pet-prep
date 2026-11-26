@@ -172,6 +172,8 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-26 (backend + mobile, `feat/puppy-evening-take-out`)
+- Mladiček mora zvečer pred spanjem ven (David): zadnji 2 uri pred nočnimi tihimi urami; rok = začetek noči, brez izhoda luža zjutraj ob koncu noči; push ob začetku okna; `take_out.kind`; napis »Pred spanjem ven — najkasneje ob 21:00«. `schema.ts` ročno dopolnjen — ob prvem zelenem CI preveri artefakt `api-schema`. Testi `PuppyEveningTakeOutTest` (Pest samo v CI).
 ### 2026-11-26 (mobile, `fix/ios-item-clip-load`)
 - iOS »Operation Stopped« pri igračah (`pet-media item:toy_1/2 … layer=0s`): napaka v expo-video 57.0.4 iOS caching loaderju — drugi predvajalnik ISTEGA podpisanega URL-ja brez končnice bere obsege prvega iz praznega `<hash>.mp4`. Predmeti niso dobili lokalne kopije (`cacheNameFor` ni poznal `/api/media/items/`), zato je vsak predvajal oddaljeni URL. Popravek: vsi predvajalniki prek `videoSourceFor` (iOS oddaljeno brez `useCaching`, Android ostane), predmeti dobijo lokalno kopijo `media_items_<id>_<v>`. Samo JS → OTA. Preveriti na iPhonu: igra z igračo → vesel pes na HUD-u igra igračo brez prehoda na sliko.
 

@@ -15,7 +15,12 @@ use Carbon\CarbonInterface;
  * it (mobile/src/api/schema.ts). Pet facts only — no personal data.
  *
  * - `take_out`: the puppy's bladder clock ("Pelji ven"); null for a pet
- *   without one (legacy profile, unborn, past the puppy stage).
+ *   without one (legacy profile, unborn, past the puppy stage). `kind`
+ *   (David 2026-11-26, optional for older apps): `evening` = the deadline is
+ *   the start of the night (»Pred spanjem ven — najkasneje ob 21:00«),
+ *   `morning` = it lies at / after the end of the night (the morning rule, or
+ *   the night started without the evening take-out — the accident follows
+ *   at the night's end, `next_due_at` is then that instant), else `regular`.
  * - `active_events`: every open mess (poop, puppy accident, chewing) with
  *   its 2-hour deadline (counted outside quiet hours); empty while hygiene
  *   shows more than 0 %.
@@ -31,7 +36,7 @@ use Carbon\CarbonInterface;
 final class BehaviourPayload
 {
     /**
-     * @param  array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null}|null  $takeOut
+     * @param  array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null, kind: 'regular'|'morning'|'evening'}|null  $takeOut
      * @param  list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>  $activeEvents
      */
     public function __construct(
@@ -57,14 +62,36 @@ final class BehaviourPayload
                 ->latest('created_at')
                 ->value('created_at');
 
+            // David 2026-11-26: before bedtime the evening deadline; once the night
+            // started without the evening take-out the accident at its end is what is due.
+            $kind = 'regular';
+            $next = $clock['due_at'];
+            if ($clock['evening'] !== null) {
+                $kind = 'evening';
+                if (! $now->lessThan($clock['evening'])) {
+                    $kind = 'morning';
+                    $next = $clock['accident_at'];
+                }
+            } elseif ($clock['morning'] !== null) {
+                $kind = 'morning';
+            }
+
             $takeOut = [
                 // Hours the puppy holds today (~1 h per month of age, S30 / S31).
                 'hold_hours' => $clock['hold_hours'],
                 // When the clock (re)started: take-out, accident, birth, local midnight or end of a freeze.
                 'clock_started_at' => $iso($clock['started_at']),
-                // Accident due at (counted only outside quiet hours; never inside them).
-                'next_due_at' => $iso($clock['due_at']),
+                // Take-out deadline (counted only outside quiet hours; never inside them). The
+                // accident happens then — except before bed (kind evening): then only at the night's end.
+                'next_due_at' => $iso($next),
                 'last_taken_out_at' => $iso($last !== null ? CarbonImmutable::parse($last, 'UTC') : null),
+                /**
+                 * Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
+                 * rule (at / after the night's end) or the evening one (the night's start).
+                 *
+                 * @var 'regular'|'morning'|'evening'
+                 */
+                'kind' => $kind,
             ];
         }
 
@@ -91,7 +118,7 @@ final class BehaviourPayload
     }
 
     /**
-     * @return array{take_out: array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null}|null, active_events: list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>, scene: 'accident'|'chewing'|'scratching'|null}
+     * @return array{take_out: array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null, kind: 'regular'|'morning'|'evening'}|null, active_events: list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>, scene: 'accident'|'chewing'|'scratching'|null}
      */
     public function toArray(): array
     {
