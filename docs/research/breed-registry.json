@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "0b1fc1c0a6da6b1ad9469bbf20d0354b1c3145e1cbfe79172d8ce154b632189e"
+      "sha256": "bbd8fc5329e5abaf85f8ec0a397e9d797f17f6fc60d553bb58d66c651d5437c8"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "88ad33bb23626f422224ec14d0f2c44f10f70e34577adfdf1160d08fe8c583b8"
+      "sha256": "43c9b445447c5f503c6c3b11953bba5f49efb6955704e310fd03d282308747eb"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "33f21051fe7e2861406d65956a4245ac34817744e4bb022acc98867102bfbd6d"
+      "sha256": "0464e7327f0c3737d8f6243a493fabd3bbc806ea6ae53264f2cf509c201c0341"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "f88e9c4c2e877a055025ef5464d0028114cdf66e61dc545a71f8c213a2ce6767"
+      "sha256": "caf30eba8a0778ca550b396e94f270b24c705e8e2b68b455730b2d0ae7dd57e2"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "7d3b2fddf17985ccbf15499f29631ec528d4923b36eda01e09528bea08b3ef47"
+      "sha256": "1c24da4522731387aa51b423efe2423def53f30dbc0120f9d955d82c5c01c491"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "8567236dc36b7470d5eecbbc9471a6b97b8e7c509f13307f0b550774a580e228"
+      "sha256": "11f3f919ba1300f3e8da2eeb66fba1b51962a0ca48a33abbf2225bd1451c194b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "fe22efcc261354cc4da690731ffae44846713c6c5379a7a7f8f35e8e3d226dbc"
+      "sha256": "35a1e86d6cac719fe5bdda55f0d6cb42b5843e361b47527db9c503020f1c9e88"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 132,
+      "breed_count": 133,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -82467,6 +82467,619 @@
       ]
     },
     {
+      "id": "welsh_springer_spaniel",
+      "species": "dog",
+      "order": 132,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Welsh Springer Spaniel",
+        "sl": "Velški springer španjel"
+      },
+      "slug": {
+        "en": "welsh-springer-spaniel",
+        "sl": "velski-springer-spanjel"
+      },
+      "synonyms": {
+        "en": [
+          "Welsh Springer",
+          "Welshie",
+          "Welsh Starter"
+        ],
+        "sl": [
+          "velški springer",
+          "welsh springer spaniel",
+          "welshie"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S1064"
+          ],
+          "ref": "welsh_springer_spaniel.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              48,
+              48
+            ],
+            "female": [
+              46,
+              46
+            ]
+          },
+          "source_ids": [
+            "S1062"
+          ],
+          "ref": "welsh_springer_spaniel.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              15.9,
+              24.9
+            ],
+            "female": [
+              15.9,
+              24.9
+            ]
+          },
+          "source_ids": [
+            "S1065"
+          ],
+          "ref": "welsh_springer_spaniel.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "welsh_springer_spaniel.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 14,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "welsh_springer_spaniel.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S1064"
+          ],
+          "ref": "welsh_springer_spaniel.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S1064"
+          ],
+          "ref": "welsh_springer_spaniel.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S1064"
+          ],
+          "ref": "welsh_springer_spaniel.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S1064"
+          ],
+          "ref": "welsh_springer_spaniel.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1064"
+          ],
+          "ref": "welsh_springer_spaniel.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 126,
+            "group": 8,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S1062"
+          ],
+          "ref": "welsh_springer_spaniel.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S1067"
+          ],
+          "ref": "welsh_springer_spaniel.health.epilepsy",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S1067"
+          ],
+          "ref": "welsh_springer_spaniel.health.glaucoma",
+          "confidence": "high"
+        },
+        {
+          "key": "ear_infections_long_ears",
+          "source_ids": [
+            "S1066"
+          ],
+          "ref": "welsh_springer_spaniel.health.ear_infections",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1064",
+              "S1066"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.exercise.adult",
+              "welsh_springer_spaniel.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1065"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1067"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1064"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.exercise.adult",
+              "welsh_springer_spaniel.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1064",
+              "S1066"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.suitability.rkc_grooming",
+              "welsh_springer_spaniel.suitability.vca_grooming"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1064"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1065"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.exercise.scent_drive"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1065"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 126
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 126
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1064"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S1064 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 126 (0.75 × McMillan 2024 median 14.0 y, S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren 'Above average' tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.grooming",
+            "basis_source_ids": [
+              "S1066"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → VCA »once or twice a week« → 2); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.tooth_brushing",
+            "basis_source_ids": [
+              "S1067"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (WebMD »daily«)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.nail_trimming",
+            "basis_source_ids": [
+              "S1067"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev enkrat na mesec (WebMD »monthly bath and nail trimming«)"
+          },
+          {
+            "ref": "proposed_game_parameters.welsh_springer_spaniel.bathing",
+            "basis_source_ids": [
+              "S1067"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): kopanje enkrat na mesec (WebMD »a monthly bath«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S1064",
+          "S1066",
+          "S1067"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S1064"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S1064"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S1064"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S1064"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S1062",
+        "S1064",
+        "S1065",
+        "S1066",
+        "S1067",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -89908,6 +90521,41 @@
       "publisher": "Dogs NSW (Australia)",
       "title": "Bluetick Coonhound — breed page with the breed standard (last updated 24 Mar 2017)",
       "url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/bluetick-coonhound/"
+    },
+    {
+      "id": "S1062",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard N° 126 Welsh Springer Spaniel (English PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/126g08-en.pdf"
+    },
+    {
+      "id": "S1064",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Spaniel (Welsh Springer) — Breeds A to Z",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/spaniel-welsh-springer/"
+    },
+    {
+      "id": "S1065",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Mouton Dowdy, MA, reviewed by Barri J. Morrison, DVM (updated Aug. 5, 2024)",
+      "title": "Welsh Springer Spaniel",
+      "url": "https://petmd.com/dog/breeds/welsh-springer-spaniel"
+    },
+    {
+      "id": "S1066",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn, created Jun 2, 2014)",
+      "title": "Welsh Springer Spaniel — \"The Easygoing Spaniel\"",
+      "url": "https://vcahospitals.com/know-your-pet/welsh-springer-spaniel"
+    },
+    {
+      "id": "S1067",
+      "tier": "B",
+      "publisher": "WebMD Pets — Susan Adcox, medically reviewed by Zilpah Sheikh, MD (April 22, 2026)",
+      "title": "What to Know About Welsh Springer Spaniels",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-welsh-springer-spaniels"
     },
     {
       "id": "C1",
