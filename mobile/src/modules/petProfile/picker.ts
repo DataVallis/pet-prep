@@ -1978,7 +1978,7 @@ const FALLBACK_BREEDS: ReadonlyArray<Omit<CatalogueBreed, 'colours'>> = [
     premium: true,
     free_plan_allowed: false,
     challenge_allowed: true,
-    search_keywords: ['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel', 'welshie'],
+    search_keywords: ['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel'],
     sort_order: 1330,
     suitability: {
       suits: ['active_family', 'family_pet', 'children'],

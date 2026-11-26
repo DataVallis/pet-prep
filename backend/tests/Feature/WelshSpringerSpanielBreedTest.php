@@ -113,7 +113,7 @@ describe('breed, config and database', function () {
             ->and($breed->isPremium())->toBeTrue()
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 1330, 'breeds.welsh_springer_spaniel'])
-            ->and($config->search_keywords)->toBe(['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel', 'welshie'])
+            ->and($config->search_keywords)->toBe(['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) wssData('proposed_game_parameters.welsh_springer_spaniel.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);

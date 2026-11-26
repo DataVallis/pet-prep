@@ -56,7 +56,7 @@ describe('M5-R10-142 Welsh Springer Spaniel', () => {
   it('mirrors BreedConfigsSeeder and config/breed_suitability.php in the fallback catalogue', () => {
     const dog = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === KEY);
     expect(dog).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 1330 }));
-    expect(dog?.search_keywords).toEqual(['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel', 'welshie']);
+    expect(dog?.search_keywords).toEqual(['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel']);
     expect(dog?.suitability).toEqual({
       suits: ['active_family', 'family_pet', 'children'],
       consider: ['long_daily_exercise', 'frequent_grooming', 'sheds', 'secure_fencing', 'chases_small_pets'],
@@ -68,7 +68,8 @@ describe('M5-R10-142 Welsh Springer Spaniel', () => {
     expect(find('welsh springer spaniel')).toEqual([KEY]);
     expect(find('velški springer')).toEqual([KEY]);
     expect(find('velski springer spanjel')).toEqual([KEY]);
-    expect(find('Welshie')).toEqual([KEY]);
+    // »welshie« stays the Welsh Terrier's keyword (M5-R10-127) — not a search word here.
+    expect(find('welshie')).not.toContain(KEY);
     expect(find('springer')).toContain(KEY);
     expect(find('springer')).toContain('english_springer_spaniel');
     expect(find('angleški springer')).not.toContain(KEY);

@@ -30,13 +30,13 @@
 | 2026-11-26 | pravilo runbooka (§3) | barva za AI in izbirnik: **rdeče-bel** (edina standardna barva = portret); ušesa v obliki trtnega lista, naraven (nekupiran) operjen rep | FCI S1062 »Rich red and white only.«; AKC S1069 »The color is rich red and white only.« → barvnih različic ni (§8b: ena barva) | #1647 |
 | 2026-11-26 | pravilo runbooka (§2.3) | seznam za vzreditelja: RKC minimum **»Prioritising genetic diversity«** in **pregled oči po shemi BVA/KC/ISDS z gonioskopijo**, najboljša praksa **pregled kolkov po shemi BVA/KC** (brez novih ključev) | RKC S1064 | #1647 |
 | 2026-11-26 | pravilo runbooka | zdravstveni ključi registra: `epilepsy`, `glaucoma`, `ear_infections_long_ears`; displazija kolkov (le parafraza) izpuščena; brez odstotkov in brez lestvice kolkov iz WebMD | WebMD S1067, VCA S1066 | #1647 |
-| 2026-11-26 | predlog Claude, David lahko spremeni | EN »Welsh Springer Spaniel«, SL **»Velški springer španjel«** (kot »angleški springer španjel«); iskanje tudi »welsh springer«, »velski springer spanjel«, »welshie« | FCI / RKC; vzdevek Welshie iz PetMD / WebMD; strani KZS nisem prebral | #1647 |
+| 2026-11-26 | predlog Claude, David lahko spremeni | EN »Welsh Springer Spaniel«, SL **»Velški springer španjel«** (kot »angleški springer španjel«); iskanje tudi »welsh springer«, »velski springer spanjel« (»welshie« ostane velškemu terierju) | FCI / RKC; vzdevek Welshie iz PetMD / WebMD; strani KZS nisem prebral | #1647 |
 
 ## Kaj je v aplikaciji (v slogu FEATURES)
 
 | Funkcija | Stanje | Brezplačno / plačljivo | ID | Datum |
 |---|---|---|---|---|
-| Pasma v izbirniku (značka »Izziv«, namig »Del 12-tedenskega izziva · česanje 2× na teden«, iskanje »velški springer«, »welsh springer«, »welshie«, oznake, starostni namigi) | 🛠 | 💶 izziv | M5-R10-142 | 2026-11-26 |
+| Pasma v izbirniku (značka »Izziv«, namig »Del 12-tedenskega izziva · česanje 2× na teden«, iskanje »velški springer«, »welsh springer«, oznake, starostni namigi) | 🛠 | 💶 izziv | M5-R10-142 | 2026-11-26 |
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 126. meseca; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-142 | 2026-11-26 |
 | Česanje 2× na teden, ščetkanje zob vsak dan, striženje krempljev vsak mesec, opomnik za kopanje vsak mesec, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R19 / M5-R14 / M5-R17 | 2026-11-26 |
 | Barva (izbirnik: rdeče-bel — edina standardna barva) | 🛠 | 💶 izziv | M5-R21 | 2026-11-26 |

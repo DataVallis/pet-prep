@@ -2833,7 +2833,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 1330,
                 'label_key' => 'breeds.welsh_springer_spaniel',
-                'search_keywords' => ['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel', 'welshie'],
+                'search_keywords' => ['welsh springer spaniel', 'welsh springer', 'velški springer španjel', 'velski springer spanjel'],
             ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
