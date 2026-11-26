@@ -140,6 +140,7 @@ return [
     'kerry_blue_terrier' => 'Kerry blue terier',
     'irish_terrier' => 'Irski terier',
     'bluetick_coonhound' => 'Bluetick coonhound',
+    'welsh_springer_spaniel' => 'Velški springer španjel',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
