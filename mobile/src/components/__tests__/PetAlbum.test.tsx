@@ -84,7 +84,7 @@ describe('PetAlbum viewer', () => {
     expect(screen.getByTestId('album-video')).toBeTruthy();
     const players = liveVideoPlayers();
     expect(players).toHaveLength(1);
-    expect(players[0].source).toEqual({ uri: SLEEP, useCaching: true });
+    expect(players[0].source).toEqual({ uri: SLEEP });
     expect(players[0]).toMatchObject({ loop: true, muted: true, playing: true });
     expect(screen.getByTestId('album-position').props.children).toBe('3 / 3');
   });
