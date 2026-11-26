@@ -31,7 +31,8 @@
     "cleanChewing": "Pospravi copat",
     "takeOutShortIn": "Ven čez {{duration}}",
     "takeOutShortAt": "Ven najkasneje {{when}}",
-    "takeOutShortNow": "Kuža mora ven zdaj"
+    "takeOutShortNow": "Kuža mora ven zdaj",
+    "takeOutEvening": "Pred spanjem ven — najkasneje ob {{time}}"
   },
   "parent": {
     "title": "Vedenje",

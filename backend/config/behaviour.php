@@ -18,11 +18,21 @@
 | David may change it): a take-out (or a clock restart at birth / the end of a
 | freeze / a scheduler outage) in the last this-many minutes of the night
 | counts as the morning outing: the normal hold applies from it.
+|
+| `evening_window_minutes` (David 2026-11-26 »pred spanjem mora še ven«): the
+| last this-many minutes before the pet's NIGHT quiet hours start (bedtime,
+| pet-local; 21:00 → 19:00–21:00) are the evening window. When the normal
+| hold would run into / past the night, the deadline is the start of the night
+| (»Pred spanjem ven — najkasneje ob 21:00«); a take-out (or a clock restart)
+| inside the window is the evening outing and the morning rule follows. A
+| puppy nobody took out before the night has its accident at the END of the
+| night (»Luža zjutraj«, David), never at bedtime. 0 switches the rule off.
 */
 
 return [
     'puppy' => [
         'morning_take_out_minutes' => 30,
         'night_take_out_counts_minutes' => 60,
+        'evening_window_minutes' => 120,
     ],
 ];

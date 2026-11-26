@@ -26,6 +26,8 @@ import {
   type ChildBehaviour,
 } from '@/modules/behaviour/behaviour';
 import { makeBehaviourEvent, makeTakeOut } from '@/test-utils/fixtures';
+import { i18n } from '@/i18n';
+import { applyTimeFormat } from '@/modules/time/clock';
 
 const TZ = 'Europe/Ljubljana';
 const at = (iso: string) => Date.parse(iso);
@@ -180,6 +182,56 @@ describe('calm countdown', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:05:00+02:00'), TZ);
     expect(c).toEqual({ line: 'Kuža mora ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null, short: 'Kuža mora ven zdaj' });
     expect(c?.line).not.toMatch(/!|nujno|hitro/i);
+  });
+});
+
+describe('evening take-out (David 2026-11-26)', () => {
+  const evening = makeTakeOut({ kind: 'evening', clock_started_at: '2026-10-04T16:30:00+02:00', next_due_at: '2026-10-04T21:00:00+02:00' });
+
+  afterEach(async () => {
+    applyTimeFormat('auto');
+    await i18n.changeLanguage('sl');
+  });
+
+  it('reads kind; an unknown or missing kind is left out (= regular)', () => {
+    expect(readPetBehaviour({ take_out: evening }).take_out?.kind).toBe('evening');
+    expect(readPetBehaviour({ take_out: { ...evening, kind: 'noon' } }).take_out?.kind).toBeUndefined();
+    const { kind: _k, ...old } = evening;
+    void _k;
+    expect(readPetBehaviour({ take_out: old }).take_out).toEqual(old);
+  });
+
+  it('card + pill: »Pred spanjem ven — najkasneje ob 21:00«, also under 3 h', async () => {
+    await i18n.changeLanguage('sl');
+    applyTimeFormat('24h');
+    const far = takeOutCountdown(evening, at('2026-10-04T16:30:00+02:00'), TZ);
+    expect(far?.line).toBe('Pred spanjem ven — najkasneje ob 21:00');
+    expect(far?.short).toBe('Pred spanjem ven — najkasneje ob 21:00');
+    expect(far?.hint).toBe('ob 21:00');
+    expect(far?.due).toBe(false);
+    const near = takeOutCountdown(evening, at('2026-10-04T19:00:00+02:00'), TZ);
+    expect(near?.line).toBe('Pred spanjem ven — najkasneje ob 21:00');
+    expect(near?.hint).toBe('~2 h');
+    expect(near?.howTo).toBe('Pritisni »Pelji ven«, preden se čas izteče.');
+  });
+
+  it('English, 12 h clock through modules/time/clock.ts', async () => {
+    await i18n.changeLanguage('en');
+    applyTimeFormat('24h');
+    expect(takeOutCountdown(evening, at('2026-10-04T16:30:00+02:00'), TZ)?.line).toBe('Out before bed — by 21:00 at the latest');
+    applyTimeFormat('12h');
+    expect(takeOutCountdown(evening, at('2026-10-04T16:30:00+02:00'), TZ)?.short).toBe('Out before bed — by 9:00 PM at the latest');
+  });
+
+  it('a regular or morning deadline keeps the old texts', () => {
+    applyTimeFormat('24h');
+    const morning = makeTakeOut({ kind: 'morning', next_due_at: '2026-10-05T07:30:00+02:00' });
+    expect(takeOutCountdown(morning, at('2026-10-04T21:30:00+02:00'), TZ)?.line).toBe('Kuža mora ven najkasneje jutri ob 7:30.');
+  });
+
+  it('the optimistic take-out drops the evening kind (the server sends the new one)', () => {
+    const next = afterTakeOut(child({ take_out: evening, can_take_out: true }), at('2026-10-04T19:30:00+02:00'));
+    expect(next.take_out?.kind).toBeUndefined();
   });
 });
 

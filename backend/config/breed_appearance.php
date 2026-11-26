@@ -910,6 +910,12 @@
 | "No other colors allowed."); short glossy coat, long low-set ears, dark brown eyes, black nose, tail carried high. Not a
 | welfare breed. Tan-marked first (the portrait default, PetMD S1060 "commonly"); weights unsourced → `verified => false`.
 |
+| Welsh Springer Spaniel (M5-R10-142, docs/research/dog-data welsh_springer_spaniel.appearance): "Rich red and white only."
+| (FCI-Standard N° 126, S1062; AKC S1069 "any white area may be flecked with red ticking"); straight, flat, silky coat with
+| moderate feathering, small vine-leaf ears hanging close to the cheeks, hazel or dark eyes, natural (undocked) feathered tail.
+| Not a welfare breed (RKC Breed Watch Category 1, S1064). One standard colour (the portrait default); weight unsourced →
+| `verified => false`.
+|
 | Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
 | without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
 | low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
@@ -5972,6 +5978,38 @@ return [
             'eye_color' => ['rather large, round dark brown eyes with a pleading hound expression'],
             'tail' => ['natural tail of moderate length carried high with a forward half-moon curve'],
             'nose' => ['a large black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-142 (docs/research/dog-data/data.json welsh_springer_spaniel.appearance; runbook rules 2026-10-10: standard colours
+    // only — rich red and white (FCI S1062); never black, liver or tricolour).
+    'welsh_springer_spaniel' => [
+        'display_name' => 'Welsh Springer Spaniel',
+        // The colour weight is in no source (welsh_springer_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 126 Welsh Springer Spaniel (S1062) — for the traits listed in `sources`. The colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S1062 "Approximate height: Males 48 cm at withers / Females 46 cm at withers"; PetMD S1065 "ranging 35–55 pounds in weight"',
+            'build' => 'S1062 "Symmetrical, compact, not leggy, obviously built for endurance and hard work."',
+            'coat_length' => 'S1062 "Straight or flat, silky texture, dense, never wiry or wavy. Curly coat highly undesirable."',
+            'coat_color' => 'S1062 "Rich red and white only." (weight unsourced)',
+            'ear_carriage' => 'S1062 "Set moderately low and hanging close to cheeks. Comparatively small and gradually narrowing towards tip and shaped somewhat like a vine leaf."',
+            'eye_color' => 'S1062 "Hazel or dark, medium size, neither prominent, nor sunken, not showing haw."',
+            'tail' => 'S1062 "Well set on and low, never carried above level of back. Lively in action." / "Undocked: Feathered." (natural tail — undocked)',
+            'nose' => 'S1062 "Flesh coloured to dark, nostrils well developed."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'symmetrical, compact gundog built for endurance and hard work, not leggy, with a medium-length, fairly square muzzle', 'weight' => 3], 'quick, active, well-balanced spaniel with plenty of drive'],
+            'coat_length' => ['straight, flat, silky, dense coat with moderate feathering on the legs and light feathering on the ears and tail'],
+            // Standard colour only (S1062 — "Rich red and white only.") → the register portrait.
+            'coat_color' => [
+                ['value' => 'rich red and white', 'weight' => 100],
+            ],
+            'ear_carriage' => ['comparatively small vine-leaf-shaped ears set moderately low and hanging close to the cheeks'],
+            'eye_color' => ['medium-sized hazel eyes with a kindly expression'],
+            'tail' => ['natural undocked feathered tail set low and never carried above the level of the back'],
+            'nose' => ['a flesh-coloured to dark nose with well-developed nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
