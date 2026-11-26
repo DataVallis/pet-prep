@@ -1,4 +1,5 @@
 import { act, renderHook } from '@testing-library/react-native';
+import { Platform } from 'react-native';
 
 import {
   MAX_CACHE_BYTES,
@@ -7,6 +8,7 @@ import {
   forgetLocalMedia,
   localMediaUri,
   setMediaFileStoreForTests,
+  videoSourceFor,
   type CachedFileInfo,
   type MediaFileStore,
 } from '@/modules/petMedia/mediaFileCache';
@@ -16,6 +18,8 @@ const URL_A1 = 'https://api.petprep.si/api/media/12?expires=1000&v=abc123&signat
 const URL_A1_RESIGNED = 'https://api.petprep.si/api/media/12?expires=2800&v=abc123&signature=s2';
 const URL_A2 = 'https://api.petprep.si/api/media/12?expires=2800&v=def456&signature=s3';
 const URL_HISTORY = 'https://api.petprep.si/api/media/history/7?expires=1000&v=0f0f&signature=s4';
+const URL_TOY = 'https://api.petprep.si/api/media/items/9?expires=1000&pet=3&v=a1b2c3d4e5&signature=s5';
+const URL_TOY_RESIGNED = 'https://api.petprep.si/api/media/items/9?expires=2800&pet=3&v=a1b2c3d4e5&signature=s6';
 
 interface Pending {
   url: string;
@@ -76,6 +80,13 @@ describe('cacheNameFor', () => {
     expect(cacheNameFor(URL_HISTORY)).toBe('media_history_7_0f0f');
   });
 
+  it('2026-11-26: names a bought item file too (re-signed URL = the same copy)', () => {
+    expect(cacheNameFor(URL_TOY)).toBe('media_items_9_a1b2c3d4e5');
+    expect(cacheNameFor(URL_TOY_RESIGNED)).toBe('media_items_9_a1b2c3d4e5');
+    expect(cacheNameFor('https://api.petprep.si/api/media/items/9?pet=3&expires=1&signature=x')).toBeNull();
+    expect(cacheNameFor('https://api.petprep.si/api/media/items/9/candidate?v=abc')).toBeNull();
+  });
+
   it('never caches a URL that is not ours or has no version', () => {
     expect(cacheNameFor('https://example.com/video.mp4')).toBeNull();
     expect(cacheNameFor('https://api.petprep.si/api/media/12?expires=1&signature=x')).toBeNull();
@@ -83,7 +94,42 @@ describe('cacheNameFor', () => {
   });
 });
 
+describe('videoSourceFor (2026-11-26: expo-video iOS caching loader breaks a 2nd player of one URL)', () => {
+  const os = Platform.OS;
+  afterEach(() => {
+    Platform.OS = os;
+  });
+
+  it('iOS: a remote clip is streamed without useCaching', () => {
+    Platform.OS = 'ios';
+    expect(videoSourceFor(URL_TOY)).toEqual({ uri: URL_TOY });
+  });
+
+  it('Android: a remote clip keeps ExoPlayer caching', () => {
+    Platform.OS = 'android';
+    expect(videoSourceFor(URL_TOY)).toEqual({ uri: URL_TOY, useCaching: true });
+  });
+
+  it('a local copy is always a plain file source', () => {
+    for (const platform of ['ios', 'android'] as const) {
+      Platform.OS = platform;
+      expect(videoSourceFor('file:///cache/pet-media/media_items_9_a1b2c3d4e5.mp4')).toEqual({ uri: 'file:///cache/pet-media/media_items_9_a1b2c3d4e5.mp4' });
+    }
+  });
+});
+
 describe('localMediaUri', () => {
+  it('2026-11-26: a bought toy clip gets a local copy, used by the next player after a re-sign', async () => {
+    const fs = fakeStore();
+    setMediaFileStoreForTests(fs.store);
+    expect(localMediaUri(URL_TOY, 'video')).toBe(URL_TOY);
+    // A second player of the same clip while the copy downloads: still one download.
+    expect(localMediaUri(URL_TOY, 'video')).toBe(URL_TOY);
+    expect(fs.pending.map((p) => p.name)).toEqual(['media_items_9_a1b2c3d4e5.mp4']);
+    await fs.finish();
+    expect(localMediaUri(URL_TOY_RESIGNED, 'video')).toBe('file:///cache/pet-media/media_items_9_a1b2c3d4e5.mp4');
+  });
+
   it('serves the remote URL first, downloads once, then the local copy — also after a re-sign', async () => {
     const fs = fakeStore();
     setMediaFileStoreForTests(fs.store);

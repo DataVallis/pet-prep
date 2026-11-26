@@ -174,6 +174,8 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 ### 2026-11-26 (mobile, `fix/busy-button-fade`)
 - Zaposlen gumb za nego (»ena skrb naenkrat«) zdaj rahlo zbledi skupaj z napisom in ne sveti več kot »na vrsti« (David: svetel, a neklikabilen gumb je izgledal kot napaka). Samo JS / OTA.
+### 2026-11-26 (mobile, `fix/ios-item-clip-load`)
+- iOS »Operation Stopped« pri igračah (`pet-media item:toy_1/2 … layer=0s`): napaka v expo-video 57.0.4 iOS caching loaderju — drugi predvajalnik ISTEGA podpisanega URL-ja brez končnice bere obsege prvega iz praznega `<hash>.mp4`. Predmeti niso dobili lokalne kopije (`cacheNameFor` ni poznal `/api/media/items/`), zato je vsak predvajal oddaljeni URL. Popravek: vsi predvajalniki prek `videoSourceFor` (iOS oddaljeno brez `useCaching`, Android ostane), predmeti dobijo lokalno kopijo `media_items_<id>_<v>`. Samo JS → OTA. Preveriti na iPhonu: igra z igračo → vesel pes na HUD-u igra igračo brez prehoda na sliko.
 
 ### 2026-11-25 (mobile, `fix/wishes-bundle-label`)
 - Starševske »Želje«: paket »Dobrodošlica« ni več zavajajoč gumb »Vse tri za …« pod zadnjo prošnjo, ampak svoj razdelek z vsebino za psa / muco, »Kupi paket za …« in »Posamezno skupaj …« (samo iz vseh treh cen trgovine). Testi v `wishes.test.ts`, `WishesScreen.test.tsx`. Potrebna preverba na telefonu (prave cene iz trgovine).

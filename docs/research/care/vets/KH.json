@@ -111,7 +111,8 @@
         "sl": "Odprto vsak dan 9–19 (ob praznikih 9–12). Nujna pomoč in intenzivna nega 24 ur na dan; pokličite številko bolnišnice.",
         "hr": "Otvoreno svaki dan 9:00–19:00 (blagdanima 9:00–12:00). Hitna i intenzivna skrb 24/7; nazovi broj bolnice.",
         "de": "Täglich 9.00–19.00 Uhr geöffnet (an Feiertagen 9.00–12.00 Uhr). Notfall- und Intensivversorgung rund um die Uhr; bitte die Nummer der Klinik anrufen.",
-        "fr": "Ouvert tous les jours 9 h–19 h (jours fériés 9 h–12 h). Urgences et soins intensifs 24 h/24, 7 j/7 ; appelez le numéro de l’hôpital."
+        "fr": "Ouvert tous les jours 9 h–19 h (jours fériés 9 h–12 h). Urgences et soins intensifs 24 h/24, 7 j/7 ; appelez le numéro de l’hôpital.",
+        "es": "Abierto todos los días 9:00–19:00 h (festivos 9:00–12:00 h). Urgencias y cuidados críticos las 24 horas; llama al número del hospital."
       }
     },
     {
@@ -141,7 +142,8 @@
         "sl": "Odprto vsak dan 9–19 (lahko zapre prej, zato najprej pokličite). Nujni klici po 19. uri na isto številko, samo v angleščini, z doplačilom za čas zunaj rednega časa.",
         "hr": "Otvoreno svaki dan 9:00–19:00 (može se ranije zatvoriti – prvo nazovi). Hitni pozivi nakon 19:00 na istom broju, samo na engleskom, uz doplatu izvan radnog vremena.",
         "de": "Täglich 9.00–19.00 Uhr geöffnet (schließt eventuell früher – bitte zuerst anrufen). Notrufe nach 19.00 Uhr unter derselben Nummer, nur auf Englisch, mit Gebühr außerhalb der Sprechzeiten.",
-        "fr": "Ouvert tous les jours 9 h–19 h (peut fermer plus tôt ; appelez d’abord). Appels d’urgence après 19 h au même numéro, en anglais uniquement, avec supplément hors horaires."
+        "fr": "Ouvert tous les jours 9 h–19 h (peut fermer plus tôt ; appelez d’abord). Appels d’urgence après 19 h au même numéro, en anglais uniquement, avec supplément hors horaires.",
+        "es": "Abierto a diario 9:00–19:00 h (puede cerrar antes: llama primero). Urgencias después de las 19:00 h en el mismo número, solo en inglés, con recargo fuera de horario."
       }
     },
     {
@@ -171,7 +173,8 @@
         "sl": "Telefonska linija zunaj rednega časa: +855 88 818 0022.",
         "hr": "Dostupna je telefonska linija izvan radnog vremena: +855 88 818 0022.",
         "de": "Telefonische Erreichbarkeit außerhalb der Sprechzeiten: +855 88 818 0022.",
-        "fr": "Ligne téléphonique hors horaires : +855 88 818 0022."
+        "fr": "Ligne téléphonique hors horaires : +855 88 818 0022.",
+        "es": "Hay una línea telefónica fuera de horario: +855 88 818 0022."
       }
     },
     {
@@ -201,7 +204,8 @@
         "sl": "Odprto tor–pet in ned; vnaprej pokličite ali pošljite e-pošto. Veterinarji ob določenih datumih prihajajo tudi v Kampot.",
         "hr": "Otvoreno od utorka do petka i nedjeljom; nazovi ili pošalji e-poštu unaprijed. Veterinari gostuju i u Kampotu na određene datume.",
         "de": "Dienstag bis Freitag und sonntags geöffnet; bitte vorher anrufen oder eine E-Mail schreiben. Tierärzte kommen an festen Terminen auch nach Kampot.",
-        "fr": "Ouvert du mardi au vendredi et le dimanche ; appelez ou écrivez avant de venir. Des vétérinaires itinérants viennent aussi à Kampot à des dates fixes."
+        "fr": "Ouvert du mardi au vendredi et le dimanche ; appelez ou écrivez avant de venir. Des vétérinaires itinérants viennent aussi à Kampot à des dates fixes.",
+        "es": "Abierto de martes a viernes y domingo; llama o escribe un correo electrónico antes. Veterinarios itinerantes también visitan Kampot en fechas fijas."
       }
     },
     {
@@ -231,7 +235,8 @@
         "sl": "Delovni čas ni objavljen.",
         "hr": "Radno vrijeme nije objavljeno.",
         "de": "Öffnungszeiten nicht veröffentlicht.",
-        "fr": "Horaires non communiqués."
+        "fr": "Horaires non communiqués.",
+        "es": "Horario de apertura no publicado."
       }
     },
     {
@@ -261,7 +266,8 @@
         "sl": "Pregledi po naročilu, med tednom 9–16.",
         "hr": "Pregledi uz termin, radnim danom 9:00–16:00.",
         "de": "Sprechstunde nach Terminvereinbarung, werktags 9.00–16.00 Uhr.",
-        "fr": "Consultations sur rendez-vous, en semaine 9 h–16 h."
+        "fr": "Consultations sur rendez-vous, en semaine 9 h–16 h.",
+        "es": "Consultas con cita previa, entre semana 9:00–16:00 h."
       }
     },
     {
@@ -291,7 +297,8 @@
         "sl": "Pregledi po naročilu, vsak dan. Nujne klice sprejemajo kadar koli; možni so tudi obiski na domu.",
         "hr": "Pregledi uz termin, svaki dan. Hitni pozivi primaju se u bilo koje doba; moguće su kućne posjete.",
         "de": "Sprechstunde nach Terminvereinbarung, täglich. Notrufe werden jederzeit entgegengenommen; Hausbesuche möglich.",
-        "fr": "Consultations sur rendez-vous, tous les jours. Appels d’urgence pris à toute heure ; visites à domicile possibles."
+        "fr": "Consultations sur rendez-vous, tous les jours. Appels d’urgence pris à toute heure ; visites à domicile possibles.",
+        "es": "Consultas con cita previa, todos los días. Se atienden llamadas de urgencia a cualquier hora; visitas a domicilio disponibles."
       }
     },
     {
@@ -321,7 +328,8 @@
         "sl": "Po telefonu so dosegljivi 24 ur na dan; obiski na domu.",
         "hr": "Dostupni telefonom 24 sata dnevno; kućni posjeti.",
         "de": "Rund um die Uhr telefonisch erreichbar; Hausbesuche.",
-        "fr": "Joignable par téléphone 24 h/24 ; visites à domicile."
+        "fr": "Joignable par téléphone 24 h/24 ; visites à domicile.",
+        "es": "Atención telefónica las 24 horas; visitas a domicilio."
       }
     },
     {
@@ -351,7 +359,8 @@
         "sl": "Odprto vsak dan 7.30–17.",
         "hr": "Otvoreno svaki dan 7:30–17:00.",
         "de": "Täglich 7.30–17.00 Uhr geöffnet.",
-        "fr": "Ouvert tous les jours 7 h 30–17 h."
+        "fr": "Ouvert tous les jours 7 h 30–17 h.",
+        "es": "Abierto a diario 7:30–17:00 h."
       }
     }
   ],

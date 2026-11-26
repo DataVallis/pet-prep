@@ -31,7 +31,7 @@ import { DECK_READY_FALLBACK_MS, DECK_READY_TIMEOUT_MS, MAX_DECK_PLAYERS, deckPl
 import type { ClipSwitch } from '@/modules/gameLayer/clipQueue';
 import { GameScreenContext } from '@/modules/gameLayer/gameExit';
 import { useAppActive, useLocalMediaUri } from '@/modules/petMedia/hooks';
-import { forgetLocalMedia, isLocalMediaUri, localMediaUri } from '@/modules/petMedia/mediaFileCache';
+import { forgetLocalMedia, isLocalMediaUri, localMediaUri, videoSourceFor } from '@/modules/petMedia/mediaFileCache';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
 
 export interface ClipDeckProps {
@@ -62,10 +62,7 @@ interface DeckPlayerProps {
 
 /** One persistent player + view. Its source is fixed for the deck's life. */
 const DeckPlayer = memo(function DeckPlayer({ url, loop, layer, fadeInMs, onPlayer, onSettled, onEnd, testID }: DeckPlayerProps) {
-  const [source] = useState(() => {
-    const uri = localMediaUri(url, 'video') ?? url;
-    return isLocalMediaUri(uri) ? { uri } : { uri, useCaching: true };
-  });
+  const [source] = useState(() => videoSourceFor(localMediaUri(url, 'video') ?? url));
   const localSource = isLocalMediaUri(source.uri);
   const player = useVideoPlayer(source, (p) => {
     p.loop = loop;
