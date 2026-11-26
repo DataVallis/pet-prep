@@ -123,7 +123,7 @@ describe('source selection', () => {
     expect(mockVideoPlayers).toHaveLength(1);
     const [player] = mockVideoPlayers;
     expect(sourceUri(player)).toBe(HUNGRY);
-    expect(player.source).toEqual({ uri: HUNGRY, useCaching: true });
+    expect(player.source).toEqual({ uri: HUNGRY }); // iOS (jest-expo default): no expo-video caching loader (2026-11-26)
     expect(player.loop).toBe(true);
     expect(player.muted).toBe(true);
     expect((player as unknown as { keepScreenOnWhilePlaying: boolean }).keepScreenOnWhilePlaying).toBe(false);
@@ -344,7 +344,7 @@ describe('local copies on the phone (2026-10-20)', () => {
     const store = storeWith([]);
     setMediaFileStoreForTests(store);
     renderMedia();
-    expect(liveVideoPlayers().map((p) => p.source)).toEqual([{ uri: IDLE, useCaching: true }]);
+    expect(liveVideoPlayers().map((p) => p.source)).toEqual([{ uri: IDLE }]);
     expect(store.downloads).toEqual(expect.arrayContaining(['media_2_idle.mp4', 'media_1_img.jpg']));
   });
 

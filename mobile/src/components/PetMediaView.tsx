@@ -11,7 +11,8 @@
  *   crossfade; every player is released when its layer unmounts.
  * - **Stable URLs:** layers are keyed by the media identity (`mediaKey`: path + `v`),
  *   not the signed URL — a poll that re-signs the URL doesn't restart playback. A layer
- *   keeps the URL it started with. Sources use expo-video's disk cache (`useCaching`).
+ *   keeps the URL it started with. Sources come from `videoSourceFor` (the phone's copy; remote
+ *   on iOS without expo-video's caching loader — it broke a second player of one URL, 2026-11-26).
  * - **Errors:** a layer that never showed is dropped; a visible one keeps its last frame
  *   until a replacement is ready. The first error asks for a fresh state once
  *   (`onMediaExpired`, expired signature) and retries the re-signed URL; a second error
@@ -44,7 +45,7 @@ import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPla
 
 import type { LockReason } from '@/modules/childPet/childPetView';
 import { useAppActive, useLocalMediaUri, useStableUrl } from '@/modules/petMedia/hooks';
-import { forgetLocalMedia, isLocalMediaUri, localMediaUri } from '@/modules/petMedia/mediaFileCache';
+import { forgetLocalMedia, isLocalMediaUri, localMediaUri, videoSourceFor } from '@/modules/petMedia/mediaFileCache';
 import { describeClip, linkLeftMs, reportPetMediaFailure, videoErrorStage } from '@/modules/petMedia/mediaErrorReport';
 import {
   NO_VIDEO_ERRORS,
@@ -222,10 +223,8 @@ interface VideoLayerProps {
 const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, startAtMs, onReady, onError, onEnd, testID }: VideoLayerProps) {
   // David 2026-10-20: the phone's copy of the file when there is one (survives re-signed
   // URLs); otherwise the remote URL with expo-video's cache, and a copy is made for next time.
-  const [source] = useState(() => {
-    const uri = localMediaUri(url, 'video') ?? url;
-    return isLocalMediaUri(uri) ? { uri } : { uri, useCaching: true };
-  });
+  // 2026-11-26: never expo-video's iOS caching loader for a remote clip (`videoSourceFor`).
+  const [source] = useState(() => videoSourceFor(localMediaUri(url, 'video') ?? url));
   const localSource = isLocalMediaUri(source.uri);
   const player = useVideoPlayer(source, (p) => {
     // M5-T08: a state loop starts on its key image and ends close to it → native loop.
