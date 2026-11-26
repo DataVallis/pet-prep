@@ -522,6 +522,7 @@ const SPECIES = [
       { id: 'kerry_blue_terrier', synonyms: { en: ['Kerry Blue', 'Kerry'], sl: ['kerry blue terier', 'kerry'] } },
       { id: 'irish_terrier', synonyms: { en: [], sl: ['irski terier', 'irish terrier'] } },
       { id: 'bluetick_coonhound', synonyms: { en: ['Bluetick', 'Blue Tick Coonhound'], sl: ['bluetick coonhound', 'bluetick'] } },
+      { id: 'welsh_springer_spaniel', synonyms: { en: ['Welsh Springer', 'Welshie', 'Welsh Starter'], sl: ['velški springer', 'welsh springer spaniel', 'welshie'] } },
     ],
   },
   {
@@ -3564,6 +3565,26 @@ const DOG_FACTS = {
       ['ear_infections_long_ears', 'health.ear_infections'],
     ],
   },
+  // M5-R10-142. Height = the FCI approximate heights (S1062); weight = PetMD (S1065, neither standard gives one); lifespan =
+  // McMillan 2024 median via the Dogs Trust table (S123) + the RKC band (S1064); exercise / coat / grooming / shedding = RKC
+  // key facts (S1064). Rank number not readable (S35 lists the breed under 'Above Average' only) → no coren_rank fact. Not
+  // exported: hips / other (paraphrases only), lifespan.wikipedia_2024_study (tier C). FCI origin Great Britain (GB).
+  welsh_springer_spaniel: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    coren_rank: false,
+    food_motivation: null,
+    health: [
+      ['epilepsy', 'health.epilepsy'],
+      ['glaucoma', 'health.glaucoma'],
+      ['ear_infections_long_ears', 'health.ear_infections'],
+    ],
+  },
 
 
 
@@ -3662,6 +3683,7 @@ export const DOG_CARE_TASKS = {
   bedlington_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.bedlington_terrier.tooth_brushing'], ['groomer_visit', 1, 42, 'proposed_game_parameters.bedlington_terrier.professional_grooming']],
   kerry_blue_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.kerry_blue_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.kerry_blue_terrier.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.kerry_blue_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.kerry_blue_terrier.bathing']],
   irish_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.irish_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_terrier.ear_care'], ['groomer_visit', 1, 56, 'proposed_game_parameters.irish_terrier.professional_grooming']],
+  welsh_springer_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_springer_spaniel.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4739,6 +4761,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bluetick_coonhound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bluetick_coonhound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bluetick_coonhound.exercise_minutes_senior',
+  },
+  welsh_springer_spaniel: {
+    adult_minutes: ['proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.welsh_springer_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.welsh_springer_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.welsh_springer_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_senior',
   },
 
 

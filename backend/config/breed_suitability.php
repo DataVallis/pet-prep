@@ -3309,5 +3309,32 @@ return [
                 ['tag' => 'secure_fencing', 'source_ids' => ['S1060'], 'refs' => ['bluetick_coonhound.exercise.scent_drive']],
             ],
         ],
+
+        // M5-R10-142 Welsh Springer Spaniel (data.json proposed_game_parameters.welsh_springer_spaniel.suitability_tags; S1064,
+        // S1065, S1066, S1067), runbook rules. RKC Breed Watch Category 1 (S1064) → no welfare chip; in marketing. children:
+        // WebMD "good with children" (VCA "Older kids." → no small_children). other_pets: PetMD no small pets vs VCA good with
+        // pets → no chip. needs_company: separation anxiety only in Wikipedia (tier C) → no chip. No new vocabulary key.
+        'welsh_springer_spaniel' => [
+            'suits' => [
+                // S1064 "More than 2 hours per day"; S1066 "This is an active dog that needs a good deal of exercise."
+                ['tag' => 'active_family', 'source_ids' => ['S1064', 'S1066'], 'refs' => ['welsh_springer_spaniel.exercise.adult', 'welsh_springer_spaniel.exercise.daily_text']],
+                // S1065 "Welsh Springer Spaniels can be incredibly loving, loyal, even-tempered family dogs."
+                ['tag' => 'family_pet', 'source_ids' => ['S1065'], 'refs' => ['welsh_springer_spaniel.behaviour.family']],
+                // S1067 "Welsh springers are affectionate family members and good with children." (supervision / older-kids caveat in notes)
+                ['tag' => 'children', 'source_ids' => ['S1067'], 'refs' => ['welsh_springer_spaniel.behaviour.children']],
+            ],
+            'consider' => [
+                // S1064 "More than 2 hours per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S1064'], 'refs' => ['welsh_springer_spaniel.exercise.adult', 'welsh_springer_spaniel.suitability.rkc_exercise']],
+                // S1064 "More than once a week"; S1066 "Coat care is not difficult, requiring brushing once or twice a week."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1064', 'S1066'], 'refs' => ['welsh_springer_spaniel.suitability.rkc_grooming', 'welsh_springer_spaniel.suitability.vca_grooming']],
+                // S1064 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S1064'], 'refs' => ['welsh_springer_spaniel.suitability.rkc_shedding']],
+                // S1065 "… keeping them either on a leash or within a securely fenced area at all times."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S1065'], 'refs' => ['welsh_springer_spaniel.exercise.scent_drive']],
+                // S1065 "Their powerful sense of smell and strong prey drive are grounds for keeping them either on a leash or …"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S1065'], 'refs' => ['welsh_springer_spaniel.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

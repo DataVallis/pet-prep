@@ -931,6 +931,10 @@ return [
         ['key' => 'blue-ticked-tan', 'value' => 'dark blue ticked (thickly mottled) with black spots, a black head and tan markings', 'en' => 'Blue ticked with tan', 'sl' => 'Modro pegast z rjavimi oznakami'],
         ['key' => 'blue-ticked', 'value' => 'dark blue ticked (thickly mottled) with black spots and a black head', 'en' => 'Blue ticked', 'sl' => 'Modro pegast'],
     ],
+    // M5-R10-142: FCI-Standard N° 126 (S1062) rich red and white only; same value as breed_appearance.php.
+    'welsh_springer_spaniel' => [
+        ['key' => 'red-white', 'value' => 'rich red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

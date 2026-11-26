@@ -669,7 +669,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         fireEvent.press(screen.getByTestId('album-item-sleeping'));
         const playing = liveVideoPlayers().filter((p) => p.playing);
         expect(playing).toHaveLength(1);
-        expect(playing[0].source).toEqual({ uri: SLEEP, useCaching: true });
+        expect(playing[0].source).toEqual({ uri: SLEEP });
 
         fireEvent.press(screen.getByTestId('album-close'));
         expect(screen.queryByTestId('hud-album')).toBeNull();

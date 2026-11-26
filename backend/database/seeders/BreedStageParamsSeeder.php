@@ -1663,6 +1663,15 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_BLUETICK_COONHOUND_SENIOR = 'predlog Claude 2026-11-25 (najbližja vrstica pravila runbooka, M5-R10-141) — čaka Davida';
 
     /**
+     * M5-R10-142 Welsh Springer Spaniel (unattended run 2026-11-26, data.json proposed_game_parameters.welsh_springer_spaniel.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S1064 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 126 (0.75 × McMillan 2024 median 14.0 y, Dogs Trust table S123), arrival 2 / 9 / 36 / 126,
+     * learning multiplier 1.2 (Coren tier Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_WELSH_SPRINGER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-142)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -2136,6 +2145,11 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'week', 'S1056', 'Eyes, ears and mouth should be checked weekly, and getting puppies comfortable with handling early makes ongoing grooming much easier.', 'proposed_game_parameters.irish_terrier.ear_care', '"checked weekly" → once a week'],
             'groomer_visit' => [1, 'two_months', 'S1056', 'Many owners choose to have the coat clipped every couple of months by a professional groomer to keep it manageable.', 'proposed_game_parameters.irish_terrier.professional_grooming', '"every couple of months" → 2 months (8 program weeks; nails: "on a regular basis", no frequency → no task; bath: no source)'],
         ],
+        'welsh_springer_spaniel' => [
+            'tooth_brushing' => [7, 'day', 'S1067', 'Brush your dog\'s teeth daily and have your vet check them as well.', 'proposed_game_parameters.welsh_springer_spaniel.tooth_brushing', '"daily" → every day'],
+            'nail_trim' => [1, 'month', 'S1067', 'Your Welshie will also need a monthly bath and nail trimming.', 'proposed_game_parameters.welsh_springer_spaniel.nail_trimming', '"monthly … nail trimming" → every 4 weeks'],
+            'bath' => [1, 'month', 'S1067', 'Your Welshie will also need a monthly bath and nail trimming.', 'proposed_game_parameters.welsh_springer_spaniel.bathing', '"a monthly bath" → every 4 weeks (ears: "regularly", no frequency → no task; groomer: no source)'],
+        ],
     ];
 
     /**
@@ -2294,6 +2308,7 @@ class BreedStageParamsSeeder extends Seeder
         'kerry_blue_terrier' => [4, 'S1048', 'Brush and comb every other day, clip nails, clean ears, brush teeth', 'medium', true, self::PROPOSED_R13_KERRY_BLUE_TERRIER, 'VCA "every other day" (S1048) = 3.5 a week → 4 (half up) — Claude\'s proposal (the runbook grooming rule has no line for "every other day"; PetMD S1046 / WebMD S1047 "at least weekly" → 1 is the alternative), open for David.'],
         'irish_terrier' => [3, 'S1055', 'They have a medium length coat, which requires grooming 2 or 3 times per week.', 'high', false],
         'bluetick_coonhound' => [1, 'S1060', 'The Bluetick’s short fur needs only a once-a-week brushing to control shedding.', 'high', false],
+        'welsh_springer_spaniel' => [2, 'S1066', 'Coat care is not difficult, requiring brushing once or twice a week.', 'high', false],
     ];
 
     /**
@@ -2501,13 +2516,14 @@ class BreedStageParamsSeeder extends Seeder
         'bedlington_terrier' => ['S1040', 'Consistent socialization is important for Bedlington Terrier puppies to grow comfortable around new people.'],
         'kerry_blue_terrier' => ['S1047', 'Owners must be willing to spend time training and socializing their pets.'],
         'irish_terrier' => ['S1055', 'socialisation and training at a young age are very important'],
+        'welsh_springer_spaniel' => ['S1065', 'Early socialization and consistent training is especially important for dogs like Welshies.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier, BreedType::BluetickCoonhound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier, BreedType::BluetickCoonhound, BreedType::WelshSpringerSpaniel];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3367,6 +3383,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::KerryBlueTerrier => self::kerryBlueTerrierProfile(),
             BreedType::IrishTerrier => self::irishTerrierProfile(),
             BreedType::BluetickCoonhound => self::bluetickCoonhoundProfile(),
+            BreedType::WelshSpringerSpaniel => self::welshSpringerSpanielProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -13312,6 +13329,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'bluetick_coonhound.lifespan.petmd',
                 'quote' => 'average lifespan of 11–12 years',
                 'notes' => 'PetMD lower bound "11–12 years" (S1060); no McMillan 2024 / VetCompass median, no RKC band. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Welsh Springer Spaniel (M5-R10-142). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_WELSH_SPRINGER_SPANIEL); weight, growth and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function welshSpringerSpanielProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_WELSH_SPRINGER_SPANIEL;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.welsh_springer_spaniel.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [126, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 14.0 y (Dogs Trust table S123) = 10.5 y = 126 months. Not chosen: 90 (RKC lower bound "Over 10 years", S1064), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 126],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.welsh_springer_spaniel.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S1064', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S1064) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PetMD (S1065), VCA (S1066) and WebMD (S1067) give no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[15.9, 24.9], [
+                'unit' => 'kg', 'source_id' => 'S1065', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'welsh_springer_spaniel.adult_weight.petmd',
+                'quote' => 'ranging 35–55 pounds in weight and 17–19 inches in height.',
+                'notes' => 'PetMD (S1065): 35–55 lb ≈ 15.9–24.9 kg (one range for the breed). Neither standard gives a weight (FCI S1062, AKC S1069 "in proportion to height"). VCA 35–45 lb (S1066), WebMD males 50–55 lb (S1067).',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'welsh_springer_spaniel.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PetMD 35–55 lb, S1065 → the Medium class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'welsh_springer_spaniel.trainability.coren_rank',
+                'notes' => 'Listed under "Above Average Working Dogs" (S35, read 2026-11-26 through a Wikipedia mirror without rank numbers) — rank number not recorded; the tier decides the multiplier (Irish Terrier / Welsh Terrier precedent).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.welsh_springer_spaniel.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren tier "Above average" (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [14.0, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'welsh_springer_spaniel.lifespan.median_uk',
+                'quote' => 'Welsh Springer Spaniel 14.0 13.3 - 14.3 572 162',
+                'notes' => 'McMillan et al. 2024 median via the Dogs Trust table (S123) — the runbook\'s first choice. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
