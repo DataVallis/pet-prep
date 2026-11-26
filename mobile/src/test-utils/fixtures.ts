@@ -721,6 +721,7 @@ export function makeTakeOut(overrides: Partial<NonNullable<RawState['behaviour']
     clock_started_at: '2026-10-04T11:00:00+02:00',
     next_due_at: '2026-10-04T13:00:00+02:00',
     last_taken_out_at: '2026-10-04T11:00:00+02:00',
+    kind: 'regular' as const,
     ...overrides,
   };
 }

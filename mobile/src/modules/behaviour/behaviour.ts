@@ -40,6 +40,15 @@ const KINDS = BEHAVIOUR_KINDS;
 /** Kinds the cleaning game doesn't resolve (a toy for the slipper, the scratcher for the sofa). */
 const NOT_SCRUBBED: readonly BehaviourKind[] = ['chewing', 'scratching'];
 
+/**
+ * Which deadline `next_due_at` is (server `take_out.kind`, David 2026-11-26): the normal hold,
+ * the morning one (at / after the end of the night) or the evening one (the start of the night —
+ * the puppy must go out once more before bed). Older servers send none → read as `regular`.
+ */
+export type TakeOutKind = 'regular' | 'morning' | 'evening';
+
+const TAKE_OUT_KINDS: readonly TakeOutKind[] = ['regular', 'morning', 'evening'];
+
 /** The puppy's bladder clock; null when the pet has none (legacy, unborn, past the puppy stage). */
 export interface TakeOutClock {
   /** Hours the puppy holds today (~1 h per month of age). */
@@ -48,6 +57,8 @@ export interface TakeOutClock {
   /** When the accident would happen (counted only outside quiet hours, never inside them). */
   next_due_at: string;
   last_taken_out_at: string | null;
+  /** Absent from older servers (= `regular`). */
+  kind?: TakeOutKind;
 }
 
 export interface BehaviourEvent {
@@ -106,7 +117,14 @@ function readTakeOut(value: unknown): TakeOutClock | null {
   const started = iso(value.clock_started_at);
   const due = iso(value.next_due_at);
   if (!Number.isFinite(hold) || hold <= 0 || started === null || due === null) return null;
-  return { hold_hours: hold, clock_started_at: started, next_due_at: due, last_taken_out_at: iso(value.last_taken_out_at) };
+  const kind = typeof value.kind === 'string' && (TAKE_OUT_KINDS as readonly string[]).includes(value.kind) ? (value.kind as TakeOutKind) : null;
+  return {
+    hold_hours: hold,
+    clock_started_at: started,
+    next_due_at: due,
+    last_taken_out_at: iso(value.last_taken_out_at),
+    ...(kind !== null ? { kind } : {}),
+  };
 }
 
 function readEvents(value: unknown): BehaviourEvent[] {
@@ -204,14 +222,19 @@ export function sceneOf(events: readonly BehaviourEvent[]): BehaviourScene | nul
 
 // ── Optimistic effects of the child's own action ──────────────
 
-/** "Pelji ven": the clock restarts now; the next accident ~hold_hours later (server corrects quiet hours). */
+/**
+ * "Pelji ven": the clock restarts now; the next accident ~hold_hours later (server corrects quiet
+ * hours and the morning / evening deadline). The prediction is a plain hold, so `kind` is dropped.
+ */
 export function afterTakeOut(b: ChildBehaviour, nowMs: number): ChildBehaviour {
   if (b.take_out === null) return b;
   const now = new Date(nowMs).toISOString();
+  const { kind: _kind, ...clock } = b.take_out;
+  void _kind;
   return {
     ...b,
     take_out: {
-      ...b.take_out,
+      ...clock,
       clock_started_at: now,
       last_taken_out_at: now,
       next_due_at: new Date(nowMs + b.take_out.hold_hours * 3_600_000).toISOString(),
@@ -248,6 +271,8 @@ export const BEHAVIOUR_STRINGS = strings('behaviour', 'child', {
   nextTakeOutAt: (when: string) => t('behaviour:child.nextTakeOutAt', { when }),
   takeOutShortIn: (duration: string) => t('behaviour:child.takeOutShortIn', { duration }),
   takeOutShortAt: (when: string) => t('behaviour:child.takeOutShortAt', { when }),
+  /** David 2026-11-26: »Pred spanjem ven — najkasneje ob 21:00« (`time` from `familyClock` → `modules/time/clock.ts`). */
+  takeOutEvening: (time: string) => t('behaviour:child.takeOutEvening', { time }),
 });
 
 /** Every scene has a caption and a screen-reader label (compile-time check). */
@@ -331,6 +356,16 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
   }
   const level = takeOutLevel(minutes, clock.hold_hours);
   const howTo = BEHAVIOUR_STRINGS.takeOutHowTo;
+  // David 2026-11-26: the deadline is the start of the night — out once more before bed (card + pill).
+  if (clock.kind === 'evening') {
+    const time = familyClock(clock.next_due_at, timezone);
+    const dock = dockWhen(clock.next_due_at, new Date(serverNowMs).toISOString(), timezone);
+    if (time !== null) {
+      const text = BEHAVIOUR_STRINGS.takeOutEvening(time);
+      const hint = minutes <= TAKE_OUT_DURATION_MAX_MIN || dock === null ? durationText(minutes) : dock.day === null ? dock.text : dock;
+      return { line: text, hint, due: false, level, howTo, short: text };
+    }
+  }
   if (minutes <= TAKE_OUT_DURATION_MAX_MIN) {
     const d = durationText(minutes);
     return { line: BEHAVIOUR_STRINGS.takeOutIn(d), hint: d, due: false, level, howTo, short: BEHAVIOUR_STRINGS.takeOutShortIn(d) };

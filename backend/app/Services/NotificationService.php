@@ -238,13 +238,19 @@ class NotificationService
      * once per pet and family-local day (metric `morning:<Y-m-d>`, any status
      * counts) between the night's end and the deadline. Dropped at send time
      * when the morning deadline no longer stands (taken out, accident).
+     *
+     * Evening rule (David 2026-11-26): the same type with metric
+     * `evening:<Y-m-d>` — once per pet and pet-local day, from the start of
+     * the evening window (`behaviour.puppy.evening_window_minutes` before the
+     * night) while the deadline is the evening one (not out in the window
+     * yet), never in quiet hours (the caller), not when locked (send time).
      */
     public function takeOutReminder(Pet $pet): ?PushNotification
     {
         if (! config('push.enabled')) {
             return null;
         }
-        $metric = $this->morningTakeOutMetric($pet);
+        $metric = $this->takeOutReminderMetric($pet);
         if ($metric === null) {
             return null;
         }
@@ -258,17 +264,26 @@ class NotificationService
 
     /**
      * `morning:<local date of the night's end>` while the puppy's clock waits
-     * for its morning take-out and the deadline lies ahead; null otherwise.
+     * for its morning take-out and the deadline lies ahead;
+     * `evening:<local date of the night's start>` inside the evening window
+     * while the deadline is the evening one (David 2026-11-26); null otherwise.
      */
-    private function morningTakeOutMetric(Pet $pet): ?string
+    private function takeOutReminderMetric(Pet $pet): ?string
     {
         if ($pet->isCat()) {
             return null;
         }
         $clock = app(BehaviourEventService::class)->pottyClock($pet, $pet->quietHours());
         $now = now();
-        if ($clock === null || $clock['morning'] === null
-            || $clock['morning']->greaterThan($now) || ! $clock['due_at']->greaterThan($now)) {
+        if ($clock === null || ! $clock['due_at']->greaterThan($now)) {
+            return null;
+        }
+        if ($clock['evening'] !== null) {
+            $windowStart = $clock['evening']->subMinutes(max(0, (int) config('behaviour.puppy.evening_window_minutes', 0)));
+
+            return $windowStart->greaterThan($now) ? null : 'evening:'.$pet->localDate($clock['evening']);
+        }
+        if ($clock['morning'] === null || $clock['morning']->greaterThan($now)) {
             return null;
         }
 
@@ -513,8 +528,8 @@ class NotificationService
 
             return;
         }
-        // M5-R02 morning rule: the puppy was taken out (or had its accident) since the decision.
-        if ($type === PushType::TakeOutReminder && $this->morningTakeOutMetric($pet) !== $notification->metric) {
+        // M5-R02 morning / evening rule: the puppy was taken out (or had its accident) since the decision.
+        if ($type === PushType::TakeOutReminder && $this->takeOutReminderMetric($pet) !== $notification->metric) {
             $this->markSuppressed($notification, 'taken_out');
 
             return;
@@ -764,7 +779,7 @@ class NotificationService
     {
         // QA M5-R06-05 m2: the litter reminder is once per litter use (litterReminder), not per type.
         if ($type === PushType::LitterReminder || $type === PushType::TakeOutReminder) {
-            return false; // M5-R02: the morning reminder is once per day (takeOutReminder, metric)
+            return false; // M5-R02: the morning / evening reminder is once per day each (takeOutReminder, metric)
         }
         // M2-01d: once per certificate row (ChallengeCertificateService guards with
         // `notified_at`); two children of a shared pet may finish within minutes.

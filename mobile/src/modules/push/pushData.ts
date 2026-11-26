@@ -8,7 +8,8 @@ export const PUSH_TYPES = [
   'soft_warning',
   'critical_alert',
   'walk_reminder',
-  // M5-R02 morning rule (2026-11-08): the night ended, the puppy must go out soon (caretaker children).
+  // M5-R02 morning rule (2026-11-08): the night ended, the puppy must go out soon (caretaker children);
+  // since 2026-11-26 also the evening reminder before bed (same type, server metric `evening:<date>`).
   'take_out_reminder',
   'parent_intervention_alarm',
   'illness_triggered',

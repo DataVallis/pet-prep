@@ -86,6 +86,10 @@ return [
     // kmalu ven. Samo otrokom, brez imen; brez števila minut (rok se šteje izven tihih ur).
     'take_out_reminder' => 'Dobro jutro! Kuža mora po noči čim prej ven. Pritisni »Pelji ven«.',
 
+    // David 26. 11. 2026: začetek večernega okna (2 h pred nočnimi tihimi urami) — mladiček mora
+    // pred spanjem še ven. Samo otrokom, brez imen, enkrat na dan.
+    'take_out_reminder_evening' => 'Kuža mora pred spanjem še ven. Pritisni »Pelji ven«.',
+
     // David 9. 10. 2026: staršem vikamo (brand/README, glas) — pri obeh vrstah.
     'parent_alarm' => 'Vaš otrok danes ni poskrbel za psa.',
 
