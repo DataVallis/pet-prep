@@ -678,7 +678,8 @@ describe('breed search', () => {
     expect(find('english springer spaniel')).toEqual(['english_springer_spaniel']);
     expect(find('Angleški springer španjel')).toEqual(['english_springer_spaniel']);
     expect(find('angleski springer spanjel')).toEqual(['english_springer_spaniel']);
-    expect(find('springer')).toEqual(['english_springer_spaniel']);
+    // »springer« alone also finds the Welsh Springer Spaniel (M5-R10-142, substring of »welsh springer«).
+    expect(find('springer')).toEqual(['english_springer_spaniel', 'welsh_springer_spaniel']);
   });
 
   it('M5-R10-33: finds the Chihuahua by its EN / SL names, with and without the caron', () => {

@@ -48,7 +48,9 @@ enum PushType: string
      * day (metric `morning:<Y-m-d>`); decided at the first tick after the
      * night's end; dropped at send time once the puppy was taken out (or had
      * its accident), in quiet hours or while the pet is locked. Dog puppies
-     * with behaviour events only.
+     * with behaviour events only. Evening rule (David 2026-11-26): the same
+     * type with metric `evening:<Y-m-d>` at the start of the evening window
+     * before bedtime — »Kuža mora pred spanjem še ven …« (PushCopy by metric).
      */
     case TakeOutReminder = 'take_out_reminder';
 

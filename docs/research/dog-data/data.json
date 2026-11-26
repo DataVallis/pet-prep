@@ -72886,6 +72886,587 @@
       }
     }
   },
+  "welsh_springer_spaniel": {
+    "_note": "Added 2026-11-26 (M5-R10-142, unattended run — appended after the Bluetick Coonhound: AKC 2024 No. 138 'Welsh Springer Spaniel', S174 full-list table read 2026-11-26 '137 Bluetick Coonhound', '138 Welsh Springer Spaniel', '139 Smooth Fox Terrier'). Quotes as returned by the web-fetch tool on 2026-11-26 (after web searches; the tool limits quotes to ~125 characters — longer passages were returned as fragments); paraphrase only in notes, marked '(paraphrase)'. Sources S1062–S1069 (reused S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Standard: FCI-Standard N° 126 (S1062, English PDF; official valid standard published 08.09.2026 per S1062 / S1063). RKC Breeds A–Z page (S1064): Exercise 'More than 2 hours per day' → 120; Lifespan 'Over 10 years'; Breed Watch 'Category 1'. Lifespan: McMillan 2024 median 14.0 y in the Dogs Trust table (S123, row 'Welsh Springer Spaniel 14.0 13.3 - 14.3 572 162') → senior 126. Grooming: RKC 'More than once a week' has no number → VCA (S1066) 'once or twice a week' → 2. Coren: tier 'Above Average Working Dogs' (S35 IPFS mirror, no rank numbers) → 1.2. No standard gives a weight → PetMD (S1065, vet-reviewed) 35–55 lb. No PDSA or Woodgreen breed page exists (web searches 2026-11-26). Slovenian »velški springer španjel« (KZS-style, like »angleški springer španjel«; no KZS page fetched).",
+    "identity": {
+      "value": "FCI No. 126, Group 8 Section 2 (Flushing Dogs), Great Britain",
+      "unit": "—",
+      "source_id": "S1062",
+      "quote": "ORIGIN: Great Britain.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 126 (S1062): 'FCI-Standard N° 126'; 'FCI-CLASSIFICATION: Group 8 Retrievers-Flushing Dogs-Water Dogs / Section 2 Flushing Dogs / With working trial.'; 'UTILIZATION: Flushing dog.' FCI nomenclature page (S1063): 'WELSH SPRINGER SPANIEL (126)', country of origin 'GREAT BRITAIN', 'Recognized on a definitive basis' (definitive acceptance 12/30/1954). Great Britain is in FCI_ORIGINS (GB)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S1064",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "RKC key fact 'Size' (S1064) — runbook first choice. PetMD 35–55 lb (S1065) → the 'Medium (24–59 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            48,
+            48
+          ],
+          "female": [
+            46,
+            46
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1062",
+        "quote": "Approximate height: Males 48 cm at withers / Females 46 cm at withers",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 126 (S1062) 'SIZE' — one approximate height per sex (stored as [x, x]). AKC standard (S1069): 'A dog is ideally 18 to 19 inches in height at the withers and a bitch is 17 to 18 inches at the withers.' (≈ 46–48 / 43–46 cm); VCA (S1066) '17 to 19 inches'; PetMD (S1065) '17–19 inches'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                46,
+                48
+              ],
+              "female": [
+                43,
+                46
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S1069",
+            "quote": "A dog is ideally 18 to 19 inches in height at the withers and a bitch is 17 to 18 inches at the withers.",
+            "confidence": "high",
+            "notes": "AKC standard (S1069), inches converted (18–19 in ≈ 46–48 cm, 17–18 in ≈ 43–46 cm)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            15.9,
+            24.9
+          ],
+          "female": [
+            15.9,
+            24.9
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1065",
+        "quote": "ranging 35–55 pounds in weight and 17–19 inches in height.",
+        "confidence": "medium",
+        "notes": "PetMD (S1065, reviewed by Barri J. Morrison, DVM; updated Aug. 5, 2024) — one range for the breed (35–55 lb ≈ 15.9–24.9 kg, stored per sex). Neither standard gives a number: FCI (S1062) has height only; AKC (S1069) 'Weight should be in proportion to height and overall balance.' No RKC / PDSA / Woodgreen weight.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                15.9,
+                20.4
+              ],
+              "female": [
+                15.9,
+                20.4
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1066",
+            "quote": "35 to 45 pounds",
+            "confidence": "medium",
+            "notes": "VCA quick facts 'Weight' (S1066) — one range for the breed."
+          },
+          {
+            "value": {
+              "male": [
+                22.7,
+                24.9
+              ],
+              "female": [
+                20.4,
+                22.7
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1067",
+            "quote": "Males usually weigh from 50 to 55 pounds, with females weighing around 5 pounds less.",
+            "confidence": "medium",
+            "notes": "WebMD (S1067, medically reviewed) — females ≈ 45–50 lb (paraphrase of \"around 5 pounds less\")."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD 35–55 lb (S1065) → Medium. The puppy cap of 120 min is reached at 12 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Welsh Springer Spaniel growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 14.0,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Welsh Springer Spaniel 14.0 13.3 - 14.3 572 162",
+        "confidence": "high",
+        "notes": "Dogs Trust table of the McMillan et al. 2024 data (S123): median life expectancy 14.0 years (95 % CI 13.3–14.3, 572 dogs, 162 deceased) — the runbook's first choice. Background for the senior boundary only — never shown as a statistic in the app."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S1064",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S1064)."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1065",
+        "quote": "The average Welshie lifespan is 12–15 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S1065)."
+      },
+      "vca": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1066",
+        "quote": "12 to 15 years",
+        "confidence": "medium",
+        "notes": "VCA quick facts 'Life' (S1066)."
+      },
+      "webmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1067",
+        "quote": "The life span of the Welsh springer spaniel is 12 to 15 years, making them one of the longer-lived breeds.",
+        "confidence": "medium",
+        "notes": "WebMD (S1067)."
+      },
+      "wikipedia_2024_study": {
+        "value": 14,
+        "unit": "years",
+        "source_id": "S1068",
+        "quote": "A 2024 UK study found a life expectancy of 14 years for the breed",
+        "confidence": "low",
+        "notes": "Wikipedia (S1068, tier C) — agrees with the A/B table S123; cross-check only."
+      },
+      "senior_from": {
+        "value": 10.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × McMillan 2024 median 14.0 y (S123) → 0.75 × 14.0 × 12 = 126 months. Alternatives: 84 (Dogs Trust > 7 y, S14); 90 (RKC lower bound 10 y, S1064).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 126
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S1064",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (S1064) → rule 'more than N' → 120. No A/B source gives a lower number (PetMD, VCA, WebMD give no minutes).",
+        "alternatives": [
+          {
+            "value": null,
+            "unit": "minutes/day",
+            "source_id": "S1066",
+            "quote": "This is an active dog that needs a good deal of exercise.",
+            "notes": "VCA (S1066) — no number; quick facts: high — needs to walk every day, plus some running and play (paraphrase)."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "very active working gundog; a good deal of exercise every day, walks plus running and play",
+        "unit": "—",
+        "source_id": "S1066",
+        "quote": "This is an active dog that needs a good deal of exercise.",
+        "confidence": "high",
+        "notes": "VCA (S1066); FCI (S1062) 'Strong, merry and very active.'; WebMD (S1067) 'Dogs that are not used in the field need regular exercise.' Basis of active_family with the RKC value."
+      },
+      "scent_drive": {
+        "value": "strong sense of smell and prey drive — on a leash or in a securely fenced area at all times",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "Their powerful sense of smell and strong prey drive are grounds for keeping them either on a leash or within a securely fenced area at all times.",
+        "confidence": "high",
+        "notes": "PetMD (S1065) → secure_fencing (Bluetick Coonhound precedent: a source saying leash or fence at all times)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (RKC S1064, PetMD S1065, VCA S1066, WebMD S1067 asked: not mentioned) → no meal / exercise gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "strong, merry and very active; kindly disposition, never nervous",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Very ancient and distinct breed of pure origin. Strong, merry and very active. Kindly disposition. Never nervous. Showing aggression unacceptable.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062). AKC standard / breed page (S1069 family): 'a vigorous, medium-sized bird dog of happy disposition' (AKC breed page intro, paraphrase of the source family). VCA (S1066): 'steady with his family but aloof, even a bit shy, around strangers.'; WebMD (S1067): 'They love being with their human families but can be aloof with others.'"
+      },
+      "family": {
+        "value": "loving, loyal, even-tempered family dogs",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "Welsh Springer Spaniels can be incredibly loving, loyal, even-tempered family dogs.",
+        "confidence": "high",
+        "notes": "PetMD (S1065); WebMD (S1067) 'Welsh springers are affectionate family members and good with children.' Basis of family_pet."
+      },
+      "children": {
+        "value": "good with children; best with older children (VCA ideal owner); supervision always",
+        "unit": "—",
+        "source_id": "S1067",
+        "quote": "Welsh springers are affectionate family members and good with children.",
+        "confidence": "high",
+        "notes": "WebMD (S1067) — an explicit statement → children chip (runbook). VCA quick facts (S1066) 'With Kids' 'Excellent.' agrees; caveat kept here: VCA ideal owner 'Children' 'Older kids.' → no small_children chip. Wikipedia (S1068, C): 'friendly and demonstrative to all members of the family, especially children,'."
+      },
+      "other_pets": {
+        "value": "strong prey drive — not for homes with small pets; usually fine with other dogs, cats when socialised and supervised",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "Their powerful sense of smell and strong prey drive are grounds for keeping them either on a leash or within a securely fenced area at all times.",
+        "confidence": "high",
+        "notes": "PetMD (S1065) names a strong prey drive → chases_small_pets (runbook). Also PetMD: 'They also shouldn't join homes with small pets like birds and bunnies for the same reasons.'; 'This breed can get along well with other dogs and even cats when properly socialized, introduced, and supervised.' VCA (S1066): 'He's generally good with other dogs and pets.'; WebMD (S1067): 'They usually get along well with other dogs.' Conflicting on small pets → no other_pets chip."
+      },
+      "time_alone": {
+        "value": "needs a family that is present; fine alone with plenty of exercise first",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "First and foremost, Welsh Springer Spaniels need a family that is present.",
+        "confidence": "medium",
+        "notes": "PetMD (S1065). VCA quick facts (S1066) 'Home Alone' 'Fine with lots of exercise first.' Separation anxiety only in Wikipedia (S1068, C: 'Some Welsh Springers can become clingy towards their owners and suffer separation anxiety when alone.') → no needs_company chip (no A/B separation-anxiety statement; open for David)."
+      },
+      "socialisation": {
+        "value": "early socialisation and consistent training especially important",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "Early socialization and consistent training is especially important for dogs like Welshies.",
+        "confidence": "high",
+        "notes": "PetMD (S1065) — a need → breed DOG_SOCIALISATION entry (M5-R17). WebMD (S1067): aloof with others (paraphrase)."
+      },
+      "training": {
+        "value": "smart, eager to please, easy to train with positive reinforcement",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "Welshies are smart dogs that are easy to train with positive reinforcement.",
+        "confidence": "medium",
+        "notes": "PetMD (S1065). VCA (S1066): 'This is neither a particularly difficult nor easy breed to train.'; quick facts 'Eager to please, Fast learner'."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed statement: PetMD (S1065) mentions chewing only as a possible boredom behaviour '(and potentially other unwanted behaviors like chewing)' (fragment) — not a breed trait; no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": "motivated by food or play",
+        "unit": "—",
+        "source_id": "S1066",
+        "quote": "Give them enough motivation, usually in the form of food or play, and they'll be eating out of your hand.",
+        "confidence": "low",
+        "notes": "VCA (S1066) — a training remark, no weight-gain statement → no food_motivated_weight chip."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S1064): 'Currently no points of concern specific to this breed have been identified for special attention by judges, other than those covered routinely by The Kennel Club's breed standard.' → no welfare chip, in marketing. Breeder checklist: RKC 'Prioritising genetic diversity' and the BVA/KC/ISDS eye scheme with gonioscopy (minimum), BVA/KC hip scheme (best practice). WebMD's 1997 hip-score ranking is a statistic → not recorded as a value.",
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S1067",
+        "quote": "Welsh springers are among the breeds at risk for epilepsy.",
+        "confidence": "high",
+        "notes": "WebMD (S1067); VCA (S1066) \"Epilepsy, glaucoma, and ear infections are also concerns, but less so.\" Register health key epilepsy."
+      },
+      "glaucoma": {
+        "value": "narrow-angle (closed-angle) glaucoma",
+        "unit": "—",
+        "source_id": "S1067",
+        "quote": "Welsh springers are prone to a certain type of glaucoma.",
+        "confidence": "high",
+        "notes": "WebMD (S1067); PetMD (S1065) names narrow-angle glaucoma (paraphrase); RKC minimum test 'Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme' (S1064). Register health key glaucoma."
+      },
+      "ear_infections": {
+        "value": "ear infections",
+        "unit": "—",
+        "source_id": "S1066",
+        "quote": "Epilepsy, glaucoma, and ear infections are also concerns, but less so.",
+        "confidence": "medium",
+        "notes": "VCA (S1066); WebMD (S1067) 'Spaniels can have ear problems, so check your pet's ears regularly.' (no frequency → no ear task). Register health key ear_infections_long_ears."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S1065) and VCA (S1066, \"major concern\") name hip dysplasia (paraphrase — no verbatim sentence returned); RKC best practice hip scheme (S1064). Background only; no register key taken from a paraphrase."
+      },
+      "other": {
+        "value": "elbow dysplasia, hypothyroidism, entropion, distichiasis",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S1065) list (paraphrase). Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia list of Coren's ranking (S35, read 2026-11-26 through the IPFS mirror https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/The_Intelligence_of_Dogs): 'Welsh Springer Spaniel' is listed under 'Above Average Working Dogs' between 'Briard' and 'Australian Shepherd'; the mirror shows no rank numbers; en.wikipedia.org refused (PROVENANCE_REQUIRED). Rank number not recorded; the tier decides the multiplier (Above average, ranks 27–39 → 1.2; Welsh Terrier / Irish Terrier precedent). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above Average Working Dogs",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Above Average Working Dogs",
+        "confidence": "medium",
+        "notes": "S35 tier heading as returned (ranks 27–39)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.welsh_springer_spaniel.learning_multiplier (1.2, runbook rule: Above average).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "symmetrical, compact, not leggy gundog built for endurance and hard work; quick, active mover",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Symmetrical, compact, not leggy, obviously built for endurance and hard work. Quick and active mover, displaying plenty of push and drive.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062)."
+      },
+      "colours": {
+        "value": [
+          "rich red and white"
+        ],
+        "unit": "list (named standard colours)",
+        "source_id": "S1062",
+        "quote": "Rich red and white only.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062); AKC standard (S1069): 'The color is rich red and white only. Any pattern is acceptable and any white area may be flecked with red ticking.' One colour combination → no colour variants; never any other colour (no black, liver or tricolour — those are the English Springer's)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): rich red and white 100 (the only standard colour)."
+      },
+      "coat": {
+        "value": "straight or flat, silky, dense, never wiry or wavy; moderate feathering on legs, light on ears and tail",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Straight or flat, silky texture, dense, never wiry or wavy. Curly coat highly undesirable.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062); 'Forelegs and hindlegs above hocks moderately feathered, ears and tail lightly feathered.' RKC (S1064) 'Coat length' 'Medium'."
+      },
+      "ears": {
+        "value": "set moderately low, hanging close to the cheeks; comparatively small, narrowing to the tip, shaped like a vine leaf",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Set moderately low and hanging close to cheeks. Comparatively small and gradually narrowing towards tip and shaped somewhat like a vine leaf.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062)."
+      },
+      "eyes": {
+        "value": "hazel or dark, medium size, neither prominent nor sunken",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Hazel or dark, medium size, neither prominent, nor sunken, not showing haw.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062)."
+      },
+      "nose": {
+        "value": "flesh-coloured to dark, nostrils well developed",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Flesh coloured to dark, nostrils well developed.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062); muzzle 'Of medium length, straight, fairly square.'"
+      },
+      "tail": {
+        "value": "well set on and low, never carried above the level of the back, lively; natural (undocked) feathered tail in the game",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Previously customarily docked. Well set on and low, never carried above level of back. Lively in action.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062); 'Undocked: Feathered. In balance with the rest of the dog.' AKC (S1069): 'The tail is generally docked and displays a lively action.' — the portrait shows a natural tail (Welsh Terrier / German Shorthaired Pointer precedent)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S1064, incl. Breed Watch), PetMD (S1065), VCA (S1066), WebMD (S1067). No PDSA or Woodgreen breed page.",
+      "rkc_exercise": {
+        "value": "more than 2 hours per day",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1064) → 120 min."
+      },
+      "rkc_size_of_home": {
+        "value": "small house",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S1064) — not 'Flat/ Apartment' → no apartment chip; not 'Large house'."
+      },
+      "rkc_size_of_garden": {
+        "value": "large garden",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S1064)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S1064) — no number → VCA 'once or twice a week' (runbook »Dog grooming«)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S1064)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S1064); no source says otherwise → sheds chip."
+      },
+      "rkc_lifespan": {
+        "value": "over 10 years",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S1064) — not 'Under 10 years' → no shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "either",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S1064)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "yes",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S1064) — background (few UK registrations); no chip."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S1064) Breed Watch: 'Currently no points of concern specific to this breed have been identified for special attention by judges, other than those covered routinely by The Kennel Club's breed standard.'"
+      },
+      "vca_grooming": {
+        "value": "brushing once or twice a week",
+        "unit": "—",
+        "source_id": "S1066",
+        "quote": "Coat care is not difficult, requiring brushing once or twice a week.",
+        "confidence": "high",
+        "notes": "VCA (S1066) → brushing 2× a week (range upper bound, runbook »Dog grooming«); quick facts 'Brush a few times a week.'"
+      },
+      "petmd_grooming": {
+        "value": "once-a-week brushing",
+        "unit": "—",
+        "source_id": "S1065",
+        "quote": "Typically, a once-a-week brushing is all that's needed.",
+        "confidence": "high",
+        "notes": "PetMD (S1065) → 1 (alternative); 'Plan on thoroughly brushing your Welsh Springer Spaniel's coat at least once a week to keep it healthy and free from mats.' WebMD (S1067) 'A good brushing at least once a week should do.' → 1 (alternative)."
+      },
+      "webmd_teeth": {
+        "value": "tooth brushing every day",
+        "unit": "—",
+        "source_id": "S1067",
+        "quote": "Brush your dog's teeth daily and have your vet check them as well.",
+        "confidence": "high",
+        "notes": "WebMD (S1067) → tooth brushing every day (M5-R15 child task)."
+      },
+      "webmd_bath_nails": {
+        "value": "a monthly bath and nail trimming",
+        "unit": "—",
+        "source_id": "S1067",
+        "quote": "Your Welshie will also need a monthly bath and nail trimming.",
+        "confidence": "high",
+        "notes": "WebMD (S1067) → bath reminder every 4 weeks (M5-R14 parent reminder) and nail trimming every 4 weeks (M5-R19 child task)."
+      },
+      "webmd_ears": {
+        "value": "ears checked regularly",
+        "unit": "—",
+        "source_id": "S1067",
+        "quote": "Spaniels can have ear problems, so check your pet's ears regularly.",
+        "confidence": "medium",
+        "notes": "WebMD (S1067) — no frequency (PetMD S1065: 'Talk to your veterinary team about how and how often you should clean your dog's ears.') → no ear task (runbook »Breed care tasks«)."
+      },
+      "vca_children": {
+        "value": "with kids: excellent; ideal owner: older kids",
+        "unit": "—",
+        "source_id": "S1066",
+        "quote": "Excellent.",
+        "confidence": "medium",
+        "notes": "VCA quick facts 'With Kids' (S1066); ideal owner table 'Children' 'Older kids.' → no small_children chip."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -109298,6 +109879,312 @@
         "confidence": "high",
         "notes": "Standard (S1061) as in bluetick_coonhound.appearance. Two looks (with / without tan); weights unsourced (verified=false). Not a welfare breed; dog breeds have no features key — `nose` trait (Irish Terrier precedent).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue ticked with tan is the portrait default (PetMD S1060 'commonly sport tan markings' — Claude's reading; weights unsourced); standard colours only; natural tail"
+      }
+    },
+    "welsh_springer_spaniel": {
+      "_note": "Unattended run M5-R10-142 (2026-11-26): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S1064 'More than 2 hours per day' → 120). Senior boundary 126 from the McMillan 2024 median 14.0 y (Dogs Trust table S123). Learning 1.2 (Coren 'Above Average Working Dogs' tier, S35). Built: brushing 2× a week (RKC 'More than once a week' → VCA 'once or twice a week', M5-R13), puppy socialisation with the PetMD quote (S1065, M5-R17), tooth brushing every day (WebMD S1067, M5-R15), nail trimming every 4 weeks and a bath reminder every 4 weeks (WebMD S1067 'a monthly bath and nail trimming', M5-R19 / M5-R14). No ear task (no frequency), no groomer reminder (no source), no meal gap (no quote), no heat warning (not flat-faced). No new vocabulary key. Not a welfare breed (RKC Breed Watch Category 1) → in marketing. Never hypoallergenic. No proposal (verified=false) in this breed.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S1064",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1064) → rule 'more than N' → 120. PetMD (S1065), VCA (S1066) and WebMD (S1067) give no number ('a good deal of exercise', 'regular exercise').",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S1064 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S1064",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 126 = round(0.75 × 14.0 y × 12) (S11 + McMillan 2024 median 14.0 y, Dogs Trust table S123).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_rkc_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 126 (0.75 × McMillan 2024 median 14.0 y, S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 126)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren tier 'Above Average Working Dogs' (S35; ranks 27–39 — see welsh_springer_spaniel.trainability.coren_tier) → 1.2. Rank number not readable in the mirror. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren 'Above average' tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1066",
+        "quote": "Coat care is not difficult, requiring brushing once or twice a week.",
+        "confidence": "high",
+        "notes": "welsh_springer_spaniel.suitability.vca_grooming. RKC 'More than once a week' (S1064) has no number → the most specific number of another A/B source: VCA 'once or twice a week' → the upper bound 2 (runbook »Dog grooming«; English Springer Spaniel precedent). Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S1065",
+            "quote": "Typically, a once-a-week brushing is all that's needed.",
+            "notes": "PetMD — 'once-a-week' → 1 (agrees less with RKC 'More than once a week')."
+          },
+          {
+            "value": 1,
+            "source_id": "S1067",
+            "quote": "A good brushing at least once a week should do.",
+            "notes": "WebMD — 'at least once a week' → 1."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → VCA »once or twice a week« → 2); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": [
+          7,
+          7
+        ],
+        "unit": "[times, period days] — child task (M5-R15)",
+        "source_id": "S1067",
+        "quote": "Brush your dog's teeth daily and have your vet check them as well.",
+        "confidence": "high",
+        "notes": "welsh_springer_spaniel.suitability.webmd_teeth. 'daily' → every day (7 per program week). Built: DOG_CARE_TASKS tooth_brushing [7, day].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): ščetkanje zob vsak dan (WebMD »daily«)"
+      },
+      "nail_trimming": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R19)",
+        "source_id": "S1067",
+        "quote": "Your Welshie will also need a monthly bath and nail trimming.",
+        "confidence": "high",
+        "notes": "welsh_springer_spaniel.suitability.webmd_bath_nails. 'monthly … nail trimming' → every 4 weeks (a month = 4 program weeks). Built: DOG_CARE_TASKS nail_trim [1, month].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): striženje krempljev enkrat na mesec (WebMD »monthly bath and nail trimming«)"
+      },
+      "bathing": {
+        "value": [
+          1,
+          28
+        ],
+        "unit": "[times, period days] — parent reminder, never scored (M5-R14)",
+        "source_id": "S1067",
+        "quote": "Your Welshie will also need a monthly bath and nail trimming.",
+        "confidence": "high",
+        "notes": "welsh_springer_spaniel.suitability.webmd_bath_nails. 'a monthly bath' → every 4 weeks. Built: DOG_CARE_TASKS bath [1, month].",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): kopanje enkrat na mesec (WebMD »a monthly bath«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1065",
+        "quote": "Early socialization and consistent training is especially important for dogs like Welshies.",
+        "confidence": "high",
+        "notes": "welsh_springer_spaniel.behaviour.socialisation (PetMD S1065, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1065)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-142); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1064",
+              "S1066"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.exercise.adult",
+              "welsh_springer_spaniel.exercise.daily_text"
+            ],
+            "quote": "S1064 'More than 2 hours per day'; S1066 'This is an active dog that needs a good deal of exercise.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1065"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.behaviour.family"
+            ],
+            "quote": "S1065 'Welsh Springer Spaniels can be incredibly loving, loyal, even-tempered family dogs.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1067"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.behaviour.children"
+            ],
+            "quote": "S1067 'Welsh springers are affectionate family members and good with children.' (VCA ideal owner 'Older kids.' and supervision — caveats in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1064"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.exercise.adult",
+              "welsh_springer_spaniel.suitability.rkc_exercise"
+            ],
+            "quote": "S1064 'More than 2 hours per day'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 2 hours or more a day (English Springer Spaniel precedent)"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1064",
+              "S1066"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.suitability.rkc_grooming",
+              "welsh_springer_spaniel.suitability.vca_grooming"
+            ],
+            "quote": "S1064 'More than once a week'; S1066 'Coat care is not difficult, requiring brushing once or twice a week.'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): brushing more than once a week (English Springer Spaniel precedent)"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1064"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.suitability.rkc_shedding"
+            ],
+            "quote": "S1064 'Sheds' 'Yes'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1065"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.exercise.scent_drive"
+            ],
+            "quote": "S1065 'Their powerful sense of smell and strong prey drive are grounds for keeping them either on a leash or within a securely fenced area at all times.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1065"
+            ],
+            "refs": [
+              "welsh_springer_spaniel.behaviour.other_pets"
+            ],
+            "quote": "S1065 'Their powerful sense of smell and strong prey drive are grounds for keeping them either on a leash or within a securely fenced area at all times.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA ideal owner 'Older kids.' (S1066) — no rating for small children.",
+          "apartment": "RKC 'Small house' (S1064), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S1064).",
+          "other_pets": "PetMD 'shouldn't join homes with small pets' vs VCA 'generally good with other dogs and pets' — conflicting → no chip.",
+          "needs_company": "Separation anxiety only in Wikipedia (S1068, tier C); PetMD \"need a family that is present\" is no separation-anxiety statement → open for David.",
+          "low_shedding": "RKC 'Sheds' 'Yes'.",
+          "food_motivated_weight": "VCA food motivation is a training remark; no weight-gain statement.",
+          "experienced_owner": "No source names it; PetMD \"easy to train\".",
+          "shorter_lifespan": "RKC 'Over 10 years'; McMillan 14.0 y.",
+          "welfare_chip": "RKC Breed Watch Category 1, no points of concern (S1064).",
+          "hypoallergenic": "never (runbook)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1064",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 1 with no points of concern (S1064). Marketing never promises the breed's health, never shows a docked tail as a goal and never confuses it with the English Springer Spaniel.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no conformation welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Welsh Springer Spaniel, rich red and white (the only standard colour): symmetrical, compact, not leggy medium-sized gundog built for endurance; straight or flat, silky, dense coat, rich red patches on white with moderate feathering on the legs and light feathering on the ears and tail; comparatively small vine-leaf-shaped ears set moderately low and hanging close to the cheeks; hazel or dark eyes; medium-length, straight, fairly square muzzle; flesh-coloured to dark nose; natural feathered tail carried low, never above the back; never black, liver or tricolour",
+        "unit": "—",
+        "source_id": "S1062",
+        "quote": "Rich red and white only.",
+        "confidence": "high",
+        "notes": "FCI standard (S1062) as in welsh_springer_spaniel.appearance. One standard colour; weight unsourced (verified=false). Not a welfare breed; `nose` dog trait for the flesh-coloured to dark nose (Irish Terrier precedent).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): rich red and white is the portrait default (the only standard colour, FCI S1062 / AKC S1069); natural tail"
       }
     }
   }
