@@ -52,7 +52,7 @@
 - Po pritisku kratek zaslon: animacija (kuža na travi) → »✓ Kuža je opravil potrebo. Naslednjič čez ~X h.« + točke.
 - Ura se vidno ponastavi z animacijo, ne »tiho«.
 - Isti vzorec potrditve velja za vsa dejanja (hrana, voda, čiščenje, česanje).
-- *M5-T20 (David 24. 11. 2026):* med posnetkom skled po hrani / vodi (in po priboljšku s posnetkom) so gumbi za nego zaposleni in pritisk se prezre — od pritiska do konca posnetka, največ 5 s, samo ko se posnetek res predvaja (PRODUCT_SPEC §8 »Ena skrb naenkrat«). Aplikacija: `mobile/src/modules/childPet/careBeat.ts`.
+- *M5-T20 (David 24. 11. 2026):* med posnetkom skled po hrani / vodi (in po priboljšku s posnetkom) so gumbi za nego zaposleni in pritisk se prezre — od pritiska do konca posnetka, največ 5 s, samo ko se posnetek res predvaja (PRODUCT_SPEC §8 »Ena skrb naenkrat«). Aplikacija: `mobile/src/modules/childPet/careBeat.ts`. **Videz med čakanjem (David 26. 11. 2026):** zaposlen gumb rahlo zbledi (prosojnost 35 %, 180 ms, brez animacije ob »zmanjšaj gibanje«) skupaj z napisom pod njim in med tem nikoli ne sveti kot »na vrsti« — prej je svetel gumb, ki se ga ni dalo pritisniti, izgledal kot napaka.
 - *Stanje M5-T01 (21. 10. 2026):* zgrajena potrditvena kartica »✓ … Naslednjič čez ~X h.« (pelji ven; hrana → naslednji obrok, voda → kdaj spet, čiščenje brez »naslednjič«) in kratka animacija ponastavitve ure. **Točk ni** — David 21. 10. 2026: »ne zdaj«, potrditev po dejanju ne kaže točk, Care Score ostane v poročilu; animacija »kuža na travi« čaka na medije (M5-T08). Česanje svojo potrditev že kaže v lastni igri.
 
 ## 5. Mini navodila

@@ -172,6 +172,8 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-26 (mobile, `fix/busy-button-fade`)
+- Zaposlen gumb za nego (»ena skrb naenkrat«) zdaj rahlo zbledi skupaj z napisom in ne sveti več kot »na vrsti« (David: svetel, a neklikabilen gumb je izgledal kot napaka). Samo JS / OTA.
 ### 2026-11-26 (claude.ai chat, docs only, `docs/sustainability-impact`)
 - New `docs/business/SUSTAINABILITY.md` (David: »zelena nota zaradi razpisov«): three pillars, what we may honestly claim and what not, proposals T1–T5 (post-challenge decision question, pet footprint in the real-cost tool, shelter partnership, DNSH one-pager, hosting check). **Proposal only — David has not decided**; no code.
 ### 2026-11-26 (backend + mobile, `feat/puppy-evening-take-out`)

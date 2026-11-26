@@ -3,6 +3,7 @@ import { Animated, Easing, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { alpha, palette } from '@/theme';
 import { toDockHint, type DockHint } from '@/modules/childPet/dockHint';
+import { useReduceMotion } from '@/hooks/useReduceMotion';
 
 /**
  * Dock texts may grow with the system text size only this far (375 pt, five buttons);
@@ -49,6 +50,26 @@ const PULSE_SCALE = 1.08;
 const PULSE_HALF_MS = 600;
 
 /** The scale of a gently pulsing button (1 when not pulsing). */
+/** Fade a busy button (care beat / request in flight) so it reads as waiting, not broken. */
+export const BUSY_OPACITY = 0.35;
+const BUSY_FADE_MS = 180;
+
+function useBusyFade(busy: boolean): Animated.Value {
+  const reduceMotion = useReduceMotion();
+  const opacity = useRef(new Animated.Value(busy ? BUSY_OPACITY : 1)).current;
+  useEffect(() => {
+    const to = busy ? BUSY_OPACITY : 1;
+    if (reduceMotion) {
+      opacity.setValue(to);
+      return undefined;
+    }
+    const anim = Animated.timing(opacity, { toValue: to, duration: BUSY_FADE_MS, easing: Easing.out(Easing.quad), useNativeDriver: true });
+    anim.start();
+    return () => anim.stop();
+  }, [busy, reduceMotion, opacity]);
+  return opacity;
+}
+
 function usePulse(active: boolean): Animated.Value {
   const scale = useRef(new Animated.Value(1)).current;
   useEffect(() => {
@@ -90,11 +111,15 @@ export default function ActionButton({
 }: ActionButtonProps) {
   const blocked = disabled === true || busy === true;
   const dock = toDockHint(hint);
-  const pulsing = pulse === true && disabled !== true;
+  const isBusy = busy === true && disabled !== true;
+  // A busy button never glows as »due« (David 2026-11-26: a lit button you can't press looked like a bug).
+  const glow = due === true && !isBusy;
+  const pulsing = pulse === true && disabled !== true && !isBusy;
   const scale = usePulse(pulsing);
+  const fade = useBusyFade(isBusy);
   return (
     <View style={[styles.container, compact && styles.containerCompact]} testID={testID ? `${testID}-slot` : undefined}>
-      <Animated.View style={{ transform: [{ scale }] }} testID={testID && pulsing ? `${testID}-pulse` : undefined}>
+      <Animated.View style={{ transform: [{ scale }], opacity: fade }} testID={testID && pulsing ? `${testID}-pulse` : undefined}>
       <Pressable
         testID={testID}
         onPress={onPress}
@@ -106,9 +131,8 @@ export default function ActionButton({
         style={({ pressed }) => [
           styles.button,
           compact && styles.buttonCompact,
-          disabled ? styles.buttonDisabled : due ? styles.buttonDue : styles.buttonActive,
-          busy && styles.buttonBusy,
-          pressed && !blocked && (due && !disabled ? styles.buttonDuePressed : styles.buttonPressed),
+          disabled ? styles.buttonDisabled : glow ? styles.buttonDue : styles.buttonActive,
+          pressed && !blocked && (glow ? styles.buttonDuePressed : styles.buttonPressed),
         ]}
       >
         {icon}
@@ -116,8 +140,8 @@ export default function ActionButton({
       </Animated.View>
 
       {/* Visible texts are hidden from the screen reader: the Pressable's label says it all. */}
-      <View
-        style={styles.texts}
+      <Animated.View
+        style={[styles.texts, { opacity: fade }]}
         accessibilityElementsHidden
         importantForAccessibility="no-hide-descendants"
         testID={testID ? `${testID}-texts` : undefined}
@@ -126,7 +150,7 @@ export default function ActionButton({
         style={[
           styles.label,
           compact && styles.labelCompact,
-          disabled ? styles.labelDisabled : due ? styles.labelDue : styles.labelActive,
+          disabled ? styles.labelDisabled : glow ? styles.labelDue : styles.labelActive,
         ]}
         numberOfLines={2}
         adjustsFontSizeToFit
@@ -163,7 +187,7 @@ export default function ActionButton({
           </Text>
         </View>
       ) : null}
-      </View>
+      </Animated.View>
     </View>
   );
 }
@@ -223,9 +247,6 @@ const styles = StyleSheet.create({
     borderColor: alpha(palette.white, 0.08),
     backgroundColor: alpha(palette.n850, 0.45),
     opacity: 0.5,
-  },
-  buttonBusy: {
-    opacity: 0.7,
   },
   buttonPressed: {
     transform: [{ scale: 0.9 }],
