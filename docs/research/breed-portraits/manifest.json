@@ -1738,6 +1738,19 @@
             "prompt_hash": "sha256:d08d5ce4ead15f729c5a62646be7588014f3c608ab4a35c0b0db73947de364a6",
             "generated_at": "2026-11-25T07:01:44+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "welsh_springer_spaniel",
+            "species": "dog",
+            "colour": "red-white",
+            "file": "dog/welsh-springer-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:1fdcaf8a24ce937580a3a82d6fd8c047a7090e73ec1962db14ed1003cb3a5eb9",
+            "generated_at": "2026-11-26T20:55:17+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
