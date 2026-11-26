@@ -71,7 +71,8 @@
         "sl": "Delovni čas 10–17, ned–pet. Vnaprej pokličite; 9801912476 je tudi reševalna linija KAT za živali v stiski.",
         "hr": "Radno vrijeme 10:00–17:00, ned–pet. Nazovi unaprijed; 9801912476 je ujedno KAT linija za spašavanje životinja u nevolji.",
         "de": "Sprechzeiten So–Fr 10.00–17.00 Uhr. Bitte vorher anrufen; 9801912476 ist zugleich die KAT-Rettungsnummer für Tiere in Not.",
-        "fr": "Horaires 10 h–17 h, du dimanche au vendredi. Appelez avant de venir ; le 9801912476 est aussi la ligne de sauvetage KAT pour les animaux en détresse."
+        "fr": "Horaires 10 h–17 h, du dimanche au vendredi. Appelez avant de venir ; le 9801912476 est aussi la ligne de sauvetage KAT pour les animaux en détresse.",
+        "es": "Horario 10:00–17:00 h, de domingo a viernes. Llama antes; 9801912476 es también la línea de rescate KAT para animales en apuros."
       }
     },
     {
@@ -100,7 +101,8 @@
         "sl": "Odprto vsak dan 8.30–18.30; nujna pomoč 24 ur na dan. Vnaprej pokličite.",
         "hr": "Radi svaki dan 8:30–18:30; hitna služba dostupna 24 sata. Nazovi unaprijed.",
         "de": "Täglich 8.30–18.30 Uhr geöffnet; Notdienst rund um die Uhr. Bitte vorher anrufen.",
-        "fr": "Ouvert tous les jours 8 h 30–18 h 30 ; urgences assurées 24 h/24. Appelez avant de venir."
+        "fr": "Ouvert tous les jours 8 h 30–18 h 30 ; urgences assurées 24 h/24. Appelez avant de venir.",
+        "es": "Abierto a diario 8:30–18:30 h; urgencias las 24 horas. Llama antes."
       }
     },
     {
@@ -129,7 +131,8 @@
         "sl": "Odprto 24 ur na dan, 365 dni v letu, z nujno pomočjo. Samo psi in mačke.",
         "hr": "Radi 24 sata, 365 dana u godini, s hitnom službom. Samo psi i mačke.",
         "de": "Rund um die Uhr geöffnet, 365 Tage im Jahr, mit Notdienst. Nur Hunde und Katzen.",
-        "fr": "Ouvert 24 h/24, 365 jours par an, avec service d’urgences. Chiens et chats uniquement."
+        "fr": "Ouvert 24 h/24, 365 jours par an, avec service d’urgences. Chiens et chats uniquement.",
+        "es": "Abierto las 24 horas, 365 días al año, con servicio de urgencias. Solo perros y gatos."
       }
     },
     {
@@ -158,7 +161,8 @@
         "sl": "Odprto 24 ur na dan, vse dni v tednu.",
         "hr": "Radi 24 sata, 7 dana u tjednu.",
         "de": "Rund um die Uhr geöffnet, 7 Tage die Woche.",
-        "fr": "Ouvert 24 h/24, 7 j/7."
+        "fr": "Ouvert 24 h/24, 7 j/7.",
+        "es": "Abierto las 24 horas, los 7 días de la semana."
       }
     },
     {
@@ -187,7 +191,8 @@
         "sl": "Nujna in redna oskrba. Za delovni čas vnaprej pokličite.",
         "hr": "Hitna i redovna služba. Nazovi unaprijed za radno vrijeme.",
         "de": "Notfälle und reguläre Behandlungen. Öffnungszeiten bitte telefonisch erfragen.",
-        "fr": "Urgences et consultations courantes. Appelez pour connaître les horaires."
+        "fr": "Urgences et consultations courantes. Appelez pour connaître les horaires.",
+        "es": "Servicios de urgencias y no urgentes. Llama antes para consultar el horario."
       }
     },
     {
@@ -216,7 +221,8 @@
         "sl": "Odprto le nekaj ur na dan; vnaprej pokličite.",
         "hr": "Radi samo nekoliko sati dnevno; nazovi unaprijed.",
         "de": "Nur wenige Stunden am Tag geöffnet; bitte vorher anrufen.",
-        "fr": "Ouvert seulement quelques heures par jour ; appelez avant de venir."
+        "fr": "Ouvert seulement quelques heures par jour ; appelez avant de venir.",
+        "es": "Abierto solo unas horas al día; llama antes."
       }
     },
     {
@@ -245,7 +251,8 @@
         "sl": "Državna napotna bolnišnica; začetek dela ob 10. uri. Nujne službe ne nudi.",
         "hr": "Državna referentna bolnica; radi od 10:00. Nema hitne službe.",
         "de": "Staatliche Überweisungsklinik; Betrieb ab 10.00 Uhr. Kein Notdienst.",
-        "fr": "Hôpital public de référence ; service à partir de 10 h. Pas de service d’urgences."
+        "fr": "Hôpital public de référence ; service à partir de 10 h. Pas de service d’urgences.",
+        "es": "Hospital público de referencia; atiende desde las 10:00 h. Sin servicio de urgencias."
       }
     }
   ],

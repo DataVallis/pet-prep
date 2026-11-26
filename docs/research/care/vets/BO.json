@@ -58,7 +58,8 @@
         "sl": "24-urna oskrba za vse nujne primere; vnaprej pokličite.",
         "hr": "Skrb 24 sata za sve hitne slučajeve; nazovi unaprijed.",
         "de": "Versorgung aller Notfälle rund um die Uhr; bitte vorher anrufen.",
-        "fr": "Soins 24 h/24 pour toutes les urgences ; appelez avant de venir."
+        "fr": "Soins 24 h/24 pour toutes les urgences ; appelez avant de venir.",
+        "es": "Atención las 24 horas para todo tipo de urgencias; llama antes."
       }
     },
     {
@@ -85,7 +86,8 @@
         "sl": "Odprto pon–pet 8–19 in sob 8–15; nujna pomoč na voljo 24 ur na dan.",
         "hr": "Otvoreno pon–pet 8:00–19:00 i sub 8:00–15:00; hitna skrb dostupna 24 sata.",
         "de": "Mo–Fr 8.00–19.00 Uhr und Sa 8.00–15.00 Uhr geöffnet; dringende Fälle rund um die Uhr.",
-        "fr": "Ouvert lun.–ven. 8 h–19 h et sam. 8 h–15 h ; soins urgents disponibles 24 h/24."
+        "fr": "Ouvert lun.–ven. 8 h–19 h et sam. 8 h–15 h ; soins urgents disponibles 24 h/24.",
+        "es": "Abierto lun–vie 8:00–19:00 h y sáb 8:00–15:00 h; urgencias las 24 horas."
       }
     },
     {
@@ -112,7 +114,8 @@
         "sl": "Odprto vsak dan 8–19.",
         "hr": "Otvoreno svaki dan 8:00–19:00.",
         "de": "Täglich 8.00–19.00 Uhr geöffnet.",
-        "fr": "Ouvert tous les jours 8 h–19 h."
+        "fr": "Ouvert tous les jours 8 h–19 h.",
+        "es": "Abierto a diario 8:00–19:00 h."
       }
     },
     {
@@ -139,7 +142,8 @@
         "sl": "Odprto pon–sob 8–20, ned in prazniki 8–13.",
         "hr": "Otvoreno pon–sub 8:00–20:00, ned i blagdani 8:00–13:00.",
         "de": "Mo–Sa 8.00–20.00 Uhr, So und feiertags 8.00–13.00 Uhr geöffnet.",
-        "fr": "Ouvert lun.–sam. 8 h–20 h, dim. et jours fériés 8 h–13 h."
+        "fr": "Ouvert lun.–sam. 8 h–20 h, dim. et jours fériés 8 h–13 h.",
+        "es": "Abierto lun–sáb 8:00–20:00 h, dom y festivos 8:00–13:00 h."
       }
     }
   ],
