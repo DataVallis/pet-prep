@@ -57,7 +57,8 @@
         "sl": "Mobilna ambulanta z obiski na domu in nujno oskrbo, na voljo 24/7 v Suvi, Nausoriju, Navui in Pacific Harbourju.",
         "hr": "Mobilna veterinarska ambulanta s kućnim posjetima i hitnom skrbi, dostupna 24/7 na području Suva, Nausori, Navua i Pacific Harbour.",
         "de": "Mobile Tierklinik mit Hausbesuchen und Notdienst, rund um die Uhr erreichbar in Suva, Nausori, Navua und Pacific Harbour.",
-        "fr": "Clinique mobile pour animaux avec visites à domicile et urgences, disponible 24 h/24, 7 j/7 à Suva, Nausori, Navua et Pacific Harbour."
+        "fr": "Clinique mobile pour animaux avec visites à domicile et urgences, disponible 24 h/24, 7 j/7 à Suva, Nausori, Navua et Pacific Harbour.",
+        "es": "Clínica veterinaria móvil con visitas a domicilio y urgencias las 24 horas en Suva, Nausori, Navua y Pacific Harbour."
       }
     },
     {
@@ -83,7 +84,8 @@
         "sl": "Odprto pon–sob 8–16.30. Nujni primeri zunaj delovnega časa samo 17–22, s sporočilom SMS na 992 2634.",
         "hr": "Radi pon–sub 8:00–16:30. Izvan radnog vremena samo hitni slučajevi, 17:00–22:00, SMS-om na 992 2634.",
         "de": "Mo–Sa 8.00–16.30 Uhr geöffnet. Notfälle außerhalb der Sprechzeiten nur 17.00–22.00 Uhr, per SMS an 992 2634.",
-        "fr": "Ouvert du lundi au samedi 8 h–16 h 30. En dehors des horaires, urgences uniquement, 17 h–22 h, par SMS au 992 2634."
+        "fr": "Ouvert du lundi au samedi 8 h–16 h 30. En dehors des horaires, urgences uniquement, 17 h–22 h, par SMS au 992 2634.",
+        "es": "Abierto de lunes a sábado 8:00–16:30 h. Urgencias fuera de horario solo de 17:00 a 22:00 h, por mensaje de texto al 992 2634."
       }
     },
     {
@@ -108,7 +110,8 @@
         "sl": "Odprto pon–sob 8.30–17, ned zaprto. Nujna linija zunaj delovnega časa je na isti številki; na klice odgovarjajo po svojih zmožnostih (ni 24-urna služba).",
         "hr": "Radi pon–sub 8:30–17:00, nedjeljom zatvoreno. Hitna linija i linija izvan radnog vremena na istom broju, javljaju se prema mogućnostima (ne radi 24 sata).",
         "de": "Mo–Sa 8.30–17.00 Uhr geöffnet, sonntags geschlossen. Notfall- und Nachttelefon unter derselben Nummer, wird nach Möglichkeit beantwortet (kein Dienst rund um die Uhr).",
-        "fr": "Ouvert du lundi au samedi 8 h 30–17 h, fermé le dimanche. Ligne d’urgence et hors horaires sur le même numéro, assurée selon les disponibilités (pas un service 24 h/24)."
+        "fr": "Ouvert du lundi au samedi 8 h 30–17 h, fermé le dimanche. Ligne d’urgence et hors horaires sur le même numéro, assurée selon les disponibilités (pas un service 24 h/24).",
+        "es": "Abierto de lunes a sábado 8:30–17:00 h, cerrado domingo. Línea de urgencias y fuera de horario en el mismo número, atendida según disponibilidad (no es un servicio 24 horas)."
       }
     },
     {
@@ -133,7 +136,8 @@
         "sl": "Odprto tor–sob 8.30–17; ned in pon zaprto.",
         "hr": "Radi uto–sub 8:30–17:00; ned i pon zatvoreno.",
         "de": "Di–Sa 8.30–17.00 Uhr geöffnet; sonntags und montags geschlossen.",
-        "fr": "Ouvert du mardi au samedi 8 h 30–17 h ; fermé le dimanche et le lundi."
+        "fr": "Ouvert du mardi au samedi 8 h 30–17 h ; fermé le dimanche et le lundi.",
+        "es": "Abierto de martes a sábado 8:30–17:00 h; cerrado domingo y lunes."
       }
     },
     {
@@ -158,7 +162,8 @@
         "sl": "Odprto tor–pet 8–17 in sob 8–13; ned in pon zaprto.",
         "hr": "Radno vrijeme: uto–pet 8:00–17:00 i sub 8:00–13:00; ned i pon zatvoreno.",
         "de": "Di–Fr 8.00–17.00 Uhr und Sa 8.00–13.00 Uhr geöffnet; sonntags und montags geschlossen.",
-        "fr": "Ouvert du mardi au vendredi 8 h–17 h et le samedi 8 h–13 h ; fermé le dimanche et le lundi."
+        "fr": "Ouvert du mardi au vendredi 8 h–17 h et le samedi 8 h–13 h ; fermé le dimanche et le lundi.",
+        "es": "Abierto de martes a viernes 8:00–17:00 h y sábados 8:00–13:00 h; cerrado domingo y lunes."
       }
     },
     {
@@ -183,7 +188,8 @@
         "sl": "Odprto tor–pet 8.30–17 in sob 8–13; ned in pon zaprto.",
         "hr": "Radno vrijeme: uto–pet 8:30–17:00 i sub 8:00–13:00; ned i pon zatvoreno.",
         "de": "Di–Fr 8.30–17.00 Uhr und Sa 8.00–13.00 Uhr geöffnet; sonntags und montags geschlossen.",
-        "fr": "Ouvert du mardi au vendredi 8 h 30–17 h et le samedi 8 h–13 h ; fermé le dimanche et le lundi."
+        "fr": "Ouvert du mardi au vendredi 8 h 30–17 h et le samedi 8 h–13 h ; fermé le dimanche et le lundi.",
+        "es": "Abierto de martes a viernes 8:30–17:00 h y sábado 8:00–13:00 h; cerrado domingo y lunes."
       }
     },
     {
@@ -207,7 +213,8 @@
         "sl": "Zavetišče za reševanje in veterinarska ambulanta, odprta tor–sob 8–17. Naročite se po telefonu.",
         "hr": "Sklonište za spašene životinje i veterinarska klinika, otvoreno uto–sub 8:00–17:00. Naručivanje telefonom.",
         "de": "Tierheim und Tierarztpraxis, Di–Sa 8.00–17.00 Uhr geöffnet. Bitte telefonisch Termin vereinbaren.",
-        "fr": "Refuge de sauvetage et clinique vétérinaire, ouverts du mardi au samedi 8 h–17 h. Rendez-vous par téléphone."
+        "fr": "Refuge de sauvetage et clinique vétérinaire, ouverts du mardi au samedi 8 h–17 h. Rendez-vous par téléphone.",
+        "es": "Refugio de rescate y clínica veterinaria, abierto de martes a sábado 8:00–17:00 h. Reserva por teléfono."
       }
     }
   ],
