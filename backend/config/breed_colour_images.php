@@ -499,11 +499,70 @@ return [
         'white' => 'dogs/pekingese--white.webp',
         'parti-colour' => 'dogs/pekingese--parti-colour.webp',
     ],
+    'chow_chow' => [
+        'red' => 'dogs/chow-chow.webp',
+        'black' => 'dogs/chow-chow--black.webp',
+        'cream' => 'dogs/chow-chow--cream.webp',
+        'fawn' => 'dogs/chow-chow--fawn.webp',
+        'blue' => 'dogs/chow-chow--blue.webp',
+        'white' => 'dogs/chow-chow--white.webp',
+    ],
+    'old_english_sheepdog' => [
+        'grey-white' => 'dogs/old-english-sheepdog.webp',
+        'blue-white' => 'dogs/old-english-sheepdog--blue-white.webp',
+    ],
     'keeshond' => [
         'grey-shaded' => 'dogs/keeshond.webp',
     ],
+    'standard_schnauzer' => [
+        'pepper-salt' => 'dogs/standard-schnauzer.webp',
+        'black' => 'dogs/standard-schnauzer--black.webp',
+    ],
     'coton_de_tulear' => [
         'white' => 'dogs/coton-de-tulear.webp',
+    ],
+    'english_setter' => [
+        'blue-belton' => 'dogs/english-setter.webp',
+        'orange-belton' => 'dogs/english-setter--orange-belton.webp',
+        'blue-belton-tan' => 'dogs/english-setter--blue-belton-tan.webp',
+        'lemon-belton' => 'dogs/english-setter--lemon-belton.webp',
+        'liver-belton' => 'dogs/english-setter--liver-belton.webp',
+        'liver-belton-tan' => 'dogs/english-setter--liver-belton-tan.webp',
+    ],
+    'lhasa_apso' => [
+        'golden' => 'dogs/lhasa-apso.webp',
+        'honey' => 'dogs/lhasa-apso--honey.webp',
+        'dark-grizzle' => 'dogs/lhasa-apso--dark-grizzle.webp',
+        'smoke' => 'dogs/lhasa-apso--smoke.webp',
+        'parti-colour' => 'dogs/lhasa-apso--parti-colour.webp',
+        'black' => 'dogs/lhasa-apso--black.webp',
+        'white' => 'dogs/lhasa-apso--white.webp',
+        'brown' => 'dogs/lhasa-apso--brown.webp',
+    ],
+    'dogue_de_bordeaux' => [
+        'mahogany-brown-mask' => 'dogs/dogue-de-bordeaux.webp',
+        'fawn-black-mask' => 'dogs/dogue-de-bordeaux--fawn-black-mask.webp',
+        'fawn-no-mask' => 'dogs/dogue-de-bordeaux--fawn-no-mask.webp',
+        'isabella' => 'dogs/dogue-de-bordeaux--isabella.webp',
+    ],
+    'flat_coated_retriever' => [
+        'black' => 'dogs/flat-coated-retriever.webp',
+        'liver' => 'dogs/flat-coated-retriever--liver.webp',
+    ],
+    'border_terrier' => [
+        'grizzle-tan' => 'dogs/border-terrier.webp',
+        'red' => 'dogs/border-terrier--red.webp',
+        'wheaten' => 'dogs/border-terrier--wheaten.webp',
+        'blue-tan' => 'dogs/border-terrier--blue-tan.webp',
+    ],
+    'leonberger' => [
+        'lion-yellow' => 'dogs/leonberger.webp',
+        'red' => 'dogs/leonberger--red.webp',
+        'sandy' => 'dogs/leonberger--sandy.webp',
+    ],
+    'beauceron' => [
+        'black-tan' => 'dogs/beauceron.webp',
+        'harlequin' => 'dogs/beauceron--harlequin.webp',
     ],
     'schipperke' => [
         'black' => 'dogs/schipperke.webp',

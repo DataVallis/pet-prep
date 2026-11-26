@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "5205a12891d00828fcf53c2b17b33d275a294c68942cba61d394e0f0c779f00e"
+      "sha256": "320ebccb3d91fb59899f7ba6489e13cdb38960f2c1550f3f2c8acf6b62a22e1e"
     }
   },
   "suitability_vocabulary": {
@@ -54809,7 +54809,58 @@
         "file": "chow-chow.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/chow-chow.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/chow-chow--black.webp"
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/chow-chow--cream.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plav"
+            },
+            "file": "dog/chow-chow--fawn.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder (skrilasto siv)"
+            },
+            "file": "dog/chow-chow--blue.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/chow-chow--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
@@ -55367,7 +55418,26 @@
         "file": "old-english-sheepdog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey-white",
+            "label": {
+              "en": "Grey and white",
+              "sl": "Sivo-bel"
+            },
+            "file": "dog/old-english-sheepdog.webp",
+            "default": true
+          },
+          {
+            "key": "blue-white",
+            "label": {
+              "en": "Blue and white",
+              "sl": "Modro-bel"
+            },
+            "file": "dog/old-english-sheepdog--blue-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -56522,7 +56592,26 @@
         "file": "standard-schnauzer.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "pepper-salt",
+            "label": {
+              "en": "Pepper and salt",
+              "sl": "Poper in sol"
+            },
+            "file": "dog/standard-schnauzer.webp",
+            "default": true
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/standard-schnauzer--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -57739,7 +57828,58 @@
         "file": "english-setter.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "blue-belton",
+            "label": {
+              "en": "Blue belton",
+              "sl": "Modri belton"
+            },
+            "file": "dog/english-setter.webp",
+            "default": true
+          },
+          {
+            "key": "orange-belton",
+            "label": {
+              "en": "Orange belton",
+              "sl": "Oranžni belton"
+            },
+            "file": "dog/english-setter--orange-belton.webp"
+          },
+          {
+            "key": "blue-belton-tan",
+            "label": {
+              "en": "Tricolour (blue belton and tan)",
+              "sl": "Tribarven (modri belton z rjavim)"
+            },
+            "file": "dog/english-setter--blue-belton-tan.webp"
+          },
+          {
+            "key": "lemon-belton",
+            "label": {
+              "en": "Lemon belton",
+              "sl": "Limonin belton"
+            },
+            "file": "dog/english-setter--lemon-belton.webp"
+          },
+          {
+            "key": "liver-belton",
+            "label": {
+              "en": "Liver belton",
+              "sl": "Jetrni belton"
+            },
+            "file": "dog/english-setter--liver-belton.webp"
+          },
+          {
+            "key": "liver-belton-tan",
+            "label": {
+              "en": "Tricolour (liver belton and tan)",
+              "sl": "Tribarven (jetrni belton z rjavim)"
+            },
+            "file": "dog/english-setter--liver-belton-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -58380,7 +58520,74 @@
         "file": "lhasa-apso.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "golden",
+            "label": {
+              "en": "Golden",
+              "sl": "Zlat"
+            },
+            "file": "dog/lhasa-apso.webp",
+            "default": true
+          },
+          {
+            "key": "honey",
+            "label": {
+              "en": "Honey",
+              "sl": "Medeno rjav"
+            },
+            "file": "dog/lhasa-apso--honey.webp"
+          },
+          {
+            "key": "dark-grizzle",
+            "label": {
+              "en": "Dark grizzle",
+              "sl": "Temno sivkast"
+            },
+            "file": "dog/lhasa-apso--dark-grizzle.webp"
+          },
+          {
+            "key": "smoke",
+            "label": {
+              "en": "Smoke",
+              "sl": "Dimast"
+            },
+            "file": "dog/lhasa-apso--smoke.webp"
+          },
+          {
+            "key": "parti-colour",
+            "label": {
+              "en": "Parti-colour",
+              "sl": "Dvobarven"
+            },
+            "file": "dog/lhasa-apso--parti-colour.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/lhasa-apso--black.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/lhasa-apso--white.webp"
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/lhasa-apso--brown.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -58986,7 +59193,42 @@
         "file": "dogue-de-bordeaux.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "mahogany-brown-mask",
+            "label": {
+              "en": "Mahogany, brown mask",
+              "sl": "Mahagonij, rjava maska"
+            },
+            "file": "dog/dogue-de-bordeaux.webp",
+            "default": true
+          },
+          {
+            "key": "fawn-black-mask",
+            "label": {
+              "en": "Fawn, black mask",
+              "sl": "Plavo rjav, črna maska"
+            },
+            "file": "dog/dogue-de-bordeaux--fawn-black-mask.webp"
+          },
+          {
+            "key": "fawn-no-mask",
+            "label": {
+              "en": "Fawn, no mask",
+              "sl": "Plavo rjav, brez maske"
+            },
+            "file": "dog/dogue-de-bordeaux--fawn-no-mask.webp"
+          },
+          {
+            "key": "isabella",
+            "label": {
+              "en": "Isabella",
+              "sl": "Izabela"
+            },
+            "file": "dog/dogue-de-bordeaux--isabella.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -59633,7 +59875,26 @@
         "file": "flat-coated-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/flat-coated-retriever.webp",
+            "default": true
+          },
+          {
+            "key": "liver",
+            "label": {
+              "en": "Liver",
+              "sl": "Jetrno rjav"
+            },
+            "file": "dog/flat-coated-retriever--liver.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -60229,7 +60490,42 @@
         "file": "border-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grizzle-tan",
+            "label": {
+              "en": "Grizzle and tan",
+              "sl": "Sivkasto-rjavkast"
+            },
+            "file": "dog/border-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/border-terrier--red.webp"
+          },
+          {
+            "key": "wheaten",
+            "label": {
+              "en": "Wheaten",
+              "sl": "Pšenično rumen"
+            },
+            "file": "dog/border-terrier--wheaten.webp"
+          },
+          {
+            "key": "blue-tan",
+            "label": {
+              "en": "Blue and tan",
+              "sl": "Modro-rjavkast"
+            },
+            "file": "dog/border-terrier--blue-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -60845,7 +61141,34 @@
         "file": "leonberger.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "lion-yellow",
+            "label": {
+              "en": "Lion yellow",
+              "sl": "Levje rumen"
+            },
+            "file": "dog/leonberger.webp",
+            "default": true
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/leonberger--red.webp"
+          },
+          {
+            "key": "sandy",
+            "label": {
+              "en": "Sandy",
+              "sl": "Peščen"
+            },
+            "file": "dog/leonberger--sandy.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -61430,7 +61753,26 @@
         "file": "beauceron.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjavkast"
+            },
+            "file": "dog/beauceron.webp",
+            "default": true
+          },
+          {
+            "key": "harlequin",
+            "label": {
+              "en": "Harlequin",
+              "sl": "Harlekin"
+            },
+            "file": "dog/beauceron--harlequin.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
