@@ -1066,6 +1066,13 @@ class FalAiService
                 .'eyes, on the cheeks and chest, long thin low-set ears with a slight roll, rather large round dark brown eyes with a pleading '
                 .'hound expression, a large black nose, a long, broad, square muzzle with flews, a tail carried high with a forward half-moon '
                 .'curve, photorealistic, studio quality, natural lighting',
+            // M5-R10-142: FCI-Standard N° 126 (S1062) — rich red and white only, straight flat silky coat with moderate feathering,
+            // small vine-leaf ears hanging close to the cheeks, hazel or dark eyes, natural feathered tail carried low.
+            BreedType::WelshSpringerSpaniel => 'A medium-sized, symmetrical, compact Welsh Springer Spaniel built for endurance, not leggy, '
+                .'a straight, flat, silky, dense rich red and white coat with moderate feathering on the legs, comparatively small '
+                .'vine-leaf-shaped ears set moderately low and hanging close to the cheeks, hazel or dark eyes, a medium-length, fairly '
+                .'square muzzle, a natural feathered tail carried low, never above the back, kindly, merry expression, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2482,6 +2489,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, glossy, medium-coarse coat lying close',
                 'markings' => 'black head and ears, tan markings over the eyes and on the cheeks and chest, long low-set hound ears',
+            ],
+            // M5-R10-142: standard colour only (FCI S1062: rich red and white only).
+            BreedType::WelshSpringerSpaniel => [
+                'color_scheme' => 'rich red and white',
+                'eye_color' => 'hazel',
+                'fur_texture' => 'straight, flat, silky coat with moderate feathering',
+                'markings' => 'rich red patches on white, small vine-leaf-shaped ears hanging close to the cheeks, feathered legs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

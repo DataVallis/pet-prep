@@ -4622,6 +4622,40 @@
       "status": "not_found",
       "tests": [],
       "notes": "Not RKC-recognised → no RKC Breeds A–Z health-testing section; the OFA CHIC breed requirements page (ofa.org browse-by-breed) was refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-25); PetMD (dog-data S1060) and Dogs NSW (S1061) name no breeding tests. Show the general dog checklist only (M5-R10-141)."
+    },
+    "welsh_springer_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S1064",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S1064",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S1064",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S1064",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S1064, 2026-11-26, M5-R10-142): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding, as evidence indicates' — fragment) genetic diversity and the BVA/KC/ISDS eye scheme with gonioscopy; under 'Best Practice schemes and tests' the BVA/KC hip scheme; no breed-specific DNA package and no additional breeding restrictions (paraphrase). No new test key."
     }
   }
 }
