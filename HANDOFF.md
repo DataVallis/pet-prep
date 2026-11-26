@@ -174,6 +174,8 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 ### 2026-11-26 (claude.ai chat, docs only, `docs/sustainability-impact`)
 - New `docs/business/SUSTAINABILITY.md` (David: »zelena nota zaradi razpisov«): three pillars, what we may honestly claim and what not, proposals T1–T5 (post-challenge decision question, pet footprint in the real-cost tool, shelter partnership, DNSH one-pager, hosting check). **Proposal only — David has not decided**; no code.
+### 2026-11-26 (mobile, `fix/ios-item-clip-load`)
+- iOS »Operation Stopped« pri igračah (`pet-media item:toy_1/2 … layer=0s`): napaka v expo-video 57.0.4 iOS caching loaderju — drugi predvajalnik ISTEGA podpisanega URL-ja brez končnice bere obsege prvega iz praznega `<hash>.mp4`. Predmeti niso dobili lokalne kopije (`cacheNameFor` ni poznal `/api/media/items/`), zato je vsak predvajal oddaljeni URL. Popravek: vsi predvajalniki prek `videoSourceFor` (iOS oddaljeno brez `useCaching`, Android ostane), predmeti dobijo lokalno kopijo `media_items_<id>_<v>`. Samo JS → OTA. Preveriti na iPhonu: igra z igračo → vesel pes na HUD-u igra igračo brez prehoda na sliko.
 
 ### 2026-11-25 (mobile, `fix/wishes-bundle-label`)
 - Starševske »Želje«: paket »Dobrodošlica« ni več zavajajoč gumb »Vse tri za …« pod zadnjo prošnjo, ampak svoj razdelek z vsebino za psa / muco, »Kupi paket za …« in »Posamezno skupaj …« (samo iz vseh treh cen trgovine). Testi v `wishes.test.ts`, `WishesScreen.test.tsx`. Potrebna preverba na telefonu (prave cene iz trgovine).

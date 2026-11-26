@@ -66,7 +66,7 @@ import {
   type PlayableAlbumItem,
 } from '@/modules/petMedia/album';
 import { useAppActive, useLocalMediaUri, useStableUrl } from '@/modules/petMedia/hooks';
-import { isLocalMediaUri } from '@/modules/petMedia/mediaFileCache';
+import { videoSourceFor } from '@/modules/petMedia/mediaFileCache';
 import { GROWTH_STRINGS, growthViewerItems, hasGrowthSection, type GrowthAlbum, type GrowthViewerItem } from '@/modules/petMedia/growth';
 import { mediaKey, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
@@ -188,7 +188,7 @@ function AlbumVideo({
   // David 2026-10-20: the phone's copy when there is one (survives re-signed URLs).
   const local = useLocalMediaUri(stable.uri, 'video');
   const source = useMemo(
-    () => (local.uri === null ? null : isLocalMediaUri(local.uri) ? { uri: local.uri } : { uri: local.uri, useCaching: true }),
+    () => (local.uri === null ? null : videoSourceFor(local.uri)),
     [local.uri],
   );
   const player = useVideoPlayer(source, (p) => {

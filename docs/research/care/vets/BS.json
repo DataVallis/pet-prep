@@ -75,7 +75,8 @@
         "sl": "Pon–pet 8.30–17, sob 9–14, ned in prazniki zaprto. Nujna številka 24/7: +1 242 807 7960.",
         "hr": "pon–pet 8:30–17:00, sub 9:00–14:00, nedjeljom i blagdanima zatvoreno. Hitna linija 24/7: +1 242 807 7960.",
         "de": "Mo–Fr 8.30–17.00 Uhr, Sa 9.00–14.00 Uhr, sonn- und feiertags geschlossen. Notfallnummer rund um die Uhr: +1 242 807 7960.",
-        "fr": "Lun.–ven. 8 h 30–17 h, sam. 9 h–14 h, fermé le dimanche et les jours fériés. Ligne d’urgences 24 h/24, 7 j/7 : +1 242 807 7960."
+        "fr": "Lun.–ven. 8 h 30–17 h, sam. 9 h–14 h, fermé le dimanche et les jours fériés. Ligne d’urgences 24 h/24, 7 j/7 : +1 242 807 7960.",
+        "es": "Lun–vie 8:30–17:00 h, sáb 9:00–14:00 h, cerrado domingos y festivos. Línea de urgencias las 24 horas: +1 242 807 7960."
       }
     },
     {
@@ -104,7 +105,8 @@
         "sl": "Pon–pet 8.30–17, sob 8.30–14, ned zaprto. Dežurna nujna služba 24 ur na dan zunaj delovnega časa: +1 242 557 0911.",
         "hr": "pon–pet 8:30–17:00, sub 8:30–14:00, nedjeljom zatvoreno. Hitno dežurstvo 24 sata izvan radnog vremena: +1 242 557 0911.",
         "de": "Mo–Fr 8.30–17.00 Uhr, Sa 8.30–14.00 Uhr, sonntags geschlossen. Notdienst rund um die Uhr außerhalb der Öffnungszeiten (Rufbereitschaft): +1 242 557 0911.",
-        "fr": "Lun.–ven. 8 h 30–17 h, sam. 8 h 30–14 h, fermé le dimanche. Hors horaires, service d’urgence de garde 24 h/24 : +1 242 557 0911."
+        "fr": "Lun.–ven. 8 h 30–17 h, sam. 8 h 30–14 h, fermé le dimanche. Hors horaires, service d’urgence de garde 24 h/24 : +1 242 557 0911.",
+        "es": "Lun–vie 8:30–17:00 h, sáb 8:30–14:00 h, domingos cerrado. Urgencias de guardia las 24 horas fuera de horario: +1 242 557 0911."
       }
     },
     {
@@ -133,7 +135,8 @@
         "sl": "Pon–pet 9–15, sob po naročilu, ned zaprto. Nujna številka zunaj delovnega časa: +1 242 468 3644.",
         "hr": "pon–pet 9:00–15:00, sub uz termin, nedjeljom zatvoreno. Hitna linija izvan radnog vremena: +1 242 468 3644.",
         "de": "Mo–Fr 9.00–15.00 Uhr, Sa nach Terminvereinbarung, sonntags geschlossen. Notfallnummer außerhalb der Öffnungszeiten: +1 242 468 3644.",
-        "fr": "Lun.–ven. 9 h–15 h, sam. sur rendez-vous, fermé le dimanche. Ligne d’urgences hors horaires : +1 242 468 3644."
+        "fr": "Lun.–ven. 9 h–15 h, sam. sur rendez-vous, fermé le dimanche. Ligne d’urgences hors horaires : +1 242 468 3644.",
+        "es": "Lun–vie 9:00–15:00 h, sáb con cita previa, cerrado los domingos. Línea de urgencias fuera de horario: +1 242 468 3644."
       }
     },
     {
@@ -162,7 +165,8 @@
         "sl": "Pon–pet 9–17, sob 9–13, ned zaprto. Mobilni obiski na domu po vsem območju New Providence.",
         "hr": "pon–pet 9:00–17:00, sub 9:00–13:00, nedjeljom zatvoreno. Mobilni kućni posjeti na cijelom području New Providence.",
         "de": "Mo–Fr 9.00–17.00 Uhr, Sa 9.00–13.00 Uhr, sonntags geschlossen. Mobile Hausbesuche auf ganz New Providence.",
-        "fr": "Lun.–ven. 9 h–17 h, sam. 9 h–13 h, fermé le dimanche. Visites à domicile dans toute l’île de New Providence."
+        "fr": "Lun.–ven. 9 h–17 h, sam. 9 h–13 h, fermé le dimanche. Visites à domicile dans toute l’île de New Providence.",
+        "es": "Lun–vie 9:00–17:00 h, sáb 9:00–13:00 h, domingo cerrado. Visitas a domicilio móviles por toda New Providence."
       }
     },
     {
@@ -191,7 +195,8 @@
         "sl": "Klinika pon, čet in sob po naročilu. Zavetišče pon–čet in sob 8.30–16, pet 8.30–13.",
         "hr": "Ambulanta pon, čet i sub uz termin. Prihvatilište pon–čet i sub 8:30–16:00, pet 8:30–13:00.",
         "de": "Praxis Mo, Do und Sa nach Terminvereinbarung. Tierheim Mo–Do und Sa 8.30–16.00 Uhr, Fr 8.30–13.00 Uhr.",
-        "fr": "Clinique lun., jeu. et sam. sur rendez-vous. Refuge lun.–jeu. et sam. 8 h 30–16 h, ven. 8 h 30–13 h."
+        "fr": "Clinique lun., jeu. et sam. sur rendez-vous. Refuge lun.–jeu. et sam. 8 h 30–16 h, ven. 8 h 30–13 h.",
+        "es": "Clínica lun, jue y sáb con cita previa. Refugio lun–jue y sáb 8:30–16:00 h, vie 8:30–13:00 h."
       }
     },
     {
@@ -220,7 +225,8 @@
         "sl": "Tor–čet 9–16, sob 9–15, pon, pet, ned in prazniki zaprto. Nujni primeri: pokličite ali pišite na +1 242 470 0109.",
         "hr": "uto–čet 9:00–16:00, sub 9:00–15:00, pon, pet, ned i blagdanima zatvoreno. Hitni slučajevi: nazovi ili pošalji poruku na +1 242 470 0109.",
         "de": "Di–Do 9.00–16.00 Uhr, Sa 9.00–15.00 Uhr, montags, freitags, sonntags und feiertags geschlossen. Notfälle: anrufen oder SMS an +1 242 470 0109.",
-        "fr": "Mar.–jeu. 9 h–16 h, sam. 9 h–15 h, fermé lun., ven., dim. et les jours fériés. Urgences : appelez ou envoyez un SMS au +1 242 470 0109."
+        "fr": "Mar.–jeu. 9 h–16 h, sam. 9 h–15 h, fermé lun., ven., dim. et les jours fériés. Urgences : appelez ou envoyez un SMS au +1 242 470 0109.",
+        "es": "Mar–jue 9:00–16:00 h, sáb 9:00–15:00 h, cerrado lun, vie, dom y festivos. Urgencias: llama o envía un mensaje al +1 242 470 0109."
       }
     }
   ],
