@@ -5991,11 +5991,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -7060,11 +7056,7 @@ export interface operations {
                                 clock_started_at: string;
                                 next_due_at: string;
                                 last_taken_out_at: string | null;
-                                /**
-                                 * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                 *     rule (at / after the night's end) or the evening one (the night's start).
-                                 * @enum {string}
-                                 */
+                                /** @enum {string} */
                                 kind: "regular" | "morning" | "evening";
                             } | null;
                             active_events: {
@@ -8150,11 +8142,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -9238,11 +9226,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -10326,11 +10310,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -11414,11 +11394,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -12502,11 +12478,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -13594,11 +13566,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -14686,11 +14654,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -15778,11 +15742,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -16870,11 +16830,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -17962,11 +17918,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -19050,11 +19002,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -20138,11 +20086,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -21230,11 +21174,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -22318,11 +22258,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -23410,11 +23346,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -24498,11 +24430,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -25590,11 +25518,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -26682,11 +26606,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -27774,11 +27694,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -28866,11 +28782,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -29958,11 +29870,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -31735,11 +31643,7 @@ export interface operations {
                                         clock_started_at: string;
                                         next_due_at: string;
                                         last_taken_out_at: string | null;
-                                        /**
-                                         * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                         *     rule (at / after the night's end) or the evening one (the night's start).
-                                         * @enum {string}
-                                         */
+                                        /** @enum {string} */
                                         kind: "regular" | "morning" | "evening";
                                     } | null;
                                     /**
@@ -32383,11 +32287,7 @@ export interface operations {
                                         clock_started_at: string;
                                         next_due_at: string;
                                         last_taken_out_at: string | null;
-                                        /**
-                                         * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                         *     rule (at / after the night's end) or the evening one (the night's start).
-                                         * @enum {string}
-                                         */
+                                        /** @enum {string} */
                                         kind: "regular" | "morning" | "evening";
                                     } | null;
                                     /**
@@ -34795,11 +34695,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
@@ -35865,11 +35761,7 @@ export interface operations {
                                     clock_started_at: string;
                                     next_due_at: string;
                                     last_taken_out_at: string | null;
-                                    /**
-                                     * @description Which deadline `next_due_at` is (David 2026-11-26): regular hold, the morning
-                                     *     rule (at / after the night's end) or the evening one (the night's start).
-                                     * @enum {string}
-                                     */
+                                    /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
                                 } | null;
                                 active_events: {
