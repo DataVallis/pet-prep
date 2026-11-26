@@ -10,6 +10,7 @@
 | `business/STARTUP_CREDITS.md` | Startup krediti za AI / cloud: fal.ai Startup Program (prijava oddana 22. 11. 2026), NVIDIA, Microsoft, Anthropic; ideja vnaprejšnjega generiranja skupnih videzov | SL |
 | `business/ACCELERATORS.md` | Pospeševalniki in investitorji: YC (v teku), 500 Global Eurasia (najboljše ujemanje), Antler, Techstars; kaj za zdaj ne (22. 11. 2026) | SL |
 | `business/DUOLINGO_ROVER_LESSONS.md` | Poslovni in marketinški model Duolinga in Roverja, 15 predlogov za PetPrep (Claudovi, neodločeno), pot do IPO, simulacije lijaka in naročnine (22. 11. 2026) | SL |
+| `business/DIGITAL_TWIN.md` | Digitalni dvojček poslovanja (ideja za razpise, David 26. 11. 2026): tri ravni, kaj že imamo, predlog korakov D1–D4; *ideja*, neodločeno | SL |
 | `product/THREEJS_OPPORTUNITIES.md` | Three.js: kje se splača (petprep.si) in kje ne (aplikacija, ljubljenček); prototip »Koliko dela je z labradorcem?« v `prototypes/real-cost/` (David 15. 11. 2026) | SL |
 | `product/BREED_QUIZ_SPEC.md` | Kviz »Katera pasma je za vas?« in podstran »Pred nakupom psa« s karticami mini orodij (M6-S06, načrt; David 16. 11. 2026) | SL |
 | `engineering/ARCHITECTURE.md` | Arhitektura *kot je zgrajena* (tabele, API, game loop, real-time) | EN |
