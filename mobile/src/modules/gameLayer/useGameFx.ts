@@ -6,6 +6,9 @@
  *
  * Audio session: `playsInSilentMode: false` (iOS silent switch / Android silent + vibrate mute
  * the sounds), `mixWithOthers` (never stops the family's music), no recording, no background.
+ * Every player keeps the session active (`keepAudioSessionActive`, 2026-11-27): by default an
+ * expo-audio player that finishes deactivates the app's shared iOS `AVAudioSession`, which stops
+ * every running expo-video player too (the pet's loop froze on home after a play session).
  */
 
 import { useEffect, useMemo, useRef } from 'react';
@@ -51,7 +54,8 @@ function nativeSounds(list: readonly GameSound[]): SoundAdapter {
   const players: Partial<Record<GameSound, AudioPlayer>> = {};
   for (const sound of list) {
     try {
-      const player = createAudioPlayer(SOUND_FILES[sound]);
+      // Never deactivate the shared iOS audio session at a sound's end — it would stop the pet's video.
+      const player = createAudioPlayer(SOUND_FILES[sound], { keepAudioSessionActive: true });
       player.volume = GAME_SOUND_VOLUME;
       players[sound] = player;
     } catch {

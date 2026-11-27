@@ -20,6 +20,8 @@ export interface MockVideoPlayer {
   released: boolean;
   play: jest.Mock<void, []>;
   pause: jest.Mock<void, []>;
+  /** Like the real player: back to 0 and play. */
+  replay: jest.Mock<void, []>;
   replace: jest.Mock<void, [unknown]>;
   replaceAsync: jest.Mock<Promise<void>, [unknown]>;
   release: jest.Mock<void, []>;
@@ -45,6 +47,10 @@ export function createMockVideoPlayer(source: unknown): MockVideoPlayer {
     }),
     pause: jest.fn(() => {
       player.playing = false;
+    }),
+    replay: jest.fn(() => {
+      player.currentTime = 0;
+      player.playing = true;
     }),
     replace: jest.fn((next: unknown) => {
       player.source = next;

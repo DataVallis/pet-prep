@@ -20,6 +20,10 @@
  *   Each of those stages is reported once per session to System health (scope `pet-media`,
  *   `modules/petMedia/mediaErrorReport.ts`: what played, local / remote, the player's message,
  *   layer age, signature time left — never the URL).
+ * - **Stall watchdog (2026-11-27, `modules/petMedia/playbackWatchdog.ts`):** a loop layer that
+ *   should play is sampled every second; its `currentTime` standing still for 3 s while
+ *   `readyToPlay` → `play()` (paused by iOS) or `replay()`, reported once per label per session
+ *   (`pet-media … stage=stalled`). Once clips are never kicked (they hold their last frame).
  * - **Battery:** players pause while the app is in the background or `active` is
  *   false (screen covered); they don't keep the screen on.
  * - The child never sees a media error: pending shows a gentle "getting ready" hint,
@@ -47,6 +51,7 @@ import type { LockReason } from '@/modules/childPet/childPetView';
 import { useAppActive, useLocalMediaUri, useStableUrl } from '@/modules/petMedia/hooks';
 import { forgetLocalMedia, isLocalMediaUri, localMediaUri, videoSourceFor } from '@/modules/petMedia/mediaFileCache';
 import { describeClip, linkLeftMs, reportPetMediaFailure, videoErrorStage } from '@/modules/petMedia/mediaErrorReport';
+import { IDLE_WATCHDOG, STALL_CHECK_MS, watchdogStep, type WatchdogAction } from '@/modules/petMedia/playbackWatchdog';
 import {
   NO_VIDEO_ERRORS,
   canPlayUrl,
@@ -133,6 +138,12 @@ interface Layer {
   createdAtMs: number;
 }
 
+/** A loop the stall watchdog had to kick (2026-11-27): `resume` = it was paused, `restart` = its time stood. */
+export interface VideoStall {
+  local: boolean;
+  action: Exclude<WatchdogAction, 'none'>;
+}
+
 /** What the player knew when it failed (2026-11-24 `pet-media` reports). */
 export interface VideoFailure {
   /** The phone's cached copy was playing (else the remote URL). */
@@ -216,11 +227,13 @@ interface VideoLayerProps {
   onReady: (id: string) => void;
   onError: (id: string, failure: VideoFailure) => void;
   onEnd?: (id: string) => void;
+  /** 2026-11-27: the stall watchdog kicked this loop (`playbackWatchdog.ts`). */
+  onStall?: (id: string, stall: VideoStall) => void;
   testID: string;
 }
 
 /** One player + view. The source is fixed for the layer's life (no restart on re-sign). */
-const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, startAtMs, onReady, onError, onEnd, testID }: VideoLayerProps) {
+const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, startAtMs, onReady, onError, onEnd, onStall, testID }: VideoLayerProps) {
   // David 2026-10-20: the phone's copy of the file when there is one (survives re-signed
   // URLs); otherwise the remote URL with expo-video's cache, and a copy is made for next time.
   // 2026-11-26: never expo-video's iOS caching loader for a remote clip (`videoSourceFor`).
@@ -269,6 +282,28 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, s
     const sub = player.addListener('playToEnd', () => onEnd(id));
     return () => sub.remove();
   }, [player, loop, onEnd, id]);
+
+  // 2026-11-27: a loop that should play but whose time stands still (stopped by iOS without an
+  // error — e.g. a deactivated audio session) is kicked: `play()` / `replay()` (`playbackWatchdog.ts`).
+  const stallRef = useRef(onStall);
+  stallRef.current = onStall;
+  useEffect(() => {
+    if (!playing || !loop) return;
+    let state = IDLE_WATCHDOG;
+    const timer = setInterval(() => {
+      const step = watchdogStep(
+        state,
+        { wanted: true, status: player.status, playing: player.playing, currentTime: player.currentTime },
+        Date.now(),
+      );
+      state = step.state;
+      if (step.action === 'none') return;
+      if (step.action === 'resume') player.play();
+      else player.replay();
+      stallRef.current?.(id, { local: localSource, action: step.action });
+    }, STALL_CHECK_MS);
+    return () => clearInterval(timer);
+  }, [player, playing, loop, id, localSource]);
 
   const onFirstFrameRender = useCallback(() => onReady(id), [onReady, id]);
 
@@ -618,6 +653,21 @@ export default function PetMediaView({
     [commit, endTransition],
   );
 
+  // 2026-11-27: a kicked loop is reported once per label per session (`stage=stalled`).
+  const onStall = useCallback((id: string, stall: VideoStall) => {
+    const layer = layersRef.current.find((l) => l.id === id);
+    if (!layer) return;
+    const now = Date.now();
+    reportPetMediaFailure({
+      label: layer.label,
+      local: stall.local,
+      stage: 'stalled',
+      layerAgeMs: now - layer.createdAtMs,
+      linkLeftMs: linkLeftMs(layer.url, now),
+      playerMessage: stall.action === 'resume' ? 'paused' : 'not-advancing',
+    });
+  }, []);
+
   const playing = active && appActive;
   const showImage = image.uri !== null;
   const pending = isMediaPending(media);
@@ -658,6 +708,7 @@ export default function PetMediaView({
           onReady={onReady}
           onError={onError}
           onEnd={onEnd}
+          onStall={onStall}
           testID={`${testID}-video-${layer.errored ? 'errored' : layer.preload ? 'preload' : layer.loop ? layer.phase : `transition-${layer.phase}`}`}
         />
       ))}
