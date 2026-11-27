@@ -30,3 +30,7 @@ here with `needs-david` is skipped by the backfill until David decides (delete t
 | lhasa_apso | sandy | needs-david | Both edits (byte-identical on the redo) returned the golden portrait practically unchanged — sandy would look the same as golden. | 45906615151, 45907859561 | 2026-11-26 |
 | lhasa_apso | slate | needs-david | Both edits (byte-identical on the redo) gave a warm brownish grey practically identical to the `smoke` variant — no slate blue-grey. | 45906615151, 45907859561 | 2026-11-26 |
 | leonberger | red-brown | needs-david | Both edits (byte-identical on the redo) practically identical to the `red` variant — no darker, browner red-brown. | 45906615151, 45908024916 | 2026-11-26 |
+| tibetan_terrier | black | needs-david | Both edits of the 2026-11-17 breed run had a brownish muzzle and legs — reads as black-and-tan, not black (noted only in docs/breeds/tibetan-terrier.md until now). | 2026-11-17 breed run | 2026-11-28 |
+| borzoi | red | needs-david | Both edits (redo practically identical) gave a deep red with a white blaze, chest, belly and legs — a red-and-white patched dog, not the solid red colour. | 46078418635, 46079518461 | 2026-11-28 |
+| parson_russell_terrier | white-lemon | needs-david | Both edits made the patches an unnatural olive / mustard green instead of pale lemon. | 46078418635, 46079539724 | 2026-11-28 |
+| afghan_hound | brindle | needs-david | Both edits painted bold, regular tiger stripes across the long silky coat — looks artificial, not a natural brindle. | 46078418635, 46079783367 | 2026-11-28 |

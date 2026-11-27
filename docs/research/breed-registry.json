@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f6c7f6934b5291cb6b09d39a9348eef5a9c2d71f5670f43baf3e20246832aa88"
+      "sha256": "4d2e9aa6b42c5b7b374bd7f765f355263ebd6b4c22036a6295f01a3a85756013"
     }
   },
   "suitability_vocabulary": {
@@ -62390,7 +62390,42 @@
         "file": "bouvier-des-flandres.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey-brindle",
+            "label": {
+              "en": "Dark grey brindle",
+              "sl": "Temno siv tigrast"
+            },
+            "file": "dog/bouvier-des-flandres.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/bouvier-des-flandres--brindle.webp"
+          },
+          {
+            "key": "black-brindle",
+            "label": {
+              "en": "Black-overlaid brindle",
+              "sl": "Tigrast s črnim nadihom"
+            },
+            "file": "dog/bouvier-des-flandres--black-brindle.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/bouvier-des-flandres--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -62926,7 +62961,58 @@
         "file": "borzoi.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white-red",
+            "label": {
+              "en": "White with red patches",
+              "sl": "Bel z rdečimi lisami"
+            },
+            "file": "dog/borzoi.webp",
+            "default": true
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/borzoi--white.webp"
+          },
+          {
+            "key": "sable",
+            "label": {
+              "en": "Red sable",
+              "sl": "Rdeče sobolji"
+            },
+            "file": "dog/borzoi--sable.webp"
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/borzoi--brindle.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjavkast"
+            },
+            "file": "dog/borzoi--black-tan.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/borzoi--black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -63553,7 +63639,26 @@
         "file": "japanese-chin.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/japanese-chin.webp",
+            "default": true
+          },
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/japanese-chin--red-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -64165,7 +64270,42 @@
         "file": "norwich-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/norwich-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "wheaten",
+            "label": {
+              "en": "Wheaten",
+              "sl": "Pšenično rumen"
+            },
+            "file": "dog/norwich-terrier--wheaten.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črno-rjav"
+            },
+            "file": "dog/norwich-terrier--black-tan.webp"
+          },
+          {
+            "key": "grizzle",
+            "label": {
+              "en": "Grizzle",
+              "sl": "Sivkast"
+            },
+            "file": "dog/norwich-terrier--grizzle.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -64702,7 +64842,58 @@
         "file": "miniature-bull-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/miniature-bull-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "brindle",
+            "label": {
+              "en": "Brindle",
+              "sl": "Tigrast"
+            },
+            "file": "dog/miniature-bull-terrier--brindle.webp"
+          },
+          {
+            "key": "black-brindle",
+            "label": {
+              "en": "Black brindle",
+              "sl": "Črno tigrast"
+            },
+            "file": "dog/miniature-bull-terrier--black-brindle.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/miniature-bull-terrier--red.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plav"
+            },
+            "file": "dog/miniature-bull-terrier--fawn.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/miniature-bull-terrier--tricolour.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -65946,7 +66137,26 @@
         "file": "belgian-tervuren.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn with black mask",
+              "sl": "Plav s črno masko"
+            },
+            "file": "dog/belgian-tervuren.webp",
+            "default": true
+          },
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey with black mask",
+              "sl": "Siv s črno masko"
+            },
+            "file": "dog/belgian-tervuren--grey.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -66503,7 +66713,42 @@
         "file": "toy-fox-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour (white, black, tan)",
+              "sl": "Trobarven (bel, črn, rjavkast)"
+            },
+            "file": "dog/toy-fox-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "chocolate-tan-white",
+            "label": {
+              "en": "White, chocolate and tan",
+              "sl": "Belo-čokoladno-rjavkast"
+            },
+            "file": "dog/toy-fox-terrier--chocolate-tan-white.webp"
+          },
+          {
+            "key": "tan-white",
+            "label": {
+              "en": "White and tan",
+              "sl": "Belo-rjavkast"
+            },
+            "file": "dog/toy-fox-terrier--tan-white.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "White and black",
+              "sl": "Belo-črn"
+            },
+            "file": "dog/toy-fox-terrier--black-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -67709,7 +67954,58 @@
         "file": "afghan-hound.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "gold-black-mask",
+            "label": {
+              "en": "Golden with a black mask",
+              "sl": "Zlat s črno masko"
+            },
+            "file": "dog/afghan-hound.webp",
+            "default": true
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/afghan-hound--cream.webp"
+          },
+          {
+            "key": "red-black-mask",
+            "label": {
+              "en": "Red with a black mask",
+              "sl": "Rdeč s črno masko"
+            },
+            "file": "dog/afghan-hound--red-black-mask.webp"
+          },
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/afghan-hound--black.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/afghan-hound--black-tan.webp"
+          },
+          {
+            "key": "blue",
+            "label": {
+              "en": "Blue",
+              "sl": "Moder"
+            },
+            "file": "dog/afghan-hound--blue.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -68927,7 +69223,34 @@
         "file": "parson-russell-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "white-tan",
+            "label": {
+              "en": "White and tan",
+              "sl": "Bel z rjavimi lisami"
+            },
+            "file": "dog/parson-russell-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/parson-russell-terrier--tricolour.webp"
+          },
+          {
+            "key": "white-black",
+            "label": {
+              "en": "White and black",
+              "sl": "Bel s črnimi lisami"
+            },
+            "file": "dog/parson-russell-terrier--white-black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
@@ -69568,7 +69891,34 @@
         "file": "wire-fox-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/wire-fox-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "white-tan",
+            "label": {
+              "en": "White and tan",
+              "sl": "Bel z rjavimi lisami"
+            },
+            "file": "dog/wire-fox-terrier--white-tan.webp"
+          },
+          {
+            "key": "white-black",
+            "label": {
+              "en": "White and black",
+              "sl": "Bel s črnimi lisami"
+            },
+            "file": "dog/wire-fox-terrier--white-black.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
