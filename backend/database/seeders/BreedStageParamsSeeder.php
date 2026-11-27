@@ -1681,6 +1681,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SMOOTH_FOX_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-143)';
 
     /**
+     * M5-R10-144 Bearded Collie (unattended run 2026-11-27, data.json proposed_game_parameters.bearded_collie.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S1078 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages young 9 /
+     * adult 36 / senior 125 (0.75 × McMillan 2024 median 13.9 y, S123), arrival 2 / 9 / 36 / 125, learning multiplier 1.2
+     * (Coren rank 34, Above average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_BEARDED_COLLIE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-144)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -2323,6 +2332,7 @@ class BreedStageParamsSeeder extends Seeder
         'bluetick_coonhound' => [1, 'S1060', 'The Bluetick’s short fur needs only a once-a-week brushing to control shedding.', 'high', false],
         'welsh_springer_spaniel' => [2, 'S1066', 'Coat care is not difficult, requiring brushing once or twice a week.', 'high', false],
         'smooth_fox_terrier' => [1, 'S1071', 'Brushing your dog once a week can help keep fur from ending up on your furniture.', 'high', false],
+        'bearded_collie' => [7, 'S1078', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -2532,13 +2542,14 @@ class BreedStageParamsSeeder extends Seeder
         'irish_terrier' => ['S1055', 'socialisation and training at a young age are very important'],
         'welsh_springer_spaniel' => ['S1065', 'Early socialization and consistent training is especially important for dogs like Welshies.'],
         'smooth_fox_terrier' => ['S1071', 'When it comes to other dogs and cats, early socialization is key.'],
+        'bearded_collie' => ['S1081', 'Begin socializing your Bearded Collie puppy as soon as you bring them home, and ask your breeder how they’ve approached socialization so far.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier, BreedType::BluetickCoonhound, BreedType::WelshSpringerSpaniel, BreedType::SmoothFoxTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier, BreedType::BluetickCoonhound, BreedType::WelshSpringerSpaniel, BreedType::SmoothFoxTerrier, BreedType::BeardedCollie];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3400,6 +3411,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::BluetickCoonhound => self::bluetickCoonhoundProfile(),
             BreedType::WelshSpringerSpaniel => self::welshSpringerSpanielProfile(),
             BreedType::SmoothFoxTerrier => self::smoothFoxTerrierProfile(),
+            BreedType::BeardedCollie => self::beardedCollieProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -13489,6 +13501,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'smooth_fox_terrier.lifespan.dogs_trust',
                 'quote' => 'typically 12+ years',
                 'notes' => 'Dogs Trust lower bound (S1075, one Fox Terrier page naming both coats); PDSA "Over 12 years" (S873); PetMD 10–13 years (S1071). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Bearded Collie (M5-R10-144). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_BEARDED_COLLIE); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function beardedCollieProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BEARDED_COLLIE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.bearded_collie.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [125, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 13.9 y via the Dogs Trust table (S123) = 10.425 y = 125.1 → 125 months. Not chosen: 108 (RKC lower bound "Over 12 years", S1078), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 125],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bearded_collie.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S1078', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bearded_collie.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC key fact "Exercise: Up to 1 hour per day" (S1078) → 60 min = 6,000 steps (runbook rule: RKC preferred; "up to N" → N). PDSA (S1079) "1 hour" / "1-2 hours" → 60 agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bearded_collie.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 25.0], [
+                'unit' => 'kg', 'source_id' => 'S1079', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bearded_collie.adult_weight.pdsa',
+                'quote' => '20-25kg',
+                'notes' => 'PDSA key fact "Average weight: 20-25kg" (S1079) — no breed standard gives a weight (FCI S1076, KC S1077 heights only). PetMD (S1081) 45–55 lb, WebMD (S1082) 40–50 lb.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bearded_collie.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (20–25 kg = 44–55 lb, S1079 → the Medium class of S10).',
+            ]],
+            'coren_rank' => [34, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bearded_collie.trainability.coren_rank',
+                'notes' => 'Rank 34 "Bearded Collie" (shared with the Field Spaniel, Newfoundland, Australian Terrier, American Staffordshire Terrier and Gordon Setter) in the Wikipedia table of Coren\'s ranking (S35, as recorded 2026-10-20), tier "Above Average Working Dogs" (27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bearded_collie.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 34, Above average tier (S35) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.9, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bearded_collie.lifespan.median_uk',
+                'quote' => 'Bearded Collie 13.9',
+                'notes' => 'McMillan et al. 2024 via the Dogs Trust table (S123; the row was read on 2026-11-11, the table was refused on 2026-11-27); Wikipedia (S1083) agrees. RKC "Over 12 years" (S1078). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

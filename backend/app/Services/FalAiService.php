@@ -1079,6 +1079,12 @@ class FalAiService
                 .'white with black and tan markings: a straight, flat, smooth, hard and dense short coat, '
                 .'a flat, moderately narrow skull, a strong muzzle with a black nose, dark, moderately small, nearly circular eyes, '
                 .'small V-shaped ears dropping forward close to the cheeks, a natural undocked tail set on rather high and carried gaily, photorealistic, studio quality, natural lighting',
+            // M5-R10-144: FCI-Standard N° 271 (S1076) — slate grey, reddish-fawn, black, blue, all shades of grey, brown and sandy with or
+            // without white markings, never merle; long, flat, harsh, shaggy double coat that is never trimmed.
+            BreedType::BeardedCollie => 'A lean, active Bearded Collie, strongly made but not heavy, slate grey with white markings: '
+                .'a long, flat, harsh and shaggy double coat with a soft close undercoat, untrimmed, a long beard on the chin, '
+                .'large, soft, affectionate eyes set widely apart, medium-sized drooping ears, a large square black nose, '
+                .'a low-set tail carried low with an upward swirl at the tip, bright, enquiring expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2509,6 +2515,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'straight, flat, smooth, hard and dense short coat',
                 'markings' => 'black saddle and tan head markings on a white body, small V-shaped ears dropping forward, natural tail carried gaily',
+            ],
+            // M5-R10-144: standard colour default (FCI S1076: slate grey … with or without white markings; never merle).
+            BreedType::BeardedCollie => [
+                'color_scheme' => 'slate grey with white markings',
+                'eye_color' => 'toning with the coat colour',
+                'fur_texture' => 'long, flat, harsh and shaggy double coat, untrimmed',
+                'markings' => 'white blaze, white chest, legs and tail tip, a long beard, medium-sized drooping ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

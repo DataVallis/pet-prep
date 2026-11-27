@@ -3358,5 +3358,33 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1072'], 'refs' => ['smooth_fox_terrier.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-144 Bearded Collie (data.json proposed_game_parameters.bearded_collie.suitability_tags; S1078, S1079, S1081,
+        // S1082), runbook rules. RKC Breed Watch Category 1 → no welfare chip; in marketing. children: PetMD "gentle around
+        // children" (supervision caveat → no small_children). No high prey drive named → no chases_small_pets. No new key.
+        'bearded_collie' => [
+            'suits' => [
+                // S1078 "Exercise: Up to 1 hour per day"; S1079 "Bearded Collies have high energy levels and need 1-2 hours of exercise per day."
+                ['tag' => 'active_family', 'source_ids' => ['S1078', 'S1079'], 'refs' => ['bearded_collie.exercise.adult', 'bearded_collie.exercise.energy']],
+                // S1079 "They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S1079'], 'refs' => ['bearded_collie.behaviour.family']],
+                // S1081 "Beardies are also gentle around children, though all interactions … must be supervised."
+                ['tag' => 'children', 'source_ids' => ['S1081'], 'refs' => ['bearded_collie.behaviour.children']],
+                // S1078 "Size of home: Large house", "Size of garden: Large garden"
+                ['tag' => 'large_home', 'source_ids' => ['S1078'], 'refs' => ['bearded_collie.suitability.rkc_size_of_home', 'bearded_collie.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S1082 "… they can cause mischief if their owners don’t keep them physically and mentally stimulated on a regular basis."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S1082'], 'refs' => ['bearded_collie.behaviour.mental_stimulation']],
+                // S1079 "are likely to want to herd at home too – adults and children included!"
+                ['tag' => 'may_herd_children', 'source_ids' => ['S1079'], 'refs' => ['bearded_collie.behaviour.herding_children']],
+                // S1082 "… can develop anxiety if left alone or confined for long periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S1082'], 'refs' => ['bearded_collie.behaviour.time_alone']],
+                // S1078 "Grooming: Every day"; S1079 "Beardies require daily grooming …"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1078', 'S1079'], 'refs' => ['bearded_collie.suitability.rkc_grooming', 'bearded_collie.suitability.pdsa_grooming']],
+                // S1078 "Sheds: Yes" (Dogs Trust / PetMD agree)
+                ['tag' => 'sheds', 'source_ids' => ['S1078'], 'refs' => ['bearded_collie.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];

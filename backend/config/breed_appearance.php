@@ -923,6 +923,13 @@
 | White with black and tan markings first with the highest weight (the portrait default); weights unsourced →
 | `verified => false`.
 |
+| Bearded Collie (M5-R10-144, docs/research/dog-data bearded_collie.appearance): "Slate grey, reddish-fawn, black, blue,
+| all shades of grey, brown and sandy with or without white markings." (FCI-Standard N° 271, S1076; "Never merle/dapple.");
+| long, flat, harsh, shaggy double coat that "must not be trimmed in any way", large soft eyes toning with the coat, medium
+| drooping ears, large square nose following the coat in blues and browns, low tail with an upward swirl. Not a welfare
+| breed (RKC Breed Watch Category 1, S1078). Slate grey with white markings first with the highest weight (the portrait
+| default); weights unsourced → `verified => false`.
+|
 | Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
 | without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
 | low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
@@ -6053,6 +6060,44 @@ return [
             'eye_color' => ['dark, moderately small, nearly circular eyes'],
             'tail' => ['natural undocked tail set on rather high and carried gaily, as straight as possible'],
             'nose' => ['a black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+
+    // M5-R10-144 (docs/research/dog-data/data.json bearded_collie.appearance; runbook rules 2026-10-10: the standard colours
+    // of FCI-Standard N° 271 (S1076) — slate grey with white markings = the portrait default; never merle; untrimmed coat).
+    'bearded_collie' => [
+        'display_name' => 'Bearded Collie',
+        // Colour frequencies are in no source (bearded_collie.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 271 (S1076, https://www.fci.be/Nomenclature/Standards/271g01-en.pdf), RKC breed page (S1078), PDSA (S1079) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1078 "Size: Medium"; S1076 "Males 53– 56cm"; S1079 "20-25kg"',
+            'build' => 'S1076 "Lean, active dog. Though strongly made, should show plenty of daylight under body and should not look too heavy."',
+            'coat_length' => 'S1076 "Outer coat flat, harsh, strong and shaggy, free from woolliness and curl, though slight wave permissible." / "Coat must not be trimmed in any way."',
+            'coat_color' => 'S1076 "Slate grey, reddish-fawn, black, blue, all shades of grey, brown and sandy with or without white markings." / "Never merle/dapple." (weights unsourced)',
+            'ear_carriage' => 'S1076 "Of medium size and drooping."',
+            'eye_color' => 'S1076 "Toning with coat colour, set widely apart and large, soft and affectionate, not protruding."',
+            'tail' => 'S1076 "Carried low with an upward swirl at tip whilst standing or walking, may be extended at speed."',
+            'nose' => 'S1076 "Large and square, generally black but normally following coat colour in blues and browns."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized, lean herding dog'],
+            'build' => [['value' => 'lean, active dog, strongly made but not heavy, longer than tall', 'weight' => 3], 'lean, agile sheepdog with plenty of daylight under the body'],
+            'coat_length' => ['long, flat, harsh and shaggy untrimmed double coat with a long beard on the chin'],
+            // FCI standard (S1076); slate grey with white markings weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'slate grey with white markings', 'weight' => 4],
+                ['value' => 'black with white markings', 'weight' => 2],
+                'blue with white markings',
+                'brown with white markings',
+                'reddish-fawn with white markings',
+                'sandy with white markings',
+            ],
+            'ear_carriage' => ['medium-sized drooping ears'],
+            'eye_color' => ['large, soft, affectionate eyes set widely apart, toning with the coat colour'],
+            'tail' => ['low-set tail carried low with an upward swirl at the tip'],
+            'nose' => ['a large square nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
