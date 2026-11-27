@@ -1672,6 +1672,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_WELSH_SPRINGER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-142)';
 
     /**
+     * M5-R10-143 Smooth Fox Terrier (unattended run 2026-11-27, data.json proposed_game_parameters.smooth_fox_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (PDSA S873 "1 hour"; the RKC page was not reachable), senior 45 min, puppy 10 min × age capped at 60,
+     * stages young 9 / adult 36 / senior 108 (0.75 × the Dogs Trust lower bound "typically 12+ years", S1075), arrival
+     * 2 / 9 / 36 / 108, learning multiplier 1.0 (Coren rank 40, Average, S35); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_SMOOTH_FOX_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-143)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -2150,6 +2159,10 @@ class BreedStageParamsSeeder extends Seeder
             'nail_trim' => [1, 'month', 'S1067', 'Your Welshie will also need a monthly bath and nail trimming.', 'proposed_game_parameters.welsh_springer_spaniel.nail_trimming', '"monthly … nail trimming" → every 4 weeks'],
             'bath' => [1, 'month', 'S1067', 'Your Welshie will also need a monthly bath and nail trimming.', 'proposed_game_parameters.welsh_springer_spaniel.bathing', '"a monthly bath" → every 4 weeks (ears: "regularly", no frequency → no task; groomer: no source)'],
         ],
+        'smooth_fox_terrier' => [
+            'tooth_brushing' => [7, 'day', 'S1072', 'brush your dog’s teeth every day to prevent plaque and tartar buildup.', 'proposed_game_parameters.smooth_fox_terrier.tooth_brushing', '"every day" → every day'],
+            'ear_cleaning' => [1, 'week', 'S1072', 'Check your dog’s ears weekly to remove wax and debris.', 'proposed_game_parameters.smooth_fox_terrier.ear_cleaning', '"weekly" → once a week (nails / bath: no frequency → no task; groomer: no source)'],
+        ],
     ];
 
     /**
@@ -2309,6 +2322,7 @@ class BreedStageParamsSeeder extends Seeder
         'irish_terrier' => [3, 'S1055', 'They have a medium length coat, which requires grooming 2 or 3 times per week.', 'high', false],
         'bluetick_coonhound' => [1, 'S1060', 'The Bluetick’s short fur needs only a once-a-week brushing to control shedding.', 'high', false],
         'welsh_springer_spaniel' => [2, 'S1066', 'Coat care is not difficult, requiring brushing once or twice a week.', 'high', false],
+        'smooth_fox_terrier' => [1, 'S1071', 'Brushing your dog once a week can help keep fur from ending up on your furniture.', 'high', false],
     ];
 
     /**
@@ -2517,13 +2531,14 @@ class BreedStageParamsSeeder extends Seeder
         'kerry_blue_terrier' => ['S1047', 'Owners must be willing to spend time training and socializing their pets.'],
         'irish_terrier' => ['S1055', 'socialisation and training at a young age are very important'],
         'welsh_springer_spaniel' => ['S1065', 'Early socialization and consistent training is especially important for dogs like Welshies.'],
+        'smooth_fox_terrier' => ['S1071', 'When it comes to other dogs and cats, early socialization is key.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier, BreedType::BluetickCoonhound, BreedType::WelshSpringerSpaniel];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter, BreedType::LhasaApso, BreedType::DogueDeBordeaux, BreedType::FlatCoatedRetriever, BreedType::BorderTerrier, BreedType::Leonberger, BreedType::Beauceron, BreedType::BouvierDesFlandres, BreedType::Borzoi, BreedType::JapaneseChin, BreedType::NorwichTerrier, BreedType::MiniatureBullTerrier, BreedType::Schipperke, BreedType::BelgianTervuren, BreedType::ToyFoxTerrier, BreedType::GordonSetter, BreedType::AfghanHound, BreedType::AustralianSilkyTerrier, BreedType::ParsonRussellTerrier, BreedType::WireFoxTerrier, BreedType::ManchesterTerrier, BreedType::TibetanTerrier, BreedType::Greyhound, BreedType::Xoloitzcuintli, BreedType::SpinoneItaliano, BreedType::Pointer, BreedType::Mudi, BreedType::WelshTerrier, BreedType::NorwegianElkhound, BreedType::AmericanHairlessTerrier, BreedType::TibetanSpaniel, BreedType::BlackRussianTerrier, BreedType::NeapolitanMastiff, BreedType::FinnishLapphund, BreedType::NorfolkTerrier, BreedType::BelgianSheepdog, BreedType::BraccoItaliano, BreedType::GermanPinscher, BreedType::BedlingtonTerrier, BreedType::KerryBlueTerrier, BreedType::IrishTerrier, BreedType::BluetickCoonhound, BreedType::WelshSpringerSpaniel, BreedType::SmoothFoxTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -3384,6 +3399,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::IrishTerrier => self::irishTerrierProfile(),
             BreedType::BluetickCoonhound => self::bluetickCoonhoundProfile(),
             BreedType::WelshSpringerSpaniel => self::welshSpringerSpanielProfile(),
+            BreedType::SmoothFoxTerrier => self::smoothFoxTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -13401,6 +13417,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'welsh_springer_spaniel.lifespan.median_uk',
                 'quote' => 'Welsh Springer Spaniel 14.0 13.3 - 14.3 572 162',
                 'notes' => 'McMillan et al. 2024 median via the Dogs Trust table (S123) — the runbook\'s first choice. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Smooth Fox Terrier (M5-R10-143). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_SMOOTH_FOX_TERRIER); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function smoothFoxTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SMOOTH_FOX_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S1075', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.smooth_fox_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog reaches adult weight at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × Dogs Trust lower bound "typically 12+ years" (S1075) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable; RKC page not reachable. Not chosen: 90 (PetMD lower bound 10 y, S1071 — open for David), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.smooth_fox_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S873', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.smooth_fox_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => '1 hour',
+                'notes' => 'PDSA key fact "Minimum exercise (per day): 1 hour" (S873) → 60 min = 6,000 steps (runbook rule: RKC preferred — not reachable — else PDSA; "minimum N" → N). WebMD (S1072) "1 to 2 hours" → 60 agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.smooth_fox_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[7.0, 8.0], [
+                'unit' => 'kg', 'source_id' => 'S1070', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'smooth_fox_terrier.adult_weight.fci',
+                'quote' => 'Dogs: 7,5 - 8 kgs.',
+                'notes' => 'FCI-Standard N° 12 (S1070): dogs 7.5–8 kg, bitches 7–7.5 kg → 7–8 kg for both sexes. KC (S1074) the same; AKC (S1073) 18 lb; PDSA (S873) 8 kg.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'smooth_fox_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (7–8 kg, S1070 → the Small class of S10).',
+            ]],
+            'coren_rank' => [40, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'smooth_fox_terrier.trainability.coren_rank',
+                'notes' => 'Rank 40 "Smooth Fox Terrier" (shared with the Bedlington Terrier and the Soft-coated Wheaten Terrier) in the Wikipedia table of Coren\'s ranking (S35, as recorded 2026-11-24), tier "Average Working/Obedience Intelligence" (40–54).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.smooth_fox_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 40, Average tier (S35) → 1.0, the mixed breed\'s speed. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12, [
+                'unit' => 'years', 'source_id' => 'S1075', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'smooth_fox_terrier.lifespan.dogs_trust',
+                'quote' => 'typically 12+ years',
+                'notes' => 'Dogs Trust lower bound (S1075, one Fox Terrier page naming both coats); PDSA "Over 12 years" (S873); PetMD 10–13 years (S1071). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

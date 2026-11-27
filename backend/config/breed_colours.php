@@ -935,6 +935,14 @@ return [
     'welsh_springer_spaniel' => [
         ['key' => 'red-white', 'value' => 'rich red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
     ],
+    // M5-R10-143: FCI-Standard N° 12 (S1070) "White should predominate, all white, white with tan, black and tan or black
+    // markings."; same values as breed_appearance.php.
+    'smooth_fox_terrier' => [
+        ['key' => 'tricolour', 'value' => 'white with black and tan markings', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'white-tan', 'value' => 'white with tan markings', 'en' => 'White and tan', 'sl' => 'Bel z rjavimi lisami'],
+        ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
+        ['key' => 'white', 'value' => 'all white', 'en' => 'All white', 'sl' => 'Ves bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -3336,5 +3336,27 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S1065'], 'refs' => ['welsh_springer_spaniel.behaviour.other_pets']],
             ],
         ],
+
+        // M5-R10-143 Smooth Fox Terrier (data.json proposed_game_parameters.smooth_fox_terrier.suitability_tags; S873, S1071,
+        // S1072), runbook rules. RKC page not reachable → no apartment / large_home / Breed Watch facts; no veterinary
+        // association names the breed for welfare problems → no welfare chip; in marketing. children: WebMD "great companions
+        // for children" (supervision caveat → no small_children). sheds: PetMD "moderate shedders" (Dogs Trust agrees, no
+        // conflicting source). No new vocabulary key.
+        'smooth_fox_terrier' => [
+            'suits' => [
+                // S873 "1 hour"; S1071 "Smooth Fox Terriers have a high energy level that requires daily exercise such as walks"
+                ['tag' => 'active_family', 'source_ids' => ['S873', 'S1071'], 'refs' => ['smooth_fox_terrier.exercise.adult', 'smooth_fox_terrier.exercise.daily_text']],
+                // S1071 "They're also known to get along well with children and make ideal family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S1071'], 'refs' => ['smooth_fox_terrier.behaviour.family']],
+                // S1072 "Smooth fox terriers are affectionate and great companions for children, …" (supervision caveat in notes)
+                ['tag' => 'children', 'source_ids' => ['S1072'], 'refs' => ['smooth_fox_terrier.behaviour.children']],
+            ],
+            'consider' => [
+                // S1071 "Despite their short coat, Smooth Fox Terriers are moderate shedders."
+                ['tag' => 'sheds', 'source_ids' => ['S1071'], 'refs' => ['smooth_fox_terrier.suitability.petmd_shedding']],
+                // S1072 "These dogs have a high prey drive, so you might want to keep them on a leash during walks"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S1072'], 'refs' => ['smooth_fox_terrier.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];

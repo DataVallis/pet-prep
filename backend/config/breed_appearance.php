@@ -916,6 +916,13 @@
 | Not a welfare breed (RKC Breed Watch Category 1, S1064). One standard colour (the portrait default); weight unsourced →
 | `verified => false`.
 |
+| Smooth Fox Terrier (M5-R10-143, docs/research/dog-data smooth_fox_terrier.appearance): "White should predominate, all
+| white, white with tan, black and tan or black markings." (FCI-Standard N° 12, S1070; "Brindle, red or liver markings highly
+| undesirable."); straight, flat, smooth, hard, dense coat, small V-shaped ears dropping forward close to the cheek, dark
+| moderately small nearly circular eyes, black nose (AKC S1073), natural (undocked) tail carried gaily. Not a welfare breed.
+| White with black and tan markings first with the highest weight (the portrait default); weights unsourced →
+| `verified => false`.
+|
 | Bedlington Terrier (M5-R10-138, docs/research/dog-data bedlington_terrier.appearance): "Blue, liver, or sandy with or
 | without tan." (FCI-Standard N°9, S1035); thick linty coat standing well out from the skin, nearly white silky topknot,
 | low-set filbert-shaped ears hanging flat to the cheek, tapering curved tail; nose black in blues / blue and tans, brown in
@@ -6010,6 +6017,42 @@ return [
             'eye_color' => ['medium-sized hazel eyes with a kindly expression'],
             'tail' => ['natural undocked feathered tail set low and never carried above the level of the back'],
             'nose' => ['a flesh-coloured to dark nose with well-developed nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+
+    // M5-R10-143 (docs/research/dog-data/data.json smooth_fox_terrier.appearance; runbook rules 2026-10-10: the standard
+    // colours of FCI-Standard N° 12 (S1070) — white with black and tan markings = the portrait default; natural tail).
+    'smooth_fox_terrier' => [
+        'display_name' => 'Smooth Fox Terrier',
+        // Colour frequencies are in no source (smooth_fox_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 12 (S1070, https://dev.fci.be/Nomenclature/Standards/012g03-en.pdf), Dogs Trust (S1075), AKC standard via the AFTC (S1073) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1075 "Small"; S1070 "Height at the withers: Not exceeding 39 cm in dogs, bitches slightly less."; S1070 "Dogs: 7,5 - 8 kgs."',
+            'build' => 'S1070 "Active and lively, bone and strength in small compass, never cloddy or coarse."',
+            'coat_length' => 'S1070 "Hair: Straight, flat, smooth, hard, dense and abundant."',
+            'coat_color' => 'S1070 "Colour: White should predominate, all white, white with tan, black and tan or black markings." (weights unsourced)',
+            'ear_carriage' => 'S1070 "Ears: Small, V-shaped and dropping forward close to cheek, not hanging by side of head."',
+            'eye_color' => 'S1070 "Eyes: Dark, moderately small, as near as possible circular in shape but not prominent."',
+            'tail' => 'S1070 "Set on rather high and carried gaily but not over back. As straight as possible." (undocked, natural)',
+            'nose' => 'S1073 "should be black."',
+        ],
+        'traits' => [
+            'size' => ['small, short-backed terrier'],
+            'build' => [['value' => 'active and lively terrier with bone and strength in small compass, never cloddy or coarse', 'weight' => 3], 'well-balanced, alert terrier standing like a cleverly made hunter'],
+            'coat_length' => ['straight, flat, smooth, hard and dense short coat'],
+            // FCI standard (S1070); white with black and tan weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'white with black and tan markings', 'weight' => 4],
+                ['value' => 'white with tan markings', 'weight' => 2],
+                'white with black markings',
+                'all white',
+            ],
+            'ear_carriage' => ['small V-shaped ears dropping forward close to the cheeks'],
+            'eye_color' => ['dark, moderately small, nearly circular eyes'],
+            'tail' => ['natural undocked tail set on rather high and carried gaily, as straight as possible'],
+            'nose' => ['a black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
