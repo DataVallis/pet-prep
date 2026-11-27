@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "980a41a67d7fa214289e0129c2cccbb7ec07f9e931a21c839fad0d04fe724f25"
+      "sha256": "e0024e2df8c95b7d1fc1a6a4c388b1116793cd9888ed89de6b28f09c4d80d1d2"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -82812,7 +82812,7 @@
       "id": "welsh_springer_spaniel",
       "species": "dog",
       "order": 132,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Welsh Springer Spaniel",
         "sl": "Velški springer španjel"
@@ -83430,7 +83430,7 @@
       "id": "smooth_fox_terrier",
       "species": "dog",
       "order": 133,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Smooth Fox Terrier",
         "sl": "Gladkodlaki foksterier"
@@ -84053,7 +84053,7 @@
       "id": "bearded_collie",
       "species": "dog",
       "order": 134,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bearded Collie",
         "sl": "Bradati koli"
@@ -84691,7 +84691,7 @@
       "id": "saluki",
       "species": "dog",
       "order": 135,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Saluki",
         "sl": "Saluki"
