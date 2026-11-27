@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `smooth_fox_terrier` (viri S1070–S1075; ponovno S10, S11, S14, S24, S35, S45, S174, S873); seznam za vzreditelja: ni preverjen (stran RKC nedosegljiva) |
 | Izvor | FCI št. 12 »Fox Terrier (Smooth)«, skupina 3, sekcija 1 (veliki in srednji terierji), Velika Britanija (S1070) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 139. mesto »Smooth Fox Terrier« (S174, zabeleženo 2026-11-26) |
-| PR-ji | pet-prep #1665 (pasma) · portret: glej vrstico 143 v `docs/research/BREED_QUEUE.md` · barvne različice: glej vrstico 143 · spletna stran: pet-prep-website `feat/register-smooth-fox-terrier` |
+| PR-ji | pet-prep #1665 (pasma, združen `a1f859b` 2026-11-27) · portret: zagon `breed-portraits.yml` 45919223431 (tribarven, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-143-smooth-fox-terrier-portrait` · barvne različice: pet-prep PR `feat/M5-R10-143-smooth-fox-terrier-colours` · spletna stran: pet-prep-website `feat/register-smooth-fox-terrier` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-143 | 2026-11-27 |
 | Česanje 1× na teden, ščetkanje zob vsak dan, čiščenje ušes vsak teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R17 | 2026-11-27 |
 | Barva (izbirnik: tribarven, belo-rjav, belo-črn, ves bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-27 |
-| AI portret v registru | glej vrstico 143 v `BREED_QUEUE.md` | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), tribarven, naraven rep, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-27 |
 | Stran na petprep.si (`/animals/dogs/smooth-fox-terrier`, `/sl/zivali/psi/gladkodlaki-foksterier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
