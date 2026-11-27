@@ -477,6 +477,10 @@ jobs:
       - name: Breed docs index (node --test)
         run: node --test scripts/tests/breeds-index.test.mjs
 
+      # M5-R09e: generated »Ali si vedel?« facts match the register and their quotes.
+      - name: Breed facts generator (node --test)
+        run: node --test scripts/tests/generate-breed-facts.test.mjs
+
       - name: Record green tree
         id: green
         run: |

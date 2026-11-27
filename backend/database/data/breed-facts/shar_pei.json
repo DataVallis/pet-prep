@@ -1,0 +1,125 @@
+{
+  "breed": "shar_pei",
+  "facts": [
+    {
+      "key": "shar_pei-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Shar Pei needs up to 1 hour of exercise every day.",
+        "sl": "Šarpej potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S664",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/shar-pei/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "24dd8e1da8f77aa1f92912571afcc80ee39888434c1af027fabf0a4079975fe5"
+    },
+    {
+      "key": "shar_pei-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Shar Pei's coat needs grooming once a week.",
+        "sl": "Šarpej potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S664",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/shar-pei/",
+      "quote": "Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "89d00bfdd4b5bc09a47d0f1f813b0a230b0b846adf2044a1c00c2662aeefd2a7"
+    },
+    {
+      "key": "shar_pei-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shar Pei is a medium-sized dog breed.",
+        "sl": "Šarpej je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S664",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/shar-pei/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "11dabfa863dc3c21605b093c91396592eca1a9f40a28570b9fd2a9cc2a108a10"
+    },
+    {
+      "key": "shar_pei-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shar Pei has a short coat.",
+        "sl": "Šarpej ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S664",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/shar-pei/",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "97b25c377a71f5b3c631a9cacc91890f21127e665a8d1fda5c4bf2153dfa617a"
+    },
+    {
+      "key": "shar_pei-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shar Pei weighs 20–27 kg.",
+        "sl": "Šarpej tehta 20–27 kg."
+      },
+      "why": null,
+      "source_id": "S660",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/shar-pei",
+      "quote": "20-27 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c4947d4853bc81cafb3a7eedbde009828ab3d5cb2ba141fc00f39ce489674e27"
+    },
+    {
+      "key": "shar_pei-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Shar Pei reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je šarpej, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5eb38e856d0a67a06040337024e8a576f93bfb35fa7ba3940910bec55a5b5789"
+    }
+  ]
+}

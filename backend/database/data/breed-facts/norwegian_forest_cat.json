@@ -1,0 +1,46 @@
+{
+  "breed": "norwegian_forest_cat",
+  "facts": [
+    {
+      "key": "norwegian_forest_cat-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Forest Cat's coat needs grooming at least once a week.",
+        "sl": "Norveška gozdna mačka potrebuje nego dlake vsaj enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your cat once a week in the app.",
+        "sl": "Zato v aplikaciji svojo muco češeš enkrat na teden."
+      },
+      "source_id": "C38",
+      "source_name": "PetMD — Kristen Seymour; reviewed by Barri J. Morrison, DVM; updated 2023-04-19",
+      "source_url": "https://www.petmd.com/cat/breeds/c_ct_norwegian_forest",
+      "quote": "it requires regular combing and brushing—at least once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7887eac18d0b83e9d15c24cdd720c73b611bf9e61b62f6c717807c0a8101fec0"
+    },
+    {
+      "key": "norwegian_forest_cat-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Forest Cat usually lives 14 to 16 years.",
+        "sl": "Norveška gozdna mačka običajno živi od 14 do 16 let."
+      },
+      "why": null,
+      "source_id": "C37",
+      "source_name": "GCCF (Governing Council of the Cat Fancy, UK registry) — breed page",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/norwegian-forest-cat/",
+      "quote": "Lifespan is usually 14 to 16 years of age.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a544f62354cffc4519a2291855510476c5d42603fbff53e3bac49b32d9044a04"
+    }
+  ]
+}

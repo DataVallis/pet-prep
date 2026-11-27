@@ -1,0 +1,84 @@
+{
+  "breed": "american_hairless_terrier",
+  "facts": [
+    {
+      "key": "american_hairless_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The American Hairless Terrier needs 20 minutes of exercise every day.",
+        "sl": "Ameriški goli terier potrebuje vsak dan 20 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 2,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 2.000 korakov."
+      },
+      "source_id": "S973",
+      "source_name": "Dogs NSW",
+      "source_url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/american-hairless-terrier/",
+      "quote": "20 min/day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5505cc9a0af40afed4aeb823c1f1cfc367b284c3923f4b653c1a2134b81352bf"
+    },
+    {
+      "key": "american_hairless_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The American Hairless Terrier is a small dog breed.",
+        "sl": "Ameriški goli terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S973",
+      "source_name": "Dogs NSW",
+      "source_url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/american-hairless-terrier/",
+      "quote": "Small (under 11kg)",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e396e1c487eef79ae519e98c89de45c96f552b09458607890577a94cd64567b1"
+    },
+    {
+      "key": "american_hairless_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The American Hairless Terrier usually lives 14 to 16 years.",
+        "sl": "Ameriški goli terier običajno živi od 14 do 16 let."
+      },
+      "why": null,
+      "source_id": "S971",
+      "source_name": "PetMD — Sarah Kloepple, reviewed by Teresa Manucy, DVM (updated Jul. 25, 2024)",
+      "source_url": "https://www.petmd.com/dog/breeds/american-hairless-terrier",
+      "quote": "American Hairless Terriers are typically healthy dogs who live for 14–16 years on average.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a8553f13a8420f507941f889264006225caf03aeef40782f4f90f5fbddcf81d0"
+    },
+    {
+      "key": "american_hairless_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the American Hairless Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je ameriški goli terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b4158cff54125aa4941fce139f35baec8cde5022f766a190fcac3b8b70490686"
+    }
+  ]
+}

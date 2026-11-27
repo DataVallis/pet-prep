@@ -1,0 +1,103 @@
+{
+  "breed": "labrador_retriever",
+  "facts": [
+    {
+      "key": "labrador_retriever-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Labrador Retriever needs more than 2 hours of exercise every day.",
+        "sl": "Labradorec potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": null,
+      "source_id": "S50",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-labrador",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": null,
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6cb9f812abeb53956bd0951a1b73e6570abecb5cbd22c3cd5809a016af7317b3"
+    },
+    {
+      "key": "labrador_retriever-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Labrador Retriever's coat needs grooming once a week.",
+        "sl": "Labradorec potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S50",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-labrador",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "bb594f9a67e2b79668e53f5815963adf55eb7a7e6eb0d3ee0e15b7f687ef391d"
+    },
+    {
+      "key": "labrador_retriever-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Labrador Retriever is a large dog breed.",
+        "sl": "Labradorec je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S50",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-labrador",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "13a8896ff5bb6f14ca534a8a6b3ff57dfec4fae52ae281ba8f0e9fa5dbc1929d"
+    },
+    {
+      "key": "labrador_retriever-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Labrador Retriever has a short coat.",
+        "sl": "Labradorec ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S50",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-labrador",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "969e0642eced79a924dfc29b8fa8cd1d4dc85196d6ab1bd66bbdecef528a348f"
+    },
+    {
+      "key": "labrador_retriever-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Labrador Retriever reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je labradorec, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e83219d677cf4ce759960656ec2ab590c7b31a031cbaac4dd4c013e4ef1d2fd9"
+    }
+  ]
+}

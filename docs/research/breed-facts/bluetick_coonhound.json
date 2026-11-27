@@ -1,0 +1,106 @@
+{
+  "breed": "bluetick_coonhound",
+  "facts": [
+    {
+      "key": "bluetick_coonhound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bluetick Coonhound needs 40 minutes of exercise every day.",
+        "sl": "Bluetick coonhound potrebuje vsak dan 40 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 4,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 4.000 korakov."
+      },
+      "source_id": "S1061",
+      "source_name": "Dogs NSW (Australia)",
+      "source_url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/bluetick-coonhound/",
+      "quote": "40 min/day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a951ef3bd7ffcbddb0fc047fa1b420959e6313b4ffed54911469f072374f29c7"
+    },
+    {
+      "key": "bluetick_coonhound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bluetick Coonhound's coat needs grooming once a week.",
+        "sl": "Bluetick coonhound potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S1060",
+      "source_name": "PetMD — Sarah Mouton Dowdy, MA, reviewed by Barri J. Morrison, DVM (updated Nov. 1, 2023)",
+      "source_url": "https://www.petmd.com/dog/breeds/bluetick-coonhound",
+      "quote": "The Bluetick’s short fur needs only a once-a-week brushing to control shedding.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c63ae2545518ab4d4786c12176050eb92ddaf6e47d3425875d7ab6893fc2f5b7"
+    },
+    {
+      "key": "bluetick_coonhound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bluetick Coonhound is a medium-sized dog breed.",
+        "sl": "Bluetick coonhound je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1061",
+      "source_name": "Dogs NSW (Australia)",
+      "source_url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/bluetick-coonhound/",
+      "quote": "Medium (11kg - 27kg)",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "df6b5f72dfad93d1e81f2c432f8d22d39f3535127ca682a0adc5d41a7948d236"
+    },
+    {
+      "key": "bluetick_coonhound-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bluetick Coonhound usually lives 11 to 12 years.",
+        "sl": "Bluetick coonhound običajno živi od 11 do 12 let."
+      },
+      "why": null,
+      "source_id": "S1060",
+      "source_name": "PetMD — Sarah Mouton Dowdy, MA, reviewed by Barri J. Morrison, DVM (updated Nov. 1, 2023)",
+      "source_url": "https://www.petmd.com/dog/breeds/bluetick-coonhound",
+      "quote": "average lifespan of 11–12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "23fbeed1125cebaf205150fad83d9c17a9ab9486bf180d2f2db8debecab9e222"
+    },
+    {
+      "key": "bluetick_coonhound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bluetick Coonhound reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je bluetick coonhound, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "34cd98c58287634a0b4eedad32ad2037b1e3d275cb91f3d697b57e23d3d631ab"
+    }
+  ]
+}

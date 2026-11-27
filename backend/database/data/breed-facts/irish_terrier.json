@@ -1,0 +1,144 @@
+{
+  "breed": "irish_terrier",
+  "facts": [
+    {
+      "key": "irish_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Irski terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1053",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/irish-terrier/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "baf8834360dbfd367d5ff34bc62500f2e2d4a211ed2f2dbb999064303e526d8a"
+    },
+    {
+      "key": "irish_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Terrier's coat needs grooming more than once a week.",
+        "sl": "Irski terier potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog 3 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 3-krat na teden."
+      },
+      "source_id": "S1053",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/irish-terrier/",
+      "quote": "More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0858eff256a238fc0f58c64ef9a90f308baa0bb40502e499dcb082ba5ad94b47"
+    },
+    {
+      "key": "irish_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Terrier is a small dog breed.",
+        "sl": "Irski terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S1053",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/irish-terrier/",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "19dcd4bd24c78a00486e7eb858946d757379370314199996172de18d1b1f8a8c"
+    },
+    {
+      "key": "irish_terrier-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Terrier comes from Ireland.",
+        "sl": "Irski terier izvira iz Irske."
+      },
+      "why": null,
+      "source_id": "S1051",
+      "source_name": "Fédération Cynologique Internationale",
+      "source_url": "https://fci.be/Nomenclature/Standards/139g03-en.pdf",
+      "quote": "COUNTRY OF ORIGIN: Ireland.",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3dcb33770e3c7a5dd9e2a358030642c64b94036cb3f38b0aa3ab3f801f48a7b2"
+    },
+    {
+      "key": "irish_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Terrier has a medium-length coat.",
+        "sl": "Irski terier ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S1053",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/irish-terrier/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "453a043566b70313e5c3b39b510e9f6eb891f0404451a188f49b2cbc7fcd0e22"
+    },
+    {
+      "key": "irish_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Terrier usually lives more than 12 years.",
+        "sl": "Irski terier običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S1053",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/irish-terrier/",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0bb057e5ec4cca38de982594ad44d0e9180caf82ea8a343118888e56fd228aa1"
+    },
+    {
+      "key": "irish_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Irish Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je irski terier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e2ec206b40375055f6230e4927d1b016ae34b854d2bfa2c2685639d0a7014ba8"
+    }
+  ]
+}

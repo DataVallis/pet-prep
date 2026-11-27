@@ -1,0 +1,125 @@
+{
+  "breed": "irish_setter",
+  "facts": [
+    {
+      "key": "irish_setter-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Setter needs more than 2 hours of exercise every day.",
+        "sl": "Irski seter potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S676",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/irish-setter/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "839b9a056c11e67c89642fd8cd59fab011cce093ae75f8a0c26d2fef0794d7a2"
+    },
+    {
+      "key": "irish_setter-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Setter's coat needs grooming more than once a week.",
+        "sl": "Irski seter potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog 3 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 3-krat na teden."
+      },
+      "source_id": "S676",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/irish-setter/",
+      "quote": "More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f45868c41017b3e5b3e5905c7e341f3badb225d28961fb1caedcc276b8d6bd2e"
+    },
+    {
+      "key": "irish_setter-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Setter is a large dog breed.",
+        "sl": "Irski seter je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S676",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/irish-setter/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "716b86fd58b769d2814e1d72739c89dc008d8aac5d4a9aae1e0c3e0279f2363e"
+    },
+    {
+      "key": "irish_setter-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Setter has a medium-length coat.",
+        "sl": "Irski seter ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S676",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/irish-setter/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7a966d61f7a140224707444d27cd5e57ee48c3034583867fe952f111aa7019ab"
+    },
+    {
+      "key": "irish_setter-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Irish Setter usually lives more than 10 years.",
+        "sl": "Irski seter običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S676",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/irish-setter/",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6da35b34cef3ff9bf624ef221c77b281f609318769ef1d6edb2594be82979208"
+    },
+    {
+      "key": "irish_setter-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Irish Setter reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je irski seter, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1ef9f271e63d904a5afbffd05a9ae5a858f2d8dcd23600ea2255481bb68bcfb4"
+    }
+  ]
+}

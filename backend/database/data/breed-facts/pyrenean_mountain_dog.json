@@ -1,0 +1,106 @@
+{
+  "breed": "pyrenean_mountain_dog",
+  "facts": [
+    {
+      "key": "pyrenean_mountain_dog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Pyrenean Mountain Dog needs up to 1 hour of exercise every day.",
+        "sl": "Pirenejski gorski pes potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S600",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/pyrenean-mountain-dog/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "bd121cf82e440918334d5579110b9df13f160109647e971901d8ec807324a1a3"
+    },
+    {
+      "key": "pyrenean_mountain_dog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Pyrenean Mountain Dog's coat needs grooming more than once a week.",
+        "sl": "Pirenejski gorski pes potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S600",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/pyrenean-mountain-dog/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1daae164725450c1db23b3f6807b2e7d8f41cb1ca4082999935320b7b9239264"
+    },
+    {
+      "key": "pyrenean_mountain_dog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pyrenean Mountain Dog is a large dog breed.",
+        "sl": "Pirenejski gorski pes je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S600",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/pyrenean-mountain-dog/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d6f4eb7cfd54cbb30631f3d05b00d19517051fb4aed7b6be2d442a1112204f41"
+    },
+    {
+      "key": "pyrenean_mountain_dog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pyrenean Mountain Dog has a medium-length coat.",
+        "sl": "Pirenejski gorski pes ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S600",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/pyrenean-mountain-dog/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ae43760a17d4d4fcec61a23defb265379ea234ed2958ba2378e0dfbd45d1506e"
+    },
+    {
+      "key": "pyrenean_mountain_dog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Pyrenean Mountain Dog reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je pirenejski gorski pes, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "54bbcb537428324d2b6c9c52326222cd89f504442de0f2daf3273de48ddb61ff"
+    }
+  ]
+}

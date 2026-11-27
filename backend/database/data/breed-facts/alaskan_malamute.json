@@ -1,0 +1,144 @@
+{
+  "breed": "alaskan_malamute",
+  "facts": [
+    {
+      "key": "alaskan_malamute-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Alaskan Malamute needs at least 2 hours of exercise every day.",
+        "sl": "Aljaški malamut potrebuje vsak dan vsaj 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S639",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute",
+      "quote": "Malamutes need a minimum of two hours of heavy exercise every day.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "219bd03999d4a74b06f604cef72fe293d779c7889b66a58f82307d6aaf6c751a"
+    },
+    {
+      "key": "alaskan_malamute-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Alaskan Malamute's coat needs grooming every day.",
+        "sl": "Aljaški malamut potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S639",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute",
+      "quote": "Because their coats are so thick they will need daily brushing",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "324dc030fb229a22ea9e69ff270a791b4278ef332436268ec07aa18f404cead3"
+    },
+    {
+      "key": "alaskan_malamute-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Alaskan Malamute is a large dog breed.",
+        "sl": "Aljaški malamut je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S639",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "83a8262a0dbc51a8814c82e65cc30368698b33e18a7f53d27eb2c5b952936de7"
+    },
+    {
+      "key": "alaskan_malamute-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Alaskan Malamute is 58–64 cm tall at the withers.",
+        "sl": "Psi pasme aljaški malamut so v vihru visoki 58–64 cm."
+      },
+      "why": null,
+      "source_id": "S639",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute",
+      "quote": "58-64 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4e97e4950ce1715f5e9a2662bd6001e53e79a9d1b657d535e8383b6c675c9fab"
+    },
+    {
+      "key": "alaskan_malamute-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Alaskan Malamute weighs 34–39 kg.",
+        "sl": "Aljaški malamut tehta 34–39 kg."
+      },
+      "why": null,
+      "source_id": "S639",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute",
+      "quote": "34-39 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "751952fdf8f5a1aaef2f6a0b87226084310bc99c95ba18c7ab00f242cce5d323"
+    },
+    {
+      "key": "alaskan_malamute-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Alaskan Malamute usually lives more than 10 years.",
+        "sl": "Aljaški malamut običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S639",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/alaskan-malamute",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7fec2aacf9dee9b29a3e67e815ebf263a13b0f8818feb81c3f999991a527937d"
+    },
+    {
+      "key": "alaskan_malamute-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Alaskan Malamute reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je aljaški malamut, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6a57bb9a41c243f824dda770db70212dff179d69d965cc7eb7a1d9f8534da77c"
+    }
+  ]
+}

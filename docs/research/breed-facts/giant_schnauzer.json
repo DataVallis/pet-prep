@@ -1,0 +1,144 @@
+{
+  "breed": "giant_schnauzer",
+  "facts": [
+    {
+      "key": "giant_schnauzer-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Giant Schnauzer needs more than 2 hours of exercise every day.",
+        "sl": "Veliki šnavcer potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S495",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/giant-schnauzer/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2873dfff736f88a02562b3c612876d635995b41d6f52d9326e94e27c413f7625"
+    },
+    {
+      "key": "giant_schnauzer-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Giant Schnauzer's coat needs grooming every day.",
+        "sl": "Veliki šnavcer potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S495",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/giant-schnauzer/",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6ab16e106a33becb85ff71d2cb5c98a722e4a96a03dbe9f0c689c9f3dc113518"
+    },
+    {
+      "key": "giant_schnauzer-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Giant Schnauzer is a large dog breed.",
+        "sl": "Veliki šnavcer je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S495",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/giant-schnauzer/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ca4b9d4373190a28332d10d33cf754ac6909a4fc882e7e2b4adeac5b61fb7021"
+    },
+    {
+      "key": "giant_schnauzer-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Giant Schnauzer has a medium-length coat.",
+        "sl": "Veliki šnavcer ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S495",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/giant-schnauzer/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f54d27de602f9b53fb5b90284d4e20883d00fd39031c73e5e6143058861782e9"
+    },
+    {
+      "key": "giant_schnauzer-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Giant Schnauzer weighs 35–47 kg.",
+        "sl": "Veliki šnavcer tehta 35–47 kg."
+      },
+      "why": null,
+      "source_id": "S492",
+      "source_name": "FCI",
+      "source_url": "https://dev.fci.be/Nomenclature/Standards/181g02-de.pdf",
+      "quote": "Rüden und Hündinnen : 35 bis 47 kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "bf65bcd1ec5b0a9c50e8657098143a0b6dde759bde1f6c708b500b394dc7d360"
+    },
+    {
+      "key": "giant_schnauzer-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Giant Schnauzer usually lives more than 12 years.",
+        "sl": "Veliki šnavcer običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S495",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/giant-schnauzer/",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "28d5d944846c5b839d6ba758ace2c0686e494c20a9028d0413cb0bacc2b50f22"
+    },
+    {
+      "key": "giant_schnauzer-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Giant Schnauzer reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je veliki šnavcer, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5c37f1c5e5d15fd34d5d79d68b316019f017fe12e141d291c79a4da94eba5ed5"
+    }
+  ]
+}

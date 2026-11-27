@@ -1,0 +1,125 @@
+{
+  "breed": "norfolk_terrier",
+  "facts": [
+    {
+      "key": "norfolk_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Norfolk Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Norfolk terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1011",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norfolk-terrier/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2b0afaefb30e99fd7df7b5d3f8841b9ac0dae930c0a6b6e8e27c1743aea4da0d"
+    },
+    {
+      "key": "norfolk_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Norfolk Terrier's coat needs grooming more than once a week.",
+        "sl": "Norfolk terier potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S1011",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norfolk-terrier/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "06f897a5c1a563e14966c3b933b70e91158cf07026db8e5e8e806db7a7b782e8"
+    },
+    {
+      "key": "norfolk_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norfolk Terrier is a small dog breed.",
+        "sl": "Norfolk terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S1011",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norfolk-terrier/",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9c9292b9325403f4192aa3aaec7afefc226c6af9db39961452638b908e39dc84"
+    },
+    {
+      "key": "norfolk_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norfolk Terrier has a medium-length coat.",
+        "sl": "Norfolk terier ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S1011",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norfolk-terrier/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1f2d69595a37a9e7867c884831a39dc4cbecfb11bfd147b1df7e004b5fcf1861"
+    },
+    {
+      "key": "norfolk_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norfolk Terrier usually lives more than 10 years.",
+        "sl": "Norfolk terier običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S1011",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/norfolk-terrier/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b7b2610bdfbcc52c4f0290a0548f207243b8b0f1f1d03d9d086d594ac13e6329"
+    },
+    {
+      "key": "norfolk_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Norfolk Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je norfolk terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "18ca041c421d2ac84dd39c21497360187cfbd855da90163a7c6019126f3e8a5f"
+    }
+  ]
+}

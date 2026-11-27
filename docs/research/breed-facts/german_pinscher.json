@@ -1,0 +1,125 @@
+{
+  "breed": "german_pinscher",
+  "facts": [
+    {
+      "key": "german_pinscher-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The German Pinscher needs up to 1 hour of exercise every day.",
+        "sl": "Nemški pinč potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1031",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/german-pinscher/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f4a1b365c7c4b8f0eb00b0645457fe0b39a7ea885432d883d436b0b308da37cd"
+    },
+    {
+      "key": "german_pinscher-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The German Pinscher's coat needs grooming once a week.",
+        "sl": "Nemški pinč potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S1031",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/german-pinscher/",
+      "quote": "Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2bb0a0c5708b1503e32222c0f3f4994c901c2137d25a9a9549e168cf504a90a7"
+    },
+    {
+      "key": "german_pinscher-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Pinscher is a medium-sized dog breed.",
+        "sl": "Nemški pinč je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1031",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/german-pinscher/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "88362631fdd1c32872efeffdf335819e318bb46181470ecdb6d8ac0394648d8f"
+    },
+    {
+      "key": "german_pinscher-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Pinscher has a short coat.",
+        "sl": "Nemški pinč ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S1031",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/german-pinscher/",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3df36fccca11395d520537ef68247198924c08c9c3866f8c349a7324c75cd3e1"
+    },
+    {
+      "key": "german_pinscher-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Pinscher usually lives more than 10 years.",
+        "sl": "Nemški pinč običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S1031",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/german-pinscher/",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "94d339532517c80e0e3ab1ed559ef76dc752396726d5cc415c488709326c6b48"
+    },
+    {
+      "key": "german_pinscher-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the German Pinscher reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je nemški pinč, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (26–57 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "bacb57517d48b3087222b8974ff5cc6a22cecaf2ad3738c6009f8c1e5e13e6ed"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "breed": "pomeranian",
+  "facts": [
+    {
+      "key": "pomeranian-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Pomeranian needs up to 30 minutes of exercise every day.",
+        "sl": "Pomeranec potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S247",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pomeranian",
+      "quote": "Exercise: Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2069566526a51fcca1bf899e7b1d2e816048dc5374fa9148a47a0dcd8644a3e9"
+    },
+    {
+      "key": "pomeranian-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Pomeranian's coat needs grooming more than once a week.",
+        "sl": "Pomeranec potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog 3 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 3-krat na teden."
+      },
+      "source_id": "S247",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pomeranian",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3231661a49eb35e0482c97e4eabd671154e462060b36219cf537d264f693f598"
+    },
+    {
+      "key": "pomeranian-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pomeranian is a small dog breed.",
+        "sl": "Pomeranec je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S247",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pomeranian",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "27ecadbbfcc8c6c18a77a3934913c74dd242bafac3e9890816d67802d88933c0"
+    },
+    {
+      "key": "pomeranian-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pomeranian has a medium-length coat.",
+        "sl": "Pomeranec ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S247",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pomeranian",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b11b2591b62435b963daee836e7db93495036353d2874c25cc57c5d3c3391cf2"
+    },
+    {
+      "key": "pomeranian-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Pomeranian, males weigh 1.8–2 kg.",
+        "sl": "Samec pasme pomeranec tehta 1,8–2 kg."
+      },
+      "why": null,
+      "source_id": "S249",
+      "source_name": "The Kennel Club (UK) breed standard, hosted by the Kennel Union of Southern Africa (KUSA)",
+      "source_url": "https://www.kusa.co.za/images/BREED%20STANDARDS%20EFFECTIVE%2001%20JULY%202025/Pomeranian%20-%20KC%20[07-2025].pdf",
+      "quote": "Males: 1.8kg – 2kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "20dfd84cf83f81afedca0fffe2ce7865d6911444be24580d7d7a99baae0e7331"
+    },
+    {
+      "key": "pomeranian-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pomeranian usually lives more than 12 years.",
+        "sl": "Pomeranec običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S247",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pomeranian",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a644b863eb20a9282df357cf2fc0271a4d2a2bdcf843419bc203f2c2022154ca"
+    },
+    {
+      "key": "pomeranian-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Pomeranian reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je pomeranec, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "31fdd2b54dc23d4e41340b8a0d8e863377594b17c1e23fa883a48560b620a100"
+    }
+  ]
+}

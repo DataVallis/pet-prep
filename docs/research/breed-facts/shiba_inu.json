@@ -1,0 +1,106 @@
+{
+  "breed": "shiba_inu",
+  "facts": [
+    {
+      "key": "shiba_inu-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Shiba Inu needs up to 1 hour of exercise every day.",
+        "sl": "Šiba inu potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S378",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/japanese-shiba-inu",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b476d20b40e7590b98d53746d354cee9fc8baf674b978d16642570acb0374e73"
+    },
+    {
+      "key": "shiba_inu-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Shiba Inu's coat needs grooming once a week.",
+        "sl": "Šiba inu potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S378",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/japanese-shiba-inu",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e329f5e20fffe05a8ea4ba498241c1fda7f4a0646a6586fe98230ed637f14375"
+    },
+    {
+      "key": "shiba_inu-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shiba Inu is a small to medium-sized dog breed.",
+        "sl": "Šiba inu je majhna do srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S378",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/japanese-shiba-inu",
+      "quote": "Small-Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7f1b703ef22c8c7dd09b08fe4c91d0a13938f3c556bfe4a66135bc47471cb3be"
+    },
+    {
+      "key": "shiba_inu-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shiba Inu has a short coat.",
+        "sl": "Šiba inu ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S378",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/japanese-shiba-inu",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4289e7e1cee4a7b804fb522e23de5041706db493a28bdf5eb2dadd1268b0e1c3"
+    },
+    {
+      "key": "shiba_inu-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Shiba Inu reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je šiba inu, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "35c94031d8bb06bbe89cae10c49f818e12ec94929fec99ded8085d650c214bb3"
+    }
+  ]
+}

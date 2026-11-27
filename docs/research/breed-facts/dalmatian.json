@@ -1,0 +1,125 @@
+{
+  "breed": "dalmatian",
+  "facts": [
+    {
+      "key": "dalmatian-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Dalmatian needs more than 2 hours of exercise every day.",
+        "sl": "Dalmatinec potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S429",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4087",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "33f6d9e44eec311c8016fb2d0736c5283b681bb318e657a60e71d86344662aa4"
+    },
+    {
+      "key": "dalmatian-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Dalmatian's coat needs grooming once a week.",
+        "sl": "Dalmatinec potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S429",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4087",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e8bb039bee4ce615ba0a509fa9c7b2d0e883a75f0dcbdbdfcb25073f118db793"
+    },
+    {
+      "key": "dalmatian-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Dalmatian is a large dog breed.",
+        "sl": "Dalmatinec je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S429",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4087",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e68fd92156f0abf33efb3c55b9503b81abe9ab47922c3bebbaf71340126fc5ea"
+    },
+    {
+      "key": "dalmatian-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Dalmatian has a short coat.",
+        "sl": "Dalmatinec ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S429",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4087",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f017bc54d9bcacc0db6a778886ac42de3754cc962f04ac1c41bdca92318fc697"
+    },
+    {
+      "key": "dalmatian-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Dalmatian weighs 18–27 kg.",
+        "sl": "Dalmatinec tehta 18–27 kg."
+      },
+      "why": null,
+      "source_id": "S430",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/dalmatian",
+      "quote": "18kg-27kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "862908a0343788126b625c9ee04fe33dad204e5d30ef68b88ef2f29a6925e0d2"
+    },
+    {
+      "key": "dalmatian-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Dalmatian reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je dalmatinec, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "50ed2fe213410fa86beccf139b0e7d5b1add4f880f260b71c9413eeb36bfb013"
+    }
+  ]
+}

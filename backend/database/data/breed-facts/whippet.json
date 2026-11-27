@@ -1,0 +1,43 @@
+{
+  "breed": "whippet",
+  "facts": [
+    {
+      "key": "whippet-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Whippet is a medium-sized dog breed.",
+        "sl": "Mali angleški hrt je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S444",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/whippet",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c0202d734de4cf33d396c08e5c4b35c1c4b1dafd1fd1b357584aa347655d4c9e"
+    },
+    {
+      "key": "whippet-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Whippet reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je mali angleški hrt, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d93fbf894696bf238bde0949286f3e0fa112ff8c9229ded952282f2330d2ee6d"
+    }
+  ]
+}

@@ -110,6 +110,12 @@
    7. Ko je aplikacija v obeh trgovinah: »Gift vouchers« ON + `NEXT_PUBLIC_FEATURE_GIFT=1` na spletni strani.
 24. **Prijava na strani za unovčitev (M6-S01b) — končni preizkus:** z »Darilni boni« za kratek čas ON se na `petprep.si/redeem` prijavi (a) z Google računom iz aplikacije, (b) z Apple ID-jem iz aplikacije na iPhonu, (c) z e-naslovom + geslom testnega starša — vsak mora priti do koraka s kodo. **Če Apple vrne `account_not_found`, USTAVI in sporoči Claudu.** Stikalo nazaj OFF.
 25. **#walkyourpet galerija z Instagrama (odobreno 15. 11., ni zgrajeno):** (1) @petprep.si → profesionalni račun (Business / Creator); (2) poveži ga s Facebook stranjo PetPrep (Meta Business Suite → Nastavitve → Računi → Instagram); (3) developers.facebook.com → aplikacija vrste *Business* + izdelek *Instagram* → Claudu »Meta app done« (ID; skrivnosti v `/opt/petprep/.env`).
+26. **»Ali si vedel?« — odobri zanimivosti (M5-R09e, 27. 11.):** do zdaj je bil seznam prazen, zato zanimivosti ni videl noben otrok (tudi Suki ne).
+   1. Počakaj na produkcijski deploy s tem PR-jem (dnevni ob 03:17 ali ročni zagon »CI & Deploy«) — deploy sam uvozi vsebino.
+   2. `/admin` → *Configuration* → **Breed facts** (`/admin/breed-facts`): seznam mora imeti ~900 vrstic (821 novih + 85 za border collieja in maine coona).
+   3. Filter **Status = Verified** → število vrstic na stran nastavi na *All* → označi vse (kvadratek v glavi) → **Approve selected**.
+   4. Odpri aplikacijo z dobermanom: gumb **knjiga** v zgornji vrstici se pokaže takoj; okno »Ali si vedel?« samo od sebe največ 2-krat na teden po uspešni skrbi.
+   5. Ob vsaki novi pasmi (nočni tek) pridejo nove vrstice kot *Verified* — ponovi korak 3 (ali povej Claudu, da se osnovne zanimivosti odobrijo samodejno).
 
 ## 2. Decisions
 
@@ -173,8 +179,13 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-27 (claude.ai chat, scripts + content + devops, `feat/M5-R09-breed-facts-all-breeds`)
+- David: doberman Suki ni nikoli pokazal »Ali si vedel?«. Preverjeno v kodi in na njegovem posnetku `/admin/breed-facts` (»No Breed facts«): vsebina samo za 2 pasmi, uvoz na produkciji nikoli zagnan. **M5-R09e:** `scripts/generate-breed-facts.mjs` (+ test, korak v CI »scripts«) → 821 zanimivosti za 139 pasem v `docs/research/breed-facts/` + kopija v `backend/database/data/breed-facts/`; `deploy-production.sh` po migracijah zažene `breeds:import-facts` (samo opozorilo ob napaki; harness dobi 1 preverjanje — lokalno ni tekel, ker ni `rsync`, teče v CI); runbook §4 / §5. Lokalno: `node --test scripts/tests/generate-breed-facts.test.mjs` 7 / 7, `ci-plan.test.sh` 383 / 383; Pest lokalno ni tekel (brez `vendor`) — `BreedFactImportTest` »validates every shipped file« teče v CI.
+- **Dolg:** ragdoll brez zanimivosti; mačke imajo 1–2; bogatejše zanimivosti (značaj, zgodovina, šolanje) niso napisane; odobritev je ročna (§1b.26). Dodan tudi `docs/business/WOOFIN_LESSONS.md` (*načrt*: »Danes s kužkom«, Pot 12 tednov).
+
 ### 2026-11-27 (mobile, `feat/puppy-grew-up-card`)
 - Meja mladiček → mlad pes (tester, mešanček »Bafo« 9 mesecev; David »Pravilo ostane + sporočilo«): po zadnjem izhodu zadnjega dne mladička je `take_out` null in »Pelji ven« je tiho izginil. Zdaj mirna kartica na vrhu »{ime} je zrasel! Od jutri ga ni treba več peljati ven na potrebo — zdaj štejejo sprehodi.« (z ×, enkrat na napravo / ljubljenčka; samo psi z vedenjem), pravilo `modules/behaviour/puppyGrewUp.ts`; brez spremembe API-ja. Neizvedeno (izbirno): napis »zadnji izhod pred spanjem« na večerni kartici zadnjega dne — `takeOutCountdown` kličejo trije kraji, zato ni del tega PR. Preveriti na telefonu (OTA).
+
 ### 2026-11-27 (backend + mobile, `fix/evening-take-out-window-copy-3`)
 - Napaka z Davidovega telefona: »Pelji ven« ob 18:56 (pred večernim oknom 19–21) — kartica je še kazala »najkasneje ob 21:00«, optimistično za hip »jutri 2:56«. Pravilo strežnika je bilo pravilno (izhod pred oknom ne šteje), napisi ne. Zdaj: `take_out.window_starts_at` (samo kind evening) + vodič `take_out.evening_window`; pred oknom »Pred spanjem ven — med 19:00 in 21:00« (gumb »od 19:00«), sporočilo »Lepo, da je bil zunaj! Pred spanjem (med 19:00 in 21:00) ga pelji ven še enkrat.«; push »… najkasneje ob 21:00«; optimistični »Pelji ven« ne računa več roka (le `last_taken_out_at`). Brez spremembe pravila. Dolg: »Pelji ven« ob zapadlem roku sveti še do odgovora strežnika (~nekaj 100 ms); preveri na telefonu.
 ### 2026-11-27 (mobile, `fix/home-video-frozen-after-play`)

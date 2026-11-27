@@ -1,0 +1,144 @@
+{
+  "breed": "black_russian_terrier",
+  "facts": [
+    {
+      "key": "black_russian_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Black Russian Terrier needs more than 2 hours of exercise every day.",
+        "sl": "Ruski črni terier potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S986",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/russian-black-terrier/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a3b3d0ef5040a200e99e495830613509923f1152bce29df4624a8c03d3f477e2"
+    },
+    {
+      "key": "black_russian_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Black Russian Terrier's coat needs grooming every day.",
+        "sl": "Ruski črni terier potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S986",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/russian-black-terrier/",
+      "quote": "Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "63db25b04603fb7552ee580a824983dc4937aedc24bb5e49de59abfc54e8f048"
+    },
+    {
+      "key": "black_russian_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Black Russian Terrier is a large dog breed.",
+        "sl": "Ruski črni terier je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S986",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/russian-black-terrier/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a1b60ed751fd380a442089f1ad19ddbba03179b70d74ffbafc94612dbcc81b24"
+    },
+    {
+      "key": "black_russian_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Black Russian Terrier has a medium-length coat.",
+        "sl": "Ruski črni terier ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S986",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/russian-black-terrier/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "728e9308af9ce38a261a9e88cd6b4b6173c197a05c4fca709132ed3db6129830"
+    },
+    {
+      "key": "black_russian_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Black Russian Terrier, males weigh 50–60 kg and females 45–50 kg.",
+        "sl": "Samci pasme ruski črni terier tehtajo 50–60 kg, samice 45–50 kg."
+      },
+      "why": null,
+      "source_id": "S985",
+      "source_name": "Fédération Cynologique Internationale",
+      "source_url": "https://fci.be/Nomenclature/Standards/327g02-en.pdf",
+      "quote": "Males: 50 – 60 kgs. Females: 45 – 50 kgs.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ce5e4600f0f588a61044e35404f1b154f48e86df65b481d3183f568c2d68295b"
+    },
+    {
+      "key": "black_russian_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Black Russian Terrier usually lives more than 10 years.",
+        "sl": "Ruski črni terier običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S986",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/russian-black-terrier/",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4a56b169dc191e7a82c9027199afd59bceaf5a4d85196a85b4ff9ba61c26d562"
+    },
+    {
+      "key": "black_russian_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Black Russian Terrier reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je ruski črni terier, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "99911b492d83a45c5c3d234765e87f1d072fe15aa7f9aa5a77aa2535ece032a6"
+    }
+  ]
+}

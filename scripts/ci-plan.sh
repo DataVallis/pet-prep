@@ -200,6 +200,7 @@ classify() {
       scripts/generate-api-types.mjs) need_mobile=true ;;
       scripts/ci-api-types.sh|package.json|yarn.lock) need_mobile=true need_scripts=true ;; # API types job (schema.ts vs the backend's OpenAPI, David 2026-11-15) runs with the mobile suite; shellcheck
       scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships
+      scripts/generate-breed-facts.mjs|scripts/tests/generate-breed-facts.test.mjs) need_scripts=true ;; # generator of docs/research/breed-facts (M5-R09e); its output ships via backend/database/data/breed-facts (backend + deploy)
       scripts/daily-deploy.sh|scripts/tests/daily-deploy.test.sh|.github/workflows/daily-deploy.yml) need_scripts=true ;; # D21 daily deploy trigger (Actions only), nothing ships
       scripts/ci-install-ffmpeg.sh|scripts/tests/ci-install-ffmpeg.test.sh) need_backend=true need_scripts=true ;; # D24 ffmpeg for the backend test job (Actions only), nothing ships
       scripts/ci-pest-shard.mjs|scripts/tests/ci-pest-shard.test.mjs) need_backend=true need_scripts=true ;; # D29 Pest shard plan (Actions only), nothing ships # D24 ffmpeg for the backend test job (Actions only), nothing ships

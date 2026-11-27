@@ -1,0 +1,125 @@
+{
+  "breed": "nova_scotia_duck_tolling_retriever",
+  "facts": [
+    {
+      "key": "nova_scotia_duck_tolling_retriever-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Nova Scotia Duck Tolling Retriever needs up to 1 hour of exercise every day.",
+        "sl": "Novoškotski prinašalec potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S578",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-nova-scotia-duck-tolling/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3d5638acae7a3c3cde614b1de50c257679f3516320a7826f85a653e802d44190"
+    },
+    {
+      "key": "nova_scotia_duck_tolling_retriever-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Nova Scotia Duck Tolling Retriever's coat needs grooming more than once a week.",
+        "sl": "Novoškotski prinašalec potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S578",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-nova-scotia-duck-tolling/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f8dfcddfa4603990b1ce874171de57c003c6a1548801b1d056b4a3a4430fee79"
+    },
+    {
+      "key": "nova_scotia_duck_tolling_retriever-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Nova Scotia Duck Tolling Retriever is a medium-sized dog breed.",
+        "sl": "Novoškotski prinašalec je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S578",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-nova-scotia-duck-tolling/",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c47a5dc9345a7e0eb11e2d11482c1e92748b886c708d6591f9a2e6a73ed7bfef"
+    },
+    {
+      "key": "nova_scotia_duck_tolling_retriever-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Nova Scotia Duck Tolling Retriever has a medium-length coat.",
+        "sl": "Novoškotski prinašalec ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S578",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-nova-scotia-duck-tolling/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b4e3ec4d21d36552137ec57a04afb67b45f2b70af5ebd389081f03c8b341879f"
+    },
+    {
+      "key": "nova_scotia_duck_tolling_retriever-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Nova Scotia Duck Tolling Retriever, males weigh 20–23 kg and females 17–20 kg.",
+        "sl": "Samci pasme novoškotski prinašalec tehtajo 20–23 kg, samice 17–20 kg."
+      },
+      "why": null,
+      "source_id": "S577",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/Nomenclature/Standards/312g08-en.pdf",
+      "quote": "Guidelines: 45-51 lbs. (20-23 kg) for adult males; bitches 37-43 lbs. (17-20 kg).",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "cc2a41df0a24842bfb103d51682dd253390550d4ef3c22df9c8deb28fdd4a984"
+    },
+    {
+      "key": "nova_scotia_duck_tolling_retriever-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Nova Scotia Duck Tolling Retriever reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je novoškotski prinašalec, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1d609f917dc46415547c728a5215fc19ad4d46ab98004f7c5547f4279587cf9d"
+    }
+  ]
+}

@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-27 — »Ali si vedel?« za vse pasme, ne samo za dve
+
+**Kaj:** David je opazil, da mu doberman Suki še nikoli ni pokazal zanimivosti. Vzrok: vsebina je obstajala samo za border collieja in maine coona, na produkciji pa ni bila uvožena niti ta (`/admin/breed-facts` prazen). Zdaj skripta iz podatkov registra pasem (istih kot na petprep.si) in njihovih dobesednih citatov napiše **821 osnovnih zanimivosti za 139 pasem** (EN + SL): koliko gibanja potrebuje, kako pogosto nega dlake, velikost, država izvora, dlaka, višina, teža, življenjska doba, do kdaj raste. Uvoz teče ob vsakem deployu; nova pasma dobi zanimivosti po runbooku. *(Otroci jih vidijo po Davidovi odobritvi v administraciji.)*
+**Zakaj je pomembno:** funkcija je bila zgrajena, a za 139 od 141 pasem nevidna. Zanimivost nastane samo, če citat vira sam pove vse, kar pove stavek — test preveri vsako številko.
+**Kako povedati:** 🧒 »Doberman potrebuje vsak dan več kot 2 uri gibanja. Zato je dnevni cilj tvojega odraslega psa 12.000 korakov.« · 👩 »Vsaka zanimivost ima vir, ki ga vidite.« · 💼 »Vsebina za 141 pasem iz enega preverjenega vira podatkov, brez ročnega pisanja.« · 🛠 »Generator + mehansko preverjanje številk proti citatu; `verified_hash` veže preverjanje na točno to besedilo.«
+
+---
+
 ## 2026-11-27 — Pošteno pred nakupom: kaj stvar v »Željah« res naredi
 
 **Kaj:** tester je mački kupil »Palico s perjem« (5,99 €), ker je mislil, da se bo otrok potem z njo igral z mačko. V resnici se kupljena igrača pokaže le v mačkinih prizorih — z njo se igra sama, ko je razigrana; otrokova vsakodnevna igra »Palica s peresom« je enaka tudi brez nakupa. Zdaj ima vsaka stvar (postelja / košara, skledi, dve igrači, priboljški, paket) pod imenom kratek opis, kaj naredi — starš ga vidi pred gumbom »Kupi«, otrok otroško različico v »Želje«, brez cen. Opisi so napisani iz kode (kateri prizor stvar zamenja), ne iz želja.

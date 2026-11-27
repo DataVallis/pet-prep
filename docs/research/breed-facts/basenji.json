@@ -1,0 +1,163 @@
+{
+  "breed": "basenji",
+  "facts": [
+    {
+      "key": "basenji-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji needs 1 hour of exercise every day.",
+        "sl": "Basenji potrebuje vsak dan 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "1 hour",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6f09b91e9b0d4aca339a20a437e589458070ddaab8961236a925fb8cb9626c4b"
+    },
+    {
+      "key": "basenji-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji's coat needs grooming once a week.",
+        "sl": "Basenji potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "brushing once a week is usually enough to remove any dead hair.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9aa63865db3d2532fe2c360afe057b3fa3190595e8af4b9253a7940cd975d505"
+    },
+    {
+      "key": "basenji-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji is a medium-sized dog breed.",
+        "sl": "Basenji je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3df059559849eba5be843143fbbdc02990252341552e91f543ef4b7b19870cd3"
+    },
+    {
+      "key": "basenji-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji has a short coat.",
+        "sl": "Basenji ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4f9367a4d26747004043ffc5fbf36465f0efcfa998068e47e32eb808a0a9ef84"
+    },
+    {
+      "key": "basenji-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji is 40–43 cm tall at the withers.",
+        "sl": "Psi pasme basenji so v vihru visoki 40–43 cm."
+      },
+      "why": null,
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "40-43 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "76ad42ac2a795bd14d31a91f94c56787a2218e7519c851d4e8694b79c118d6e3"
+    },
+    {
+      "key": "basenji-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji weighs 9–11 kg.",
+        "sl": "Basenji tehta 9–11 kg."
+      },
+      "why": null,
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "9-11 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7804c912c1260fd5c682856ce445aec51bf950e81671055982b5919e10f80c74"
+    },
+    {
+      "key": "basenji-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basenji usually lives more than 12 years.",
+        "sl": "Basenji običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S644",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/basenji",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "59242858b45cb0f68d1f512f11130e50c7998a554b4881811f194de0b3a31296"
+    },
+    {
+      "key": "basenji-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Basenji reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je basenji, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "49deee3f3304b499b88394ed9ee1925315ae539504e2a323f22b69370affe407"
+    }
+  ]
+}

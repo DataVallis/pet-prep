@@ -1,0 +1,125 @@
+{
+  "breed": "miniature_bull_terrier",
+  "facts": [
+    {
+      "key": "miniature_bull_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Bull Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Miniaturni bulterier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S820",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/bull-terrier-miniature/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "df27a150ed60940313ce1ec0532a8933a1fc8dc2a8974287b24efad1a7c6e8b4"
+    },
+    {
+      "key": "miniature_bull_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Bull Terrier's coat needs grooming once a week.",
+        "sl": "Miniaturni bulterier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S820",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/bull-terrier-miniature/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4f4babe9381007480e0370179ca5f736d1a45b12e8d432867d014489af2c8333"
+    },
+    {
+      "key": "miniature_bull_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Bull Terrier is a small dog breed.",
+        "sl": "Miniaturni bulterier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S820",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/bull-terrier-miniature/",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ef5e23693e2d69b71db66e8f251a135601412f2cb0d28ecadac16f16c2e85de1"
+    },
+    {
+      "key": "miniature_bull_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Bull Terrier has a short coat.",
+        "sl": "Miniaturni bulterier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S820",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/bull-terrier-miniature/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1f15db1bfee2a28cf34104be3f374261d42bfa24e0730f7683114dfedea2dc07"
+    },
+    {
+      "key": "miniature_bull_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Bull Terrier usually lives more than 10 years.",
+        "sl": "Miniaturni bulterier običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S820",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/bull-terrier-miniature/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fad161898597fe1acba5ea9ed695823a4c34e6749b2e089eef713e12234a85a0"
+    },
+    {
+      "key": "miniature_bull_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Miniature Bull Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je miniaturni bulterier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a7dd9e307982ceecc4bc9871c45037bf571b20aba8e66eebe24589708e53135a"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "breed": "papillon",
+  "facts": [
+    {
+      "key": "papillon-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Papillon needs up to 30 minutes of exercise every day.",
+        "sl": "Papijon potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S397",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=6161",
+      "quote": "Exercise: Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b09aef64a7a36d681a99eb40fb407e6a04dc8d4dbb8b843b079382dac94a5cdc"
+    },
+    {
+      "key": "papillon-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Papillon's coat needs grooming more than once a week.",
+        "sl": "Papijon potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog 3 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 3-krat na teden."
+      },
+      "source_id": "S397",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=6161",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ac10674935ab8c9dcbe0abddeb33c7c3283d905994fffcebf73c70cb3e315fed"
+    },
+    {
+      "key": "papillon-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Papillon is a small dog breed.",
+        "sl": "Papijon je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S397",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=6161",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d490518e1922c9e728b94af076a61d8cc6d56651a77329649c575596d02886c3"
+    },
+    {
+      "key": "papillon-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Papillon has a medium-length coat.",
+        "sl": "Papijon ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S397",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=6161",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "cc95f637e5326451224071bbccf6507609d80bdf8b5657c170df525b819235e7"
+    },
+    {
+      "key": "papillon-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Papillon usually lives more than 12 years.",
+        "sl": "Papijon običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S397",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=6161",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e132bb105325a2e15d62b5bf1f3d6bc1e4b9497bd2d6769178df1fb17b727ff8"
+    },
+    {
+      "key": "papillon-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Papillon reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je papijon, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4230be2e06c09ebe7c4f50facbfd982416046b473b9e3c8d34ac2a7ca45a4297"
+    }
+  ]
+}

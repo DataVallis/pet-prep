@@ -1,0 +1,144 @@
+{
+  "breed": "rhodesian_ridgeback",
+  "facts": [
+    {
+      "key": "rhodesian_ridgeback-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Rhodesian Ridgeback needs more than 2 hours of exercise every day.",
+        "sl": "Rodezijski ridgeback potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S387",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1026",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "74944c3d2d39581b77278ece577aad2a0c31431d4d51a499ec11583eb0ac1343"
+    },
+    {
+      "key": "rhodesian_ridgeback-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Rhodesian Ridgeback's coat needs grooming once a week.",
+        "sl": "Rodezijski ridgeback potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S387",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1026",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "cb2246affeb489c2219b20deb4da8f3cca3e8be7d1773141a16aafaadfbd3202"
+    },
+    {
+      "key": "rhodesian_ridgeback-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rhodesian Ridgeback is a large dog breed.",
+        "sl": "Rodezijski ridgeback je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S387",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1026",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f7a1cbe7d6f887f133c78d3451198d58d51cee976192f3830fe83fa2f22ff353"
+    },
+    {
+      "key": "rhodesian_ridgeback-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rhodesian Ridgeback has a short coat.",
+        "sl": "Rodezijski ridgeback ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S387",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1026",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0fe2d24486eb2d3f0639151e57e7515cfc303d9de9daad7a2834880e779c85f8"
+    },
+    {
+      "key": "rhodesian_ridgeback-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Rhodesian Ridgeback, males are 63–69 cm tall at the withers.",
+        "sl": "Samec pasme rodezijski ridgeback je v vihru visok 63–69 cm."
+      },
+      "why": null,
+      "source_id": "S385",
+      "source_name": "FCI",
+      "source_url": "https://fci.be/Nomenclature/Standards/146g06-en.pdf",
+      "quote": "Height at the withers: Males: 63 cm to 69 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3d76147151ceb2fc43131a9c7d559da36f55c170ca20df3f6bc95b51e50b7755"
+    },
+    {
+      "key": "rhodesian_ridgeback-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rhodesian Ridgeback usually lives more than 10 years.",
+        "sl": "Rodezijski ridgeback običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S387",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1026",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d8d30700a9a94c5fcd3830df28270e7e611cdcb8b18677996863ddb9fac7b916"
+    },
+    {
+      "key": "rhodesian_ridgeback-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Rhodesian Ridgeback reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je rodezijski ridgeback, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "100832025e581248c0e8ecaa92133cc00c2130d4558f14ef66ff188481e6305f"
+    }
+  ]
+}

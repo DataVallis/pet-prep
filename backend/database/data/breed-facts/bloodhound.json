@@ -1,0 +1,106 @@
+{
+  "breed": "bloodhound",
+  "facts": [
+    {
+      "key": "bloodhound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bloodhound needs more than 2 hours of exercise every day.",
+        "sl": "Bloodhound potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S502",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/bloodhound/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "13e35b7fb9b490a811d9322723fb53d10ad19d2aea89bb6dbead849e5588da3c"
+    },
+    {
+      "key": "bloodhound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bloodhound's coat needs grooming once a week.",
+        "sl": "Bloodhound potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S502",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/bloodhound/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b8e13c3157a8695c2813713b6f122b54ba28770ef0657d76392d2bdab927e32a"
+    },
+    {
+      "key": "bloodhound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bloodhound is a large dog breed.",
+        "sl": "Bloodhound je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S502",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/bloodhound/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f3bb1ba7931269b33c670468434cb08ffa132b122f75c302df17685260902d3e"
+    },
+    {
+      "key": "bloodhound-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bloodhound has a short coat.",
+        "sl": "Bloodhound ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S502",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/bloodhound/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9d728ea1234c53cf2d1bef30c83c5d3d3c896c6cb7fe9fb08d22f6c9cabbfe04"
+    },
+    {
+      "key": "bloodhound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bloodhound reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je bloodhound, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b14c8d0f988bdc6a3c795e0841ada12d1b1739403adabf968bdfda3afb02b2c1"
+    }
+  ]
+}

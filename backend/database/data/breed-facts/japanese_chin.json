@@ -1,0 +1,87 @@
+{
+  "breed": "japanese_chin",
+  "facts": [
+    {
+      "key": "japanese_chin-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Japanese Chin needs up to 30 minutes of exercise every day.",
+        "sl": "Japonski čin potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S805",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/japanese-chin/",
+      "quote": "Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e053ae9980e7de25d8c583382b10f1296355498394c956874b0b45cc0150a2ea"
+    },
+    {
+      "key": "japanese_chin-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Japanese Chin's coat needs grooming more than once a week.",
+        "sl": "Japonski čin potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S805",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/japanese-chin/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ab9e0a3cd2fafdfa41ed3994cb9209e6d65deab5886acc1b646a8c213f4b9de8"
+    },
+    {
+      "key": "japanese_chin-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Japanese Chin has a medium-length coat.",
+        "sl": "Japonski čin ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S805",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/japanese-chin/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "718b5540bdb77420de8035a6d3e674d59dd1c423d83189e727a84fe6fc16f7e5"
+    },
+    {
+      "key": "japanese_chin-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Japanese Chin reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je japonski čin, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7c56394f7d8aacd07ca145214ecacb0f5ec0cf84a0280cacb197b208335b465e"
+    }
+  ]
+}

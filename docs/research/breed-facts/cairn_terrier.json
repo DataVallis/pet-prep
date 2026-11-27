@@ -1,0 +1,65 @@
+{
+  "breed": "cairn_terrier",
+  "facts": [
+    {
+      "key": "cairn_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Cairn Terrier needs at least 1 hour of exercise every day.",
+        "sl": "Cairn terier potrebuje vsak dan vsaj 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S585",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/cairn-terrier",
+      "quote": "Minimum exercise (per day): 1 hour",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3083ac8c3fe138d149a108ab7c212c6cca500801a710248b753b795b729da634"
+    },
+    {
+      "key": "cairn_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Cairn Terrier is a small dog breed.",
+        "sl": "Cairn terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S585",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/cairn-terrier",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "97ed84e35b6a5e89dfcd090a481bd92f01de46733c91c6439562bf9a6cdf4cd3"
+    },
+    {
+      "key": "cairn_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Cairn Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je cairn terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4ed7d25ac73527e77a75a1b1603c9604678d4ef149e17eb08efa97fd74c7a302"
+    }
+  ]
+}

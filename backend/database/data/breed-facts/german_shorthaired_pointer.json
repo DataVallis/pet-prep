@@ -1,0 +1,122 @@
+{
+  "breed": "german_shorthaired_pointer",
+  "facts": [
+    {
+      "key": "german_shorthaired_pointer-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The German Shorthaired Pointer needs more than 2 hours of exercise every day.",
+        "sl": "Nemški kratkodlaki ptičar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S187",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=2035",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "08bf5c0ac782c9d7b204423852134ee4a3bd5bdcdd35e03a48bac463ced640b2"
+    },
+    {
+      "key": "german_shorthaired_pointer-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The German Shorthaired Pointer's coat needs grooming once a week.",
+        "sl": "Nemški kratkodlaki ptičar potrebuje nego dlake enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S187",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=2035",
+      "quote": "Once a week",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ce19c71b9dbf4266afb34035650120da8140caac0255582d9dd0f8135c597b6f"
+    },
+    {
+      "key": "german_shorthaired_pointer-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Shorthaired Pointer is a large dog breed.",
+        "sl": "Nemški kratkodlaki ptičar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S188",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/taking-care-of-your-pet/looking-after-your-pet/puppies-dogs/large-dogs/german-pointer",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5e63b28caa622131c81b05f40fa97b4559caf9bdbb4cf4d1d98b9b9c78c65b71"
+    },
+    {
+      "key": "german_shorthaired_pointer-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The German Shorthaired Pointer comes from Germany.",
+        "sl": "Nemški kratkodlaki ptičar izvira iz Nemčije."
+      },
+      "why": null,
+      "source_id": "S185",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/en/nomenclature/DEUTSCH-KURZHAAR-119.html",
+      "quote": "Group: n°7 - Pointing Dogs; Section: Continental Pointing Dogs; Country of origin: GERMANY",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "26165676e28b167c30913ca1a76b1d09e1ad1df0e3e10b81b2b30c58597aeb10"
+    },
+    {
+      "key": "german_shorthaired_pointer-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Shorthaired Pointer has a short coat.",
+        "sl": "Nemški kratkodlaki ptičar ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S187",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=2035",
+      "quote": "The coat is short, flat and coarse to the feel.",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fafa41aeecedb24c3f069f788ec6455a8ff6e000da14dc3d8c00542f2233b262"
+    },
+    {
+      "key": "german_shorthaired_pointer-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the German Shorthaired Pointer reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je nemški kratkodlaki ptičar, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "486ca48989007087a1c3a13477b19512ee059b10ab6a49c0c32e31b5bcade7eb"
+    }
+  ]
+}

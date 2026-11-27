@@ -1,0 +1,43 @@
+{
+  "breed": "mastiff",
+  "facts": [
+    {
+      "key": "mastiff-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Mastiff is a large dog breed.",
+        "sl": "Angleški mastif je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S370",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/mastiff",
+      "quote": "Size | Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5cee872d89d9a4b7c2589d35dbd166c6e3b5da2292d645eb5c224b071ebd7a41"
+    },
+    {
+      "key": "mastiff-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Mastiff reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je angleški mastif, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0572f8710c0a2c97ffe67504fd5ad68b6d19d137541d8556b4a93aec7f5b5371"
+    }
+  ]
+}

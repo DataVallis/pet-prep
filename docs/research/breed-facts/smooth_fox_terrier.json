@@ -1,0 +1,125 @@
+{
+  "breed": "smooth_fox_terrier",
+  "facts": [
+    {
+      "key": "smooth_fox_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Smooth Fox Terrier needs 1 hour of exercise every day.",
+        "sl": "Gladkodlaki foksterier potrebuje vsak dan 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S873",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/fox-terrier",
+      "quote": "1 hour",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4d1f934d8ed36754b205fbf1fc12e8e076571f53be3255aabadb8ea771a57769"
+    },
+    {
+      "key": "smooth_fox_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Smooth Fox Terrier's coat needs grooming once a week.",
+        "sl": "Gladkodlaki foksterier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S1071",
+      "source_name": "PetMD — Sarah Kloepple, reviewed by Barri J. Morrison, DVM (updated Sep. 11, 2024)",
+      "source_url": "https://www.petmd.com/dog/breeds/smooth-fox-terrier",
+      "quote": "Brushing your dog once a week can help keep fur from ending up on your furniture.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b518b73789e3a2992ae2d275f4f33cbd1f7f2047b4f7df1c2f3636e6ebc7b1d7"
+    },
+    {
+      "key": "smooth_fox_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Smooth Fox Terrier is a small dog breed.",
+        "sl": "Gladkodlaki foksterier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S1075",
+      "source_name": "Dogs Trust (UK)",
+      "source_url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/fox-terrier",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ba4b5fd4b029613528e53d806d4d9d234f23c5af966b7f354face38214c7990c"
+    },
+    {
+      "key": "smooth_fox_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Smooth Fox Terrier has a short coat.",
+        "sl": "Gladkodlaki foksterier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S1075",
+      "source_name": "Dogs Trust (UK)",
+      "source_url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/fox-terrier",
+      "quote": "Short length with moderate shedding.",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0c4c13042f9015909ec255ff143e6d2c9202fec73cecd8f40d3e50d2456ce401"
+    },
+    {
+      "key": "smooth_fox_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Smooth Fox Terrier, males weigh 7.5–8 kg.",
+        "sl": "Samec pasme gladkodlaki foksterier tehta 7,5–8 kg."
+      },
+      "why": null,
+      "source_id": "S1070",
+      "source_name": "FCI",
+      "source_url": "https://dev.fci.be/Nomenclature/Standards/012g03-en.pdf",
+      "quote": "Dogs: 7,5 - 8 kgs.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "313123fe1a93f31568215213d50a297cf1b8ef31fb36423beb95e047cef204df"
+    },
+    {
+      "key": "smooth_fox_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Smooth Fox Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je gladkodlaki foksterier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "816c4d26c3674b8a4186c4e6f3b6f88dd44fe832ee9f7fe9efcdc6111257e135"
+    }
+  ]
+}

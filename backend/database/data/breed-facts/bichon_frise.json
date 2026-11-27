@@ -1,0 +1,144 @@
+{
+  "breed": "bichon_frise",
+  "facts": [
+    {
+      "key": "bichon_frise-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bichon Frise needs up to 30 minutes of exercise every day.",
+        "sl": "Kodrasti bišon potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S411",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/bichon-frise",
+      "quote": "Exercise: Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e496fd8121f218558eda01c21f76341b76e2fbfad4bdca5a413932c270024fc9"
+    },
+    {
+      "key": "bichon_frise-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bichon Frise's coat needs grooming every day.",
+        "sl": "Kodrasti bišon potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S411",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/bichon-frise",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "48a6e1adac3b9893f77e1c880edb362f37b3f43779bc06449b16fdbeb1d1d636"
+    },
+    {
+      "key": "bichon_frise-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bichon Frise is a small dog breed.",
+        "sl": "Kodrasti bišon je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S411",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/bichon-frise",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b660b38142d7da75740aafe877bf3101ac8cee21be519b30a75699f532a80170"
+    },
+    {
+      "key": "bichon_frise-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bichon Frise has a medium-length coat.",
+        "sl": "Kodrasti bišon ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S411",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/bichon-frise",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fef836be6dc7df24fce883c2e94313f25cc7c60f0d7f44f8db233c451082aa64"
+    },
+    {
+      "key": "bichon_frise-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bichon Frise weighs 4–7 kg.",
+        "sl": "Kodrasti bišon tehta 4–7 kg."
+      },
+      "why": null,
+      "source_id": "S413",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/bichon-frise",
+      "quote": "4-7 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a52bb441b82e1bd9b5364a06226b70e02685a4fcbecbf88b85f0093719b6df4a"
+    },
+    {
+      "key": "bichon_frise-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bichon Frise usually lives more than 12 years.",
+        "sl": "Kodrasti bišon običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S411",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/bichon-frise",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3cf70e4a3dc48f210459373be73a918b06916360300f019c09a8fc1a5c5bf4c9"
+    },
+    {
+      "key": "bichon_frise-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bichon Frise reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je kodrasti bišon, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f4b785f5af16c68dff67788760e639d28d66f4e3e28358fbd8bbf3a5e633447f"
+    }
+  ]
+}

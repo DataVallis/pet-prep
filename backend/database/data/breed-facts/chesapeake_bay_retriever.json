@@ -1,0 +1,163 @@
+{
+  "breed": "chesapeake_bay_retriever",
+  "facts": [
+    {
+      "key": "chesapeake_bay_retriever-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Chesapeake Bay Retriever needs more than 2 hours of exercise every day.",
+        "sl": "Chesapeake Bay retriver potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S459",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-chesapeake-bay/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a9cfc7331e7c15d0bba135af9ec53cb45325ab95aeeb3d12af47f0a6b37b9397"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Chesapeake Bay Retriever's coat needs grooming once a week.",
+        "sl": "Chesapeake Bay retriver potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S459",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-chesapeake-bay/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "853aa661b9b4eeecff95f74c3e59a2bd3365fc8a354460815cd3c3c7fddd8a12"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chesapeake Bay Retriever is a large dog breed.",
+        "sl": "Chesapeake Bay retriver je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S459",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-chesapeake-bay/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4010134df1a6d3df5aa67a8b9c237a7eeccda4d8ae1c35bf865ddbab0e94c1d9"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chesapeake Bay Retriever has a short coat.",
+        "sl": "Chesapeake Bay retriver ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S459",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-chesapeake-bay/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c9a99ba78f55eebfbe243de9c5eec53d1645e28b8ddebd33d9cb4a82ab17f154"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Chesapeake Bay Retriever, males are 58–66 cm tall at the withers.",
+        "sl": "Samec pasme Chesapeake Bay retriver je v vihru visok 58–66 cm."
+      },
+      "why": null,
+      "source_id": "S458",
+      "source_name": "FCI (copy published by KUSA, the Kennel Union of Southern Africa)",
+      "source_url": "https://www.kusa.co.za/images/GUNDOG%20GROUP%202025/Chesapeake%20Bay%20Retriever%20-%20FCI%20[01-2025].pdf",
+      "quote": "Males should measure 23 to 26 inches; (58 - 66cm).",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9f546b4fffbd97a3cfa0a0c8a88067ad4e760714b6875fe2bfb3a275c8987997"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Chesapeake Bay Retriever, males weigh 29.5–36.5 kg.",
+        "sl": "Samec pasme Chesapeake Bay retriver tehta 29,5–36,5 kg."
+      },
+      "why": null,
+      "source_id": "S458",
+      "source_name": "FCI (copy published by KUSA, the Kennel Union of Southern Africa)",
+      "source_url": "https://www.kusa.co.za/images/GUNDOG%20GROUP%202025/Chesapeake%20Bay%20Retriever%20-%20FCI%20[01-2025].pdf",
+      "quote": "Males should weigh 65 to 80 pounds (29,5-36,5kg).",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "29b6b989ffa21f05616846bdac0b6fbc97b122ce8c9da6880675a8bf070638c7"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chesapeake Bay Retriever usually lives more than 10 years.",
+        "sl": "Chesapeake Bay retriver običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S459",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-chesapeake-bay/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "648aea68c32b04c16fb560d92056569344c7e43bebb2b826dcfdab8c3f55adb6"
+    },
+    {
+      "key": "chesapeake_bay_retriever-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Chesapeake Bay Retriever reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je Chesapeake Bay retriver, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1407b73b10a512d3cb78bed43c7299fca6db7356395a67589637c35bb6dcd8d4"
+    }
+  ]
+}

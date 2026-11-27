@@ -1,0 +1,122 @@
+{
+  "breed": "beauceron",
+  "facts": [
+    {
+      "key": "beauceron-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Beauceron needs more than 2 hours of exercise every day.",
+        "sl": "Beauceron potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S787",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/beauceron/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "77c8c6890f862627726c1c714f43116c00516376cbddd6f0bb15a3745e20ad7f"
+    },
+    {
+      "key": "beauceron-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Beauceron's coat needs grooming more than once a week.",
+        "sl": "Beauceron potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S787",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/beauceron/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a63349150339d8ca0568a9ec12b97dcb91f6db401fe5e7594c9b3676d4cb6c36"
+    },
+    {
+      "key": "beauceron-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Beauceron is a large dog breed.",
+        "sl": "Beauceron je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S787",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/beauceron/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5d5d1ace65a81739b65ce3caf20641f8a48f1b709d663ae31c2db01c9a8c749c"
+    },
+    {
+      "key": "beauceron-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Beauceron has a medium-length coat.",
+        "sl": "Beauceron ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S787",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/beauceron/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0d528738d2aa5b6e4dd16f0993b0446f2f6ec06053ac0f9119cb9aa818a9d8c6"
+    },
+    {
+      "key": "beauceron-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Beauceron usually lives more than 10 years.",
+        "sl": "Beauceron običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S787",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/beauceron/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ec27b152f32d8170a946d0de20e1fe834860081b88cea413d120a84c52c4f5ce"
+    },
+    {
+      "key": "beauceron-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Beauceron reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je beauceron, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b48eab6a439e1346df98c457b62586ee07fa2686ada449115a96de0b5f997273"
+    }
+  ]
+}

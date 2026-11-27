@@ -1,0 +1,125 @@
+{
+  "breed": "pug",
+  "facts": [
+    {
+      "key": "pug-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Pug needs up to 1 hour of exercise every day.",
+        "sl": "Mops potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S355",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pug",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a714b3f7061a3c31056241a52209f3469cc6d09e5328188446adc44091f27f95"
+    },
+    {
+      "key": "pug-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Pug's coat needs grooming once a week.",
+        "sl": "Mops potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S355",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pug",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "07eb3433a1c70bedf8bde171700bb44dc3c305fd95ed4007f44a013a4cfea99c"
+    },
+    {
+      "key": "pug-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pug is a small dog breed.",
+        "sl": "Mops je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S355",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pug",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "da242992fb1201f10bb6f33670cfe348c28d46e3334d444d05633725144b3549"
+    },
+    {
+      "key": "pug-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pug has a short coat.",
+        "sl": "Mops ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S355",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pug",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c5e8714e5a5886cdb3b9f74bd8ab60f195a4e348ad78f521511d2bb2325b2683"
+    },
+    {
+      "key": "pug-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pug is 25–33 cm tall at the withers.",
+        "sl": "Psi pasme mops so v vihru visoki 25–33 cm."
+      },
+      "why": null,
+      "source_id": "S357",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pug",
+      "quote": "25-33 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c5f80679d7dbdcea7c76de12928213641adf506448e5d76a92aa7359d1c0516f"
+    },
+    {
+      "key": "pug-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Pug reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je mops, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9e8589b0221f9e2d1dec5f847e238f67445bc9f9a147f674292a944545b6fdb2"
+    }
+  ]
+}

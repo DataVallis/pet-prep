@@ -1,0 +1,144 @@
+{
+  "breed": "australian_cattle_dog",
+  "facts": [
+    {
+      "key": "australian_cattle_dog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Australian Cattle Dog needs more than 2 hours of exercise every day.",
+        "sl": "Avstralski govedar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S437",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5144",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f44a5641bca4856ce0cd993483868b1947f1ab836e9eefba27c94b7744a0ef01"
+    },
+    {
+      "key": "australian_cattle_dog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Australian Cattle Dog's coat needs grooming once a week.",
+        "sl": "Avstralski govedar potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S437",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5144",
+      "quote": "Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "136bfc3d73b86151d18a8414220940a3d2d1171843c0f19193d7ba369bf3cefd"
+    },
+    {
+      "key": "australian_cattle_dog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Australian Cattle Dog is a medium-sized dog breed.",
+        "sl": "Avstralski govedar je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S437",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5144",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b80630fc8407c128e1b5a9be997d2f4538f2c4298c0d697b43a86b3a91d2dc81"
+    },
+    {
+      "key": "australian_cattle_dog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Australian Cattle Dog has a short coat.",
+        "sl": "Avstralski govedar ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S437",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5144",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dfd7e93fcf63493497261a323fef95ec1f9419b42fa7905f5e5958019bdc224a"
+    },
+    {
+      "key": "australian_cattle_dog-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Australian Cattle Dog, males are 46–51 cm tall at the withers.",
+        "sl": "Samec pasme avstralski govedar je v vihru visok 46–51 cm."
+      },
+      "why": null,
+      "source_id": "S436",
+      "source_name": "The Kennel Club (UK) breed standard, reprinted by the Kennel Union of Southern Africa",
+      "source_url": "https://www.kusa.co.za/images/Breed%20Standards%202024/Australian%20Cattle%20Dog%20-%20KC%20%5B02-2017%5D.pdf",
+      "quote": "Males: 46cm – 51cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3e82451d7c03b0cd06b1132a339a6d9ebcbd0b3af9f449d521359f07d6eef81e"
+    },
+    {
+      "key": "australian_cattle_dog-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Australian Cattle Dog weighs 16–20 kg.",
+        "sl": "Avstralski govedar tehta 16–20 kg."
+      },
+      "why": null,
+      "source_id": "S438",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/australian-cattle-dog",
+      "quote": "16kg-20kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8379185d3b06ea837eed3489cd073f4ac92572ccdf4104ca2d664d7a7e5d6dac"
+    },
+    {
+      "key": "australian_cattle_dog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Australian Cattle Dog reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je avstralski govedar, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1b3109e53b20a7a787a1ca94a728d5d5f16c5d7b11014471b73bec4581bedc5f"
+    }
+  ]
+}

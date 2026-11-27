@@ -1,0 +1,46 @@
+{
+  "breed": "siberian_cat",
+  "facts": [
+    {
+      "key": "siberian_cat-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Siberian cat's coat needs grooming at least once a week.",
+        "sl": "Sibirska mačka potrebuje nego dlake vsaj enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your cat once a week in the app.",
+        "sl": "Zato v aplikaciji svojo muco češeš enkrat na teden."
+      },
+      "source_id": "C35",
+      "source_name": "PetMD — Kristen Seymour; reviewed by Barri J. Morrison, DVM; updated 2023-05-01",
+      "source_url": "https://www.petmd.com/cat/breeds/c_ct_siberian",
+      "quote": "The Siberian’s water-resistant triple coat is not maintenance-free, requiring grooming sessions at least once a week.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "25e77858b798ba966021c7c73740f428e8d59319f06e50b56b7e3f2fefb99da6"
+    },
+    {
+      "key": "siberian_cat-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Siberian cat usually lives 12 to 15 years.",
+        "sl": "Sibirska mačka običajno živi od 12 do 15 let."
+      },
+      "why": null,
+      "source_id": "C34",
+      "source_name": "GCCF (Governing Council of the Cat Fancy, UK registry) — breed page",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/siberian/",
+      "quote": "The Siberian cat breed is very healthy and can live 12 to 15 years or more.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c59142fb7339fac92b66a0a8d1e087246f1c25869cd31eeaf1252f5aebcd28f4"
+    }
+  ]
+}

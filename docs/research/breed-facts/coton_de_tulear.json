@@ -1,0 +1,144 @@
+{
+  "breed": "coton_de_tulear",
+  "facts": [
+    {
+      "key": "coton_de_tulear-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Coton de Tulear needs up to 30 minutes of exercise every day.",
+        "sl": "Coton de Tulear potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S724",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/coton-de-tulear/",
+      "quote": "Exercise: Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ec10f0b73c232c7db0669f53db4449c6564658bac7ef9d81567874d9a9ef3cbd"
+    },
+    {
+      "key": "coton_de_tulear-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Coton de Tulear's coat needs grooming every day.",
+        "sl": "Coton de Tulear potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S724",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/coton-de-tulear/",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f875c00dcdfe96190fc6e403406961eaebc7cf82649b653a8984939e7bb31173"
+    },
+    {
+      "key": "coton_de_tulear-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Coton de Tulear is a small dog breed.",
+        "sl": "Coton de Tulear je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S724",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/coton-de-tulear/",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7c7189f45d98cd47757a924a6e9d26b95ad05dbe296dc4a0c2bf1965d2bd8bc6"
+    },
+    {
+      "key": "coton_de_tulear-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Coton de Tulear has a long coat.",
+        "sl": "Coton de Tulear ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S724",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/coton-de-tulear/",
+      "quote": "Coat length: Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "74c20c51a1a972da337714afdc8b105a9f6d003f25ae46f83b60889fcc15f0f8"
+    },
+    {
+      "key": "coton_de_tulear-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Coton de Tulear, males are 26–28 cm tall at the withers and females 23–25 cm.",
+        "sl": "Samci pasme Coton de Tulear so v vihru visoki 26–28 cm, samice 23–25 cm."
+      },
+      "why": null,
+      "source_id": "S722",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/Nomenclature/Standards/283g09-en.pdf",
+      "quote": "Height at withers: Males: 26-28 cm, tolerance of 2 cm above and 1 cm below. Females: 23-25 cm, tolerance of 2 cm above and 1 cm below.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "77e41fd3247a717d84cec99cde9bb3924ae559ef59a8680beb247cf9714877f6"
+    },
+    {
+      "key": "coton_de_tulear-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Coton de Tulear usually lives more than 12 years.",
+        "sl": "Coton de Tulear običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S724",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/coton-de-tulear/",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3a6c24d7b6e24b54768493ae24ef96cedd59fd64a31770bf9acff314bbfd0af2"
+    },
+    {
+      "key": "coton_de_tulear-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Coton de Tulear reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je Coton de Tulear, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "94ddfc2af1859b9db4c883e5b01b056913802b9a44e6cc36ef78eab8f8aed630"
+    }
+  ]
+}
