@@ -1751,6 +1751,19 @@
             "prompt_hash": "sha256:1fdcaf8a24ce937580a3a82d6fd8c047a7090e73ec1962db14ed1003cb3a5eb9",
             "generated_at": "2026-11-26T20:55:17+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "smooth_fox_terrier",
+            "species": "dog",
+            "colour": "tricolour",
+            "file": "dog/smooth-fox-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:12abd2f1002bc26c44edb92cad7e5b74c791dcb1e90e817292750b570740db45",
+            "generated_at": "2026-11-27T00:52:34+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
