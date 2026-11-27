@@ -144,6 +144,13 @@ services:
   scheduler:
     <<: *php
     command: ["php", "artisan", "schedule:work"]
+    # D36 (2026-11-27): a tiny init (tini) as PID 1. `schedule:work` starts `schedule:run` every
+    # minute; a runInBackground() command outlives it, is re-parented to PID 1 and — with PHP as
+    # PID 1, which never wait()s for it — stays a zombie when it ends (3–4 per minute). After
+    # ~28 h the container ran out of processes: every later scheduled command failed with
+    # »exit code [2]« (the shell cannot fork) until the next deploy recreated the container.
+    # The init reaps them; it also forwards SIGTERM, so stop_grace_period works as before.
+    init: true
     # A tick (decay, media:sweep) runs inside schedule:work's process tree.
     stop_grace_period: 60s
     depends_on:
