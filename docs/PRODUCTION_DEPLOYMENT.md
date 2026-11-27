@@ -86,7 +86,7 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
    - Both restarted after each deployment (`queue:restart`).
 
 5. **Scheduler (`scheduler`):**
-   - Runs `php artisan schedule:work`.
+   - Runs `php artisan schedule:work` under a tiny init (`init: true` in `compose.production.yaml`, DEPLOYMENT.md D36): the init is PID 1 and reaps the finished background commands (`runInBackground()`), which would otherwise stay zombies until the container runs out of processes. Check: `docker compose -p backend -f /opt/petprep/repo/backend/compose.production.yaml exec scheduler sh -c 'ps -e -o stat= | grep -c Z'` must stay at 0 (or a handful for a moment).
    - Executes the minutely game loop (`pets:process-decay`) for decay and escalation mechanics.
 
 6. **PostgreSQL 18 (`postgres:18-alpine`):**
