@@ -33,6 +33,13 @@ const CHECKED = NAMESPACES.filter((ns) => ns !== 'cat');
 const DOG_ONLY: Readonly<Record<string, string>> = {
   // ── Dog-only features: a cat never sees them ──
   'wishes:items.dog_bed': 'M6-W04 item names are per variant — a cat gets `wishes:items.cat_basket`',
+  // David 2026-11-27: »what you get« texts are per variant too — a cat reads its own `cat_*` key.
+  'wishes:about.dog_bed': 'per-variant item description — a cat gets `wishes:about.cat_basket`',
+  'wishes:about.dog_bowls': 'per-variant item description — a cat gets `wishes:about.cat_bowls`',
+  'wishes:about.dog_rope': 'per-variant item description — a cat gets `wishes:about.cat_mouse`',
+  'wishes:about.dog_squeaky': 'per-variant item description — a cat gets `wishes:about.cat_feather`',
+  'wishes:about.dog_treats': 'per-variant item description — a cat gets `wishes:about.cat_treats`',
+  'wishes:about.dog_bundle': 'per-species bundle description — a cat gets `wishes:about.cat_bundle`',
   'child:walk': 'walk / steps — a cat plays with the feather wand instead (CAT_SPEC Q1)',
   'family:children.logWalk': 'M5-T12 parent-logged walk — only offered for a dog (a cat has no steps)',
   'child:grooming': "dog brushing (M5-R13) — a brushed cat reads its own `cat:chore.grooming` / `cat:hud.chips` texts",

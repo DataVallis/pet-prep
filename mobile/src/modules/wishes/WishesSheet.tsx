@@ -21,7 +21,7 @@ import { useChildWishes, useCreateWish } from '@/hooks/queries/useWishes';
 import { classifyActionError } from '@/modules/childPet/actionMessages';
 import { MIN_TOUCH, alpha, dark, fonts, palette, radius, tightTracking } from '@/theme';
 import DesignCard, { DesignThumb, designLabel } from '@/modules/wishes/DesignCard';
-import { childRowState, designOf, errorReason, isFeatureMissing, needsDesign, type ChildRowState, type ChildWishItem, type WishItemKey } from '@/modules/wishes/wishes';
+import { childAboutKey, childRowState, designOf, errorReason, isFeatureMissing, needsDesign, showChildAbout, type ChildRowState, type ChildWishItem, type WishItemKey } from '@/modules/wishes/wishes';
 
 export interface WishesSheetProps {
   visible: boolean;
@@ -226,6 +226,9 @@ export function DesignPicker({
   return (
     <View style={styles.picker} testID={`wish-designs-${item.key}`}>
       <Text style={styles.rowName}>{name}</Text>
+      <Text style={styles.about} testID={`wish-designs-about-${item.key}`}>
+        {t(childAboutKey(item.variant))}
+      </Text>
       <Text style={styles.hint}>{t('wishes:designs.childHint')}</Text>
       <ScrollView style={styles.list} contentContainerStyle={styles.designGrid}>
         {item.designs.map((design) => (
@@ -274,6 +277,11 @@ function WishRow({ item, state, busy, onAsk }: { item: ChildWishItem; state: Chi
       <DesignThumb design={ownDesign} variant={item.variant} tone="dark" size={52} testID={`wish-row-design-${item.key}`} />
       <View style={styles.rowTexts}>
         <Text style={styles.rowName}>{name}</Text>
+        {showChildAbout(state) && (
+          <Text style={styles.about} testID={`wish-about-${item.key}`}>
+            {t(childAboutKey(item.variant))}
+          </Text>
+        )}
         {treatsNote && <Text style={styles.rowStatus}>{treatsNote}</Text>}
         {preparingNote && (
           <Text style={styles.rowStatus} testID="wish-treats-preparing">
@@ -343,6 +351,7 @@ const styles = StyleSheet.create({
   rowName: { color: palette.white, fontSize: 15, fontWeight: '700' },
   statusLine: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   rowStatus: { color: palette.n300, fontSize: 13, fontWeight: '600' },
+  about: { color: palette.n300, fontSize: 13, lineHeight: 18 },
   ask: { minHeight: MIN_TOUCH, paddingHorizontal: 14, borderRadius: 22, backgroundColor: palette.mint, alignItems: 'center', justifyContent: 'center' },
   askText: { color: palette.graphite, fontSize: 14, fontWeight: '800' },
   askWide: { alignSelf: 'stretch' },

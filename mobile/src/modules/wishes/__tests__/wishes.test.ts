@@ -1,7 +1,12 @@
 /** M6-W04 / W05 pure rules: readers, child row states, treat errors, bundle offer, old-server hiding. */
 import { ApiError } from '@/api/client';
+import { i18n } from '@/i18n';
 import {
+  aboutKey,
   applyWishCreated,
+  childAboutKey,
+  parentAboutKey,
+  showChildAbout,
   childRowState,
   isFeatureMissing,
   keysOfProduct,
@@ -279,5 +284,42 @@ describe('parent list', () => {
   it('the bundle covers bed + bowls + toy_1', () => {
     expect(keysOfProduct('petprep_wish_bundle_welcome')).toEqual(['bed', 'bowls', 'toy_1']);
     expect(keysOfProduct('petprep_challenge_12w')).toEqual([]);
+  });
+});
+
+describe('»what you get« keys (David 2026-11-27)', () => {
+  it('per variant and species; the bundle per species', () => {
+    expect(aboutKey('toy_2', 'cat')).toBe('cat_feather');
+    expect(aboutKey('toy_2', 'dog')).toBe('dog_squeaky');
+    expect(aboutKey('toy_1', 'cat', 'cat_mouse')).toBe('cat_mouse');
+    expect(aboutKey('welcome_bundle', 'cat')).toBe('cat_bundle');
+    expect(aboutKey('welcome_bundle', 'dog')).toBe('dog_bundle');
+    expect(parentAboutKey('toy_2', 'cat')).toBe('wishes:about.cat_feather.parent');
+    expect(childAboutKey('cat_feather')).toBe('wishes:about.cat_feather.child');
+  });
+
+  it('shown on the child row only before the pet has it', () => {
+    expect(showChildAbout('ask')).toBe(true);
+    expect(showChildAbout('requested')).toBe(true);
+    expect(showChildAbout('treats_left')).toBe(true);
+    expect(showChildAbout('owned')).toBe(false);
+    expect(showChildAbout('on_the_way')).toBe(false);
+  });
+
+  it('every item has a parent and a child text in sl + en; child texts never carry a price', () => {
+    const variants = ['dog_bed', 'cat_basket', 'dog_bowls', 'cat_bowls', 'dog_rope', 'cat_mouse', 'dog_squeaky', 'cat_feather', 'dog_treats', 'cat_treats'] as const;
+    for (const lng of ['sl', 'en']) {
+      const t = i18n.getFixedT(lng) as unknown as (key: string) => string;
+      for (const v of variants) {
+        const parent = t(`wishes:about.${v}.parent`);
+        const child = t(`wishes:about.${v}.child`);
+        expect(parent).not.toMatch(/^wishes:/);
+        expect(child).not.toMatch(/^wishes:/);
+        expect(child).not.toMatch(/€|\$|EUR|\d/);
+        expect(parent).not.toMatch(/€|\$|EUR/);
+      }
+      expect(t('wishes:about.dog_bundle.parent')).not.toMatch(/^wishes:/);
+      expect(t('wishes:about.cat_bundle.parent')).not.toMatch(/^wishes:/);
+    }
   });
 });

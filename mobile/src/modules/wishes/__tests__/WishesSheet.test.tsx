@@ -61,6 +61,29 @@ describe('WishesSheet', () => {
     expect(screen.queryByText(/€|\d+,\d\d/)).toBeNull();
   });
 
+  it('David 2026-11-27: each row says what the item does (child words, no price); owned / on the way → none', async () => {
+    getChildWishes.mockResolvedValue(CATALOGUE);
+    renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
+    await flush();
+    expect(await screen.findByTestId('wish-about-bed')).toHaveTextContent('Ko bo kuža zaspal, bo spal v tej postelji.');
+    expect(screen.getByTestId('wish-about-bowls')).toHaveTextContent('Ko ga nahraniš ali mu daš vode, bo jedel in pil iz teh skled.');
+    expect(screen.getByTestId('wish-about-toy_1')).toHaveTextContent('Ko bo kuža razigran, se bo z vrvjo igral sam.');
+    expect(screen.queryByTestId('wish-about-toy_2')).toBeNull();
+    expect(screen.getByTestId('wish-about-treats')).toHaveTextContent('Daš mu jih z gumbom »Priboljšek« — največ dva na dan.');
+    expect(screen.queryByText(/€|\d+,\d\d/)).toBeNull();
+  });
+
+  it('a cat’s feather wand: plays with it by itself, the child’s own wand game stays the same', async () => {
+    getChildWishes.mockResolvedValue({
+      ...CATALOGUE,
+      species: 'cat',
+      items: [{ key: 'toy_2', kind: 'durable', variant: 'cat_feather', status: 'available' }],
+    });
+    renderWithQuery(<WishesSheet visible onClose={jest.fn()} nowMs={NOW} />);
+    await flush();
+    expect(await screen.findByTestId('wish-about-toy_2')).toHaveTextContent('Ko bo muca razigrana, se bo s palico igrala sama. Tvoja igra s palico ostane enaka.');
+  });
+
   it('»Prosi starša« sends the wish and the row turns »Prošnja poslana«', async () => {
     getChildWishes.mockResolvedValue(CATALOGUE);
     createWish.mockResolvedValue({ wish: { id: 40, item_key: 'bed', status: 'open', created_at: 'x' }, open_count: 2 });

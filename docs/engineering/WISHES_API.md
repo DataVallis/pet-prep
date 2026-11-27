@@ -27,7 +27,7 @@ Server-side catalogue `shop_items` (seeded by a migration, not editable in the a
 | `toy_1` | `dog_rope_red_white` Rdeče-bela vrv / Red and white rope · `dog_rope_blue_ring` Modri obroč iz vrvi / Blue rope ring · `dog_rope_rainbow` Mavrična vrv / Rainbow rope | `cat_mouse_grey_plush` Siva plišasta miška / Grey plush mouse · `cat_mouse_red_felt` Rdeča miška iz filca / Red felt mouse · `cat_mouse_white_knit` Bela pletena miška / White knitted mouse |
 | `toy_2` | `dog_squeaky_duck` Rumena raca / Yellow duck · `dog_squeaky_bone` Plišasta kost / Plush bone · `dog_squeaky_ball` Zelena piskajoča žoga / Green squeaky ball | `cat_wand_rainbow_feathers` Palica z mavričnimi peresi / Rainbow feather wand · `cat_wand_pink_bell` Palica z rožnatimi peresi in zvončkom / Pink feather wand with a bell · `cat_wand_peacock` Palica s pavjim peresom / Peacock feather wand |
 - `welcome_bundle` is **never** in the child catalogue (S12). It is offered to the parent only for a pet that owns none of bed / bowls / toy_1.
-- Display names, descriptions and pictures live in the app (i18n `wishes.items.<variant>.*`); the server sends keys only.
+- Display names, descriptions and pictures live in the app (names i18n `wishes:items.<variant>`; »what you get« descriptions `wishes:about.<variant>.parent|child`, the bundle `wishes:about.dog_bundle|cat_bundle.parent` — SHOP_SPEC S15, David 2026-11-27); the server sends keys only.
 
 ## 2. Rules (server enforces)
 

@@ -50,6 +50,7 @@ import {
   designPickerFor,
   errorReason,
   isFeatureMissing,
+  parentAboutKey,
   parentItemState,
   productIdsOf,
   variantFor,
@@ -355,6 +356,9 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
             <Text style={[styles.body, styles.bold]} testID={`${opts.testID}-contents`}>
               {tSpecies('wishes:parent.bundleContents', opts.species, { pet: opts.petText })}
             </Text>
+            <Text style={styles.about} testID={`${opts.testID}-about`}>
+              {t(parentAboutKey('welcome_bundle', opts.species))}
+            </Text>
             {separately !== null && (
               <Text style={styles.muted} testID={`${opts.testID}-separately`}>
                 {t('wishes:parent.bundleSeparately', { sum: separately })}
@@ -483,6 +487,9 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                       <DesignThumb design={design} variant={wish.variant} tone="light" size={design !== null ? 72 : 48} testID={`wish-design-image-${wish.id}`} />
                       <View style={styles.flex}>
                         <Text style={[styles.body, styles.bold]}>{name}</Text>
+                        <Text style={styles.about} testID={`wish-about-${wish.id}`}>
+                          {t(parentAboutKey(wish.item_key, wish.species, wish.variant))}
+                        </Text>
                         {design !== null && (
                           <Text style={styles.body} testID={`wish-design-name-${wish.id}`}>
                             {t('wishes:designs.requested', { design: designLabel(design, wish.variant) })}
@@ -590,6 +597,11 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                             <DesignThumb design={owned} variant={item.variant} tone="light" size={44} />
                             <View style={styles.flex}>
                               <Text style={[styles.body, styles.bold]}>{owned !== null ? designLabel(owned, item.variant) : name}</Text>
+                              {state === 'buy' && (
+                                <Text style={styles.about} testID={`surprise-about-${surprise.pet_id}-${item.key}`}>
+                                  {t(parentAboutKey(item.key, surprise.species, item.variant))}
+                                </Text>
+                              )}
                               {item.treats_left !== null && <Text style={styles.muted}>{t('wishes:parent.treatsLeft', { count: item.treats_left })}</Text>}
                               {item.preparing && (
                                 <Text style={styles.muted} testID={`surprise-treats-preparing-${surprise.pet_id}`}>
@@ -648,6 +660,7 @@ const styles = StyleSheet.create({
   body: { fontSize: 14, lineHeight: 20, color: C.text },
   bold: { fontWeight: '700' },
   muted: { fontSize: 12, lineHeight: 17, color: C.muted },
+  about: { fontSize: 13, lineHeight: 18, color: C.text },
   flex: { flex: 1, gap: 2 },
   itemRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   surpriseRow: { gap: 8, paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: C.divider },

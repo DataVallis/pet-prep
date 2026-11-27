@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-27 — Pošteno pred nakupom: kaj stvar v »Željah« res naredi
+
+**Kaj:** tester je mački kupil »Palico s perjem« (5,99 €), ker je mislil, da se bo otrok potem z njo igral z mačko. V resnici se kupljena igrača pokaže le v mačkinih prizorih — z njo se igra sama, ko je razigrana; otrokova vsakodnevna igra »Palica s peresom« je enaka tudi brez nakupa. Zdaj ima vsaka stvar (postelja / košara, skledi, dve igrači, priboljški, paket) pod imenom kratek opis, kaj naredi — starš ga vidi pred gumbom »Kupi«, otrok otroško različico v »Želje«, brez cen. Opisi so napisani iz kode (kateri prizor stvar zamenja), ne iz želja.
+**Zakaj je pomembno:** PetPrep obljublja, da je nakup samo videz in nikoli »plačaj, da bo lažje«. Če starš misli, da je dal 5 € za novo igro, je to razočaranje — in izguba zaupanja, ki je vredna več kot nakup.
+**Kako povedati:** 👩 »Pred nakupom piše, kaj stvar res naredi: postelja — kuža v njej spi; igrača — z njo se igra sam, ko je razigran. Igre in ocena ostanejo enake.« 🧒 »Ko bo muca razigrana, se bo s palico igrala sama.« 🛠 »Opis izbere ena čista funkcija po vrsti stvari in živali; besedila se spremenijo skupaj s pravili prizorov.«
+
 ## 2026-11-24 — Ena skrb naenkrat: kuža zdaj res poje in popije
 
 **Kaj:** pri hitrem pritiskanju Ven → Hrana → Voda je vsak naslednji pritisk prekinil posnetek skled, da se video skoraj ni videl. Zdaj so med posnetkom (največ 5 s) gumbi za nego zaposleni in pritisk se prezre (David: »prezri«, ne v vrsto). Brez posnetka (način »Slika«, brez skled) ni čakanja. Poleg tega sveti samo naslednji korak: ven › čiščenje › pesek › hrana › voda (ko skleda ni polna). Vse ostane pritisnljivo. Samo aplikacija (OTA), brez spremembe strežnika.
