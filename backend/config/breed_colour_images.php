@@ -564,14 +564,74 @@ return [
         'black-tan' => 'dogs/beauceron.webp',
         'harlequin' => 'dogs/beauceron--harlequin.webp',
     ],
+    'bouvier_des_flandres' => [
+        'grey-brindle' => 'dogs/bouvier-des-flandres.webp',
+        'brindle' => 'dogs/bouvier-des-flandres--brindle.webp',
+        'black-brindle' => 'dogs/bouvier-des-flandres--black-brindle.webp',
+        'black' => 'dogs/bouvier-des-flandres--black.webp',
+    ],
+    'borzoi' => [
+        'white-red' => 'dogs/borzoi.webp',
+        'white' => 'dogs/borzoi--white.webp',
+        'sable' => 'dogs/borzoi--sable.webp',
+        'brindle' => 'dogs/borzoi--brindle.webp',
+        'black-tan' => 'dogs/borzoi--black-tan.webp',
+        'black' => 'dogs/borzoi--black.webp',
+    ],
+    'japanese_chin' => [
+        'black-white' => 'dogs/japanese-chin.webp',
+        'red-white' => 'dogs/japanese-chin--red-white.webp',
+    ],
+    'norwich_terrier' => [
+        'red' => 'dogs/norwich-terrier.webp',
+        'wheaten' => 'dogs/norwich-terrier--wheaten.webp',
+        'black-tan' => 'dogs/norwich-terrier--black-tan.webp',
+        'grizzle' => 'dogs/norwich-terrier--grizzle.webp',
+    ],
+    'miniature_bull_terrier' => [
+        'white' => 'dogs/miniature-bull-terrier.webp',
+        'brindle' => 'dogs/miniature-bull-terrier--brindle.webp',
+        'black-brindle' => 'dogs/miniature-bull-terrier--black-brindle.webp',
+        'red' => 'dogs/miniature-bull-terrier--red.webp',
+        'fawn' => 'dogs/miniature-bull-terrier--fawn.webp',
+        'tricolour' => 'dogs/miniature-bull-terrier--tricolour.webp',
+    ],
     'schipperke' => [
         'black' => 'dogs/schipperke.webp',
+    ],
+    'belgian_tervuren' => [
+        'fawn' => 'dogs/belgian-tervuren.webp',
+        'grey' => 'dogs/belgian-tervuren--grey.webp',
+    ],
+    'toy_fox_terrier' => [
+        'tricolour' => 'dogs/toy-fox-terrier.webp',
+        'chocolate-tan-white' => 'dogs/toy-fox-terrier--chocolate-tan-white.webp',
+        'tan-white' => 'dogs/toy-fox-terrier--tan-white.webp',
+        'black-white' => 'dogs/toy-fox-terrier--black-white.webp',
     ],
     'gordon_setter' => [
         'black-tan' => 'dogs/gordon-setter.webp',
     ],
+    'afghan_hound' => [
+        'gold-black-mask' => 'dogs/afghan-hound.webp',
+        'cream' => 'dogs/afghan-hound--cream.webp',
+        'red-black-mask' => 'dogs/afghan-hound--red-black-mask.webp',
+        'black' => 'dogs/afghan-hound--black.webp',
+        'black-tan' => 'dogs/afghan-hound--black-tan.webp',
+        'blue' => 'dogs/afghan-hound--blue.webp',
+    ],
     'australian_silky_terrier' => [
         'blue-tan' => 'dogs/australian-silky-terrier.webp',
+    ],
+    'parson_russell_terrier' => [
+        'white-tan' => 'dogs/parson-russell-terrier.webp',
+        'tricolour' => 'dogs/parson-russell-terrier--tricolour.webp',
+        'white-black' => 'dogs/parson-russell-terrier--white-black.webp',
+    ],
+    'wire_fox_terrier' => [
+        'tricolour' => 'dogs/wire-fox-terrier.webp',
+        'white-tan' => 'dogs/wire-fox-terrier--white-tan.webp',
+        'white-black' => 'dogs/wire-fox-terrier--white-black.webp',
     ],
     'manchester_terrier' => [
         'black-tan' => 'dogs/manchester-terrier.webp',
