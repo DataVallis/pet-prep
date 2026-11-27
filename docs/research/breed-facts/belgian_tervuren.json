@@ -1,0 +1,122 @@
+{
+  "breed": "belgian_tervuren",
+  "facts": [
+    {
+      "key": "belgian_tervuren-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Tervuren needs more than 2 hours of exercise every day.",
+        "sl": "Belgijski ovčar tervuren potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S830",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-tervueren/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c719883645dad698fd2c229c68a1641ea649e8934e4bc6f69c1f0311604da273"
+    },
+    {
+      "key": "belgian_tervuren-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Tervuren's coat needs grooming more than once a week.",
+        "sl": "Belgijski ovčar tervuren potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S830",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-tervueren/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "723288774116801816b665788f357cb62b99fa83a984951f4a748d1cd64771e9"
+    },
+    {
+      "key": "belgian_tervuren-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Tervuren is a medium to large dog breed.",
+        "sl": "Belgijski ovčar tervuren je srednje velika do velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S830",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-tervueren/",
+      "quote": "Size: Medium-Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b4251fa79038966d5a01d2d31fe96f587b9c602f1cd1e0a6d788b28207fa0649"
+    },
+    {
+      "key": "belgian_tervuren-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Tervuren has a medium-length coat.",
+        "sl": "Belgijski ovčar tervuren ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S830",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-tervueren/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c5c62af2f7c67601bc2f181c8121acae640f8cfc66ec17d1237e110e9e9b67e5"
+    },
+    {
+      "key": "belgian_tervuren-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Tervuren usually lives more than 10 years.",
+        "sl": "Belgijski ovčar tervuren običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S830",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-tervueren/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9036dea755bed439b9719309323ba1774435c73bd936878ccc7560165e0280f6"
+    },
+    {
+      "key": "belgian_tervuren-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Belgian Tervuren reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je belgijski ovčar tervuren, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c47440da04fcff283a789c5ac447b4c15bb4f274e4c72242e699043e1cfb693e"
+    }
+  ]
+}

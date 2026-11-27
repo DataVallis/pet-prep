@@ -1,0 +1,125 @@
+{
+  "breed": "rat_terrier",
+  "facts": [
+    {
+      "key": "rat_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Rat Terrier needs at least 30 minutes of exercise every day.",
+        "sl": "Rat terier potrebuje vsak dan vsaj 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S650",
+      "source_name": "Rat Terrier Club of America (AKC judges' education, hosted by AKC)",
+      "source_url": "https://images.akc.org/judges/Rat_Terrier.pdf",
+      "quote": "Rat Terriers do ok in an apartment but need at least 30 minutes of exercise a day.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "78e93cc241af2af2a0dad7ae515e308b09dea013f853305a0747f6f54f3c70fb"
+    },
+    {
+      "key": "rat_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Rat Terrier's coat needs grooming once a week.",
+        "sl": "Rat terier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S647",
+      "source_name": "VCA Animal Hospitals (LifeLearn; no author / date shown)",
+      "source_url": "https://vcahospitals.com/know-your-pet/dog-breeds/rat-terrier",
+      "quote": "Brushing once a week will remove dead hair.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e4520df85b2333a8ed37b9302982ea760972a5a0f8279c90aa87808212362044"
+    },
+    {
+      "key": "rat_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rat Terrier is a small dog breed.",
+        "sl": "Rat terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S648",
+      "source_name": "PetMD — Kristen Seymour, reviewed by Barri J. Morrison, DVM (updated 2023-03-06)",
+      "source_url": "https://www.petmd.com/dog/breeds/rat-terrier",
+      "quote": "This is a relatively small dog that reaches only 10–25 pounds, both in the standard and the miniature size.",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "962ddc3c41e52357dab1049a85931ebe45d712412cec49f073e3cf6dadfdaf26"
+    },
+    {
+      "key": "rat_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rat Terrier has a short coat.",
+        "sl": "Rat terier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S650",
+      "source_name": "Rat Terrier Club of America (AKC judges' education, hosted by AKC)",
+      "source_url": "https://images.akc.org/judges/Rat_Terrier.pdf",
+      "quote": "Short, close lying, smooth and shiny coat.",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b8e4a9306ba5f5763c3fe11bdb4524a9bfd362a8d6b57e34faf1c52b5e6dc292"
+    },
+    {
+      "key": "rat_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rat Terrier usually lives 12 to 16 years.",
+        "sl": "Rat terier običajno živi od 12 do 16 let."
+      },
+      "why": null,
+      "source_id": "S647",
+      "source_name": "VCA Animal Hospitals (LifeLearn; no author / date shown)",
+      "source_url": "https://vcahospitals.com/know-your-pet/dog-breeds/rat-terrier",
+      "quote": "12 - 16 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4fc960173942215f86ee9732bc23d37f08569f87747d958e0b1d045ac2a3f655"
+    },
+    {
+      "key": "rat_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Rat Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je rat terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f10d52f95df6a4353b4e07af349b1a71fa747436814a9eda4e4c96dddcc1c475"
+    }
+  ]
+}

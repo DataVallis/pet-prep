@@ -1,0 +1,65 @@
+{
+  "breed": "xoloitzcuintli",
+  "facts": [
+    {
+      "key": "xoloitzcuintli-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Xoloitzcuintli needs about 20 minutes of exercise every day.",
+        "sl": "Mehiški goli pes potrebuje vsak dan približno 20 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 2,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 2.000 korakov."
+      },
+      "source_id": "S926",
+      "source_name": "PetMD (updated Nov. 11, 2026)",
+      "source_url": "https://www.petmd.com/dog/breeds/xoloitzcuintli",
+      "quote": "They need about 20 minutes of exercise every day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6928334fda4ea0939f08ae6726bbea3410feb82ebbda7b5d9fc21d6cf78f9e9d"
+    },
+    {
+      "key": "xoloitzcuintli-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Xoloitzcuintli usually lives 13 to 18 years.",
+        "sl": "Mehiški goli pes običajno živi od 13 do 18 let."
+      },
+      "why": null,
+      "source_id": "S926",
+      "source_name": "PetMD (updated Nov. 11, 2026)",
+      "source_url": "https://www.petmd.com/dog/breeds/xoloitzcuintli",
+      "quote": "They live a long life of 13–18 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a976bc96665f863b188d439e95bd973b8cc626d8c70634aff144739df50ec844"
+    },
+    {
+      "key": "xoloitzcuintli-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Xoloitzcuintli reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je mehiški goli pes, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "54b7b0427a5669c9a2c61dbf3553db7c21d3bfafa137ce76a4a835f4499fa03f"
+    }
+  ]
+}

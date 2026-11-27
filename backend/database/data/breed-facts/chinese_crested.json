@@ -1,0 +1,106 @@
+{
+  "breed": "chinese_crested",
+  "facts": [
+    {
+      "key": "chinese_crested-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Chinese Crested needs up to 30 minutes of exercise every day.",
+        "sl": "Kitajski goli pes potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S572",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/chinese-crested/",
+      "quote": "Exercise: Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "72d6ba97ab9bceb23ff761a44e1fd101ff2db1c2f91bbd21fc39160aca44d77f"
+    },
+    {
+      "key": "chinese_crested-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Chinese Crested's coat needs grooming once a week.",
+        "sl": "Kitajski goli pes potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S572",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/chinese-crested/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "eb0a0f455012f908b9b986e6af7a6befd4df2c01ee3aa1a8dae0452bdd5be06d"
+    },
+    {
+      "key": "chinese_crested-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chinese Crested is a small dog breed.",
+        "sl": "Kitajski goli pes je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S572",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/chinese-crested/",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "36e804acbc02b53d52a11df7c26cf57423ba0a75e7604de8933c347ce3119b29"
+    },
+    {
+      "key": "chinese_crested-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chinese Crested has a short coat.",
+        "sl": "Kitajski goli pes ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S572",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/chinese-crested/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f2fff25f14e913f3b66b218a6a4a819bb4f744f141748a6c5a5d7740f62a799b"
+    },
+    {
+      "key": "chinese_crested-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Chinese Crested reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je kitajski goli pes, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ae3f6a227f967151a6c4b9779eda0413ec790c128ea9ea60a0ad8b6138f69d4f"
+    }
+  ]
+}

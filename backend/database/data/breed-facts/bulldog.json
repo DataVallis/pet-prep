@@ -1,0 +1,125 @@
+{
+  "breed": "bulldog",
+  "facts": [
+    {
+      "key": "bulldog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bulldog needs up to 1 hour of exercise every day.",
+        "sl": "Angleški buldog potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S177",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4084",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a780f65327315240cf48ab28370a1105b5b22be9a59e0b1c8a1a3a1d258c7a28"
+    },
+    {
+      "key": "bulldog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bulldog's coat needs grooming once a week.",
+        "sl": "Angleški buldog potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S177",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4084",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "62c97d910bf81e952766955e95b8431566cc0b2ffbd8b88a365675231ad5d57a"
+    },
+    {
+      "key": "bulldog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bulldog is a medium-sized dog breed.",
+        "sl": "Angleški buldog je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S177",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4084",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6aa9076f97a0772769b3985b0265f413ceddbacc53557ddc6759c508ba627473"
+    },
+    {
+      "key": "bulldog-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Bulldog comes from Great Britain.",
+        "sl": "Angleški buldog izvira iz Velike Britanije."
+      },
+      "why": null,
+      "source_id": "S176",
+      "source_name": "FCI",
+      "source_url": "https://fci.be/en/nomenclature/BULLDOG-149.html",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Molossian type; Country of origin: GREAT BRITAIN",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2299d05daccab75a7597d7baeeaf5d84afbca929e3b2f01c17625bb904baf4cd"
+    },
+    {
+      "key": "bulldog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bulldog has a short coat.",
+        "sl": "Angleški buldog ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S177",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4084",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b9f43989d15030209f8aac0214ecaff6d0eb99d045873b97a21d896841ab338d"
+    },
+    {
+      "key": "bulldog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bulldog reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je angleški buldog, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "26e246bec7ed9f121202be6f70b78473789d24ee60d46f24368b0fa256499eba"
+    }
+  ]
+}

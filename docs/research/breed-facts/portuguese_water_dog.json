@@ -1,0 +1,144 @@
+{
+  "breed": "portuguese_water_dog",
+  "facts": [
+    {
+      "key": "portuguese_water_dog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Portuguese Water Dog needs up to 1 hour of exercise every day.",
+        "sl": "Portugalski vodni pes potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S404",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5135",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2b390a5bc9708af238362dca7f356135b1f93bcef1e24db8282a524b44bfe6a0"
+    },
+    {
+      "key": "portuguese_water_dog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Portuguese Water Dog's coat needs grooming every day.",
+        "sl": "Portugalski vodni pes potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S404",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5135",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1bba0aec86a7435841c6aec202744d44cd8950fe31bdc7addcb9b21b211a85ff"
+    },
+    {
+      "key": "portuguese_water_dog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Portuguese Water Dog is a medium-sized dog breed.",
+        "sl": "Portugalski vodni pes je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S404",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5135",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e44cf69f340326c14cf663956909645a439a30c368ed499e719ef369ae46c6bd"
+    },
+    {
+      "key": "portuguese_water_dog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Portuguese Water Dog has a medium-length coat.",
+        "sl": "Portugalski vodni pes ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S404",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5135",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "da37ce8bab450388a6e1cff2afceb0a81c9c3d1b756ecd6ec79de800899f7b77"
+    },
+    {
+      "key": "portuguese_water_dog-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Portuguese Water Dog, males weigh 19–25 kg.",
+        "sl": "Samec pasme portugalski vodni pes tehta 19–25 kg."
+      },
+      "why": null,
+      "source_id": "S403",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/breed-standards/working/portuguese-water-dog",
+      "quote": "Weight: dogs: 19-25 kgs (42-55 lbs)",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d6b387a6ba29bf0cdb4874eb8ded4793c27171e669997df532513dd8baa5e8d2"
+    },
+    {
+      "key": "portuguese_water_dog-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Portuguese Water Dog usually lives more than 10 years.",
+        "sl": "Portugalski vodni pes običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S404",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5135",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "996f995779b66b3b7fc12b8c5153c36b9ff92e56a28fc933a7c9ef40f881eae3"
+    },
+    {
+      "key": "portuguese_water_dog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Portuguese Water Dog reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je portugalski vodni pes, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a5786be0e62774b37fb6da1a8ac7ae9b4bad0a0f7f9b7ca64417094d012a6fce"
+    }
+  ]
+}

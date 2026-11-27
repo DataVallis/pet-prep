@@ -1,0 +1,125 @@
+{
+  "breed": "standard_schnauzer",
+  "facts": [
+    {
+      "key": "standard_schnauzer-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Standard Schnauzer needs up to 1 hour of exercise every day.",
+        "sl": "Srednji šnavcer potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S714",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schnauzer/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "766a23aa1b119e7295251d7b1244315aafb4956615f0bddf97f85fc8fed14688"
+    },
+    {
+      "key": "standard_schnauzer-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Standard Schnauzer's coat needs grooming more than once a week.",
+        "sl": "Srednji šnavcer potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog 3 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 3-krat na teden."
+      },
+      "source_id": "S714",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schnauzer/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f060ddb7aa54e03d8140fe90211675e6fcbad31e35a0242b0d9166ae0a1eba73"
+    },
+    {
+      "key": "standard_schnauzer-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Standard Schnauzer is a medium-sized dog breed.",
+        "sl": "Srednji šnavcer je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S714",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schnauzer/",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4fac4a7fa8950f9e3b8039010e22ded31099b69fcfc5c6ac7bf85b7a5e6c6bd0"
+    },
+    {
+      "key": "standard_schnauzer-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Standard Schnauzer has a medium-length coat.",
+        "sl": "Srednji šnavcer ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S714",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schnauzer/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ba9458b234c32d87c6e0ba79f2584070c2d5088236db2816e2167cf5cec802a5"
+    },
+    {
+      "key": "standard_schnauzer-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Standard Schnauzer usually lives more than 10 years.",
+        "sl": "Srednji šnavcer običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S714",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schnauzer/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "11670d97b637d75bf4c7b2d63a488c490f96a0da953f8da0259e5a0f53ed66d7"
+    },
+    {
+      "key": "standard_schnauzer-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Standard Schnauzer reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je srednji šnavcer, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fba248135c9303d362eb2d912c23cbcfdefd8e0946ef9642349a5e00daf17f98"
+    }
+  ]
+}

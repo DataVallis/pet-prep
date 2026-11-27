@@ -1,0 +1,144 @@
+{
+  "breed": "german_wirehaired_pointer",
+  "facts": [
+    {
+      "key": "german_wirehaired_pointer-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The German Wirehaired Pointer needs more than 2 hours of exercise every day.",
+        "sl": "Nemški ostrodlaki ptičar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S521",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/german-wirehaired-pointer/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f97fff3cfe69df68ea95a3e64a22fb72a9afd5c73fa567643089db4fd65c0215"
+    },
+    {
+      "key": "german_wirehaired_pointer-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The German Wirehaired Pointer's coat needs grooming more than once a week.",
+        "sl": "Nemški ostrodlaki ptičar potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S521",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/german-wirehaired-pointer/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a472a9e24af4d4c7bbb1746010fc24f1098bb99f42bca299bc05006c4b84b4a8"
+    },
+    {
+      "key": "german_wirehaired_pointer-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Wirehaired Pointer is a large dog breed.",
+        "sl": "Nemški ostrodlaki ptičar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S521",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/german-wirehaired-pointer/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "529ab1d2d0c04b9474db1677c432e9fd0428f472776d2b4b866373fdef1f662f"
+    },
+    {
+      "key": "german_wirehaired_pointer-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Wirehaired Pointer has a medium-length coat.",
+        "sl": "Nemški ostrodlaki ptičar ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S521",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/german-wirehaired-pointer/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b46893f47a0ff09c9ce6f2c56dcbcc4c0c0f1cab9b2e2dd9a9060e35839dc2e0"
+    },
+    {
+      "key": "german_wirehaired_pointer-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the German Wirehaired Pointer, males weigh 25–34 kg and females 20.5–29 kg.",
+        "sl": "Samci pasme nemški ostrodlaki ptičar tehtajo 25–34 kg, samice 20,5–29 kg."
+      },
+      "why": null,
+      "source_id": "S522",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/breed-standards/gundog/german-wirehaired-pointer/",
+      "quote": "Weight: dogs: 25-34 kgs (55-75 lbs); bitches: 20.5-29 kgs (45-64 lbs).",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8187ebf43cd629b7f5aee61f7ab8e36da10e4fbf51383be894a80cdfe9c79fd3"
+    },
+    {
+      "key": "german_wirehaired_pointer-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Wirehaired Pointer usually lives more than 10 years.",
+        "sl": "Nemški ostrodlaki ptičar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S521",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/german-wirehaired-pointer/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "df465fc34e6b79bf441b997c7a34f83e633d61ff3d9c4329fbcec76473d68a71"
+    },
+    {
+      "key": "german_wirehaired_pointer-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the German Wirehaired Pointer reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je nemški ostrodlaki ptičar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5e5743d2f37ced17b0a354f7a9deef388c53ac8a6027de51fc3b509d822317dd"
+    }
+  ]
+}

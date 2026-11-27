@@ -1,0 +1,103 @@
+{
+  "breed": "toy_fox_terrier",
+  "facts": [
+    {
+      "key": "toy_fox_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Toy Fox Terrier needs at least 1 hour of exercise every day.",
+        "sl": "Toy fox terier potrebuje vsak dan vsaj 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S833",
+      "source_name": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated 2024-02-26)",
+      "source_url": "https://www.petmd.com/dog/breeds/toy-fox-terrier",
+      "quote": "so regular exercise—at least an hour every day—is crucial to prevent boredom and help positively channel their energy",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "08072a364aae87af4f670ee73cd02d2f4ff2f7265f73843f6731a232c77a68b1"
+    },
+    {
+      "key": "toy_fox_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Toy Fox Terrier's coat needs grooming once a week.",
+        "sl": "Toy fox terier potrebuje nego dlake enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S834",
+      "source_name": "WebMD Pets — WebMD Editorial Team, medically reviewed by Zilpah Sheikh, MD (2026-05-08)",
+      "source_url": "https://www.webmd.com/pets/dogs/what-to-know-about-toy-fox-terriers",
+      "quote": "Weekly brushing and occasional baths are all this dog needs to maintain a healthy skin and coat.",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8cca53941fc790b60e7c0f39473b66c958ad3a35a093b4d48000bd984ee12abe"
+    },
+    {
+      "key": "toy_fox_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Toy Fox Terrier has a short coat.",
+        "sl": "Toy fox terier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S838",
+      "source_name": "United Kennel Club",
+      "source_url": "https://www.ukcdogs.com/docs/breeds/toy-fox-terrier.pdf",
+      "quote": "A distinguishing feature of the breed, the coat is short, satiny and shiny; fine in texture and smooth to the touch.",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dca9eebf72d13368712659917be967430a8d225d88ef39303f71106ee9a4f99d"
+    },
+    {
+      "key": "toy_fox_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Toy Fox Terrier usually lives 13 to 15 years.",
+        "sl": "Toy fox terier običajno živi od 13 do 15 let."
+      },
+      "why": null,
+      "source_id": "S833",
+      "source_name": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated 2024-02-26)",
+      "source_url": "https://www.petmd.com/dog/breeds/toy-fox-terrier",
+      "quote": "The average lifespan of a Toy Fox Terrier is 13–15 years, and they’re known to be a generally healthy breed.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "64a8684ac4a134af6e637eaf7bd9f7802ac30cbc34da7ff5be5fe799958e37e3"
+    },
+    {
+      "key": "toy_fox_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Toy Fox Terrier reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je toy fox terier, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f33c2bd5c542f4cea53242a17dbe2b0f9fb0792e0d21c5af8ba9a350d30b9cbc"
+    }
+  ]
+}

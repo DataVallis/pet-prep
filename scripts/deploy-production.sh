@@ -55,7 +55,7 @@
 #      differs from what the RUNNING caddy container sees (see CADDY below), validate
 #      the new one with the new caddy image right away (still pre-migration → a bad
 #      Caddyfile reverts code + images and the old Caddy keeps serving). Then start
-#      postgres/redis, migrate, seed breed configs, recreate the app containers (each
+#      postgres/redis, migrate, seed breed configs, import breed facts, recreate the app containers (each
 #      builds its own caches on start, docker/production/entrypoint.sh), wait until
 #      PHP-FPM answers, queue:restart, `artisan up` (3 attempts, exec then run --rm
 #      fallback), end-to-end health check through Caddy (`/up`, 5 attempts).
@@ -1039,6 +1039,11 @@ MIGRATED=1
 # Breed configs (idempotent seeder).
 dc run --rm app php artisan db:seed --class='Database\Seeders\BreedConfigsSeeder' --force \
     || warn "BreedConfigsSeeder failed."
+
+# Breed facts (»Ali si vedel?«, M5-R09e, David 2026-11-27): idempotent import of the shipped
+# backend/database/data/breed-facts/*.json. Approvals stay; a failure never blocks the deploy.
+dc run --rm app php artisan breeds:import-facts \
+    || warn "breeds:import-facts failed."
 
 # ---- 8. Containers (caches are built per container on start), workers -------------
 # Reverb and caddy keep their containers when nothing they run on changed since a deploy

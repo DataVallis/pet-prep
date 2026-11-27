@@ -1,0 +1,163 @@
+{
+  "breed": "boston_terrier",
+  "facts": [
+    {
+      "key": "boston_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Bostonski terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S255",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/boston-terrier",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "062924b90fb4a8297a3e36f9760ec97cbb0266f9b6ec91115b02100c2abb872a"
+    },
+    {
+      "key": "boston_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier's coat needs grooming once a week.",
+        "sl": "Bostonski terier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S255",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/boston-terrier",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8941051c2a9150d326b96b6606e1562746a868761349e0320b72134851d03e8a"
+    },
+    {
+      "key": "boston_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier is a small dog breed.",
+        "sl": "Bostonski terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S255",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/boston-terrier",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "458ed4f54e5fd4dec01a8472570466d48b56900e8c47c304f6f3398ada5c661f"
+    },
+    {
+      "key": "boston_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier has a short coat.",
+        "sl": "Bostonski terier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S255",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/boston-terrier",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f3e4d2ed159678dc54cd400215c8c621ee4162dab85a92e18b4848b67237ced6"
+    },
+    {
+      "key": "boston_terrier-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier is 38–43 cm tall at the withers.",
+        "sl": "Psi pasme bostonski terier so v vihru visoki 38–43 cm."
+      },
+      "why": null,
+      "source_id": "S259",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/boston-terrier",
+      "quote": "38-43 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e13cd1ad395887291e1c8b4cff9b035a5182542ed72833498b0d7842fa188f33"
+    },
+    {
+      "key": "boston_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier weighs 7–11 kg.",
+        "sl": "Bostonski terier tehta 7–11 kg."
+      },
+      "why": null,
+      "source_id": "S259",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/boston-terrier",
+      "quote": "7-11 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b6c690d5a40c867831b36170e098301063a967fa69158dbf4560c14a8dd55301"
+    },
+    {
+      "key": "boston_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Boston Terrier usually lives more than 10 years.",
+        "sl": "Bostonski terier običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S255",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/boston-terrier",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ed43e2d90c2c83346356a693b7af2c6a84e768b18b123ea4c8c899c02deb5ef1"
+    },
+    {
+      "key": "boston_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Boston Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je bostonski terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d969930f8fb7311404d7b2b532aac8c1ca726b365a56151f4fd4f009b959b46f"
+    }
+  ]
+}

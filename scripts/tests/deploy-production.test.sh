@@ -242,6 +242,7 @@ check "waits after up -d" before 'up -d --remove-orphans app' 'php-fpm-ping'
 check "health check end-to-end through Caddy (TLS name)" called 'curl .*--resolve api.petprep.si:443:127.0.0.1 https://api.petprep.si/up'
 check "dangling images pruned after success" called 'image prune -f'
 check "migrate runs on the NEW code" called 'artisan migrate --force \[code=v2\]'
+check "breed facts imported on the NEW code (M5-R09e)" called 'artisan breeds:import-facts \[code=v2\]'
 check "up -d of app services before artisan up" before 'up -d --remove-orphans app reverb' 'artisan up'
 check "queue:restart before artisan up" before 'queue:restart' 'artisan up'
 check "new code on disk" eq "$(code_on_disk)" v2

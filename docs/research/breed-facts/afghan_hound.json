@@ -1,0 +1,144 @@
+{
+  "breed": "afghan_hound",
+  "facts": [
+    {
+      "key": "afghan_hound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Afghan Hound needs more than 2 hours of exercise every day.",
+        "sl": "Afganski hrt potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S850",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/afghan-hound/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "81cb4748dd477c1737cd89728092b39f341e696d4bcf174b43573e745afa38ee"
+    },
+    {
+      "key": "afghan_hound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Afghan Hound's coat needs grooming every day.",
+        "sl": "Afganski hrt potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S850",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/afghan-hound/",
+      "quote": "Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ef015565d96759c33e8c800b007bfffccd7372eb49b52ca10917a9c61793f175"
+    },
+    {
+      "key": "afghan_hound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Afghan Hound is a large dog breed.",
+        "sl": "Afganski hrt je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S850",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/afghan-hound/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b66fffbcf81fa89bfc0c2fd8ea05a933c3145d99c7c788e1aca3be68787aa2e2"
+    },
+    {
+      "key": "afghan_hound-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Afghan Hound has a long coat.",
+        "sl": "Afganski hrt ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S850",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/afghan-hound/",
+      "quote": "Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "49ac1e9873e131bab6c5bf8226ef3c5e29f09384a4c4cc70846962463011313d"
+    },
+    {
+      "key": "afghan_hound-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Afghan Hound, males are 68–74 cm tall at the withers.",
+        "sl": "Samec pasme afganski hrt je v vihru visok 68–74 cm."
+      },
+      "why": null,
+      "source_id": "S849",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/Nomenclature/Standards/228g10-en.pdf",
+      "quote": "Males: 68 – 74 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "631fde8527765b1834c84d9b18204ac584818b19a8c1c7500b8c0debf40e68ed"
+    },
+    {
+      "key": "afghan_hound-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Afghan Hound usually lives more than 10 years.",
+        "sl": "Afganski hrt običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S850",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/afghan-hound/",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2ecee5599caaaf98ffab76c0934583a339ec3388fadb3cb7ff36d2e8d699ce67"
+    },
+    {
+      "key": "afghan_hound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Afghan Hound reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je afganski hrt, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7aa3f0513475bd834a84a457c0dad090e5a01275d28e892a99691d372552c0d2"
+    }
+  ]
+}

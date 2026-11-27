@@ -1,0 +1,163 @@
+{
+  "breed": "cane_corso",
+  "facts": [
+    {
+      "key": "cane_corso-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Cane Corso needs about 2 hours of exercise every day.",
+        "sl": "Cane corso potrebuje vsak dan približno 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S199",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/cane-corso",
+      "quote": "Your Cane Corso will need around two hours’ exercise every day.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c5cd1c491b7a8dd81b6c6e6e18627a3d15b19c6250dec2e70e9664071aff3287"
+    },
+    {
+      "key": "cane_corso-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Cane Corso's coat needs grooming once a week.",
+        "sl": "Cane corso potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S199",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/cane-corso",
+      "quote": "A weekly brush should be enough to keep on top of dead hairs.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1275c7780661f7371295ddda58a716713e38fa9227cbf4ca72191795d5ec9303"
+    },
+    {
+      "key": "cane_corso-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Cane Corso is a large dog breed.",
+        "sl": "Cane corso je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S199",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/cane-corso",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "86fc6e57c9e5839a705fb7ceda8d1085e8af19f3f87d4a29e525f86d95dc983f"
+    },
+    {
+      "key": "cane_corso-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Cane Corso comes from Italy.",
+        "sl": "Cane corso izvira iz Italije."
+      },
+      "why": null,
+      "source_id": "S198",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/en/nomenclature/CANE-CORSO-343.html",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Molossian type; Country of origin: ITALY",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0af687b74ce1dbff28bfb331827910c4699e7de51a0b3554847a793dfe975e8a"
+    },
+    {
+      "key": "cane_corso-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Cane Corso has a short coat.",
+        "sl": "Cane corso ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S199",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/cane-corso",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0b6dc828b41b01d8500b23baa4c9d4ab523b586a9761c6b0b12899741a5f80c0"
+    },
+    {
+      "key": "cane_corso-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Cane Corso, males are 64–68 cm tall at the withers.",
+        "sl": "Samec pasme cane corso je v vihru visok 64–68 cm."
+      },
+      "why": null,
+      "source_id": "S197",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/343g02-en.pdf",
+      "quote": "Males: 64 cm – 68 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "731010537a7e941d711619eaf2fa5fb63aaabfd2e0e0a72c7cf4e2fda6094706"
+    },
+    {
+      "key": "cane_corso-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Cane Corso, males weigh 45–50 kg.",
+        "sl": "Samec pasme cane corso tehta 45–50 kg."
+      },
+      "why": null,
+      "source_id": "S197",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/343g02-en.pdf",
+      "quote": "Males: 45 – 50 kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5aed236cf6de66b5ce6356a208397c2aef06bde8ef727340e80b6ba38e3b6dfe"
+    },
+    {
+      "key": "cane_corso-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Cane Corso reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je cane corso, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "cd5f4c8a0922a9c734de1e80354a2f3685b02b5c816cf7a2ac70391b887b2090"
+    }
+  ]
+}

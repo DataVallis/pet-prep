@@ -1,0 +1,103 @@
+{
+  "breed": "kerry_blue_terrier",
+  "facts": [
+    {
+      "key": "kerry_blue_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Kerry Blue Terrier needs about 1 hour of exercise every day.",
+        "sl": "Kerry blue terier potrebuje vsak dan približno 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1046",
+      "source_name": "PetMD — Virginia LaMon, DVM (published May 22, 2024)",
+      "source_url": "https://petmd.com/dog/breeds/c_dg_kerry_blue_terrier",
+      "quote": "(they need about one hour of exercise every day)",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "60a23d429dff4af900775b00fcbb12cbd33f22697158ea9508b47ae2163fde90"
+    },
+    {
+      "key": "kerry_blue_terrier-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Kerry Blue Terrier comes from Ireland.",
+        "sl": "Kerry blue terier izvira iz Irske."
+      },
+      "why": null,
+      "source_id": "S1043",
+      "source_name": "Fédération Cynologique Internationale (via kutya-tar.hu mirror of the FCI PDF)",
+      "source_url": "https://www.kutya-tar.hu/standard/en/pdf/003-2005-en.pdf",
+      "quote": "ORIGIN : Ireland.",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0d4ec8d20aa870036862570a89f291c9644ad0399376ad7ee19221567fa5b838"
+    },
+    {
+      "key": "kerry_blue_terrier-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Kerry Blue Terrier, males are 45.5–49.5 cm tall at the withers.",
+        "sl": "Samec pasme kerry blue terier je v vihru visok 45,5–49,5 cm."
+      },
+      "why": null,
+      "source_id": "S1043",
+      "source_name": "Fédération Cynologique Internationale (via kutya-tar.hu mirror of the FCI PDF)",
+      "source_url": "https://www.kutya-tar.hu/standard/en/pdf/003-2005-en.pdf",
+      "quote": "Dogs : 18 - 19,5 inches (45,5 to 49,5 cm).",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b1ca2836009fa9af9baf15b7f8aab26b0b632e3bcfa4401155e76ea9bcf09e44"
+    },
+    {
+      "key": "kerry_blue_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Kerry Blue Terrier usually lives 12 to 15 years.",
+        "sl": "Kerry blue terier običajno živi od 12 do 15 let."
+      },
+      "why": null,
+      "source_id": "S1047",
+      "source_name": "WebMD Pets — Susan Adcox, medically reviewed by Zilpah Sheikh, MD (May 06, 2026)",
+      "source_url": "https://www.webmd.com/pets/dogs/what-to-know-about-kerry-blue-terriers",
+      "quote": "The Kerry Blue Terrier's lifespan is typically from 12 to 15 years.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "34d41c0581b7dc4474dfd3ccde194214eafa71b3d16362293a1f32655dba2d79"
+    },
+    {
+      "key": "kerry_blue_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Kerry Blue Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je kerry blue terier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (26–57 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ef6f83e38d5f78b8bbfc75db0113571274fe9122fb935df3ecc4f8bde50fa4a6"
+    }
+  ]
+}

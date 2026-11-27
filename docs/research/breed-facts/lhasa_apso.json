@@ -1,0 +1,125 @@
+{
+  "breed": "lhasa_apso",
+  "facts": [
+    {
+      "key": "lhasa_apso-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Lhasa Apso needs up to 1 hour of exercise every day.",
+        "sl": "Lhasa apso potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S740",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/lhasa-apso/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "93f5d239b0f07fa1094dd33a521a42da1f6b294dc92e2805858308bf1fea804a"
+    },
+    {
+      "key": "lhasa_apso-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Lhasa Apso's coat needs grooming every day.",
+        "sl": "Lhasa apso potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S740",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/lhasa-apso/",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ca580563e056ec0a910c5716414a422dabbead8289517218e596d5d753f72fc0"
+    },
+    {
+      "key": "lhasa_apso-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Lhasa Apso is a small dog breed.",
+        "sl": "Lhasa apso je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S740",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/lhasa-apso/",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b423270175dc68f98a34347721faab32fa51b87cc6d1abc9a50efdfb38b81446"
+    },
+    {
+      "key": "lhasa_apso-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Lhasa Apso has a long coat.",
+        "sl": "Lhasa apso ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S740",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/lhasa-apso/",
+      "quote": "Coat length: Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b9fd4810b06dcf81f0e6e4bbeb693826e9954db5c86ff56ef156b72880ad2ca0"
+    },
+    {
+      "key": "lhasa_apso-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Lhasa Apso usually lives more than 12 years.",
+        "sl": "Lhasa apso običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S740",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/lhasa-apso/",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "cac6a189175d71357bf3e792ec3df592f95d04997b614f06821988ab7b448e69"
+    },
+    {
+      "key": "lhasa_apso-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Lhasa Apso reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je lhasa apso, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dccf4d5ccc60e109d7b5a1758d03edaf3d8341f7df7f416fb4ee75b5ded32829"
+    }
+  ]
+}

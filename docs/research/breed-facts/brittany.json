@@ -1,0 +1,122 @@
+{
+  "breed": "brittany",
+  "facts": [
+    {
+      "key": "brittany-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Brittany needs more than 2 hours of exercise every day.",
+        "sl": "Bretonski ptičar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S298",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/brittany",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a026660ee7c45ca2c6311676b0fe0ada4f7fbdbaf58b3080264cbe8d9bf833f7"
+    },
+    {
+      "key": "brittany-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Brittany's coat needs grooming more than once a week.",
+        "sl": "Bretonski ptičar potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S298",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/brittany",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "db2f1e395f790302e249d68f8bcd1ebc99799005da2f4c86d2ed0d3de796bd43"
+    },
+    {
+      "key": "brittany-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Brittany is a medium-sized dog breed.",
+        "sl": "Bretonski ptičar je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S298",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/brittany",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b7224e3b039c0795fe599d4af540af1718a344234fbbad5440716640daedc3dc"
+    },
+    {
+      "key": "brittany-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Brittany has a medium-length coat.",
+        "sl": "Bretonski ptičar ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S298",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/brittany",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "46876533b45d7c36edca947fc694139273b3b9710b4660d85931907cb2fe71ef"
+    },
+    {
+      "key": "brittany-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Brittany usually lives more than 10 years.",
+        "sl": "Bretonski ptičar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S298",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/brittany",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ae6f0b68ddaaf7032c0595d29aa5257d1e0c16ee5f3354684e14e620766db4ec"
+    },
+    {
+      "key": "brittany-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Brittany reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je bretonski ptičar, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ebab83df02237651833a27740298aa7c9aa6a8fda259db2c062d1803603d2d8f"
+    }
+  ]
+}

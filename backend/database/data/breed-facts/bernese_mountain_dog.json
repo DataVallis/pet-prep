@@ -1,0 +1,144 @@
+{
+  "breed": "bernese_mountain_dog",
+  "facts": [
+    {
+      "key": "bernese_mountain_dog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bernese Mountain Dog needs up to 1 hour of exercise every day.",
+        "sl": "Bernski planšarski pes potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S152",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bernese-mountain-dog/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "22a13d9b728b1f13e6c181c6fb02bbc2e5345b814d4d4a9202e0d8cf240efbed"
+    },
+    {
+      "key": "bernese_mountain_dog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bernese Mountain Dog's coat needs grooming more than once a week.",
+        "sl": "Bernski planšarski pes potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S152",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bernese-mountain-dog/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "25068992103312a6caff9183079bf8fa4fcf1f04bcf6b9c43e4040f004be4459"
+    },
+    {
+      "key": "bernese_mountain_dog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bernese Mountain Dog is a large dog breed.",
+        "sl": "Bernski planšarski pes je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S152",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bernese-mountain-dog/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "de7e5212885c01b54543353b61181bbc409dc70a6d28ca2f1af1b2f676580fdd"
+    },
+    {
+      "key": "bernese_mountain_dog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bernese Mountain Dog has a medium-length coat.",
+        "sl": "Bernski planšarski pes ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S152",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bernese-mountain-dog/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "db79376e7fdc223d147ae05e1528c742cc9d07cbeca079cbdb286a51cb970f92"
+    },
+    {
+      "key": "bernese_mountain_dog-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Bernese Mountain Dog, males are 64–70 cm tall at the withers and females 58–66 cm.",
+        "sl": "Samci pasme bernski planšarski pes so v vihru visoki 64–70 cm, samice 58–66 cm."
+      },
+      "why": null,
+      "source_id": "S150",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/045g02-en.pdf",
+      "quote": "Height at withers: for dogs: 64-70 cm, … for bitches: 58-66 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8ec4108e0bd2639f8c272a0e4da77de3f70fb36d827ad9f8db62af7b3284983e"
+    },
+    {
+      "key": "bernese_mountain_dog-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Bernese Mountain Dog, males weigh 48–63 kg and females 42–53 kg.",
+        "sl": "Samci pasme bernski planšarski pes tehtajo 48–63 kg, samice 42–53 kg."
+      },
+      "why": null,
+      "source_id": "S154",
+      "source_name": "PDSA (UK veterinary charity)",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/bernese-mountain-dog",
+      "quote": "42-53kg in females and 48-63kg in males",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "54a0d2bcc00d08c87a2f0559a9a4dc94fa034e5e58210f3e9239bb0ce0cf93b9"
+    },
+    {
+      "key": "bernese_mountain_dog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bernese Mountain Dog reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je bernski planšarski pes, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "00414c65400859fd8e113311131ad852c214a90fa27bd26c18ae4fdd0a9d829a"
+    }
+  ]
+}

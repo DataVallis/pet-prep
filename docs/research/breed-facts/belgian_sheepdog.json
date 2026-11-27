@@ -1,0 +1,122 @@
+{
+  "breed": "belgian_sheepdog",
+  "facts": [
+    {
+      "key": "belgian_sheepdog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Sheepdog needs more than 2 hours of exercise every day.",
+        "sl": "Belgijski ovčar groenendael potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S1019",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-groenendael/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "014dcf701a3346619e1aa91c296b87dc5f3a815d8fab127ac8c9cae80859e410"
+    },
+    {
+      "key": "belgian_sheepdog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Sheepdog's coat needs grooming more than once a week.",
+        "sl": "Belgijski ovčar groenendael potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S1019",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-groenendael/",
+      "quote": "More than once a week",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "50b6cc1bd177ac69f114046df7a5c2b686f5f716591e0b9fbd7c978f28660585"
+    },
+    {
+      "key": "belgian_sheepdog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Sheepdog is a medium to large dog breed.",
+        "sl": "Belgijski ovčar groenendael je srednje velika do velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1019",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-groenendael/",
+      "quote": "Medium-Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ad9d8f954f4134225520edb0fabab035ed46e5e4ce9e7dc4cddf75e66525598d"
+    },
+    {
+      "key": "belgian_sheepdog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Sheepdog has a medium-length coat.",
+        "sl": "Belgijski ovčar groenendael ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S1019",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-groenendael/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9fb7e056f3f7f0dc965068627d9007f704acdf4a9814cb07dd6f3b8473c754c8"
+    },
+    {
+      "key": "belgian_sheepdog-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Sheepdog usually lives more than 10 years.",
+        "sl": "Belgijski ovčar groenendael običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S1019",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/belgian-shepherd-dog-groenendael/",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ac99ee4bf3ed63b2bbe57149627fe3f3e8be80933757f94b45bfc0bd600696bc"
+    },
+    {
+      "key": "belgian_sheepdog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Belgian Sheepdog reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je belgijski ovčar groenendael, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d3d7c38608e5268a7b35d4cc05a0fd40a0d4d1f793688706d0a1f892df4e0380"
+    }
+  ]
+}

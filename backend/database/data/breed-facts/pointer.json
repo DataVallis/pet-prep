@@ -1,0 +1,144 @@
+{
+  "breed": "pointer",
+  "facts": [
+    {
+      "key": "pointer-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Pointer needs more than 2 hours of exercise every day.",
+        "sl": "Angleški pointer potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S944",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/pointer",
+      "quote": "Pointers have high energy levels and will need plenty of exercise – over 2 hours per day ideally.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c4abde3fe6b793b793de81553ea3bf2659a55944ef51ebceb889636ddf4910f5"
+    },
+    {
+      "key": "pointer-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Pointer's coat needs grooming once a week.",
+        "sl": "Angleški pointer potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S944",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/pointer",
+      "quote": "Their short coats will need grooming just once a week.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f440304d6d1a1a213abad0fe5195774ceefdba653672ce0a360ef72da8d75c76"
+    },
+    {
+      "key": "pointer-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pointer is a large dog breed.",
+        "sl": "Angleški pointer je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S944",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/pointer",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "208ac592d222a262ec58aff0688818fc788700787d5c332f1d611bb846852d79"
+    },
+    {
+      "key": "pointer-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pointer has a short coat.",
+        "sl": "Angleški pointer ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S944",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/pointer",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "27a33694e7b0ed7766fad2f468d9010b2c9f86aa4a759271f5a4a8f2f8fffb37"
+    },
+    {
+      "key": "pointer-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Pointer, males are 63–69 cm tall at the withers.",
+        "sl": "Samec pasme angleški pointer je v vihru visok 63–69 cm."
+      },
+      "why": null,
+      "source_id": "S943",
+      "source_name": "FCI",
+      "source_url": "https://dev.fci.be/Nomenclature/Standards/001g07-en.pdf",
+      "quote": "Dogs: 63 - 69 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c9d5aa840416839a29bc10a44e689fd99d579d50a3c7053a2d0c25ffeb09f870"
+    },
+    {
+      "key": "pointer-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pointer usually lives more than 12 years.",
+        "sl": "Angleški pointer običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S944",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/pointer",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8a91c9f74387bef1e7a645497ea9b4afdee11b24a40c39561642e66a118c57d3"
+    },
+    {
+      "key": "pointer-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Pointer reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je angleški pointer, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "23f478a0be42665a50d36db8ba89a79e3495d634f8b5c87362f590b6c67e9f50"
+    }
+  ]
+}

@@ -76,6 +76,34 @@ node -e 'const c=require("crypto"),d=require(require("path").resolve(process.arg
 
 The verifier writes the hash **of the text it checked** into `verified_hash` (never re-compute it for an edited text without verifying again).
 
+## Generated facts (M5-R09e, David 2026-11-27: »za vse pasme rabimo facts«)
+
+`node scripts/generate-breed-facts.mjs` writes `<breed>.json` (here **and** the shipped copy) for
+every register breed that has no hand-written file. It turns the sourced values of
+`docs/research/breed-registry.json` (the ones the website register shows) into fixed EN + SL
+sentences and takes the verbatim quote of each value's `ref` in `dog-data` / `cat-data`.
+
+- Fields: daily exercise (with »that's why« → `daily_steps` when the game goal equals the source's
+  minutes), grooming frequency (»that's why« → `grooming_per_week` when the game rule says the
+  same), size, country of origin, coat length, height, weight, lifespan, growth end.
+- **A fact is written only when its quote carries it** — every number of the sentence (and its
+  unit / qualifier) or the category word must stand in the quote. Anything else is skipped,
+  never written as a draft. `scripts/tests/generate-breed-facts.test.mjs` re-checks every number.
+- Keys `<breed>-auto-<field>` (stable, never renamed); `verified_by` =
+  `generate-breed-facts.mjs (…)`; `verified_hash` = the content hash of the generated text.
+  This mechanical check replaces the second AI verifier **only** for these template sentences.
+- No health facts, no Coren rank (Wikipedia source), no medians; a lifespan of 10 years or less
+  is `parent` only. All other generated facts are `child`, categories `exercise` / `grooming` /
+  `body` / `origin`.
+- A file with any hand-written key (not `-auto-`) is never touched — `border_collie`,
+  `maine_coon`. Richer facts for a breed (temperament, history, training — writer + independent
+  verifier, DID_YOU_KNOW_SPEC §5) are added by hand to that breed's file with `-NNN` keys; from
+  then on the generator leaves the file alone, its `-auto-` facts stay.
+- A new breed: run the generator after the registry export (ADD_BREED_RUNBOOK §4). `--check`
+  exits 1 when a committed file is stale.
+- **David still approves** in `/admin` → Breed facts (filter *verified* → select all → »Approve
+  selected«); generated facts arrive as `verified`.
+
 ## Import rules (`php artisan breeds:import-facts {--breed=*} {--dry-run}`)
 
 - A file with **any** error is rejected as a whole (nothing of it is written); other files still import.
@@ -98,8 +126,9 @@ folder (the `*.json` files). After adding or changing a file here:
 cp docs/research/breed-facts/*.json backend/database/data/breed-facts/
 ```
 
-and commit both. `BreedFactImportTest` fails CI when the two folders differ. Then, after the
-deploy, on the server:
+and commit both. `BreedFactImportTest` fails CI when the two folders differ. Since M5-R09e (2026-11-27)
+**every production deploy runs `breeds:import-facts`** right after the migrations
+(`scripts/deploy-production.sh`; warn-only, idempotent, approvals stay). By hand, on the server:
 
 ```bash
 docker compose -f backend/compose.production.yaml run --rm app php artisan breeds:import-facts --dry-run

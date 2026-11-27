@@ -1,0 +1,141 @@
+{
+  "breed": "anatolian_shepherd_dog",
+  "facts": [
+    {
+      "key": "anatolian_shepherd_dog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Anatolian Shepherd Dog needs more than 2 hours of exercise every day.",
+        "sl": "Anatolski ovčar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S685",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/anatolian-shepherd-dog/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f1a8f960719f7695df84c022345be2793bb6a932097e1b785736373adbcc395f"
+    },
+    {
+      "key": "anatolian_shepherd_dog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Anatolian Shepherd Dog's coat needs grooming more than once a week.",
+        "sl": "Anatolski ovčar potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": null,
+      "source_id": "S685",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/anatolian-shepherd-dog/",
+      "quote": "More than once a week",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a3bbe3c6f12c52cb7a3dfd0ce6c4c365a685eef36266ab8222b0a32e42bdc88f"
+    },
+    {
+      "key": "anatolian_shepherd_dog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Anatolian Shepherd Dog is a large dog breed.",
+        "sl": "Anatolski ovčar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S685",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/anatolian-shepherd-dog/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "432495bb3e8b5b7fc926e8c37763a28aaf5fcdb3c3300b8617a48ca82e097fc0"
+    },
+    {
+      "key": "anatolian_shepherd_dog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Anatolian Shepherd Dog has a short coat.",
+        "sl": "Anatolski ovčar ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S685",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/anatolian-shepherd-dog/",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "553855b6b3473aa300510a1dede2f91be8e698ae27ad58fa64403673d50fc790"
+    },
+    {
+      "key": "anatolian_shepherd_dog-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Anatolian Shepherd Dog, males are 72–78 cm tall at the withers.",
+        "sl": "Samec pasme anatolski ovčar je v vihru visok 72–78 cm."
+      },
+      "why": null,
+      "source_id": "S682",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/medias/331g02-en-9067.pdf",
+      "quote": "Height at the withers: Males: 72 to 78 cm. with + /- 2 cm of tolerance",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "426c3a9af2b2bd27e79d419e5d3e8b7e00c2dc1ecdcc53f67b0ba17f7ae06d5f"
+    },
+    {
+      "key": "anatolian_shepherd_dog-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Anatolian Shepherd Dog usually lives more than 10 years.",
+        "sl": "Anatolski ovčar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S685",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/anatolian-shepherd-dog/",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2b3ed6d1a0885b8586b12595dbb25bd3fdc6994813755ace6196442ae220a4f4"
+    },
+    {
+      "key": "anatolian_shepherd_dog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Anatolian Shepherd Dog reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je anatolski ovčar, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3318d593dd6dd9b4f0c1f2d623cc4e14ca5809549fa72e444af5beb8ce28be9d"
+    }
+  ]
+}

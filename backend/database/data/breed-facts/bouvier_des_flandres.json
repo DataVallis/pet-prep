@@ -1,0 +1,106 @@
+{
+  "breed": "bouvier_des_flandres",
+  "facts": [
+    {
+      "key": "bouvier_des_flandres-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bouvier des Flandres needs up to 1 hour of exercise every day.",
+        "sl": "Flandrijski govedar potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S795",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bouvier-des-flandres/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a75fcb7607672ed3c38ef8a493bd1d96f36b27518a39013704644a1b1cd72004"
+    },
+    {
+      "key": "bouvier_des_flandres-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bouvier des Flandres's coat needs grooming every day.",
+        "sl": "Flandrijski govedar potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S795",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bouvier-des-flandres/",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8011e21e7977f709177f466ee2db93ee8b741446febe0c6729bf77c5abbced7f"
+    },
+    {
+      "key": "bouvier_des_flandres-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bouvier des Flandres is a large dog breed.",
+        "sl": "Flandrijski govedar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S795",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bouvier-des-flandres/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b14119db0ee60b11198c20d4ed28c594494fd0776b69adf8fed030d2d8b44ac2"
+    },
+    {
+      "key": "bouvier_des_flandres-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bouvier des Flandres has a medium-length coat.",
+        "sl": "Flandrijski govedar ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S795",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bouvier-des-flandres/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7b478ff942f7bb8600eb94a83793e9cc1c06655682131c9ec9edac81877c7552"
+    },
+    {
+      "key": "bouvier_des_flandres-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bouvier des Flandres reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je flandrijski govedar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "54019e6b22d1bf828370598763cb7abb16888f08c49e871e1cbf87de244134b7"
+    }
+  ]
+}

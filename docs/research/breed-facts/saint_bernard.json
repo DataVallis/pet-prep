@@ -1,0 +1,106 @@
+{
+  "breed": "saint_bernard",
+  "facts": [
+    {
+      "key": "saint_bernard-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Saint Bernard needs up to 1 hour of exercise every day.",
+        "sl": "Bernardinec potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S529",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/st-bernard/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0be0e2b051f16c40c8e9352e63c87c79d9bb7ad314e4611cb415cd26f877ffaf"
+    },
+    {
+      "key": "saint_bernard-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Saint Bernard's coat needs grooming more than once a week.",
+        "sl": "Bernardinec potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog 3 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 3-krat na teden."
+      },
+      "source_id": "S529",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/st-bernard/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7f8544daee7464f14255ccff2668fab68eb35cbc0bbbb4416c0913d44f405ba0"
+    },
+    {
+      "key": "saint_bernard-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Saint Bernard has a short coat.",
+        "sl": "Bernardinec ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S529",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/st-bernard/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1b2575ade32484f6ff9d0890ed6f04ed52b70cce4bfff10fc0dfabdfc268305a"
+    },
+    {
+      "key": "saint_bernard-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Saint Bernard weighs 54–81 kg.",
+        "sl": "Bernardinec tehta 54–81 kg."
+      },
+      "why": null,
+      "source_id": "S532",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saint-bernard",
+      "quote": "54kg-81kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "49ae48c8840264f18cf448f8985236b1ad8139390e24d05ffbe70c0d1155166c"
+    },
+    {
+      "key": "saint_bernard-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Saint Bernard reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je bernardinec, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f8f33e0b76c6cd2b16aca3ed243870023b21c5c37c749065b6445e40d08dd3d9"
+    }
+  ]
+}

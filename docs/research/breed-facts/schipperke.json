@@ -1,0 +1,106 @@
+{
+  "breed": "schipperke",
+  "facts": [
+    {
+      "key": "schipperke-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Schipperke needs up to 1 hour of exercise every day.",
+        "sl": "Schipperke potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S826",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schipperke/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fcdb3fab149773a5f956fa8ad0bf8f23c056917ce9458465e4391d0c111a0d2a"
+    },
+    {
+      "key": "schipperke-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Schipperke's coat needs grooming more than once a week.",
+        "sl": "Schipperke potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S826",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schipperke/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "92db6a4e60d092624b6aa5dbf682f54bbccce35560eac771c8e9534eaf7645c8"
+    },
+    {
+      "key": "schipperke-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Schipperke is a small dog breed.",
+        "sl": "Schipperke je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S826",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schipperke/",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "036977c93759b19e9247ed5bc3017194fa28d219cdbcdc6b65946e5fb28ac02c"
+    },
+    {
+      "key": "schipperke-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Schipperke has a medium-length coat.",
+        "sl": "Schipperke ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S826",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schipperke/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3eb8197697e1329408607d2b25157df656395f05f985b23f58348d0ebc7ca832"
+    },
+    {
+      "key": "schipperke-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Schipperke reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je schipperke, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "66e2c988a16317961ba67d5b63a3876e258f459da1394961c1d14a52a0fd519f"
+    }
+  ]
+}

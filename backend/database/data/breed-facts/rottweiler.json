@@ -1,0 +1,144 @@
+{
+  "breed": "rottweiler",
+  "facts": [
+    {
+      "key": "rottweiler-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Rottweiler needs more than 2 hours of exercise every day.",
+        "sl": "Rotvajler potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S168",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/rottweiler",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2fab05f3adfb7f36c70574623f2056c154668c8a3272814681801914f4c7543c"
+    },
+    {
+      "key": "rottweiler-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Rottweiler's coat needs grooming once a week.",
+        "sl": "Rotvajler potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S168",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/rottweiler",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "53ef4c187bbfef421b2535e75d4bd2ed92032032ce5c116f3dc79c81afb01c79"
+    },
+    {
+      "key": "rottweiler-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rottweiler is a large dog breed.",
+        "sl": "Rotvajler je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S168",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/rottweiler",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a39e3a6221a04f8b551065e60c59355b6dcc48dc5fd59d03815f203570ab50ef"
+    },
+    {
+      "key": "rottweiler-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Rottweiler comes from Germany.",
+        "sl": "Rotvajler izvira iz Nemčije."
+      },
+      "why": null,
+      "source_id": "S167",
+      "source_name": "FCI",
+      "source_url": "https://fci.be/en/nomenclature/ROTTWEILER-147.html",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Molossian type; Country of origin: GERMANY",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5b55530d0e0bd0afa52cd958beae6c9b9d95b3c742b41b823ed5e371744e8282"
+    },
+    {
+      "key": "rottweiler-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rottweiler has a short coat.",
+        "sl": "Rotvajler ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S168",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/rottweiler",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "22af2a08cdd4421e91088a2dd466d0724f3f4ad04f0d86ecd661ce7294293b29"
+    },
+    {
+      "key": "rottweiler-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Rottweiler, males are 61–68 cm tall at the withers.",
+        "sl": "Samec pasme rotvajler je v vihru visok 61–68 cm."
+      },
+      "why": null,
+      "source_id": "S166",
+      "source_name": "FCI",
+      "source_url": "https://fci.be/Nomenclature/Standards/147g02-en.pdf",
+      "quote": "Height at withers: For males is 61 - 68 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "efdf87e368f789b41a0e3dd5ba3bcd841df5fcb51c4808632785453a363faef0"
+    },
+    {
+      "key": "rottweiler-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Rottweiler reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je rotvajler, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e3e6fa183ca7b668077ff21e6bda900321985abb0b8b406e1ee62adfbd021b31"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "breed": "old_english_sheepdog",
+  "facts": [
+    {
+      "key": "old_english_sheepdog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog needs 2 hours of exercise every day.",
+        "sl": "Staroangleški ovčar potrebuje vsak dan 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "2 hours",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "33ec900a86d191a62fd3f1f92e897fcbe6d85feeef4f3c7d49bb57e6f555ca29"
+    },
+    {
+      "key": "old_english_sheepdog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog's coat needs grooming every day.",
+        "sl": "Staroangleški ovčar potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "They have long fur which will need a daily brush to make sure it doesn't get matted and tangled.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f6e229104f7a3f14f921c935b73c194764c39cb15f4fcfd16779de23ede1e1f1"
+    },
+    {
+      "key": "old_english_sheepdog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog is a large dog breed.",
+        "sl": "Staroangleški ovčar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f086232ce7856d1a816a4ff1d89f673a75e7f786677c45994a2c74d5695e1599"
+    },
+    {
+      "key": "old_english_sheepdog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog has a long coat.",
+        "sl": "Staroangleški ovčar ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5debbe0dac44631bdf34b42cc349c6d95b981a6d1f674967a64e5a1e6edb2032"
+    },
+    {
+      "key": "old_english_sheepdog-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog is 56–61 cm tall at the withers.",
+        "sl": "Psi pasme staroangleški ovčar so v vihru visoki 56–61 cm."
+      },
+      "why": null,
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "56-61 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6c692c26295041e12f947561f4f1842dfbaba21c05384c3d524938070600a347"
+    },
+    {
+      "key": "old_english_sheepdog-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog weighs 27–30 kg.",
+        "sl": "Staroangleški ovčar tehta 27–30 kg."
+      },
+      "why": null,
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "27-30 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d752ac764e346a138794dcfea54c7b9bc63d70cc4787498b096b6bddbd842830"
+    },
+    {
+      "key": "old_english_sheepdog-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Old English Sheepdog usually lives more than 10 years.",
+        "sl": "Staroangleški ovčar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S705",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "285b070ac80d724549fa9889e06db0dcd2d1970300df188d6580c23b2581314f"
+    },
+    {
+      "key": "old_english_sheepdog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Old English Sheepdog reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je staroangleški ovčar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "96827b79b86a065731a215bee67bc56a409acbf1b26f3e26667c59a0bbeb5f5c"
+    }
+  ]
+}

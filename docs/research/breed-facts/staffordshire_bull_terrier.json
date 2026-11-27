@@ -1,0 +1,163 @@
+{
+  "breed": "staffordshire_bull_terrier",
+  "facts": [
+    {
+      "key": "staffordshire_bull_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Staffordshire Bull Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Stafordširski bulterier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S538",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/staffordshire-bull-terrier/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "59ff14a35c125d1f4af58b8b4d0c9c95b5eb54fe50b6ef1838dc3ebb4280d9b5"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Staffordshire Bull Terrier's coat needs grooming once a week.",
+        "sl": "Stafordširski bulterier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S538",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/staffordshire-bull-terrier/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d7c8735a41fad1d6cf74e2d9555ac4568ba329c26db380c51b1826882955baec"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Staffordshire Bull Terrier is a small dog breed.",
+        "sl": "Stafordširski bulterier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S538",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/staffordshire-bull-terrier/",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "49b373e8c91b69fc2bc16a64ea76bb1f77c616e8bba55dda5a3c490148248d90"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Staffordshire Bull Terrier has a short coat.",
+        "sl": "Stafordširski bulterier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S538",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/staffordshire-bull-terrier/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1246e5a05dcbf351283ed6d51bdcf95d772f181dd9ae44dd31e130eb90a38dcc"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Staffordshire Bull Terrier is 35.5–40.5 cm tall at the withers.",
+        "sl": "Psi pasme stafordširski bulterier so v vihru visoki 35,5–40,5 cm."
+      },
+      "why": null,
+      "source_id": "S537",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/Nomenclature/Standards/076g03-en.pdf",
+      "quote": "Desirable height at withers:35,5 to 40,5 cm, these heights being related to the weights.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "42469db5ab1d336a8ae0db15ea0c4fc68da1468b11a0b965ae4d09f0197abf88"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Staffordshire Bull Terrier, males weigh 12.7–17 kg.",
+        "sl": "Samec pasme stafordširski bulterier tehta 12,7–17 kg."
+      },
+      "why": null,
+      "source_id": "S537",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/Nomenclature/Standards/076g03-en.pdf",
+      "quote": "Weight: Males: 12,7-17 kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "798ee97240fa961483a0459c64fbe6f4294e1374718534499fb587a64c2423ef"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Staffordshire Bull Terrier usually lives more than 12 years.",
+        "sl": "Stafordširski bulterier običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S538",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/staffordshire-bull-terrier/",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fad33af63a2f80f0e16673dfb8c0f4ba3cb79ee575aa59c113ec6c253e142eb8"
+    },
+    {
+      "key": "staffordshire_bull_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Staffordshire Bull Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je stafordširski bulterier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5d78375b59f4bc7a4b7c55bcb667db3f5ca83aae2e8188aa11617c37b7fbbd48"
+    }
+  ]
+}

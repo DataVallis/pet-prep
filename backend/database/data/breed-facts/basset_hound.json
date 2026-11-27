@@ -1,0 +1,163 @@
+{
+  "breed": "basset_hound",
+  "facts": [
+    {
+      "key": "basset_hound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound needs up to 1 hour of exercise every day.",
+        "sl": "Baset potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S321",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1003",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7cf4d4bfabf17341bb8cced1c5c13923c5d2f104384f081c2f7fef571aeb7fae"
+    },
+    {
+      "key": "basset_hound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound's coat needs grooming once a week.",
+        "sl": "Baset potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S321",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1003",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "848344528983d381333b5291881fff30fada9a46e33946152d9831be604a8fa9"
+    },
+    {
+      "key": "basset_hound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound is a medium to large dog breed.",
+        "sl": "Baset je srednje velika do velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S321",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1003",
+      "quote": "Size: Medium-Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b2013bf9da011b81039cdc80f47ce5ecbf8bbec7f2fd9de380afbddf5600e7da"
+    },
+    {
+      "key": "basset_hound-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound has a short coat.",
+        "sl": "Baset ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S321",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1003",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9e132821dead72e4440f745cdd7d071db6e193fdcdeab98e90a40057b7576c2c"
+    },
+    {
+      "key": "basset_hound-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound is 33–38 cm tall at the withers.",
+        "sl": "Psi pasme baset so v vihru visoki 33–38 cm."
+      },
+      "why": null,
+      "source_id": "S320",
+      "source_name": "FCI",
+      "source_url": "https://WWW.FCI.BE/Nomenclature/Standards/163g06-en.pdf",
+      "quote": "Height at the withers: 33 - 38 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ae1ac1feba4cf3c892be4db0d6b2c17ac6ab7cd22ead6ace2a38536a68e0cba8"
+    },
+    {
+      "key": "basset_hound-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound weighs 18–27 kg.",
+        "sl": "Baset tehta 18–27 kg."
+      },
+      "why": null,
+      "source_id": "S323",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/basset-hound",
+      "quote": "18kg-27kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9bb8a9970ea4ab0c639b4fe65cde3cc14c06b3c06e34033ba0ddcb02a93ed73c"
+    },
+    {
+      "key": "basset_hound-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Basset Hound usually lives more than 10 years.",
+        "sl": "Baset običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S321",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1003",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dc43f78d618ad5a7715e4d94532a365d60f6ab560e22982c3b11c60b90aa9176"
+    },
+    {
+      "key": "basset_hound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Basset Hound reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je baset, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "308243ac8dc2d9e8754c5d91b1af22e680801f5a97b37bd9eed8ffc6103153da"
+    }
+  ]
+}

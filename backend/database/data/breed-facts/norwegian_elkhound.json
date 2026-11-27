@@ -1,0 +1,125 @@
+{
+  "breed": "norwegian_elkhound",
+  "facts": [
+    {
+      "key": "norwegian_elkhound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Elkhound needs 1 hour of exercise every day.",
+        "sl": "Norveški losovec potrebuje vsak dan 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S963",
+      "source_name": "PetMD — Jamie Frevele, reviewed by Barri J. Morrison, DVM (updated Jun. 24, 2023)",
+      "source_url": "https://www.petmd.com/dog/breeds/norwegian-elkhound",
+      "quote": "One hour of exercise a day is recommended for this breed",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b54819e63fbb57904bcf3fe756f2b11daf0559cf688f0f0aa1ca137da952cf26"
+    },
+    {
+      "key": "norwegian_elkhound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Elkhound's coat needs grooming every day.",
+        "sl": "Norveški losovec potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S964",
+      "source_name": "WebMD Pets — Alyssa Anderson, medically reviewed by Vanesa Farmer, DVM (May 30, 2024)",
+      "source_url": "https://www.webmd.com/pets/dogs/what-to-know-norwegian-elkhounds",
+      "quote": "You should brush your dog's coats for at least two minutes every day.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6c73af5102f0936dc7d325133deb5209de278469c91f7d73b7622e1a83258da8"
+    },
+    {
+      "key": "norwegian_elkhound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Elkhound is a medium-sized dog breed.",
+        "sl": "Norveški losovec je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S963",
+      "source_name": "PetMD — Jamie Frevele, reviewed by Barri J. Morrison, DVM (updated Jun. 24, 2023)",
+      "source_url": "https://www.petmd.com/dog/breeds/norwegian-elkhound",
+      "quote": "The fluffy, medium-size breed has perky ears and an attitude to match.",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "02ad609b6480aeb9753207e819a855bef8557e846cf0e94437af8b3b2ef1127a"
+    },
+    {
+      "key": "norwegian_elkhound-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Elkhound has a medium-length coat.",
+        "sl": "Norveški losovec ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S960",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/242g05-en.pdf",
+      "quote": "Hair: Of medium length; thick, coarse, abundant outer coat without curls.",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b9090217b6e5170ebb5ff84a13ad2ac479ad826c7d0d4f382b564a3f6fe7969a"
+    },
+    {
+      "key": "norwegian_elkhound-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Norwegian Elkhound usually lives 12 to 15 years.",
+        "sl": "Norveški losovec običajno živi od 12 do 15 let."
+      },
+      "why": null,
+      "source_id": "S963",
+      "source_name": "PetMD — Jamie Frevele, reviewed by Barri J. Morrison, DVM (updated Jun. 24, 2023)",
+      "source_url": "https://www.petmd.com/dog/breeds/norwegian-elkhound",
+      "quote": "Norwegian Elkhound dogs have an average life span of 12–15 years, typical for a medium-size dog.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b481d2ddb7b0cef79f376a5a40f94720358c3f8d2c07a1f460509ad4bbffed35"
+    },
+    {
+      "key": "norwegian_elkhound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Norwegian Elkhound reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je norveški losovec, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b14fa10b3aa80d0b1d5695badaa270c9fc8b92878daf97e24d7d7da65df52d7b"
+    }
+  ]
+}

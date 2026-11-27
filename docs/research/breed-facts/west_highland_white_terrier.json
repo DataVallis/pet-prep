@@ -1,0 +1,144 @@
+{
+  "breed": "west_highland_white_terrier",
+  "facts": [
+    {
+      "key": "west_highland_white_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The West Highland White Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Zahodnoškotski beli terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S144",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/west-highland-white-terrier/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "37ed52970974a082d5c2bdb7566e7c0f52999c5d7cdd3bd6f44b2a47192ad6ab"
+    },
+    {
+      "key": "west_highland_white_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The West Highland White Terrier's coat needs grooming more than once a week.",
+        "sl": "Zahodnoškotski beli terier potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S144",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/west-highland-white-terrier/",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "88346f1bff11a755ef9c5c099723604014e43092f812bd0fea44da3ea5b986cb"
+    },
+    {
+      "key": "west_highland_white_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The West Highland White Terrier is a small dog breed.",
+        "sl": "Zahodnoškotski beli terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S144",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/west-highland-white-terrier/",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e8eee77aa5dfe9c361ca38be064c4ad0ccf5dd69d31eee76a69a1860b75283b2"
+    },
+    {
+      "key": "west_highland_white_terrier-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The West Highland White Terrier comes from Great Britain.",
+        "sl": "Zahodnoškotski beli terier izvira iz Velike Britanije."
+      },
+      "why": null,
+      "source_id": "S143",
+      "source_name": "FCI",
+      "source_url": "https://fci.be/en/nomenclature/WEST-HIGHLAND-WHITE-TERRIER-85.html",
+      "quote": "Group: n°3 - Terriers; Section: Small sized Terriers; Country of origin: GREAT BRITAIN",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0cf8090fd5e6b7503cff8e4f52c11ff79e38794b405ad02a08d7c0a272cad528"
+    },
+    {
+      "key": "west_highland_white_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The West Highland White Terrier has a medium-length coat.",
+        "sl": "Zahodnoškotski beli terier ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S144",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/west-highland-white-terrier/",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d6b0af779a62590be006f20f17c9c296ae727a21f43d61565915434127fa5e25"
+    },
+    {
+      "key": "west_highland_white_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The West Highland White Terrier weighs 6–9 kg.",
+        "sl": "Zahodnoškotski beli terier tehta 6–9 kg."
+      },
+      "why": null,
+      "source_id": "S147",
+      "source_name": "PDSA (UK veterinary charity)",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/west-highland-white-terrier",
+      "quote": "6-9 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "979df546e2aa2a5aa78258a86fc8c07439088a2161bfc100d85fbeefd8b8050b"
+    },
+    {
+      "key": "west_highland_white_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the West Highland White Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je zahodnoškotski beli terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fce4decd24546cb27c1e19c37677c584640916d50e386c883d687b9d0459f686"
+    }
+  ]
+}

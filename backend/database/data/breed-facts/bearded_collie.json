@@ -1,0 +1,144 @@
+{
+  "breed": "bearded_collie",
+  "facts": [
+    {
+      "key": "bearded_collie-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bearded Collie needs up to 1 hour of exercise every day.",
+        "sl": "Bradati koli potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1078",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5109",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "83ebc65b23153b46a236d4243ba8310f3f6a6794543de97c1ccd0922fb25c359"
+    },
+    {
+      "key": "bearded_collie-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bearded Collie's coat needs grooming every day.",
+        "sl": "Bradati koli potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S1078",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5109",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a91fc213f1a00de36a21afe1bffa61a7d90922eb2d5b843bfea0afdc9daf379a"
+    },
+    {
+      "key": "bearded_collie-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bearded Collie is a medium-sized dog breed.",
+        "sl": "Bradati koli je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1078",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5109",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "be23657460cb7d12fe4e85bceee263348b842c39771affa5be017b8a30b055da"
+    },
+    {
+      "key": "bearded_collie-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bearded Collie has a long coat.",
+        "sl": "Bradati koli ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S1078",
+      "source_name": "Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5109",
+      "quote": "Coat length: Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "819dee34eea26baaa5f44090387e3f078e5493b6844cbbe82d8bb11eaed64fe0"
+    },
+    {
+      "key": "bearded_collie-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Bearded Collie, males are 53–56 cm tall at the withers.",
+        "sl": "Samec pasme bradati koli je v vihru visok 53–56 cm."
+      },
+      "why": null,
+      "source_id": "S1076",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/271g01-en.pdf",
+      "quote": "Males 53– 56cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a3cfc61d7c34e78f4b2349e5e3468d44b1a28a3fff5741a4a643c837c9a0f670"
+    },
+    {
+      "key": "bearded_collie-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bearded Collie weighs 20–25 kg.",
+        "sl": "Bradati koli tehta 20–25 kg."
+      },
+      "why": null,
+      "source_id": "S1079",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/bearded-collie",
+      "quote": "20-25kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1b0fc9c09dc52ed4634ae76cdb5f36f11ece30a44536ccb697a844b056a0d45c"
+    },
+    {
+      "key": "bearded_collie-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bearded Collie reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je bradati koli, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "64368af2287c540eb3381ab7bad25920769581cda6f6a7a8500ed06e5cedfd2f"
+    }
+  ]
+}

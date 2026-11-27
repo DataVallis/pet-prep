@@ -155,6 +155,8 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 ### Register export commit — `feat(scripts): <Breed> in the breed registry export [M5-R10]`
 `scripts/export-breed-registry.mjs`: `SPECIES[].breeds` entry `{ id, synonyms: { en: [...], sl: [...] } }` (**no `availability`** — derived, §9b; a new breed exports as `coming_soon` until a release contains it), `DOG_FACTS.<key>` (only sourced refs; never a number that misleads — e.g. a median age at death of a young population), `DOG_GAME.<key>`, `FCI_ORIGINS` for a new country, a new qualifier / parser only if a value needs it. Then `node scripts/export-breed-registry.mjs` (writes `docs/research/breed-registry.json`) and extend `scripts/tests/export-breed-registry.test.mjs` (slug, `expected` game numbers, a breed-specific test for anything new).
 
+**Breed facts (»Ali si vedel?«, M5-R09e, David 2026-11-27 — every breed must have facts):** right after the export run `node scripts/generate-breed-facts.mjs` and commit the new `docs/research/breed-facts/<key>.json` **and** `backend/database/data/breed-facts/<key>.json` in this commit (the generator writes both; rules in `docs/research/breed-facts/README.md` §Generated facts). It writes only what the quotes of your research carry, so good verbatim quotes with units ("Height at the withers: Males: 68 – 72 cm.", "Exercise: More than 2 hours per day") give more facts. Fewer than 4 facts → say so in the breed doc; never edit the JSON by hand to add one. The next production deploy imports the file; David approves in `/admin` → Breed facts.
+
 ### Breed doc commit — `docs(breeds): <Breed> [M5-R10]`
 **Only** `docs/breeds/<en-slug>.md` (copy `docs/breeds/_TEMPLATE.md`; `<en-slug>` = the breed's `slug.en` in `breed-registry.json`), then `node scripts/breeds-index.mjs` (regenerates the index table in `docs/breeds/README.md`; `node --test scripts/tests/breeds-index.test.mjs` checks it), and the `BREED_QUEUE.md` row. In Slovenian:
 - **Stanje** line (FEATURES style: 🛠 built / ✅ in the app / 📱 verified on a phone / 🗓 planned; free / paid; `M5-R10-NN`; date) — "na telefonu še ni preverjeno" until David confirms;
@@ -183,6 +185,7 @@ NO_PROXY=localhost,127.0.0.1 node scripts/generate-api-types.mjs && git diff mob
 pkill -f "artisan serve"; su postgres -c "dropdb schema_<slug>"
 (cd mobile && npx tsc --noEmit && yarn test --silent src/modules/petProfile src/modules/species src/components/parent/__tests__/PetPickerStep.test.tsx src/i18n)
 node scripts/export-breed-registry.mjs && node --test scripts/tests/export-breed-registry.test.mjs
+node scripts/generate-breed-facts.mjs && node --test scripts/tests/generate-breed-facts.test.mjs   # »Ali si vedel?« facts of the new breed (M5-R09e)
 node scripts/breeds-index.mjs && node --test scripts/tests/breeds-index.test.mjs
 bash scripts/tests/ci-plan.test.sh                     # always cheap; required when scripts/ or workflows change
 shellcheck scripts/*.sh                                # only if a shell script changed

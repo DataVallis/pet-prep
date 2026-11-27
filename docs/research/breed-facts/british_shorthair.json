@@ -1,0 +1,27 @@
+{
+  "breed": "british_shorthair",
+  "facts": [
+    {
+      "key": "british_shorthair-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The British Shorthair's coat needs grooming at least once a week.",
+        "sl": "Britanska kratkodlaka mačka potrebuje nego dlake vsaj enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your cat once a week in the app.",
+        "sl": "Zato v aplikaciji svojo muco češeš enkrat na teden."
+      },
+      "source_id": "C28",
+      "source_name": "VCA Animal Hospitals (\"the Veterinarians of VCA Animal Hospitals\"), undated",
+      "source_url": "https://vcahospitals.com/know-your-pet/cat-breeds/british-shorthair",
+      "quote": "Run a comb through its coat at least weekly to keep it mat-free and looking healthy.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "87333c11ef01f3140bb11425a3109d9294e640590b693bc3d0ed019776a66878"
+    }
+  ]
+}

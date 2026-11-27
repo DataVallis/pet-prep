@@ -1,0 +1,43 @@
+{
+  "breed": "newfoundland",
+  "facts": [
+    {
+      "key": "newfoundland-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Newfoundland is a large dog breed.",
+        "sl": "Novofundlandec je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S423",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/newfoundland",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d0665e418bbff0c99dbc5259d4ce8009e11076a60e551fc72577ef343b2deec1"
+    },
+    {
+      "key": "newfoundland-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Newfoundland reaches its adult weight at about 18–24 months.",
+        "sl": "Pes takšne velikosti, kot je novofundlandec, doseže odraslo težo pri približno 18–24 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Giant (over 100 pounds) | 18–24 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3bf3ac556395778497da2d8542ac61298a84916afe533c39a59fa5d7e501b9e2"
+    }
+  ]
+}

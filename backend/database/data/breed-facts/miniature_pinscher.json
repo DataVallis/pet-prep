@@ -1,0 +1,84 @@
+{
+  "breed": "miniature_pinscher",
+  "facts": [
+    {
+      "key": "miniature_pinscher-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Pinscher needs at least 30 minutes of exercise every day.",
+        "sl": "Pritlikavi pinč potrebuje vsak dan vsaj 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S595",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/miniature-pinscher",
+      "quote": "Minimum exercise (per day): 30 minutes",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e0eb9ed38813f2f8ffbfaaac7c35a5d36e0987c8a99ed27a8872102f052d69af"
+    },
+    {
+      "key": "miniature_pinscher-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Pinscher is a small dog breed.",
+        "sl": "Pritlikavi pinč je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S595",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/miniature-pinscher",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5485c10cd458049bbe5ffe18446c0c83e65b33d363c471b9ad4e5f2d091294c3"
+    },
+    {
+      "key": "miniature_pinscher-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Miniature Pinscher usually lives more than 12 years.",
+        "sl": "Pritlikavi pinč običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S595",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/miniature-pinscher",
+      "quote": "Average lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "05b9b3bfc52babf350d6b8c3f0736c9b27578999e6324713e405e7c35c106b25"
+    },
+    {
+      "key": "miniature_pinscher-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Miniature Pinscher reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je pritlikavi pinč, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "489c37b09fd4ad829ae52508a592b774784527ba71400aef62ac92ca4e706e1b"
+    }
+  ]
+}
