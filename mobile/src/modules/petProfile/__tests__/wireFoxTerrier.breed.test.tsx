@@ -67,7 +67,8 @@ describe('M5-R10-117 Wire Fox Terrier', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('wire fox terrier')).toEqual([KEY]);
     expect(find('ostrodlaki foksterier')).toEqual([KEY]);
-    expect(find('foksterier')).toEqual([KEY]);
+    // »foksterier« also finds the Smooth Fox Terrier (M5-R10-143, SL »gladkodlaki foksterier«).
+    expect(find('foksterier')).toEqual([KEY, 'smooth_fox_terrier']);
     // Never mixed up with the Toy Fox Terrier.
     expect(find('toy fox')).not.toContain(KEY);
     expect(find('fox terrier')).toContain(KEY);
