@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "cd4b9ce1368b77755f3def8c37924e89bcba56144f20733cdea91179f19a81d8"
+      "sha256": "508098db7430671ae6eebe6c9f6c56366ce157d396a25cf48abeff4e23ca2fa9"
     }
   },
   "suitability_vocabulary": {
@@ -83979,7 +83979,42 @@
         "file": "smooth-fox-terrier.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/smooth-fox-terrier.webp",
+            "default": true
+          },
+          {
+            "key": "white-tan",
+            "label": {
+              "en": "White and tan",
+              "sl": "Bel z rjavimi lisami"
+            },
+            "file": "dog/smooth-fox-terrier--white-tan.webp"
+          },
+          {
+            "key": "white-black",
+            "label": {
+              "en": "White and black",
+              "sl": "Bel s črnimi lisami"
+            },
+            "file": "dog/smooth-fox-terrier--white-black.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "All white",
+              "sl": "Ves bel"
+            },
+            "file": "dog/smooth-fox-terrier--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",

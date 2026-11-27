@@ -699,6 +699,12 @@ return [
     'welsh_springer_spaniel' => [
         'red-white' => 'dogs/welsh-springer-spaniel.webp',
     ],
+    'smooth_fox_terrier' => [
+        'tricolour' => 'dogs/smooth-fox-terrier.webp',
+        'white-tan' => 'dogs/smooth-fox-terrier--white-tan.webp',
+        'white-black' => 'dogs/smooth-fox-terrier--white-black.webp',
+        'white' => 'dogs/smooth-fox-terrier--white.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
