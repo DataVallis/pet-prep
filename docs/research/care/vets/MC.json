@@ -53,7 +53,8 @@
         "hr": "Uz termin. Svaki dan 9:00–19:00, četvrtkom 9:00–16:00, subotom 9:00–12:00; nazovi unaprijed.",
         "de": "Nur nach Terminvereinbarung. Täglich 9.00–19.00 Uhr, donnerstags 9.00–16.00 Uhr, samstags 9.00–12.00 Uhr; bitte vorher anrufen.",
         "fr": "Sur rendez-vous. Tous les jours 9 h–19 h, jeudi 9 h–16 h, samedi 9 h–12 h ; appelez avant de venir.",
-        "es": "Con cita previa. Todos los días 9:00–19:00 h, jueves 9:00–16:00 h, sábado 9:00–12:00 h; llama antes."
+        "es": "Con cita previa. Todos los días 9:00–19:00 h, jueves 9:00–16:00 h, sábado 9:00–12:00 h; llama antes.",
+        "it": "Su appuntamento. Tutti i giorni 9:00–19:00, giovedì 9:00–16:00, sabato 9:00–12:00; telefonare in anticipo."
       }
     },
     {
@@ -80,7 +81,8 @@
         "hr": "Od ponedjeljka do subote 9:00–19:00; nazovi unaprijed.",
         "de": "Mo–Sa 9.00–19.00 Uhr; bitte vorher anrufen.",
         "fr": "Du lundi au samedi 9 h–19 h ; appelez avant de venir.",
-        "es": "De lunes a sábado 9:00–19:00 h; llama antes."
+        "es": "De lunes a sábado 9:00–19:00 h; llama antes.",
+        "it": "Dal lunedì al sabato 9:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -107,7 +109,8 @@
         "hr": "Od ponedjeljka do petka 10:00–19:00; nazovi unaprijed.",
         "de": "Mo–Fr 10.00–19.00 Uhr; bitte vorher anrufen.",
         "fr": "Du lundi au vendredi 10 h–19 h ; appelez avant de venir.",
-        "es": "De lunes a viernes 10:00–19:00 h; llama antes."
+        "es": "De lunes a viernes 10:00–19:00 h; llama antes.",
+        "it": "Dal lunedì al venerdì 10:00–19:00; telefonare in anticipo."
       }
     },
     {
@@ -134,7 +137,8 @@
         "hr": "Dežurna služba izvan radnog vremena za noći i vikende: +33 6 60 61 36 24. Nije ambulanta koja radi 24 sata; nazovi unaprijed.",
         "de": "Notdienst außerhalb der Öffnungszeiten, nachts und am Wochenende: +33 6 60 61 36 24. Keine rund um die Uhr geöffnete Tierklinik; bitte vorher anrufen.",
         "fr": "Service de garde hors horaires les nuits et week-ends : +33 6 60 61 36 24. Ce n’est pas une clinique 24 h/24 ; appelez avant de venir.",
-        "es": "Servicio de guardia fuera de horario para noches y fines de semana: +33 6 60 61 36 24. No es una clínica 24 horas; llama antes."
+        "es": "Servicio de guardia fuera de horario para noches y fines de semana: +33 6 60 61 36 24. No es una clínica 24 horas; llama antes.",
+        "it": "Servizio di guardia fuori orario per notti e fine settimana: +33 6 60 61 36 24. Non è una clinica aperta 24 ore su 24; telefonare in anticipo."
       }
     }
   ],

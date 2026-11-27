@@ -64,7 +64,8 @@
         "hr": "ned–čet 9:00–17:00, sub 9:00–14:00; blagdanima zatvoreno. Liječi pse, mačke, ptice, zečeve i kornjače; hitni pozivi putem mobilne veterinarske službe.",
         "de": "So–Do 9.00–17.00 Uhr, Sa 9.00–14.00 Uhr; an Feiertagen geschlossen. Behandelt Hunde, Katzen, Vögel, Kaninchen und Schildkröten; Notfälle über den mobilen Dienst.",
         "fr": "Dim.–jeu. 9 h–17 h, sam. 9 h–14 h ; fermé les jours fériés. Soins pour chiens, chats, oiseaux, lapins et tortues ; urgences par le service mobile.",
-        "es": "Dom–jue 9:00–17:00 h, sáb 9:00–14:00 h; cerrado en festivos. Atiende perros, gatos, aves, conejos y tortugas; urgencias mediante el servicio ambulatorio."
+        "es": "Dom–jue 9:00–17:00 h, sáb 9:00–14:00 h; cerrado en festivos. Atiende perros, gatos, aves, conejos y tortugas; urgencias mediante el servicio ambulatorio.",
+        "it": "Dom–gio 9:00–17:00, sab 9:00–14:00; chiuso nei giorni festivi. Cura cani, gatti, uccelli, conigli e tartarughe; urgenze tramite il servizio di ambulanza."
       }
     },
     {
@@ -92,7 +93,8 @@
         "hr": "Bolnica za male kućne ljubimce koju vodi Chattogram Veterinary and Animal Sciences University; nazovi unaprijed za radno vrijeme.",
         "de": "Kleintierklinik der Chattogram Veterinary and Animal Sciences University; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital pour animaux de compagnie géré par l’université vétérinaire et des sciences animales de Chattogram ; appelez pour connaître les horaires.",
-        "es": "Hospital veterinario de pequeños animales gestionado por la Chattogram Veterinary and Animal Sciences University; llama antes para consultar el horario."
+        "es": "Hospital veterinario de pequeños animales gestionado por la Chattogram Veterinary and Animal Sciences University; llama antes para consultar el horario.",
+        "it": "Ospedale veterinario per piccoli animali gestito dalla Chattogram Veterinary and Animal Sciences University; telefonare per gli orari."
       }
     },
     {
@@ -120,7 +122,8 @@
         "hr": "Sveučilišna nastavna bolnica za kućne ljubimce i domaće životinje; nazovi za radno vrijeme.",
         "de": "Universitäre Lehrklinik für Haustiere und Nutztiere; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital universitaire pour animaux de compagnie et domestiques ; appelez pour connaître les horaires.",
-        "es": "Hospital universitario docente para mascotas y animales domésticos; llama para consultar el horario."
+        "es": "Hospital universitario docente para mascotas y animales domésticos; llama para consultar el horario.",
+        "it": "Ospedale veterinario universitario per animali da compagnia e domestici; telefonare per gli orari."
       }
     },
     {
@@ -147,7 +150,8 @@
         "hr": "Privatna bolnica za kućne ljubimce s dnevnim boravkom u Uttari.",
         "de": "Private Tierklinik mit Tagesbetreuung in Uttara.",
         "fr": "Hôpital privé pour animaux de compagnie et garderie à Uttara.",
-        "es": "Hospital privado para mascotas y guardería de día en Uttara."
+        "es": "Hospital privado para mascotas y guardería de día en Uttara.",
+        "it": "Ospedale veterinario privato e asilo diurno per animali a Uttara."
       }
     },
     {
@@ -175,7 +179,8 @@
         "hr": "Radi 24/7 uz hitnu službu, kućne posjete te termine telefonom ili online.",
         "de": "Rund um die Uhr in Betrieb, mit Notdienst, Hausbesuchen sowie telefonischer oder Online-Terminvereinbarung.",
         "fr": "Ouvert 24 h/24, 7 j/7, avec service d’urgence, visites à domicile et rendez-vous par téléphone ou en ligne.",
-        "es": "Abierto las 24 horas, con servicio de urgencias, visitas a domicilio y citas por teléfono u online."
+        "es": "Abierto las 24 horas, con servicio de urgencias, visitas a domicilio y citas por teléfono u online.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, con servizio di emergenza, visite a domicilio e appuntamenti telefonici od online."
       }
     }
   ],

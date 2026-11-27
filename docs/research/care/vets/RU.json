@@ -52,7 +52,8 @@
         "hr": "Otvoreno svaki dan non-stop (državna klinika). Prvo nazovi gradski veterinarski kontakt-centar +7 495 612 12 12.",
         "de": "Täglich rund um die Uhr geöffnet (staatliche Klinik). Bitte zuerst das städtische tierärztliche Kontaktcenter +7 495 612 12 12 anrufen.",
         "fr": "Ouvert 24 h/24, tous les jours (clinique publique). Appelez d’abord le centre de contact vétérinaire de la ville : +7 495 612 12 12.",
-        "es": "Abierto a diario las 24 horas (clínica pública). Llama primero al centro de contacto veterinario de la ciudad +7 495 612 12 12."
+        "es": "Abierto a diario las 24 horas (clínica pública). Llama primero al centro de contacto veterinario de la ciudad +7 495 612 12 12.",
+        "it": "Aperto tutti i giorni 24 ore su 24 (clinica statale). Prima telefonare al centro di contatto veterinario della città +7 495 612 12 12."
       }
     },
     {
@@ -82,7 +83,8 @@
         "hr": "Svaki dan 09:00–21:00; odjel za hospitalizaciju 24 sata za teško bolesne životinje.",
         "de": "Täglich 9.00–21.00 Uhr; stationäre Abteilung für schwerkranke Tiere rund um die Uhr.",
         "fr": "Tous les jours 9 h–21 h ; service d’hospitalisation 24 h/24 pour les animaux gravement malades.",
-        "es": "Todos los días 9:00–21:00 h; hospitalización las 24 horas para animales gravemente enfermos."
+        "es": "Todos los días 9:00–21:00 h; hospitalización las 24 horas para animales gravemente enfermos.",
+        "it": "Tutti i giorni 09:00–21:00; reparto di degenza 24 ore su 24 per animali gravemente malati."
       }
     },
     {
@@ -112,7 +114,8 @@
         "hr": "Gradski kontakt-centar državne veterinarske službe radi non-stop: informira koje državne klinike primaju životinje i šalje veterinara kući, također noću i vikendom.",
         "de": "Städtisches Kontaktcenter des staatlichen Veterinärdienstes rund um die Uhr: nennt, welche staatlichen Kliniken Tiere aufnehmen, und schickt einen Tierarzt ins Haus, auch nachts und am Wochenende.",
         "fr": "Centre de contact municipal du service vétérinaire public, 24 h/24 : indique quelles cliniques publiques prennent des animaux et envoie un vétérinaire à domicile, y compris la nuit et le week-end.",
-        "es": "Centro de contacto municipal las 24 horas del servicio veterinario estatal: indica qué clínicas estatales admiten animales y envía un veterinario a domicilio, también de noche y los fines de semana."
+        "es": "Centro de contacto municipal las 24 horas del servicio veterinario estatal: indica qué clínicas estatales admiten animales y envía un veterinario a domicilio, también de noche y los fines de semana.",
+        "it": "Centro di contatto cittadino del servizio veterinario statale attivo 24 ore su 24: indica quali cliniche statali accolgono animali e invia un veterinario a domicilio, anche di notte e nei fine settimana."
       }
     },
     {
@@ -143,7 +146,8 @@
         "hr": "Otvoreno non-stop, bez slobodnih dana. Besplatno čuvano parkiralište.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet. Kostenloser bewachter Parkplatz.",
         "fr": "Ouvert 24 h/24, sans jour de fermeture. Parking surveillé gratuit.",
-        "es": "Abierto las 24 horas, sin días libres. Aparcamiento vigilado gratuito."
+        "es": "Abierto las 24 horas, sin días libres. Aparcamiento vigilado gratuito.",
+        "it": "Aperto 24 ore su 24, senza giorni di chiusura. Parcheggio custodito gratuito."
       }
     },
     {
@@ -174,7 +178,8 @@
         "hr": "Otvoreno non-stop, bez slobodnih dana, s intenzivnom njegom i odjelom za hospitalizaciju.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet, mit Intensivstation und stationärer Abteilung.",
         "fr": "Ouvert 24 h/24, sans jour de fermeture, avec soins intensifs et service d’hospitalisation.",
-        "es": "Abierto las 24 horas, sin días libres, con cuidados intensivos y hospitalización."
+        "es": "Abierto las 24 horas, sin días libres, con cuidados intensivos y hospitalización.",
+        "it": "Aperto 24 ore su 24, senza giorni di chiusura, con terapia intensiva e reparto di degenza."
       }
     },
     {
@@ -205,7 +210,8 @@
         "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
         "de": "Netz von Tierkliniken rund um die Uhr; durchgehend geöffnet, Hausbesuche rund um die Uhr.",
         "fr": "Réseau de cliniques 24 h/24 ; visites à domicile 24 h/24.",
-        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas."
+        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas.",
+        "it": "Rete di cliniche aperte 24 ore su 24; aperto 24 ore su 24, visite a domicilio 24 ore su 24."
       }
     },
     {
@@ -236,7 +242,8 @@
         "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
         "de": "Netz von Tierkliniken rund um die Uhr; durchgehend geöffnet, Hausbesuche rund um die Uhr.",
         "fr": "Réseau de cliniques ouvertes 24 h/24 ; ouvert 24 h/24, visites à domicile 24 h/24.",
-        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas."
+        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas.",
+        "it": "Rete di cliniche aperte 24 ore su 24; aperto 24 ore su 24, visite a domicilio 24 ore su 24."
       }
     },
     {
@@ -267,7 +274,8 @@
         "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
         "de": "Netz rund um die Uhr geöffneter Tierkliniken; durchgehend geöffnet, Hausbesuche rund um die Uhr.",
         "fr": "Réseau de cliniques 24 h/24 ; visites à domicile 24 h/24.",
-        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas."
+        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas.",
+        "it": "Rete di cliniche aperte 24 ore su 24; aperto 24 ore su 24, visite a domicilio 24 ore su 24."
       }
     },
     {
@@ -298,7 +306,8 @@
         "hr": "Mreža klinika koje rade 24 sata; otvoreno non-stop, kućni posjeti 24 sata.",
         "de": "Netz von Tierkliniken rund um die Uhr; durchgehend geöffnet, Hausbesuche rund um die Uhr.",
         "fr": "Réseau de cliniques ouvertes 24 h/24 ; ouvert 24 h/24, visites à domicile 24 h/24.",
-        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas."
+        "es": "Red de clínicas 24 horas; abiertas las 24 horas, visitas a domicilio las 24 horas.",
+        "it": "Rete di cliniche aperte 24 ore su 24; aperto 24 ore su 24, visite a domicilio 24 ore su 24."
       }
     },
     {
@@ -329,7 +338,8 @@
         "hr": "Podružnica bolnice otvorena non-stop; ostale podružnice 09:00–21:00.",
         "de": "Klinikfiliale rund um die Uhr geöffnet; übrige Filialen 9.00–21.00 Uhr.",
         "fr": "Site hospitalier ouvert 24 h/24 ; autres sites 9 h–21 h.",
-        "es": "Sucursal hospitalaria abierta las 24 horas; el resto de sucursales 9:00–21:00 h."
+        "es": "Sucursal hospitalaria abierta las 24 horas; el resto de sucursales 9:00–21:00 h.",
+        "it": "Sede ospedaliera aperta 24 ore su 24; le altre sedi 09:00–21:00."
       }
     },
     {
@@ -360,7 +370,8 @@
         "hr": "Otvoreno 24/7, bez slobodnih dana, s odjelom za hospitalizaciju 24 sata.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet, mit stationärer Abteilung rund um die Uhr.",
         "fr": "Ouvert 24 h/24, 7 j/7, sans jour de fermeture, avec hospitalisation 24 h/24.",
-        "es": "Abierto las 24 horas, sin días libres, con hospitalización 24 horas."
+        "es": "Abierto las 24 horas, sin días libres, con hospitalización 24 horas.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, senza giorni di chiusura, con reparto di degenza 24 ore su 24."
       }
     },
     {
@@ -391,7 +402,8 @@
         "hr": "Otvoreno 24/7, bez slobodnih dana, s odjelom za hospitalizaciju 24 sata.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet, mit stationärer Abteilung rund um die Uhr.",
         "fr": "Ouvert 24 h/24, 7 j/7, sans jour de fermeture, avec hospitalisation 24 h/24.",
-        "es": "Abierto las 24 horas, sin días libres, con hospitalización las 24 horas."
+        "es": "Abierto las 24 horas, sin días libres, con hospitalización las 24 horas.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, senza giorni di chiusura, con reparto di degenza 24 ore su 24."
       }
     },
     {
@@ -422,7 +434,8 @@
         "hr": "Otvoreno 24 sata. Druga podružnica (Bukharestskaya 146 k.1) otvorena je svaki dan 10:00–20:00. Noću (20:00–10:00) rade samo dežurni veterinar i asistent, uz smanjen opseg usluga.",
         "de": "Rund um die Uhr geöffnet. Zweite Filiale (Bukharestskaya 146 k.1) täglich 10.00–20.00 Uhr geöffnet. Nachts (20.00–10.00 Uhr) arbeiten nur der diensthabende Arzt und eine Assistenz, mit eingeschränktem Leistungsangebot.",
         "fr": "Ouvert 24 h/24. Le second site (Bukharestskaya 146 k.1) est ouvert tous les jours 10 h–20 h. La nuit (20 h–10 h), seuls le vétérinaire de garde et un assistant travaillent, avec une gamme de services restreinte.",
-        "es": "Abierto las 24 horas. La segunda sucursal (Bukharestskaya 146 k.1) abre a diario 10:00–20:00 h. De noche (20:00–10:00 h) solo trabajan el veterinario de guardia y un auxiliar, con una gama de servicios reducida."
+        "es": "Abierto las 24 horas. La segunda sucursal (Bukharestskaya 146 k.1) abre a diario 10:00–20:00 h. De noche (20:00–10:00 h) solo trabajan el veterinario de guardia y un auxiliar, con una gama de servicios reducida.",
+        "it": "Aperto 24 ore su 24. La seconda sede (Bukharestskaya 146 k.1) è aperta tutti i giorni 10:00–20:00. Di notte (20:00–10:00) lavorano solo il veterinario di turno e un assistente, con una gamma ridotta di servizi."
       }
     },
     {
@@ -453,7 +466,8 @@
         "hr": "Otvoreno non-stop; prema podacima klinike nema noćne doplate.",
         "de": "Rund um die Uhr geöffnet; laut Klinik kein Nachtzuschlag.",
         "fr": "Ouvert 24 h/24 ; selon la clinique, pas de supplément de nuit.",
-        "es": "Abierto las 24 horas; sin recargo nocturno según la clínica."
+        "es": "Abierto las 24 horas; sin recargo nocturno según la clínica.",
+        "it": "Aperto 24 ore su 24; secondo la clinica, nessun supplemento notturno."
       }
     },
     {
@@ -483,7 +497,8 @@
         "hr": "Otvoreno non-stop, bez slobodnih dana.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet.",
         "fr": "Ouvert 24 h/24, sans jour de fermeture.",
-        "es": "Abierto las 24 horas, sin días libres."
+        "es": "Abierto las 24 horas, sin días libres.",
+        "it": "Aperto 24 ore su 24, senza giorni di chiusura."
       }
     },
     {
@@ -513,7 +528,8 @@
         "hr": "Recepcija svaki dan 09:00–21:00; odjel za hospitalizaciju i intenzivna njega 24/7.",
         "de": "Annahme täglich 9.00–21.00 Uhr; stationäre Abteilung und Intensivstation rund um die Uhr.",
         "fr": "Accueil tous les jours 9 h–21 h ; hospitalisation et soins intensifs 24 h/24, 7 j/7.",
-        "es": "Recepción a diario 9:00–21:00 h; hospitalización y cuidados intensivos las 24 horas."
+        "es": "Recepción a diario 9:00–21:00 h; hospitalización y cuidados intensivos las 24 horas.",
+        "it": "Accettazione tutti i giorni 09:00–21:00; degenza e terapia intensiva 24 ore su 24, 7 giorni su 7."
       }
     },
     {
@@ -543,7 +559,8 @@
         "hr": "Recepcija svaki dan 08:00–22:00; odjel za hospitalizaciju non-stop.",
         "de": "Sprechstunde täglich 8.00–22.00 Uhr; stationäre Abteilung rund um die Uhr.",
         "fr": "Accueil tous les jours 8 h–22 h ; hospitalisation 24 h/24.",
-        "es": "Recepción todos los días 8:00–22:00 h; hospitalización las 24 horas."
+        "es": "Recepción todos los días 8:00–22:00 h; hospitalización las 24 horas.",
+        "it": "Accettazione tutti i giorni 08:00–22:00; degenza attiva 24 ore su 24."
       }
     },
     {
@@ -574,7 +591,8 @@
         "hr": "Otvoreno 24 sata.",
         "de": "Rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24.",
-        "es": "Abierto las 24 horas."
+        "es": "Abierto las 24 horas.",
+        "it": "Aperto 24 ore su 24."
       }
     },
     {
@@ -605,7 +623,8 @@
         "hr": "Otvoreno 24 sata.",
         "de": "Rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24.",
-        "es": "Abierto las 24 horas."
+        "es": "Abierto las 24 horas.",
+        "it": "Aperto 24 ore su 24."
       }
     },
     {
@@ -636,7 +655,8 @@
         "hr": "U ovoj podružnici otvoreno non-stop.",
         "de": "Diese Filiale ist rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24 dans cet établissement.",
-        "es": "Abierto las 24 horas en esta sucursal."
+        "es": "Abierto las 24 horas en esta sucursal.",
+        "it": "Questa sede è aperta 24 ore su 24."
       }
     },
     {
@@ -666,7 +686,8 @@
         "hr": "Svaki dan 08:00–23:00.",
         "de": "Täglich 8.00–23.00 Uhr.",
         "fr": "Tous les jours 8 h–23 h.",
-        "es": "A diario 8:00–23:00 h."
+        "es": "A diario 8:00–23:00 h.",
+        "it": "Tutti i giorni 08:00–23:00."
       }
     },
     {
@@ -697,7 +718,8 @@
         "hr": "Otvoreno non-stop; noćna tarifa 21:00–09:00.",
         "de": "Rund um die Uhr geöffnet; Nachttarif 21.00–9.00 Uhr.",
         "fr": "Ouvert 24 h/24 ; tarif de nuit 21 h–9 h.",
-        "es": "Abierto las 24 horas; tarifa nocturna 21:00–9:00 h."
+        "es": "Abierto las 24 horas; tarifa nocturna 21:00–9:00 h.",
+        "it": "Aperto 24 ore su 24; tariffa notturna 21:00–09:00."
       }
     },
     {
@@ -728,7 +750,8 @@
         "hr": "Otvoreno non-stop, bez slobodnih dana; noćna tarifa 21:00–09:00.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet; Nachttarif 21.00–9.00 Uhr.",
         "fr": "Ouvert 24 h/24, sans jour de fermeture ; tarif de nuit 21 h–9 h.",
-        "es": "Abierto las 24 horas, sin días libres; tarifa nocturna 21:00–9:00 h."
+        "es": "Abierto las 24 horas, sin días libres; tarifa nocturna 21:00–9:00 h.",
+        "it": "Aperto 24 ore su 24, senza giorni di chiusura; tariffa notturna 21:00–09:00."
       }
     },
     {
@@ -759,7 +782,8 @@
         "hr": "Otvoreno 24/7 bez slobodnih dana. U hitnom slučaju nazovi prije dolaska.",
         "de": "Rund um die Uhr ohne Ruhetag geöffnet. Im Notfall bitte vorher anrufen.",
         "fr": "Ouvert 24 h/24, 7 j/7, sans jour de fermeture. En cas d’urgence, appelez avant de venir.",
-        "es": "Abierto las 24 horas, sin días libres. Llama antes de acudir en caso de urgencia."
+        "es": "Abierto las 24 horas, sin días libres. Llama antes de acudir en caso de urgencia.",
+        "it": "Aperto 24/7, senza giorni di chiusura. In caso di emergenza telefonare prima di recarsi in clinica."
       }
     },
     {
@@ -790,7 +814,8 @@
         "hr": "Navodi da radi non-stop; kirurgija, intenzivna njega i rendgen 24 h, ostale usluge danju.",
         "de": "Nach eigenen Angaben rund um die Uhr geöffnet; Chirurgie, Intensivmedizin und Röntgen rund um die Uhr, übrige Leistungen tagsüber.",
         "fr": "Se déclare ouvert 24 h/24 ; chirurgie, soins intensifs et radiographie 24 h/24, autres services en journée.",
-        "es": "Afirma funcionar las 24 horas; cirugía, cuidados intensivos y rayos X las 24 h, el resto de servicios en horario diurno."
+        "es": "Afirma funcionar las 24 horas; cirugía, cuidados intensivos y rayos X las 24 h, el resto de servicios en horario diurno.",
+        "it": "Dichiara di essere aperto 24 ore su 24; chirurgia, terapia intensiva e radiografia 24 ore su 24, altri servizi di giorno."
       }
     },
     {
@@ -821,7 +846,8 @@
         "hr": "Otvoreno 24/7/365, hitna skrb non-stop. Druga podružnica na ul. Uralskaya 184/2 otvorena je 09:00–21:00.",
         "de": "Rund um die Uhr an 365 Tagen geöffnet, Notfallversorgung rund um die Uhr. Zweite Filiale in der ul. Uralskaya 184/2 ist 9.00–21.00 Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7, 365 j/an, urgences 24 h/24. Le second site, ul. Uralskaya 184/2, est ouvert 9 h–21 h.",
-        "es": "Abierto las 24 horas, los 365 días del año, con urgencias a cualquier hora. La segunda sucursal, en ul. Uralskaya 184/2, abre 9:00–21:00 h."
+        "es": "Abierto las 24 horas, los 365 días del año, con urgencias a cualquier hora. La segunda sucursal, en ul. Uralskaya 184/2, abre 9:00–21:00 h.",
+        "it": "Aperto 24/7/365, pronto soccorso 24 ore su 24. La seconda sede in ul. Uralskaya 184/2 è aperta 09:00–21:00."
       }
     },
     {
@@ -852,7 +878,8 @@
         "hr": "Otvoreno 24/7.",
         "de": "Rund um die Uhr geöffnet.",
         "fr": "Ouvert 24 h/24, 7 j/7.",
-        "es": "Abierto las 24 horas."
+        "es": "Abierto las 24 horas.",
+        "it": "Aperto 24/7."
       }
     },
     {
@@ -882,7 +909,8 @@
         "hr": "Svaki dan 08:00–20:00; životinje se primaju do sat vremena prije zatvaranja.",
         "de": "Täglich 8.00–20.00 Uhr; Tiere werden bis eine Stunde vor Schließung angenommen.",
         "fr": "Tous les jours 8 h–20 h ; animaux acceptés jusqu’à une heure avant la fermeture.",
-        "es": "A diario 8:00–20:00 h; se admiten animales hasta una hora antes del cierre."
+        "es": "A diario 8:00–20:00 h; se admiten animales hasta una hora antes del cierre.",
+        "it": "Tutti i giorni 08:00–20:00; gli animali sono accettati fino a un’ora prima della chiusura."
       }
     },
     {
@@ -912,7 +940,8 @@
         "hr": "Svaki dan 08:00–20:00; životinje se primaju do sat vremena prije zatvaranja.",
         "de": "Täglich 8.00–20.00 Uhr; Tiere werden bis eine Stunde vor Schließung angenommen.",
         "fr": "Tous les jours 8 h–20 h ; animaux acceptés jusqu’à une heure avant la fermeture.",
-        "es": "Todos los días 8:00–20:00 h; se admiten animales hasta una hora antes del cierre."
+        "es": "Todos los días 8:00–20:00 h; se admiten animales hasta una hora antes del cierre.",
+        "it": "Tutti i giorni 08:00–20:00; gli animali sono accettati fino a un’ora prima della chiusura."
       }
     },
     {
@@ -942,7 +971,8 @@
         "hr": "pon–pet 09:00–17:00; sub i ned zatvoreno.",
         "de": "Mo–Fr 9.00–17.00 Uhr; Sa–So geschlossen.",
         "fr": "Lun.–ven. 9 h–17 h ; fermé sam.–dim.",
-        "es": "Lun–vie 9:00–17:00 h; sáb–dom cerrado."
+        "es": "Lun–vie 9:00–17:00 h; sáb–dom cerrado.",
+        "it": "Lun–ven 09:00–17:00; chiuso sab e dom."
       }
     },
     {
@@ -972,7 +1002,8 @@
         "hr": "Otvoreno svaki dan, uključujući blagdane; točno radno vrijeme provjeri telefonom.",
         "de": "Täglich geöffnet, auch feiertags; genaue Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Ouvert tous les jours, jours fériés compris ; appelez pour connaître les horaires exacts.",
-        "es": "Abierto todos los días, festivos incluidos; llama para consultar el horario exacto."
+        "es": "Abierto todos los días, festivos incluidos; llama para consultar el horario exacto.",
+        "it": "Aperto tutti i giorni, festivi inclusi; per gli orari esatti telefonare."
       }
     }
   ],

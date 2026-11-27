@@ -58,7 +58,8 @@
         "hr": "Otvoreno 24 sata, sve usluge; nije potrebno zvati unaprijed.",
         "de": "In allen Bereichen rund um die Uhr geöffnet; Anruf vorab nicht nötig.",
         "fr": "Ouvert 24 h/24 pour tous les services ; inutile d’appeler avant de venir.",
-        "es": "Abierto las 24 horas en todos los servicios; no hace falta llamar antes."
+        "es": "Abierto las 24 horas en todos los servicios; no hace falta llamar antes.",
+        "it": "Aperto 24 ore su 24 per tutti i servizi; non occorre telefonare in anticipo."
       }
     },
     {
@@ -85,7 +86,8 @@
         "hr": "Za skrb ili hitne slučajeve nazovi kliniku.",
         "de": "Für Behandlung oder Notfälle bitte die Tierarztpraxis anrufen.",
         "fr": "Pour des soins ou une urgence, appelez la clinique.",
-        "es": "Para consultas o urgencias, llama a la clínica."
+        "es": "Para consultas o urgencias, llama a la clínica.",
+        "it": "Per cure o urgenze, telefonare alla clinica."
       }
     },
     {
@@ -125,7 +127,8 @@
         "hr": "pon–pet 8:00–19:00, sub 8:00–17:30.",
         "de": "Mo–Fr 8.00–19.00 Uhr, Sa 8.00–17.30 Uhr.",
         "fr": "Lun.–ven. 8 h–19 h, sam. 8 h–17 h 30.",
-        "es": "Lun–vie 8:00–19:00 h, sáb 8:00–17:30 h."
+        "es": "Lun–vie 8:00–19:00 h, sáb 8:00–17:30 h.",
+        "it": "Lun–ven 8:00–19:00, sab 8:00–17:30."
       }
     },
     {
@@ -152,7 +155,8 @@
         "hr": "pon–sub 8:00–17:00.",
         "de": "Mo–Sa 8.00–17.00 Uhr.",
         "fr": "Lun.–sam. 8 h–17 h.",
-        "es": "Lun–sáb 8:00–17:00 h."
+        "es": "Lun–sáb 8:00–17:00 h.",
+        "it": "Lun–sab 8:00–17:00."
       }
     },
     {
@@ -192,7 +196,8 @@
         "hr": "pon–sub 8:00–12:00 i 13:00–17:00.",
         "de": "Mo–Sa 8.00–12.00 und 13.00–17.00 Uhr.",
         "fr": "Lun.–sam. 8 h–12 h et 13 h–17 h.",
-        "es": "Lun–sáb 8:00–12:00 h y 13:00–17:00 h."
+        "es": "Lun–sáb 8:00–12:00 h y 13:00–17:00 h.",
+        "it": "Lun–sab 8:00–12:00 e 13:00–17:00."
       }
     }
   ],
