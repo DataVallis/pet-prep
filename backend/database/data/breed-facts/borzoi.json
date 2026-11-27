@@ -1,0 +1,84 @@
+{
+  "breed": "borzoi",
+  "facts": [
+    {
+      "key": "borzoi-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Borzoi needs at least 1 hour of exercise every day.",
+        "sl": "Ruski hrt potrebuje vsak dan vsaj 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S800",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/borzoi",
+      "quote": "Minimum exercise (per day): 1 hour",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "046c01fd2cadc0d4afb0a42143311542589421b0cf8f08fffd40c544fbe9e65a"
+    },
+    {
+      "key": "borzoi-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Borzoi is a large dog breed.",
+        "sl": "Ruski hrt je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S800",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/borzoi",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0d814cb4a6a61bb76b6da4ce7c3931ed4c24acb28bc027fb2083a6b7dd8cc53f"
+    },
+    {
+      "key": "borzoi-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Borzoi usually lives more than 10 years.",
+        "sl": "Ruski hrt običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S800",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/borzoi",
+      "quote": "Average lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2739a83957ddd562bf59b22b39f042438f603ab19320a32785fa95d148e969a2"
+    },
+    {
+      "key": "borzoi-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Borzoi reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je ruski hrt, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "68b1e109988bcc224a748984ed436f3b710829bf983e667be2e1831d30a6227f"
+    }
+  ]
+}

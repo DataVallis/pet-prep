@@ -1,0 +1,144 @@
+{
+  "breed": "parson_russell_terrier",
+  "facts": [
+    {
+      "key": "parson_russell_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Parson Russell Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Parson russell terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S865",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/parson-russell-terrier/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "03eda287914991466ce83ad7f925b35a21b7f2e00def12a3ddd6252b0583f6c0"
+    },
+    {
+      "key": "parson_russell_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Parson Russell Terrier's coat needs grooming once a week.",
+        "sl": "Parson russell terier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S865",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/parson-russell-terrier/",
+      "quote": "Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "77430054e2bbd69a558b30d55d445a1f15ceb6b35b0a42bebc628bca10121761"
+    },
+    {
+      "key": "parson_russell_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Parson Russell Terrier is a small dog breed.",
+        "sl": "Parson russell terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S865",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/parson-russell-terrier/",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c6f580a40ab106f500d562d0d960da0819210eb9cbc7116720a71ed2188a74b6"
+    },
+    {
+      "key": "parson_russell_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Parson Russell Terrier has a short coat.",
+        "sl": "Parson russell terier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S865",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/parson-russell-terrier/",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a8feb3b0225d7d78af5ffad56c008ded2b71f4c5fe5d91c0fa35ab2ed49cd524"
+    },
+    {
+      "key": "parson_russell_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Parson Russell Terrier weighs 6–8 kg.",
+        "sl": "Parson russell terier tehta 6–8 kg."
+      },
+      "why": null,
+      "source_id": "S866",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/parson-russell-terrier",
+      "quote": "6-8 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6ae21fc0231f9ef5bfa598a66050d99d1a94039125af0b67807fea925b7d8acf"
+    },
+    {
+      "key": "parson_russell_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Parson Russell Terrier usually lives more than 12 years.",
+        "sl": "Parson russell terier običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S865",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/parson-russell-terrier/",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "359a56d636a89a015ff05a10098793bed87b4e390ad636181e3c1c2ea746ee9a"
+    },
+    {
+      "key": "parson_russell_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Parson Russell Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je parson russell terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7209f4984a5002b305eb9e0b6e7c45adaef64a609736766044cdaab3eb054d80"
+    }
+  ]
+}

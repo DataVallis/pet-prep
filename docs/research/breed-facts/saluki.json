@@ -1,0 +1,122 @@
+{
+  "breed": "saluki",
+  "facts": [
+    {
+      "key": "saluki-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Saluki needs 2 hours of exercise every day.",
+        "sl": "Saluki potrebuje vsak dan 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S1086",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saluki",
+      "quote": "2 hours",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "57737e7734c032de82db230e9dba45a236a784100a3244c6b9967b556ed5bae3"
+    },
+    {
+      "key": "saluki-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Saluki is a large dog breed.",
+        "sl": "Saluki je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1086",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saluki",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9cfea6f45b503dda37e7566e16004807437a2531ca5561b029d771e2d7cd223f"
+    },
+    {
+      "key": "saluki-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Saluki has a short coat.",
+        "sl": "Saluki ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S1086",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saluki",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6a5fbd2f8472e220e47304dabe6fde172c7117b71e9e4bca4754a15c26ef26dd"
+    },
+    {
+      "key": "saluki-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Saluki weighs 16–29.5 kg.",
+        "sl": "Saluki tehta 16–29,5 kg."
+      },
+      "why": null,
+      "source_id": "S1086",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saluki",
+      "quote": "16kg-29.5kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6dd63ec00aca5f70b0d813397d179cc28a339306c9e411cad9a0d0a9c161b86d"
+    },
+    {
+      "key": "saluki-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Saluki usually lives more than 10 years.",
+        "sl": "Saluki običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S1086",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saluki",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c0d2601f830cf46946ceb95e810ad5ca455e93c11a94132e8af604a7d10c7b6a"
+    },
+    {
+      "key": "saluki-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Saluki reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je saluki, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "500956cad34a35d8169b4a1327df91c8df5c67a4c9a8e9ecb70f15a1e75fded8"
+    }
+  ]
+}

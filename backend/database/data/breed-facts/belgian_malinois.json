@@ -1,0 +1,106 @@
+{
+  "breed": "belgian_malinois",
+  "facts": [
+    {
+      "key": "belgian_malinois-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Malinois needs more than 2 hours of exercise every day.",
+        "sl": "Belgijski ovčar malinois potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S314",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5112",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4469da6757717ea2f8753e3b904882f95634e0e2b0eef6f7030dbf15ab9f37d9"
+    },
+    {
+      "key": "belgian_malinois-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Malinois's coat needs grooming more than once a week.",
+        "sl": "Belgijski ovčar malinois potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S314",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5112",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a00a803181f130c9c88022c4900c560d1e7c619d74fee6375030212687159c43"
+    },
+    {
+      "key": "belgian_malinois-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Malinois is a medium to large dog breed.",
+        "sl": "Belgijski ovčar malinois je srednje velika do velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S314",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5112",
+      "quote": "Size: Medium-Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8aa4eb0f6f34c1bf162e570e303bc313f6981cf46f2729316653697b0d3bdfd6"
+    },
+    {
+      "key": "belgian_malinois-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Belgian Malinois usually lives more than 10 years.",
+        "sl": "Belgijski ovčar malinois običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S314",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5112",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f23b2865def5b4892c23cbdb39e4bb97d4b133219bcc435c039374334f65e460"
+    },
+    {
+      "key": "belgian_malinois-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Belgian Malinois reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je belgijski ovčar malinois, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8cd11b092387cffd95cfb496ab707840df9cafaa4d8cf188296efdeab9737468"
+    }
+  ]
+}

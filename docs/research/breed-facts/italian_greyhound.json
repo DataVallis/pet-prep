@@ -1,0 +1,144 @@
+{
+  "breed": "italian_greyhound",
+  "facts": [
+    {
+      "key": "italian_greyhound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Italian Greyhound needs up to 1 hour of exercise every day.",
+        "sl": "Mali italijanski hrt potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S486",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/italian-greyhound",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5709d572ae58bce32a79a67824057a427b07151514117095d62646f1f15cd9b9"
+    },
+    {
+      "key": "italian_greyhound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Italian Greyhound's coat needs grooming once a week.",
+        "sl": "Mali italijanski hrt potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S486",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/italian-greyhound",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "029cf019b0b53626d6d2819440d7b00d856b83c3dba0100ed78dab1289d013e3"
+    },
+    {
+      "key": "italian_greyhound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Italian Greyhound is a small dog breed.",
+        "sl": "Mali italijanski hrt je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S486",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/italian-greyhound",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "90304c94342af74bc9a2c6b70c609abf5a8c92179fb0ea3a8805a84abd58c806"
+    },
+    {
+      "key": "italian_greyhound-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Italian Greyhound has a short coat.",
+        "sl": "Mali italijanski hrt ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S486",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/italian-greyhound",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b8eb92ac547038211de06a5c43325d835a52b846ddabb406cbcfd46e3fd89ffd"
+    },
+    {
+      "key": "italian_greyhound-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Italian Greyhound weighs 3.6–4.5 kg.",
+        "sl": "Mali italijanski hrt tehta 3,6–4,5 kg."
+      },
+      "why": null,
+      "source_id": "S485",
+      "source_name": "The Kennel Club (UK) breed standard, reprinted by the Kennel Union of Southern Africa",
+      "source_url": "https://www.kusa.co.za/images/BREED%20STANDARDS%20EFFECTIVE%2001%20JULY%202025/Italian%20Greyhound%20-%20KC%20[07-2025].pdf",
+      "quote": "3.6kg – 4.5kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a21d1509b8e0d5248993c7ea29771fc9361951bfef318f06a5282dc0e85914c1"
+    },
+    {
+      "key": "italian_greyhound-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Italian Greyhound usually lives more than 12 years.",
+        "sl": "Mali italijanski hrt običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S486",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/italian-greyhound",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ac6b224ba4b6da6c31159dc912c25127dd30a4fa6d0aefcdee95cf72ad2ef8b7"
+    },
+    {
+      "key": "italian_greyhound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Italian Greyhound reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je mali italijanski hrt, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9f1d1f3ddebc7a88eac43819f6966ab4913852270c6836477481ef1abb876eab"
+    }
+  ]
+}

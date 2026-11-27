@@ -1,0 +1,163 @@
+{
+  "breed": "tibetan_terrier",
+  "facts": [
+    {
+      "key": "tibetan_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier needs about 1 hour of exercise every day.",
+        "sl": "Tibetanski terier potrebuje vsak dan približno 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S905",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/tibetan-terrier",
+      "quote": "Tibetan Terriers need around an hour of exercise every day and will happily join in with family games and activities.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8dd70c1a4949ed29416a66dacae3d2d953085c2086f90cf8c9061b054faf5bc6"
+    },
+    {
+      "key": "tibetan_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier's coat needs grooming every day.",
+        "sl": "Tibetanski terier potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S905",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/tibetan-terrier",
+      "quote": "Grooming is a daily requirement to keep their coats in tip-top condition.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2f2566a7025da7fa4764111d7a55c23d03bea09c46bf66e6fd5c2d8e8a6a30e5"
+    },
+    {
+      "key": "tibetan_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier is a medium-sized dog breed.",
+        "sl": "Tibetanski terier je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S905",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/tibetan-terrier",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "27923ac8868bc9845c65e55eaedf18fb56d3b162b1594a1b4f65784368b07ba0"
+    },
+    {
+      "key": "tibetan_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier has a long coat.",
+        "sl": "Tibetanski terier ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S905",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/tibetan-terrier",
+      "quote": "Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "12120b3cf13f35f94c8846a7dcd9addc9136a46994f38ca0df3a7b3e1d6eb7c1"
+    },
+    {
+      "key": "tibetan_terrier-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier is 36–41 cm tall at the withers.",
+        "sl": "Psi pasme tibetanski terier so v vihru visoki 36–41 cm."
+      },
+      "why": null,
+      "source_id": "S905",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/tibetan-terrier",
+      "quote": "36-41 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "85dca1c6dc780e26c71f4c4790dbd32bf49ce63fddafe62c2c11011942f515fe"
+    },
+    {
+      "key": "tibetan_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier weighs 8.25–13.5 kg.",
+        "sl": "Tibetanski terier tehta 8,25–13,5 kg."
+      },
+      "why": null,
+      "source_id": "S909",
+      "source_name": "Canadian Kennel Club",
+      "source_url": "https://www.ckc.ca/CanadianKennelClub/media/Breed-Standards/Group%206/Tibetan-Terrier.pdf",
+      "quote": "Weight: 8.25 to 13.5 kg (18 to 30 lb)",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3b116eb0768bdba7a52ae694595a65b0d27fca5c5bdbd57d7858ce4689ddcbb4"
+    },
+    {
+      "key": "tibetan_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Terrier usually lives more than 12 years.",
+        "sl": "Tibetanski terier običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S905",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/tibetan-terrier",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7db54f8bdf3f43e2614409a43eb503b422c55124b154eb22fbd5886008b61372"
+    },
+    {
+      "key": "tibetan_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Tibetan Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je tibetanski terier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d0c99e0c02386224b7d1df321724de1ee4268cb4d73faa40096be947250e765c"
+    }
+  ]
+}

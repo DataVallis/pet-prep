@@ -1,0 +1,144 @@
+{
+  "breed": "french_bulldog",
+  "facts": [
+    {
+      "key": "french_bulldog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The French Bulldog needs up to 1 hour of exercise every day.",
+        "sl": "Francoski buldog potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S78",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/french-bulldog",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "66f0ccbaeb4f14486245f46963d79503bbe0fb12b5c5c98f6bbbacba9b7051b4"
+    },
+    {
+      "key": "french_bulldog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The French Bulldog's coat needs grooming once a week.",
+        "sl": "Francoski buldog potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S78",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/french-bulldog",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "54ec5d8a8929fcd882e360cc575c924938bbe9368b96be4fd84916edf0ff9581"
+    },
+    {
+      "key": "french_bulldog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The French Bulldog is a small dog breed.",
+        "sl": "Francoski buldog je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S78",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/french-bulldog",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6782ff2a68d89669310b14b1b787d3d674494db889c6e9f3cd03c498d871ce5c"
+    },
+    {
+      "key": "french_bulldog-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The French Bulldog comes from France.",
+        "sl": "Francoski buldog izvira iz Francije."
+      },
+      "why": null,
+      "source_id": "S77",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/EN/nomenclature/FRENCH-BULLDOG-101.html",
+      "quote": "Standard number: 101; Group: n°9 - Chiens d'agrément et de compagnie; Section: Molossoïdes de petit format; Country of origin: FRANCE",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "23c25b3bf50502932d86ef17642560dfd80a62c8f44c0c80343f32404f2cf3e2"
+    },
+    {
+      "key": "french_bulldog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The French Bulldog has a short coat.",
+        "sl": "Francoski buldog ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S78",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/french-bulldog",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "20e455c8ddf245c6248e956ccc182ec470b0f9bd3c4fa04e1659531f34d628c9"
+    },
+    {
+      "key": "french_bulldog-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the French Bulldog, males are 27–35 cm tall at the withers and females 24–32 cm.",
+        "sl": "Samci pasme francoski buldog so v vihru visoki 27–35 cm, samice 24–32 cm."
+      },
+      "why": null,
+      "source_id": "S76",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/101g09-en.pdf",
+      "quote": "Males: 27–35 cm. Females: 24–32 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "92438efea518d718f5be5fc12ca4655d3e93e28dc41aaeb660528f535b016ca4"
+    },
+    {
+      "key": "french_bulldog-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the French Bulldog, males weigh 9–14 kg and females 8–13 kg.",
+        "sl": "Samci pasme francoski buldog tehtajo 9–14 kg, samice 8–13 kg."
+      },
+      "why": null,
+      "source_id": "S76",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/101g09-en.pdf",
+      "quote": "Males: 9–14 kg. Females: 8–13 kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1e16d158a5d5d7ef232aa45faad365e7129dcdfa8bcdb73a87d3fc98d3948ff3"
+    }
+  ]
+}

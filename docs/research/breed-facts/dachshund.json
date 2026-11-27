@@ -1,0 +1,125 @@
+{
+  "breed": "dachshund",
+  "facts": [
+    {
+      "key": "dachshund-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Dachshund needs up to 1 hour of exercise every day.",
+        "sl": "Jazbečar potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S125",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/dachshund-smooth-haired/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "24ff864cbeb275dbaaf599515fd6f2ef9351c2a6b4551695952d10fa2c6cd7e4"
+    },
+    {
+      "key": "dachshund-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Dachshund's coat needs grooming once a week.",
+        "sl": "Jazbečar potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S125",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/dachshund-smooth-haired/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "18120b591947c4b331682b77c5e45e55be0123c7b02de5516556d1b8518496ca"
+    },
+    {
+      "key": "dachshund-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Dachshund is a medium-sized dog breed.",
+        "sl": "Jazbečar je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S125",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/dachshund-smooth-haired/",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4bb6064ed7feb01bb525362b7a2a41a06a3b8bff7dcbbb608538d107f92a30b3"
+    },
+    {
+      "key": "dachshund-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Dachshund has a short coat.",
+        "sl": "Jazbečar ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S125",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/dachshund-smooth-haired/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9030ebdc1375fbf4062f347a7d627db199a0775e77822866698affe46239bd97"
+    },
+    {
+      "key": "dachshund-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Dachshund usually lives more than 12 years.",
+        "sl": "Jazbečar običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S125",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/dachshund-smooth-haired/",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a78a9afdbfc3e7bb8c2adef9afff83065bc9653c2c9e8eec1025b9f47a6a5099"
+    },
+    {
+      "key": "dachshund-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Dachshund reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je jazbečar, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "85f11bf5aab59555527c4515616b14042769a5dc9df9eea479dc3775339fc4bb"
+    }
+  ]
+}

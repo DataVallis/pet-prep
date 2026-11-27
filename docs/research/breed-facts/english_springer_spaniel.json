@@ -1,0 +1,106 @@
+{
+  "breed": "english_springer_spaniel",
+  "facts": [
+    {
+      "key": "english_springer_spaniel-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The English Springer Spaniel needs more than 2 hours of exercise every day.",
+        "sl": "Angleški springer španjel potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S284",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=2053",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d5ca0c0f941a01ae9e8b3a976f81d40fadde43964a31996605554e855cfcd728"
+    },
+    {
+      "key": "english_springer_spaniel-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The English Springer Spaniel's coat needs grooming more than once a week.",
+        "sl": "Angleški springer španjel potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S284",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=2053",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a3a57d9f5cf9db538b6a53780353eaa222a968a04b23c075c00aed37ed5448df"
+    },
+    {
+      "key": "english_springer_spaniel-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The English Springer Spaniel is a medium-sized dog breed.",
+        "sl": "Angleški springer španjel je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S284",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=2053",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5be42f8aa091be685d98f70355c286eb3dbbc853b7e40d6423c46ad58100e508"
+    },
+    {
+      "key": "english_springer_spaniel-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The English Springer Spaniel has a medium-length coat.",
+        "sl": "Angleški springer španjel ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S284",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=2053",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3bf5825c3045e34dcf42b083b0ea19207e17e5202cf985c0d62367682a2ce1b8"
+    },
+    {
+      "key": "english_springer_spaniel-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the English Springer Spaniel reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je angleški springer španjel, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "909056d96be598c3c14986eac201f5b1e11ab026f0f94a35a4497cb08343894a"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "breed": "russell_terrier",
+  "facts": [
+    {
+      "key": "russell_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Jack Russell Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Jack Russell terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S559",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/jack-russell-terrier/",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "bcb1ee000ce9f8db4db8d786d48c4afb488af80c8b9bff43b7db36631cd9033a"
+    },
+    {
+      "key": "russell_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Jack Russell Terrier's coat needs grooming once a week.",
+        "sl": "Jack Russell terier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S559",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/jack-russell-terrier/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "128e2537dcadbbdcff4e3b11afd209a0b70fbc3259193e4d34159724383c1da6"
+    },
+    {
+      "key": "russell_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Jack Russell Terrier is a small dog breed.",
+        "sl": "Jack Russell terier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S559",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/jack-russell-terrier/",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e82b47f3e380007c40d69da13e71df85791dc15d9d6bbaff29f5327c7be946c6"
+    },
+    {
+      "key": "russell_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Jack Russell Terrier has a short coat.",
+        "sl": "Jack Russell terier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S559",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/jack-russell-terrier/",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fbbbd81c8b6d9a77c35a6991b868ce00d0c6f81f28f7838d97a5483c394b08f7"
+    },
+    {
+      "key": "russell_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Jack Russell Terrier reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je Jack Russell terier, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "360df2ae8eba10e121b8e779151fdf2e76a1c431080f2d5298a7585eefe065f3"
+    }
+  ]
+}

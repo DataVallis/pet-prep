@@ -1,0 +1,125 @@
+{
+  "breed": "rough_collie",
+  "facts": [
+    {
+      "key": "rough_collie-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Rough Collie needs up to 1 hour of exercise every day.",
+        "sl": "Dolgodlaki škotski ovčar potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S365",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5119",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "beb16ae9edf1440431f10572ed4f8d3b935371103531827120feccad71ac5261"
+    },
+    {
+      "key": "rough_collie-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Rough Collie's coat needs grooming every day.",
+        "sl": "Dolgodlaki škotski ovčar potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S365",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5119",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1be20f653c5abd34fb9dc3783a941a2e768f907139317ad8ed01035ca0c95bcb"
+    },
+    {
+      "key": "rough_collie-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rough Collie is a large dog breed.",
+        "sl": "Dolgodlaki škotski ovčar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S365",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5119",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8a4aabf197b9ec95d3d616c53417ec670f22d5601a6af6a41976f0c0d6ded217"
+    },
+    {
+      "key": "rough_collie-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rough Collie has a medium-length coat.",
+        "sl": "Dolgodlaki škotski ovčar ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S365",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5119",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "10cee76c6ce56775de2d9f43cf394144dd91be36c54af0f7461089d960a0ae5c"
+    },
+    {
+      "key": "rough_collie-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Rough Collie usually lives more than 12 years.",
+        "sl": "Dolgodlaki škotski ovčar običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S365",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5119",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8d1c925e4593ad6c70f6e911818ff28120614bcfbd55ea5207f8f8ef440ba700"
+    },
+    {
+      "key": "rough_collie-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Rough Collie reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je dolgodlaki škotski ovčar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5e9d7873030154a28d2b039d915985c8c2142adcf5d96a59c2cf6299f54016ee"
+    }
+  ]
+}

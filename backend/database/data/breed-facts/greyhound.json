@@ -1,0 +1,106 @@
+{
+  "breed": "greyhound",
+  "facts": [
+    {
+      "key": "greyhound-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Greyhound needs about 1 hour of exercise every day.",
+        "sl": "Angleški hrt potrebuje vsak dan približno 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S914",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/greyhound",
+      "quote": "Greyhounds aren't overly energetic, requiring about an hour of exercise daily.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "42ae01cf72f12bf13d89e5ac67285990a1ee8ffdc0d3779107332ecc170d375d"
+    },
+    {
+      "key": "greyhound-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Greyhound's coat needs grooming once a week.",
+        "sl": "Angleški hrt potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S914",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/greyhound",
+      "quote": "They have a short coat which requires weekly grooming to keep it in good condition.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "11192f0d693461053fb7b960acab06c97df9465212b0f21547a511ae2126e681"
+    },
+    {
+      "key": "greyhound-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Greyhound is a large dog breed.",
+        "sl": "Angleški hrt je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S914",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/greyhound",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "222f71a3847d40c37384f643894ae088b5d31b42dd76d9821f90f020945ebf9e"
+    },
+    {
+      "key": "greyhound-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Greyhound has a short coat.",
+        "sl": "Angleški hrt ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S914",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/greyhound",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0866f196a8a74c23619de633db0d2d4debd58d0bdde8c7164fdf43b1c75b2a46"
+    },
+    {
+      "key": "greyhound-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Greyhound reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je angleški hrt, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5f6dfdbd8e61e77b10af223fd551a099c0ca93154d34920dd69e4f470f300e67"
+    }
+  ]
+}

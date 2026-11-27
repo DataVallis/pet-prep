@@ -1,0 +1,125 @@
+{
+  "breed": "shetland_sheepdog",
+  "facts": [
+    {
+      "key": "shetland_sheepdog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Shetland Sheepdog needs up to 1 hour of exercise every day.",
+        "sl": "Šetlandski ovčar potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S291",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/shetland-sheepdog",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e411ed58960fe472877ed53c14b5798e868c4746a1a2b47ed5b6ac50b29dde1b"
+    },
+    {
+      "key": "shetland_sheepdog-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Shetland Sheepdog's coat needs grooming every day.",
+        "sl": "Šetlandski ovčar potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S291",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/shetland-sheepdog",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "372db095340cd74f6f924a54fd828ecf8c022c89ae2c883930618edee24fdf70"
+    },
+    {
+      "key": "shetland_sheepdog-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shetland Sheepdog is a small dog breed.",
+        "sl": "Šetlandski ovčar je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S291",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/shetland-sheepdog",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0272d94acd3c9982463b86178ada9309e57cf504d41ebf3ec442457f8faac970"
+    },
+    {
+      "key": "shetland_sheepdog-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shetland Sheepdog has a medium-length coat.",
+        "sl": "Šetlandski ovčar ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S291",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/shetland-sheepdog",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "279d0ae2c1ada5afe2b0c452e0bc9ceac6b9334a5507b25fc892abdb2769b063"
+    },
+    {
+      "key": "shetland_sheepdog-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shetland Sheepdog usually lives more than 10 years.",
+        "sl": "Šetlandski ovčar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S291",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/shetland-sheepdog",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "5ed2363727202c2e1db77eae9325e6748622cd9f8852c36bb0ce8e539e3701a4"
+    },
+    {
+      "key": "shetland_sheepdog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Shetland Sheepdog reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je šetlandski ovčar, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dc626942434d656608bb5acfc5896cfb6eefaaa7f8c0fbc8fbb4fb763b37dc55"
+    }
+  ]
+}

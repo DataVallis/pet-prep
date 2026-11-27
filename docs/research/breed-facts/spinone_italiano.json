@@ -1,0 +1,141 @@
+{
+  "breed": "spinone_italiano",
+  "facts": [
+    {
+      "key": "spinone_italiano-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Spinone Italiano needs more than 2 hours of exercise every day.",
+        "sl": "Italijanski ostrodlaki ptičar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S936",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/italian-spinone",
+      "quote": "Italian Spinones are an energetic breed requiring plenty of exercise – ideally more than 2 hours per day.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c41259389aef250313cfbb33ce2d92168c37b435e87d2b2be519afbc66828fd3"
+    },
+    {
+      "key": "spinone_italiano-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Spinone Italiano is a large dog breed.",
+        "sl": "Italijanski ostrodlaki ptičar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S936",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/italian-spinone",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c3225d2401ab32dca3def468de08c2b55a19cce4e84ca4813ec40f90df914ce0"
+    },
+    {
+      "key": "spinone_italiano-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Spinone Italiano has a medium-length coat.",
+        "sl": "Italijanski ostrodlaki ptičar ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S936",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/italian-spinone",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a65e105fd619737f628d04cf5217fd39716448338f8cfb47403f216c8a66b8d4"
+    },
+    {
+      "key": "spinone_italiano-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Spinone Italiano, males are 60–70 cm tall at the withers.",
+        "sl": "Samec pasme italijanski ostrodlaki ptičar je v vihru visok 60–70 cm."
+      },
+      "why": null,
+      "source_id": "S935",
+      "source_name": "FCI (copy hosted by the Italian Spinone Club of Great Britain)",
+      "source_url": "https://www.italianspinone.co.uk/documents/165g07-en.pdf",
+      "quote": "Males: 60 – 70 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b79a46947b81d4e72783d33632e7842ddfd193dd529a38ad58a12934ff52c812"
+    },
+    {
+      "key": "spinone_italiano-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Spinone Italiano, males weigh 32–37 kg.",
+        "sl": "Samec pasme italijanski ostrodlaki ptičar tehta 32–37 kg."
+      },
+      "why": null,
+      "source_id": "S935",
+      "source_name": "FCI (copy hosted by the Italian Spinone Club of Great Britain)",
+      "source_url": "https://www.italianspinone.co.uk/documents/165g07-en.pdf",
+      "quote": "Males: 32 – 37 kg.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a4bf3a0ce5d8545d6388f3997b0a9092234e50555c1a8a490fa83cdb1af314c8"
+    },
+    {
+      "key": "spinone_italiano-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Spinone Italiano usually lives more than 10 years.",
+        "sl": "Italijanski ostrodlaki ptičar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S936",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/italian-spinone",
+      "quote": "Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d967752f3c5ce1acd72d069a58e09ac4c9d53d0ffae18a10e213cfdb829d6779"
+    },
+    {
+      "key": "spinone_italiano-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Spinone Italiano reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je italijanski ostrodlaki ptičar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0d54c0f87e13d3def9a382fd950a26970ea475af4853189291a9c386256b0d4d"
+    }
+  ]
+}

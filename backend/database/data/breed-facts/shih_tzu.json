@@ -1,0 +1,106 @@
+{
+  "breed": "shih_tzu",
+  "facts": [
+    {
+      "key": "shih_tzu-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Shih Tzu needs up to 1 hour of exercise every day.",
+        "sl": "Shih tzu potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S231",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4102",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "55f1597c43dcb4c021f7fa59c8ce1fbf6ec29b1ff600405210721b64957a0c99"
+    },
+    {
+      "key": "shih_tzu-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Shih Tzu's coat needs grooming every day.",
+        "sl": "Shih tzu potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S231",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4102",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "00a91062d75228cd10ee3b2ebf81e0010aadd0d647aa98e6fc84e38d8c0f6e55"
+    },
+    {
+      "key": "shih_tzu-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shih Tzu is a small dog breed.",
+        "sl": "Shih tzu je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S231",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4102",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "13a3f88a928ed678c3e077070f1dcba25832562bcfe0fcd39ae8256505be44cd"
+    },
+    {
+      "key": "shih_tzu-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Shih Tzu has a long coat.",
+        "sl": "Shih tzu ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S231",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4102",
+      "quote": "Coat length: Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3de655a242134a8a8b77fa1499d9d4c74b7ef907881ca3aed7999cfd8c03e04f"
+    },
+    {
+      "key": "shih_tzu-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Shih Tzu reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je shih tzu, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b70fe61aa040beda7644d766cc17dd2cd21907fb57e80c2339f7476f087e6bf4"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "breed": "airedale_terrier",
+  "facts": [
+    {
+      "key": "airedale_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Airedale Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Airedalski terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S547",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/airedale-terrier",
+      "quote": "Exercise: Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2962327d74f8d890471c546250ac6ed23f130774bfcb1b9d71844c987a7939be"
+    },
+    {
+      "key": "airedale_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Airedale Terrier's coat needs grooming every day.",
+        "sl": "Airedalski terier potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S547",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/airedale-terrier",
+      "quote": "Grooming: Every day",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "23f2d0671101c35a3de59c3d771adca240639c8c798b0fc22f11f20170c9e2ff"
+    },
+    {
+      "key": "airedale_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Airedale Terrier is a large dog breed.",
+        "sl": "Airedalski terier je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S547",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/airedale-terrier",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9306a644fb68c76e4483dc2f90cb4757947d8d73c61ea12208710a20d8d85ab5"
+    },
+    {
+      "key": "airedale_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Airedale Terrier has a medium-length coat.",
+        "sl": "Airedalski terier ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S547",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/airedale-terrier",
+      "quote": "Coat length: Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dfb4ee2fee0f2a919d95afa6ddba100183d9aac11501f75c93b4db4a4076ac88"
+    },
+    {
+      "key": "airedale_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Airedale Terrier usually lives more than 10 years.",
+        "sl": "Airedalski terier običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S547",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/airedale-terrier",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "04bcf6799d3c449d6c6570d9c2a66f57a5c9123b3fab7f6cf450c0ad9e941776"
+    },
+    {
+      "key": "airedale_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Airedale Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je airedalski terier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "bcb29bf82d27cf9aa9aaedf29f3eb586f7fe80242fa2eaa93f39d24196e72266"
+    }
+  ]
+}

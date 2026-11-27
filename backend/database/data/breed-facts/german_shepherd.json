@@ -1,0 +1,144 @@
+{
+  "breed": "german_shepherd",
+  "facts": [
+    {
+      "key": "german_shepherd-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The German Shepherd Dog needs more than 2 hours of exercise every day.",
+        "sl": "Nemški ovčar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S97",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/german-shepherd-dog",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1a65724fe8dfa521a2053dbcf25ae8339c4867391b806096819c7ef64e3575f5"
+    },
+    {
+      "key": "german_shepherd-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The German Shepherd Dog's coat needs grooming more than once a week.",
+        "sl": "Nemški ovčar potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S97",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/german-shepherd-dog",
+      "quote": "Grooming: More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f009b84910904551b531b3dfae1e184036d3d9b6af7452420876026fc1fd8371"
+    },
+    {
+      "key": "german_shepherd-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The German Shepherd Dog is a large dog breed.",
+        "sl": "Nemški ovčar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S97",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/german-shepherd-dog",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "fd5ba7b6c39ba34c4921cb52f466e4a2a7a94b9fb9a47585553ad1fc39320915"
+    },
+    {
+      "key": "german_shepherd-auto-fci_standard",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The German Shepherd Dog comes from Germany.",
+        "sl": "Nemški ovčar izvira iz Nemčije."
+      },
+      "why": null,
+      "source_id": "S96",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/en/nomenclature/GERMAN-SHEPHERD-DOG-166.html",
+      "quote": "Group: n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs); Section: Sheepdogs; Country of origin: GERMANY",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f908b3e097c6703605cb4e3f8a18b8b7910d622ebbb045cd2ac1f444fed7c62e"
+    },
+    {
+      "key": "german_shepherd-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the German Shepherd Dog, males are 60–65 cm tall at the withers and females 55–60 cm.",
+        "sl": "Samci pasme nemški ovčar so v vihru visoki 60–65 cm, samice 55–60 cm."
+      },
+      "why": null,
+      "source_id": "S95",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/166g01-en.pdf",
+      "quote": "Males: Height at the withers: 60 cm to 65 cm; Females: Height at the withers: 55 cm to 60 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "af7c554a7d513c03acf4c950fb1d3e36bb88cf9ab3e92a53cabbb647725f9a61"
+    },
+    {
+      "key": "german_shepherd-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the German Shepherd Dog, males weigh 30–40 kg and females 22–32 kg.",
+        "sl": "Samci pasme nemški ovčar tehtajo 30–40 kg, samice 22–32 kg."
+      },
+      "why": null,
+      "source_id": "S95",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/166g01-en.pdf",
+      "quote": "Males: Weight: 30 kg to 40 kg; Females: Weight: 22 kg to 32 kg",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "75501a6288ab52e50c5488bbb200c7b6a8c9ad25496ee582f95a7e8999e9b03e"
+    },
+    {
+      "key": "german_shepherd-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the German Shepherd Dog reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je nemški ovčar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8c1b4d1f8225a52427b72037f4589122c6d11858d2c14c48e53872bbd6dcb857"
+    }
+  ]
+}

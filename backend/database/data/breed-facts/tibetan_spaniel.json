@@ -1,0 +1,84 @@
+{
+  "breed": "tibetan_spaniel",
+  "facts": [
+    {
+      "key": "tibetan_spaniel-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Spaniel needs about 1 hour of exercise every day.",
+        "sl": "Tibetanski španjel potrebuje vsak dan približno 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S981",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/tibetan-spaniel",
+      "quote": "Tibetan Spaniels need around an hour of exercise every day and will happily join in with family games and activities.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7cb18c9c2ef8803849b3846f70d9da8f649a655343429a16a6538ac8f09907ab"
+    },
+    {
+      "key": "tibetan_spaniel-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Spaniel is a small dog breed.",
+        "sl": "Tibetanski španjel je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S981",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/tibetan-spaniel",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "210a32527075bdf246a691718961dfbb3ed517ccd2981261d25f368f1bcb2f2b"
+    },
+    {
+      "key": "tibetan_spaniel-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Tibetan Spaniel has a medium-length coat.",
+        "sl": "Tibetanski španjel ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S981",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/tibetan-spaniel",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f2c823d9c17beaaa7c945a37a72c608548cbefcacd4447929b08d2b9d156ba57"
+    },
+    {
+      "key": "tibetan_spaniel-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Tibetan Spaniel reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je tibetanski španjel, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "48646496dff262d72450f2fc45e835b8f120f17fb1efe5a856352942c347a3c3"
+    }
+  ]
+}

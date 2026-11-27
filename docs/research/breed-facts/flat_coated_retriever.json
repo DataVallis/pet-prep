@@ -1,0 +1,144 @@
+{
+  "breed": "flat_coated_retriever",
+  "facts": [
+    {
+      "key": "flat_coated_retriever-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Flat-Coated Retriever needs more than 2 hours of exercise every day.",
+        "sl": "Ravnodlaki prinašalec potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S762",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-flat-coated/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "dd1a86a748868233e4a3634f0b2cc73634274f925ab576cb74720a2ed2893d7f"
+    },
+    {
+      "key": "flat_coated_retriever-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Flat-Coated Retriever's coat needs grooming more than once a week.",
+        "sl": "Ravnodlaki prinašalec potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S762",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-flat-coated/",
+      "quote": "More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "adc3ad0d463f1be58209c2226dd7831b8f00d89e02c693ca36004b660e5b88f3"
+    },
+    {
+      "key": "flat_coated_retriever-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Flat-Coated Retriever is a large dog breed.",
+        "sl": "Ravnodlaki prinašalec je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S762",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-flat-coated/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "be1205c9ed611ab3a4d3a713e04487028d1a93e0613f3050bcfc4a1ed4a6e326"
+    },
+    {
+      "key": "flat_coated_retriever-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Flat-Coated Retriever has a medium-length coat.",
+        "sl": "Ravnodlaki prinašalec ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S762",
+      "source_name": "The Royal Kennel Club (UK)",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-flat-coated/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ad2ce3514856741d8a8198070e3008d51fbdad1d45fca8bb3c960f7c2acfaaa7"
+    },
+    {
+      "key": "flat_coated_retriever-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Flat-Coated Retriever, males are 59–61.5 cm tall at the withers and females 56.5–59 cm.",
+        "sl": "Samci pasme ravnodlaki prinašalec so v vihru visoki 59–61,5 cm, samice 56,5–59 cm."
+      },
+      "why": null,
+      "source_id": "S761",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/121g08-en.pdf",
+      "quote": "Preferred height: Dogs: 59 - 61,5 cm (23-24 ins), Bitches: 56,5 - 59 cm (22-23 ins).",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e0408a970034c3df6f80d6f3cac79235bdfae8ad87874746523796283d1621f6"
+    },
+    {
+      "key": "flat_coated_retriever-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Flat-Coated Retriever, males weigh 27–36 kg and females 25–32 kg.",
+        "sl": "Samci pasme ravnodlaki prinašalec tehtajo 27–36 kg, samice 25–32 kg."
+      },
+      "why": null,
+      "source_id": "S761",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/121g08-en.pdf",
+      "quote": "Preferred weight in hard condition: Dogs: 27 - 36 kg (60-80 lbs), Bitches: 25 - 32 kg (55-70 lbs).",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9512ee64dc68e1936f4c66cce8f840d40f2cbb912f770ca01e58576c6a3f7ae8"
+    },
+    {
+      "key": "flat_coated_retriever-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Flat-Coated Retriever reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je ravnodlaki prinašalec, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e5b21b70d975b6b131724502f8a0ecad3be18de40198d9e52f85ab0502e884f0"
+    }
+  ]
+}

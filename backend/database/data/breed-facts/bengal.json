@@ -1,0 +1,27 @@
+{
+  "breed": "bengal",
+  "facts": [
+    {
+      "key": "bengal-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bengal's coat needs grooming once a week.",
+        "sl": "Bengalska mačka potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your cat once a week in the app.",
+        "sl": "Zato v aplikaciji svojo muco češeš enkrat na teden."
+      },
+      "source_id": "C44",
+      "source_name": "PDSA (UK veterinary charity)",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/bengal",
+      "quote": "Bengals have striking markings on their coat, which requires a light brushing/combing once a week.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c1a44b0b1e0ab9e5738261790f52ca00f94fa7d5af482ce32dfa2ad2b1d8ad57"
+    }
+  ]
+}

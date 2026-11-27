@@ -1,0 +1,125 @@
+{
+  "breed": "chihuahua",
+  "facts": [
+    {
+      "key": "chihuahua-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Chihuahua needs up to 30 minutes of exercise every day.",
+        "sl": "Čivava potrebuje vsak dan do 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S275",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/chihuahua-smooth-coat",
+      "quote": "Exercise: Up to 30 minutes per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6505a81944d096585c4b03d532e2363eb507c97d84e706b678ae905bf034a516"
+    },
+    {
+      "key": "chihuahua-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Chihuahua's coat needs grooming once a week.",
+        "sl": "Čivava potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S275",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/chihuahua-smooth-coat",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b7784e7f42af020cdd998b6e6a18a617cbbb2c97b94d2bcb6cc5e232d5770aa8"
+    },
+    {
+      "key": "chihuahua-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chihuahua is a small dog breed.",
+        "sl": "Čivava je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S275",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/chihuahua-smooth-coat",
+      "quote": "Size: Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c200b190d6a89d2655a7f2cd70e87393b6eb167da24eff1eb78ade3e99cfeac6"
+    },
+    {
+      "key": "chihuahua-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chihuahua has a short coat.",
+        "sl": "Čivava ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S275",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/chihuahua-smooth-coat",
+      "quote": "Coat length: Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "249b520841cb74c16ea8850a325487f7c243eb2f1042d847b44fe52142b96935"
+    },
+    {
+      "key": "chihuahua-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Chihuahua usually lives more than 12 years.",
+        "sl": "Čivava običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S275",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/chihuahua-smooth-coat",
+      "quote": "Lifespan: Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "30fd7858c674c4fbcd403454e2aed2419ca1bcaf0ed04824d1bcd74b15bed0e1"
+    },
+    {
+      "key": "chihuahua-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Chihuahua reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je čivava, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "4dc0a547180d805f81d708eca06f6744aded764c10a373b7a7f7463f5b40deef"
+    }
+  ]
+}

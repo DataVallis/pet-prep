@@ -1,0 +1,84 @@
+{
+  "breed": "bull_terrier",
+  "facts": [
+    {
+      "key": "bull_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bull Terrier needs at least 1 hour of exercise every day.",
+        "sl": "Bulterier potrebuje vsak dan vsaj 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S591",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/english-bull-terrier",
+      "quote": "Minimum exercise (per day): 1 hour",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e6435152064910e633b6622376f1769e1d3758f0045d28a2222454aa9a396a2b"
+    },
+    {
+      "key": "bull_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bull Terrier is a medium-sized dog breed.",
+        "sl": "Bulterier je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S591",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/english-bull-terrier",
+      "quote": "Size: Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1d34c8a37a409aacddd2d13cd79f7b73587cc64ec70d98561c89bcdc68294181"
+    },
+    {
+      "key": "bull_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bull Terrier usually lives more than 10 years.",
+        "sl": "Bulterier običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S591",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/english-bull-terrier",
+      "quote": "Average lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "1dfc337f440d60bbf52fc8af54d25be6e2b7b32870e255bc17e3973620ecc1b1"
+    },
+    {
+      "key": "bull_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bull Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je bulterier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "225bdf69871a4e5425235d7c9f3b2ba9fef422f5de069f1e1616899d140539e2"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "breed": "weimaraner",
+  "facts": [
+    {
+      "key": "weimaraner-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Weimaraner needs more than 2 hours of exercise every day.",
+        "sl": "Weimarski ptičar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S479",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/weimaraner/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2615a1113bf800baf3717ace2d01249c3ad1228501ec1d1309bbe4936957eb16"
+    },
+    {
+      "key": "weimaraner-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Weimaraner's coat needs grooming once a week.",
+        "sl": "Weimarski ptičar potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S479",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/weimaraner/",
+      "quote": "Grooming: Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "9a5c1c07d6b79d8ac7273ab2b09694c99e603bd2d7ee620374746410a5fc3398"
+    },
+    {
+      "key": "weimaraner-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Weimaraner is a large dog breed.",
+        "sl": "Weimarski ptičar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S479",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/weimaraner/",
+      "quote": "Size: Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "88a74e21258ceb86439aa13aaf123015cc69ee242c417a359f3b7695ff0cd021"
+    },
+    {
+      "key": "weimaraner-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Weimaraner usually lives more than 10 years.",
+        "sl": "Weimarski ptičar običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S479",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/weimaraner/",
+      "quote": "Lifespan: Over 10 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "71fae5eb96fbdee401993a684a579a9a44b63bca726ef3b411ac55f8dd72f247"
+    },
+    {
+      "key": "weimaraner-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Weimaraner reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je weimarski ptičar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d056953746cd164050d09d37e42a5aae95cd0ef16386fc4c4833f08a272a4e0e"
+    }
+  ]
+}

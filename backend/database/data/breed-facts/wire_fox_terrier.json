@@ -1,0 +1,125 @@
+{
+  "breed": "wire_fox_terrier",
+  "facts": [
+    {
+      "key": "wire_fox_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Wire Fox Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Ostrodlaki foksterier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S872",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/fox-terrier-wire/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "287075dfc3c77f121be5abb2098cf20dcc8404717c689618429dd23760cd0fdd"
+    },
+    {
+      "key": "wire_fox_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Wire Fox Terrier's coat needs grooming more than once a week.",
+        "sl": "Ostrodlaki foksterier potrebuje nego dlake več kot enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog twice a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš dvakrat na teden."
+      },
+      "source_id": "S872",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/fox-terrier-wire/",
+      "quote": "More than once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a663a2270a25a92f94aa021899c3eb717a7e34e12c2a5dd7528b06141abacddb"
+    },
+    {
+      "key": "wire_fox_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Wire Fox Terrier is a small dog breed.",
+        "sl": "Ostrodlaki foksterier je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S872",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/fox-terrier-wire/",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "47af766cb579d9ba96e25305bd2b601f04f0752ce0882c8187042503f9fa2a98"
+    },
+    {
+      "key": "wire_fox_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Wire Fox Terrier has a medium-length coat.",
+        "sl": "Ostrodlaki foksterier ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S872",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/fox-terrier-wire/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d7b29f03eab0f8dd2e484fb00154cf65d11fd2cf1655e702928ec24b2193d942"
+    },
+    {
+      "key": "wire_fox_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Wire Fox Terrier usually lives more than 12 years.",
+        "sl": "Ostrodlaki foksterier običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S872",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/fox-terrier-wire/",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "92a82f916b317d8fa3708e22a5004b7434543c8c44bf5256bddb92da0ea9d9b7"
+    },
+    {
+      "key": "wire_fox_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Wire Fox Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je ostrodlaki foksterier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0caf670cac258e29ac883f38d76834bf4de7cd9be7d9d9c0c39a17622e1f0138"
+    }
+  ]
+}

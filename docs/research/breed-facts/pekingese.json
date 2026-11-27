@@ -1,0 +1,144 @@
+{
+  "breed": "pekingese",
+  "facts": [
+    {
+      "key": "pekingese-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Pekingese needs 30 minutes of exercise every day.",
+        "sl": "Pekinezer potrebuje vsak dan 30 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 3,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 3.000 korakov."
+      },
+      "source_id": "S693",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pekingese",
+      "quote": "30 minutes",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c0fc0f3920578d05fc162640353134c1e248adf063aff4b274f5153278bb113d"
+    },
+    {
+      "key": "pekingese-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Pekingese's coat needs grooming every day.",
+        "sl": "Pekinezer potrebuje nego dlake vsak dan."
+      },
+      "why": {
+        "en": "That's why you brush your dog 7 times a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš 7-krat na teden."
+      },
+      "source_id": "S693",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pekingese",
+      "quote": "Pekingese have really thick, long fur that will need a daily brush to stop it from getting tangled and matted.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "655de564bbeb1743bcd5f28bac41c0b9c6e9e4f8f4d3b10d65bba841f5368b2b"
+    },
+    {
+      "key": "pekingese-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pekingese is a small dog breed.",
+        "sl": "Pekinezer je majhna pasma psov."
+      },
+      "why": null,
+      "source_id": "S693",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pekingese",
+      "quote": "Small",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6309d134b28d873b4641fe1c8adcbecaeb3dc0b659d3ad51cf084451a3deeb22"
+    },
+    {
+      "key": "pekingese-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pekingese has a long coat.",
+        "sl": "Pekinezer ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S693",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pekingese",
+      "quote": "Long",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "68cb4a68f763ca15b9aa912fc5247ccebb9770dc75a459516f21fd101d7ad743"
+    },
+    {
+      "key": "pekingese-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pekingese is 15–22 cm tall at the withers.",
+        "sl": "Psi pasme pekinezer so v vihru visoki 15–22 cm."
+      },
+      "why": null,
+      "source_id": "S693",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pekingese",
+      "quote": "15-22 cm",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "979e17585489d62138f11f6307ae136ed246529104bee57f6d3d7292fa7fc818"
+    },
+    {
+      "key": "pekingese-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Pekingese usually lives more than 12 years.",
+        "sl": "Pekinezer običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S693",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pekingese",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ce8d1c32a008b411f7ac954e1caa47a9e95914f7ed0b42bd7ff5641012391f32"
+    },
+    {
+      "key": "pekingese-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Pekingese reaches its adult weight at about 8–12 months.",
+        "sl": "Pes takšne velikosti, kot je pekinezer, doseže odraslo težo pri približno 8–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Toy (5–12 pounds): 8–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "71764a532af4b04457d816926eb11bcb664f54e48ea642764b2cb83e50202a6e"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "breed": "manchester_terrier",
+  "facts": [
+    {
+      "key": "manchester_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Manchester Terrier needs up to 1 hour of exercise every day.",
+        "sl": "Manchesterski terier potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S889",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/manchester-terrier",
+      "quote": "Manchester Terriers will need up to an hour of exercise per day to keep them physically and mentally fit.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "6623d036ace3cfe002172714b0add3a262cfb65b6b8a755c55c912ffa02af551"
+    },
+    {
+      "key": "manchester_terrier-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Manchester Terrier's coat needs grooming once a week.",
+        "sl": "Manchesterski terier potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S889",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/manchester-terrier",
+      "quote": "Grooming is minimal, and brushing once a week is generally all that’s needed to keep the coat in good condition.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "7c5dd3f3341f33476f7c48619625eb0e2a98ecc708012776e77f500257febaae"
+    },
+    {
+      "key": "manchester_terrier-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Manchester Terrier is a medium-sized dog breed.",
+        "sl": "Manchesterski terier je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S889",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/manchester-terrier",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "05f083a30b63b500d07c85a0fe08668762b6039f71676d985814ce993946f26b"
+    },
+    {
+      "key": "manchester_terrier-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Manchester Terrier has a short coat.",
+        "sl": "Manchesterski terier ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S889",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/manchester-terrier",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "c163efce1ebbb50a2cac00d78126c26a6eafdb522f0e590caca21bfbe8083154"
+    },
+    {
+      "key": "manchester_terrier-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Manchester Terrier weighs 5.5–10 kg.",
+        "sl": "Manchesterski terier tehta 5,5–10 kg."
+      },
+      "why": null,
+      "source_id": "S892",
+      "source_name": "Canadian Kennel Club",
+      "source_url": "https://www.ckc.ca/CanadianKennelClub/media/Breed-Standards/Group%204/Manchester-Terrier.pdf?ext=.pdf",
+      "quote": "Weight: 5.5 to 10 kg (12 to 22 lb)",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f6603f31ba5633076a34b4591e67a02f9b149ac0b640d298af31ae252d9c06de"
+    },
+    {
+      "key": "manchester_terrier-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Manchester Terrier usually lives more than 12 years.",
+        "sl": "Manchesterski terier običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S889",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/manchester-terrier",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "ef6c0bf4f072d1eee67941fb4fadf8482ddb7d5e1995cb68e98444925572b40b"
+    },
+    {
+      "key": "manchester_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Manchester Terrier reaches its adult weight at about 9–12 months.",
+        "sl": "Pes takšne velikosti, kot je manchesterski terier, doseže odraslo težo pri približno 9–12 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Small (12–24 pounds): 9–12 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "b9f0f772e32aa2e535aa1205884586ed51de7b481214cdd9f8457ba91ff0d63d"
+    }
+  ]
+}

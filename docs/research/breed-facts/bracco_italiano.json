@@ -1,0 +1,144 @@
+{
+  "breed": "bracco_italiano",
+  "facts": [
+    {
+      "key": "bracco_italiano-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Bracco Italiano needs more than 2 hours of exercise every day.",
+        "sl": "Italijanski ptičar potrebuje vsak dan več kot 2 uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S1024",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/bracco-italiano/",
+      "quote": "More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0ebca99206d1bf080de014b59f781281a1a402faacfe2e516142b3fe8c0f5ed1"
+    },
+    {
+      "key": "bracco_italiano-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Bracco Italiano's coat needs grooming once a week.",
+        "sl": "Italijanski ptičar potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S1024",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/bracco-italiano/",
+      "quote": "Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "3a86a23b95a606cd0ec9509fc3bb2e1dd944bf0c3ee8ec9ad5c8779bfd267067"
+    },
+    {
+      "key": "bracco_italiano-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bracco Italiano is a large dog breed.",
+        "sl": "Italijanski ptičar je velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1024",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/bracco-italiano/",
+      "quote": "Large",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a91c10d1c944523498ce39004db0ffb900e57d8152d24feef7696b014f75f506"
+    },
+    {
+      "key": "bracco_italiano-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bracco Italiano has a short coat.",
+        "sl": "Italijanski ptičar ima kratko dlako."
+      },
+      "why": null,
+      "source_id": "S1024",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/bracco-italiano/",
+      "quote": "Short",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "188bd9a8ec3746e2f2345fae03ae3e44ed0828775a05f46e7c61715c7543456c"
+    },
+    {
+      "key": "bracco_italiano-auto-height",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the Bracco Italiano, males are 58–67 cm tall at the withers.",
+        "sl": "Samec pasme italijanski ptičar je v vihru visok 58–67 cm."
+      },
+      "why": null,
+      "source_id": "S1023",
+      "source_name": "Fédération Cynologique Internationale",
+      "source_url": "https://dev.fci.be/Nomenclature/Standards/202g07-en.pdf",
+      "quote": "Preferred size for males: 58 – 67 cm.",
+      "game_rule_key": null,
+      "sort": 60,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "75caeccff20f65929914f7987ecfd9360e8939e906683fc65e837531b425089f"
+    },
+    {
+      "key": "bracco_italiano-auto-weight",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Bracco Italiano weighs 25–40 kg.",
+        "sl": "Italijanski ptičar tehta 25–40 kg."
+      },
+      "why": null,
+      "source_id": "S1023",
+      "source_name": "Fédération Cynologique Internationale",
+      "source_url": "https://dev.fci.be/Nomenclature/Standards/202g07-en.pdf",
+      "quote": "Weight: Between 25 and 40 kg depending on size.",
+      "game_rule_key": null,
+      "sort": 70,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "63585c423e3fb3924bd8cdbe5bf47c0bbccb28d5235ec99e20ee8887c2cabf88"
+    },
+    {
+      "key": "bracco_italiano-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Bracco Italiano reaches its adult weight at about 15–18 months.",
+        "sl": "Pes takšne velikosti, kot je italijanski ptičar, doseže odraslo težo pri približno 15–18 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Large (59–99 pounds): 15–18 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0bf0885deb59a5fd379b194ad693e0801a31475bdfe3330cbfb5fe9d0ad6c804"
+    }
+  ]
+}

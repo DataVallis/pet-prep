@@ -1,0 +1,46 @@
+{
+  "breed": "american_staffordshire_terrier",
+  "facts": [
+    {
+      "key": "american_staffordshire_terrier-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The American Staffordshire Terrier needs at least 60 minutes of exercise every day.",
+        "sl": "Ameriški staffordshirski terier potrebuje vsak dan vsaj 60 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S628",
+      "source_name": "PetMD — Georgina Ushi, DVM (published Feb. 1, 2023)",
+      "source_url": "https://www.petmd.com/dog/breeds/american-staffordshire-terrier",
+      "quote": "Pet parents should aim for at least 60 minutes of exercise daily, which can be broken down into smaller sessions.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2c57ff909aa8c406b1c005516a34bfdb5cff7da24d013273a79f099287a0c3e7"
+    },
+    {
+      "key": "american_staffordshire_terrier-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the American Staffordshire Terrier reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je ameriški staffordshirski terier, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "36e0cad7ce3ab90ba86ece2e2e8c448708c541e65ec0cb4334fe24b88873c4b1"
+    }
+  ]
+}

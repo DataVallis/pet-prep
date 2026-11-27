@@ -1,0 +1,125 @@
+{
+  "breed": "finnish_lapphund",
+  "facts": [
+    {
+      "key": "finnish_lapphund-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Finnish Lapphund needs up to 1 hour of exercise every day.",
+        "sl": "Finski laponski pes potrebuje vsak dan do 1 ure gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1004",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/finnish-lapphund/",
+      "quote": "Up to 1 hour per day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "2f8a872c83bb403aa2e5455d0a173c95762f26b0056c08affe32d2e1ffb9ca51"
+    },
+    {
+      "key": "finnish_lapphund-auto-grooming_frequency",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "The Finnish Lapphund's coat needs grooming once a week.",
+        "sl": "Finski laponski pes potrebuje nego dlake enkrat na teden."
+      },
+      "why": {
+        "en": "That's why you brush your dog once a week in the app.",
+        "sl": "Zato v aplikaciji svojega psa češeš enkrat na teden."
+      },
+      "source_id": "S1004",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/finnish-lapphund/",
+      "quote": "Once a week",
+      "game_rule_key": "grooming_per_week",
+      "sort": 20,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "85ffe2f7ae65845d3e088441150967aaeefbccf95ae4a8c95b320d4867877ce4"
+    },
+    {
+      "key": "finnish_lapphund-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Finnish Lapphund is a medium-sized dog breed.",
+        "sl": "Finski laponski pes je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1004",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/finnish-lapphund/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "d35664ebc2c5fa4abd5ff684e053751589f2dbaac420b051824d4544ddcd19bb"
+    },
+    {
+      "key": "finnish_lapphund-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Finnish Lapphund has a medium-length coat.",
+        "sl": "Finski laponski pes ima srednje dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S1004",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/finnish-lapphund/",
+      "quote": "Medium",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "77551efd5c396dd59471e0fe8d24b18f0ce6f5578db5593dadd5d2358646c482"
+    },
+    {
+      "key": "finnish_lapphund-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Finnish Lapphund usually lives more than 12 years.",
+        "sl": "Finski laponski pes običajno živi več kot 12 let."
+      },
+      "why": null,
+      "source_id": "S1004",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/finnish-lapphund/",
+      "quote": "Over 12 years",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "8fdd3d6d3c5ab344a24de6c3465764dac71f513cca6bc7a97f07b5da6a7f07e0"
+    },
+    {
+      "key": "finnish_lapphund-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Finnish Lapphund reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je finski laponski pes, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "f5c3796c5f9ed82135d0fa4b55f5ed6a7b14a09af299b08fc4c576194e0d756b"
+    }
+  ]
+}
