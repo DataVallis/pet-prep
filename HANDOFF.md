@@ -172,6 +172,8 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-27 (mobile, `feat/gift-on-the-way-note`)
+- Tester (Android, parent 39): the re-bought bed went through after the RevenueCat webhook fix (first Android wish purchase seen working — reported by David, not checked in /admin by Claude). His feedback → »Darilo je na poti: <stvar>. Lahko traja nekaj minut.« on the child's pet screen while a bought thing is not ready (`giftsOnTheWay`, `giftNote.ts`) and the parent's answer after the purchase says the thing is on its way (`assignedOnTheWay`). JS only → OTA. Not on a device. Not built: a push to the child at the moment of the purchase.
 ### 2026-11-27 (claude.ai chat, RevenueCat setting, `docs/revenuecat-webhook-all-apps`)
 - **Android purchases never reached the server:** the RevenueCat webhook's event filter was set to the app »PetPrep (App Store)« only, so no `PLAY_STORE` event was ever sent (tester parent 39 bought `petprep_wish_bed` on 2026-11-27 07:39 — charged in sandbox, wish stayed open, no clip; RevenueCat event `5db448d5…` shows no delivery). **David set the filter to »All apps« on 2026-11-27 09:38**; two `TEST` events with store `PLAY_STORE` arrived in /admin → Purchase events (outcome `recorded`). Events filtered out before the change cannot be re-sent — the tester buys again. Applies to the Android challenge purchase too. Not yet seen: a real Android purchase ending `granted`. Play products for the wishes exist in RevenueCat (imported 2026-11-24).
 ### 2026-11-27 (devops, `fix/scheduler-zombie-reaping`)

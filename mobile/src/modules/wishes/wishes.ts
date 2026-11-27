@@ -305,6 +305,25 @@ export function treatsPreparing(wishes: ChildWishesState | null): boolean {
   return wishes !== null && wishes.treats.left > 0 && !wishes.treats.ready;
 }
 
+/**
+ * »Darilo je na poti« (David 2026-11-27, a tester played on with the old toy and only found
+ * »Na poti …« inside »Želje«): the variants of the pet's bought durable items that are not
+ * there yet (`media_ready` false). The pet screen says so until `PetUpdated`
+ * `item_media_ready` (and the `item_ready` push) refetch the state. Treats have their own
+ * line (`treatsPreparing`). Nothing here mentions pictures or videos.
+ */
+export function giftsOnTheWay(wishes: ChildWishesState | null): string[] {
+  return wishes === null ? [] : wishes.items.filter((i) => !i.media_ready).map((i) => i.variant);
+}
+
+/**
+ * The parent's »Kupljeno« answer: something the pet now owns is still on its way (a bought
+ * durable item without its content yet, or treats that are still »preparing«).
+ */
+export function anyOnTheWay(items: readonly ParentPetItem[]): boolean {
+  return items.some((i) => (i.owned && !i.media_ready) || i.preparing);
+}
+
 /** »Priboljšek« is on the pet screen only while the pet has treats. */
 export function showTreatButton(wishes: ChildWishesState | null, locked: boolean): boolean {
   return wishes !== null && !locked && wishes.treats.left > 0;

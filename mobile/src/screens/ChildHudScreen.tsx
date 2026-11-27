@@ -63,6 +63,7 @@ import {
   Award,
   BookOpen,
   HandHeart,
+  Gift,
   Hourglass,
   Info,
   Moon,
@@ -172,7 +173,8 @@ import { useBirthdayCard } from '@/modules/birthday/birthdaySeen';
 import ChildSettingsSheet from '@/components/ChildSettingsSheet';
 import WishesSheet from '@/modules/wishes/WishesSheet';
 import { TreatChip, treatErrorText } from '@/modules/wishes/TreatChip';
-import { showTreatButton, treatsPreparing } from '@/modules/wishes/wishes';
+import { giftOnTheWayText } from '@/modules/wishes/giftNote';
+import { giftsOnTheWay, showTreatButton, treatsPreparing } from '@/modules/wishes/wishes';
 import { useGiveTreat } from '@/hooks/queries/useWishes';
 
 import { mediaModeOf } from '@/modules/display/display';
@@ -836,6 +838,9 @@ export default function ChildHudScreen() {
   // David 2026-11-15: »Priboljšek« is off until the treat's animation is ready (never over a lock).
   const treatPreparing = showTreatButton(view.wishes, locked) && treatsPreparing(view.wishes);
   const treatPreparingNote = treatPreparing ? t('wishes:child.treat.preparing') : undefined;
+  // David 2026-11-27: a bought thing that is not there yet — »Darilo je na poti: …« until the
+  // state says it is ready (never over a lock; never a word about pictures or videos).
+  const giftNote = locked ? null : giftOnTheWayText(giftsOnTheWay(view.wishes));
   const playSleeps = rules.play.reason === 'sleeping';
   const groomingSleeps = rules.grooming.reason === 'sleeping';
   const sleepNote = trainingSleeps
@@ -931,6 +936,9 @@ export default function ChildHudScreen() {
       : []),
     ...(treatPreparingNote !== undefined
       ? [{ key: 'treat-preparing', priority: STACK_PRIORITY.hint, short: treatPreparingNote, icon: Hourglass, node: <PlayBlockedNote text={treatPreparingNote} testID="hud-treat-preparing" /> }]
+      : []),
+    ...(giftNote !== null
+      ? [{ key: 'gift-on-the-way', priority: STACK_PRIORITY.hint, short: giftNote, icon: Gift, node: <PlayBlockedNote text={giftNote} testID="hud-gift-on-the-way" /> }]
       : []),
     ...(playBlockedText !== null
       ? [{ key: 'play-blocked', priority: STACK_PRIORITY.hint, short: playBlockedText, icon: HandHeart, node: <PlayBlockedNote text={playBlockedText} /> }]

@@ -23,6 +23,8 @@
     "requested": "Request sent",
     "owned": "Already has it",
     "onTheWay": "On its way …",
+    "giftOnTheWay": "A gift is on its way: {{item}}. It can take a few minutes.",
+    "giftsOnTheWay": "Gifts are on their way. It can take a few minutes.",
     "declined": "Maybe another time",
     "blocked": "You can't ask for new things right now.",
     "limit": "You already have {{count}} open requests. Wait until your parent answers.",
@@ -100,6 +102,7 @@
     "busy": "Please wait …",
     "result": {
       "assigned": "Done — the item has been added.",
+      "assignedOnTheWay": "Done — the item is on its way. It will be with the pet in a few minutes; your child gets a notification when it's there.",
       "pending": "The purchase is recorded; the item will be added soon.",
       "alreadyOwned": "This pet already has that item. The purchase stays under “Who gets it?” for another pet.",
       "refused": "The item couldn't be added. The purchase stays under “Who gets it?”.",
