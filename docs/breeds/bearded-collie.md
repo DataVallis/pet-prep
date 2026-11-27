@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bearded_collie` (viri S1076–S1083; ponovno S10, S11, S14, S24, S35, S45, S123, S174); seznam za vzreditelja: ni preverjen (seznam testov RKC ni bil vrnjen) |
 | Izvor | FCI št. 271 »Bearded Collie«, skupina 1, sekcija 1 (ovčarski psi), Velika Britanija (S1076) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 140. mesto »Bearded Collie« (S174, prebrano 2026-11-27) |
-| PR-ji | pet-prep #1673 (pasma, združen `512cb5c` 2026-11-27) · portret: zagon `breed-portraits.yml` 45933513338 (skrilasto siv z belimi lisami, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-144-bearded-collie-portrait` · barvne različice: pet-prep PR `feat/M5-R10-144-bearded-collie-colours` · spletna stran: pet-prep-website `feat/register-bearded-collie` |
+| PR-ji | pet-prep #1673 (pasma, združen `512cb5c` 2026-11-27) · portret: zagon `breed-portraits.yml` 45933513338 (skrilasto siv z belimi lisami, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-144-bearded-collie-portrait` · portret PR #1675 (združen `b30eeea`) · barvne različice: zagon 45934705507 (5/5 odobrenih), pet-prep PR `feat/M5-R10-144-bearded-collie-colours` · spletna stran: pet-prep-website `feat/register-bearded-collie` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,6 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 125. meseca; 4 → 3 → 2 obroka; učenje 1,2×) | 🛠 | 💶 izziv | M5-R10-144 | 2026-11-27 |
 | Česanje vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-27 |
 | Barva (izbirnik: skrilasto sivo-bel, črno-bel, modro-bel, rjavo-bel, rdečkasto plavo-bel, peščeno-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-27 |
+| Barvne fotografije (izbirnik in spletna stran): črno-bel, modro-bel, rjavo-bel, rdečkasto plavo-bel, peščeno-bel — vseh pet odobril Claude (zagon `breed-portraits.yml` 45934705507); skrilasto sivo-bel = portret | ✅ AI fotografije | — | M5-R21 / §8b | 2026-11-27 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), skrilasto siv z belimi lisami, nestrižena kosmata dlaka z brado, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-27 |
 | Stran na petprep.si (`/animals/dogs/bearded-collie`, `/sl/zivali/psi/bradati-koli`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 

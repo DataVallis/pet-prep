@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "8a878bb2984f1ba52ad3ec7eb91ef360dfa625ae6f3aca19791576da5d802fd5"
+      "sha256": "7282a8c5e92ee2201ac1886cf9a1ee65e18cfc943b51336d8f30db97ad069ecb"
     }
   },
   "suitability_vocabulary": {
@@ -84600,7 +84600,58 @@
         "file": "bearded-collie.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "grey-white",
+            "label": {
+              "en": "Slate grey and white",
+              "sl": "Skrilasto sivo-bel"
+            },
+            "file": "dog/bearded-collie.webp",
+            "default": true
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/bearded-collie--black-white.webp"
+          },
+          {
+            "key": "blue-white",
+            "label": {
+              "en": "Blue and white",
+              "sl": "Modro-bel"
+            },
+            "file": "dog/bearded-collie--blue-white.webp"
+          },
+          {
+            "key": "brown-white",
+            "label": {
+              "en": "Brown and white",
+              "sl": "Rjavo-bel"
+            },
+            "file": "dog/bearded-collie--brown-white.webp"
+          },
+          {
+            "key": "fawn-white",
+            "label": {
+              "en": "Reddish fawn and white",
+              "sl": "Rdečkasto plavo-bel"
+            },
+            "file": "dog/bearded-collie--fawn-white.webp"
+          },
+          {
+            "key": "sandy-white",
+            "label": {
+              "en": "Sandy and white",
+              "sl": "Peščeno-bel"
+            },
+            "file": "dog/bearded-collie--sandy-white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "not_found",
