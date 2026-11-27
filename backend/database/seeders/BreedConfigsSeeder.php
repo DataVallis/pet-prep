@@ -2895,7 +2895,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 1360,
                 'label_key' => 'breeds.saluki',
-                'search_keywords' => ['saluki', 'gazelle hound', 'persian greyhound', 'arabian hound', 'perzijski hrt', 'gazelji hrt'],
+                'search_keywords' => ['saluki', 'perzijski hrt', 'persian greyhound', 'gazelle hound', 'arabian hound', 'hrt', 'sighthound'],
             ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.

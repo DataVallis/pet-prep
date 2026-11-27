@@ -113,7 +113,7 @@ describe('breed, config and database', function () {
             ->and($breed->isPremium())->toBeTrue()
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 1360, 'breeds.saluki'])
-            ->and($config->search_keywords)->toBe(['saluki', 'gazelle hound', 'persian greyhound', 'arabian hound', 'perzijski hrt', 'gazelji hrt'])
+            ->and($config->search_keywords)->toBe(['saluki', 'perzijski hrt', 'persian greyhound', 'gazelle hound', 'arabian hound', 'hrt', 'sighthound'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) saluData('proposed_game_parameters.saluki.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);
