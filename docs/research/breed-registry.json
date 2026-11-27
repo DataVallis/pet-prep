@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "320ebccb3d91fb59899f7ba6489e13cdb38960f2c1550f3f2c8acf6b62a22e1e"
+      "sha256": "cd4b9ce1368b77755f3def8c37924e89bcba56144f20733cdea91179f19a81d8"
     }
   },
   "suitability_vocabulary": {
@@ -83975,7 +83975,12 @@
           "S1075"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "smooth-fox-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
