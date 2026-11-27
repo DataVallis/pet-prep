@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d1e205a463ee55b9509f4866591f51becfa7ac3b56a2521684eb7cff1df7f011"
+      "sha256": "f6c7f6934b5291cb6b09d39a9348eef5a9c2d71f5670f43baf3e20246832aa88"
     }
   },
   "suitability_vocabulary": {
@@ -85133,7 +85133,74 @@
         "file": "saluki.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/saluki.webp",
+            "default": true
+          },
+          {
+            "key": "cream",
+            "label": {
+              "en": "Cream",
+              "sl": "Kremast"
+            },
+            "file": "dog/saluki--cream.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/saluki--white.webp"
+          },
+          {
+            "key": "golden",
+            "label": {
+              "en": "Golden",
+              "sl": "Zlat"
+            },
+            "file": "dog/saluki--golden.webp"
+          },
+          {
+            "key": "red",
+            "label": {
+              "en": "Red",
+              "sl": "Rdeč"
+            },
+            "file": "dog/saluki--red.webp"
+          },
+          {
+            "key": "grizzle-tan",
+            "label": {
+              "en": "Grizzle and tan",
+              "sl": "Sivkast z rjavimi oznakami"
+            },
+            "file": "dog/saluki--grizzle-tan.webp"
+          },
+          {
+            "key": "tricolour",
+            "label": {
+              "en": "Tricolour",
+              "sl": "Tribarven"
+            },
+            "file": "dog/saluki--tricolour.webp"
+          },
+          {
+            "key": "black-tan",
+            "label": {
+              "en": "Black and tan",
+              "sl": "Črn z rjavimi oznakami"
+            },
+            "file": "dog/saluki--black-tan.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",
