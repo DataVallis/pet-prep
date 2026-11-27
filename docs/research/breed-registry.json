@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "bbd8fc5329e5abaf85f8ec0a397e9d797f17f6fc60d553bb58d66c651d5437c8"
+      "sha256": "9ad01bf17bf49ece1cd1e496bd57bac31e6b6edcf3ffac49595106622f238403"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "43c9b445447c5f503c6c3b11953bba5f49efb6955704e310fd03d282308747eb"
+      "sha256": "a65c8ef9b9bb1fa945a7d9b126cb30ae0884b20a74570677cb73c0c79dcb1e53"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "0464e7327f0c3737d8f6243a493fabd3bbc806ea6ae53264f2cf509c201c0341"
+      "sha256": "0baf22c86c73cc798472f766e965c0e7f8d01a4a2548c55835e96531ff01fd5b"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "caf30eba8a0778ca550b396e94f270b24c705e8e2b68b455730b2d0ae7dd57e2"
+      "sha256": "292d66b49bf8ea3866bcb65058666cecbf43fb798c15a48f6d691df4a568c6af"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1c24da4522731387aa51b423efe2423def53f30dbc0120f9d955d82c5c01c491"
+      "sha256": "e719bb5a1a50b2283b87c1b93fabc778c0734cdcffe343fd9fddc239a26d07ae"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "11f3f919ba1300f3e8da2eeb66fba1b51962a0ca48a33abbf2225bd1451c194b"
+      "sha256": "c594245990c2e266168782b91c78168b6376ad07e47861ff64c3e05c0b71b606"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "35a1e86d6cac719fe5bdda55f0d6cb42b5843e361b47527db9c503020f1c9e88"
+      "sha256": "bce87de70b6e7c00daf2c036134da05ef7226d3dc76fccd364bfefb8854d84bb"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 133,
+      "breed_count": 134,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -83427,6 +83427,589 @@
       ]
     },
     {
+      "id": "smooth_fox_terrier",
+      "species": "dog",
+      "order": 133,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Smooth Fox Terrier",
+        "sl": "Gladkodlaki foksterier"
+      },
+      "slug": {
+        "en": "smooth-fox-terrier",
+        "sl": "gladkodlaki-foksterier"
+      },
+      "synonyms": {
+        "en": [
+          "Fox Terrier (Smooth)",
+          "Smooth-coated Fox Terrier",
+          "Foxie"
+        ],
+        "sl": [
+          "foksterier",
+          "gladkodlaki fox terier",
+          "kratkodlaki foksterier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "h1_2",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S1075"
+          ],
+          "ref": "smooth_fox_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              39,
+              39
+            ],
+            "female": [
+              39,
+              39
+            ]
+          },
+          "source_ids": [
+            "S1070"
+          ],
+          "ref": "smooth_fox_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              7.5,
+              8
+            ],
+            "female": [
+              7,
+              7.5
+            ]
+          },
+          "source_ids": [
+            "S1070"
+          ],
+          "ref": "smooth_fox_terrier.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "smooth_fox_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S1075"
+          ],
+          "ref": "smooth_fox_terrier.lifespan.dogs_trust",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            13
+          ],
+          "source_ids": [
+            "S1071"
+          ],
+          "ref": "smooth_fox_terrier.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "proposed_game_parameters.smooth_fox_terrier.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S1075"
+          ],
+          "ref": "smooth_fox_terrier.suitability.dogs_trust_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S1071"
+          ],
+          "ref": "smooth_fox_terrier.suitability.petmd_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 40,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "smooth_fox_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 12,
+            "group": 3,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S1070"
+          ],
+          "ref": "smooth_fox_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "primary_lens_luxation",
+          "source_ids": [
+            "S1071"
+          ],
+          "ref": "smooth_fox_terrier.health.primary_lens_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S1071"
+          ],
+          "ref": "smooth_fox_terrier.health.legg_perthes",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S1071"
+          ],
+          "ref": "smooth_fox_terrier.health.patellar_luxation",
+          "confidence": "high"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S1071"
+          ],
+          "ref": "smooth_fox_terrier.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "smooth_fox_terrier.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "smooth_fox_terrier.health.glaucoma",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S873"
+          ],
+          "ref": "smooth_fox_terrier.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_tooth_brushing",
+          "source_ids": [
+            "S1072"
+          ],
+          "ref": "smooth_fox_terrier.health.dental",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S873",
+              "S1071"
+            ],
+            "refs": [
+              "smooth_fox_terrier.exercise.adult",
+              "smooth_fox_terrier.exercise.daily_text"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1071"
+            ],
+            "refs": [
+              "smooth_fox_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1072"
+            ],
+            "refs": [
+              "smooth_fox_terrier.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1071"
+            ],
+            "refs": [
+              "smooth_fox_terrier.suitability.petmd_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1072"
+            ],
+            "refs": [
+              "smooth_fox_terrier.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S873"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S873 '1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1075"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × Dogs Trust lower bound 'typically 12+ years', S1075)"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 40, Average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.grooming",
+            "basis_source_ids": [
+              "S1071"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (PetMD »once a week«, WebMD »A weekly brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S1072"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »every day« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.smooth_fox_terrier.ear_cleaning",
+            "basis_source_ids": [
+              "S1072"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes enkrat na teden (WebMD »weekly«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S873",
+          "S1071",
+          "S1072",
+          "S1075"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S873",
+        "S1070",
+        "S1071",
+        "S1072",
+        "S1075",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -90903,6 +91486,34 @@
       "publisher": "WebMD Pets — Susan Adcox, medically reviewed by Zilpah Sheikh, MD (April 22, 2026)",
       "title": "What to Know About Welsh Springer Spaniels",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-welsh-springer-spaniels"
+    },
+    {
+      "id": "S1070",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 12 — Fox Terrier (Smooth) (English PDF, header 07.02.2017/ EN)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/012g03-en.pdf"
+    },
+    {
+      "id": "S1071",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Kloepple, reviewed by Barri J. Morrison, DVM (updated Sep. 11, 2024)",
+      "title": "Smooth Fox Terrier",
+      "url": "https://www.petmd.com/dog/breeds/smooth-fox-terrier"
+    },
+    {
+      "id": "S1072",
+      "tier": "B",
+      "publisher": "WebMD Pets — WebMD Editorial Team, medically reviewed by Zilpah Sheikh, MD (2026-05-08)",
+      "title": "What to Know About Smooth Fox Terriers",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-smooth-fox-terriers"
+    },
+    {
+      "id": "S1075",
+      "tier": "B",
+      "publisher": "Dogs Trust (UK)",
+      "title": "Fox Terrier — breed information (one page for both coats)",
+      "url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/fox-terrier"
     },
     {
       "id": "C1",
