@@ -713,6 +713,16 @@ return [
         'fawn-white' => 'dogs/bearded-collie--fawn-white.webp',
         'sandy-white' => 'dogs/bearded-collie--sandy-white.webp',
     ],
+    'saluki' => [
+        'fawn' => 'dogs/saluki.webp',
+        'cream' => 'dogs/saluki--cream.webp',
+        'white' => 'dogs/saluki--white.webp',
+        'golden' => 'dogs/saluki--golden.webp',
+        'red' => 'dogs/saluki--red.webp',
+        'grizzle-tan' => 'dogs/saluki--grizzle-tan.webp',
+        'tricolour' => 'dogs/saluki--tricolour.webp',
+        'black-tan' => 'dogs/saluki--black-tan.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',

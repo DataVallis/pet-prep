@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `saluki` (viri S1084–S1093; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: test DNK za NCL8 (WSAVA, K46) |
 | Izvor | FCI št. 269 »Saluki«, skupina 10, sekcija 1 (dolgodlaki in resasti hrti), Bližnji vzhod, pokroviteljstvo FCI (S1084, S1085) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 141. mesto »Saluki« (S174, zabeleženo 2026-11-27 v vrstici 144) |
-| PR-ji | pet-prep #1680 (pasma, združen `b1a449c` 2026-11-27) · portret: zagon `breed-portraits.yml` 45956263446 (plavo rjav, resasta različica, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-145-saluki-portrait` · barvne različice: sledijo · spletna stran: pet-prep-website `feat/register-saluki` |
+| PR-ji | pet-prep #1680 (pasma, združen `b1a449c` 2026-11-27) · portret: zagon `breed-portraits.yml` 45956263446 (plavo rjav, resasta različica, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-145-saluki-portrait` · portret PR #1681 (združen `d99ad68`) · barvne različice: zagon 45957649663 (7/7 odobril Claude), pet-prep PR `feat/M5-R10-145-saluki-colours` · spletna stran: pet-prep-website `feat/register-saluki` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,6 +42,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-145 | 2026-11-27 |
 | Česanje 2× na teden, ščetkanje zob vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R17 | 2026-11-27 |
 | Barva (izbirnik: plavo rjav, kremast, bel, zlat, rdeč, sivkast z rjavimi oznakami, tribarven, črn z rjavimi oznakami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-27 |
+| Barvne fotografije (izbirnik in spletna stran): kremast, bel, zlat, rdeč, sivkast z rjavimi oznakami, tribarven, črn z rjavimi oznakami — vseh sedem odobril Claude (zagon `breed-portraits.yml` 45957649663); plavo rjav = portret | ✅ AI fotografije | — | M5-R21 / §8b | 2026-11-27 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), plavo rjav (fawn), resasta svilnata dlaka na uhljih, nogah in repu, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-27 |
 | Stran na petprep.si (`/animals/dogs/saluki`, `/sl/zivali/psi/saluki`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
