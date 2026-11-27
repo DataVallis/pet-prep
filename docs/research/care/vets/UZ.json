@@ -59,7 +59,8 @@
         "hr": "Radi non-stop, bez stanke za ručak, slobodnih dana i blagdana. Hitna linija +998 99 067 07 90.",
         "de": "Rund um die Uhr geöffnet, ohne Mittagspause, Ruhetage oder Feiertage. Notfallnummer +998 99 067 07 90.",
         "fr": "Ouvert 24 h/24, 7 j/7, sans pause déjeuner ni jour de fermeture, jours fériés compris. Ligne d’urgence : +998 99 067 07 90.",
-        "es": "Abierto las 24 horas, sin pausa para comer, días libres ni festivos. Línea de urgencias +998 99 067 07 90."
+        "es": "Abierto las 24 horas, sin pausa para comer, días libres ni festivos. Línea de urgencias +998 99 067 07 90.",
+        "it": "Aperto 24/7, senza pausa pranzo, giorni di chiusura o festivi. Linea emergenze +998 99 067 07 90."
       }
     },
     {
@@ -87,7 +88,8 @@
         "hr": "Radi non-stop, bez slobodnih dana. Ostali brojevi: +998 97 344 08 47, +998 88 100 32 82.",
         "de": "Rund um die Uhr geöffnet, ohne Ruhetage. Weitere Nummern: +998 97 344 08 47, +998 88 100 32 82.",
         "fr": "Ouvert 24 h/24, sans jour de fermeture. Autres numéros : +998 97 344 08 47, +998 88 100 32 82.",
-        "es": "Abierto las 24 horas, sin días libres. Otros números: +998 97 344 08 47, +998 88 100 32 82."
+        "es": "Abierto las 24 horas, sin días libres. Otros números: +998 97 344 08 47, +998 88 100 32 82.",
+        "it": "Aperto 24 ore su 24, senza giorni di chiusura. Altri numeri: +998 97 344 08 47, +998 88 100 32 82."
       }
     },
     {
@@ -115,7 +117,8 @@
         "hr": "Svaki dan 9:00–18:00, nedjeljom zatvoreno. Fiksni telefon +998 71 256 54 50.",
         "de": "Täglich 9.00–18.00 Uhr, sonntags geschlossen. Festnetz +998 71 256 54 50.",
         "fr": "Tous les jours 9 h–18 h, fermé le dimanche. Ligne fixe : +998 71 256 54 50.",
-        "es": "A diario 9:00–18:00 h, domingo cerrado. Teléfono fijo +998 71 256 54 50."
+        "es": "A diario 9:00–18:00 h, domingo cerrado. Teléfono fijo +998 71 256 54 50.",
+        "it": "Tutti i giorni 9:00–18:00, chiuso la domenica. Telefono fisso +998 71 256 54 50."
       }
     },
     {
@@ -143,7 +146,8 @@
         "hr": "pon–pet 9:00–18:00, sub–ned 10:00–18:00, stanka za ručak 13:00–14:00; hitne slučajeve prima tijekom radnog vremena.",
         "de": "Mo–Fr 9.00–18.00 Uhr, Sa–So 10.00–18.00 Uhr, Mittagspause 13.00–14.00 Uhr; Notfälle werden während der Öffnungszeiten angenommen.",
         "fr": "Lun.–ven. 9 h–18 h, sam.–dim. 10 h–18 h, pause déjeuner 13 h–14 h ; accepte les urgences pendant les heures d’ouverture.",
-        "es": "Lun–vie 9:00–18:00 h, sáb–dom 10:00–18:00 h, pausa para comer 13:00–14:00 h; atiende urgencias en horario de apertura."
+        "es": "Lun–vie 9:00–18:00 h, sáb–dom 10:00–18:00 h, pausa para comer 13:00–14:00 h; atiende urgencias en horario de apertura.",
+        "it": "Lun–ven 9:00–18:00, sab e dom 10:00–18:00, pausa pranzo 13:00–14:00; accetta casi di emergenza durante l’orario di apertura."
       }
     }
   ],

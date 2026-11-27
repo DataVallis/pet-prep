@@ -52,7 +52,8 @@
         "hr": "Hitna linija 24 sata: +1 246 429 9355. Hitni veterinarski slučajevi na cijelom otoku.",
         "de": "Notfalltelefon rund um die Uhr: +1 246 429 9355. Tierärztliche Notfälle auf der ganzen Insel.",
         "fr": "Ligne d’urgence 24 h/24 : +1 246 429 9355. Urgences vétérinaires sur toute l’île.",
-        "es": "Línea de urgencias las 24 horas: +1 246 429 9355. Urgencias veterinarias en toda la isla."
+        "es": "Línea de urgencias las 24 horas: +1 246 429 9355. Urgencias veterinarias en toda la isla.",
+        "it": "Linea di emergenza 24 ore su 24: +1 246 429 9355. Urgenze veterinarie in tutta l’isola."
       }
     },
     {
@@ -79,7 +80,8 @@
         "hr": "Hitna linija: +1 246 231 0450.",
         "de": "Notfalltelefon: +1 246 231 0450.",
         "fr": "Ligne d’urgence : +1 246 231 0450.",
-        "es": "Línea de urgencias: +1 246 231 0450."
+        "es": "Línea de urgencias: +1 246 231 0450.",
+        "it": "Linea di emergenza: +1 246 231 0450."
       }
     },
     {
@@ -109,7 +111,8 @@
         "hr": "Uz naručivanje. pon–pet 8:30–17:00, sub–ned 9:00–11:00.",
         "de": "Nur nach Terminvereinbarung. Mo–Fr 8.30–17.00 Uhr, Sa–So 9.00–11.00 Uhr.",
         "fr": "Sur rendez-vous. Lun.–ven. 8 h 30–17 h, sam.–dim. 9 h–11 h.",
-        "es": "Con cita previa. Lun–vie 8:30–17:00 h, sáb–dom 9:00–11:00 h."
+        "es": "Con cita previa. Lun–vie 8:30–17:00 h, sáb–dom 9:00–11:00 h.",
+        "it": "Su appuntamento. Lun–ven 8:30–17:00, sab–dom 9:00–11:00."
       }
     },
     {
@@ -139,7 +142,8 @@
         "hr": "Uz naručivanje. pon–pet 9:00–18:00, sub–ned 9:00–11:00.",
         "de": "Nur nach Terminvereinbarung. Mo–Fr 9.00–18.00 Uhr, Sa–So 9.00–11.00 Uhr.",
         "fr": "Sur rendez-vous. Lun.–ven. 9 h–18 h, sam.–dim. 9 h–11 h.",
-        "es": "Con cita previa. Lun–vie 9:00–18:00 h, sáb–dom 9:00–11:00 h."
+        "es": "Con cita previa. Lun–vie 9:00–18:00 h, sáb–dom 9:00–11:00 h.",
+        "it": "Su appuntamento. Lun–ven 9:00–18:00, sab–dom 9:00–11:00."
       }
     }
   ],

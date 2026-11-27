@@ -52,7 +52,8 @@
         "hr": "Sveučilišna nastavna bolnica, otvorena 24 sata dnevno, 7 dana u tjednu, s hitnom i intenzivnom skrbi.",
         "de": "Universitäre Lehrklinik, rund um die Uhr an 7 Tagen die Woche geöffnet, mit Notfall- und Intensivversorgung.",
         "fr": "Hôpital universitaire d’enseignement, ouvert 24 h/24, 7 j/7, avec urgences et soins intensifs.",
-        "es": "Hospital universitario docente abierto las 24 horas, los 7 días de la semana, con urgencias y cuidados críticos."
+        "es": "Hospital universitario docente abierto las 24 horas, los 7 días de la semana, con urgencias y cuidados críticos.",
+        "it": "Ospedale didattico universitario, aperto 24 ore su 24, 7 giorni su 7, con pronto soccorso e terapia intensiva."
       }
     },
     {
@@ -83,7 +84,8 @@
         "hr": "Hitna linija radi 24 sata, 7 dana u tjednu, uključujući blagdane, u podružnicama DHA i Lake City. Podružnica UVAS 9:00–03:00, podružnica UET 12:00–22:00.",
         "de": "Notfalltelefon rund um die Uhr an 7 Tagen die Woche, auch feiertags, in den Filialen DHA und Lake City. Filiale UVAS 9.00–3.00 Uhr, Filiale UET 12.00–22.00 Uhr.",
         "fr": "Ligne d’urgence 24 h/24, 7 j/7, jours fériés compris, aux sites DHA et Lake City. Site UVAS 9 h–3 h, site UET 12 h–22 h.",
-        "es": "Línea de urgencias abierta las 24 horas, los 7 días de la semana, también en festivos, en las sedes de DHA y Lake City. Sede UVAS 9:00–3:00 h, sede UET 12:00–22:00 h."
+        "es": "Línea de urgencias abierta las 24 horas, los 7 días de la semana, también en festivos, en las sedes de DHA y Lake City. Sede UVAS 9:00–3:00 h, sede UET 12:00–22:00 h.",
+        "it": "Linea d’emergenza attiva 24 ore su 24, 7 giorni su 7, festivi inclusi, nelle sedi DHA e Lake City. Sede UVAS 9:00–03:00, sede UET 12:00–22:00."
       }
     },
     {
@@ -114,7 +116,8 @@
         "hr": "Otvoreno pon–ned non-stop; hitna skrb 24/7.",
         "de": "Montag bis Sonntag rund um die Uhr geöffnet; Notfallversorgung rund um die Uhr.",
         "fr": "Ouvert du lundi au dimanche, 24 h/24 ; urgences 24 h/24, 7 j/7.",
-        "es": "Abierto de lunes a domingo las 24 horas; urgencias las 24 horas."
+        "es": "Abierto de lunes a domingo las 24 horas; urgencias las 24 horas.",
+        "it": "Aperto dal lunedì alla domenica 24 ore su 24; pronto soccorso 24 ore su 24."
       }
     },
     {
@@ -144,7 +147,8 @@
         "hr": "Otvoreno 24/7, hospitalizirani ljubimci nadziru se non-stop.",
         "de": "Rund um die Uhr geöffnet, mit Überwachung stationär aufgenommener Haustiere rund um die Uhr.",
         "fr": "Ouvert 24 h/24, 7 j/7, avec surveillance continue des animaux hospitalisés.",
-        "es": "Abierto las 24 horas, con vigilancia continua de las mascotas hospitalizadas."
+        "es": "Abierto las 24 horas, con vigilancia continua de las mascotas hospitalizadas.",
+        "it": "Aperto 24 ore su 24 con monitoraggio continuo degli animali ricoverati."
       }
     },
     {
@@ -174,7 +178,8 @@
         "hr": "Otvoreno 24/7, Airport Road. Naručivanje putem WhatsAppa.",
         "de": "Rund um die Uhr geöffnet, Airport Road. Terminbuchung per WhatsApp.",
         "fr": "Ouvert 24 h/24, 7 j/7 (Airport Road). Réservation par WhatsApp.",
-        "es": "Abierto las 24 horas, Airport Road. Reservas por WhatsApp."
+        "es": "Abierto las 24 horas, Airport Road. Reservas por WhatsApp.",
+        "it": "Aperto 24 ore su 24, Airport Road. Prenotazioni tramite WhatsApp."
       }
     },
     {
@@ -205,7 +210,8 @@
         "hr": "Otvoreno svaki dan 11:00–23:00; hitni slučajevi 24/7. Mobitel 0306 7997887.",
         "de": "Täglich 11.00–23.00 Uhr geöffnet; Notfälle rund um die Uhr. Mobil 0306 7997887.",
         "fr": "Ouvert tous les jours 11 h–23 h ; urgences 24 h/24, 7 j/7. Mobile : 0306 7997887.",
-        "es": "Abierto a diario 11:00–23:00 h; urgencias las 24 horas. Móvil 0306 7997887."
+        "es": "Abierto a diario 11:00–23:00 h; urgencias las 24 horas. Móvil 0306 7997887.",
+        "it": "Aperto tutti i giorni 11:00–23:00; emergenze 24 ore su 24. Cellulare 0306 7997887."
       }
     },
     {
@@ -236,7 +242,8 @@
         "hr": "Ambulantni pregledi svaki dan 10:00–22:00; hitna služba 24/7, nazovi bilo kada.",
         "de": "Ambulante Sprechstunde täglich 10.00–22.00 Uhr; Notfälle rund um die Uhr, jederzeit anrufen.",
         "fr": "Consultations externes tous les jours 10 h–22 h ; urgences 24 h/24, 7 j/7, appelez à toute heure.",
-        "es": "Consultas externas 10:00–22:00 h a diario; urgencias las 24 horas, llama a cualquier hora."
+        "es": "Consultas externas 10:00–22:00 h a diario; urgencias las 24 horas, llama a cualquier hora.",
+        "it": "Ambulatorio tutti i giorni 10:00–22:00; urgenze 24 ore su 24, telefonare in qualsiasi momento."
       }
     },
     {
@@ -267,7 +274,8 @@
         "hr": "Otvoreno non-stop, 24/7. Također 0304 534 9999, 051 2653157.",
         "de": "Rund um die Uhr geöffnet. Außerdem 0304 534 9999, 051 2653157.",
         "fr": "Ouvert 24 h/24, 7 j/7. Aussi : 0304 534 9999, 051 2653157.",
-        "es": "Abierto las 24 horas. También 0304 534 9999, 051 2653157."
+        "es": "Abierto las 24 horas. También 0304 534 9999, 051 2653157.",
+        "it": "Aperto 24 ore su 24, 7 giorni su 7. Anche 0304 534 9999, 051 2653157."
       }
     },
     {
@@ -297,7 +305,8 @@
         "hr": "Hitna skrb za ljubimce 24/7, hitni tim u pripravnosti. Također 051 5148545.",
         "de": "Notfallversorgung für Haustiere rund um die Uhr, Notfallteam in Bereitschaft. Außerdem 051 5148545.",
         "fr": "Urgences pour animaux 24 h/24, 7 j/7, équipe d’urgence en astreinte. Second numéro : 051 5148545.",
-        "es": "Urgencias para mascotas las 24 horas, equipo de urgencias de guardia. También 051 5148545."
+        "es": "Urgencias para mascotas las 24 horas, equipo de urgencias de guardia. También 051 5148545.",
+        "it": "Pronto soccorso per animali domestici 24 ore su 24, squadra di emergenza sempre pronta. Anche 051 5148545."
       }
     },
     {
@@ -327,7 +336,8 @@
         "hr": "Otvoreno svaki dan 9:30–21:00; hitna linija 0315 9596162, termini 0333 1904310.",
         "de": "Täglich 9.30–21.00 Uhr geöffnet; Notfallnummer 0315 9596162, Terminvereinbarung 0333 1904310.",
         "fr": "Ouvert tous les jours 9 h 30–21 h ; ligne d’urgence : 0315 9596162, rendez-vous : 0333 1904310.",
-        "es": "Abierto a diario 9:30–21:00 h; línea de urgencias 0315 9596162, citas 0333 1904310."
+        "es": "Abierto a diario 9:30–21:00 h; línea de urgencias 0315 9596162, citas 0333 1904310.",
+        "it": "Aperto tutti i giorni 9:30–21:00; linea urgenze 0315 9596162, appuntamenti 0333 1904310."
       }
     },
     {
@@ -357,7 +367,8 @@
         "hr": "Otvoreno svaki dan otprilike od 11:00 do 23:30; nudi podršku u hitnim slučajevima, nazovi unaprijed. Također 0320 8285086.",
         "de": "Täglich etwa 11.00–23.30 Uhr geöffnet; Notfallhilfe wird angeboten, bitte vorher anrufen. Außerdem 0320 8285086.",
         "fr": "Ouvert tous les jours d’environ 11 h à 23 h 30 ; urgences prises en charge, appelez avant de venir. Second numéro : 0320 8285086.",
-        "es": "Abierto todos los días de 11:00 a 23:30 h aproximadamente; se ofrece atención de urgencias, llama antes. También 0320 8285086."
+        "es": "Abierto todos los días de 11:00 a 23:30 h aproximadamente; se ofrece atención de urgencias, llama antes. También 0320 8285086.",
+        "it": "Aperto tutti i giorni dalle 11:00 alle 23:30 circa; assistenza per le urgenze, telefonare in anticipo. Anche 0320 8285086."
       }
     },
     {
@@ -387,7 +398,8 @@
         "hr": "Otvoreno svaki dan od podneva do ponoći. Također +92 304 0738738.",
         "de": "Täglich 12.00–24.00 Uhr geöffnet. Außerdem +92 304 0738738.",
         "fr": "Ouvert tous les jours de midi à minuit. Aussi : +92 304 0738738.",
-        "es": "Abierto a diario de 12:00 a 24:00 h. También +92 304 0738738."
+        "es": "Abierto a diario de 12:00 a 24:00 h. También +92 304 0738738.",
+        "it": "Aperto tutti i giorni 12:00–24:00. Anche +92 304 0738738."
       }
     },
     {
@@ -418,7 +430,8 @@
         "hr": "Otvoreno 24 sata, hitni slučajevi 24/7.",
         "de": "Rund um die Uhr geöffnet, auch für Notfälle.",
         "fr": "Ouvert 24 h/24, urgences assurées 24 h/24, 7 j/7.",
-        "es": "Abierto las 24 horas, con urgencias disponibles las 24 horas."
+        "es": "Abierto las 24 horas, con urgencias disponibles las 24 horas.",
+        "it": "Aperto 24 ore su 24, con disponibilità per le urgenze 24 ore su 24."
       }
     },
     {
@@ -449,7 +462,8 @@
         "hr": "Redovita skrb svaki dan 11:00–21:00; podrška u hitnim slučajevima 24/7.",
         "de": "Routineversorgung täglich 11.00–21.00 Uhr; Notfallhilfe rund um die Uhr verfügbar.",
         "fr": "Soins courants tous les jours 11 h–21 h ; urgences assurées 24 h/24, 7 j/7.",
-        "es": "Atención habitual todos los días 11:00–21:00 h; urgencias las 24 horas."
+        "es": "Atención habitual todos los días 11:00–21:00 h; urgencias las 24 horas.",
+        "it": "Visite di routine tutti i giorni 11:00–21:00; assistenza per le urgenze 24 ore su 24."
       }
     },
     {
@@ -479,7 +493,8 @@
         "hr": "Otvoreno svaki dan 15:00–22:00. WhatsApp dostupan.",
         "de": "Täglich 15.00–22.00 Uhr geöffnet. WhatsApp verfügbar.",
         "fr": "Ouvert tous les jours 15 h–22 h. WhatsApp disponible.",
-        "es": "Abierto a diario 15:00–22:00 h. WhatsApp disponible."
+        "es": "Abierto a diario 15:00–22:00 h. WhatsApp disponible.",
+        "it": "Aperto tutti i giorni 15:00–22:00. WhatsApp disponibile."
       }
     },
     {
@@ -509,7 +524,8 @@
         "hr": "pon–pet 8:00–18:00, sub 8:00–16:00; hitna služba non-stop.",
         "de": "Mo–Fr 8.00–18.00 Uhr, Sa 8.00–16.00 Uhr; Notdienst rund um die Uhr verfügbar.",
         "fr": "Lun.–ven. 8 h–18 h, sam. 8 h–16 h ; service d’urgences 24 h/24.",
-        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h; servicio de urgencias disponible las 24 horas."
+        "es": "Lun–vie 8:00–18:00 h, sáb 8:00–16:00 h; servicio de urgencias disponible las 24 horas.",
+        "it": "Lun–ven 8:00–18:00, sab 8:00–16:00; servizio di urgenza 24 ore su 24."
       }
     },
     {
@@ -540,7 +556,8 @@
         "hr": "pon–pet 8:00–20:00, sub 9:00–20:00, nedjeljom zatvoreno; podrška u hitnim slučajevima za ljubimce i stoku 24/7 (također +92 315 6300087).",
         "de": "Mo–Fr 8.00–20.00 Uhr, Sa 9.00–20.00 Uhr, sonntags geschlossen; Notfallhilfe für Haustiere und Nutztiere rund um die Uhr (auch +92 315 6300087).",
         "fr": "Lun.–ven. 8 h–20 h, sam. 9 h–20 h, fermé le dimanche ; urgences pour animaux de compagnie et bétail 24 h/24, 7 j/7 (second numéro : +92 315 6300087).",
-        "es": "Lun–vie 8:00–20:00 h, sáb 9:00–20:00 h, cerrado domingo; urgencias para mascotas y ganado las 24 horas (también +92 315 6300087)."
+        "es": "Lun–vie 8:00–20:00 h, sáb 9:00–20:00 h, cerrado domingo; urgencias para mascotas y ganado las 24 horas (también +92 315 6300087).",
+        "it": "Lun–ven 8:00–20:00, sab 9:00–20:00, domenica chiuso; assistenza urgente per animali domestici e bestiame 24 ore su 24 (anche +92 315 6300087)."
       }
     },
     {
@@ -569,7 +586,8 @@
         "hr": "Otvoreno svaki dan, Hayatabad Phase 3.",
         "de": "Täglich geöffnet, Hayatabad Phase 3.",
         "fr": "Ouvert tous les jours. Hayatabad Phase 3.",
-        "es": "Abierto a diario, Hayatabad Phase 3."
+        "es": "Abierto a diario, Hayatabad Phase 3.",
+        "it": "Aperto tutti i giorni, Hayatabad Phase 3."
       }
     }
   ],
