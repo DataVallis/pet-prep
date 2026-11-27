@@ -73467,6 +73467,580 @@
       }
     }
   },
+  "smooth_fox_terrier": {
+    "_note": "Added 2026-11-27 (M5-R10-143, unattended run — appended after the Welsh Springer Spaniel: AKC 2024 No. 139 'Smooth Fox Terrier', S174 full-list table recorded 2026-11-26 '138 Welsh Springer Spaniel', '139 Smooth Fox Terrier'). Quotes as returned by the web-fetch tool on 2026-11-27 (non-preapproved pages: short fragments only); paraphrase only in notes, marked '(paraphrase)'. Sources S1070–S1075 (reused S10, S11, S14, S24, S35, S45, S174, S873). No health percentages anywhere. Standard: FCI-Standard N° 12 Fox Terrier (Smooth) (S1070, header '07.02.2017/ EN'). The RKC Breeds A–Z page and the RKC standard were NOT reachable (thekennelclub.org.uk redirects to royalkennelclub.com, refused by the fetch tool) → size / lifespan / exercise from the Dogs Trust breed page (S1075, one 'Fox Terrier' page that names both coats) and the PDSA Fox Terrier page (S873, one page, no coat named). PetMD (S1071, reviewed by Barri J. Morrison, DVM, updated 2024-09-11) and WebMD (S1072, medically reviewed 2026-05-08) for care frequencies and behaviour (both smooth-specific). Weight from the FCI standard (S1070, dogs 7.5–8 kg, bitches 7–7.5 kg); KC (S1074, via KUSA) the same; AKC (S1073, via the AFTC parent club) 18 lb as alternative. Lifespan: no McMillan 2024 / VetCompass row reachable (the Dogs Trust table PDF was refused) → senior boundary from the lower bound 'typically 12+ years' (Dogs Trust S1075; PDSA S873 'Over 12 years') = 108 (Wire Fox Terrier precedent); PetMD 10–13 years (S1071) recorded for David. Coren rank 40 'Smooth Fox Terrier' (S35, Average) → 1.0. Never hypoallergenic. Names: FCI 'Fox Terrier (Smooth)', RKC 'Fox Terrier (Smooth)', AKC 'Smooth Fox Terrier' — not the Wire Fox Terrier (wire_fox_terrier) nor the Toy Fox Terrier (toy_fox_terrier). Slovenian »gladkodlaki foksterier« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 12, Group 3 Section 1 (Large and medium-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S1070",
+      "quote": "Section 1 Large and medium sized Terriers.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 12 (S1070): 'ORIGIN: Great Britain.', 'FCI-CLASSIFICATION: Group 3 Terriers.', 'Section 1 Large and medium sized Terriers.', 'Working trial optional.'; header '07.02.2017/ EN', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 30.10.2016.'. Number 12 from the standard header 'St-FCI n° 12/ 07.02.2017'. Not the Wire Fox Terrier (FCI 169) nor the Toy Fox Terrier (not FCI-recognised)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S1075",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "Dogs Trust breed page key fact (S1075) 'Small' — the RKC page was not reachable. PDSA (S873) 'Medium' (alternative). FCI 7–8 kg (S1070) → the 'Small (12–24 pounds)' class of S10 for growth.",
+      "alternatives": [
+        {
+          "value": "medium",
+          "unit": "—",
+          "source_id": "S873",
+          "quote": "Medium",
+          "confidence": "medium",
+          "notes": "PDSA key fact 'Size' (S873, one Fox Terrier page)."
+        }
+      ]
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            39,
+            39
+          ],
+          "female": [
+            39,
+            39
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1070",
+        "quote": "Height at the withers: Not exceeding 39 cm in dogs, bitches slightly less.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 12 (S1070): an upper limit for males, females 'slightly less' (no number) — stored as the 39 cm limit for both (the register shows it as 'up to'). KC (S1074) 'not exceeding 39cm (approx. 15”)'; AKC (S1073) 'should not exceed 15½ inches at the withers'; PetMD (S1071) 'They stand up to 15.5 inches tall'; PDSA (S873) 'Average height | 39 cm'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                39,
+                39
+              ],
+              "female": [
+                39,
+                39
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S873",
+            "quote": "39 cm",
+            "notes": "PDSA key fact 'Average height' (S873)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            7.5,
+            8
+          ],
+          "female": [
+            7,
+            7.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1070",
+        "quote": "Dogs: 7,5 - 8 kgs.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 12 (S1070): 'Dogs: 7,5 - 8 kgs.', 'Bitches: 7 - 7,5 kgs.' — the game / register value. KC (S1074) the same (males 7.5–8 kg, females 7–7.5 kg). AKC (S1073) 'A dog with these measurements should scale 18 pounds in show condition.' (a bitch about two pounds less, paraphrase); PetMD (S1071) 'weigh 15–18 pounds'; WebMD (S1072) 'Fully grown males weigh 18 pounds on average, and females are slightly lighter, weighing anywhere between 15 and 17 pounds.'; PDSA (S873) 'Average weight | 8 kg'.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                7.5,
+                8
+              ],
+              "female": [
+                7,
+                7.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1074",
+            "quote": null,
+            "notes": "KC standard via KUSA (S1074): males 7.5 – 8kg, females 7 – 7.5kg (as returned, paraphrase of the layout)."
+          },
+          {
+            "value": {
+              "male": [
+                8,
+                8
+              ],
+              "female": [
+                8,
+                8
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S873",
+            "quote": "8 kg",
+            "notes": "PDSA key fact 'Average weight' (S873)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 7–8 kg (S1070) = 15–18 lb → the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Smooth Fox Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "dogs_trust": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S1075",
+        "quote": "typically 12+ years",
+        "confidence": "high",
+        "notes": "Dogs Trust breed page (S1075, one 'Fox Terrier' page that names both coats: 'Wire Fox Terriers have a dense and wiry coat, whereas Smooth Fox Terriers’ coats are short and smooth.'); PDSA (S873) 'Average lifespan | Over 12 years' agrees. The basis of the senior boundary (runbook: lower bound when no McMillan 2024 / VetCompass value is reachable; the RKC page was not reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "10–13",
+        "unit": "years",
+        "source_id": "S1071",
+        "quote": "Smooth Fox Terriers have an average lifespan of 10–13 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S1071). Lower than Dogs Trust / PDSA; background only — 0.75 × 10 × 12 = 90 would be the senior boundary from its lower bound, open for David. Upper bound 13 > 10 → not shorter_lifespan."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (Dogs Trust lower bound 'typically 12+ years', S1075) → 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14); PetMD lower bound 10 y (S1071) → 90 (open for David).",
+        "derived_from": [
+          "S11",
+          "S1075"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S873",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day) | 1 hour' (S873) → 60 min (runbook: RKC preferred — not reachable — else PDSA; 'minimum N' → N). WebMD (S1072) 'They need 1 to 2 hours of physical exercise daily to keep them healthy and in good shape' → range lower bound 60, the same number. PetMD (S1071) gives no number; Dogs Trust (S1075) 'They need daily walks' (no number).",
+        "alternatives": [
+          {
+            "value": "60–120",
+            "unit": "minutes/day",
+            "source_id": "S1072",
+            "quote": "They need 1 to 2 hours of physical exercise daily to keep them healthy and in good shape",
+            "notes": "WebMD (S1072) — a range 'A–B' → A = 60, the same number."
+          }
+        ]
+      },
+      "daily_text": {
+        "value": "high energy; daily walks plus time to explore and play",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Smooth Fox Terriers have a high energy level that requires daily exercise such as walks",
+        "confidence": "high",
+        "notes": "PetMD (S1071). PDSA (S873): 'Fox Terriers need around an hour's exercise daily and will happily play games that are on offer too.'; Dogs Trust (S1075): 'They need daily walks, plus plenty of time and opportunity to explore, burn energy, and play.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PetMD / WebMD / PDSA name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, quick and keen; friendly, forthcoming and fearless",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": "Friendly, forthcoming and fearless.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070): 'Alert, quick of movement, keen of expression, on tiptoe of expectation.'; AKC (S1073) 'The dog must present a generally gay, lively and active appearance.'; PetMD (S1071): 'they're gregarious, loving dogs that will thrive in a home willing to give them the attention and training they need.'"
+      },
+      "family": {
+        "value": "gets on well with children; ideal family pet",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "They're also known to get along well with children and make ideal family pets.",
+        "confidence": "high",
+        "notes": "PetMD (S1071) — the basis of the family_pet chip; caveat 'so long as younger children know how to interact with pets' (kept). PDSA (S873): 'For this reason, they make excellent family pets.'"
+      },
+      "children": {
+        "value": "great companions for children — teach children to handle them with care and monitor interactions",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": "Smooth fox terriers are affectionate and great companions for children, as they don't easily get tired of playing.",
+        "confidence": "high",
+        "notes": "WebMD (S1072), followed by 'Train your kids on how to handle these dogs with care and respect and monitor their interactions.' (supervision caveat kept) — the basis of the children chip. PetMD (S1071) 'so long as younger children know how to interact with pets'. No small_children chip (supervision caveat)."
+      },
+      "other_pets": {
+        "value": "high prey drive — may chase other animals; some not suited to living with cats or other dogs",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": "These dogs have a high prey drive, so you might want to keep them on a leash during walks",
+        "confidence": "high",
+        "notes": "WebMD (S1072) → chases_small_pets chip; 'Smooth Fox Terriers make good family pets, though some might not be suitable for living with cats or other dogs.' PetMD (S1071): 'The breed's hunting past means they may see other animals as something to bark at and chase' … 'but early training can help manage this prey drive.' PDSA (S873): 'They generally get on well with other pets in the household providing they're given adequate socialisation and training as a puppy.'"
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on being left alone (PetMD / WebMD / PDSA / Dogs Trust do not cover it) → no needs_company chip."
+      },
+      "socialisation": {
+        "value": "early socialisation, especially with other dogs and cats",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "When it comes to other dogs and cats, early socialization is key.",
+        "confidence": "high",
+        "notes": "PetMD (S1071, a need) → breed DOG_SOCIALISATION entry (M5-R17). WebMD (S1072): 'Socialization and training as early as possible are key to eliminating undesirable behavior'."
+      },
+      "training": {
+        "value": "intelligent and eager to learn, but independent — patience and consistency",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Smooth Fox Terriers are intelligent dogs that are eager to learn new skills and tricks.",
+        "confidence": "medium",
+        "notes": "PetMD (S1071): 'But they're also independent, so be prepared for patience, consistent communication, routine'. Background."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found. WebMD (S1072) says the breed can become destructive without enough exercise and mental stimulation (paraphrase)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found. PetMD (S1071): 'full-grown dogs will need two or three meals a day' (background)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. The RKC Breed Watch page was not reachable; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: not_found (RKC page unreachable).",
+      "primary_lens_luxation": {
+        "value": "lens luxation — dislocation of the lens of the eye",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Primary Lens Luxation (PLL)",
+        "confidence": "high",
+        "notes": "PetMD (S1071) heading; WebMD (S1072) 'primary lens luxation (PLL)' (paraphrase of the eye section); PDSA (S873) 'Lens luxation'. Register health key primary_lens_luxation."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease — a hip problem of young small dogs",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Legg-Calve-Perthes Disease",
+        "confidence": "high",
+        "notes": "PetMD (S1071) heading; PDSA (S873) 'Legg-Perthes disease (Legg-Calvé-Perthes)'; WebMD (S1072) names it (paraphrase). Register health key legg_perthes."
+      },
+      "patellar_luxation": {
+        "value": "luxating patella — the kneecap slips out of place",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Patellar Luxation",
+        "confidence": "high",
+        "notes": "PetMD (S1071) heading; PDSA (S873) 'Luxating patellas'; WebMD (S1072) names it (paraphrase). Register health key kneecap_luxation."
+      },
+      "deafness": {
+        "value": "deafness",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Deafness",
+        "confidence": "high",
+        "notes": "PetMD (S1071) heading. Register health key deafness."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Cataracts",
+        "confidence": "high",
+        "notes": "PDSA (S873) list item; WebMD (S1072) hereditary cataracts (paraphrase). Register health key cataracts."
+      },
+      "glaucoma": {
+        "value": "glaucoma",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Glaucoma",
+        "confidence": "high",
+        "notes": "PDSA (S873) list item; WebMD (S1072) names it (paraphrase). Register health key glaucoma."
+      },
+      "atopy": {
+        "value": "atopy — skin allergy",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Atopy",
+        "confidence": "high",
+        "notes": "PDSA (S873) list item. Register health key atopic_dermatitis."
+      },
+      "dental": {
+        "value": "daily tooth brushing against plaque and tartar",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": "brush your dog’s teeth every day to prevent plaque and tartar buildup.",
+        "confidence": "high",
+        "notes": "WebMD (S1072). Register health key dental_disease_tooth_brushing."
+      },
+      "other": {
+        "value": "heart disease, wobbler syndrome (WebMD)",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S1072) list (paraphrase, names only); patella evaluation and cardiac exams at least once a year (paraphrase). Background only — no register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 40,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Smooth Fox Terrier",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, as recorded 2026-11-24 for the Bedlington Terrier through the Kiwix mirror wikipedia_en_all_maxi_2023-10): rank 40 shared by 'Bedlington Terrier', 'Soft-coated Wheaten Terrier' and 'Smooth Fox Terrier' under 'Average Working/Obedience Intelligence' (ranks 40–54). The Wire Fox Terrier is rank 51 (not this breed)."
+      },
+      "coren_tier": {
+        "value": "Average Working/Obedience Intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Average Working/Obedience Intelligence",
+        "confidence": "medium",
+        "notes": "S35 heading for ranks 40–54."
+      },
+      "training_notes": {
+        "value": "intelligent, eager to learn, independent; patience and consistency",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S1071) (paraphrase). The game uses Coren's rank only (40 → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.smooth_fox_terrier.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "active and lively small terrier, bone and strength in small compass, never cloddy or coarse",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": "Active and lively, bone and strength in small compass, never cloddy or coarse.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070)."
+      },
+      "colours": {
+        "value": [
+          "white with black and tan markings",
+          "white with tan markings",
+          "white with black markings",
+          "all white"
+        ],
+        "unit": "list",
+        "source_id": "S1070",
+        "quote": "Colour: White should predominate, all white, white with tan, black and tan or black markings.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070); 'Brindle, red or liver markings highly undesirable.' KC (S1074) the same. Never brindle / red / liver markings, never a solid dark colour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). White with black and tan markings first and highest (the portrait default; Claude — the most familiar standard pattern, as for the Wire Fox Terrier)."
+      },
+      "coat": {
+        "value": "straight, flat, smooth, hard, dense and abundant",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": "Hair: Straight, flat, smooth, hard, dense and abundant.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070): 'Belly and underside of thighs not bare.' WebMD (S1072) 'Smooth fox terriers have smooth and flat but dense coats.'"
+      },
+      "eyes": {
+        "value": "dark, moderately small, nearly circular, not prominent",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": "Eyes: Dark, moderately small, as near as possible circular in shape but not prominent.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070): 'Expression bright and intelligent.'"
+      },
+      "ears": {
+        "value": "small V-shaped ears dropping forward close to the cheek",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": "Ears: Small, V-shaped and dropping forward close to cheek, not hanging by side of head.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070); AKC (S1073) disqualification 'Ears prick, tulip or rose.'"
+      },
+      "tail": {
+        "value": "set on rather high and carried gaily, not over the back; undocked: as straight as possible",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": "Set on rather high and carried gaily but not over back. As straight as possible.",
+        "confidence": "high",
+        "notes": "FCI standard (S1070), undocked tail. Portrait: natural tail (Claude — natural-tail precedent; docking is not shown)."
+      },
+      "nose": {
+        "value": "black nose",
+        "unit": "—",
+        "source_id": "S1073",
+        "quote": "should be black.",
+        "confidence": "high",
+        "notes": "AKC standard (S1073): nose 'should be black.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = Dogs Trust breed page (S1075), PDSA (S873), PetMD (S1071), WebMD (S1072). The RKC key facts were not reachable on 2026-11-27 (no apartment / large_home chip).",
+      "dogs_trust_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S1075",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "Dogs Trust key fact (S1075) → small (size class)."
+      },
+      "dogs_trust_lifespan": {
+        "value": "typically 12+ years",
+        "unit": "—",
+        "source_id": "S1075",
+        "quote": "typically 12+ years",
+        "confidence": "high",
+        "notes": "Dogs Trust (S1075) — see lifespan.dogs_trust."
+      },
+      "dogs_trust_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S1075",
+        "quote": "Short length with moderate shedding.",
+        "confidence": "high",
+        "notes": "Dogs Trust (S1075) — the smooth coat (‘Smooth Fox Terriers’ coats are short and smooth’); PDSA (S873) ‘Medium’ is the single Fox Terrier page (wire coat)."
+      },
+      "dogs_trust_shedding": {
+        "value": "short coat, moderate shedding",
+        "unit": "—",
+        "source_id": "S1075",
+        "quote": "Fox Terriers shed moderately.",
+        "confidence": "high",
+        "notes": "Dogs Trust (S1075); 'Short length with moderate shedding.' PetMD (S1071) agrees → sheds chip (no conflicting source)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour minimum per day",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S873) → 60 min. Not long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "once or twice a week; shaping every few months",
+        "unit": "—",
+        "source_id": "S873",
+        "quote": "Fox Terriers will need grooming once or twice a week to keep their coat in tip-top condition.",
+        "confidence": "medium",
+        "notes": "PDSA (S873) — one Fox Terrier page that names no coat ('Coat length | Medium', the wire coat's) → alternative only; the smooth-specific PetMD / WebMD 'once a week' is used (open for David)."
+      },
+      "petmd_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Brushing your dog once a week can help keep fur from ending up on your furniture.",
+        "confidence": "high",
+        "notes": "PetMD (S1071, smooth-specific) → brushing once a week (dog-grooming rule 'Once a week' → 1). WebMD (S1072) 'A weekly brushing using a rubber brush should be enough to remove loose hair and dirt' agrees."
+      },
+      "petmd_shedding": {
+        "value": "moderate shedder",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Despite their short coat, Smooth Fox Terriers are moderate shedders.",
+        "confidence": "high",
+        "notes": "PetMD (S1071) → sheds chip (Dogs Trust S1075 agrees)."
+      },
+      "petmd_bath": {
+        "value": "no frequency — ask the vet",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Ask your veterinarian how often you should bathe your dog",
+        "confidence": "high",
+        "notes": "PetMD (S1071, fragment); WebMD (S1072) 'A bath is not necessary unless they're dirty.' → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "no special ear care",
+        "unit": "—",
+        "source_id": "S1071",
+        "quote": "Smooth Fox Terriers generally do not need special care for their ears.",
+        "confidence": "high",
+        "notes": "PetMD (S1071) — background; the WebMD weekly ear check is the task."
+      },
+      "webmd_teeth": {
+        "value": "tooth brushing every day",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": "brush your dog’s teeth every day to prevent plaque and tartar buildup.",
+        "confidence": "high",
+        "notes": "WebMD (S1072) → tooth brushing every day (M5-R15)."
+      },
+      "webmd_ears": {
+        "value": "check the ears weekly, remove wax and debris",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": "Check your dog’s ears weekly to remove wax and debris.",
+        "confidence": "high",
+        "notes": "WebMD (S1072) → ear cleaning once a week (M5-R18; precedent American Cocker Spaniel 'checked weekly', Giant Schnauzer)."
+      },
+      "webmd_nails": {
+        "value": "keep the nails trimmed — no frequency",
+        "unit": "—",
+        "source_id": "S1072",
+        "quote": "Their strong, fast-growing nails should be kept neat and trimmed.",
+        "confidence": "high",
+        "notes": "WebMD (S1072): no frequency → no nail task."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -110185,6 +110759,263 @@
         "confidence": "high",
         "notes": "FCI standard (S1062) as in welsh_springer_spaniel.appearance. One standard colour; weight unsourced (verified=false). Not a welfare breed; `nose` dog trait for the flesh-coloured to dark nose (Irish Terrier precedent).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): rich red and white is the portrait default (the only standard colour, FCI S1062 / AKC S1069); natural tail"
+      }
+    },
+    "smooth_fox_terrier": {
+      "_note": "Unattended run M5-R10-143 (2026-11-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. RKC breed page not reachable → exercise from PDSA (S873 '1 hour' → 60; WebMD '1 to 2 hours' agrees). Senior boundary 108 from the lower bound 'typically 12+ years' (Dogs Trust S1075; PDSA 'Over 12 years'; PetMD 10–13 y → 90, open for David). Learning 1.0 (Coren 40, Average, S35). Built: brushing once a week (PetMD S1071 'once a week', M5-R13), tooth brushing every day (WebMD S1072, M5-R15), ear cleaning once a week (WebMD S1072 'Check your dog’s ears weekly', M5-R18), puppy socialisation with the PetMD quote (M5-R17). No nail task, no bath, no groomer (no frequency), no meal gap, no heat warning. No new vocabulary key. In marketing (no welfare concern found). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S873",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day) | 1 hour' (S873) → 60 (RKC not reachable). WebMD (S1072) '1 to 2 hours' → 60 agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S1072",
+            "quote": "They need 1 to 2 hours of physical exercise daily to keep them healthy and in good shape"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S873 '1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S873",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the Dogs Trust lower bound 'typically 12+ years', S1075 — no McMillan 2024 / VetCompass row reachable).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1075"
+        ],
+        "alternatives": {
+          "senior_petmd_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × Dogs Trust lower bound 'typically 12+ years', S1075)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 40 'Smooth Fox Terrier' (S35) → Average tier (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren 40, Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1071",
+        "quote": "Brushing your dog once a week can help keep fur from ending up on your furniture.",
+        "confidence": "high",
+        "notes": "smooth_fox_terrier.suitability.petmd_grooming. Smooth-specific PetMD 'once a week' → 1 (rule 'Once a week' → 1); WebMD (S1072) 'A weekly brushing' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S873",
+            "quote": "Fox Terriers will need grooming once or twice a week to keep their coat in tip-top condition.",
+            "notes": "PDSA (S873) — one Fox Terrier page that names no coat ('Coat length | Medium', the wire coat's) → not used; open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): enkrat na teden (PetMD »once a week«, WebMD »A weekly brushing«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S1072",
+        "quote": "brush your dog’s teeth every day to prevent plaque and tartar buildup.",
+        "confidence": "high",
+        "notes": "smooth_fox_terrier.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »every day« → vsak dan"
+      },
+      "ear_cleaning": {
+        "value": [
+          1,
+          7
+        ],
+        "unit": "[times, period days] — child mini-game (M5-R18)",
+        "source_id": "S1072",
+        "quote": "Check your dog’s ears weekly to remove wax and debris.",
+        "confidence": "high",
+        "notes": "smooth_fox_terrier.suitability.webmd_ears. 'weekly' → once a week (American Cocker Spaniel / Giant Schnauzer precedent). PetMD (S1071) 'generally do not need special care for their ears' — background.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): čiščenje ušes enkrat na teden (WebMD »weekly«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1071",
+        "quote": "When it comes to other dogs and cats, early socialization is key.",
+        "confidence": "high",
+        "notes": "smooth_fox_terrier.behaviour.socialisation (PetMD S1071, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1071)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-143); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S873",
+              "S1071"
+            ],
+            "refs": [
+              "smooth_fox_terrier.exercise.adult",
+              "smooth_fox_terrier.exercise.daily_text"
+            ],
+            "quote": "S873 '1 hour'; S1071 'Smooth Fox Terriers have a high energy level that requires daily exercise such as walks'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1071"
+            ],
+            "refs": [
+              "smooth_fox_terrier.behaviour.family"
+            ],
+            "quote": "S1071 'They're also known to get along well with children and make ideal family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1072"
+            ],
+            "refs": [
+              "smooth_fox_terrier.behaviour.children"
+            ],
+            "quote": "S1072 'Smooth fox terriers are affectionate and great companions for children, as they don't easily get tired of playing.' (supervision caveat kept in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1071"
+            ],
+            "refs": [
+              "smooth_fox_terrier.suitability.petmd_shedding"
+            ],
+            "quote": "S1071 'Despite their short coat, Smooth Fox Terriers are moderate shedders.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S1072"
+            ],
+            "refs": [
+              "smooth_fox_terrier.behaviour.other_pets"
+            ],
+            "quote": "S1072 'These dogs have a high prey drive, so you might want to keep them on a leash during walks'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "Supervision caveat (WebMD S1072, PetMD S1071).",
+          "apartment": "No RKC key facts reachable (no Flat/ Apartment statement).",
+          "long_daily_exercise": "60 minutes a day (PDSA S873) — the chip is for 2 hours or more.",
+          "frequent_grooming": "Once a week (PetMD S1071), not daily.",
+          "low_shedding": "Moderate shedder (PetMD S1071, Dogs Trust S1075).",
+          "needs_company": "No source on time alone.",
+          "other_pets": "High prey drive (S1072); some not suitable with cats or other dogs.",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "Dogs Trust 'typically 12+ years' (S1075); PetMD upper bound 13 y.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "No veterinary association names the breed for conformation-related welfare problems → no welfare chip (RKC Breed Watch page not reachable)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children; consider sheds, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows the Smooth Fox Terrier as hypoallergenic, with small pets or with a docked tail (S1070, S1072).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Smooth Fox Terrier, white with black and tan markings: active and lively, bone and strength in small compass; straight, flat, smooth, hard and dense coat; dark, moderately small, nearly circular eyes; small V-shaped ears dropping forward close to the cheek; black nose; natural tail set on rather high and carried gaily",
+        "unit": "—",
+        "source_id": "S1070",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S1070) as in smooth_fox_terrier.appearance. Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with black and tan markings is the portrait default (FCI S1070 'White should predominate, all white, white with tan, black and tan or black markings'); never brindle / red / liver markings, natural tail"
       }
     }
   }

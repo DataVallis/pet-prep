@@ -4656,6 +4656,11 @@
         }
       ],
       "notes": "RKC breed page (dog-data S1064, 2026-11-26, M5-R10-142): under 'Good Practice schemes and tests' ('We strongly recommend that breeders, at a minimum, conduct these tests before breeding, as evidence indicates' — fragment) genetic diversity and the BVA/KC/ISDS eye scheme with gonioscopy; under 'Best Practice schemes and tests' the BVA/KC hip scheme; no breed-specific DNA package and no additional breeding restrictions (paraphrase). No new test key."
+    },
+    "smooth_fox_terrier": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk display.aspx?id=3067 redirects to royalkennelclub.com, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-27); PetMD (dog-data S1071), WebMD (S1072) and the FCI / KC / AFTC standards (S1070, S1074, S1073) name no breeding tests. Show the general dog checklist only (M5-R10-143)."
     }
   }
 }
