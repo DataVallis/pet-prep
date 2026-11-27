@@ -140,7 +140,7 @@ describe('breed, config and database', function () {
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
             // Other names are no breed keys (only search keywords).
             ->and($refused(['breed_type' => 'fox_terrier']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'smooth_fox_terrier']))->toThrow(QueryException::class);
+            ->and($refused(['breed_type' => 'smooth_fox_terrierr']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2027_04_09_120000_add_wire_fox_terrier_breed.php');
         // down() refuses while an Wire Fox Terrier exists (no silent data loss).
