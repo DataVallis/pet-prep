@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "9ad01bf17bf49ece1cd1e496bd57bac31e6b6edcf3ffac49595106622f238403"
+      "sha256": "09827116adbdd94eb1aa71a7c6f57b670a4d23c6d7624e468940ffba6665fe4b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "a65c8ef9b9bb1fa945a7d9b126cb30ae0884b20a74570677cb73c0c79dcb1e53"
+      "sha256": "cd503ef303c5acb245899fc55de622643a039991f930e8eb0b5f641825b348d7"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "0baf22c86c73cc798472f766e965c0e7f8d01a4a2548c55835e96531ff01fd5b"
+      "sha256": "536dc07efc377f310dc6ea2422e3834fa2aa9ad53ca86f068c2aca202a570259"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "292d66b49bf8ea3866bcb65058666cecbf43fb798c15a48f6d691df4a568c6af"
+      "sha256": "6fd9e9e91b37c254afafacec82a65c855208c38ec4992454dfd967ea1f46ab44"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "e719bb5a1a50b2283b87c1b93fabc778c0734cdcffe343fd9fddc239a26d07ae"
+      "sha256": "4e13daceaff363dbf1203a23b18653eefab7a428e44b27b597e1ff5763d8a76a"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c594245990c2e266168782b91c78168b6376ad07e47861ff64c3e05c0b71b606"
+      "sha256": "acbe1a72e9d663d3a4f174ed042b02824ea419779c92a8a9148f218fd4dff19b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "bce87de70b6e7c00daf2c036134da05ef7226d3dc76fccd364bfefb8854d84bb"
+      "sha256": "0e2ad1dd9c937128b61c2058a7c12394f8d3019d3284e942f4893046b4ec72e2"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 134,
+      "breed_count": 135,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -84050,6 +84050,588 @@
       ]
     },
     {
+      "id": "bearded_collie",
+      "species": "dog",
+      "order": 134,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bearded Collie",
+        "sl": "Bradati koli"
+      },
+      "slug": {
+        "en": "bearded-collie",
+        "sl": "bradati-koli"
+      },
+      "synonyms": {
+        "en": [
+          "Beardie",
+          "Highland Collie",
+          "Hairy Mou'ed Collie"
+        ],
+        "sl": [
+          "bearded collie",
+          "beardie",
+          "bradati collie"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S1078"
+          ],
+          "ref": "bearded_collie.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              53,
+              56
+            ],
+            "female": [
+              51,
+              53
+            ]
+          },
+          "source_ids": [
+            "S1076"
+          ],
+          "ref": "bearded_collie.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              20,
+              25
+            ],
+            "female": [
+              20,
+              25
+            ]
+          },
+          "source_ids": [
+            "S1079"
+          ],
+          "ref": "bearded_collie.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bearded_collie.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.9,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "bearded_collie.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S1078"
+          ],
+          "ref": "bearded_collie.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S1078"
+          ],
+          "ref": "bearded_collie.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S1078"
+          ],
+          "ref": "bearded_collie.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S1078"
+          ],
+          "ref": "bearded_collie.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1078"
+          ],
+          "ref": "bearded_collie.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 34,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bearded_collie.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 271,
+            "group": 1,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S1076"
+          ],
+          "ref": "bearded_collie.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S1081"
+          ],
+          "ref": "bearded_collie.health.hips",
+          "confidence": "high"
+        },
+        {
+          "key": "addisons_disease",
+          "source_ids": [
+            "S1081"
+          ],
+          "ref": "bearded_collie.health.addisons",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S1081"
+          ],
+          "ref": "bearded_collie.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S1079"
+          ],
+          "ref": "bearded_collie.health.allergies",
+          "confidence": "high"
+        },
+        {
+          "key": "autoimmune_conditions",
+          "source_ids": [
+            "S1079"
+          ],
+          "ref": "bearded_collie.health.imha",
+          "confidence": "high"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S1082"
+          ],
+          "ref": "bearded_collie.health.hypothyroidism",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1078",
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.exercise.adult",
+              "bearded_collie.exercise.energy"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1081"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S1078"
+            ],
+            "refs": [
+              "bearded_collie.suitability.rkc_size_of_home",
+              "bearded_collie.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1082"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.herding_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1082"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1078",
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.suitability.rkc_grooming",
+              "bearded_collie.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1078"
+            ],
+            "refs": [
+              "bearded_collie.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 125
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 125
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bearded_collie.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1078"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1078 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.bearded_collie.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.bearded_collie.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 125 (0.75 × McMillan 2024 median 13.9 y, S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.bearded_collie.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren 34, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bearded_collie.grooming",
+            "basis_source_ids": [
+              "S1078"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S1078"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S1076",
+        "S1078",
+        "S1079",
+        "S1081",
+        "S1082",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -91554,6 +92136,41 @@
       "publisher": "Dogs Trust (UK)",
       "title": "Fox Terrier — breed information (one page for both coats)",
       "url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/fox-terrier"
+    },
+    {
+      "id": "S1076",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 271 — Bearded Collie (English PDF, header 06.10.2026/ EN)",
+      "url": "https://www.fci.be/Nomenclature/Standards/271g01-en.pdf"
+    },
+    {
+      "id": "S1078",
+      "tier": "B",
+      "publisher": "Royal Kennel Club",
+      "title": "Bearded Collie — breed information page (display.aspx?id=5109)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5109"
+    },
+    {
+      "id": "S1079",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Bearded Collie breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/bearded-collie"
+    },
+    {
+      "id": "S1081",
+      "tier": "B",
+      "publisher": "PetMD — Zack Newman, reviewed by Barri J. Morrison, DVM (updated Apr. 29, 2024)",
+      "title": "Bearded Collie",
+      "url": "https://www.petmd.com/dog/breeds/bearded-collie"
+    },
+    {
+      "id": "S1082",
+      "tier": "B",
+      "publisher": "WebMD Pets — Cait Carter, medically reviewed by Zilpah Sheikh, MD (2026-04-21)",
+      "title": "What to Know About Bearded Collies",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-bearded-collies"
     },
     {
       "id": "C1",

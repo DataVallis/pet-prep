@@ -943,6 +943,16 @@ return [
         ['key' => 'white-black', 'value' => 'white with black markings', 'en' => 'White and black', 'sl' => 'Bel s črnimi lisami'],
         ['key' => 'white', 'value' => 'all white', 'en' => 'All white', 'sl' => 'Ves bel'],
     ],
+    // M5-R10-144: FCI-Standard N° 271 (S1076) "Slate grey, reddish-fawn, black, blue, all shades of grey, brown and sandy
+    // with or without white markings." (never merle); same values as breed_appearance.php.
+    'bearded_collie' => [
+        ['key' => 'grey-white', 'value' => 'slate grey with white markings', 'en' => 'Slate grey and white', 'sl' => 'Skrilasto sivo-bel'],
+        ['key' => 'black-white', 'value' => 'black with white markings', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'blue-white', 'value' => 'blue with white markings', 'en' => 'Blue and white', 'sl' => 'Modro-bel'],
+        ['key' => 'brown-white', 'value' => 'brown with white markings', 'en' => 'Brown and white', 'sl' => 'Rjavo-bel'],
+        ['key' => 'fawn-white', 'value' => 'reddish-fawn with white markings', 'en' => 'Reddish fawn and white', 'sl' => 'Rdečkasto plavo-bel'],
+        ['key' => 'sandy-white', 'value' => 'sandy with white markings', 'en' => 'Sandy and white', 'sl' => 'Peščeno-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

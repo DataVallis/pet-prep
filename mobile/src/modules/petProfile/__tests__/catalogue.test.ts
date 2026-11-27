@@ -555,7 +555,8 @@ describe('breed search', () => {
     const lab = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(lab('labradorec')).toEqual(['labrador_retriever']);
     expect(lab('Labradorski prinašalec')).toEqual(['labrador_retriever']);
-    expect(lab('koli')).toEqual(['border_collie']);
+    // »koli« also finds the Bearded Collie (M5-R10-144, SL »Bradati koli«).
+    expect(lab('koli')).toEqual(['border_collie', 'bearded_collie']);
   });
 
   it('M5-R10-02: finds the Golden Retriever by its name and the server synonyms; "retriever" finds both', () => {

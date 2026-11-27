@@ -49,7 +49,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function ahData(string $path): mixed
+function ahtData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -64,7 +64,7 @@ function ahData(string $path): mixed
 }
 
 /** @return array<string, mixed> the American Hairless Terrier seeder row of (stage, from, key) */
-function ahRow(string $stage, int $from, StageParamKey $key): array
+function ahtRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'american-hairless-terrier'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -73,7 +73,7 @@ function ahRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function ahPet(int $arrivalMonths, array $attributes = []): Pet
+function ahtPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -85,7 +85,7 @@ function ahPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function ahPin(User $parent, array $body): TestResponse
+function ahtPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -94,7 +94,7 @@ function ahPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function ahLogin(string $pin): TestResponse
+function ahtLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -116,7 +116,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 1200, 'breeds.american_hairless_terrier'])
             ->and($config->search_keywords)->toBe(['american hairless terrier', 'hairless terrier', 'aht', 'ameriški goli terier', 'ameriski goli terier', 'goli terier'])
             // Legacy fallback = the adult step goal (20 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) ahData('proposed_game_parameters.american_hairless_terrier.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) ahtData('proposed_game_parameters.american_hairless_terrier.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(2000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -124,13 +124,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = ahData('proposed_game_parameters.american_hairless_terrier.care_rates.value');
+        $care = ahtData('proposed_game_parameters.american_hairless_terrier.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts an American Hairless Terrier pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = ahPet(36);
+        $pet = ahtPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('american_hairless_terrier');
 
@@ -189,38 +189,38 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.american_hairless_terrier';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(ahRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(ahData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(ahRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(ahData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(ahtRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(ahtData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(ahtRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(ahtData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(ahRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(ahData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(ahtRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(ahtData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 14 y (PetMD lower bound "14–16 years", S971) = 126 — the closest rule row, Claude's
             // suggestion (no McMillan 2024 / VetCompass / RKC value exists) → verified=false, open for David.
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(ahData('american_hairless_terrier.lifespan.senior_from.months'))
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(ahData("{$pgp}.senior_boundary_months.value"))
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * ahRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(ahData('american_hairless_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S971'])
-            ->and(ahData('american_hairless_terrier.lifespan.mcmillan_2024.source_id'))->toBeNull()
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(ahtData('american_hairless_terrier.lifespan.senior_from.months'))
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(ahtData("{$pgp}.senior_boundary_months.value"))
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * ahtRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(ahtData('american_hairless_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S971'])
+            ->and(ahtData('american_hairless_terrier.lifespan.mcmillan_2024.source_id'))->toBeNull()
             // Dogs Victoria 12–14 y → 108 is David's alternative, never seeded.
-            ->and(ahData("{$pgp}.stage_boundaries_months.alternatives.senior_dogs_victoria_12_y"))->toBe(108)
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S971')
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeFalse()
-            ->and(ahRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeFalse()
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_AMERICAN_HAIRLESS_TERRIER_SENIOR)
-            ->and(ahData("{$pgp}.senior_boundary_months.decision"))->toStartWith(BreedStageParamsSeeder::PROPOSED_R10_AMERICAN_HAIRLESS_TERRIER_SENIOR)
-            ->and(ahRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(126);
+            ->and(ahtData("{$pgp}.stage_boundaries_months.alternatives.senior_dogs_victoria_12_y"))->toBe(108)
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S971')
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeFalse()
+            ->and(ahtRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeFalse()
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_AMERICAN_HAIRLESS_TERRIER_SENIOR)
+            ->and(ahtData("{$pgp}.senior_boundary_months.decision"))->toStartWith(BreedStageParamsSeeder::PROPOSED_R10_AMERICAN_HAIRLESS_TERRIER_SENIOR)
+            ->and(ahtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(126);
 
-        expect(ahRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(ahData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(ahRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(20)
-            ->and(ahRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(ahData('american_hairless_terrier.exercise.adult.quote'))
-            ->and(ahRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(ahData("{$pgp}.exercise_minutes_adult.quote"))
-            ->and(ahRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S973')
-            ->and(ahRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(20)
-            ->and(ahRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(ahData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(ahRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(15)
-            ->and(ahRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(ahData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(20)
-            ->and(ahRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(ahData("{$pgp}.learning_multiplier.value"))
-            ->and(ahRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
+        expect(ahtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(ahtData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(ahtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(20)
+            ->and(ahtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(ahtData('american_hairless_terrier.exercise.adult.quote'))
+            ->and(ahtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(ahtData("{$pgp}.exercise_minutes_adult.quote"))
+            ->and(ahtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S973')
+            ->and(ahtRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(20)
+            ->and(ahtRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(ahtData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(ahtRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(15)
+            ->and(ahtRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(ahtData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(20)
+            ->and(ahtRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(ahtData("{$pgp}.learning_multiplier.value"))
+            ->and(ahtRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -230,7 +230,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('american-hairless-terrier')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.american_hairless_terrier.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) ahData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) ahtData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -239,42 +239,42 @@ describe('life-stage data against data.json', function () {
         // day (WebMD, M5-R15), nail trim every week (AHTCA, M5-R19), the weekly bath reminder (PetMD, M5-R19). No brushing
         // (hairless, no frequency), no ear / groomer task, no meal gap (no quote), no heat warning (not flat-faced).
         $tasks = BreedStageParamsSeeder::DOG_CARE_TASKS['american_hairless_terrier'];
-        expect(json_encode([ahData('american_hairless_terrier'), ahData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(ahData($pgp))->not->toHaveKey('grooming')
+        expect(json_encode([ahtData('american_hairless_terrier'), ahtData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(ahtData($pgp))->not->toHaveKey('grooming')
             ->and(BreedStageParamsSeeder::DOG_GROOMING)->not->toHaveKey('american_hairless_terrier')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('american_hairless_terrier')
-            ->and(ahData('american_hairless_terrier.exercise.after_meals.quote'))->toBeNull()
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['american_hairless_terrier'])->toBe(['S971', ahData("{$pgp}.socialisation.quote")])
-            ->and(ahData("{$pgp}.socialisation.quote"))->toBe(ahData('american_hairless_terrier.behaviour.socialisation.quote'))
+            ->and(ahtData('american_hairless_terrier.exercise.after_meals.quote'))->toBeNull()
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['american_hairless_terrier'])->toBe(['S971', ahtData("{$pgp}.socialisation.quote")])
+            ->and(ahtData("{$pgp}.socialisation.quote"))->toBe(ahtData('american_hairless_terrier.behaviour.socialisation.quote'))
             ->and(array_keys($tasks))->toBe(['tooth_brushing', 'nail_trim', 'bath'])
-            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S972', ahData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
-            ->and(ahData("{$pgp}.tooth_brushing.quote"))->toBe(ahData('american_hairless_terrier.suitability.webmd_teeth_nails.quote'))
-            ->and(array_slice($tasks['nail_trim'], 0, 5))->toBe([1, 'week', 'S977', ahData("{$pgp}.nail_trimming.quote"), "{$pgp}.nail_trimming"])
-            ->and(ahData("{$pgp}.nail_trimming.quote"))->toBe(ahData('american_hairless_terrier.suitability.ahtca_nails.quote'))
-            ->and(array_slice($tasks['bath'], 0, 5))->toBe([1, 'week', 'S971', ahData("{$pgp}.bathing.quote"), "{$pgp}.bathing"])
-            ->and(ahData("{$pgp}.bathing.quote"))->toBe(ahData('american_hairless_terrier.suitability.petmd_bath.quote'))
+            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S972', ahtData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
+            ->and(ahtData("{$pgp}.tooth_brushing.quote"))->toBe(ahtData('american_hairless_terrier.suitability.webmd_teeth_nails.quote'))
+            ->and(array_slice($tasks['nail_trim'], 0, 5))->toBe([1, 'week', 'S977', ahtData("{$pgp}.nail_trimming.quote"), "{$pgp}.nail_trimming"])
+            ->and(ahtData("{$pgp}.nail_trimming.quote"))->toBe(ahtData('american_hairless_terrier.suitability.ahtca_nails.quote'))
+            ->and(array_slice($tasks['bath'], 0, 5))->toBe([1, 'week', 'S971', ahtData("{$pgp}.bathing.quote"), "{$pgp}.bathing"])
+            ->and(ahtData("{$pgp}.bathing.quote"))->toBe(ahtData('american_hairless_terrier.suitability.petmd_bath.quote'))
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('american_hairless_terrier');
     });
 
     it('takes the breed-level numbers from the sourced american_hairless_terrier entries', function () {
         // PetMD (S971): 12–28 lb → 5.4–12.7 kg (the standards give no weight).
-        expect(ahRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([5.4, 12.7])
-            ->and(ahData('american_hairless_terrier.adult_weight.petmd.value'))->toEqual(['male' => [5.4, 12.7], 'female' => [5.4, 12.7]])
-            ->and(ahRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(ahData('american_hairless_terrier.adult_weight.petmd.source_id'))
-            ->and(ahRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(ahData('american_hairless_terrier.adult_weight.petmd.quote'))
-            ->and(ahRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
-            ->and(ahData('american_hairless_terrier.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
-            ->and(ahRow('all', 0, StageParamKey::GrowthEndMonths)['quote'])->toBe(ahData('american_hairless_terrier.growth.adult_weight_reached.quote'))
+        expect(ahtRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([5.4, 12.7])
+            ->and(ahtData('american_hairless_terrier.adult_weight.petmd.value'))->toEqual(['male' => [5.4, 12.7], 'female' => [5.4, 12.7]])
+            ->and(ahtRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(ahtData('american_hairless_terrier.adult_weight.petmd.source_id'))
+            ->and(ahtRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(ahtData('american_hairless_terrier.adult_weight.petmd.quote'))
+            ->and(ahtRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
+            ->and(ahtData('american_hairless_terrier.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
+            ->and(ahtRow('all', 0, StageParamKey::GrowthEndMonths)['quote'])->toBe(ahtData('american_hairless_terrier.growth.adult_weight_reached.quote'))
             // Not ranked by Coren → no rank, learning 1.0.
-            ->and(ahRow('all', 0, StageParamKey::CorenRank)['value'])->toBeNull()
-            ->and(ahData('american_hairless_terrier.trainability.coren_rank.value'))->toBeNull()
-            ->and(ahRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('american_hairless_terrier.lifespan.petmd')
-            ->and(ahRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S971')
-            ->and(ahRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(14.0)
-            ->and(ahRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(ahData('american_hairless_terrier.lifespan.petmd.quote'))
-            ->and(ahRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(ahRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S971')
-            ->and(ahRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
+            ->and(ahtRow('all', 0, StageParamKey::CorenRank)['value'])->toBeNull()
+            ->and(ahtData('american_hairless_terrier.trainability.coren_rank.value'))->toBeNull()
+            ->and(ahtRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('american_hairless_terrier.lifespan.petmd')
+            ->and(ahtRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S971')
+            ->and(ahtRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(14.0)
+            ->and(ahtRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(ahtData('american_hairless_terrier.lifespan.petmd.quote'))
+            ->and(ahtRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(ahtRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S971')
+            ->and(ahtRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['verified'])->toBeTrue();
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'american-hairless-terrier');
         expect($mine->where('key', StageParamKey::MealExerciseGapMinutes->value)->all())->toBe([])
@@ -320,7 +320,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 20 minutes = 2,000 steps and 15 minutes = 1,500 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = ahPet($arrival);
+        $pet = ahtPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -346,7 +346,7 @@ describe('stage rules', function () {
 
     it('learns at the mixed-breed speed (not ranked by Coren, × 1.0) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = ahPet(36);
+        $dog = ahtPet(36);
         $date = $dog->localDate(now());
 
         expect($training->learningFactor($dog))->toBe(1.0)
@@ -362,7 +362,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = ahPin($parent, $body);
+        $response = ahtPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -371,7 +371,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(ahLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(ahtLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::AmericanHairlessTerrier)
             ->and($pet->species)->toBe(Species::Dog)
@@ -386,8 +386,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'american_hairless_terrier'] as $breed) {
-            $pin = ahPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(ahLogin($pin)->assertOk()->json('pet.id'));
+            $pin = ahtPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(ahtLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['american_hairless_terrier'];
@@ -400,7 +400,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = ahPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = ahtPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -462,8 +462,8 @@ describe('AI appearance (runbook rule: standard colours only — UKC S968, Offic
             ->and(array_keys($colours))->toEqualCanonicalizing($standard)
             ->and(array_column(config('breed_colours.american_hairless_terrier'), 'value'))->toBe($standard)
             ->and(array_column(config('breed_colours.american_hairless_terrier'), 'key'))->toBe(['pink-black-spots', 'pink-chocolate-spots', 'grey-pink-patches', 'pink-tan-spots'])
-            ->and(ahData('american_hairless_terrier.appearance.colours.value'))->toBe($standard)
-            ->and(ahData('american_hairless_terrier.appearance.colours.quote'))->toContain('parti-colored');
+            ->and(ahtData('american_hairless_terrier.appearance.colours.value'))->toBe($standard)
+            ->and(ahtData('american_hairless_terrier.appearance.colours.quote'))->toContain('parti-colored');
     });
 
     it('draws the register portrait with pink skin and black spots', function () {
@@ -482,7 +482,7 @@ describe('AI appearance (runbook rule: standard colours only — UKC S968, Offic
             ->and($v1['visual_traits']['eye_color'])->toBe('brown')
             ->and($v1['visual_traits']['color_scheme'])->toBe('parti-coloured pink skin with black spots');
 
-        $pet = ahPet(126, ['origin' => PetOrigin::Adopted]);
+        $pet = ahtPet(126, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('American Hairless Terrier')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -503,10 +503,10 @@ describe('no health statistics in the app; no welfare chip, in marketing (runboo
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // No veterinary association names the breed → no welfare chip; 12–16 years → no shorter_lifespan.
             ->and(array_intersect($tags['consider'], ['brachycephalic_breathing', 'short_muzzle_breathing', 'back_spine', 'hips_hind_legs', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems', 'shorter_lifespan']))->toBe([])
-            ->and(ahData('proposed_game_parameters.american_hairless_terrier.marketing.value'))->toContain('in marketing: yes')
+            ->and(ahtData('proposed_game_parameters.american_hairless_terrier.marketing.value'))->toContain('in marketing: yes')
             // Marketed for allergy sufferers by others — never a hypoallergenic / low_shedding tag here.
             ->and($tags['suits'])->not->toContain('low_shedding')
-            ->and(ahData('american_hairless_terrier.suitability.allergies_note.notes'))->toContain('never a hypoallergenic')
+            ->and(ahtData('american_hairless_terrier.suitability.allergies_note.notes'))->toContain('never a hypoallergenic')
             // The alternatives (84 Dogs Trust, 108 Dogs Victoria) are never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'american-hairless-terrier')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())
             ->not->toContain(84)->not->toContain(108);
@@ -525,12 +525,12 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['consider'])->not->toContain('long_daily_exercise')->not->toContain('needs_company')
             ->not->toContain('secure_fencing')->not->toContain('chews_when_bored')->not->toContain('frequent_grooming');
 
-        expect(ahData('american_hairless_terrier.behaviour.children.quote'))->toBe('These dogs can be great playmates for children thanks to their rambunctious energy.')
-            ->and(ahData('american_hairless_terrier.behaviour.children.notes'))->toContain('supervise young children')
-            ->and(ahData('american_hairless_terrier.suitability.ahtca_sun.quote'))->toContain('Sunscreen')
-            ->and(ahData('american_hairless_terrier.health.bare_skin.source_id'))->toBe('S977')
-            ->and(ahData('american_hairless_terrier.suitability.petmd_cold.quote'))->toContain('sweater')
-            ->and(ahData('american_hairless_terrier.behaviour.mental_stimulation.quote'))->toContain('mental stimulation')
-            ->and(ahData('american_hairless_terrier.behaviour.other_pets.quote'))->toMatch('/(high|strong) prey drive/');
+        expect(ahtData('american_hairless_terrier.behaviour.children.quote'))->toBe('These dogs can be great playmates for children thanks to their rambunctious energy.')
+            ->and(ahtData('american_hairless_terrier.behaviour.children.notes'))->toContain('supervise young children')
+            ->and(ahtData('american_hairless_terrier.suitability.ahtca_sun.quote'))->toContain('Sunscreen')
+            ->and(ahtData('american_hairless_terrier.health.bare_skin.source_id'))->toBe('S977')
+            ->and(ahtData('american_hairless_terrier.suitability.petmd_cold.quote'))->toContain('sweater')
+            ->and(ahtData('american_hairless_terrier.behaviour.mental_stimulation.quote'))->toContain('mental stimulation')
+            ->and(ahtData('american_hairless_terrier.behaviour.other_pets.quote'))->toMatch('/(high|strong) prey drive/');
     });
 });

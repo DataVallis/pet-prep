@@ -48,7 +48,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function btData(string $path): mixed
+function bchData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -63,7 +63,7 @@ function btData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Bluetick Coonhound seeder row of (stage, from, key) */
-function btRow(string $stage, int $from, StageParamKey $key): array
+function bchRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'bluetick-coonhound'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -72,7 +72,7 @@ function btRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function btPet(int $arrivalMonths, array $attributes = []): Pet
+function bchPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -84,7 +84,7 @@ function btPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function btPin(User $parent, array $body): TestResponse
+function bchPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -93,7 +93,7 @@ function btPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function btLogin(string $pin): TestResponse
+function bchLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -115,7 +115,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 1320, 'breeds.bluetick_coonhound'])
             ->and($config->search_keywords)->toBe(['bluetick coonhound', 'bluetick', 'blue tick coonhound', 'coonhound'])
             // Legacy fallback = the adult step goal (40 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) btData('proposed_game_parameters.bluetick_coonhound.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) bchData('proposed_game_parameters.bluetick_coonhound.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(4000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -123,13 +123,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = btData('proposed_game_parameters.bluetick_coonhound.care_rates.value');
+        $care = bchData('proposed_game_parameters.bluetick_coonhound.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts a Bluetick Coonhound pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = btPet(36);
+        $pet = bchPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('bluetick_coonhound');
 
@@ -188,36 +188,36 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.bluetick_coonhound';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(btRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(btRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(bchRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(bchData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(bchRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(bchData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(btRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(bchRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(bchData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 11 y (PetMD lower bound "11–12 years", S1060) = 99 — the closest rule row, Claude's
             // suggestion (no McMillan 2024 / VetCompass / RKC value exists) → verified=false, open for David.
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData('bluetick_coonhound.lifespan.senior_from.months'))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData("{$pgp}.senior_boundary_months.value"))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * btRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(btData('bluetick_coonhound.lifespan.senior_from.derived_from'))->toBe(['S11', 'S1060'])
-            ->and(btData('bluetick_coonhound.lifespan.median_uk.source_id'))->toBeNull()
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S1060')
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeFalse()
-            ->and(btRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeFalse()
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_BLUETICK_COONHOUND_SENIOR)
-            ->and(btData("{$pgp}.senior_boundary_months.decision"))->toStartWith(BreedStageParamsSeeder::PROPOSED_R10_BLUETICK_COONHOUND_SENIOR)
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(99);
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(bchData('bluetick_coonhound.lifespan.senior_from.months'))
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(bchData("{$pgp}.senior_boundary_months.value"))
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * bchRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(bchData('bluetick_coonhound.lifespan.senior_from.derived_from'))->toBe(['S11', 'S1060'])
+            ->and(bchData('bluetick_coonhound.lifespan.median_uk.source_id'))->toBeNull()
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S1060')
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeFalse()
+            ->and(bchRow('senior', 0, StageParamKey::ArrivalAgeMonths)['verified'])->toBeFalse()
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_BLUETICK_COONHOUND_SENIOR)
+            ->and(bchData("{$pgp}.senior_boundary_months.decision"))->toStartWith(BreedStageParamsSeeder::PROPOSED_R10_BLUETICK_COONHOUND_SENIOR)
+            ->and(bchRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(99);
 
-        expect(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(40)
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData('bluetick_coonhound.exercise.adult.quote'))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData("{$pgp}.exercise_minutes_adult.quote"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S1061')
-            ->and(btRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(40)
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(30)
-            ->and(btRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(btData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(40)
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(btData("{$pgp}.learning_multiplier.value"))
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
+        expect(bchRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(bchData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(bchRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(40)
+            ->and(bchRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(bchData('bluetick_coonhound.exercise.adult.quote'))
+            ->and(bchRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(bchData("{$pgp}.exercise_minutes_adult.quote"))
+            ->and(bchRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S1061')
+            ->and(bchRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(40)
+            ->and(bchRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(bchData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(bchRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(30)
+            ->and(bchRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(bchData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(40)
+            ->and(bchRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(bchData("{$pgp}.learning_multiplier.value"))
+            ->and(bchRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -227,7 +227,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('bluetick-coonhound')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.bluetick_coonhound.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) btData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) bchData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -235,38 +235,38 @@ describe('life-stage data against data.json', function () {
         // Every sourced need with a mechanic is built: brushing once a week (PetMD, M5-R13). Socialisation = David's
         // general puppy row (no breed quote). No tooth / ear / nail / bath / groomer task (no frequency), no meal gap (PetMD
         // names exercise after eating only as a bloat risk factor), no heat warning (not flat-faced).
-        expect(json_encode([btData('bluetick_coonhound'), btData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(BreedStageParamsSeeder::DOG_GROOMING['bluetick_coonhound'])->toBe([1, 'S1060', btData("{$pgp}.grooming.quote"), 'high', false])
-            ->and(btData("{$pgp}.grooming.quote"))->toBe(btData('bluetick_coonhound.suitability.petmd_grooming.quote'))
-            ->and(btData("{$pgp}.grooming.value"))->toBe(1)
+        expect(json_encode([bchData('bluetick_coonhound'), bchData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(BreedStageParamsSeeder::DOG_GROOMING['bluetick_coonhound'])->toBe([1, 'S1060', bchData("{$pgp}.grooming.quote"), 'high', false])
+            ->and(bchData("{$pgp}.grooming.quote"))->toBe(bchData('bluetick_coonhound.suitability.petmd_grooming.quote'))
+            ->and(bchData("{$pgp}.grooming.value"))->toBe(1)
             ->and(BreedStageParamsSeeder::DOG_CARE_TASKS)->not->toHaveKey('bluetick_coonhound')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('bluetick_coonhound')
-            ->and(btData('bluetick_coonhound.exercise.after_meals.quote'))->toBeNull()
+            ->and(bchData('bluetick_coonhound.exercise.after_meals.quote'))->toBeNull()
             ->and(BreedStageParamsSeeder::DOG_SOCIALISATION)->not->toHaveKey('bluetick_coonhound')
-            ->and(btData($pgp))->not->toHaveKey('socialisation')
+            ->and(bchData($pgp))->not->toHaveKey('socialisation')
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('bluetick_coonhound');
     });
 
     it('takes the breed-level numbers from the sourced bluetick_coonhound entries', function () {
         // Standard (S1061): males 55–80 lb, females 45–65 lb → 20.4–36.3 kg.
-        expect(btRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([20.4, 36.3])
-            ->and(btData('bluetick_coonhound.adult_weight.standard.value'))->toEqual(['male' => [24.9, 36.3], 'female' => [20.4, 29.5]])
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(btData('bluetick_coonhound.adult_weight.standard.source_id'))
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(btData('bluetick_coonhound.adult_weight.standard.quote'))
-            ->and(btRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([15, 18])
-            ->and(btData('bluetick_coonhound.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
-            ->and(btRow('all', 0, StageParamKey::GrowthEndMonths)['quote'])->toBe(btData('bluetick_coonhound.growth.adult_weight_reached.quote'))
+        expect(bchRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([20.4, 36.3])
+            ->and(bchData('bluetick_coonhound.adult_weight.standard.value'))->toEqual(['male' => [24.9, 36.3], 'female' => [20.4, 29.5]])
+            ->and(bchRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(bchData('bluetick_coonhound.adult_weight.standard.source_id'))
+            ->and(bchRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(bchData('bluetick_coonhound.adult_weight.standard.quote'))
+            ->and(bchRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([15, 18])
+            ->and(bchData('bluetick_coonhound.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
+            ->and(bchRow('all', 0, StageParamKey::GrowthEndMonths)['quote'])->toBe(bchData('bluetick_coonhound.growth.adult_weight_reached.quote'))
             // Not ranked by Coren → no rank, learning 1.0.
-            ->and(btRow('all', 0, StageParamKey::CorenRank)['value'])->toBeNull()
-            ->and(btData('bluetick_coonhound.trainability.coren_rank.value'))->toBeNull()
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('bluetick_coonhound.lifespan.petmd')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S1060')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(11.0)
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(btData('bluetick_coonhound.lifespan.petmd.quote'))
-            ->and(btRow('all', 0, StageParamKey::GroomingSessionsPerWeek)['value'])->toBe(1)
-            ->and(btRow('all', 0, StageParamKey::GroomingSessionsPerWeek)['source_id'])->toBe('S1060')
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R17_ALL_PUPPIES);
+            ->and(bchRow('all', 0, StageParamKey::CorenRank)['value'])->toBeNull()
+            ->and(bchData('bluetick_coonhound.trainability.coren_rank.value'))->toBeNull()
+            ->and(bchRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('bluetick_coonhound.lifespan.petmd')
+            ->and(bchRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S1060')
+            ->and(bchRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(11.0)
+            ->and(bchRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(bchData('bluetick_coonhound.lifespan.petmd.quote'))
+            ->and(bchRow('all', 0, StageParamKey::GroomingSessionsPerWeek)['value'])->toBe(1)
+            ->and(bchRow('all', 0, StageParamKey::GroomingSessionsPerWeek)['source_id'])->toBe('S1060')
+            ->and(bchRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(bchRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R17_ALL_PUPPIES);
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bluetick-coonhound');
         expect($mine->where('key', StageParamKey::MealExerciseGapMinutes->value)->all())->toBe([])
@@ -302,7 +302,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 40 minutes = 4,000 steps and 30 minutes = 3,000 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = btPet($arrival);
+        $pet = bchPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -328,7 +328,7 @@ describe('stage rules', function () {
 
     it('learns at the mixed-breed speed (not ranked by Coren, × 1.0) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = btPet(36);
+        $dog = bchPet(36);
         $date = $dog->localDate(now());
 
         expect($training->learningFactor($dog))->toBe(1.0)
@@ -344,7 +344,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = btPin($parent, $body);
+        $response = bchPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -353,7 +353,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(btLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(bchLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::BluetickCoonhound)
             ->and($pet->species)->toBe(Species::Dog)
@@ -368,8 +368,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'bluetick_coonhound'] as $breed) {
-            $pin = btPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(btLogin($pin)->assertOk()->json('pet.id'));
+            $pin = bchPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(bchLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['bluetick_coonhound'];
@@ -382,7 +382,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = btPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = bchPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -443,8 +443,8 @@ describe('AI appearance (runbook rule: standard colours only — breed standard 
             ->and(array_keys($colours))->toEqualCanonicalizing($standard)
             ->and(array_column(config('breed_colours.bluetick_coonhound'), 'value'))->toBe($standard)
             ->and(array_column(config('breed_colours.bluetick_coonhound'), 'key'))->toBe(['blue-ticked-tan', 'blue-ticked'])
-            ->and(btData('bluetick_coonhound.appearance.colours.value'))->toBe($standard)
-            ->and(btData('bluetick_coonhound.appearance.colours.quote'))->toContain('thickly mottled');
+            ->and(bchData('bluetick_coonhound.appearance.colours.value'))->toBe($standard)
+            ->and(bchData('bluetick_coonhound.appearance.colours.quote'))->toContain('thickly mottled');
     });
 
     it('draws the register portrait blue ticked with tan markings', function () {
@@ -463,7 +463,7 @@ describe('AI appearance (runbook rule: standard colours only — breed standard 
             ->and($v1['visual_traits']['eye_color'])->toBe('dark brown')
             ->and($v1['visual_traits']['color_scheme'])->toBe('dark blue ticked with black spots and tan markings');
 
-        $pet = btPet(99, ['origin' => PetOrigin::Adopted]);
+        $pet = bchPet(99, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Bluetick Coonhound')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -484,7 +484,7 @@ describe('no health statistics in the app; no welfare chip, in marketing (runboo
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // No veterinary association names the breed → no welfare chip; 11–12 years → no shorter_lifespan.
             ->and(array_intersect($tags['consider'], ['brachycephalic_breathing', 'short_muzzle_breathing', 'back_spine', 'hips_hind_legs', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems', 'shorter_lifespan']))->toBe([])
-            ->and(btData('proposed_game_parameters.bluetick_coonhound.marketing.value'))->toContain('in marketing: yes')
+            ->and(bchData('proposed_game_parameters.bluetick_coonhound.marketing.value'))->toContain('in marketing: yes')
             ->and($tags['suits'])->not->toContain('low_shedding')
             // The alternatives (84 Dogs Trust, 108 VCA summary) are never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bluetick-coonhound')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())
@@ -503,10 +503,10 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['consider'])->not->toContain('older_children')->not->toContain('needs_company')
             ->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')->not->toContain('sheds');
 
-        expect(btData('bluetick_coonhound.behaviour.experienced_owner.quote'))->toContain('experienced pet parents')
-            ->and(btData('bluetick_coonhound.exercise.daily_text.quote'))->toContain('mental stimulation')
-            ->and(btData('bluetick_coonhound.exercise.scent_drive.quote'))->toContain('fenced yards are a must')
-            ->and(btData('bluetick_coonhound.behaviour.children.notes'))->toContain('conflicting')
-            ->and(btData('bluetick_coonhound.behaviour.other_pets.quote'))->not->toMatch('/(high|strong) prey drive/');
+        expect(bchData('bluetick_coonhound.behaviour.experienced_owner.quote'))->toContain('experienced pet parents')
+            ->and(bchData('bluetick_coonhound.exercise.daily_text.quote'))->toContain('mental stimulation')
+            ->and(bchData('bluetick_coonhound.exercise.scent_drive.quote'))->toContain('fenced yards are a must')
+            ->and(bchData('bluetick_coonhound.behaviour.children.notes'))->toContain('conflicting')
+            ->and(bchData('bluetick_coonhound.behaviour.other_pets.quote'))->not->toMatch('/(high|strong) prey drive/');
     });
 });
