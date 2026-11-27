@@ -7196,6 +7196,51 @@
             "prompt_hash": "sha256:4d1a9e36a06c8ce2c838d43a64feecbc1492f98d39e22c2881d199f31ed1858b",
             "generated_at": "2026-11-26T22:53:57+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "smooth_fox_terrier",
+            "species": "dog",
+            "colour": "white-tan",
+            "colour_value": "white with tan markings",
+            "file": "dog/smooth-fox-terrier--white-tan.webp",
+            "reference": "dog/smooth-fox-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:1f236a546972ad39ecff00b133d606dc02c231bf41f0aaa9f07daa02a8434598",
+            "generated_at": "2026-11-27T01:12:08+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "smooth_fox_terrier",
+            "species": "dog",
+            "colour": "white-black",
+            "colour_value": "white with black markings",
+            "file": "dog/smooth-fox-terrier--white-black.webp",
+            "reference": "dog/smooth-fox-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:eb8ff0765e333ef0a5f7854a2445aa217a68a02d08df15fd2ef9ec75cade669e",
+            "generated_at": "2026-11-27T01:12:25+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "smooth_fox_terrier",
+            "species": "dog",
+            "colour": "white",
+            "colour_value": "all white",
+            "file": "dog/smooth-fox-terrier--white.webp",
+            "reference": "dog/smooth-fox-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro_edit",
+            "prompt_hash": "sha256:7429832f886a148681f879ac21d2499ec32db52c2260b73fb62362f5b7d3b35c",
+            "generated_at": "2026-11-27T01:12:42+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

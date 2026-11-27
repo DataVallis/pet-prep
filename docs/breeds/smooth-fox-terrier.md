@@ -40,6 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-143 | 2026-11-27 |
 | Česanje 1× na teden, ščetkanje zob vsak dan, čiščenje ušes vsak teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R18 / M5-R17 | 2026-11-27 |
 | Barva (izbirnik: tribarven, belo-rjav, belo-črn, ves bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-27 |
+| Barvne fotografije (izbirnik in spletna stran): belo-rjav, belo-črn, ves bel — vse tri odobril Claude (zagon `breed-portraits.yml` 45921123595); tribarven = portret | ✅ AI fotografije | — | M5-R21 / §8b | 2026-11-27 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), tribarven, naraven rep, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-27 |
 | Stran na petprep.si (`/animals/dogs/smooth-fox-terrier`, `/sl/zivali/psi/gladkodlaki-foksterier`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
