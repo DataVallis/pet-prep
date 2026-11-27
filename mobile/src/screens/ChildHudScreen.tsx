@@ -82,6 +82,8 @@ import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
 import { CareTaskChip } from '@/modules/careTasks/CareTaskChip';
 import { CareTaskOverlayHost } from '@/modules/careTasks/CareTaskOverlay';
 import HeatNote from '@/modules/careTasks/HeatNote';
+import PuppyGrewUpNote from '@/modules/behaviour/PuppyGrewUpNote';
+import { puppyGrewUpShort, puppyGrewUpText, usePuppyGrewUp } from '@/modules/behaviour/puppyGrewUp';
 import { heatWarningActive, showCareTaskChip } from '@/modules/careTasks/careTasks';
 import { useHeatClock } from '@/modules/careTasks/useHeatClock';
 import { CatHudChip, CatHudNote, FirstAidNote } from '@/modules/catCare/CatHudChips';
@@ -442,6 +444,8 @@ export default function ChildHudScreen() {
   const digestionNow = useDigestionClock(view);
   // M5-R14: re-render when the summer midday heat window opens / closes.
   const heatNow = useHeatClock(view);
+  // David 2026-11-27: the last puppy day's take-out ended the potty clock → »… je zrasel!« once (× per pet, device).
+  const grewUp = usePuppyGrewUp(view, heatNow);
   const reduceMotion = useReduceMotion();
   const play = usePlay();
   // "Mogoče kasneje" lives in the session store (survives the HUD remounting).
@@ -931,6 +935,18 @@ export default function ChildHudScreen() {
       ? [{ key: 'digestion', priority: STACK_PRIORITY.advice, short: digestion.short, icon: Hourglass, node: <DigestionNote note={digestion} /> }]
       : []),
     ...(heat ? [{ key: 'heat', priority: STACK_PRIORITY.advice, short: t('careTasks:heat.title'), icon: Sun, node: <HeatNote /> }] : []),
+    // In the take-out card's place (calm, never urgent) — the potty clock has just ended for good.
+    ...(grewUp.card !== null && !cat && !coveredByOverlay
+      ? [
+          {
+            key: 'puppy-grew-up',
+            priority: STACK_PRIORITY.takeOutCalm,
+            short: puppyGrewUpShort(grewUp.card),
+            icon: Sparkles,
+            node: <PuppyGrewUpNote text={puppyGrewUpText(grewUp.card)} onDismiss={grewUp.dismiss} />,
+          },
+        ]
+      : []),
     ...(sleepNote !== undefined
       ? [{ key: 'sleep', priority: STACK_PRIORITY.hint, short: sleepNote, icon: Moon, node: <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" /> }]
       : []),

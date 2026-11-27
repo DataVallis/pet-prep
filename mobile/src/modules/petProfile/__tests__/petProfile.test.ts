@@ -32,6 +32,7 @@ describe('readPetProfile', () => {
       origin: 'bought',
       nextStage: { stage: 'young', fromDate: '2026-11-24' },
       meals: { perDay: 4, byParent: 1 },
+      behaviourEnabled: false,
     });
     expect(stageLine(info!)).toBe('Mladiček · 3 mesece');
     expect(originLine(info!)).toBe('Kupljen pri vzreditelju');

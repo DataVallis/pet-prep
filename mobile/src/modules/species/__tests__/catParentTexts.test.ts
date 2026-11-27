@@ -38,6 +38,7 @@ const profile: PetProfileInfo = {
   origin: 'adopted',
   nextStage: { stage: 'young', fromDate: '2026-11-24' },
   meals: null,
+  behaviourEnabled: false,
 };
 
 function behaviour(kind: 'scratching' | 'chewing'): PetBehaviour {

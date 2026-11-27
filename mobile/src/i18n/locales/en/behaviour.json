@@ -37,7 +37,12 @@
     "takeOutEveningWindowHowTo": "Press “Take out” between {{start}} and {{end}}. Earlier doesn’t count.",
     "takeOutHintFrom": "from {{time}}",
     "takeOutBeforeEvening": "Nice, your pup was outside! Take your pup out once more before bed (between {{start}} and {{end}}).",
-    "takeOutBeforeEveningUnchanged": "Your pup was just outside. Take your pup out once more before bed (between {{start}} and {{end}})."
+    "takeOutBeforeEveningUnchanged": "Your pup was just outside. Take your pup out once more before bed (between {{start}} and {{end}}).",
+    "grewUp": "{{name}} has grown up! From tomorrow no more potty trips — walks are what count now.",
+    "grewUpNoName": "Your pup has grown up! From tomorrow no more potty trips — walks are what count now.",
+    "grewUpShort": "{{name}} has grown up!",
+    "grewUpShortNoName": "Your pup has grown up!",
+    "grewUpDismiss": "Close"
   },
   "parent": {
     "title": "Behaviour",
