@@ -3386,5 +3386,22 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S1078'], 'refs' => ['bearded_collie.suitability.rkc_shedding']],
             ],
         ],
+
+        // M5-R10-145 Saluki (data.json proposed_game_parameters.saluki.suitability_tags; S1086, S1087, S1088), runbook rules.
+        // RKC Breed Watch category not reached (RKC page refused) → no welfare chip; in marketing. No children chip (PetMD
+        // S1087 "not the most kid-friendly breed" vs Woodgreen S1089 "older children" — conflicting, open for David). No
+        // chases_small_pets: PDSA "strong chase instinct" / WebMD "strong prey instincts" / PetMD "prey drive" are no verbatim
+        // high prey drive (Afghan Hound precedent, open for David). No new vocabulary key.
+        'saluki' => [
+            'suits' => [
+                // S1086 "Minimum exercise (per day): 2 hours"; "Salukis need over 2 hours of exercise daily."
+                ['tag' => 'active_family', 'source_ids' => ['S1086'], 'refs' => ['saluki.exercise.adult', 'saluki.exercise.pdsa']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S1086'], 'refs' => ['saluki.exercise.adult', 'saluki.exercise.pdsa']],
+                // S1087 "they can develop separation anxiety if they’re away from their pet parents for long periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S1087'], 'refs' => ['saluki.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];

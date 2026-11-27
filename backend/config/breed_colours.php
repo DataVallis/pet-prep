@@ -1006,4 +1006,16 @@ return [
         ['key' => 'silver-spotted', 'value' => 'silver with black markings', 'en' => 'Silver spotted', 'sl' => 'Srebrno lisast'],
         ['key' => 'snow', 'value' => 'pale ivory snow with seal-brown markings', 'en' => 'Snow', 'sl' => 'Snežni'],
     ],
+    // M5-R10-145: AKC standard (S1091) colour list (FCI S1085 "Any colour or combination of colours is permissible. Brindles
+    // are undesirable.") — same values as breed_appearance.php.
+    'saluki' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'golden', 'value' => 'golden', 'en' => 'Golden', 'sl' => 'Zlat'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'grizzle-tan', 'value' => 'grizzle and tan', 'en' => 'Grizzle and tan', 'sl' => 'Sivkast z rjavimi oznakami'],
+        ['key' => 'tricolour', 'value' => 'tricolour (white, black and tan)', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+    ],
 ];

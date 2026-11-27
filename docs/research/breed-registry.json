@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "09827116adbdd94eb1aa71a7c6f57b670a4d23c6d7624e468940ffba6665fe4b"
+      "sha256": "052307110652e243b9edf3aaf6e8a320bef81eab898b9d78483518630c4a7a6b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cd503ef303c5acb245899fc55de622643a039991f930e8eb0b5f641825b348d7"
+      "sha256": "f613116e21c24ddd28b71d5b94c25c6a9f013bfbdfea6a19f9057c6a21f22457"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "536dc07efc377f310dc6ea2422e3834fa2aa9ad53ca86f068c2aca202a570259"
+      "sha256": "29a1a671dc388b1144b9772ca3d51121fc4c798baabe8b6b988ea8f0281ee00a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6fd9e9e91b37c254afafacec82a65c855208c38ec4992454dfd967ea1f46ab44"
+      "sha256": "8c9732e0db3260a3dcfb576eb7ed00fd1260a22a46c8cf321c387eb4f6632af3"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4e13daceaff363dbf1203a23b18653eefab7a428e44b27b597e1ff5763d8a76a"
+      "sha256": "bdda3a9d5b9949ab1c0f153e53613895999853600dd4cc9f4df9f545df114494"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "acbe1a72e9d663d3a4f174ed042b02824ea419779c92a8a9148f218fd4dff19b"
+      "sha256": "88088a90e762bdcd68262655d2fa76d1b23b947dcc09d2fd2ca092a2908e7eb8"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "0753bd99c50ce84f181a43837e3699b4e5e351e5010a2a9f28c4928295c82c31"
+      "sha256": "4f589c007c0a6da56e2bfcd1a0565929e1e81409c9fae21890811830cf388118"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "0e2ad1dd9c937128b61c2058a7c12394f8d3019d3284e942f4893046b4ec72e2"
+      "sha256": "d29a2b881b8c64aa02359c54da96141d23df4e6d964af618e2a32f1360f17c1d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 135,
+      "breed_count": 136,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -84688,6 +84688,492 @@
       ]
     },
     {
+      "id": "saluki",
+      "species": "dog",
+      "order": 135,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Saluki",
+        "sl": "Saluki"
+      },
+      "slug": {
+        "en": "saluki",
+        "sl": "saluki"
+      },
+      "synonyms": {
+        "en": [
+          "Persian Greyhound",
+          "Gazelle Hound",
+          "Arabian Hound"
+        ],
+        "sl": [
+          "perzijski hrt",
+          "saluki hrt"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "saluki.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              71
+            ],
+            "female": [
+              58,
+              71
+            ]
+          },
+          "source_ids": [
+            "S1085"
+          ],
+          "ref": "saluki.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              16,
+              29.5
+            ],
+            "female": [
+              16,
+              29.5
+            ]
+          },
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "saluki.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "saluki.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "saluki.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 120,
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "proposed_game_parameters.saluki.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "saluki.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 269,
+            "group": 10,
+            "section": 1,
+            "origin": "XME"
+          },
+          "source_ids": [
+            "S1085"
+          ],
+          "ref": "saluki.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S1087"
+          ],
+          "ref": "saluki.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S1087"
+          ],
+          "ref": "saluki.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "saluki.health.cancer",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S1086"
+          ],
+          "ref": "saluki.health.thyroid",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1086"
+            ],
+            "refs": [
+              "saluki.exercise.adult",
+              "saluki.exercise.pdsa"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1086"
+            ],
+            "refs": [
+              "saluki.exercise.adult",
+              "saluki.exercise.pdsa"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1087"
+            ],
+            "refs": [
+              "saluki.behaviour.time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.saluki.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1086"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S1086 'Minimum exercise (per day): 2 hours'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.saluki.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.saluki.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1086"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × PDSA lower bound 'Over 10 years', S1086)"
+          },
+          {
+            "ref": "proposed_game_parameters.saluki.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren tier Average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.saluki.grooming",
+            "basis_source_ids": [
+              "S1087"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PetMD »once or twice a week« → zgornja meja); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.saluki.tooth_brushing",
+            "basis_source_ids": [
+              "S1088"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »on a daily basis« → vsak dan"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1086",
+          "S1087",
+          "S1088"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_ncl8",
+            "level": "other_scheme",
+            "source_ids": [
+              "K46"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K46"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1085",
+        "S1086",
+        "S1087",
+        "S1088",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K46"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -92229,6 +92715,34 @@
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-bearded-collies"
     },
     {
+      "id": "S1085",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 269 — SALUKI (EN, 29.11.2000)",
+      "url": "https://www.fci.be/Nomenclature/Standards/269g10-en.pdf"
+    },
+    {
+      "id": "S1086",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Saluki Breed Information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/saluki"
+    },
+    {
+      "id": "S1087",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (published 2023-07-18)",
+      "title": "Saluki Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_saluki"
+    },
+    {
+      "id": "S1088",
+      "tier": "B",
+      "publisher": "WebMD — Alyssa Anderson; medically reviewed by Amy Flowers, DVM (2024-06-06)",
+      "title": "What to Know About Salukis",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-salukis"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -92710,6 +93224,13 @@
       "publisher": "Dogs NZ (New Zealand Kennel Club)",
       "title": "Accredited Breeder Health Tests for the KERRY BLUE TERRIER",
       "url": "https://dogsnz.org.nz/accredited-breeders/health-tests-by-breed/kerry-blue-terrier/248"
+    },
+    {
+      "id": "K46",
+      "tier": "A",
+      "publisher": "WSAVA (World Small Animal Veterinary Association)",
+      "title": "Dog Breeds: What you need to know about Salukis (2020-10-13, modified 2024-04-02)",
+      "url": "https://wsava.org/updates/dog-breeds-what-you-need-to-know-about-salukis/"
     }
   ]
 }

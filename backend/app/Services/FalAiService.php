@@ -1085,6 +1085,13 @@ class FalAiService
                 .'a long, flat, harsh and shaggy double coat with a soft close undercoat, untrimmed, a long beard on the chin, '
                 .'large, soft, affectionate eyes set widely apart, medium-sized drooping ears, a large square black nose, '
                 .'a low-set tail carried low with an upward swirl at the tip, bright, enquiring expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-145: FCI-Standard N° 269 (S1085) — a graceful, symmetrical sighthound of great speed and endurance;
+            // the feathered variety; colours of the AKC standard (S1091), fawn = the portrait default; natural long tail.
+            BreedType::Saluki => 'A graceful, symmetrical Saluki sighthound giving an impression of great speed and endurance, fawn: '
+                .'a smooth, soft, silky coat with feathering on the legs, the back of the thighs and the ears, '
+                .'a long, narrow head with a black nose, dark to hazel, large oval eyes that are not prominent, '
+                .'long, high-set ears covered with long silky hair, hanging close to the skull, a deep, moderately narrow chest, '
+                .'a long, low-set tail carried naturally in a curve and well feathered underneath, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2522,6 +2529,14 @@ class FalAiService
                 'eye_color' => 'toning with the coat colour',
                 'fur_texture' => 'long, flat, harsh and shaggy double coat, untrimmed',
                 'markings' => 'white blaze, white chest, legs and tail tip, a long beard, medium-sized drooping ears',
+            ],
+            // M5-R10-145: FCI S1085 "Any colour or combination of colours is permissible. Brindles are undesirable."
+            // (AKC S1091 colour list; fawn = default).
+            BreedType::Saluki => [
+                'color_scheme' => 'fawn',
+                'eye_color' => 'dark to hazel',
+                'fur_texture' => 'smooth, soft, silky coat with feathering on the ears, legs and tail',
+                'markings' => 'long feathered ears, natural long tail carried in a curve, never brindle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
