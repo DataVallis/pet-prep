@@ -10,9 +10,12 @@ use App\Models\FailedJob;
 use App\Models\Pet;
 use App\Models\SystemError;
 use App\Models\User;
+use App\Services\AppErrors\AppErrorReportService;
 use App\Services\SystemHealth\ErrorRecorder;
+use App\Services\SystemHealth\ErrorReportExport;
 use App\Services\SystemHealth\ErrorText;
 use App\Services\SystemHealth\SystemHealthService;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\QueryException;
@@ -438,6 +441,79 @@ describe('Filament page', function () {
         $pushed = DB::table('jobs')->sole();
         expect($pushed->queue)->toBe('default')
             ->and(json_decode($pushed->payload, true)['attempts'])->toBe(0);
+    });
+
+    it('exports every open error in full as one Markdown file (2026-11-27)', function () {
+        report(shBoom('Scheduled thing broke for pet 42'));
+        report(new LogicException('already fixed'));
+        Log::error('Routine ledger close failed', ['pet_id' => 7]);
+        $resolved = SystemError::where('message', 'already fixed')->sole();
+        app(SystemHealthService::class)->resolve([$resolved], shAdmin());
+        shFailedJob('notifications');
+        app(AppErrorReportService::class)->record([
+            'scope' => 'child-hud',
+            'name' => 'TypeError',
+            'message' => 'undefined is not an object',
+            'stack' => "TypeError: undefined is not an object\n    at PetMediaView (address at index.android.bundle:1:23456)",
+            'app_version' => '4.1.7',
+            'platform' => 'android',
+            'os_version' => '35',
+            'route' => 'child-hud',
+            'occurred_at' => '2026-10-19T09:59:00Z',
+        ], null);
+        $this->actingAs(shAdmin());
+
+        // The table's filter / search never narrow the file: always every open error.
+        $component = Livewire::test(SystemHealth::class)
+            ->filterTable('status', 'resolved')
+            ->callTableAction('export')
+            ->assertFileDownloaded();
+
+        $open = SystemError::where('message', 'like', 'Scheduled thing broke%')->sole();
+        $markdown = base64_decode(data_get($component->effects, 'download.content'));
+        expect(data_get($component->effects, 'download.name'))->toBe('petprep-open-errors-2026-10-19-1200.md')
+            ->and($markdown)->toStartWith('# PetPrep — open errors')
+            ->toContain('- Open server errors: 2')
+            ->toContain('RuntimeException — Scheduled thing broke for pet 42')
+            ->toContain('- Exception: `RuntimeException`')
+            ->toContain("- File: `{$open->file}:{$open->line}`")
+            ->toContain('#0 '.$open->trace[0])
+            ->toContain('Routine ledger close failed')
+            ->not->toContain('already fixed')
+            // App errors of the last 7 days with their latest sample.
+            ->toContain('TypeError — undefined is not an object')
+            ->toContain('Version `4.1.7` · android 35')
+            ->toContain('at PetMediaView')
+            // Failed jobs: scrubbed first line only, never the payload or the raw text.
+            ->toContain('`App\\Jobs\\StorePetMedia` · queue `notifications`')
+            ->toContain('RuntimeException: download failed')
+            ->not->toContain('abcdef123456')
+            ->not->toContain('#0 trace');
+    });
+
+    it('exports an empty report and refuses a non-superadmin', function () {
+        $this->actingAs(shAdmin());
+        $markdown = app(ErrorReportExport::class)->markdown();
+        expect($markdown)->toContain('- Open server errors: 0')
+            ->and(substr_count($markdown, 'None.'))->toBe(3);
+
+        report(shBoom());
+        $this->actingAs(User::factory()->create(['role' => 'parent']));
+        expect(fn () => app()->make(SystemHealth::class)->exportOpenErrors())->toThrow(AuthorizationException::class);
+    });
+
+    it('keeps a stored text from closing the code fence and caps the list', function () {
+        SystemError::create([
+            'fingerprint' => str_repeat('a', 64), 'level' => 'error', 'message' => "before ```` after\n# not a heading",
+            'source' => 'log', 'occurrences' => 3, 'first_seen_at' => now(), 'last_seen_at' => now(),
+        ]);
+        $markdown = app(ErrorReportExport::class)->markdown();
+
+        expect($markdown)->toContain("before ''' after")
+            ->toContain("### 1. ERROR — before '''' after # not a heading")
+            // Only the fences the export itself writes (message block: open + close).
+            ->and(substr_count($markdown, '````'))->toBe(2)
+            ->and(ErrorReportExport::MAX_ERRORS)->toBe(500);
     });
 });
 

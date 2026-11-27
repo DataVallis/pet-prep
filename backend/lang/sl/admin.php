@@ -581,6 +581,8 @@ return [
             'resolve_selected' => 'Označi izbrane kot rešene',
             'resolved_notice' => 'Rešenih napak: :count',
             'empty' => 'Ni napak',
+            'export' => 'Izvozi odprte napake',
+            'export_tooltip' => 'Prenese eno datoteko Markdown z vsemi odprtimi napakami v celoti (sporočilo, datoteka, sled), napakami aplikacije zadnjih 7 dni in neuspelimi opravili — za predajo v popravilo.',
         ],
         'sources' => [
             'http' => 'HTTP',

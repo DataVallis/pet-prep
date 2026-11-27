@@ -582,6 +582,8 @@ return [
             'resolve_selected' => 'Mark selected resolved',
             'resolved_notice' => ':count error(s) marked resolved',
             'empty' => 'No errors',
+            'export' => 'Export open errors',
+            'export_tooltip' => 'Downloads one Markdown file with every open error in full (message, file, trace), the app errors of the last 7 days and the failed jobs — to hand over for fixing.',
         ],
         'sources' => [
             'http' => 'HTTP',

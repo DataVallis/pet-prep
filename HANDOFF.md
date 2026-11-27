@@ -172,6 +172,8 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-27 (backend, `feat/system-health-error-export`)
+- /admin → System health: table header action **»Export open errors«** downloads one Markdown file (`ErrorReportExport`: every open server error in full, app errors of the last 7 days, failed jobs — scrubbed first line only). David sends the file into a chat to get the errors fixed. Tests in `SystemHealthTest`. Reaches production with the next deploy. **Seen on David's screenshot 2026-11-27 08:08, NOT yet analysed:** every scheduled command (`ai:budget-check`, `push:dispatch-scheduled`, `media:*`, `billing:unassigned-credits-check` …) is recorded as »Scheduled command … failed with exit code [2]«, counts consistent with ≈ 5.6 days of every run — needs the export (or the server log) to find the cause.
 ### 2026-11-26 (mobile, `fix/busy-button-fade`)
 - Zaposlen gumb za nego (»ena skrb naenkrat«) zdaj rahlo zbledi skupaj z napisom in ne sveti več kot »na vrsti« (David: svetel, a neklikabilen gumb je izgledal kot napaka). Samo JS / OTA.
 ### 2026-11-26 (claude.ai chat, docs only, `docs/sustainability-impact`)
