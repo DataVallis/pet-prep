@@ -6533,4 +6533,44 @@ return [
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],
+    // M5-R10-145 (docs/research/dog-data/data.json saluki.appearance; runbook rules 2026-10-10: FCI-Standard N° 269 (S1085)
+    // "Any colour or combination of colours is permissible. Brindles are undesirable."; the eight colours of the AKC standard
+    // (S1091), fawn = the portrait default (Claude — weights unsourced); the feathered variety; natural tail).
+    'saluki' => [
+        'display_name' => 'Saluki',
+        // Colour frequencies are in no source (saluki.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 269 (S1085), the AKC standard (S1091) and PDSA (S1086) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1085 "Height at withers: Average between 58 - 71 cm (23-28 inches) bitches proportionally smaller."; PDSA S1086 "Large", "16kg-29.5kg"',
+            'build' => 'S1085 "The whole appearance of this breed should give an impression of grace and symmetry and of great speed"',
+            'coat_length' => 'S1085 "Hair: Smooth and of a soft, silky texture, feathering on the legs and at the back of thighs,"',
+            'coat_color' => 'S1085 "Any colour or combination of colours is permissible. Brindles are undesirable."; S1091 "White, cream, fawn, golden, red, grizzle and tan, tricolor (white, black, and tan) and black and tan." (weights unsourced)',
+            'muzzle' => 'S1085 "Nose: Black or liver brown."',
+            'ear_carriage' => 'S1085 "Long and covered with long silky hair, set on high, mobile,"',
+            'eye_color' => 'S1085 "Dark to hazel and bright, large and oval, but not prominent."',
+            'tail' => 'S1085 "Long, set on low and carried naturally in a curve, well feathered on the underside with long silky hair, not bushy." (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'graceful, symmetrical sighthound built for great speed and endurance, strong and active', 'weight' => 3], 'slender, deep-chested sighthound with a long neck and long legs'],
+            'coat_length' => ['smooth, soft, silky coat with feathering on the ears, legs, back of the thighs and tail'],
+            // AKC S1091 colour list (FCI S1085: any colour, brindle undesirable) — never brindle.
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 25],
+                ['value' => 'cream', 'weight' => 15],
+                ['value' => 'white', 'weight' => 10],
+                ['value' => 'golden', 'weight' => 15],
+                ['value' => 'red', 'weight' => 10],
+                ['value' => 'grizzle and tan', 'weight' => 8],
+                ['value' => 'tricolour (white, black and tan)', 'weight' => 7],
+                ['value' => 'black and tan', 'weight' => 10],
+            ],
+            'muzzle' => ['long, narrow head with a black nose'],
+            'ear_carriage' => ['long, high-set ears covered with long silky hair, hanging close to the skull'],
+            'eye_color' => ['dark to hazel, large oval eyes, not prominent'],
+            'tail' => ['long, low-set natural tail carried in a curve, well feathered underneath'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
 ];
