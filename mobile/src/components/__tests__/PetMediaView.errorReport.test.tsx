@@ -96,4 +96,74 @@ describe('PetMediaView → pet-media reports', () => {
     fail();
     expect(reportMock).toHaveBeenCalledTimes(3);
   });
+
+  describe('stall watchdog (2026-11-27: home toy loop frozen after a play session)', () => {
+    const items: PetMedia['items'] = { toy_1: { image: TOY_IMG, video: TOY_VID, video_seconds: 3, loop: true } };
+    const props = { petState: 'idle' as PetState, mood: 'playing' as const, toy: 'toy_1' as const, breed: 'mutt' as const };
+
+    function readyToy() {
+      const view = render(<PetMediaView media={mediaWith(items)} {...props} />);
+      const player = mockVideoPlayers[mockVideoPlayers.length - 1];
+      if (player === undefined) throw new Error('no player');
+      act(() => {
+        player.emit('statusChange', { status: 'readyToPlay' });
+      });
+      return { view, player };
+    }
+
+    it('a loop stopped by the system (no error) is resumed after 3 s and reported once as stalled', () => {
+      const { player } = readyToy();
+      expect(player.play).toHaveBeenCalledTimes(1);
+      // iOS stops the player (deactivated audio session): playing false, the time stands.
+      act(() => {
+        player.playing = false;
+        player.currentTime = 1.4;
+        jest.advanceTimersByTime(3_900);
+      });
+      expect(player.play).toHaveBeenCalledTimes(1);
+      act(() => {
+        jest.advanceTimersByTime(200);
+      });
+      expect(player.play).toHaveBeenCalledTimes(2);
+      expect(messages()).toHaveLength(1);
+      expect(messages()[0]).toMatch(/^pet-media item:toy_1 src=remote stage=stalled layer=4s link=-12m player=paused$/);
+
+      // Stopped again → kicked again, but reported only once per session.
+      act(() => {
+        player.playing = false;
+        jest.advanceTimersByTime(4_100);
+      });
+      expect(player.play).toHaveBeenCalledTimes(3);
+      expect(messages()).toHaveLength(1);
+    });
+
+    it('»playing« with the time standing still → replay()', () => {
+      const { player } = readyToy();
+      act(() => {
+        player.currentTime = 0.8;
+        jest.advanceTimersByTime(4_100);
+      });
+      expect(player.replay).toHaveBeenCalledTimes(1);
+      expect(messages()[0]).toMatch(/stage=stalled .* player=not-advancing$/);
+    });
+
+    it('an advancing loop, a paused screen and a once clip are never kicked', () => {
+      const { view, player } = readyToy();
+      for (let i = 1; i <= 6; i += 1) {
+        act(() => {
+          player.currentTime = i * 0.9;
+          jest.advanceTimersByTime(1_000);
+        });
+      }
+      // Screen covered (a game / the album on top): paused on purpose.
+      view.rerender(<PetMediaView media={mediaWith(items)} {...props} active={false} />);
+      act(() => {
+        jest.advanceTimersByTime(10_000);
+      });
+      expect(player.play).toHaveBeenCalledTimes(1);
+      expect(player.replay).not.toHaveBeenCalled();
+      expect(messages()).toEqual([]);
+    });
+  });
 });
+

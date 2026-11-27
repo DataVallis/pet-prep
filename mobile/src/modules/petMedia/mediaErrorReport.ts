@@ -8,12 +8,15 @@
  *
  * A report carries ONLY technical facts, encoded in the message (no new payload fields):
  *
- *   pet-media <label> src=<local|remote> stage=<refetch|cooldown|given-up> layer=<span> link=<±span|none> player=<text|->
+ *   pet-media <label> src=<local|remote> stage=<refetch|cooldown|given-up|stalled> layer=<span> link=<±span|none> player=<text|->
  *
  *  - `label`: what was playing — `state:<state>`, `transition:<a_to_b>`, `phase:<clip>`,
  *    `item:<toy_1|bed|bowls|bowls-drink|treats>` or `clip:<loop|once>` (legacy / unknown);
  *  - `src`: the phone's cached file or the remote (signed) URL;
- *  - `stage`: what `recordVideoError` did with this error;
+ *  - `stage`: what `recordVideoError` did with this error; `stalled` (2026-11-27) = no error, but a
+ *    loop's time stood still for `STALL_AFTER_MS` while it should play (`playbackWatchdog.ts`) and
+ *    the player was kicked — `player=paused` (it said it was paused → `play()`) or
+ *    `player=not-advancing` (it said it played → `replay()`);
  *  - `layer`: how long the player layer existed before it failed (instant vs mid-playback);
  *  - `link`: time left on the URL's signature (`expires` query value vs the device clock;
  *    negative = expired — device clock skew applies);
@@ -30,6 +33,8 @@ import type { PlayItem } from '@/modules/petMedia/statePlayer';
 import type { PetMediaInfo, VideoErrorState } from '@/modules/petMedia/petMedia';
 
 export type VideoErrorStage = 'refetch' | 'cooldown' | 'given-up';
+/** Every reported stage: a player error's (`VideoErrorStage`) or the stall watchdog's. */
+export type PetMediaStage = VideoErrorStage | 'stalled';
 
 export type ClipItem = Extract<PlayItem, { kind: 'clip' }>;
 
@@ -37,8 +42,8 @@ export interface PetMediaFailure {
   /** `describeClip(...)` of the layer's item. */
   label: string;
   local: boolean;
-  stage: VideoErrorStage;
-  /** Layer mount → error, ms. */
+  stage: PetMediaStage;
+  /** Layer mount → error (stall: → the kick), ms. */
   layerAgeMs: number;
   /** Signature expiry − now, ms; null = the URL carries no `expires`. */
   linkLeftMs: number | null;

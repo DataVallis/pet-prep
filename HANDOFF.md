@@ -173,6 +173,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-27 (mobile, `fix/home-video-frozen-after-play`)
+- Domači video (igrača) zamrznjen po igri (Davidov iPhone): vsak končan zvok igre (expo-audio, privzeto `keepAudioSessionActive: false`) je deaktiviral skupno iOS avdio sejo, kar ustavi tudi expo-video predvajalnike brez napake. `useGameFx` zdaj `keepAudioSessionActive: true`; plus stražar v `PetMediaView` (`playbackWatchdog.ts`: zanka, ki 3 s stoji → `play()` / `replay()`, poročilo `pet-media … stage=stalled`). Samo JS / OTA. Dolg: `ClipDeck` / `SchoolStage` nimata stražarja; potrditev na napravi.
+
 ### 2026-11-27 (claude.ai chat, docs only, `docs/digital-twin-standards`)
 - `docs/business/DIGITAL_TWIN.md` rewritten to professional definitions (David: »mora biti pravilno, profesionalno narejeno«): Digital Twin Consortium definition, Kritzinger levels model / shadow / twin, ISO/IEC 30173:2023, Gartner DTO; practices; steps D1–D5 (process inventory + sync spec, »Poslovanje« page, simulator, forecast validation, feedback loop with David's approval). Still an idea — scope and timing undecided; no code. DECISIONS 2026-11-27.
 
