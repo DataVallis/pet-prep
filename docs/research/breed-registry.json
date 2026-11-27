@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "508098db7430671ae6eebe6c9f6c56366ce157d396a25cf48abeff4e23ca2fa9"
+      "sha256": "8a878bb2984f1ba52ad3ec7eb91ef360dfa625ae6f3aca19791576da5d802fd5"
     }
   },
   "suitability_vocabulary": {
@@ -84596,7 +84596,12 @@
           "S1078"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bearded-collie.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
