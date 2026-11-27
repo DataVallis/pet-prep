@@ -59,6 +59,12 @@ export interface TakeOutClock {
   last_taken_out_at: string | null;
   /** Absent from older servers (= `regular`). */
   kind?: TakeOutKind;
+  /**
+   * Kind `evening` only (server `take_out.window_starts_at`, David 2026-11-27): when the evening
+   * window opens (bedtime − `evening_window_minutes`). A take-out before it does not count as the
+   * evening one. Absent (older server) / null = unknown → the old »najkasneje ob …« texts.
+   */
+  window_starts_at?: string | null;
 }
 
 export interface BehaviourEvent {
@@ -118,12 +124,15 @@ function readTakeOut(value: unknown): TakeOutClock | null {
   const due = iso(value.next_due_at);
   if (!Number.isFinite(hold) || hold <= 0 || started === null || due === null) return null;
   const kind = typeof value.kind === 'string' && (TAKE_OUT_KINDS as readonly string[]).includes(value.kind) ? (value.kind as TakeOutKind) : null;
+  // Missing (older server) stays absent; present = the ISO start or null.
+  const hasWindow = 'window_starts_at' in value;
   return {
     hold_hours: hold,
     clock_started_at: started,
     next_due_at: due,
     last_taken_out_at: iso(value.last_taken_out_at),
     ...(kind !== null ? { kind } : {}),
+    ...(hasWindow ? { window_starts_at: iso(value.window_starts_at) } : {}),
   };
 }
 
@@ -223,23 +232,34 @@ export function sceneOf(events: readonly BehaviourEvent[]): BehaviourScene | nul
 // ── Optimistic effects of the child's own action ──────────────
 
 /**
- * "Pelji ven": the clock restarts now; the next accident ~hold_hours later (server corrects quiet
- * hours and the morning / evening deadline). The prediction is a plain hold, so `kind` is dropped.
+ * "Pelji ven" (optimistic): only `last_taken_out_at` moves — the deadline card stays as it is until
+ * the server's state arrives (David's device bug 2026-11-27). The next deadline depends on rules the
+ * phone cannot see (quiet hours, the evening window, the morning rule): a plain "now + hold" showed
+ * »jutri ob 2:56« for a take-out at 18:56 before the evening window, which the server then replaced
+ * with »najkasneje ob 21:00« again. Optimistic, then ALWAYS the server state — so nothing is guessed.
  */
 export function afterTakeOut(b: ChildBehaviour, nowMs: number): ChildBehaviour {
   if (b.take_out === null) return b;
-  const now = new Date(nowMs).toISOString();
-  const { kind: _kind, ...clock } = b.take_out;
-  void _kind;
-  return {
-    ...b,
-    take_out: {
-      ...clock,
-      clock_started_at: now,
-      last_taken_out_at: now,
-      next_due_at: new Date(nowMs + b.take_out.hold_hours * 3_600_000).toISOString(),
-    },
-  };
+  return { ...b, take_out: { ...b.take_out, last_taken_out_at: new Date(nowMs).toISOString() } };
+}
+
+/**
+ * The evening window has not opened yet (David 2026-11-27): kind `evening` and the server's
+ * `window_starts_at` lies after `nowMs` (server time) — a take-out now does NOT count as the evening
+ * one. Returns the window start and the bedtime (ISO), else null (also for older servers).
+ */
+export function eveningWindowAhead(clock: TakeOutClock | null, nowMs: number): { start: string; end: string } | null {
+  if (clock === null || clock.kind !== 'evening' || !clock.window_starts_at) return null;
+  const startMs = Date.parse(clock.window_starts_at);
+  if (Number.isNaN(startMs) || startMs <= nowMs) return null;
+  return { start: clock.window_starts_at, end: clock.next_due_at };
+}
+
+/** »19:00« / »21:00« of the window ahead in the pet's clock; null when unreadable. */
+function windowTimes(win: { start: string; end: string }, timezone: string | null): { start: string; end: string } | null {
+  const start = familyClock(win.start, timezone);
+  const end = familyClock(win.end, timezone);
+  return start !== null && end !== null ? { start, end } : null;
 }
 
 function withEvents(b: ChildBehaviour, events: BehaviourEvent[]): ChildBehaviour {
@@ -273,7 +293,37 @@ export const BEHAVIOUR_STRINGS = strings('behaviour', 'child', {
   takeOutShortAt: (when: string) => t('behaviour:child.takeOutShortAt', { when }),
   /** David 2026-11-26: »Pred spanjem ven — najkasneje ob 21:00« (`time` from `familyClock` → `modules/time/clock.ts`). */
   takeOutEvening: (time: string) => t('behaviour:child.takeOutEvening', { time }),
+  /** David 2026-11-27: before the window opens »Pred spanjem ven — med 19:00 in 21:00« (card + pill). */
+  takeOutEveningWindow: (start: string, end: string) => t('behaviour:child.takeOutEveningWindow', { start, end }),
+  takeOutEveningWindowHowTo: (start: string, end: string) => t('behaviour:child.takeOutEveningWindowHowTo', { start, end }),
+  /** Dock hint under »Pelji ven« before the window: »od 19:00«. */
+  takeOutHintFrom: (time: string) => t('behaviour:child.takeOutHintFrom', { time }),
+  /** Take-out toast before the window: it was outside, but the evening one is still to come. */
+  takeOutBeforeEvening: (start: string, end: string) => t('behaviour:child.takeOutBeforeEvening', { start, end }),
+  takeOutBeforeEveningUnchanged: (start: string, end: string) => t('behaviour:child.takeOutBeforeEveningUnchanged', { start, end }),
 });
+
+/**
+ * Toast text after »Pelji ven« (David 2026-11-27), from the server state that came with the answer:
+ * before the evening window (`eveningWindowAhead`) it says honestly that the evening take-out is still
+ * to come (»Lepo, da je bil zunaj! Pred spanjem (med 19:00 in 21:00) ga pelji ven še enkrat.«);
+ * null otherwise (the caller uses the usual success / unchanged text).
+ */
+export function takeOutToastText(
+  status: 'accepted' | 'unchanged',
+  clock: TakeOutClock | null,
+  serverNowIso: string | null,
+  timezone: string | null,
+): string | null {
+  const nowMs = serverNowIso === null ? Number.NaN : Date.parse(serverNowIso);
+  if (Number.isNaN(nowMs)) return null;
+  const win = eveningWindowAhead(clock, nowMs);
+  const times = win === null ? null : windowTimes(win, timezone);
+  if (times === null) return null;
+  return status === 'accepted'
+    ? BEHAVIOUR_STRINGS.takeOutBeforeEvening(times.start, times.end)
+    : BEHAVIOUR_STRINGS.takeOutBeforeEveningUnchanged(times.start, times.end);
+}
 
 /** Every scene has a caption and a screen-reader label (compile-time check). */
 const _sceneTexts: { scene: Record<BehaviourScene, string>; sceneA11y: Record<BehaviourScene, string> } = BEHAVIOUR_STRINGS;
@@ -356,6 +406,21 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
   }
   const level = takeOutLevel(minutes, clock.hold_hours);
   const howTo = BEHAVIOUR_STRINGS.takeOutHowTo;
+  // David 2026-11-27: before the evening window opens a take-out does not count — say the window,
+  // never a countdown that suggests »now« would do (calm, the button hint shows the window start).
+  const win = eveningWindowAhead(clock, serverNowMs);
+  const times = win === null ? null : windowTimes(win, timezone);
+  if (times !== null) {
+    const text = BEHAVIOUR_STRINGS.takeOutEveningWindow(times.start, times.end);
+    return {
+      line: text,
+      hint: BEHAVIOUR_STRINGS.takeOutHintFrom(times.start),
+      due: false,
+      level: 'calm',
+      howTo: BEHAVIOUR_STRINGS.takeOutEveningWindowHowTo(times.start, times.end),
+      short: text,
+    };
+  }
   // David 2026-11-26: the deadline is the start of the night — out once more before bed (card + pill).
   if (clock.kind === 'evening') {
     const time = familyClock(clock.next_due_at, timezone);
@@ -395,6 +460,8 @@ export function nextTakeOutText(clock: TakeOutClock | null, serverNowIso: string
   if (Number.isNaN(dueMs) || Number.isNaN(nowMs)) return null;
   const minutes = (dueMs - nowMs) / 60_000;
   if (minutes < 1) return null;
+  // Before the evening window the toast itself names the window (`takeOutToastText`).
+  if (eveningWindowAhead(clock, nowMs) !== null) return null;
   if (minutes <= TAKE_OUT_DURATION_MAX_MIN) return BEHAVIOUR_STRINGS.nextTakeOutIn(durationText(minutes));
   const when = whenText(clock.next_due_at, serverNowIso, timezone);
   return when === null ? null : BEHAVIOUR_STRINGS.nextTakeOutAt(when);

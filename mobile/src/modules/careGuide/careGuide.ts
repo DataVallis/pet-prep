@@ -38,7 +38,8 @@ export interface CareGuide {
   species: Species;
   meals: { per_day: number; by_child: number; by_parent: number; windows: CareGuideWindow[] };
   steps: { goal: number } | null;
-  take_out: { hold_hours: number } | null;
+  /** `evening_window` (David 2026-11-27): today's evening take-out window "HH:MM" (pet clock); null = unknown / no rule. */
+  take_out: { hold_hours: number; evening_window: { start: string; end: string } | null } | null;
   water: { refill_below: number; min_gap_minutes: number } | null;
   grooming: { per_week: number } | null;
   sleep: { night: { start: string; end: string } | null; school: { start: string; end: string } | null };
@@ -146,7 +147,7 @@ export function readCareGuide(raw: unknown): CareGuide | null {
       windows,
     },
     steps,
-    take_out: hold !== null && hold > 0 ? { hold_hours: hold } : null,
+    take_out: hold !== null && hold > 0 ? { hold_hours: hold, evening_window: isObj(raw.take_out) ? span(raw.take_out.evening_window) : null } : null,
     water,
     grooming: perWeek !== null && perWeek > 0 ? { per_week: perWeek } : null,
     sleep,
@@ -237,7 +238,12 @@ export function careGuideSections(
       out.push({ key: 'walk', label: label('walk'), lines: [tr(pushes ? 'walkPushes' : 'walk', { steps: steps(guide.steps.goal) })] });
     }
     if (guide.take_out) {
-      out.push({ key: 'takeOut', label: label('takeOut'), lines: [tr('takeOut', { hours: hours(guide.take_out.hold_hours) })] });
+      // David 2026-11-27: the server's evening window »med 19:00 in 21:00« (older server → the general text).
+      const win = guide.take_out.evening_window;
+      const takeOutLine = win
+        ? tr('takeOutWindow', { hours: hours(guide.take_out.hold_hours), start: clockText(win.start), end: clockText(win.end) })
+        : tr('takeOut', { hours: hours(guide.take_out.hold_hours) });
+      out.push({ key: 'takeOut', label: label('takeOut'), lines: [takeOutLine] });
       // David 2026-10-20: steps never resolve the potty need — »Pelji ven« is its own button.
       out.push({ key: 'difference', label: label('difference'), lines: [tr(pushes ? 'differencePushes' : 'difference')] });
     }

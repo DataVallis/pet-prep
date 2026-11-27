@@ -331,6 +331,18 @@ class BehaviourEventService
     }
 
     /**
+     * Start of the evening take-out window before a night that starts at
+     * $nightStart (David 2026-11-26): `behaviour.puppy.evening_window_minutes`
+     * earlier (21:00 − 120 min = 19:00). A take-out from this instant on is the
+     * evening one; an earlier one is not. The ONE definition — the payload
+     * (`take_out.window_starts_at`) and the evening push use it.
+     */
+    public function eveningWindowStart(CarbonImmutable $nightStart): CarbonImmutable
+    {
+        return $nightStart->subMinutes(max(0, (int) config('behaviour.puppy.evening_window_minutes', 0)));
+    }
+
+    /**
      * The evening take-out deadline for a clock that started at $start and
      * whose normal due instant is $due (David 2026-11-26): when $due falls
      * into / past the night of the start's pet-local date and the clock
@@ -353,7 +365,7 @@ class BehaviourEventService
 
         $localDate = $pet->localDate($start);
         $nightStart = $this->nightStartOn($pet, $quiet, $localDate);
-        if ($nightStart === null || $due->lessThan($nightStart) || $start->greaterThanOrEqualTo($nightStart->subMinutes($minutes))) {
+        if ($nightStart === null || $due->lessThan($nightStart) || $start->greaterThanOrEqualTo($this->eveningWindowStart($nightStart))) {
             return null;
         }
 

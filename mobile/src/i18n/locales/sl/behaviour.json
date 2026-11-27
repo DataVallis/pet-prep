@@ -32,7 +32,12 @@
     "takeOutShortIn": "Ven čez {{duration}}",
     "takeOutShortAt": "Ven najkasneje {{when}}",
     "takeOutShortNow": "Kuža mora ven zdaj",
-    "takeOutEvening": "Pred spanjem ven — najkasneje ob {{time}}"
+    "takeOutEvening": "Pred spanjem ven — najkasneje ob {{time}}",
+    "takeOutEveningWindow": "Pred spanjem ven — med {{start}} in {{end}}",
+    "takeOutEveningWindowHowTo": "Pritisni »Pelji ven« med {{start}} in {{end}}. Prej ne šteje.",
+    "takeOutHintFrom": "od {{time}}",
+    "takeOutBeforeEvening": "Lepo, da je bil zunaj! Pred spanjem (med {{start}} in {{end}}) ga pelji ven še enkrat.",
+    "takeOutBeforeEveningUnchanged": "Kuža je bil pravkar zunaj. Pred spanjem (med {{start}} in {{end}}) ga pelji ven še enkrat."
   },
   "parent": {
     "title": "Vedenje",

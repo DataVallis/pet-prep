@@ -87,6 +87,8 @@ return [
     // David 2026-11-26: start of the evening window (2 h before the night's quiet hours) — the
     // puppy must go out once more before bed. Children only, no names, once a day.
     'take_out_reminder_evening' => 'Your pup needs to go out once more before bed. Press “Take out”.',
+    // David 2026-11-27: the same, sent inside the window, with the bedtime (pet clock, 12 / 24 h per phone).
+    'take_out_reminder_evening_at' => 'Your pup needs to go out once more before bed — by :time at the latest. Press “Take out”.',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 

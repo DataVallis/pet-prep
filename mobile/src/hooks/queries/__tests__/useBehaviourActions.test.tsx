@@ -53,15 +53,16 @@ describe('behaviour action mutations', () => {
     });
   });
 
-  it('take-out: clock restarts at once, then the server state', async () => {
+  it('take-out: marked at once (deadline kept — David 2026-11-27), then the server state', async () => {
     const call = deferred<unknown>();
     takeOutPet.mockReturnValueOnce(call.promise);
     const { wrapper, cached } = setup();
-    const before = cached()?.behaviour.take_out?.clock_started_at;
+    const before = cached()?.behaviour.take_out;
     const { result } = renderHook(() => useTakeOut(), { wrapper });
 
     act(() => result.current.mutate());
-    await waitFor(() => expect(cached()?.behaviour.take_out?.clock_started_at).not.toBe(before));
+    await waitFor(() => expect(cached()?.behaviour.take_out?.last_taken_out_at).not.toBe(before?.last_taken_out_at));
+    expect(cached()?.behaviour.take_out?.next_due_at).toBe(before?.next_due_at);
 
     const server = makeLiveChildState({
       behaviour: { take_out: makeTakeOut({ next_due_at: '2026-10-04T14:00:00+02:00' }), can_take_out: true },

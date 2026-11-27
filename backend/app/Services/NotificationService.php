@@ -279,7 +279,7 @@ class NotificationService
             return null;
         }
         if ($clock['evening'] !== null) {
-            $windowStart = $clock['evening']->subMinutes(max(0, (int) config('behaviour.puppy.evening_window_minutes', 0)));
+            $windowStart = app(BehaviourEventService::class)->eveningWindowStart($clock['evening']);
 
             return $windowStart->greaterThan($now) ? null : 'evening:'.$pet->localDate($clock['evening']);
         }
@@ -933,6 +933,14 @@ class NotificationService
         // M6-W03: the item (metric = item key) → its variant for the species (dog_bed, cat_basket, …).
         if ($notification->type === PushType::ItemReady) {
             return ['variant' => WishService::pushVariant((string) $notification->metric, $pet->speciesValue()), 'replace' => []];
+        }
+        // David 2026-11-27: the evening take-out reminder names the bedtime (the deadline) in the pet's clock.
+        if ($notification->type === PushType::TakeOutReminder && str_starts_with((string) $metric, 'evening:')) {
+            $clock = app(BehaviourEventService::class)->pottyClock($pet, $pet->quietHours());
+
+            return $clock !== null && $clock['evening'] !== null
+                ? ['variant' => null, 'replace' => ['time' => ClockText::at($clock['evening'], $pet->effectiveTimezone())]]
+                : $plain;
         }
         // M5-R06-04 (M3-12): the play reminder only when the wand game can start now.
         if ($notification->type === PushType::PlayReminder) {

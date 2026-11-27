@@ -722,6 +722,8 @@ export function makeTakeOut(overrides: Partial<NonNullable<RawState['behaviour']
     next_due_at: '2026-10-04T13:00:00+02:00',
     last_taken_out_at: '2026-10-04T11:00:00+02:00',
     kind: 'regular' as const,
+    // 2026-11-27: kind `evening` only (the evening window's start); null for every other kind.
+    window_starts_at: null as string | null,
     ...overrides,
   };
 }

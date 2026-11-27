@@ -22,6 +22,7 @@ import {
   sceneOf,
   takeOutCountdown,
   takeOutLevel,
+  takeOutToastText,
   type BehaviourEvent,
   type ChildBehaviour,
 } from '@/modules/behaviour/behaviour';
@@ -115,15 +116,10 @@ describe('which tool for which mess', () => {
 });
 
 describe('optimistic effects', () => {
-  it('take-out restarts the clock now; no clock → unchanged', () => {
+  it('take-out keeps the deadline until the server answers (David 2026-11-27); no clock → unchanged', () => {
     const now = at('2026-10-04T10:30:00Z');
     const next = afterTakeOut(child({ take_out: makeTakeOut(), can_take_out: true }), now);
-    expect(next.take_out).toEqual({
-      hold_hours: 2,
-      clock_started_at: '2026-10-04T10:30:00.000Z',
-      last_taken_out_at: '2026-10-04T10:30:00.000Z',
-      next_due_at: '2026-10-04T12:30:00.000Z',
-    });
+    expect(next.take_out).toEqual({ ...makeTakeOut(), last_taken_out_at: '2026-10-04T10:30:00.000Z' });
     const none = child();
     expect(afterTakeOut(none, now)).toBe(none);
   });
@@ -229,9 +225,89 @@ describe('evening take-out (David 2026-11-26)', () => {
     expect(takeOutCountdown(morning, at('2026-10-04T21:30:00+02:00'), TZ)?.line).toBe('Kuža mora ven najkasneje jutri ob 7:30.');
   });
 
-  it('the optimistic take-out drops the evening kind (the server sends the new one)', () => {
+  it('the optimistic take-out keeps the evening card (never a plain »now + hold« across the night)', () => {
     const next = afterTakeOut(child({ take_out: evening, can_take_out: true }), at('2026-10-04T19:30:00+02:00'));
-    expect(next.take_out?.kind).toBeUndefined();
+    expect(next.take_out?.kind).toBe('evening');
+    expect(next.take_out?.next_due_at).toBe(evening.next_due_at);
+  });
+});
+
+describe('evening window (David 2026-11-27 device bug: out at 18:56, card still »najkasneje ob 21:00«)', () => {
+  const win = makeTakeOut({
+    kind: 'evening',
+    clock_started_at: '2026-10-04T18:56:00+02:00',
+    next_due_at: '2026-10-04T21:00:00+02:00',
+    last_taken_out_at: '2026-10-04T18:56:00+02:00',
+    window_starts_at: '2026-10-04T19:00:00+02:00',
+  });
+
+  afterEach(async () => {
+    applyTimeFormat('auto');
+    await i18n.changeLanguage('sl');
+  });
+
+  it('reads window_starts_at; unreadable → null, missing (older server) → absent', () => {
+    expect(readPetBehaviour({ take_out: win }).take_out?.window_starts_at).toBe('2026-10-04T19:00:00+02:00');
+    expect(readPetBehaviour({ take_out: { ...win, window_starts_at: null } }).take_out?.window_starts_at).toBeNull();
+    expect(readPetBehaviour({ take_out: { ...win, window_starts_at: 'x' } }).take_out?.window_starts_at).toBeNull();
+    const { window_starts_at: _w, ...older } = win;
+    void _w;
+    expect(readPetBehaviour({ take_out: older }).take_out).not.toHaveProperty('window_starts_at');
+  });
+
+  it('before the window: »med 19:00 in 21:00«, the button says »od 19:00«, calm, never due', () => {
+    applyTimeFormat('24h');
+    const c = takeOutCountdown(win, at('2026-10-04T18:56:30+02:00'), TZ);
+    expect(c).toEqual({
+      line: 'Pred spanjem ven — med 19:00 in 21:00',
+      hint: 'od 19:00',
+      due: false,
+      level: 'calm',
+      howTo: 'Pritisni »Pelji ven« med 19:00 in 21:00. Prej ne šteje.',
+      short: 'Pred spanjem ven — med 19:00 in 21:00',
+    });
+  });
+
+  it('inside the window: »najkasneje ob 21:00« with the countdown', () => {
+    applyTimeFormat('24h');
+    const c = takeOutCountdown(win, at('2026-10-04T19:00:00+02:00'), TZ);
+    expect(c?.line).toBe('Pred spanjem ven — najkasneje ob 21:00');
+    expect(c?.hint).toBe('~2 h');
+    expect(c?.howTo).toBe('Pritisni »Pelji ven«, preden se čas izteče.');
+  });
+
+  it('English + 12 h through modules/time/clock.ts, in the pet zone', async () => {
+    await i18n.changeLanguage('en');
+    applyTimeFormat('12h');
+    const c = takeOutCountdown(win, at('2026-10-04T18:00:00+02:00'), TZ);
+    expect(c?.line).toBe('Out before bed — between 7:00 PM and 9:00 PM');
+    expect(c?.hint).toBe('from 7:00 PM');
+    expect(c?.howTo).toBe('Press “Take out” between 7:00 PM and 9:00 PM. Earlier doesn’t count.');
+  });
+
+  it('toast before the window is honest; no »next time« line then', () => {
+    applyTimeFormat('24h');
+    expect(takeOutToastText('accepted', win, '2026-10-04T18:56:00+02:00', TZ)).toBe(
+      'Lepo, da je bil zunaj! Pred spanjem (med 19:00 in 21:00) ga pelji ven še enkrat.',
+    );
+    expect(takeOutToastText('unchanged', win, '2026-10-04T18:57:00+02:00', TZ)).toBe(
+      'Kuža je bil pravkar zunaj. Pred spanjem (med 19:00 in 21:00) ga pelji ven še enkrat.',
+    );
+    expect(nextTakeOutText(win, '2026-10-04T18:56:00+02:00', TZ)).toBeNull();
+  });
+
+  it('toast: the usual text inside the window, for other kinds and older servers', () => {
+    expect(takeOutToastText('accepted', win, '2026-10-04T19:00:00+02:00', TZ)).toBeNull();
+    expect(takeOutToastText('accepted', makeTakeOut(), '2026-10-04T11:00:00+02:00', TZ)).toBeNull();
+    expect(takeOutToastText('accepted', { ...win, window_starts_at: undefined }, '2026-10-04T18:56:00+02:00', TZ)).toBeNull();
+    expect(takeOutToastText('accepted', null, '2026-10-04T18:56:00+02:00', TZ)).toBeNull();
+    expect(takeOutToastText('accepted', win, null, TZ)).toBeNull();
+  });
+
+  it('pet zone, not the phone: a New York pet shows its own clock', () => {
+    applyTimeFormat('24h');
+    const ny = makeTakeOut({ kind: 'evening', next_due_at: '2026-10-04T21:00:00-04:00', window_starts_at: '2026-10-04T19:00:00-04:00' });
+    expect(takeOutCountdown(ny, at('2026-10-04T18:00:00-04:00'), 'America/New_York')?.line).toBe('Pred spanjem ven — med 19:00 in 21:00');
   });
 });
 

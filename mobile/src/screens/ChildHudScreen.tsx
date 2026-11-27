@@ -125,6 +125,7 @@ import {
   needsScrubbing,
   onlyChewingOpen,
   takeOutCountdown,
+  takeOutToastText,
 } from '@/modules/behaviour/behaviour';
 import BehaviourPanel, { type StackCard } from '@/components/BehaviourPanel';
 import MealWindowsRow from '@/components/MealWindowsRow';
@@ -617,10 +618,12 @@ export default function ChildHudScreen() {
     mutations[action].mutate(undefined, {
       onSuccess: (response) => {
         const after = normalizeChildState(response.state);
+        // David 2026-11-27: »Pelji ven« before the evening window says honestly that the evening one is still to come.
         const message =
           action === 'feed'
             ? feedSuccessMessage(response.status, response.feed_mode, after, response.covers_window)
-            : successMessage(action, response.status);
+            : ((action === 'take_out' ? takeOutToastText(response.status, after.behaviour.take_out, after.server_time, after.timezone) : null) ??
+              successMessage(action, response.status));
         // M5-T01 (spec §4): an accepted care is a ✓ confirmation with "next time" where the state knows it.
         const accepted = response.status === 'accepted';
         // M6-W03: the pet's own bowls once on the stage after an accepted meal / water (looks only, S1):
