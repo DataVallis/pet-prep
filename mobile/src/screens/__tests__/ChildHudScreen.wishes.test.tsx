@@ -132,3 +132,22 @@ describe('treats preparing', () => {
     expect(screen.queryByText('Njami! Kakšen priboljšek.')).toBeNull();
   });
 });
+
+// David 2026-11-27: a bought thing that is not there yet is announced on the pet screen.
+describe('gift on its way', () => {
+  const withItems = (items: unknown[]) => ({ ...makeLiveChildState(), wishes: { open_count: 0, items, treats: { left: 0, given_today: 0, daily_limit: 2 } } });
+
+  it('a bought bed without its content yet: »Darilo je na poti: Pasja postelja«', async () => {
+    (api.getChildPet as jest.Mock).mockResolvedValue(withItems([{ key: 'bed', variant: 'dog_bed', media_ready: false }]));
+    renderWithQuery(<ChildHudScreen />);
+    await screen.findByTestId('hud-top-stack');
+    expect(screen.getAllByText('Darilo je na poti: Pasja postelja. Lahko traja nekaj minut.').length).toBeGreaterThan(0);
+  });
+
+  it('everything is there: no such line', async () => {
+    (api.getChildPet as jest.Mock).mockResolvedValue(withItems([{ key: 'bed', variant: 'dog_bed', media_ready: true }]));
+    renderWithQuery(<ChildHudScreen />);
+    await screen.findByTestId('hud-top-stack');
+    expect(screen.queryByText(/Darilo je na poti/)).toBeNull();
+  });
+});

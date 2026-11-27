@@ -16,7 +16,7 @@ import { PARENT_WISHES_KEY } from '@/modules/wishes/keys';
 import { api } from '@/api/client';
 import { useAppStore } from '@/store/appStore';
 import { redeemPurchase, redeemWithRetry, type RedeemOutcome } from '@/modules/wishes/redeem';
-import { purchaseStillPossible, readParentWishes, type PurchaseCheck, type WishDesignChoice } from '@/modules/wishes/wishes';
+import { anyOnTheWay, purchaseStillPossible, readParentWishes, type PurchaseCheck, type WishDesignChoice } from '@/modules/wishes/wishes';
 
 export type WishPurchaseResult =
   | { kind: 'purchase'; failure: PurchaseFailure }
@@ -44,7 +44,8 @@ export function wishResultText(result: WishPurchaseResult): string {
   const o = result.outcome;
   switch (o.status) {
     case 'assigned':
-      return t('wishes:parent.result.assigned');
+      // David 2026-11-27: say that the thing takes a few minutes to show up at the pet.
+      return anyOnTheWay(o.items) ? t('wishes:parent.result.assignedOnTheWay') : t('wishes:parent.result.assigned');
     case 'pending':
       return t('wishes:parent.result.pending');
     case 'refused':

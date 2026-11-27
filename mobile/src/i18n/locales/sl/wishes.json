@@ -23,6 +23,8 @@
     "requested": "Prošnja poslana",
     "owned": "Že ima",
     "onTheWay": "Na poti …",
+    "giftOnTheWay": "Darilo je na poti: {{item}}. Lahko traja nekaj minut.",
+    "giftsOnTheWay": "Darila so na poti. Lahko traja nekaj minut.",
     "declined": "Mogoče kdaj drugič",
     "blocked": "Zdaj ne moreš prositi za nove stvari.",
     "limit": "Odprte imaš že {{count}} prošnje. Počakaj, da starš odgovori.",
@@ -108,6 +110,7 @@
     "busy": "Počakajte …",
     "result": {
       "assigned": "Kupljeno — stvar je dodana.",
+      "assignedOnTheWay": "Kupljeno — stvar je na poti. Pri ljubljenčku bo na voljo čez nekaj minut; otrok dobi obvestilo, ko bo tu.",
       "pending": "Nakup je zabeležen, stvar bo kmalu dodana.",
       "alreadyOwned": "Ta ljubljenček to stvar že ima. Nakup ostane pod »Komu?« za drugega ljubljenčka.",
       "refused": "Stvari ni bilo mogoče dodati. Nakup ostane pod »Komu?«.",
