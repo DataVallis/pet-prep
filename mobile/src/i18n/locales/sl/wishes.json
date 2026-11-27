@@ -12,6 +12,54 @@
     "cat_treats": "Priboljški (10)",
     "welcome_bundle": "Paket »Dobrodošlica«"
   },
+  "about": {
+    "dog_bed": {
+      "parent": "Ko kuža spi, ga vidite v tej postelji. Na spanje in oceno skrbi ne vpliva.",
+      "child": "Ko bo kuža zaspal, bo spal v tej postelji."
+    },
+    "cat_basket": {
+      "parent": "Ko muca spi, jo vidite v tej košari. Na spanje in oceno skrbi ne vpliva.",
+      "child": "Ko bo muca zaspala, bo spala v tej košari."
+    },
+    "dog_bowls": {
+      "parent": "Ko otrok kužka nahrani ali mu da vode, ga za trenutek vidite jesti ali piti iz teh skled. Hranjenje deluje enako tudi brez njih.",
+      "child": "Ko ga nahraniš ali mu daš vode, bo jedel in pil iz teh skled."
+    },
+    "cat_bowls": {
+      "parent": "Ko otrok muco nahrani ali ji da vode, jo za trenutek vidite jesti ali piti iz teh skled. Hranjenje deluje enako tudi brez njih.",
+      "child": "Ko jo nahraniš ali ji daš vode, bo jedla in pila iz teh skled."
+    },
+    "dog_rope": {
+      "parent": "Kuža se z vrvjo igra sam, ko je razigran — tako ga vidite v aplikaciji. Otrokova igra z žogo deluje enako tudi brez nje.",
+      "child": "Ko bo kuža razigran, se bo z vrvjo igral sam."
+    },
+    "cat_mouse": {
+      "parent": "Muca se z miško igra sama, ko je razigrana — tako jo vidite v aplikaciji. Otrokova igra s palico s peresom deluje enako tudi brez nje.",
+      "child": "Ko bo muca razigrana, se bo z miško igrala sama."
+    },
+    "dog_squeaky": {
+      "parent": "Kuža se s piskajočo igračo igra sam, ko je razigran — tako ga vidite v aplikaciji. Otrokova igra z žogo deluje enako tudi brez nje.",
+      "child": "Ko bo kuža razigran, se bo z igračo igral sam."
+    },
+    "cat_feather": {
+      "parent": "Muca se s to palico igra sama, ko je razigrana — tako jo vidite v aplikaciji. Ni palica za otroka: vsakodnevna igra »Palica s peresom« deluje enako tudi brez nakupa.",
+      "child": "Ko bo muca razigrana, se bo s palico igrala sama. Tvoja igra s palico ostane enaka."
+    },
+    "dog_treats": {
+      "parent": "10 priboljškov, ki jih otrok podari z gumbom »Priboljšek« — največ 2 na dan, ne med spanjem. Kuža ga poje; lakote in ocene skrbi to ne spremeni.",
+      "child": "Daš mu jih z gumbom »Priboljšek« — največ dva na dan."
+    },
+    "cat_treats": {
+      "parent": "10 priboljškov, ki jih otrok podari z gumbom »Priboljšek« — največ 2 na dan, ne med spanjem. Muca ga poje; lakote in ocene skrbi to ne spremeni.",
+      "child": "Daš ji jih z gumbom »Priboljšek« — največ dva na dan."
+    },
+    "dog_bundle": {
+      "parent": "Kužka vidite v novi postelji, ko spi, pri novih skledah, ko jé ali pije, in z vrvjo, ko je razigran. Igra in ocena skrbi ostaneta enaki."
+    },
+    "cat_bundle": {
+      "parent": "Muco vidite v novi košari, ko spi, pri novih skledah, ko jé ali pije, in z miško, ko je razigrana. Igra in ocena skrbi ostaneta enaki."
+    }
+  },
   "child": {
     "entry": "Želje",
     "entryA11y": "Želje: prosi starša za stvari za ljubljenčka",

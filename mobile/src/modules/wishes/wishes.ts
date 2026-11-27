@@ -92,6 +92,43 @@ export function keysOfProduct(productId: string): WishItemKey[] {
 }
 
 // ──────────────────────────────────────────────────────────────
+//  »What you get« (David 2026-11-27, tester feedback)
+// ──────────────────────────────────────────────────────────────
+
+/**
+ * A short, honest description of what an item does, shown BEFORE it is asked for / bought
+ * (`wishes:about.<key>.parent` | `.child`). A parent bought the cat's »Palica s perjem« thinking
+ * the child would then play with the cat using it — in fact a bought item only shows up in the
+ * pet's own scenes (`itemMedia.ts`): the bed while sleeping, the bowls for a moment after an
+ * accepted feed / water, a toy in the `playing` scene (the pet plays with it by itself when it is
+ * playful: home `playing`, cuddles, the ball / wand decks only without their phase clips), the
+ * treats through »Priboljšek«. The child's own games (ball, the daily wand game with its drawn
+ * feather) are the same with or without a toy. The texts say only that — nothing more.
+ * The bundle has one key per species (`dog_bundle` / `cat_bundle`, parent only).
+ */
+export type AboutKey = WishVariant | 'dog_bundle' | 'cat_bundle';
+
+export function aboutKey(key: ShopKey, species: unknown, variant: unknown = null): AboutKey {
+  if (key === 'welcome_bundle') return species === 'cat' ? 'cat_bundle' : 'dog_bundle';
+  return variantFor(key, variant, species);
+}
+
+/** The parent text (wish card, »Kupi brez prošnje«, the bundle) — never with a price in it. */
+export function parentAboutKey(key: ShopKey, species: unknown, variant: unknown = null): `wishes:about.${AboutKey}.parent` {
+  return `wishes:about.${aboutKey(key, species, variant)}.parent`;
+}
+
+/** The child-friendly text of a catalogue row (never a price, never the bundle). */
+export function childAboutKey(variant: WishVariant): `wishes:about.${WishVariant}.child` {
+  return `wishes:about.${variant}.child`;
+}
+
+/** Before it is there: a row the pet already owns (or that is on its way) needs no description. */
+export function showChildAbout(state: ChildRowState): boolean {
+  return state !== 'owned' && state !== 'on_the_way';
+}
+
+// ──────────────────────────────────────────────────────────────
 //  Small readers
 // ──────────────────────────────────────────────────────────────
 

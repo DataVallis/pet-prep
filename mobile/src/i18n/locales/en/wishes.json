@@ -12,6 +12,54 @@
     "cat_treats": "Treats (10)",
     "welcome_bundle": "Welcome pack"
   },
+  "about": {
+    "dog_bed": {
+      "parent": "When the dog sleeps, you see it in this bed. It does not change sleep or the Care Score.",
+      "child": "When your dog falls asleep, it will sleep in this bed."
+    },
+    "cat_basket": {
+      "parent": "When the cat sleeps, you see it in this basket. It does not change sleep or the Care Score.",
+      "child": "When your cat falls asleep, it will sleep in this basket."
+    },
+    "dog_bowls": {
+      "parent": "When your child feeds the dog or gives it water, you briefly see it eat or drink from these bowls. Feeding works the same without them.",
+      "child": "When you feed it or give it water, it will eat and drink from these bowls."
+    },
+    "cat_bowls": {
+      "parent": "When your child feeds the cat or gives it water, you briefly see it eat or drink from these bowls. Feeding works the same without them.",
+      "child": "When you feed it or give it water, it will eat and drink from these bowls."
+    },
+    "dog_rope": {
+      "parent": "The dog plays with the rope on its own when it is playful — that is how you see it in the app. Your child's ball game works the same without it.",
+      "child": "When your dog is playful, it will play with the rope on its own."
+    },
+    "cat_mouse": {
+      "parent": "The cat plays with the mouse on its own when it is playful — that is how you see it in the app. Your child's feather wand game works the same without it.",
+      "child": "When your cat is playful, it will play with the mouse on its own."
+    },
+    "dog_squeaky": {
+      "parent": "The dog plays with the squeaky toy on its own when it is playful — that is how you see it in the app. Your child's ball game works the same without it.",
+      "child": "When your dog is playful, it will play with the toy on its own."
+    },
+    "cat_feather": {
+      "parent": "The cat plays with this wand on its own when it is playful — that is how you see it in the app. It is not a wand for your child: the daily \"Feather wand\" game works the same without buying it.",
+      "child": "When your cat is playful, it will play with the wand on its own. Your own wand game stays the same."
+    },
+    "dog_treats": {
+      "parent": "10 treats your child gives with the \"Treat\" button — up to 2 a day, not while the pet sleeps. The dog eats it; hunger and the Care Score do not change.",
+      "child": "You give them with the \"Treat\" button — up to two a day."
+    },
+    "cat_treats": {
+      "parent": "10 treats your child gives with the \"Treat\" button — up to 2 a day, not while the pet sleeps. The cat eats it; hunger and the Care Score do not change.",
+      "child": "You give them with the \"Treat\" button — up to two a day."
+    },
+    "dog_bundle": {
+      "parent": "You see the dog in its new bed when it sleeps, at the new bowls when it eats or drinks, and with the rope when it is playful. The game and the Care Score stay the same."
+    },
+    "cat_bundle": {
+      "parent": "You see the cat in its new basket when it sleeps, at the new bowls when it eats or drinks, and with the mouse when it is playful. The game and the Care Score stay the same."
+    }
+  },
   "child": {
     "entry": "Wishes",
     "entryA11y": "Wishes: ask your parent for things for your pet",
