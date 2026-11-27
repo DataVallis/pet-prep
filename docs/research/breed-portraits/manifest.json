@@ -1777,6 +1777,19 @@
             "prompt_hash": "sha256:e98a6401576721ca55e2706a40ffde10abe80d641db2c73730b78644791fa53d",
             "generated_at": "2026-11-27T03:20:23+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "saluki",
+            "species": "dog",
+            "colour": "fawn",
+            "file": "dog/saluki.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c28369031ad8c6d84b02ea27eb1b019f5334cde22133cdfeda51f1fa179737a0",
+            "generated_at": "2026-11-27T07:07:51+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
