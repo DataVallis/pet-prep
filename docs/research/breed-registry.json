@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7282a8c5e92ee2201ac1886cf9a1ee65e18cfc943b51336d8f30db97ad069ecb"
+      "sha256": "d1e205a463ee55b9509f4866591f51becfa7ac3b56a2521684eb7cff1df7f011"
     }
   },
   "suitability_vocabulary": {
@@ -85129,7 +85129,12 @@
           "S1088"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "saluki.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
