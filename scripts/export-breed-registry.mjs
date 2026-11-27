@@ -524,6 +524,7 @@ const SPECIES = [
       { id: 'bluetick_coonhound', synonyms: { en: ['Bluetick', 'Blue Tick Coonhound'], sl: ['bluetick coonhound', 'bluetick'] } },
       { id: 'welsh_springer_spaniel', synonyms: { en: ['Welsh Springer', 'Welshie', 'Welsh Starter'], sl: ['velški springer', 'welsh springer spaniel', 'welshie'] } },
       { id: 'smooth_fox_terrier', synonyms: { en: ['Fox Terrier (Smooth)', 'Smooth-coated Fox Terrier', 'Foxie'], sl: ['foksterier', 'gladkodlaki fox terier', 'kratkodlaki foksterier'] } },
+      { id: 'bearded_collie', synonyms: { en: ['Beardie', 'Highland Collie', 'Hairy Mou\'ed Collie'], sl: ['bearded collie', 'beardie', 'bradati collie'] } },
     ],
   },
   {
@@ -3611,6 +3612,29 @@ const DOG_FACTS = {
       ['dental_disease_tooth_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-144. RKC key facts from the breed display page (S1078): exercise 'Up to 1 hour per day', lifespan 'Over 12 years',
+  // coat 'Long', grooming 'Every day', sheds 'Yes'; lifespan median = McMillan 2024 13.9 y via the Dogs Trust table (S123);
+  // height = FCI-Standard N° 271 (S1076); weight = PDSA '20-25kg' (S1079 — no standard gives a weight). Coren rank 34 (S35).
+  // FCI origin Great Britain (GB). Not exported: weight alternatives (PetMD / WebMD), lifespan.petmd / webmd (background),
+  // lifespan.senior_from (derived). No new health key.
+  bearded_collie: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hips'],
+      ['addisons_disease', 'health.addisons'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['itchy_skin_allergy', 'health.allergies'],
+      ['autoimmune_conditions', 'health.imha'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 
 
@@ -4804,6 +4828,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.smooth_fox_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.smooth_fox_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.smooth_fox_terrier.exercise_minutes_senior',
+  },
+  bearded_collie: {
+    adult_minutes: ['proposed_game_parameters.bearded_collie.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bearded_collie.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bearded_collie.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bearded_collie.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bearded_collie.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bearded_collie.exercise_minutes_senior',
   },
 
 

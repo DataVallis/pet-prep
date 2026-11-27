@@ -268,6 +268,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.bluetick_coonhound.slug, { en: 'bluetick-coonhound', sl: 'bluetick-coonhound' });
   assert.deepEqual(byId.welsh_springer_spaniel.slug, { en: 'welsh-springer-spaniel', sl: 'velski-springer-spanjel' });
   assert.deepEqual(byId.smooth_fox_terrier.slug, { en: 'smooth-fox-terrier', sl: 'gladkodlaki-foksterier' });
+  assert.deepEqual(byId.bearded_collie.slug, { en: 'bearded-collie', sl: 'bradati-koli' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -498,6 +499,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     bluetick_coonhound: { adult: 4000, senior: 3000, seniorFrom: 99, learning: 1 },
     welsh_springer_spaniel: { adult: 12000, senior: 9000, seniorFrom: 126, learning: 1.2 },
     smooth_fox_terrier: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
+    bearded_collie: { adult: 6000, senior: 4500, seniorFrom: 125, learning: 1.2 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -4508,4 +4510,34 @@ test('Smooth Fox Terrier (M5-R10-143): PDSA at least 1 h, FCI height + weight, D
   assert.equal(d.breeder_checklist.status, 'not_found');
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|brindle|liver/i);
+});
+
+test('Bearded Collie (M5-R10-144): RKC up to 1 h, FCI height + PDSA weight, McMillan 13.9 y → senior 125, Coren 34 → 1.2, brushing every day, chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'bearded_collie');
+  assert.deepEqual(d.name, { en: 'Bearded Collie', sl: 'Bradati koli' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S1078']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 271, group: 1, section: 1, origin: 'GB' });
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 34);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [20, 25], female: [20, 25] }, ['S1079']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [53, 56], female: [51, 53] }, ['S1076']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.value, f.qualifier, f.source_ids]), [
+    [13.9, 'median', ['S123']],
+    [12, 'more_than', ['S1078']],
+  ]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'coat').value, ['long']);
+  assert.equal(d.facts.find((f) => f.field === 'grooming_frequency').value, 'every_day');
+  assert.equal(d.facts.find((f) => f.field === 'shedding').value, 'yes');
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 125 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1.2 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 7 });
+  assert.ok(!d.game.rules.some((r) => r.key === 'care_task'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'meal_exercise_gap'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'children', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'frequent_grooming', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia_arthritis', 'addisons_disease', 'pra_inherited_blindness', 'itchy_skin_allergy', 'autoimmune_conditions', 'hypothyroidism']);
+  assert.equal(d.breeder_checklist.status, 'not_found');
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|dapple|brindle/i);
 });
