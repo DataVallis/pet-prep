@@ -52,6 +52,8 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'behaviour:child.takeOutShortNow': 'potty training (take out) — dogs only (collapsed HUD pill)',
   'behaviour:child.takeOutBeforeEvening': 'potty training (take out) — dogs only (evening window toast, David 2026-11-27)',
   'behaviour:child.takeOutBeforeEveningUnchanged': 'potty training (take out) — dogs only (evening window toast, David 2026-11-27)',
+  'behaviour:child.grewUpNoName': 'potty clock ends at the puppy → young boundary — dogs only (HUD card, David 2026-11-27)',
+  'behaviour:child.grewUpShortNoName': 'potty clock ends at the puppy → young boundary — dogs only (collapsed HUD pill, David 2026-11-27)',
   'behaviour:child.success.take_out': 'potty training (take out) — dogs only',
   'behaviour:child.unchanged.take_out': 'potty training (take out) — dogs only',
   'behaviour:child.success.resolve_chewing': 'chewed slipper — dogs only',

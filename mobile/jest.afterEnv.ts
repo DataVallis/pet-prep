@@ -13,6 +13,7 @@ import { resetZoneSuggestionForTests, setZoneSuggestionStoreForTests } from '@/m
 import { setPhoneZoneForTests } from '@/modules/familyZone/familyZone';
 import { applyTimeFormat, setDeviceHour12ForTests } from '@/modules/time/clock';
 import { resetAcquisitionPrefsForTests, setAcquisitionPrefsStoreForTests } from '@/modules/validation/acquisitionPrefs';
+import { setPuppyGrewUpStoreForTests } from '@/modules/behaviour/puppyGrewUp';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -39,4 +40,12 @@ beforeEach(() => {
   // M5-08: the acquisition card's »done« ids are a device store (fresh, empty per test).
   setAcquisitionPrefsStoreForTests({ getItemAsync: async () => null, setItemAsync: async () => undefined });
   resetAcquisitionPrefsForTests();
+  // David 2026-11-27: »… je zrasel!« dismissals are a device store — a fresh, empty one per test.
+  const grewUp = new Map<string, string>();
+  setPuppyGrewUpStoreForTests({
+    getItemAsync: async (key) => grewUp.get(key) ?? null,
+    setItemAsync: async (key, value) => {
+      grewUp.set(key, value);
+    },
+  });
 });

@@ -39,6 +39,8 @@ export interface PetProfileInfo {
   nextStage: { stage: LifeStage; fromDate: string } | null;
   /** Today's meals (only when the server marks the meal count as sourced). */
   meals: { perDay: number; byParent: number } | null;
+  /** M5-R02: the pet has behaviour events (a dog puppy then has the potty clock); server `behaviour_enabled`. */
+  behaviourEnabled: boolean;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -88,6 +90,7 @@ export function readPetProfile(value: unknown): PetProfileInfo | null {
     origin: petOrigin(value.origin),
     nextStage: isRecord(next) && nextStageOf !== null && isIsoDate(next.from_date) ? { stage: nextStageOf, fromDate: next.from_date } : null,
     meals: readMeals(value),
+    behaviourEnabled: value.behaviour_enabled === true,
   };
 }
 

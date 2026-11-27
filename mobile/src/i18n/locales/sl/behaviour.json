@@ -37,7 +37,12 @@
     "takeOutEveningWindowHowTo": "Pritisni »Pelji ven« med {{start}} in {{end}}. Prej ne šteje.",
     "takeOutHintFrom": "od {{time}}",
     "takeOutBeforeEvening": "Lepo, da je bil zunaj! Pred spanjem (med {{start}} in {{end}}) ga pelji ven še enkrat.",
-    "takeOutBeforeEveningUnchanged": "Kuža je bil pravkar zunaj. Pred spanjem (med {{start}} in {{end}}) ga pelji ven še enkrat."
+    "takeOutBeforeEveningUnchanged": "Kuža je bil pravkar zunaj. Pred spanjem (med {{start}} in {{end}}) ga pelji ven še enkrat.",
+    "grewUp": "{{name}} je zrasel! Od jutri ga ni treba več peljati ven na potrebo — zdaj štejejo sprehodi.",
+    "grewUpNoName": "Kuža je zrasel! Od jutri ga ni treba več peljati ven na potrebo — zdaj štejejo sprehodi.",
+    "grewUpShort": "{{name}} je zrasel!",
+    "grewUpShortNoName": "Kuža je zrasel!",
+    "grewUpDismiss": "Zapri"
   },
   "parent": {
     "title": "Vedenje",
