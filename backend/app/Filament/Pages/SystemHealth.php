@@ -13,6 +13,7 @@ use App\Models\User;
 use App\Services\Alerts\AdminAlert;
 use App\Services\Alerts\DiscordWebhook;
 use App\Services\Alerts\DiscordWebhookException;
+use App\Services\SystemHealth\ErrorReportExport;
 use App\Services\SystemHealth\SystemHealthService;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
@@ -25,6 +26,7 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 use Throwable;
 
 /**
@@ -38,6 +40,9 @@ use Throwable;
  * test message to the admin Discord channel (superadmin only, shows the result;
  * the webhook URL is never shown). M5-05: »App errors« (AppErrorsTable) —
  * crash / render-error reports from the mobile app, grouped by fingerprint.
+ * 2026-11-27: »Export open errors« above the error table downloads one
+ * Markdown file (ErrorReportExport) with every open error in full, the app
+ * errors of the last 7 days and the failed jobs.
  */
 class SystemHealth extends Page implements HasTable
 {
@@ -237,6 +242,15 @@ class SystemHealth extends Page implements HasTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->headerActions([
+                Tables\Actions\Action::make('export')
+                    ->label(__('admin.system_health.errors.export'))
+                    ->tooltip(__('admin.system_health.errors.export_tooltip'))
+                    ->icon('heroicon-o-arrow-down-tray')
+                    ->color('gray')
+                    ->authorize(fn (): bool => static::canAccess())
+                    ->action(fn (): StreamedResponse => $this->exportOpenErrors()),
+            ])
             ->filters([
                 Tables\Filters\SelectFilter::make('status')
                     ->label(__('admin.system_health.errors.status'))
@@ -286,6 +300,18 @@ class SystemHealth extends Page implements HasTable
             ])
             ->emptyStateHeading(__('admin.system_health.errors.empty'))
             ->emptyStateIcon('heroicon-o-check-badge');
+    }
+
+    /** One Markdown file with every open error (always all open ones — the table's filter and search do not narrow it). */
+    public function exportOpenErrors(): StreamedResponse
+    {
+        $this->authorizeAccess();
+        $export = app(ErrorReportExport::class);
+        $markdown = $export->markdown();
+
+        return response()->streamDownload(function () use ($markdown): void {
+            echo $markdown;
+        }, $export->filename(), ['Content-Type' => 'text/markdown; charset=UTF-8']);
     }
 
     /**
