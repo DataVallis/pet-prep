@@ -122,10 +122,11 @@ describe('applyBroadcast — behaviour (realtime)', () => {
 });
 
 describe('optimistic behaviour actions', () => {
-  it('take-out restarts the clock in server time', () => {
+  it('take-out marks the moment in server time and keeps the deadline for the server (David 2026-11-27)', () => {
     const v = puppyView();
     const next = optimisticView(v, 'take_out', Date.parse('2026-10-04T12:00:00+02:00'));
-    expect(next.behaviour.take_out?.next_due_at).toBe('2026-10-04T12:00:00.000Z');
+    expect(next.behaviour.take_out?.last_taken_out_at).toBe('2026-10-04T10:00:00.000Z');
+    expect(next.behaviour.take_out?.next_due_at).toBe(v.behaviour.take_out?.next_due_at);
     expect(next.pet).toBe(v.pet);
   });
 

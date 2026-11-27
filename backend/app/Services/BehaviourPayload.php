@@ -21,6 +21,9 @@ use Carbon\CarbonInterface;
  *   `morning` = it lies at / after the end of the night (the morning rule, or
  *   the night started without the evening take-out — the accident follows
  *   at the night's end, `next_due_at` is then that instant), else `regular`.
+ *   `window_starts_at` (David 2026-11-27, kind `evening` only, else null): when
+ *   the evening window opens — a take-out before it does not count as the
+ *   evening one, so the app says »med 19:00 in 21:00« until then.
  * - `active_events`: every open mess (poop, puppy accident, chewing) with
  *   its 2-hour deadline (counted outside quiet hours); empty while hygiene
  *   shows more than 0 %.
@@ -36,7 +39,7 @@ use Carbon\CarbonInterface;
 final class BehaviourPayload
 {
     /**
-     * @param  array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null, kind: 'regular'|'morning'|'evening'}|null  $takeOut
+     * @param  array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null, kind: 'regular'|'morning'|'evening', window_starts_at: string|null}|null  $takeOut
      * @param  list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>  $activeEvents
      */
     public function __construct(
@@ -66,11 +69,14 @@ final class BehaviourPayload
             // started without the evening take-out the accident at its end is what is due.
             $kind = 'regular';
             $next = $clock['due_at'];
+            $windowStarts = null;
             if ($clock['evening'] !== null) {
                 $kind = 'evening';
+                $windowStarts = $behaviour->eveningWindowStart($clock['evening']);
                 if (! $now->lessThan($clock['evening'])) {
                     $kind = 'morning';
                     $next = $clock['accident_at'];
+                    $windowStarts = null;
                 }
             } elseif ($clock['morning'] !== null) {
                 $kind = 'morning';
@@ -92,6 +98,13 @@ final class BehaviourPayload
                  * @var 'regular'|'morning'|'evening'
                  */
                 'kind' => $kind,
+                /**
+                 * Kind `evening` only (David 2026-11-27, device bug): when the evening
+                 * window opens (`next_due_at` − `behaviour.puppy.evening_window_minutes`).
+                 * A take-out from then on is the evening one; an earlier one does not
+                 * count (»Pred spanjem ven — med 19:00 in 21:00«). Null for every other kind.
+                 */
+                'window_starts_at' => $iso($windowStarts),
             ];
         }
 
@@ -118,7 +131,7 @@ final class BehaviourPayload
     }
 
     /**
-     * @return array{take_out: array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null, kind: 'regular'|'morning'|'evening'}|null, active_events: list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>, scene: 'accident'|'chewing'|'scratching'|null}
+     * @return array{take_out: array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null, kind: 'regular'|'morning'|'evening', window_starts_at: string|null}|null, active_events: list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>, scene: 'accident'|'chewing'|'scratching'|null}
      */
     public function toArray(): array
     {

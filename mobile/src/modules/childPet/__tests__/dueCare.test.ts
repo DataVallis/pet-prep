@@ -39,8 +39,16 @@ it('morning puppy: only take out glows while feed is enabled', () => {
   expect(dueCare(morningPuppy(), { nowMs: LATE })).toBe('take_out');
 });
 
-it('after the optimistic take out → feed; after the feed → water', () => {
-  const out = optimisticView(morningPuppy(), 'take_out', LATE);
+it('after the take out (server state) → feed; after the feed → water', () => {
+  // David 2026-11-27: the optimistic take-out no longer guesses the next deadline — the glow moves
+  // once the server's clock arrives (here: restarted at 13:05, due 15:05).
+  expect(dueCare(optimisticView(morningPuppy(), 'take_out', LATE), { nowMs: LATE })).toBe('take_out');
+  const out = morningPuppy({
+    behaviour: {
+      take_out: makeTakeOut({ clock_started_at: '2026-10-04T13:05:00+02:00', next_due_at: '2026-10-04T15:05:00+02:00', last_taken_out_at: '2026-10-04T13:05:00+02:00' }),
+      can_take_out: true,
+    },
+  });
   expect(dueCare(out, { nowMs: LATE })).toBe('feed');
   const fed = optimisticView(out, 'feed', LATE);
   expect(dueCare(fed, { nowMs: LATE })).toBe('water');

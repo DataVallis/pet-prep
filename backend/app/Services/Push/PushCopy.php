@@ -186,7 +186,10 @@ final class PushCopy
             PushType::LitterReminder => $line('litter_reminder'),
             // M5-R02 morning rule (dog puppy only): the night ended, take the puppy out.
             // Evening rule (David 2026-11-26, metric `evening:<Y-m-d>`): out once more before bed.
-            PushType::TakeOutReminder => $line(str_starts_with((string) $metric, 'evening:') ? 'take_out_reminder_evening' : 'take_out_reminder'),
+            // David 2026-11-27: with the bedtime as `:time` (sent inside the window) »… najkasneje ob 21:00«.
+            PushType::TakeOutReminder => str_starts_with((string) $metric, 'evening:')
+                ? (isset($replace['time']) ? $line('take_out_reminder_evening_at', $replace) : $line('take_out_reminder_evening'))
+                : $line('take_out_reminder'),
             PushType::ParentAlarm => trim($line('parent_alarm').' '.(in_array($metric, self::METRICS, true)
                 ? $line("parent_alarm_detail.{$metric}")
                 : '')),

@@ -635,7 +635,8 @@ sequenceDiagram
   participant T as Decay tick (every minute)
   Note over B: only pets with behaviour_events_enabled (app sent generate-pin features ["behaviour_events"], PR #42)<br/>clock start = max(take-out / accident / end of freeze, birth, local midnight)<br/>due = start + hold hours counted ONLY outside quiet hours · tick gap > 5 min → no accident, clock restarts<br/>morning rule (David 2026-11-08): start before the night's last 60 min → due = min(due, night end + 30 min)<br/>evening rule (David 2026-11-26): start before bedtime − 120 min and due ≥ bedtime → deadline = bedtime, accident = night end (no midnight restart)
   Note over B: night 22–06, clock restarted at midnight → due 06:30 (not 06:00 + 2 h → school → 13:00)
-  T->>C: 20:00 (bedtime 22:00 − 120 min) evening deadline → push take_out_reminder metric evening:<date> (once per day)
+  Note over C,API: before 20:00 the payload's take_out.window_starts_at (20:00) is ahead → card »Pred spanjem ven — med 20:00 in 22:00«;<br/>a take-out then keeps kind evening (toast »… ga pelji ven še enkrat«); optimistic take-out never recomputes the deadline (2026-11-27)
+  T->>C: 20:00 (bedtime 22:00 − 120 min) evening deadline → push take_out_reminder metric evening:<date> (once per day, body »… najkasneje ob 22:00«)
   T->>C: 06:00 first tick after the night → push take_out_reminder (caretaker children, once per day)
   C->>API: POST /api/child/pet/take-out (06:20)
   API->>B: catch-up (a due accident happens first) · puppy? else 422 take_out_not_needed

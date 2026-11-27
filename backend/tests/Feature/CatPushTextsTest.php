@@ -47,7 +47,7 @@ const CPT_DOG_ONLY = [
     // M5-R02 morning rule (David 2026-11-08): only a dog puppy has a bladder clock.
     'take_out_reminder',
     // David 2026-11-26 evening rule: the same puppy clock, before bed.
-    'take_out_reminder_evening',
+    'take_out_reminder_evening', 'take_out_reminder_evening_at',
     'tidy.soft', 'tidy.critical',
     'clean_and_tidy.soft', 'clean_and_tidy.critical',
     // M5-R06-06b (David 2026-10-09): food / water wait for a chewed item to be tidied up.

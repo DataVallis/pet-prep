@@ -32,7 +32,12 @@
     "takeOutShortIn": "Out within {{duration}}",
     "takeOutShortAt": "Out {{when}} at the latest",
     "takeOutShortNow": "Your pup needs out now",
-    "takeOutEvening": "Out before bed — by {{time}} at the latest"
+    "takeOutEvening": "Out before bed — by {{time}} at the latest",
+    "takeOutEveningWindow": "Out before bed — between {{start}} and {{end}}",
+    "takeOutEveningWindowHowTo": "Press “Take out” between {{start}} and {{end}}. Earlier doesn’t count.",
+    "takeOutHintFrom": "from {{time}}",
+    "takeOutBeforeEvening": "Nice, your pup was outside! Take your pup out once more before bed (between {{start}} and {{end}}).",
+    "takeOutBeforeEveningUnchanged": "Your pup was just outside. Take your pup out once more before bed (between {{start}} and {{end}})."
   },
   "parent": {
     "title": "Behaviour",

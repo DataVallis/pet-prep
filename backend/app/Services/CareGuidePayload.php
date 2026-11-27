@@ -38,7 +38,7 @@ final class CareGuidePayload
     /**
      * @param  array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}  $meals
      * @param  array{goal: int, exercise_minutes: int|null}|null  $steps
-     * @param  array{hold_hours: int}|null  $takeOut
+     * @param  array{hold_hours: int, evening_window: array{start: string, end: string}|null}|null  $takeOut
      * @param  array{refill_below: int, min_gap_minutes: int}|null  $water
      * @param  array{per_week: int}|null  $grooming
      * @param  array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}  $sleep
@@ -76,7 +76,21 @@ final class CareGuidePayload
         $cat = $pet->isCat();
         $lifeStages = app(LifeStageService::class);
 
-        $holdHours = $cat ? null : app(BehaviourEventService::class)->holdHoursOn($pet, $today);
+        $behaviour = app(BehaviourEventService::class);
+        $holdHours = $cat ? null : $behaviour->holdHoursOn($pet, $today);
+        $quiet = $profile->quietHours ?? $pet->quietHours();
+        // David 2026-11-27: the evening take-out window of today's night (»med 19:00 in 21:00«), pet clock.
+        $eveningWindow = null;
+        $nightStart = $holdHours !== null && (int) config('behaviour.puppy.evening_window_minutes', 0) > 0
+            ? $behaviour->nightStartOn($pet, $quiet, $today)
+            : null;
+        if ($nightStart !== null) {
+            $tz = $pet->effectiveTimezone();
+            $eveningWindow = [
+                'start' => $behaviour->eveningWindowStart($nightStart)->setTimezone($tz)->format('H:i'),
+                'end' => $nightStart->setTimezone($tz)->format('H:i'),
+            ];
+        }
         $groomingGoal = app(CatChoreService::class)->groomingGoalOn($pet, $today);
 
         $play = null;
@@ -126,13 +140,13 @@ final class CareGuidePayload
             ],
             // A cat has no steps (its energy is the wand play meter).
             steps: $cat ? null : ['goal' => $profile->stepGoal, 'exercise_minutes' => $profile->exerciseMinutes],
-            takeOut: $holdHours !== null ? ['hold_hours' => $holdHours] : null,
+            takeOut: $holdHours !== null ? ['hold_hours' => $holdHours, 'evening_window' => $eveningWindow] : null,
             water: $config !== null ? [
                 'refill_below' => CareScheduleService::refillBelow($config),
                 'min_gap_minutes' => max(0, (int) $config->water_min_gap_minutes),
             ] : null,
             grooming: $groomingGoal > 0 ? ['per_week' => $groomingGoal] : null,
-            sleep: self::sleepOf($profile->quietHours ?? $pet->quietHours()),
+            sleep: self::sleepOf($quiet),
             play: $play,
             litter: $litter,
             scratching: $scratching,
@@ -171,7 +185,7 @@ final class CareGuidePayload
     }
 
     /**
-     * @return array{species: 'dog'|'cat', life_stage: 'puppy'|'young'|'adult'|'senior'|null, meals: array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}, steps: array{goal: int, exercise_minutes: int|null}|null, take_out: array{hold_hours: int}|null, water: array{refill_below: int, min_gap_minutes: int}|null, grooming: array{per_week: int}|null, sleep: array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}, play: array{sessions_per_day: int, min_gap_minutes: int}|null, litter: array{scoop_within_hours: float|int, change_every_days: int}|null, scratching: bool, clean_within_hours: int, digestion_gap_minutes: int|null, care_tasks: list<array{task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim'|'groomer_visit'|'bath', actor: 'child'|'parent', times: int, period_days: int}>, walk_heat: array{months: list<int>, from: string, to: string}|null}
+     * @return array{species: 'dog'|'cat', life_stage: 'puppy'|'young'|'adult'|'senior'|null, meals: array{per_day: int, by_child: int, by_parent: int, windows: list<array{start: string, end: string, parent_covered: bool}>}, steps: array{goal: int, exercise_minutes: int|null}|null, take_out: array{hold_hours: int, evening_window: array{start: string, end: string}|null}|null, water: array{refill_below: int, min_gap_minutes: int}|null, grooming: array{per_week: int}|null, sleep: array{night: array{start: string, end: string}|null, school: array{start: string, end: string, days: list<int>}|null}, play: array{sessions_per_day: int, min_gap_minutes: int}|null, litter: array{scoop_within_hours: float|int, change_every_days: int}|null, scratching: bool, clean_within_hours: int, digestion_gap_minutes: int|null, care_tasks: list<array{task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim'|'groomer_visit'|'bath', actor: 'child'|'parent', times: int, period_days: int}>, walk_heat: array{months: list<int>, from: string, to: string}|null}
      */
     public function toArray(): array
     {
@@ -196,9 +210,12 @@ final class CareGuidePayload
             'steps' => $this->steps,
             /**
              * Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-             * out; steps never reset it); null otherwise.
+             * out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+             * today's evening take-out window "HH:MM" pet-local (start = bedtime −
+             * `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+             * rule does not apply (no night quiet hours, bedtime after midnight, switched off).
              *
-             * @var array{hold_hours: int}|null
+             * @var array{hold_hours: int, evening_window: array{start: string, end: string}|null}|null
              */
             'take_out' => $this->takeOut,
             /**

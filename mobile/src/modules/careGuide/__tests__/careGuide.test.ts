@@ -62,6 +62,27 @@ describe('readCareGuide', () => {
   });
 });
 
+describe('evening take-out window (David 2026-11-27)', () => {
+  const withWindow = makeCareGuide({ ...puppy, take_out: { hold_hours: 2, evening_window: { start: '19:00', end: '21:00' } } });
+
+  it('names the server window »med 19:00 in 21:00« (child + parent, SL + EN)', async () => {
+    expect(texts(withWindow).takeOut).toBe(
+      'Mladiček zdrži približno 2 h. Prej ga pelji ven s tipko »Pelji ven«. Zjutraj, ko se zbudi, ga pelji ven v 30 minutah. Zvečer ga pred spanjem pelji ven še enkrat — med 19:00 in 21:00 (prej ne šteje).',
+    );
+    const parent = careGuideSections(readCareGuide(withWindow)!, 'parent').find((x) => x.key === 'takeOut');
+    expect(parent?.lines.join(' ')).toContain('Zvečer mora pred spanjem še enkrat ven — med 19:00 in 21:00 (prej ne šteje), sicer bo zjutraj luža.');
+    await i18n.changeLanguage('en');
+    expect(texts(withWindow).takeOut).toBe(
+      'A puppy can hold it for about 2 h. Before that, press “Take out”. In the morning, take it out within 30 minutes of waking up. In the evening, take it out once more before bed — between 19:00 and 21:00 (earlier doesn’t count).',
+    );
+  });
+
+  it('keeps the general text without a window (older server / no night)', () => {
+    expect(readCareGuide(puppy)?.take_out?.evening_window).toBeNull();
+    expect(texts(makeCareGuide({ ...puppy, take_out: { hold_hours: 2, evening_window: null } })).takeOut).toContain('v zadnjih dveh urah');
+  });
+});
+
 describe('dog (SL)', () => {
   it('uses the server numbers: meals, parent meals, steps, take-out, difference, digestion, grooming, sleep', () => {
     const t = texts(puppy);

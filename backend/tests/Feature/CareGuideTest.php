@@ -147,8 +147,20 @@ describe('dog', function () {
         $hold = app(BehaviourEventService::class)->holdHoursOn($pet->fresh(), '2026-10-20');
 
         expect($hold)->toBeInt()
-            ->and($guide['take_out'])->toBe(['hold_hours' => $hold])
+            ->and($guide['take_out']['hold_hours'])->toBe($hold)
             ->and($guide['life_stage'])->toBe('puppy');
+    });
+
+    it('gives a puppy its evening take-out window (David 2026-11-27: »med 18:30 in 20:30«), none without a night', function () {
+        [$parent, $child] = cgFamily(BreedType::Mutt, 2, ['behaviour_events_enabled' => true], ['bedtime_start' => '20:30', 'bedtime_end' => '06:45']);
+        cgAt('2026-10-20 10:00');
+        expect(cgGuide($child)['take_out']['evening_window'])->toBe(['start' => '18:30', 'end' => '20:30']);
+
+        config(['behaviour.puppy.evening_window_minutes' => 60]);
+        expect(cgGuide($child)['take_out']['evening_window'])->toBe(['start' => '19:30', 'end' => '20:30']);
+
+        setQuietHours(['parent_id' => $parent->id, 'is_active' => false]);
+        expect(cgGuide($child)['take_out']['evening_window'])->toBeNull();
     });
 
     it('follows the family quiet hours (sleep) and shows none when they are off', function () {

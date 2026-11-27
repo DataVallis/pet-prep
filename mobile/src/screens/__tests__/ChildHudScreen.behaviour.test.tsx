@@ -177,6 +177,49 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     expect(screen.queryByTestId('hud-toast-confirm')).toBeNull();
   });
 
+  it('evening window ahead (David 2026-11-27 device bug): card says the window, the take-out keeps it and the toast is honest', async () => {
+    const evening = (serverTime: string) =>
+      puppy({
+        server_time: serverTime,
+        behaviour: {
+          take_out: makeTakeOut({
+            kind: 'evening',
+            hold_hours: 8,
+            clock_started_at: '2026-10-04T16:30:00+02:00',
+            next_due_at: '2026-10-04T21:00:00+02:00',
+            window_starts_at: '2026-10-04T19:00:00+02:00',
+          }),
+          can_take_out: true,
+        },
+      });
+    await renderHud(evening('2026-10-04T18:56:00+02:00'));
+    expect(screen.getAllByText('Pred spanjem ven — med 19:00 in 21:00').length).toBeGreaterThan(0);
+    expect(screen.getByText('od 19:00')).toBeTruthy();
+
+    let answer: (value: unknown) => void = () => undefined;
+    takeOutPet.mockReturnValueOnce(new Promise((resolve) => (answer = resolve)));
+    fireEvent.press(screen.getByTestId('action-take-out'));
+    // Optimistic: the card stays — never »jutri ob 2:56« (a plain 8 h hold across the night).
+    expect(screen.getAllByText('Pred spanjem ven — med 19:00 in 21:00').length).toBeGreaterThan(0);
+    expect(screen.queryByText(/2:56/)).toBeNull();
+
+    const after = evening('2026-10-04T18:56:00+02:00');
+    after.behaviour.take_out = makeTakeOut({
+      kind: 'evening',
+      hold_hours: 8,
+      clock_started_at: '2026-10-04T18:56:00+02:00',
+      last_taken_out_at: '2026-10-04T18:56:00+02:00',
+      next_due_at: '2026-10-04T21:00:00+02:00',
+      window_starts_at: '2026-10-04T19:00:00+02:00',
+    });
+    await act(async () => {
+      answer({ status: 'accepted', state: after });
+    });
+    expect(await screen.findByText('Lepo, da je bil zunaj! Pred spanjem (med 19:00 in 21:00) ga pelji ven še enkrat.')).toBeTruthy();
+    expect(screen.queryByTestId('hud-toast-next')).toBeNull();
+    expect(screen.getAllByText('Pred spanjem ven — med 19:00 in 21:00').length).toBeGreaterThan(0);
+  });
+
   it('the "×" closes the message and the queued one follows (David 2026-10-21)', async () => {
     await renderHud(puppy());
     takeOutPet.mockResolvedValueOnce({ status: 'accepted', state: puppy({ server_time: '2026-10-04T11:00:00+02:00' }) });

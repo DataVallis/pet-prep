@@ -2,6 +2,7 @@
 
 use App\Enums\HygieneEventKind;
 use App\Enums\PushType;
+use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
 use App\Models\PushNotification;
@@ -14,7 +15,9 @@ use App\Services\PetDecayService;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Str;
 
 use function Pest\Laravel\postJson;
 
@@ -362,6 +365,61 @@ describe('births, freezes, outages, DST (consistent with the morning rule)', fun
     });
 });
 
+describe('the evening window in the payload (take_out.window_starts_at, David 2026-11-27)', function () {
+    it('sends the window start with the evening deadline (clock 16:30 → window 19:00, by 21:00)', function () {
+        [, , $pet] = peFamily();
+        $pet = peClockAt($pet, '2026-11-09 18:50', '2026-11-09 16:30');
+        $takeOut = BehaviourPayload::for($pet)->takeOut;
+
+        expect($takeOut['kind'])->toBe('evening')
+            ->and($takeOut['window_starts_at'])->toBe('2026-11-09T19:00:00+01:00')
+            ->and($takeOut['next_due_at'])->toBe('2026-11-09T21:00:00+01:00');
+    });
+
+    it('David\'s device case: a take-out at 18:56 is before the window — still evening, window 19:00, by 21:00', function () {
+        [, $child, $pet] = peFamily();
+        $pet = peClockAt($pet, '2026-11-09 18:50', '2026-11-09 16:30');
+        peAt('2026-11-09 18:56');
+        actingAsRole($child);
+        $response = postJson('/api/child/pet/take-out')->assertOk()->assertJsonPath('status', 'accepted');
+
+        expect($response->json('state.behaviour.take_out.kind'))->toBe('evening')
+            ->and($response->json('state.behaviour.take_out.window_starts_at'))->toBe('2026-11-09T19:00:00+01:00')
+            ->and($response->json('state.behaviour.take_out.next_due_at'))->toBe('2026-11-09T21:00:00+01:00');
+    });
+
+    it('keeps the window start once the window is open (19:30, clock from 16:30)', function () {
+        [, , $pet] = peFamily();
+        $pet = peClockAt($pet, '2026-11-09 19:30', '2026-11-09 16:30');
+
+        expect(BehaviourPayload::for($pet)->takeOut['window_starts_at'])->toBe('2026-11-09T19:00:00+01:00');
+    });
+
+    it('is null for every other kind: in-window take-out (morning), regular, night started (morning)', function () {
+        [, $child, $pet] = peFamily();
+        $pet = peClockAt($pet, '2026-11-09 19:25', '2026-11-09 16:30');
+        peTakeOut($child, '2026-11-09 19:30');
+        $morning = BehaviourPayload::for($pet->fresh())->takeOut;
+        expect($morning['kind'])->toBe('morning')->and($morning['window_starts_at'])->toBeNull();
+
+        $pet = peClockAt($pet->fresh(), '2026-11-09 14:00', '2026-11-09 13:00');
+        $regular = BehaviourPayload::for($pet)->takeOut;
+        expect($regular['kind'])->toBe('regular')->and($regular['window_starts_at'])->toBeNull();
+
+        $pet = peClockAt($pet->fresh(), '2026-11-09 22:00', '2026-11-09 16:30');
+        $night = BehaviourPayload::for($pet)->takeOut;
+        expect($night['kind'])->toBe('morning')->and($night['window_starts_at'])->toBeNull();
+    });
+
+    it('follows the configured window length (60 min → 20:00)', function () {
+        config(['behaviour.puppy.evening_window_minutes' => 60]);
+        [, , $pet] = peFamily();
+        $pet = peClockAt($pet, '2026-11-09 18:50', '2026-11-09 16:30');
+
+        expect(BehaviourPayload::for($pet)->takeOut['window_starts_at'])->toBe('2026-11-09T20:00:00+01:00');
+    });
+});
+
 describe('the evening push (»Kuža mora pred spanjem še ven …«)', function () {
     beforeEach(function () {
         config(['push.enabled' => true]);
@@ -444,6 +502,45 @@ describe('the evening push (»Kuža mora pred spanjem še ven …«)', function 
             ->and(PushCopy::body(PushType::TakeOutReminder, 'evening:2026-11-09', 'child', 'en'))
             ->toBe('Your pup needs to go out once more before bed. Press “Take out”.')
             ->and(PushCopy::body(PushType::TakeOutReminder, 'morning:2026-11-09', 'child', 'sl'))
-            ->toBe('Dobro jutro! Kuža mora po noči čim prej ven. Pritisni »Pelji ven«.');
+            ->toBe('Dobro jutro! Kuža mora po noči čim prej ven. Pritisni »Pelji ven«.')
+            ->and(PushCopy::body(PushType::TakeOutReminder, 'evening:2026-11-09', 'child', 'sl', null, ['time' => '21:00']))
+            ->toBe('Kuža mora pred spanjem še ven — najkasneje ob 21:00. Pritisni »Pelji ven«.')
+            ->and(PushCopy::body(PushType::TakeOutReminder, 'evening:2026-11-09', 'child', 'en', null, ['time' => '9:00 PM']))
+            ->toBe('Your pup needs to go out once more before bed — by 9:00 PM at the latest. Press “Take out”.');
+    });
+
+    it('names the bedtime when it is delivered, in each phone\'s 12 / 24 h clock (David 2026-11-27)', function () {
+        [, $child, $pet] = peFamily();
+        $pet = peClockAt($pet, '2026-11-09 18:58', '2026-11-09 16:30');
+        peRun($pet, '2026-11-09 18:58', '2026-11-09 19:01', 1);
+        $push = PushNotification::where('type', PushType::TakeOutReminder->value)->sole();
+        foreach ([['sl', false], ['en', true]] as [$locale, $hour12]) {
+            DevicePushToken::create([
+                'user_id' => $child->id,
+                'expo_push_token' => 'ExponentPushToken['.Str::random(22).']',
+                'platform' => 'ios',
+                'app_version' => '1.0.0',
+                'locale' => $locale,
+                'hour12' => $hour12,
+                'last_seen_at' => now(),
+            ]);
+        }
+        $sent = [];
+        Http::fake([
+            'https://exp.host/--/api/v2/push/send' => function ($request) use (&$sent) {
+                foreach ($request->data() as $message) {
+                    $sent[] = $message['body'];
+                }
+
+                return Http::response(['data' => array_map(fn () => ['status' => 'ok', 'id' => 'ticket-'.Str::random(8)], $request->data())]);
+            },
+        ]);
+
+        app(NotificationService::class)->deliver($push->id, app(ExpoPushClient::class));
+
+        expect(collect($sent)->sort()->values()->all())->toBe([
+            'Kuža mora pred spanjem še ven — najkasneje ob 21:00. Pritisni »Pelji ven«.',
+            'Your pup needs to go out once more before bed — by 9:00 PM at the latest. Press “Take out”.',
+        ]);
     });
 });

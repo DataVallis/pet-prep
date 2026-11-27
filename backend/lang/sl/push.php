@@ -89,6 +89,8 @@ return [
     // David 26. 11. 2026: začetek večernega okna (2 h pred nočnimi tihimi urami) — mladiček mora
     // pred spanjem še ven. Samo otrokom, brez imen, enkrat na dan.
     'take_out_reminder_evening' => 'Kuža mora pred spanjem še ven. Pritisni »Pelji ven«.',
+    // David 2026-11-27: the same, sent inside the window, with the bedtime (pet clock, 12 / 24 h per phone).
+    'take_out_reminder_evening_at' => 'Kuža mora pred spanjem še ven — najkasneje ob :time. Pritisni »Pelji ven«.',
 
     // David 9. 10. 2026: staršem vikamo (brand/README, glas) — pri obeh vrstah.
     'parent_alarm' => 'Vaš otrok danes ni poskrbel za psa.',
