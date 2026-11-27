@@ -705,6 +705,14 @@ return [
         'white-black' => 'dogs/smooth-fox-terrier--white-black.webp',
         'white' => 'dogs/smooth-fox-terrier--white.webp',
     ],
+    'bearded_collie' => [
+        'grey-white' => 'dogs/bearded-collie.webp',
+        'black-white' => 'dogs/bearded-collie--black-white.webp',
+        'blue-white' => 'dogs/bearded-collie--blue-white.webp',
+        'brown-white' => 'dogs/bearded-collie--brown-white.webp',
+        'fawn-white' => 'dogs/bearded-collie--fawn-white.webp',
+        'sandy-white' => 'dogs/bearded-collie--sandy-white.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
