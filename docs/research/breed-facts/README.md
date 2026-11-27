@@ -101,14 +101,17 @@ sentences and takes the verbatim quote of each value's `ref` in `dog-data` / `ca
   then on the generator leaves the file alone, its `-auto-` facts stay.
 - A new breed: run the generator after the registry export (ADD_BREED_RUNBOOK §4). `--check`
   exits 1 when a committed file is stale.
-- **David still approves** in `/admin` → Breed facts (filter *verified* → select all → »Approve
-  selected«); generated facts arrive as `verified`.
+- **Approved by the import itself (M5-R09f, David 2026-11-27 »ja«):** a generated fact (key
+  `-auto-`, the generator's `verified_by`, matching `verified_hash`) is stored as `approved`
+  (`approved_by` empty = no admin) when it is new, when its text changed, or when it was imported
+  as `verified` before. One that an admin sent back to draft stays a draft while its text is
+  unchanged. Hand-written facts still wait for David in `/admin` → Breed facts.
 
 ## Import rules (`php artisan breeds:import-facts {--breed=*} {--dry-run}`)
 
 - A file with **any** error is rejected as a whole (nothing of it is written); other files still import.
 - `verified` only with a matching `verified_hash` (see above); otherwise `draft` (reported).
-- Upsert by `key`. New key → inserted (`verified` with proof, else `draft`).
+- Upsert by `key`. New key → inserted (`verified` with proof, else `draft`; a generated fact with proof → `approved`, §Generated facts).
 - **Content unchanged** → only `sort` may change; `draft` → `verified` with proof; never demoted;
   an approval stays.
 - **Content changed** (any status, also approved) → new content, `verified` with proof else

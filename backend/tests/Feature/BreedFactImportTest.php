@@ -91,6 +91,61 @@ describe('import', function () {
         expect(BreedFact::count())->toBe(0);
     });
 
+    it('approves generated facts by itself and leaves hand-written ones to the admin (M5-R09f)', function () {
+        $generator = BreedFactImportService::GENERATOR.' (numbers and terms checked against the quote)';
+        $auto = function (array $d, string $title = 'The Border Collie is a medium-sized dog breed.') use ($generator): array {
+            $fact = [
+                'key' => 'border_collie-auto-size', 'category' => 'body', 'audience' => 'child',
+                'title' => ['en' => $title, 'sl' => 'Border collie je srednje velika pasma psov.'], 'why' => null,
+                'source_id' => 'S5', 'source_name' => 'The Royal Kennel Club', 'source_url' => 'https://example.test/bc',
+                'quote' => 'Size: Medium', 'game_rule_key' => null, 'sort' => 30, 'status' => 'verified', 'verified_by' => $generator,
+            ];
+            $fact['verified_hash'] = bfiHash('border_collie', $fact);
+            $d['facts'][] = $fact;
+
+            return $d;
+        };
+        $generated = fn () => BreedFact::where('key', 'border_collie-auto-size')->sole();
+
+        bfiImport(bfiDir($auto))->expectsOutputToContain('1 generated fact(s) approved automatically')->assertSuccessful();
+        expect($generated())->status->toBe(BreedFactStatus::Approved)->approved_by->toBeNull()->approved_at->not->toBeNull()
+            ->and(BreedFact::where('key', 'border_collie-001')->sole()->status)->toBe(BreedFactStatus::Verified, 'hand-written facts wait for David');
+
+        // Idempotent: the approval time does not move.
+        $at = $generated()->approved_at;
+        bfiImport(bfiDir($auto))->doesntExpectOutputToContain('approved automatically')->assertSuccessful();
+        expect($generated()->approved_at->equalTo($at))->toBeTrue();
+
+        // A changed text is approved again at once (not »back to review«).
+        bfiImport(bfiDir(fn (array $d) => $auto($d, 'The Border Collie is a medium-sized breed of dog.')))
+            ->expectsOutputToContain('1 generated fact(s) approved automatically')->assertSuccessful();
+        expect($generated())->status->toBe(BreedFactStatus::Approved)->title_en->toBe('The Border Collie is a medium-sized breed of dog.');
+
+        // Sent back to draft by an admin → stays a draft while the text is the same.
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        app(BreedFactReviewService::class)->reject($generated(), $admin);
+        bfiImport(bfiDir(fn (array $d) => $auto($d, 'The Border Collie is a medium-sized breed of dog.')))->assertSuccessful();
+        expect($generated()->status)->toBe(BreedFactStatus::Draft);
+
+        // Imported as verified before M5-R09f → approved by the next import.
+        $generated()->update(['status' => 'verified', 'verified_by' => $generator]);
+        bfiImport(bfiDir(fn (array $d) => $auto($d, 'The Border Collie is a medium-sized breed of dog.')))->assertSuccessful();
+        expect($generated()->status)->toBe(BreedFactStatus::Approved);
+
+        // No proof, a hand key or another verifier → never approved here.
+        expect(BreedFactImportService::isGenerated('border_collie-auto-size', 'claude-verifier'))->toBeFalse()
+            ->and(BreedFactImportService::isGenerated('border_collie-001', $generator))->toBeFalse()
+            ->and(BreedFactImportService::isGenerated('border_collie-auto-size', null))->toBeFalse();
+        BreedFact::query()->delete();
+        bfiImport(bfiDir(function (array $d) use ($auto) {
+            $d = $auto($d);
+            $d['facts'][count($d['facts']) - 1]['verified_hash'] = str_repeat('0', 64);
+
+            return $d;
+        }))->assertSuccessful();
+        expect($generated()->status)->toBe(BreedFactStatus::Draft);
+    });
+
     it('never touches an approved fact whose content is unchanged', function () {
         $dir = bfiDir();
         bfiImport($dir)->assertSuccessful();
