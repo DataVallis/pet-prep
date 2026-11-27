@@ -525,6 +525,7 @@ const SPECIES = [
       { id: 'welsh_springer_spaniel', synonyms: { en: ['Welsh Springer', 'Welshie', 'Welsh Starter'], sl: ['velški springer', 'welsh springer spaniel', 'welshie'] } },
       { id: 'smooth_fox_terrier', synonyms: { en: ['Fox Terrier (Smooth)', 'Smooth-coated Fox Terrier', 'Foxie'], sl: ['foksterier', 'gladkodlaki fox terier', 'kratkodlaki foksterier'] } },
       { id: 'bearded_collie', synonyms: { en: ['Beardie', 'Highland Collie', 'Hairy Mou\'ed Collie'], sl: ['bearded collie', 'beardie', 'bradati collie'] } },
+      { id: 'saluki', synonyms: { en: ['Persian Greyhound', 'Gazelle Hound', 'Arabian Hound'], sl: ['perzijski hrt', 'saluki hrt'] } },
     ],
   },
   {
@@ -549,7 +550,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO', Finland: 'FI' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO', Finland: 'FI', 'Middle East': 'XME' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -3635,6 +3636,30 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-145. RKC Breeds A–Z page not reachable → PDSA key facts (S1086): exercise '2 hours' (minimum per day — the game
+  // value, 'at_least', Smooth Fox Terrier precedent), lifespan 'Over 10 years', weight '16kg-29.5kg' (no standard gives a
+  // weight), coat 'Short'; height = FCI-Standard N° 269 (S1085, bitches 'proportionally smaller' — stored as the same range).
+  // Coren: tier Average without a rank number (S35 mirror) → coren_rank: false (no rank fact). FCI origin Middle East
+  // (XME, new — FCI patronage). Not exported: weight alternatives, lifespan.woodgreen / mcmillan_2024 (Wikipedia, tier C) /
+  // webmd / senior_from (derived), health.hips (background — no source advises hip scoring), health.ncl8 (breeder
+  // checklist), health.dental / other. No grooming / shedding fact (no RKC key facts). No new health key.
+  saluki: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than']],
+    exercise: [['@proposed_game_parameters.saluki.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['heart_muscle_disease', 'health.heart'],
+      ['bloat_gdv', 'health.gdv'],
+      ['certain_cancers', 'health.cancer'],
+      ['hypothyroidism', 'health.thyroid'],
+    ],
+  },
 
 
 
@@ -3735,6 +3760,7 @@ export const DOG_CARE_TASKS = {
   irish_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.irish_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_terrier.ear_care'], ['groomer_visit', 1, 56, 'proposed_game_parameters.irish_terrier.professional_grooming']],
   welsh_springer_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_springer_spaniel.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.bathing']],
   smooth_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.smooth_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.smooth_fox_terrier.ear_cleaning']],
+  saluki: [['tooth_brushing', 7, 7, 'proposed_game_parameters.saluki.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4836,6 +4862,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bearded_collie.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bearded_collie.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bearded_collie.exercise_minutes_senior',
+  },
+  saluki: {
+    adult_minutes: ['proposed_game_parameters.saluki.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.saluki.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.saluki.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.saluki.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.saluki.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.saluki.exercise_minutes_senior',
   },
 
 
