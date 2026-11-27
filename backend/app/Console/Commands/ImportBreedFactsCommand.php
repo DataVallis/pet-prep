@@ -74,6 +74,9 @@ class ImportBreedFactsCommand extends Command
                 '%s: %d new, %d updated, %d approved → re-review, %d draft → verified, %d reordered, %d unchanged',
                 $r['file'], count($r['created']), count($r['updated']), count($r['reopened']), count($r['promoted']), count($r['reordered']), count($r['unchanged']),
             ));
+            if ($r['auto_approved'] !== []) {
+                $this->line('  '.count($r['auto_approved']).' generated fact(s) approved automatically');
+            }
             if ($r['unproven'] !== []) {
                 $this->warn('  "verified" without a matching verified_hash (kept as draft): '.implode(', ', $r['unproven']));
             }

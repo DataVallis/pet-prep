@@ -46,6 +46,12 @@ use JsonException;
  *  - content changed (any status) → new content, verified with proof else
  *    draft, approval cleared (David approves again);
  *  - facts in the DB but missing in the file are kept and reported.
+ * Generated facts (M5-R09f, David 2026-11-27 »ja«): a fact written by
+ * scripts/generate-breed-facts.mjs (key `<breed>-auto-…`, verified_by of the
+ * generator, matching verified_hash) is APPROVED by the import itself
+ * (approved_by null = no admin) — new, changed, or already imported as
+ * verified. One an admin sent back to draft stays a draft while its text
+ * is unchanged. Hand-written facts are never approved here.
  * Idempotent: a second run changes nothing.
  */
 class BreedFactImportService
@@ -57,6 +63,9 @@ class BreedFactImportService
     public const DOCS_DIR = '../docs/research/breed-facts';
 
     public const KEY_MAX = 100;
+
+    /** Start of `verified_by` written by scripts/generate-breed-facts.mjs (VERIFIED_BY there). */
+    public const GENERATOR = 'generate-breed-facts.mjs';
 
     /** Allowed top-level keys of a file (QA PR #210: unknown keys are errors). */
     public const FILE_KEYS = ['breed', 'facts'];
@@ -101,13 +110,13 @@ class BreedFactImportService
     /**
      * Validate and (unless $dryRun) apply one file.
      *
-     * @return array{file: string, breed: string|null, ok: bool, errors: list<string>, created: list<string>, updated: list<string>, reopened: list<string>, promoted: list<string>, reordered: list<string>, unchanged: list<string>, unproven: list<string>, missing: list<string>}
+     * @return array{file: string, breed: string|null, ok: bool, errors: list<string>, created: list<string>, updated: list<string>, reopened: list<string>, promoted: list<string>, auto_approved: list<string>, reordered: list<string>, unchanged: list<string>, unproven: list<string>, missing: list<string>}
      */
     public function importFile(string $path, bool $dryRun = false): array
     {
         $result = [
             'file' => basename($path), 'breed' => null, 'ok' => false, 'errors' => [],
-            'created' => [], 'updated' => [], 'reopened' => [], 'promoted' => [], 'reordered' => [], 'unchanged' => [], 'unproven' => [], 'missing' => [],
+            'created' => [], 'updated' => [], 'reopened' => [], 'promoted' => [], 'auto_approved' => [], 'reordered' => [], 'unchanged' => [], 'unproven' => [], 'missing' => [],
         ];
 
         [$breed, $rows, $errors] = $this->parse($path);
@@ -140,12 +149,19 @@ class BreedFactImportService
             if ($row['status'] === BreedFactStatus::Verified && ! $proven) {
                 $result['unproven'][] = $key;
             }
-            $review = $proven
-                ? ['status' => BreedFactStatus::Verified->value, 'verified_by' => $row['verified_by']]
-                : ['status' => BreedFactStatus::Draft->value, 'verified_by' => null];
+            // M5-R09f: a generated fact with proof needs no admin click.
+            $auto = $proven && self::isGenerated($key, $row['verified_by']);
+            $review = match (true) {
+                $auto => ['status' => BreedFactStatus::Approved->value, 'verified_by' => $row['verified_by'], 'approved_by' => null, 'approved_at' => now()],
+                $proven => ['status' => BreedFactStatus::Verified->value, 'verified_by' => $row['verified_by']],
+                default => ['status' => BreedFactStatus::Draft->value, 'verified_by' => null],
+            };
 
             if ($fact === null) {
                 $result['created'][] = $key;
+                if ($auto) {
+                    $result['auto_approved'][] = $key;
+                }
                 $writes[] = ['create', $key, $row['content'] + ['key' => $key, 'sort' => $row['sort'], 'content_hash' => $hash] + $review];
 
                 continue;
@@ -153,10 +169,13 @@ class BreedFactImportService
 
             if ($fact->content_hash !== $hash) {
                 // New text: never keeps an earlier verify / approval.
-                $result[$fact->isApproved() ? 'reopened' : 'updated'][] = $key;
-                $writes[] = ['update', $key, $row['content'] + [
-                    'sort' => $row['sort'], 'content_hash' => $hash, 'approved_by' => null, 'approved_at' => null,
-                ] + $review];
+                // (A generated fact is approved again at once — $review carries its approval.)
+                $result[$fact->isApproved() && ! $auto ? 'reopened' : 'updated'][] = $key;
+                if ($auto) {
+                    $result['auto_approved'][] = $key;
+                }
+                $writes[] = ['update', $key, $row['content'] + ['sort' => $row['sort'], 'content_hash' => $hash]
+                    + $review + ['approved_by' => null, 'approved_at' => null]];
 
                 continue;
             }
@@ -166,9 +185,14 @@ class BreedFactImportService
             if ($fact->sort !== $row['sort']) {
                 $attributes['sort'] = $row['sort'];
             }
-            if ($fact->status === BreedFactStatus::Draft && $proven) {
+            if ($fact->status === BreedFactStatus::Draft && $proven && ! $auto) {
                 $attributes += $review;
                 $result['promoted'][] = $key;
+            } elseif ($auto && $fact->status === BreedFactStatus::Verified) {
+                // Imported before M5-R09f (or verified by hand): approve now. A generated
+                // fact that is a DRAFT with the same text was sent back by an admin — it stays.
+                $attributes += $review;
+                $result['auto_approved'][] = $key;
             } elseif ($attributes !== []) {
                 $result['reordered'][] = $key;
             } else {
@@ -198,6 +222,12 @@ class BreedFactImportService
         }
 
         return $result;
+    }
+
+    /** Written by scripts/generate-breed-facts.mjs: key `<breed>-auto-<field>` and the generator's verified_by. */
+    public static function isGenerated(string $key, ?string $verifiedBy): bool
+    {
+        return str_contains($key, '-auto-') && $verifiedBy !== null && str_starts_with($verifiedBy, self::GENERATOR);
     }
 
     /**
