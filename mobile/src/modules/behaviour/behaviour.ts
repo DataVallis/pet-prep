@@ -124,14 +124,15 @@ function readTakeOut(value: unknown): TakeOutClock | null {
   const due = iso(value.next_due_at);
   if (!Number.isFinite(hold) || hold <= 0 || started === null || due === null) return null;
   const kind = typeof value.kind === 'string' && (TAKE_OUT_KINDS as readonly string[]).includes(value.kind) ? (value.kind as TakeOutKind) : null;
-  const windowStarts = iso(value.window_starts_at);
+  // Missing (older server) stays absent; present = the ISO start or null.
+  const hasWindow = 'window_starts_at' in value;
   return {
     hold_hours: hold,
     clock_started_at: started,
     next_due_at: due,
     last_taken_out_at: iso(value.last_taken_out_at),
     ...(kind !== null ? { kind } : {}),
-    ...(windowStarts !== null ? { window_starts_at: windowStarts } : {}),
+    ...(hasWindow ? { window_starts_at: iso(value.window_starts_at) } : {}),
   };
 }
 

@@ -173,7 +173,7 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
-### 2026-11-27 (backend + mobile, `fix/evening-take-out-window-copy-2`)
+### 2026-11-27 (backend + mobile, `fix/evening-take-out-window-copy-3`)
 - Napaka z Davidovega telefona: »Pelji ven« ob 18:56 (pred večernim oknom 19–21) — kartica je še kazala »najkasneje ob 21:00«, optimistično za hip »jutri 2:56«. Pravilo strežnika je bilo pravilno (izhod pred oknom ne šteje), napisi ne. Zdaj: `take_out.window_starts_at` (samo kind evening) + vodič `take_out.evening_window`; pred oknom »Pred spanjem ven — med 19:00 in 21:00« (gumb »od 19:00«), sporočilo »Lepo, da je bil zunaj! Pred spanjem (med 19:00 in 21:00) ga pelji ven še enkrat.«; push »… najkasneje ob 21:00«; optimistični »Pelji ven« ne računa več roka (le `last_taken_out_at`). Brez spremembe pravila. Dolg: »Pelji ven« ob zapadlem roku sveti še do odgovora strežnika (~nekaj 100 ms); preveri na telefonu.
 ### 2026-11-27 (mobile, `fix/home-video-frozen-after-play`)
 - Domači video (igrača) zamrznjen po igri (Davidov iPhone): vsak končan zvok igre (expo-audio, privzeto `keepAudioSessionActive: false`) je deaktiviral skupno iOS avdio sejo, kar ustavi tudi expo-video predvajalnike brez napake. `useGameFx` zdaj `keepAudioSessionActive: true`; plus stražar v `PetMediaView` (`playbackWatchdog.ts`: zanka, ki 3 s stoji → `play()` / `replay()`, poročilo `pet-media … stage=stalled`). Samo JS / OTA. Dolg: `ClipDeck` / `SchoolStage` nimata stražarja; potrditev na napravi.

@@ -5993,6 +5993,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -6416,10 +6417,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -7058,6 +7066,7 @@ export interface operations {
                                 last_taken_out_at: string | null;
                                 /** @enum {string} */
                                 kind: "regular" | "morning" | "evening";
+                                window_starts_at: string | null;
                             } | null;
                             active_events: {
                                 id: number;
@@ -7481,10 +7490,17 @@ export interface operations {
                             } | null;
                             /**
                              * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                             *     out; steps never reset it); null otherwise.
+                             *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                             *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                             *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                             *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                              */
                             take_out: {
                                 hold_hours: number;
+                                evening_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
                             } | null;
                             /**
                              * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -8144,6 +8160,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -8567,10 +8584,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -9228,6 +9252,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -9651,10 +9676,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -10312,6 +10344,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -10735,10 +10768,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -11396,6 +11436,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -11819,10 +11860,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -12480,6 +12528,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -12903,10 +12952,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -13568,6 +13624,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -13991,10 +14048,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -14656,6 +14720,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -15079,10 +15144,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -15744,6 +15816,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -16167,10 +16240,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -16832,6 +16912,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -17255,10 +17336,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -17920,6 +18008,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -18343,10 +18432,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -19004,6 +19100,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -19427,10 +19524,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -20088,6 +20192,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -20511,10 +20616,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -21176,6 +21288,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -21599,10 +21712,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -22260,6 +22380,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -22683,10 +22804,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -23348,6 +23476,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -23771,10 +23900,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -24432,6 +24568,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -24855,10 +24992,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -25520,6 +25664,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -25943,10 +26088,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -26608,6 +26760,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -27031,10 +27184,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -27696,6 +27856,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -28119,10 +28280,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -28784,6 +28952,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -29207,10 +29376,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -29872,6 +30048,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -30295,10 +30472,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -31645,6 +31829,7 @@ export interface operations {
                                         last_taken_out_at: string | null;
                                         /** @enum {string} */
                                         kind: "regular" | "morning" | "evening";
+                                        window_starts_at: string | null;
                                     } | null;
                                     /**
                                      * @description Open messes, oldest first. kind: poop | accident | chewing (dog);
@@ -31874,10 +32059,17 @@ export interface operations {
                                     } | null;
                                     /**
                                      * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                     *     out; steps never reset it); null otherwise.
+                                     *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                     *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                     *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                     *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                      */
                                     take_out: {
                                         hold_hours: number;
+                                        evening_window: {
+                                            start: string;
+                                            end: string;
+                                        } | null;
                                     } | null;
                                     /**
                                      * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -32289,6 +32481,7 @@ export interface operations {
                                         last_taken_out_at: string | null;
                                         /** @enum {string} */
                                         kind: "regular" | "morning" | "evening";
+                                        window_starts_at: string | null;
                                     } | null;
                                     /**
                                      * @description Open messes, oldest first. kind: poop | accident | chewing (dog);
@@ -32518,10 +32711,17 @@ export interface operations {
                                     } | null;
                                     /**
                                      * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                     *     out; steps never reset it); null otherwise.
+                                     *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                     *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                     *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                     *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                      */
                                     take_out: {
                                         hold_hours: number;
+                                        evening_window: {
+                                            start: string;
+                                            end: string;
+                                        } | null;
                                     } | null;
                                     /**
                                      * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -34697,6 +34897,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -35120,10 +35321,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
@@ -35763,6 +35971,7 @@ export interface operations {
                                     last_taken_out_at: string | null;
                                     /** @enum {string} */
                                     kind: "regular" | "morning" | "evening";
+                                    window_starts_at: string | null;
                                 } | null;
                                 active_events: {
                                     id: number;
@@ -36186,10 +36395,17 @@ export interface operations {
                                 } | null;
                                 /**
                                  * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
-                                 *     out; steps never reset it); null otherwise.
+                                 *     out; steps never reset it); null otherwise. `evening_window` (David 2026-11-27):
+                                 *     today's evening take-out window "HH:MM" pet-local (start = bedtime −
+                                 *     `behaviour.puppy.evening_window_minutes`, end = bedtime); null when the evening
+                                 *     rule does not apply (no night quiet hours, bedtime after midnight, switched off).
                                  */
                                 take_out: {
                                     hold_hours: number;
+                                    evening_window: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
                                 } | null;
                                 /**
                                  * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤

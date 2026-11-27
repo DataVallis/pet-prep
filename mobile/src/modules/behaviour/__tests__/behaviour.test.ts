@@ -246,10 +246,13 @@ describe('evening window (David 2026-11-27 device bug: out at 18:56, card still 
     await i18n.changeLanguage('sl');
   });
 
-  it('reads window_starts_at; missing / unreadable → left out', () => {
+  it('reads window_starts_at; unreadable → null, missing (older server) → absent', () => {
     expect(readPetBehaviour({ take_out: win }).take_out?.window_starts_at).toBe('2026-10-04T19:00:00+02:00');
-    expect(readPetBehaviour({ take_out: { ...win, window_starts_at: null } }).take_out).not.toHaveProperty('window_starts_at');
-    expect(readPetBehaviour({ take_out: { ...win, window_starts_at: 'x' } }).take_out).not.toHaveProperty('window_starts_at');
+    expect(readPetBehaviour({ take_out: { ...win, window_starts_at: null } }).take_out?.window_starts_at).toBeNull();
+    expect(readPetBehaviour({ take_out: { ...win, window_starts_at: 'x' } }).take_out?.window_starts_at).toBeNull();
+    const { window_starts_at: _w, ...older } = win;
+    void _w;
+    expect(readPetBehaviour({ take_out: older }).take_out).not.toHaveProperty('window_starts_at');
   });
 
   it('before the window: »med 19:00 in 21:00«, the button says »od 19:00«, calm, never due', () => {
