@@ -74701,6 +74701,571 @@
       }
     }
   },
+  "saluki": {
+    "_note": "Added 2026-11-27 (M5-R10-145, unattended run — appended after the Bearded Collie: AKC 2024 No. 141 'Saluki', S174 full-list table read 2026-11-27 '140 Bearded Collie', '141 Saluki'). Quotes as returned by the web-fetch tool on 2026-11-27 (non-preapproved pages: short fragments only); paraphrase only in notes. Sources S1084–S1092 (+ S10 growth, S11 AAHA, S14 Dogs Trust, S35 Coren tiers, S45 steps). The RKC Breeds A–Z page was not reachable (thekennelclub.org.uk → royalkennelclub.com redirect refused, PROVENANCE_REQUIRED). No health percentages anywhere. A large, smooth-coated sighthound with feathering from the Middle East (FCI Group 10, FCI patronage).",
+    "identity": {
+      "value": "FCI No. 269, Group 10 Section 1 (Long-haired or fringed Sighthounds), Middle East",
+      "unit": "—",
+      "source_id": "S1085",
+      "quote": "Section 1 Long haired or fringed Sighthounds.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 269 (S1085): 'FCI-Standard N° 269 / SALUKI', 'ORIGIN: Middle East / FCI Patronage.', 'Without working trial.'. FCI nomenclature (S1084): 'SALUKI (269)', country of origin 'MOYEN-ORIENT', patronage 'FCI', definitive acceptance 08/04/1966; standard published 29/11/2000 (EN)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S1086",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S1086, value as returned); Woodgreen (S1089) 'Large' agrees; Dogs NSW (S1090) 'Medium (11kg - 27kg)' (alternative)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            58,
+            71
+          ],
+          "female": [
+            58,
+            71
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1085",
+        "quote": "Height at withers: Average between 58 - 71 cm (23-28 inches) bitches proportionally smaller.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 269 (S1085): average 58–71 cm; bitches 'proportionally smaller' (no number → the range stored for both sexes, our reading, Australian Silky Terrier precedent). AKC standard (S1091) 'Dogs should average in height from 23 to 28 inches' / 'bitches may be considerably smaller'; PDSA (S1086) '58-71 cm'; Dogs NSW (S1090) 'Dogs 58-71 cms (23-28 ins).' agree."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            16,
+            29.5
+          ],
+          "female": [
+            16,
+            29.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1086",
+        "quote": "16kg-29.5kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S1086, value as returned), one range for both sexes — the game / register value; no breed standard gives a weight (FCI S1085 has no weight section, AKC S1091 none). Alternatives: Woodgreen 18-30 kg (S1089); PetMD 'weigh between 40–65 pounds' (S1087); WebMD 'A healthy weight for these dogs ranges from 40 to 65 pounds.' (S1088); Dogs NSW 'Medium (11kg - 27kg)' (S1090).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                18,
+                30
+              ],
+              "female": [
+                18,
+                30
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1089",
+            "quote": null,
+            "notes": "Woodgreen 'Saluki at a glance' weight 18-30 kg (S1089, value as returned in a list)."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: PDSA / Woodgreen 'Large' (S1086, S1089); 16–29.5 kg = 35–65 lb sits on the Medium / Large border → the PDSA class (Afghan Hound precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Saluki growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S1086",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S1086, value as returned). The basis of the senior boundary (runbook: a lower bound when no McMillan 2024 / VetCompass value is reachable; the RKC page was not reachable — Afghan Hound / Smooth Fox Terrier precedent). Not shorter_lifespan."
+      },
+      "woodgreen": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S1089",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Woodgreen 'Life expectancy' 12-14 years (S1089, list value); Dogs NSW (S1090) 'has an average life expectancy of approximately 12 to 14 years.' agrees. Lower bound 12 → 108 would be the senior boundary (alternative, open for David)."
+      },
+      "mcmillan_2024": {
+        "value": 13.3,
+        "unit": "years",
+        "source_id": "S1092",
+        "quote": "A 2024 UK study found a life expectancy of 13.3 years for the breed",
+        "confidence": "low",
+        "notes": "Wikipedia (S1092, tier C) citing McMillan et al. 2024 (Sci Rep, doi:10.1038/s41598-023-50458-w); the Dogs Trust table S123 and the McMillan PDFs were refused (2026-11-27). Tier C alone → not used for the senior boundary (0.75 × 13.3 × 12 = 120 — open for David)."
+      },
+      "webmd": {
+        "value": "10–17",
+        "unit": "years",
+        "source_id": "S1088",
+        "quote": "On average the dogs can live anywhere from 10 to (in rare cases) 17 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S1088); PetMD (S1087) 'can live a long life—up to 17 years!' (background only)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (PDSA lower bound 'Over 10 years', S1086) → 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14); Woodgreen 12 y → 108, McMillan via Wikipedia 13.3 y → 120 (open for David).",
+        "derived_from": [
+          "S11",
+          "S1086"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 120",
+        "unit": "minutes/day",
+        "source_id": "S1086",
+        "quote": "2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S1086, value as returned) — the runbook's source when the RKC page is not reachable. PetMD (S1087) 'Salukis need at least two hours of activity every day to stay healthy' agrees; Woodgreen (S1089) 'Exercise needs: 60-90 mins' and 'at least one to two hours of daily exercise' and Dogs NSW (S1090) '40 min/day' → alternatives (lower)."
+      },
+      "pdsa": {
+        "value": "over 2 hours a day",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "Salukis need over 2 hours of exercise daily.",
+        "confidence": "high",
+        "notes": "PDSA (S1086). Agrees with 120; also 'exercising in a contained area is important' (S1086)."
+      },
+      "petmd": {
+        "value": "at least two hours a day",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "Salukis need at least two hours of activity every day to stay healthy, and they love using their powerful legs to sprint outside.",
+        "confidence": "high",
+        "notes": "PetMD (S1087). Agrees with 120."
+      },
+      "woodgreen": {
+        "value": "60–90 minutes / one to two hours",
+        "unit": "—",
+        "source_id": "S1089",
+        "quote": "Salukis need at least one to two hours of daily exercise, including a chance to sprint in a secure area",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1089); its at-a-glance box says 'Exercise needs: 60-90 mins' (list value). Lower than PDSA → alternative only (runbook: PDSA wins when RKC is not reached)."
+      },
+      "dogs_nsw": {
+        "value": "40 min/day",
+        "unit": "—",
+        "source_id": "S1090",
+        "quote": "40 min/day",
+        "confidence": "medium",
+        "notes": "Dogs NSW Quick Glance 'Exercise' (S1090); text 'A daily walk or run is essential' — alternative only."
+      },
+      "fencing": {
+        "value": "secure, fenced area; keep on a leash",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": "Just make sure that you always keep them on a leash and have a high fence.",
+        "confidence": "high",
+        "notes": "WebMD (S1088); PetMD (S1087) 'An ideal home for a Saluki has a large, fenced backyard to run around in.'; Dogs NSW (S1090) 'A fully fenced backyard is recommended as the Saluki can jump quite high.' Background (no game mechanic)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B quote advising a gap between a meal and exercise: PetMD (S1087) 'Dogs with deep chests, such as the Saluki, are prone to gastric dilatation-volvulus (GDV), a severe form of bloat.' names the risk only → no meal_exercise_gap row (runbook M5-R16: never invent a quote; open for David)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "reserved with strangers, dignified, intelligent and independent",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "Reserved with strangers, but not nervous or aggressive. Dignified, intelligent and independent.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 269 (S1085) 'BEHAVIOUR / TEMPERAMENT'. PDSA (S1086) 'Salukis are known to be gentle, quite sensitive and sometimes reserved, often aloof with strangers.'; WebMD (S1088) 'The Saluki temperament is dignified, faithful, and gentle, but these dogs can also be very independent.'"
+      },
+      "family": {
+        "value": "affectionate with their families",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": "They’re incredibly affectionate with their families and moderately playful.",
+        "confidence": "medium",
+        "notes": "WebMD (S1088). Not a 'family pet' statement → no family_pet chip. Woodgreen (S1089) 'great additions to calm, peaceful family homes' (fragment: 'Salukis' gentle and patient personalities make them great additions to calm, peaceful family homes.')."
+      },
+      "children": {
+        "value": "older children in a calm home; not for young children",
+        "unit": "—",
+        "source_id": "S1089",
+        "quote": "They do best with older children who respect their space and let them sprawl out in peace.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S1089), with 'Like all dogs, it's important to actively supervise Salukis around children to prevent any accidents'. Conflicting: PetMD (S1087) 'they’re not the most kid-friendly breed, as they prefer their environment calm and quiet.'; WebMD (S1088) 'They have strong prey instincts and will even attack small dogs and young children if they don’t know better.' / 'they’re better off in households with older children' → no children / small_children chip (conflicting sources; open for David)."
+      },
+      "other_pets": {
+        "value": "strong chase instinct / prey drive — not for homes with small pets",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "Salukis do have a strong chase instinct, so be aware of this if they are around other pets at home and when out and about.",
+        "confidence": "high",
+        "notes": "PDSA (S1086). PetMD (S1087) 'They don’t do well around small animals (thanks to their prey drive)'; WebMD (S1088) 'They have strong prey instincts'; Woodgreen (S1089) 'pets like rabbits, cats, or chickens are likely to trigger their prey drive.' No quote names a 'high prey drive' verbatim → no chases_small_pets chip by the runbook rule (Afghan Hound precedent); open for David. Never other_pets."
+      },
+      "time_alone": {
+        "value": "should not be left alone all day — can develop separation anxiety",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "they can develop separation anxiety if they’re away from their pet parents for long periods of time.",
+        "confidence": "high",
+        "notes": "PetMD (S1087), also 'Salukis also don’t want to be left alone all day'; WebMD (S1088) 'These dogs have a tendency to take off if they’re bored or left alone for too long.'; Dogs NSW (S1090) 'Time at home: Alone with support'. Basis of the needs_company chip."
+      },
+      "socialisation": {
+        "value": "early socialisation helps with other dogs and strangers",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "Salukis can do well around other dogs when socialized at an early age",
+        "confidence": "high",
+        "notes": "PetMD (S1087) — a condition ('when socialized at an early age'), the runbook's M5-R17 quote form. WebMD (S1088) 'Early socialization can help them overcome these issues, but there are no guarantees.'"
+      },
+      "training": {
+        "value": "independent; recall not always easy once the chase instinct starts",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "once the chase instinct has kicked in, it can be hard to regain their attention",
+        "confidence": "medium",
+        "notes": "PDSA (S1086, fragment); even basic training, especially recall, 'will not always be easy' (S1086). Woodgreen (S1089) 'Training: Moderately hard'."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement found → no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": "some eat little, others gorge",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": "Some are skimpy eaters, but others will gorge themselves on any available food.",
+        "confidence": "medium",
+        "notes": "WebMD (S1088); 'you may need to feed them separately from your other pets.' Background only (no food_motivated_weight chip)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch category not reached (RKC page refused). Conditions named by PDSA (S1086), PetMD (S1087), WebMD (S1088), WSAVA (S1093) and Dogs NSW (S1090).",
+      "heart": {
+        "value": "heart disease (dilated cardiomyopathy)",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S1087) names dilated cardiomyopathy (DCM); PDSA (S1086) 'Heart problems'; WebMD (S1088) heart disease; WSAVA (S1093) 'A main condition of interest is heart disease' (fragment)."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — an emergency in deep-chested dogs",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "Dogs with deep chests, such as the Saluki, are prone to gastric dilatation-volvulus (GDV), a severe form of bloat.",
+        "confidence": "high",
+        "notes": "PetMD (S1087). No waiting advice after meals → no meal gap (exercise.after_meals)."
+      },
+      "cancer": {
+        "value": "certain cancers (haemangiosarcoma, lymphoma, osteosarcoma, mammary cancer)",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S1086) list item 'Haemangiosarcoma'; PetMD (S1087) lymphoma, hemangiosarcoma, osteosarcoma, mammary cancer (paraphrase)."
+      },
+      "thyroid": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S1086) list item; WebMD (S1088) thyroid problems; Dogs NSW (S1090) 'In general, the Saluki is a healthy dog, but hypothyroidism may affect the breed at times.'"
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S1086) list item; PetMD / WebMD name it; Wikipedia (S1092, C) calls it uncommon. Background only (no register key — no source advises hip scoring for the breed)."
+      },
+      "ncl8": {
+        "value": "Saluki neuronal ceroid lipofuscinosis (NCL8) — a DNA test is available",
+        "unit": "—",
+        "source_id": "S1093",
+        "quote": "A genetic test is available for Neuronal Ceroid Lipofuscinosis 8 (NCL8), a specific mutation to the Saluki.",
+        "confidence": "high",
+        "notes": "WSAVA (S1093); 'Testing is being recommended pre-breeding' (S1093); 'this fatal neurodegenerative disease is likely extremely rare in the breed' (S1093). PetMD (S1087) names it. Breeder checklist dna_ncl8 (other_scheme, K46)."
+      },
+      "dental": {
+        "value": "dental disease — brush the teeth at home",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "Because of this, it’s important to provide at-home dental care by brushing your dog’s teeth.",
+        "confidence": "medium",
+        "notes": "PetMD (S1087). Tooth brushing frequency from WebMD (suitability.webmd_teeth)."
+      },
+      "other": {
+        "value": "eye problems, blood disorders, follicular dysplasia, anaesthesia sensitivity",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S1088): glaucoma, cataracts, progressive retinal atrophy, hemolytic anemia, thrombocytopenia, pattern baldness (follicular dysplasia), neurological problems, possible anaesthesia risk (paraphrase). No register health key (background only)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Saluki",
+        "confidence": "medium",
+        "notes": "Wikipedia 'The Intelligence of Dogs' (S35, tier C): the table page was refused (PROVENANCE_REQUIRED, 2026-11-27); the IPFS mirror (https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/The_Intelligence_of_Dogs) lists 'Saluki' under 'Average Working/Obedience Intelligence' (between 'Australian Shepherd' and 'Finnish Spitz') without rank numbers → rank null, tier Average."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 mirror heading 'Average Working/Obedience Intelligence' (ranks 40–54): 'Understanding of new commands: 25 to 40 repetitions.'"
+      },
+      "training_notes": {
+        "value": "independent; recall not always easy",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "once the chase instinct has kicked in, it can be hard to regain their attention",
+        "confidence": "medium",
+        "notes": "PDSA (S1086, fragment)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.saluki.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "grace and symmetry, great speed and endurance, strength and activity",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "The whole appearance of this breed should give an impression of grace and symmetry and of great speed",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 269 (S1085), continued 'and endurance coupled with strength and activity' (S1085)."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "cream",
+          "white",
+          "golden",
+          "red",
+          "grizzle and tan",
+          "tricolour (white, black and tan)",
+          "black and tan"
+        ],
+        "unit": "list",
+        "source_id": "S1091",
+        "quote": "White, cream, fawn, golden, red, grizzle and tan, tricolor (white, black, and tan) and black and tan.",
+        "confidence": "high",
+        "notes": "AKC standard (S1091); Dogs NSW (S1090) the same list. FCI (S1085) 'Any colour or combination of colours is permissible. Brindles are undesirable.' The game list = the AKC colours; never brindle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): fawn first with the highest weight (the portrait default; Claude), then golden, cream, white, red, black and tan, grizzle and tan, tricolour."
+      },
+      "coat": {
+        "value": "smooth, soft and silky, feathering on the legs and back of the thighs (feathered variety)",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "Hair: Smooth and of a soft, silky texture, feathering on the legs and at the back of thighs,",
+        "confidence": "high",
+        "notes": "FCI (S1085); the smooth variety has no feathering (paraphrase). The portrait shows the feathered variety. AKC (S1091) 'Smooth and of a soft silky texture, slight feather on the legs, feather at the back of the thighs'."
+      },
+      "eyes": {
+        "value": "dark to hazel, bright, large and oval, not prominent",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "Dark to hazel and bright, large and oval, but not prominent.",
+        "confidence": "high",
+        "notes": "FCI (S1085)."
+      },
+      "ears": {
+        "value": "long, covered with long silky hair, set on high, hanging close to the skull",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "Long and covered with long silky hair, set on high, mobile,",
+        "confidence": "high",
+        "notes": "FCI (S1085), continued 'hanging close to the skull.'"
+      },
+      "tail": {
+        "value": "long, low-set, carried naturally in a curve, well feathered underneath (natural)",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "Long, set on low and carried naturally in a curve, well feathered on the underside with long silky hair, not bushy.",
+        "confidence": "high",
+        "notes": "FCI (S1085). Never docked."
+      },
+      "nose": {
+        "value": "black or liver brown",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": "Nose: Black or liver brown.",
+        "confidence": "high",
+        "notes": "FCI (S1085)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA key facts (S1086, returned as values — quoted here as the value), PetMD (S1087), WebMD (S1088), Woodgreen (S1089), Dogs NSW (S1090). The RKC Breeds A–Z key facts (size of home, sheds, town or country, Breed Watch) were not reachable → no rkc_* entries, no apartment / large_home / sheds chip.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S1086)."
+      },
+      "pdsa_exercise": {
+        "value": "2 hours",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S1086). Basis of 120 min / active_family / long_daily_exercise."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S1086); Dogs NSW (S1090) 'The Saluki is a short-coated breed.'"
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S1086)."
+      },
+      "pdsa_grooming": {
+        "value": "weekly brushing; feathering more often",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": "They need weekly brushing,",
+        "confidence": "high",
+        "notes": "PDSA (S1086), continued 'their longer feathering will need grooming more regularly to prevent their coats from becoming matted'. 1× (alternative to PetMD's 'once or twice')."
+      },
+      "petmd_grooming": {
+        "value": "brushing once or twice a week",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "A quick brushing once or twice a week is recommended for all Salukis",
+        "confidence": "high",
+        "notes": "PetMD (S1087, continued 'but especially for long-haired ones that can develop mats on their ears, legs, and tail.'). The basis of brushing 2× a week (M5-R13 rule: 'once or twice a week' → 2, the upper bound, also when another source gives a lower number)."
+      },
+      "webmd_grooming": {
+        "value": "once a week",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": "You should brush them once a week to keep their coats looking their best.",
+        "confidence": "high",
+        "notes": "WebMD (S1088). 1 → alternative."
+      },
+      "woodgreen_grooming": {
+        "value": "weekly brush; minimal grooming",
+        "unit": "—",
+        "source_id": "S1089",
+        "quote": "A weekly brush with a rubber comb keeps their coat sleek and removes dirt and dead hair.",
+        "confidence": "high",
+        "notes": "Woodgreen (S1089); 'Grooming needs: Low'. 1 → alternative. Dogs NSW (S1090) 'Grooming: Weekly'."
+      },
+      "webmd_teeth": {
+        "value": "tooth brushing every day",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": "brush their teeth on a daily basis with a dog friendly toothpaste",
+        "confidence": "high",
+        "notes": "WebMD (S1088, fragment). Basis of the tooth-brushing task 7× a week (M5-R15)."
+      },
+      "webmd_nails": {
+        "value": "trim the nails regularly",
+        "unit": "—",
+        "source_id": "S1088",
+        "quote": "You should trim their nails regularly",
+        "confidence": "medium",
+        "notes": "WebMD (S1088) — no frequency → no nail task (runbook)."
+      },
+      "petmd_bath": {
+        "value": "bath only when dirty",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "Salukis do not require special skin care and only need baths when they are dirty.",
+        "confidence": "medium",
+        "notes": "PetMD (S1087); WebMD (S1088) 'you only need to give them a bath when they get into something messy.' — no frequency → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "clean the ears after a bath or water activity",
+        "unit": "—",
+        "source_id": "S1087",
+        "quote": "It’s best to clean their ears after a bath or other water activity.",
+        "confidence": "medium",
+        "notes": "PetMD (S1087) — conditional, no frequency → no ear task."
+      },
+      "woodgreen_pets": {
+        "value": "sociable with pets: low",
+        "unit": "—",
+        "source_id": "S1089",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Woodgreen 'Sociable with pets: Low' (S1089, list value); 'cats are a no-go unless you carefully socialise your Saluki with them from a very young age.' (S1089)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -111947,6 +112512,249 @@
         "confidence": "medium",
         "notes": "FCI standard (S1076) as in bearded_collie.appearance. Weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): slate grey with white markings is the portrait default (FCI S1076 'Slate grey, reddish-fawn, black, blue, all shades of grey, brown and sandy with or without white markings'); never merle, untrimmed coat"
+      }
+    },
+    "saluki": {
+      "_note": "Unattended run M5-R10-145 (2026-11-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the PDSA key fact '2 hours' (S1086; the RKC page was not reachable) → 120 (PetMD 'at least two hours' agrees). Senior boundary 90 from the PDSA lower bound 'Over 10 years' (S1086). Learning 1.0 (Coren tier Average, S35). Built: brushing 2× a week (PetMD S1087 'once or twice a week', M5-R13), tooth brushing every day (WebMD S1088, M5-R15), puppy socialisation with the PetMD quote (M5-R17). No ear / nail / bath / groomer task (no frequency), no meal gap (no waiting quote), no heat warning. No new vocabulary key. In marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S1086",
+        "quote": "2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact (S1086) 'Minimum exercise (per day): 2 hours' → 120 ('minimum N' → N; RKC not reachable → PDSA). PetMD (S1087) 'at least two hours' → 120 agrees; Woodgreen (S1089) 60–90 → 60 and Dogs NSW (S1090) 40 are alternatives.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S1087",
+            "quote": "Salukis need at least two hours of activity every day to stay healthy, and they love using their powerful legs to sprint outside."
+          },
+          {
+            "value": 60,
+            "source_id": "S1089",
+            "quote": null,
+            "notes": "Woodgreen 'Exercise needs: 60-90 mins' (list value) → lower bound 60."
+          },
+          {
+            "value": 40,
+            "source_id": "S1090",
+            "quote": "40 min/day"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S1086 'Minimum exercise (per day): 2 hours'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S1086",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + PDSA lower bound 'Over 10 years', S1086).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S1086"
+        ],
+        "alternatives": {
+          "senior_woodgreen_12_y": 108,
+          "senior_mcmillan_wikipedia_13_3_y": 120,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × PDSA lower bound 'Over 10 years', S1086)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren tier 'Average Working/Obedience Intelligence' (ranks 40–54) for 'Saluki' (S35 mirror, no rank number) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren tier Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1087",
+        "quote": "A quick brushing once or twice a week is recommended for all Salukis",
+        "confidence": "high",
+        "notes": "saluki.suitability.petmd_grooming. PetMD 'once or twice a week' → 2 (rule: a range → the upper bound, also when another source gives a single lower number); PDSA (S1086) 'weekly brushing', WebMD (S1088) 'once a week', Woodgreen (S1089) 'A weekly brush' → 1 (alternatives). Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S1086",
+            "quote": "They need weekly brushing,"
+          },
+          {
+            "value": 1,
+            "source_id": "S1088",
+            "quote": "You should brush them once a week to keep their coats looking their best."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PetMD »once or twice a week« → zgornja meja); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S1088",
+        "quote": "brush their teeth on a daily basis with a dog friendly toothpaste",
+        "confidence": "high",
+        "notes": "saluki.suitability.webmd_teeth → every day. Built: DOG_CARE_TASKS tooth_brushing [7, day], M5-R15.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »on a daily basis« → vsak dan"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1087",
+        "quote": "Salukis can do well around other dogs when socialized at an early age",
+        "confidence": "high",
+        "notes": "saluki.behaviour.socialisation (PetMD S1087, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1087)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-145); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1086"
+            ],
+            "refs": [
+              "saluki.exercise.adult",
+              "saluki.exercise.pdsa"
+            ],
+            "quote": "S1086 'Minimum exercise (per day): 2 hours'; 'Salukis need over 2 hours of exercise daily.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S1086"
+            ],
+            "refs": [
+              "saluki.exercise.adult",
+              "saluki.exercise.pdsa"
+            ],
+            "quote": "S1086 '2 hours'; 'Salukis need over 2 hours of exercise daily.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1087"
+            ],
+            "refs": [
+              "saluki.behaviour.time_alone"
+            ],
+            "quote": "S1087 'they can develop separation anxiety if they’re away from their pet parents for long periods of time.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "Conflicting: Woodgreen (S1089) 'They do best with older children…' vs PetMD (S1087) 'not the most kid-friendly breed' and WebMD (S1088) 'will even attack small dogs and young children' — open for David.",
+          "small_children": "PetMD / WebMD (S1087, S1088).",
+          "chases_small_pets": "PDSA 'strong chase instinct', WebMD 'strong prey instincts', PetMD 'prey drive' — no verbatim 'high prey drive' (Afghan Hound precedent) — open for David.",
+          "apartment": "RKC page not reachable (Wikipedia S1092 'well-suited to life in apartments' is tier C).",
+          "large_home": "RKC page not reachable (Dogs NSW 'House with garden').",
+          "sheds": "RKC page not reachable; Wikipedia (C) 'low-shedding' — neither sheds nor low_shedding.",
+          "frequent_grooming": "Brushing 1–2× a week only.",
+          "family_pet": "No family-pet statement (WebMD: affectionate with their families).",
+          "other_pets": "Strong chase instinct (PDSA S1086).",
+          "often_alone": "Separation anxiety (PetMD S1087).",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S1086).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "No veterinary welfare concern found; Breed Watch category not reached."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family; consider long_daily_exercise, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1086",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category not reached. Marketing never shows the Saluki off the leash near small animals (S1086, S1088).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Saluki, fawn, feathered variety: graceful and symmetrical, built for speed and endurance; smooth, soft, silky coat with feathering on ears, legs and tail; dark to hazel oval eyes; long high-set feathered ears; long low-set tail carried in a curve",
+        "unit": "—",
+        "source_id": "S1085",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S1085) as in saluki.appearance; colour list from AKC (S1091). Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default (AKC S1091 colour list; FCI S1085 'Any colour or combination of colours is permissible. Brindles are undesirable.'); never brindle, natural tail"
       }
     }
   }
