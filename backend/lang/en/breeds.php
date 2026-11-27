@@ -141,6 +141,7 @@ return [
     'irish_terrier' => 'Irish Terrier',
     'bluetick_coonhound' => 'Bluetick Coonhound',
     'welsh_springer_spaniel' => 'Welsh Springer Spaniel',
+    'smooth_fox_terrier' => 'Smooth Fox Terrier',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

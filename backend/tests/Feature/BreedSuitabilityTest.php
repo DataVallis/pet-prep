@@ -664,6 +664,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::IrishTerrier->value => 'irish_terrier.behaviour.other_pets',
         // M5-R10-142: PetMD S1065 "Their powerful sense of smell and strong prey drive are grounds for keeping them either on a leash or within a securely fenced area at all times."
         BreedType::WelshSpringerSpaniel->value => 'welsh_springer_spaniel.behaviour.other_pets',
+        // M5-R10-143: WebMD S1072 "These dogs have a high prey drive, so you might want to keep them on a leash during walks"
+        BreedType::SmoothFoxTerrier->value => 'smooth_fox_terrier.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

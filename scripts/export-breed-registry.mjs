@@ -523,6 +523,7 @@ const SPECIES = [
       { id: 'irish_terrier', synonyms: { en: [], sl: ['irski terier', 'irish terrier'] } },
       { id: 'bluetick_coonhound', synonyms: { en: ['Bluetick', 'Blue Tick Coonhound'], sl: ['bluetick coonhound', 'bluetick'] } },
       { id: 'welsh_springer_spaniel', synonyms: { en: ['Welsh Springer', 'Welshie', 'Welsh Starter'], sl: ['velški springer', 'welsh springer spaniel', 'welshie'] } },
+      { id: 'smooth_fox_terrier', synonyms: { en: ['Fox Terrier (Smooth)', 'Smooth-coated Fox Terrier', 'Foxie'], sl: ['foksterier', 'gladkodlaki fox terier', 'kratkodlaki foksterier'] } },
     ],
   },
   {
@@ -3585,6 +3586,31 @@ const DOG_FACTS = {
       ['ear_infections_long_ears', 'health.ear_infections'],
     ],
   },
+  // M5-R10-143. RKC page not reachable → PDSA (S873): exercise 'Minimum exercise (per day): 1 hour' (at least); lifespan =
+  // Dogs Trust 'typically 12+ years' (S1075, one page naming both coats) + the PetMD span 10–13 y (S1071); coat = Dogs Trust
+  // 'Short' (S1075); grooming PetMD 'once a week' (S1071, Once a week); height + weight = FCI-Standard N° 12 (S1070). Coren
+  // rank 40 (S35). FCI origin Great Britain (GB). No shedding fact ('moderate' has no register code). Not exported: weight
+  // alternatives (KC / PDSA), lifespan.senior_from (derived), health.other (paraphrase). No new health key.
+  smooth_fox_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.dogs_trust', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.smooth_fox_terrier.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.dogs_trust_coat_length'],
+    grooming: [['suitability.petmd_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['primary_lens_luxation', 'health.primary_lens_luxation'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['kneecap_luxation', 'health.patellar_luxation'],
+      ['deafness', 'health.deafness'],
+      ['cataracts', 'health.cataracts'],
+      ['glaucoma', 'health.glaucoma'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['dental_disease_tooth_brushing', 'health.dental'],
+    ],
+  },
 
 
 
@@ -3684,6 +3710,7 @@ export const DOG_CARE_TASKS = {
   kerry_blue_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.kerry_blue_terrier.tooth_brushing'], ['ear_cleaning', 1, 14, 'proposed_game_parameters.kerry_blue_terrier.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.kerry_blue_terrier.professional_grooming'], ['bath', 1, 28, 'proposed_game_parameters.kerry_blue_terrier.bathing']],
   irish_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.irish_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_terrier.ear_care'], ['groomer_visit', 1, 56, 'proposed_game_parameters.irish_terrier.professional_grooming']],
   welsh_springer_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_springer_spaniel.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.bathing']],
+  smooth_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.smooth_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.smooth_fox_terrier.ear_cleaning']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4769,6 +4796,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.welsh_springer_spaniel.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.welsh_springer_spaniel.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.welsh_springer_spaniel.exercise_minutes_senior',
+  },
+  smooth_fox_terrier: {
+    adult_minutes: ['proposed_game_parameters.smooth_fox_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.smooth_fox_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.smooth_fox_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.smooth_fox_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.smooth_fox_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.smooth_fox_terrier.exercise_minutes_senior',
   },
 
 

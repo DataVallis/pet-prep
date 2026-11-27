@@ -1073,6 +1073,12 @@ class FalAiService
                 .'vine-leaf-shaped ears set moderately low and hanging close to the cheeks, hazel or dark eyes, a medium-length, fairly '
                 .'square muzzle, a natural feathered tail carried low, never above the back, kindly, merry expression, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-143: FCI-Standard N° 12 (S1070) — white predominates with black and tan, tan or black markings (or all white);
+            // straight, flat, smooth, hard, dense coat; small V-shaped ears dropping forward; natural tail carried gaily.
+            BreedType::SmoothFoxTerrier => 'A small, active and lively Smooth Fox Terrier, bone and strength in small compass, short-backed and never cloddy or coarse, '
+                .'white with black and tan markings: a straight, flat, smooth, hard and dense short coat, '
+                .'a flat, moderately narrow skull, a strong muzzle with a black nose, dark, moderately small, nearly circular eyes, '
+                .'small V-shaped ears dropping forward close to the cheeks, a natural undocked tail set on rather high and carried gaily, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2496,6 +2502,13 @@ class FalAiService
                 'eye_color' => 'hazel',
                 'fur_texture' => 'straight, flat, silky coat with moderate feathering',
                 'markings' => 'rich red patches on white, small vine-leaf-shaped ears hanging close to the cheeks, feathered legs',
+            ],
+            // M5-R10-143: standard colour default (FCI S1070: white with black and tan, tan or black markings, or all white).
+            BreedType::SmoothFoxTerrier => [
+                'color_scheme' => 'white with black and tan markings',
+                'eye_color' => 'dark',
+                'fur_texture' => 'straight, flat, smooth, hard and dense short coat',
+                'markings' => 'black saddle and tan head markings on a white body, small V-shaped ears dropping forward, natural tail carried gaily',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
