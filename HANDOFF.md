@@ -172,6 +172,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-27 (claude.ai chat, docs only, `docs/digital-twin-standards`)
+- `docs/business/DIGITAL_TWIN.md` rewritten to professional definitions (David: »mora biti pravilno, profesionalno narejeno«): Digital Twin Consortium definition, Kritzinger levels model / shadow / twin, ISO/IEC 30173:2023, Gartner DTO; practices; steps D1–D5 (process inventory + sync spec, »Poslovanje« page, simulator, forecast validation, feedback loop with David's approval). Still an idea — scope and timing undecided; no code. DECISIONS 2026-11-27.
+
 ### 2026-11-27 (mobile, `feat/gift-on-the-way-note`)
 - Tester (Android, parent 39): the re-bought bed went through after the RevenueCat webhook fix (first Android wish purchase seen working — reported by David, not checked in /admin by Claude). His feedback → »Darilo je na poti: <stvar>. Lahko traja nekaj minut.« on the child's pet screen while a bought thing is not ready (`giftsOnTheWay`, `giftNote.ts`) and the parent's answer after the purchase says the thing is on its way (`assignedOnTheWay`). JS only → OTA. Not on a device. Not built: a push to the child at the moment of the purchase.
 ### 2026-11-27 (claude.ai chat, RevenueCat setting, `docs/revenuecat-webhook-all-apps`)
