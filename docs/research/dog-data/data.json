@@ -74041,6 +74041,666 @@
       }
     }
   },
+  "bearded_collie": {
+    "_note": "Added 2026-11-27 (M5-R10-144, unattended run — appended after the Smooth Fox Terrier: AKC 2024 No. 140 'Bearded Collie', S174 full-list table read 2026-11-27 '139 Smooth Fox Terrier', '140 Bearded Collie', '141 Saluki'). Quotes as returned by the web-fetch tool on 2026-11-27 (non-preapproved pages: short fragments only); paraphrase only in notes, marked '(paraphrase)'. Sources S1076–S1083 (reused S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Standard: FCI-Standard N° 271 Bearded Collie (S1076, header '06.10.2026/ EN'); KC standard via KUSA (S1077, effective 01/07/2025) the same colours and heights. Neither standard gives a weight → adult weight from the PDSA key facts (S1079, '20-25kg'; tier B), PetMD 45–55 lb / WebMD 40–50 lb as alternatives. RKC key facts from the thekennelclub.org.uk breed display page (S1078, id=5109 — the Breeds A–Z page redirects to royalkennelclub.com, refused): exercise 'Up to 1 hour per day' → 60, grooming 'Every day' → 7, Breed Watch Category 1. Lifespan: McMillan 2024 median 13.9 y via the Dogs Trust table (S123, row 'Bearded Collie 13.9 …' recorded 2026-11-11 in run M5-R10-104; the PDF was refused this run) — Wikipedia (S1083, tier C) quotes the same 13.9 y from McMillan 2024 → senior 125. Coren rank 34 'Bearded Collie' (S35, as recorded 2026-10-20, Above Average) → 1.2. Never hypoallergenic (WebMD S1082: 'not a hypoallergenic breed'). Names: FCI / RKC / AKC 'Bearded Collie'; Slovenian »bradati koli« (no KZS page reached — Claude, open for David).",
+    "identity": {
+      "value": "FCI No. 271, Group 1 Section 1 (Sheepdogs), Great Britain",
+      "unit": "—",
+      "source_id": "S1076",
+      "quote": "Section 1 Sheepdogs",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 271 (S1076): 'ORIGIN: Great-Britain.', 'FCI-CLASSIFICATION: Group 1 Sheepdogs and Cattle Dogs (except Swiss Cattle Dogs)', 'Section 1 Sheepdogs', 'Without working trial.'; header '06.10.2026/ EN', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 08.09.2026.'. KC (S1077) 'United Kingdom.'; Wikipedia (S1083) origin Scotland (paraphrase)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S1078",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "RKC breed key fact (S1078). Dogs Trust (S1080) 'Medium' agrees; PDSA (S1079) 'Large' (alternative). PDSA 20–25 kg (44–55 lb) → the 'Medium (24–59 pounds)' class of S10 for growth.",
+      "alternatives": [
+        {
+          "value": "large",
+          "unit": "—",
+          "source_id": "S1079",
+          "quote": "Large",
+          "confidence": "medium",
+          "notes": "PDSA key fact 'Size' (S1079)."
+        }
+      ]
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            53,
+            56
+          ],
+          "female": [
+            51,
+            53
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S1076",
+        "quote": "Males 53– 56cm",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 271 (S1076): 'Males 53– 56cm', 'Females 51–53 cm'. KC (S1077) 'Males: 53cm – 56cm (approx. 21” – 22”)', 'Females: 51cm – 53cm (approx. 20” – 21”)'; PDSA (S1079) 'Average height | 51-56 cm'; PetMD (S1081) 20–22 inches.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                51,
+                56
+              ],
+              "female": [
+                51,
+                56
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S1079",
+            "quote": "51-56 cm",
+            "confidence": null,
+            "notes": "PDSA key fact 'Average height' (S1079)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            20,
+            25
+          ],
+          "female": [
+            20,
+            25
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S1079",
+        "quote": "20-25kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight | 20-25kg' (S1079, tier B) — the game / register value: neither the FCI standard (S1076, section 'SIZE AND WEIGHT' gives heights only) nor the KC standard (S1077) gives a weight; no sex split. PetMD (S1081) 'weigh between 45 and 55 pounds' (20–25 kg); WebMD (S1082) 'weigh an average of 40 to 50 pounds' (18–23 kg); Wikipedia (S1083, C) 18–27 kg.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                20.4,
+                24.9
+              ],
+              "female": [
+                20.4,
+                24.9
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1081",
+            "quote": "Bearded Collies are medium-sized dogs that stand 20–22 inches tall and weigh between 45 and 55 pounds.",
+            "confidence": null,
+            "notes": "PetMD (S1081): 45–55 lb converted."
+          },
+          {
+            "value": {
+              "male": [
+                18.1,
+                22.7
+              ],
+              "female": [
+                18.1,
+                22.7
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S1082",
+            "quote": "They stand at a height of 20 to 22 inches and weigh an average of 40 to 50 pounds.",
+            "confidence": null,
+            "notes": "WebMD (S1082): 40–50 lb converted."
+          }
+        ]
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 20–25 kg (S1079) = 44–55 lb → the 'Medium (24–59 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bearded Collie growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.9,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Bearded Collie 13.9",
+        "confidence": "medium",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123): the row 'Bearded Collie 13.9 …' was returned on 2026-11-11 (run M5-R10-104, Beauceron check — neighbours 'Bearded Collie 13.9 …', 'Bedlington Terrier 13.7 …'); on 2026-11-27 the PDF was refused (PROVENANCE_REQUIRED), so the CI / n columns were not re-read. Wikipedia (S1083, tier C): a 2024 UK study (McMillan et al.) found a life expectancy of 13.9 years for the breed (paraphrase; the sentence is longer than the fetch limit) — agrees. Runbook first choice (McMillan 2024) → the basis of the senior boundary. Bedlington Terrier precedent (M5-R10-138). Not shorter_lifespan."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S1078",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed key fact (S1078); PDSA (S1079) \"Over 12 years\"; Dogs Trust (S1080) \"typically 12+ years\"."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S1081",
+        "quote": "average lifespan of 12–14 years",
+        "confidence": "medium",
+        "notes": "PetMD (S1081). Background."
+      },
+      "webmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S1082",
+        "quote": "They have an average lifespan of 12-15 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S1082). Background."
+      },
+      "senior_from": {
+        "value": 10.4,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × McMillan 2024 median 13.9 y (S123) → 0.75 × 13.9 = 10.425 y = 125.1 → 125 months. Dogs Trust rule of thumb > 7 y = 84 months (S14); RKC lower bound 12 y (S1078) → 108 (not chosen: the median comes first).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 125,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S1078",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed key fact (S1078) → 60 min (runbook: RKC preferred; 'up to N' → N). PDSA (S1079) 'Minimum exercise (per day) | 1 hour' and 'need 1-2 hours of exercise per day' (range lower bound 60) agree. Dogs Trust (S1080) 'usually moderately active dogs' (no number).",
+        "alternatives": [
+          {
+            "value": "≥ 60",
+            "unit": "minutes/day",
+            "source_id": "S1079",
+            "quote": "1 hour",
+            "confidence": null,
+            "notes": "PDSA key fact 'Minimum exercise (per day)' (S1079) — the same number."
+          },
+          {
+            "value": "60–120",
+            "unit": "minutes/day",
+            "source_id": "S1079",
+            "quote": "Bearded Collies have high energy levels and need 1-2 hours of exercise per day.",
+            "confidence": null,
+            "notes": "PDSA (S1079) — a range A–B → A = 60, the same number."
+          }
+        ]
+      },
+      "energy": {
+        "value": "high energy levels",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "Bearded Collies have high energy levels and need 1-2 hours of exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S1079) — the basis of the active_family chip (with exercise.adult). Not long_daily_exercise (RKC up to 1 hour)."
+      },
+      "daily_text": {
+        "value": "lots of exercise every day; a short walk is not enough",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "Bred as sheep dogs, bearded collies require lots of exercise every single day.",
+        "confidence": "high",
+        "notes": "WebMD (S1082); 'A simple walk after work won't be enough'. Dogs Trust (S1080): 'They need daily walks, plus plenty of time and opportunity to explore, burn energy, and play.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on a gap between meals and exercise (PDSA / PetMD / WebMD / Dogs Trust name no bloat) → no meal gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, lively, self-confident and active; steady, intelligent working dog",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Alert, lively, self-confident and active.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076): 'Steady, intelligent working dog, with no signs of nervousness or aggression.' PDSA (S1079): 'are gentle, lovable, happy dogs who get on well with everyone.'"
+      },
+      "family": {
+        "value": "perfect family pets that enjoy playing games",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S1079) — the basis of the family_pet chip."
+      },
+      "children": {
+        "value": "gentle around children — interactions supervised",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Beardies are also gentle around children, though all interactions between kids and dogs—no matter the breed—must be supervised.",
+        "confidence": "high",
+        "notes": "PetMD (S1081) — the basis of the children chip (supervision caveat kept → no small_children). WebMD (S1082): 'This affectionate dog breed is especially known for being good with young children.'"
+      },
+      "herding_children": {
+        "value": "strong herding instinct — likely to herd adults and children at home",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "are likely to want to herd at home too – adults and children included!",
+        "confidence": "high",
+        "notes": "PDSA (S1079) → may_herd_children chip. PetMD (S1081): 'Beardies may be tempted to chase and herd other animals, children, and even cars.'; WebMD (S1082) 'may be prone to chasing cats or shuffling errant toddlers into line'."
+      },
+      "other_pets": {
+        "value": "usually gets on with other pets; may chase and herd other animals",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Beardies may be tempted to chase and herd other animals, children, and even cars.",
+        "confidence": "high",
+        "notes": "PetMD (S1081): 'can get along well with other pets at home, from cats and tiny Chihuahuas to giant Irish Wolfhounds, according to the BCCA.' WebMD (S1082): 'They're not usually dog-aggressive.' No source names a high prey drive → no chases_small_pets chip (herding is not prey drive)."
+      },
+      "time_alone": {
+        "value": "social — can become anxious when left alone or confined for long",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "Bearded collies are also extremely social creatures, and can develop anxiety if left alone or confined for long periods of time.",
+        "confidence": "high",
+        "notes": "WebMD (S1082) → needs_company chip; 'This is not a dog to leave crate-bound while you head to work.'"
+      },
+      "mental_stimulation": {
+        "value": "needs physical and mental stimulation",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "An intelligent, resourceful breed, they can cause mischief if their owners don’t keep them physically and mentally stimulated on a regular basis.",
+        "confidence": "high",
+        "notes": "WebMD (S1082) → needs_mental_stimulation chip. PetMD (S1081): 'which include daily exercise and ample mental stimulation'."
+      },
+      "socialisation": {
+        "value": "socialise the puppy from the day it comes home",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Begin socializing your Bearded Collie puppy as soon as you bring them home, and ask your breeder how they’ve approached socialization so far.",
+        "confidence": "high",
+        "notes": "PetMD (S1081, a need) → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "training": {
+        "value": "smart and quick to learn with positive reinforcement; easily distracted, independent",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "they’re also smart dogs and can pick up on cues quickly with the proper positive reinforcement methods",
+        "confidence": "medium",
+        "notes": "PetMD (S1081): 'They are easily distracted and need to be properly motivated.' WebMD (S1082): 'Training can be a challenge with bearded collies, who are an independent breed by nature.' Background."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on boredom chewing; WebMD (S1082): 'Poor training can lead bearded collies to practice digging, chewing, or nuisance barking in the household.' (training, not boredom → no chews_when_bored chip)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on food motivation and weight; PetMD (S1081): 'A variety of treats combined with effusive praise often works best.'; WebMD (S1082) treats about 10 % of the daily calories (paraphrase). Background."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S1078, no points of concern) → no welfare chip. Breeder checklist: not_found (the RKC health-test list was not returned).",
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Hip Dysplasia",
+        "confidence": "high",
+        "notes": "PetMD (S1081) heading; PDSA (S1079) 'Hip dysplasia'; WebMD (S1082) names it (paraphrase). Register health key hip_dysplasia_arthritis."
+      },
+      "addisons": {
+        "value": "Addison's disease",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Addison's Disease",
+        "confidence": "high",
+        "notes": "PetMD (S1081) heading; PDSA (S1079) \"Addison's Disease\". Register health key addisons_disease."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Progressive Retinal Atrophy (PRA)",
+        "confidence": "high",
+        "notes": "PetMD (S1081) heading; WebMD (S1082) names PRA and persistent pupillary membranes (paraphrase). Register health key pra_inherited_blindness."
+      },
+      "allergies": {
+        "value": "allergies",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "Allergies",
+        "confidence": "high",
+        "notes": "PDSA (S1079) list item; WebMD (S1082) names allergies (paraphrase). Register health key itchy_skin_allergy."
+      },
+      "imha": {
+        "value": "immune mediated haemolytic anaemia",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "Immune mediated haemolytic anaemia (IMHA)",
+        "confidence": "high",
+        "notes": "PDSA (S1079) list item. Register health key autoimmune_conditions."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "WebMD (S1082) names hypothyroidism in its health section (paraphrase). Register health key hypothyroidism."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 34,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Bearded Collie",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, as recorded 2026-10-20 in run M5-R10-51): rank 34 row 'Field Spaniel / Newfoundland / Australian Terrier / American Staffordshire Terrier / Gordon Setter / Bearded Collie', tier 'Above Average Working Dogs' (ranks 27–39). Not re-read this run (S35 refused, PROVENANCE_REQUIRED)."
+      },
+      "coren_tier": {
+        "value": "Above Average Working Dogs",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Above Average Working Dogs",
+        "confidence": "medium",
+        "notes": "S35 heading for ranks 27–39 (as recorded 2026-10-20)."
+      },
+      "training_notes": {
+        "value": "smart, quick with positive reinforcement; independent, gets bored easily",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": null,
+        "confidence": "low",
+        "notes": "WebMD (S1082) / PetMD (S1081) (paraphrase). The game uses Coren's rank only (34 → 1.2)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bearded_collie.learning_multiplier (1.2, runbook rule: Above average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "lean, active dog, strongly made but not heavy; bright, enquiring expression",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Lean, active dog. Though strongly made, should show plenty of daylight under body and should not look too heavy.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076): 'Bright, enquiring expression is a distinctive feature.' KC (S1077): longer than tall, about 5 : 4 (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "slate grey with white markings",
+          "black with white markings",
+          "blue with white markings",
+          "brown with white markings",
+          "reddish-fawn with white markings",
+          "sandy with white markings"
+        ],
+        "unit": "list",
+        "source_id": "S1076",
+        "quote": "Slate grey, reddish-fawn, black, blue, all shades of grey, brown and sandy with or without white markings.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076); KC (S1077) the same. 'Never merle/dapple.'; white on foreface, blaze, tail tip, chest, legs and feet, not above the hocks; slight tan markings acceptable; 'Any other colour or combination of colours unacceptable. Merle unacceptable.' The picker lists each colour with white markings (the common pattern; 'with or without' — Claude). Never merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Slate grey with white markings first and highest (the portrait default; Claude — the standard names it first)."
+      },
+      "coat": {
+        "value": "double coat: soft, furry, close undercoat; flat, harsh, strong and shaggy outer coat; never trimmed",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Outer coat flat, harsh, strong and shaggy, free from woolliness and curl, though slight wave permissible.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076): 'Double with soft, furry and close undercoat.', 'Coat must not be trimmed in any way.' Dogs Trust (S1080): 'Their double coat is comprised of a short, soft undercoat and a long, coarse outercoat.'"
+      },
+      "eyes": {
+        "value": "large, soft and affectionate, set widely apart, toning with the coat colour",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Toning with coat colour, set widely apart and large, soft and affectionate, not protruding.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076)."
+      },
+      "ears": {
+        "value": "medium-sized drooping ears",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Of medium size and drooping.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076): 'When alert, ears lift at base, level with, but not above top of skull'."
+      },
+      "tail": {
+        "value": "set low, long, carried low with an upward swirl at the tip, never over the back",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Carried low with an upward swirl at tip whilst standing or walking, may be extended at speed.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076): 'Never carried over back.'"
+      },
+      "nose": {
+        "value": "large and square; generally black, following the coat colour in blues and browns",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": "Large and square, generally black but normally following coat colour in blues and browns.",
+        "confidence": "high",
+        "notes": "FCI standard (S1076)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed display page key facts (S1078), PDSA (S1079), Dogs Trust (S1080), PetMD (S1081), WebMD (S1082).",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078) → 60 min. Not long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078) → large_home chip (no apartment chip)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078) → large_home chip."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "Basis of the daily brushing (7×, runbook dog-grooming rule) and frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078); PDSA (S1079) 'Coat length | Long'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078) → sheds chip. Dogs Trust (S1080) 'Bearded Collies shed moderately.'; PetMD (S1081) 'Bearded Collies shed an average amount' — no conflicting source."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078) — see lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078). Background."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Vulnerable native breed: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078): a UK vulnerable native breed. Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S1078): no points of concern → no welfare chip."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour minimum per day; 1–2 hours",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S1079)."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S1079",
+        "quote": "Beardies require daily grooming to keep their beautiful long coat in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S1079) → frequent_grooming (with RKC)."
+      },
+      "petmd_grooming": {
+        "value": "10–15 minutes of brushing every day, a thorough brushing weekly",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "This dual coat is prone to matting, and the breed club recommends a 10- to 15-minute brushing session every day, along with a more thorough brushing weekly to prevent tangles and remove any debris your dog has picked up.",
+        "confidence": "high",
+        "notes": "PetMD (S1081, citing the breed club) — agrees with daily brushing."
+      },
+      "webmd_grooming": {
+        "value": "a quick combing daily, a weekly session with a pin rake",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "They require a quick combing on a daily basis",
+        "confidence": "high",
+        "notes": "WebMD (S1082) — agrees."
+      },
+      "petmd_bath": {
+        "value": "routine bathing — no frequency",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "A Bearded Collie does not have specialized skincare needs outside of routine bathing.",
+        "confidence": "high",
+        "notes": "PetMD (S1081); ask the vet how often (paraphrase) → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "clean the ears regularly — no frequency",
+        "unit": "—",
+        "source_id": "S1081",
+        "quote": "Clean your dog's ears regularly with a veterinarian-approved cleaner.",
+        "confidence": "high",
+        "notes": "PetMD (S1081): 'regularly' → no ear task."
+      },
+      "webmd_nails": {
+        "value": "trim the nails regularly — no frequency",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "like all dogs, bearded collies also need their nails trimmed on a regular basis.",
+        "confidence": "high",
+        "notes": "WebMD (S1082): 'on a regular basis' → no nail task."
+      },
+      "webmd_teeth": {
+        "value": "daily tooth brushing — general dog care, not breed-specific",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "There’s a lot that goes into caring for a dog, including brushing their teeth daily and keeping up with obedience training at home.",
+        "confidence": "medium",
+        "notes": "WebMD (S1082), the general opening sentence of 'Caring for Bearded Collies' about dogs in general → no breed tooth-brushing task (Claude: not a breed-specific frequency; open for David)."
+      },
+      "webmd_hypoallergenic": {
+        "value": "not hypoallergenic",
+        "unit": "—",
+        "source_id": "S1082",
+        "quote": "These long-haired dogs are not a hypoallergenic breed.",
+        "confidence": "high",
+        "notes": "WebMD (S1082). Never a hypoallergenic chip."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -111016,6 +111676,277 @@
         "confidence": "medium",
         "notes": "FCI standard (S1070) as in smooth_fox_terrier.appearance. Weights unsourced (verified=false).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white with black and tan markings is the portrait default (FCI S1070 'White should predominate, all white, white with tan, black and tan or black markings'); never brindle / red / liver markings, natural tail"
+      }
+    },
+    "bearded_collie": {
+      "_note": "Unattended run M5-R10-144 (2026-11-27): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC key fact 'Up to 1 hour per day' (S1078) → 60 (PDSA '1 hour' agrees). Senior boundary 125 from the McMillan 2024 median 13.9 y (S123). Learning 1.2 (Coren 34, Above average, S35). Built: brushing every day (RKC S1078 'Every day', M5-R13), puppy socialisation with the PetMD quote (M5-R17). No tooth / ear / nail / bath / groomer task (no breed frequency), no meal gap, no heat warning. No new vocabulary key. In marketing (Breed Watch Category 1). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S1078",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S1078) 'Up to 1 hour per day' → 60 ('up to N' → N). PDSA (S1079) '1 hour' / '1-2 hours' → 60 agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S1079",
+            "quote": "1 hour"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S1078 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S1078",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 125
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 125 = round(0.75 × 13.9 y × 12) = round(125.1) (S11 + McMillan 2024 median via the Dogs Trust table, S123).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_rkc_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 125 (0.75 × McMillan 2024 median 13.9 y, S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 125
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 125)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 34 'Bearded Collie' (S35) → Above Average tier (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren 34, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S1078",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "bearded_collie.suitability.rkc_grooming. RKC 'Every day' → 7 (rule 'Every day' / 'daily' → 7); PDSA (S1079) 'daily grooming', PetMD (S1081) 'every day', WebMD (S1082) 'on a daily basis' agree. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Every day«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S1081",
+        "quote": "Begin socializing your Bearded Collie puppy as soon as you bring them home, and ask your breeder how they’ve approached socialization so far.",
+        "confidence": "high",
+        "notes": "bearded_collie.behaviour.socialisation (PetMD S1081, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S1081)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-144); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1078",
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.exercise.adult",
+              "bearded_collie.exercise.energy"
+            ],
+            "quote": "S1078 'Exercise: Up to 1 hour per day'; S1079 'Bearded Collies have high energy levels and need 1-2 hours of exercise per day.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.family"
+            ],
+            "quote": "S1079 'They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1081"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.children"
+            ],
+            "quote": "S1081 'Beardies are also gentle around children, though all interactions between kids and dogs—no matter the breed—must be supervised.' (supervision caveat)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S1078"
+            ],
+            "refs": [
+              "bearded_collie.suitability.rkc_size_of_home",
+              "bearded_collie.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S1078 'Size of home: Large house'; 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S1082"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.mental_stimulation"
+            ],
+            "quote": "S1082 'An intelligent, resourceful breed, they can cause mischief if their owners don’t keep them physically and mentally stimulated on a regular basis.'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.herding_children"
+            ],
+            "quote": "S1079 'are likely to want to herd at home too – adults and children included!'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1082"
+            ],
+            "refs": [
+              "bearded_collie.behaviour.time_alone"
+            ],
+            "quote": "S1082 'Bearded collies are also extremely social creatures, and can develop anxiety if left alone or confined for long periods of time.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1078",
+              "S1079"
+            ],
+            "refs": [
+              "bearded_collie.suitability.rkc_grooming",
+              "bearded_collie.suitability.pdsa_grooming"
+            ],
+            "quote": "S1078 'Grooming: Every day'; S1079 'Beardies require daily grooming to keep their beautiful long coat in good condition.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1078"
+            ],
+            "refs": [
+              "bearded_collie.suitability.rkc_shedding"
+            ],
+            "quote": "S1078 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "Supervision caveat (PetMD S1081); herding of children (PDSA S1079).",
+          "apartment": "RKC 'Size of home: Large house' (S1078).",
+          "long_daily_exercise": "Up to 1 hour a day (RKC S1078) — the chip is for 2 hours or more.",
+          "low_shedding": "Sheds (RKC S1078, Dogs Trust S1080, PetMD S1081).",
+          "chases_small_pets": "No source names a high prey drive (herding / chasing only).",
+          "chews_when_bored": "WebMD (S1082) links chewing to poor training, not boredom.",
+          "other_pets": "May chase and herd other animals (PetMD S1081).",
+          "first_time_owner": "No source.",
+          "shorter_lifespan": "McMillan 2024 median 13.9 y (S123).",
+          "hypoallergenic": "Never a tag (runbook); WebMD (S1082) 'not a hypoallergenic breed'.",
+          "welfare": "RKC Breed Watch Category 1 (S1078) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, large_home; consider needs_mental_stimulation, may_herd_children, needs_company, frequent_grooming, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S1078",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S1078); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows the Bearded Collie as hypoallergenic (S1082) or trimmed (S1076).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Bearded Collie, slate grey with white markings: lean, active, strongly made but not heavy; long, flat, harsh, shaggy double coat, untrimmed; large soft eyes set widely apart; medium-sized drooping ears; large square black nose; low-set tail carried low with an upward swirl at the tip",
+        "unit": "—",
+        "source_id": "S1076",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "FCI standard (S1076) as in bearded_collie.appearance. Weights unsourced (verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): slate grey with white markings is the portrait default (FCI S1076 'Slate grey, reddish-fawn, black, blue, all shades of grey, brown and sandy with or without white markings'); never merle, untrimmed coat"
       }
     }
   }

@@ -4661,6 +4661,11 @@
       "status": "not_found",
       "tests": [],
       "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk display.aspx?id=3067 redirects to royalkennelclub.com, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-27); PetMD (dog-data S1071), WebMD (S1072) and the FCI / KC / AFTC standards (S1070, S1074, S1073) name no breeding tests. Show the general dog checklist only (M5-R10-143)."
+    },
+    "bearded_collie": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk/search/breeds-a-to-z/… redirects to royalkennelclub.com, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-27); the RKC display page (dog-data S1078) returned the heading 'Important health schemes and tests' without its list items (only a DNA-testing note naming 'CEA/ CH (Collie eye anomaly/Choroidal hypoplasia) partner lab'), so no test is recorded as recommended. PDSA (S1079), PetMD (S1081), WebMD (S1082) and the FCI / KC standards (S1076, S1077) name no breeding tests. Show the general dog checklist only (M5-R10-144)."
     }
   }
 }
