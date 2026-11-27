@@ -48,7 +48,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function btData(string $path): mixed
+function bdtData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -63,7 +63,7 @@ function btData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Bedlington Terrier seeder row of (stage, from, key) */
-function btRow(string $stage, int $from, StageParamKey $key): array
+function bdtRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'bedlington-terrier'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -72,7 +72,7 @@ function btRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function btPet(int $arrivalMonths, array $attributes = []): Pet
+function bdtPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -84,7 +84,7 @@ function btPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function btPin(User $parent, array $body): TestResponse
+function bdtPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -93,7 +93,7 @@ function btPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function btLogin(string $pin): TestResponse
+function bdtLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -115,7 +115,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 1290, 'breeds.bedlington_terrier'])
             ->and($config->search_keywords)->toContain('bedlington terrier')->toContain('bedlington terier')->toContain('bedlington')
             // Legacy fallback = the adult step goal (60 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) btData('proposed_game_parameters.bedlington_terrier.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) bdtData('proposed_game_parameters.bedlington_terrier.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
 
         $collie = BreedConfig::where('breed_slug', 'border-collie')->sole();
@@ -125,7 +125,7 @@ describe('breed, config and database', function () {
     });
 
     it('accepts a Bedlington Terrier pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = btPet(36);
+        $pet = bdtPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('bedlington_terrier');
 
@@ -178,26 +178,26 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.bedlington_terrier';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(btRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(btRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(btData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(bdtRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(bdtData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(bdtRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(bdtData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(btData('bedlington_terrier.lifespan.senior_from.months'))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * btRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(btData('bedlington_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S123'])
-            ->and(btData("{$pgp}.stage_boundaries_months.alternatives.senior_dogs_trust_7_y"))->toBe(84)
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', btData("{$pgp}.stage_boundaries_months.derived_from")))
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_BEDLINGTON_TERRIER)
-            ->and(btRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(123);
+        expect(bdtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(bdtData('bedlington_terrier.lifespan.senior_from.months'))
+            ->and(bdtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * bdtRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(bdtData('bedlington_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S123'])
+            ->and(bdtData("{$pgp}.stage_boundaries_months.alternatives.senior_dogs_trust_7_y"))->toBe(84)
+            ->and(bdtRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe(implode(',', bdtData("{$pgp}.stage_boundaries_months.derived_from")))
+            ->and(bdtRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_BEDLINGTON_TERRIER)
+            ->and(bdtRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(123);
 
-        expect(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(btData('bedlington_terrier.exercise.adult.quote'))
-            ->and(btRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S1037')
-            ->and(btRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(btData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(btRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
-            ->and(btRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(btRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
+        expect(bdtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(bdtData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(bdtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            ->and(bdtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(bdtData('bedlington_terrier.exercise.adult.quote'))
+            ->and(bdtRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S1037')
+            ->and(bdtRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            ->and(bdtRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(bdtData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(bdtRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
+            ->and(bdtRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(bdtRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
 
         $decided = 0;
         foreach (BreedStageParamsSeeder::rows() as $row) {
@@ -206,7 +206,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('bedlington-terrier')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.bedlington_terrier.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) btData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) bdtData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -215,36 +215,36 @@ describe('life-stage data against data.json', function () {
         // tooth brushing every day (WebMD) and a groomer reminder every 6 weeks (PDSA). No nail task (only "whenever they grow too
         // long"), no ear / bath frequency, no meal gap.
         $tasks = BreedStageParamsSeeder::DOG_CARE_TASKS['bedlington_terrier'];
-        expect(json_encode([btData('bedlington_terrier'), btData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(btData("{$pgp}.grooming.value"))->toBe(3)
+        expect(json_encode([bdtData('bedlington_terrier'), bdtData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(bdtData("{$pgp}.grooming.value"))->toBe(3)
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('bedlington_terrier')
-            ->and(btData('bedlington_terrier.exercise.after_meals.quote'))->toBeNull()
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['bedlington_terrier'])->toBe(['S1040', btData("{$pgp}.socialisation.quote")])
-            ->and(btData("{$pgp}.socialisation.quote"))->toBe(btData('bedlington_terrier.behaviour.socialisation.quote'))
+            ->and(bdtData('bedlington_terrier.exercise.after_meals.quote'))->toBeNull()
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['bedlington_terrier'])->toBe(['S1040', bdtData("{$pgp}.socialisation.quote")])
+            ->and(bdtData("{$pgp}.socialisation.quote"))->toBe(bdtData('bedlington_terrier.behaviour.socialisation.quote'))
             ->and(array_keys($tasks))->toBe(['tooth_brushing', 'groomer_visit'])
-            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S1041', btData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
-            ->and(btData("{$pgp}.tooth_brushing.quote"))->toBe(btData('bedlington_terrier.suitability.webmd_teeth.quote'))
-            ->and(array_slice($tasks['groomer_visit'], 0, 5))->toBe([1, 'six_weeks', 'S1037', btData("{$pgp}.professional_grooming.quote"), "{$pgp}.professional_grooming"])
-            ->and(btData("{$pgp}.professional_grooming.quote"))->toBe(btData('bedlington_terrier.suitability.pdsa_groomer.quote'))
+            ->and(array_slice($tasks['tooth_brushing'], 0, 5))->toBe([7, 'day', 'S1041', bdtData("{$pgp}.tooth_brushing.quote"), "{$pgp}.tooth_brushing"])
+            ->and(bdtData("{$pgp}.tooth_brushing.quote"))->toBe(bdtData('bedlington_terrier.suitability.webmd_teeth.quote'))
+            ->and(array_slice($tasks['groomer_visit'], 0, 5))->toBe([1, 'six_weeks', 'S1037', bdtData("{$pgp}.professional_grooming.quote"), "{$pgp}.professional_grooming"])
+            ->and(bdtData("{$pgp}.professional_grooming.quote"))->toBe(bdtData('bedlington_terrier.suitability.pdsa_groomer.quote'))
             ->and(BreedStageParamsSeeder::DOG_NO_WALK_IN_HEAT)->not->toHaveKey('bedlington_terrier');
     });
 
     it('takes the breed-level numbers from the sourced bedlington_terrier entries', function () {
-        expect(btRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([8.2, 10.4])
-            ->and(btData('bedlington_terrier.adult_weight.fci.value'))->toEqual(['male' => [8.2, 10.4], 'female' => [8.2, 10.4]])
-            ->and(btRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(btData('bedlington_terrier.adult_weight.fci.quote'))
-            ->and(btRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('bedlington_terrier.lifespan.median_uk')
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(13.7)
-            ->and(btRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(btData('bedlington_terrier.lifespan.median_uk.quote'));
+        expect(bdtRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([8.2, 10.4])
+            ->and(bdtData('bedlington_terrier.adult_weight.fci.value'))->toEqual(['male' => [8.2, 10.4], 'female' => [8.2, 10.4]])
+            ->and(bdtRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(bdtData('bedlington_terrier.adult_weight.fci.quote'))
+            ->and(bdtRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
+            ->and(bdtRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('bedlington_terrier.lifespan.median_uk')
+            ->and(bdtRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(13.7)
+            ->and(bdtRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(bdtData('bedlington_terrier.lifespan.median_uk.quote'));
 
-        $grooming = btRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = bdtRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(3)
             ->and($grooming['source_id'])->toBe('S1038')
-            ->and($grooming['quote'])->toBe(btData('bedlington_terrier.suitability.woodgreen_grooming.quote'))
+            ->and($grooming['quote'])->toBe(bdtData('bedlington_terrier.suitability.woodgreen_grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
-            ->and(btRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S1040')
+            ->and(bdtRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S1040')
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bedlington-terrier')->where('key', StageParamKey::MealExerciseGapMinutes->value)->all())->toBe([]);
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bedlington-terrier');
@@ -280,7 +280,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 60 minutes = 6,000 steps and 45 minutes = 4,500 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = btPet($arrival);
+        $pet = bdtPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -304,7 +304,7 @@ describe('stage rules', function () {
 
     it('learns like the mixed breed (Coren rank 40, Average) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = btPet(36);
+        $dog = bdtPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -321,7 +321,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = btPin($parent, $body);
+        $response = bdtPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -330,7 +330,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(btLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(bdtLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::BedlingtonTerrier)
             ->and($pet->species)->toBe(Species::Dog)
@@ -345,8 +345,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'bedlington_terrier'] as $breed) {
-            $pin = btPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(btLogin($pin)->assertOk()->json('pet.id'));
+            $pin = bdtPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(bdtLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['bedlington_terrier'];
@@ -359,7 +359,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = btPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = bdtPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL);
@@ -411,7 +411,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
         expect($standard)->toBe(['blue (slate blue-grey to silvery blue)', 'liver (warm brown)', 'sandy (light fawn)', 'blue with tan markings (blue and tan)', 'liver with tan markings (liver and tan)', 'sandy with tan markings (sandy and tan)'])
             ->and(array_column($colours, 'value'))->toBe($standard)
             ->and(array_column($colours, 'key'))->toBe(['blue', 'liver', 'sandy', 'blue-tan', 'liver-tan', 'sandy-tan'])
-            ->and(btData('bedlington_terrier.appearance.colours.value'))->toBe(['blue', 'liver', 'sandy', 'blue and tan', 'liver and tan', 'sandy and tan']);
+            ->and(bdtData('bedlington_terrier.appearance.colours.value'))->toBe(['blue', 'liver', 'sandy', 'blue and tan', 'liver and tan', 'sandy and tan']);
     });
 
     it('draws the register portrait blue (the highest-weighted colour)', function () {
@@ -429,7 +429,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
             ->not->toMatch('/\b(merle|cropped)\b/i')
             ->and($v1['visual_traits']['color_scheme'])->toBe('blue');
 
-        $pet = btPet(123, ['origin' => PetOrigin::Adopted]);
+        $pet = bdtPet(123, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Bedlington Terrier')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -448,7 +448,7 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
         }
         $tags = app(BreedSuitability::class)->for(BreedType::BedlingtonTerrier);
         expect($tags['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('hips_hind_legs')->not->toContain('shorter_lifespan')
-            ->and(btData('proposed_game_parameters.bedlington_terrier.marketing.value'))->toContain('in marketing: yes')
+            ->and(bdtData('proposed_game_parameters.bedlington_terrier.marketing.value'))->toContain('in marketing: yes')
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bedlington-terrier')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())
             ->not->toContain(84);
     });
@@ -462,9 +462,9 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')->not->toContain('other_pets')
             ->and($tags['consider'])->not->toContain('sheds')->not->toContain('long_daily_exercise')->not->toContain('shorter_lifespan')->not->toContain('secure_fencing');
 
-        expect(btData('bedlington_terrier.suitability.pdsa_shedding.quote'))->toContain('not huge shedders')
-            ->and(btData('bedlington_terrier.behaviour.other_pets.quote'))->toContain('very strong prey drive')
-            ->and(btData('bedlington_terrier.behaviour.time_alone.quote'))->toContain('separation anxiety')
-            ->and(btData('bedlington_terrier.suitability.woodgreen_home.quote'))->toContain('not well suited to living in a flat');
+        expect(bdtData('bedlington_terrier.suitability.pdsa_shedding.quote'))->toContain('not huge shedders')
+            ->and(bdtData('bedlington_terrier.behaviour.other_pets.quote'))->toContain('very strong prey drive')
+            ->and(bdtData('bedlington_terrier.behaviour.time_alone.quote'))->toContain('separation anxiety')
+            ->and(bdtData('bedlington_terrier.suitability.woodgreen_home.quote'))->toContain('not well suited to living in a flat');
     });
 });
