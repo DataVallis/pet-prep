@@ -719,8 +719,10 @@ class TrainingService
      * School milestone (David 2026-11-28): `learned_at` = the finish moment when THIS session
      * made the dog learn the command for the first time (not learned before, learned now —
      * PetTrainingSkill::isMastered; the moment is stored on the skill row once), else null —
-     * also for a repeat and for a command that already was learned. The caller writes the
-     * `command_learned` timeline row and the parent push.
+     * also for a command that already was learned. The caller writes the `command_learned`
+     * timeline row and the parent push. A repeat (retried finish of a completed session)
+     * returns the same moment read-only (learnedBy) so the child's celebration survives a lost
+     * answer; it writes nothing, so the row and the push stay once (QA #1737 M2).
      *
      * @param  list<int>  $taps
      * @return array{refusal: CareRefusal|null, session: PetTrainingSession|null, repeat: bool, full: bool, learned_at: CarbonImmutable|null}
@@ -740,7 +742,7 @@ class TrainingService
             return $refuse(CareRefusal::TrainingSessionInvalid);
         }
         if ($session->status === PetTrainingSession::STATUS_COMPLETED) {
-            return ['refusal' => null, 'session' => $session, 'repeat' => true, 'full' => ($session->result['ended_after_round'] ?? null) === null, 'learned_at' => null];
+            return ['refusal' => null, 'session' => $session, 'repeat' => true, 'full' => ($session->result['ended_after_round'] ?? null) === null, 'learned_at' => $this->learnedBy($session)];
         }
         $this->expireStale($pet, $now);
         $session->refresh();
@@ -843,6 +845,25 @@ class TrainingService
         return ['refusal' => null, 'session' => $session, 'repeat' => false, 'full' => $round === null, 'learned_at' => $learnedNow ? $now : null];
     }
 
+
+    /**
+     * School milestone, read-only (QA #1737 M2): the moment `$session` (completed) made the
+     * dog learn its command — it started below the threshold and the skill's `learned_at` is
+     * this session's finish (finish() stores both from the same second) — else null.
+     */
+    private function learnedBy(PetTrainingSession $session): ?CarbonImmutable
+    {
+        if ($session->finished_at === null || $session->progress_before === null
+            || PetTrainingSkill::isMasteredProgress((float) $session->progress_before)) {
+            return null;
+        }
+        $learnedAt = PetTrainingSkill::where('pet_id', $session->pet_id)
+            ->where('command', $session->command->value)
+            ->first(['id', 'learned_at'])?->learned_at;
+        $finishedAt = CarbonImmutable::instance($session->finished_at)->utc();
+
+        return $learnedAt !== null && $learnedAt->equalTo($finishedAt) ? $finishedAt : null;
+    }
     /**
      * Score taps against a schedule. Taps are assigned to the trial whose
      * slot [cue, next cue) contains them (taps before the first cue are

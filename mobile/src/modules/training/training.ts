@@ -28,17 +28,17 @@ export const TRAINING_COMMANDS: readonly TrainingCommand[] = ['sit', 'come', 'pl
 export type TrialOutcome = 'in_time' | 'too_early' | 'too_late' | 'no_praise' | 'waited' | 'praised_without_obeying';
 const OUTCOMES: readonly TrialOutcome[] = ['in_time', 'too_early', 'too_late', 'no_praise', 'waited', 'praised_without_obeying'];
 
+/** One `training.commands[]` entry as `schema.ts` types it (child state). */
+type SchemaCommandProgress = ChildPetState['training']['commands'][number];
+
 export interface CommandProgress {
   command: TrainingCommand;
   /** Displayed progress 0–100. */
   progress: number;
   learned: boolean;
   last_practised_at: string | null;
-  /**
-   * When the command was learned for the first time (David 2026-11-28); null = not yet, or an older
-   * server. TODO(schema): switch to the generated type once `schema.ts` carries `learned_at`.
-   */
-  learned_at: string | null;
+  /** When the command was learned for the first time (David 2026-11-28); null = not yet, or an older server. */
+  learned_at: SchemaCommandProgress['learned_at'];
 }
 
 /** The running session as the child state shows it (no schedule). */
@@ -543,8 +543,8 @@ export function readFinishResponse(raw: unknown): FinishTrainingResponse | null 
 }
 
 /**
- * Finish `command_learned` (David 2026-11-28); missing / malformed → null (old behaviour).
- * TODO(schema): switch to the generated type once `schema.ts` carries `command_learned`.
+ * Finish `command_learned` (David 2026-11-28); missing / malformed → null (old behaviour). Read
+ * from `unknown` like the rest of the finish body, which `schema.ts` types loosely (see top).
  */
 export function readCommandLearned(raw: unknown): CommandLearned | null {
   if (!isObj(raw) || !isTrainingCommand(raw.command)) return null;

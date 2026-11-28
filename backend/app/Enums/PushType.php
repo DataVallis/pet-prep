@@ -154,8 +154,8 @@ enum PushType: string
      * set; the body names the command, never the child). Metric = the command (sit | come |
      * place | potty); once per pet + command ever (TrainingService writes
      * `pet_training_skills.learned_at` once; isDuplicate also refuses a second row with the
-     * same metric). Good news, normal priority; held (not dropped) over quiet hours; dropped
-     * while the pet is locked at delivery. Dog only — school is dog-only.
+     * same metric). Good news, normal priority; held (not dropped) over quiet hours; sent even
+     * when the pet is locked at delivery (like WishCreated — good news never vanishes, QA #1737 m1). Dog only — school is dog-only.
      */
     case CommandLearned = 'command_learned';
 

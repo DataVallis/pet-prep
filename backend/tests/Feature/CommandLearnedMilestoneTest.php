@@ -40,8 +40,9 @@ use function Pest\Laravel\postJson;
 | celebrated: the finish response carries `command_learned`, the skill row
 | stores `learned_at` once, the parent timeline gets one `command_learned`
 | row, the family's parents get one push (never the child, never the child's
-| name). Never again for that pet + command, never for a replayed finish,
-| a command that was already learned or the migration's backfill.
+| name). Never again for that pet + command (a replayed finish repeats the
+| answer read-only), never for a command that was already learned or the
+| migration's backfill.
 |--------------------------------------------------------------------------
 | Family in Europe/Ljubljana; quiet hours off unless a test turns them on.
 */
@@ -168,7 +169,7 @@ describe('first time only', function () {
             ->and($pushes[0]->type->isUrgent())->toBeFalse();
     });
 
-    it('never celebrates again: a later session of a learned command, a replayed finish', function () {
+    it('never celebrates again: a later session of a learned command; a replayed finish repeats the answer, not the row / push', function () {
         [, $child, $pet] = clmFamily();
         clmSkills($pet, ['sit' => 99.0]);
 
@@ -176,15 +177,19 @@ describe('first time only', function () {
         expect($first->json('command_learned.command'))->toBe('sit');
         $learnedAt = PetTrainingSkill::where('pet_id', $pet->id)->where('command', 'sit')->value('learned_at');
 
-        // The same finish again (lost response, retry) → unchanged, no milestone.
+        // The same finish again (lost response, retry) → unchanged, the SAME milestone again
+        // (the child's celebration survives the retry, QA #1737 M2) — read-only: no second row / push.
         $replay = clmFinish($child, $session['id'], $taps)->assertOk();
         expect($replay->json('status'))->toBe('unchanged')
-            ->and($replay->json('command_learned'))->toBeNull()
-            ->and($replay->json('result.session_id'))->toBe($session['id']);
+            ->and($replay->json('command_learned'))->toBe($first->json('command_learned'))
+            ->and($replay->json('result.session_id'))->toBe($session['id'])
+            ->and(clmRows($pet))->toHaveCount(1)
+            ->and(clmPushes($pet))->toHaveCount(1);
 
-        // Next day another session of the learned command.
-        [, , $later] = clmSession($child, '2026-11-03 09:00:00');
+        // Next day another session of the learned command — and its retried finish.
+        [$laterSession, $laterTaps, $later] = clmSession($child, '2026-11-03 09:00:00');
         expect($later->json('command_learned'))->toBeNull()
+            ->and(clmFinish($child, $laterSession['id'], $laterTaps)->assertOk()->json('command_learned'))->toBeNull()
             ->and((string) PetTrainingSkill::where('pet_id', $pet->id)->where('command', 'sit')->value('learned_at'))->toBe((string) $learnedAt)
             ->and(clmRows($pet))->toHaveCount(1)
             ->and(clmPushes($pet))->toHaveCount(1);
@@ -251,14 +256,28 @@ describe('first time only', function () {
 });
 
 describe('backfill (migration)', function () {
-    it('gives already learned rows their updated_at, leaves the rest null, and sends / logs nothing', function () {
+    it('exact moment from the crossing session, created_at when known on arrival, else updated_at; sends / logs nothing', function () {
         [, , $pet] = clmFamily();
         [, , $other] = clmFamily();
         DB::table('pet_training_skills')->insert([
-            ['pet_id' => $pet->id, 'command' => 'sit', 'progress' => 100.0, 'sessions_completed' => 9, 'created_at' => '2026-10-20 08:00:00', 'updated_at' => '2026-10-25 17:30:00'],
+            ['pet_id' => $pet->id, 'command' => 'sit', 'progress' => 100.0, 'sessions_completed' => 9, 'created_at' => '2026-10-01 08:00:00', 'updated_at' => '2026-10-25 17:30:00'],
             ['pet_id' => $pet->id, 'command' => 'come', 'progress' => 99.5, 'sessions_completed' => 7, 'created_at' => '2026-10-20 08:00:00', 'updated_at' => '2026-10-26 17:30:00'],
             ['pet_id' => $pet->id, 'command' => 'place', 'progress' => 99.4, 'sessions_completed' => 7, 'created_at' => '2026-10-20 08:00:00', 'updated_at' => '2026-10-26 17:30:00'],
+            ['pet_id' => $pet->id, 'command' => 'potty', 'progress' => 100.0, 'sessions_completed' => 0, 'created_at' => '2026-10-02 08:00:00', 'updated_at' => '2026-10-24 08:00:00'],
             ['pet_id' => $other->id, 'command' => 'sit', 'progress' => 100.0, 'sessions_completed' => 3, 'created_at' => '2026-10-21 08:00:00', 'updated_at' => null],
+        ]);
+        $session = fn (string $status, string $finished, ?float $before, ?float $gain, int $petId = 0): array => [
+            'public_id' => (string) Str::uuid(), 'pet_id' => $petId ?: $pet->id, 'user_id' => null, 'command' => 'sit',
+            'local_date' => substr($finished, 0, 10), 'started_at' => $finished, 'ends_at' => $finished, 'expires_at' => $finished,
+            'duration_ms' => 60000, 'schedule' => '[]', 'status' => $status, 'finished_at' => $status === 'completed' ? $finished : null,
+            'progress_before' => $before, 'progress_gain' => $gain, 'created_at' => $finished, 'updated_at' => $finished,
+        ];
+        DB::table('pet_training_sessions')->insert([
+            $session('completed', '2026-10-10 16:00:00', 80.0, 10.0),   // below the threshold
+            $session('expired', '2026-10-11 16:00:00', 98.0, 5.0),      // not completed — ignored
+            $session('completed', '2026-10-12 16:00:00', 99.0, 1.0),    // the crossing session
+            $session('completed', '2026-10-20 16:00:00', 100.0, 0.0),   // later practice of a learned command
+            $session('completed', '2026-10-25 17:30:00', 100.0, 0.0),
         ]);
 
         $migration = require database_path('migrations/2027_05_19_120000_add_command_learned_milestone.php');
@@ -268,10 +287,11 @@ describe('backfill (migration)', function () {
         $learned = DB::table('pet_training_skills')->orderBy('pet_id')->orderBy('command')->get(['pet_id', 'command', 'learned_at'])
             ->map(fn ($r) => [$r->pet_id === $pet->id ? 'pet' : 'other', $r->command, $r->learned_at === null ? null : substr((string) $r->learned_at, 0, 19)])->all();
         expect($learned)->toBe([
-            ['pet', 'come', '2026-10-26 17:30:00'],
-            ['pet', 'place', null],
-            ['pet', 'sit', '2026-10-25 17:30:00'],
-            ['other', 'sit', '2026-10-21 08:00:00'],
+            ['pet', 'come', '2026-10-26 17:30:00'],   // no crossing session kept → updated_at
+            ['pet', 'place', null],                   // not learned
+            ['pet', 'potty', '2026-10-02 08:00:00'],  // known on arrival → created_at
+            ['pet', 'sit', '2026-10-12 16:00:00'],    // exact: the crossing session's finish
+            ['other', 'sit', '2026-10-21 08:00:00'],  // fallback created_at
         ])
             ->and(ActivityLog::where('activity_type', ActivityType::CommandLearned->value)->count())->toBe(0)
             ->and(PushNotification::where('type', PushType::CommandLearned->value)->count())->toBe(0);
@@ -323,6 +343,37 @@ describe('parent push', function () {
         expect(json_encode($sent))->not->toContain('Maja');
 
         expect(PushCopy::title('sl', null))->toBe('PetPrep');
+    });
+
+    it('is still sent when the pet is locked at delivery (good news never vanishes, QA #1737 m1)', function () {
+        [$parent, $child, $pet] = clmFamily();
+        clmSkills($pet, ['sit' => 99.0]);
+        DevicePushToken::create(['user_id' => $parent->id, 'expo_push_token' => 'ExponentPushToken['.Str::random(22).']', 'platform' => 'ios', 'app_version' => '1.0.0', 'locale' => 'sl', 'last_seen_at' => now()]);
+
+        clmSession($child, '2026-11-02 09:00:00');
+        $push = clmPushes($pet)->first();
+        expect($push->status)->toBe(PushNotification::STATUS_QUEUED);
+        // Between the decision and the delivery the pet got a hard stop.
+        Pet::whereKey($pet->id)->update(['is_hard_stopped' => true]);
+
+        $sent = [];
+        Http::swap(new HttpFactory(app('events')));
+        Http::preventStrayRequests();
+        Http::fake(['https://exp.host/--/api/v2/push/send' => function (Request $request) use (&$sent) {
+            $tickets = [];
+            foreach ($request->data() as $message) {
+                $sent[] = $message;
+                $tickets[] = ['status' => 'ok', 'id' => 'ticket-'.Str::random(8)];
+            }
+
+            return Http::response(['data' => $tickets]);
+        }]);
+        app(NotificationService::class)->deliver($push->id, app(ExpoPushClient::class));
+
+        expect($push->fresh()->status)->toBe(PushNotification::STATUS_SENT)
+            ->and($push->fresh()->suppressed_reason)->toBeNull()
+            ->and($sent)->toHaveCount(1)
+            ->and($sent[0]['body'])->toBe('Kuža zna nov ukaz: »Sedi«!');
     });
 
     it('is held over quiet hours (news), and only one row per pet + command ever', function () {

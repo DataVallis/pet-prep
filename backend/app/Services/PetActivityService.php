@@ -538,7 +538,8 @@ class PetActivityService
             $extra = [
                 'result' => self::resultPayload($session),
                 // School milestone (David 2026-11-28): only the session that made the dog learn the
-                // command for the first time; null otherwise (also on a repeat of that finish).
+                // command for the first time; null otherwise. A repeat of that finish returns the same
+                // object (read-only, QA #1737 M2) — the row and the push below are written once.
                 'command_learned' => $learnedAt === null ? null : [
                     'command' => $session->command->value,
                     'learned_at' => $learnedAt->setTimezone($locked->effectiveTimezone())->toIso8601String(),

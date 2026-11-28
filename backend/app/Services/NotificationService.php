@@ -518,7 +518,8 @@ class NotificationService
 
         // The game moved on since the decision (PR #35 review, item 6).
         // M6-W01: wishing is not a care action — a hard stop / illness does not hold the parent's wish push.
-        if (! $type->isLockNews() && $type !== PushType::WishCreated && $this->petLocked($pet)) {
+        // School milestone (QA #1737 m1): nor the »learned a command« news — good news never vanishes.
+        if (! $type->isLockNews() && $type !== PushType::WishCreated && $type !== PushType::CommandLearned && $this->petLocked($pet)) {
             $this->markSuppressed($notification, 'pet_locked');
 
             return;
