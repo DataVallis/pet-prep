@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c62edd1d815724724a91b98668eb2c31bb081fb9232942dd9a2d61453c36883b"
+      "sha256": "9bfd6c52d9d27b0e0fcc6e0e9a887cc091728a6803fcd1045edd0408a15c5e07"
     }
   },
   "suitability_vocabulary": {
@@ -86783,7 +86783,66 @@
         "file": "icelandic-sheepdog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "red-white",
+            "label": {
+              "en": "Red and white",
+              "sl": "Rdeče-bel"
+            },
+            "file": "dog/icelandic-sheepdog.webp",
+            "default": true
+          },
+          {
+            "key": "black-tan-white",
+            "label": {
+              "en": "Tricolour (black, tan, white)",
+              "sl": "Trobarven (črn, rjavkast, bel)"
+            },
+            "file": "dog/icelandic-sheepdog--black-tan-white.webp"
+          },
+          {
+            "key": "cream-white",
+            "label": {
+              "en": "Cream and white",
+              "sl": "Kremasto-bel"
+            },
+            "file": "dog/icelandic-sheepdog--cream-white.webp"
+          },
+          {
+            "key": "sable-white",
+            "label": {
+              "en": "Red sable and white",
+              "sl": "Rdeče sobolji z belo"
+            },
+            "file": "dog/icelandic-sheepdog--sable-white.webp"
+          },
+          {
+            "key": "grey-white",
+            "label": {
+              "en": "Grey and white",
+              "sl": "Sivo-bel"
+            },
+            "file": "dog/icelandic-sheepdog--grey-white.webp"
+          },
+          {
+            "key": "chocolate-tan-white",
+            "label": {
+              "en": "Chocolate, tan and white",
+              "sl": "Čokoladno-rjavkasto-bel"
+            },
+            "file": "dog/icelandic-sheepdog--chocolate-tan-white.webp"
+          },
+          {
+            "key": "white-red",
+            "label": {
+              "en": "White with red patches",
+              "sl": "Bel z rdečimi lisami"
+            },
+            "file": "dog/icelandic-sheepdog--white-red.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

@@ -793,6 +793,15 @@ return [
         'pale-fawn' => 'dogs/barbet--pale-fawn.webp',
         'white' => 'dogs/barbet--white.webp',
     ],
+    'icelandic_sheepdog' => [
+        'red-white' => 'dogs/icelandic-sheepdog.webp',
+        'black-tan-white' => 'dogs/icelandic-sheepdog--black-tan-white.webp',
+        'cream-white' => 'dogs/icelandic-sheepdog--cream-white.webp',
+        'sable-white' => 'dogs/icelandic-sheepdog--sable-white.webp',
+        'grey-white' => 'dogs/icelandic-sheepdog--grey-white.webp',
+        'chocolate-tan-white' => 'dogs/icelandic-sheepdog--chocolate-tan-white.webp',
+        'white-red' => 'dogs/icelandic-sheepdog--white-red.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
