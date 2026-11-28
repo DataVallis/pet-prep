@@ -1790,6 +1790,19 @@
             "prompt_hash": "sha256:c28369031ad8c6d84b02ea27eb1b019f5334cde22133cdfeda51f1fa179737a0",
             "generated_at": "2026-11-27T07:07:51+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "barbet",
+            "species": "dog",
+            "colour": "black",
+            "file": "dog/barbet.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:8ecfe1911e2ed6bf8488dfc5e63f042623d822364eb2703b859adc69b7c823a6",
+            "generated_at": "2026-11-28T01:05:14+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

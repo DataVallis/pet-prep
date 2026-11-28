@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "4d2e9aa6b42c5b7b374bd7f765f355263ebd6b4c22036a6295f01a3a85756013"
+      "sha256": "e3a6464deb06abed34dde113e99f70fdc3d51ce73c44eefb51a9cac7a9bc1533"
     }
   },
   "suitability_vocabulary": {
@@ -86116,7 +86116,12 @@
           "S1096"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "barbet.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
