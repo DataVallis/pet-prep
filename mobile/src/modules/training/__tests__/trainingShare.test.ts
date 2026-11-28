@@ -20,10 +20,10 @@ const S = TRAINING_STRINGS;
 
 /** What a dog that arrived young/adult/senior shows before its first session. */
 const STARTING_COMMANDS = [
-  { command: 'sit' as const, progress: 50, learned: false, last_practised_at: null },
-  { command: 'come' as const, progress: 30, learned: false, last_practised_at: null },
-  { command: 'place' as const, progress: 0, learned: false, last_practised_at: null },
-  { command: 'potty' as const, progress: 70, learned: false, last_practised_at: null },
+  { command: 'sit' as const, progress: 50, learned: false, last_practised_at: null, learned_at: null },
+  { command: 'come' as const, progress: 30, learned: false, last_practised_at: null, learned_at: null },
+  { command: 'place' as const, progress: 0, learned: false, last_practised_at: null, learned_at: null },
+  { command: 'potty' as const, progress: 70, learned: false, last_practised_at: null, learned_at: null },
 ];
 
 describe('fixture defaults (M5-R03b)', () => {
