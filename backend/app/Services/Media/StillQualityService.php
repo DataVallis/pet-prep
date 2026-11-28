@@ -348,7 +348,7 @@ class StillQualityService
      *    itself the image WAITS (nothing claimed or paid; media:sweep re-runs it hourly);
      *  - off: stored at once.
      *
-     * @return 'promoted'|'retrying'|'kept'|'waiting'|'busy'|'skipped'
+     * @return 'promoted'|'retrying'|'retry_queued'|'kept'|'waiting'|'busy'|'skipped'
      */
     public function checkStageCandidate(PetMedia $slot): string
     {
@@ -420,7 +420,7 @@ class StillQualityService
         if ($fresh->still_retries < self::maxRetries()) {
             $refusal = $this->media->stageRetryRefusal();
             if ($refusal === null) {
-                return $this->retryStage($fresh, $candidate, (string) $check->reason) ? 'retrying' : 'skipped';
+                return $this->retryStage($fresh, $candidate, (string) $check->reason);
             }
 
             return $this->keepStage($fresh, $candidate, 'Stage check failed — no budget for a new stage edit ('.$refusal.'), kept: '.$check->reason);
@@ -441,8 +441,16 @@ class StillQualityService
         return 'waiting';
     }
 
-    /** A failed stage image with retries left: a NEW stage edit (next, stronger prompt variant, fresh seed). */
-    private function retryStage(PetMedia $slot, string $candidate, string $reason): bool
+    /**
+     * A failed stage image with retries left: a NEW stage edit (next, stronger prompt variant, fresh seed).
+     *
+     * 'retrying' = the remake job is queued; 'retry_queued' = a look row was reset for its remake but no
+     * active pet waits for it right now — the row stays pending (no paid call) until the next pet of
+     * this look runs it (referenceImageFromLook claims the row); 'skipped' = decided meanwhile.
+     *
+     * @return 'retrying'|'retry_queued'|'skipped'
+     */
+    private function retryStage(PetMedia $slot, string $candidate, string $reason): string
     {
         $variant = min((int) $slot->prompt_variant + 1, PetAppearancePrompt::STAGE_EDIT_VARIANTS - 1);
 
@@ -466,7 +474,7 @@ class StillQualityService
             ]) === 1;
 
         if (! $retried) {
-            return false;
+            return 'skipped';
         }
 
         if ($candidate !== $slot->storage_path) {
@@ -474,17 +482,35 @@ class StillQualityService
         }
 
         // A pet's own slot: its job re-runs the edit from the still stored previous-stage file. A look row
-        // has no job of its own — a pet waiting for it runs it (referenceImageFromLook claims the row).
-        $petId = $slot->isLookMedia()
-            ? PetMedia::query()->where('look_media_id', $slot->id)->images()->whereNotNull('pet_id')->orderBy('id')->value('pet_id')
-            : $slot->pet_id;
-        if ($petId !== null) {
-            GeneratePetReferenceImage::dispatch((int) $petId);
+        // has no job of its own — an ACTIVE pet still waiting for it runs it (referenceImageFromLook claims the row).
+        $petId = $slot->isLookMedia() ? $this->lookStageRetryPetId($slot) : $slot->pet_id;
+        $context = ['pet_media_id' => $slot->id, 'retry' => $slot->still_retries + 1, 'variant' => $variant, 'reason' => $reason];
+
+        if ($petId === null) {
+            Log::warning('StillQualityService: stage image failed the »looks older« check — no waiting pet, the look row waits (pending) for the next pet of this look', $context);
+
+            return 'retry_queued';
         }
 
-        Log::warning('StillQualityService: stage image failed the »looks older« check — remaking it with a stronger prompt', ['pet_media_id' => $slot->id, 'retry' => $slot->still_retries + 1, 'variant' => $variant, 'reason' => $reason]);
+        GeneratePetReferenceImage::dispatch((int) $petId);
+        Log::warning('StillQualityService: stage image failed the »looks older« check — remaking it with a stronger prompt', $context + ['pet_id' => $petId]);
 
-        return true;
+        return 'retrying';
+    }
+
+    /**
+     * The pet whose job remakes a look row's stage image: an ACTIVE pet whose own image slot links the
+     * row and still waits for it (pending / running / failed). A ready or inactive pet's job would return
+     * at once (its slot is done) or pay an edit nobody sees — null when no pet waits.
+     */
+    public function lookStageRetryPetId(PetMedia $lookRow): ?int
+    {
+        $petId = PetMedia::query()->where('look_media_id', $lookRow->id)->images()->whereNotNull('pet_id')
+            ->whereIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_RUNNING, PetMedia::STATUS_FAILED])
+            ->whereHas('pet', fn ($q) => $q->where('is_active', true))
+            ->orderBy('id')->value('pet_id');
+
+        return $petId === null ? null : (int) $petId;
     }
 
     /** Retries used up (or not affordable): the LAST image is kept (shown), marked failed, one aggregated alert. */

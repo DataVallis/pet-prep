@@ -780,7 +780,7 @@ return [
     'stage_check' => [
         'discord' => [
             'title' => 'Preverjanje obdobij: :count slik(e) življenjskega obdobja po vseh samodejnih ponovitvah še vedno niso videti starejše',
-            'body' => 'Ljubljenček / skupni videz je prešel v novo življenjsko obdobje, a AI preverjanje pravi, da nova slika ni videti starejša od prejšnjega obdobja (ali ni ista žival) — tudi po samodejnih ponovitvah z močnejšim pozivom. Obdržana je zadnja slika in je prikazana. Neobvezno: Ljubljenčki → AI media (rezultat v stolpcu Quality) → Regenerate ali Shared looks → »Regenerate media«; poziv najprej preizkusi v AI Lab.',
+            'body' => 'Ljubljenček / skupni videz je prešel v novo življenjsko obdobje, a AI preverjanje pravi, da nova slika ni videti starejša od prejšnjega obdobja (ali ni ista žival) — tudi po samodejnih ponovitvah z močnejšim pozivom. Obdržana je zadnja slika in je prikazana. Neobvezno: lastna slika ljubljenčka — Ljubljenčki → AI media (rezultat v stolpcu Quality) → Regenerate (jo naredi znova iz besedila); skupni videz — AI media → Shared looks → »Regenerate media«.',
         ],
     ],
     'still_check' => [

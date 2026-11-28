@@ -184,6 +184,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-28 (backend, `fix/stage-check-followups`)
+- QA minors of #1738: a look row's stage remake goes only to an ACTIVE pet whose linked slot still waits (pending / running / failed, `StillQualityService::lookStageRetryPetId()`); no such pet → row stays pending, outcome `retry_queued`, 0 $; Discord body drops the AI Lab hint (own slot Regenerate = text-to-image; shared look → AI media → Shared looks → »Regenerate media«); ARCHITECTURE same-stage regenerate wording; tests in `StageImageAgeingTest`. No new debt.
+
 ### 2026-11-28 (backend, `fix/stage-image-ageing`, PR #1738)
 - David (Bafo's young image still a fluffy puppy): stronger stage edit prompts (dogs + cats: new-stage body, keep identity only, same room / camera; retry variants) + »looks older« vision check of every new stage image (previous + new image, rubric `stage`, switch `quality_check.stage_mode`, default **shadow** = verdict on the row only; enforce ≤ 2 remakes then keep the last + one Discord post). AI-cost logic → one QA round before merge. No automatic regeneration — §1b 27. Debt: the rubric is uncalibrated (stay on shadow until David has looked at verdicts); a look row whose retry finds no waiting pet slot waits until the next pet of that look needs the stage image.
 

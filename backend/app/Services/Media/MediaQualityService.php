@@ -82,7 +82,7 @@ class MediaQualityService
     /**
      * Check the slot's candidate and act on the verdict. Idempotent; returns the outcome.
      *
-     * @return 'promoted'|'compressing'|'retrying'|'needs_review'|'skipped'|'busy'
+     * @return 'promoted'|'compressing'|'retrying'|'retry_queued'|'kept'|'needs_review'|'skipped'|'busy'
      */
     public function checkCandidate(int $slotId): string
     {
