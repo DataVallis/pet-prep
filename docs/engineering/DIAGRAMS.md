@@ -704,7 +704,12 @@ sequenceDiagram
   else v2 early end after round 1 (Š3)
     T->>DB: round 1 scored only · duration_ms = clamp(elapsed, round 1 end, duration) (budget + fair share) · NO trained_pet row (no routine)
   end
-  API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after<br/>+ v2: rules_version, ended_after_round, counts_for_routine}, state} + PetUpdated trained_pet
+  alt learned now (school milestone 2026-11-28: before < 99.5 ≤ after, skill.learned_at null)
+    T->>DB: pet_training_skills.learned_at = now (once) · activities_log command_learned (actor child, value = command code 1–4)
+    T->>DB: push_notifications command_learned → parents only, once per pet + command<br/>(queued after commit · held over quiet hours · sent even if the pet is locked at delivery)
+  end
+  Note over API,T: retried finish of a completed session → 200 unchanged, same result;<br/>command_learned recomputed read-only (learned_at = this session's finished_at) — no second row / push
+  API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after<br/>+ v2: rules_version, ended_after_round, counts_for_routine}, command_learned {command, learned_at} | null, state} + PetUpdated trained_pet
 ```
 
 Routine, decay and effects:

@@ -24,6 +24,31 @@ enum TrainingCommand: string
     case Potty = 'potty';
 
     /**
+     * The integer stored in `activities_log.value` of a `command_learned` row (school
+     * milestone, David 2026-11-28; the column is an integer). Never reuse a code.
+     */
+    public function code(): int
+    {
+        return match ($this) {
+            self::Sit => 1,
+            self::Come => 2,
+            self::Place => 3,
+            self::Potty => 4,
+        };
+    }
+
+    public static function fromCode(?int $code): ?self
+    {
+        foreach (self::cases() as $case) {
+            if ($case->code() === $code) {
+                return $case;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * @return list<string>
      */
     public static function values(): array

@@ -749,7 +749,7 @@ export function makeBehaviourEvent(
 export function makeTrainingCommands(progress: Partial<Record<'sit' | 'come' | 'place' | 'potty', number>> = {}) {
   return (['sit', 'come', 'place', 'potty'] as const).map((command) => {
     const p = progress[command] ?? 0;
-    return { command, progress: p, learned: p >= 100, last_practised_at: p > 0 ? '2026-10-03T17:00:00+02:00' : null };
+    return { command, progress: p, learned: p >= 100, last_practised_at: p > 0 ? '2026-10-03T17:00:00+02:00' : null, learned_at: null };
   });
 }
 

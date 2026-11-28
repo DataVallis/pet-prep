@@ -508,6 +508,12 @@ class PetActivityService
      * no `trained_pet` row is written — the day's routine counts only a full session; the
      * broadcast is still `trained_pet` (progress changed).
      *
+     * School milestone (David 2026-11-28): when the session made the dog learn the command for
+     * the first time, `extra.command_learned` = {command, learned_at} (else null), one
+     * `command_learned` timeline row (actor = the child, value = TrainingCommand::code()) and
+     * one parent push `command_learned` — never again for that pet + command. The broadcast
+     * stays the one `trained_pet` (its training summary carries `learned_at`).
+     *
      * @param  list<int>  $taps  ms since the session start
      */
     public function finishTraining(Pet $pet, User $child, string $sessionId, array $taps, ?int $endedAfterRound = null): ActionResult
@@ -528,7 +534,17 @@ class PetActivityService
 
             /** @var PetTrainingSession $session */
             $session = $finished['session'];
-            $extra = ['result' => self::resultPayload($session)];
+            $learnedAt = $finished['learned_at'];
+            $extra = [
+                'result' => self::resultPayload($session),
+                // School milestone (David 2026-11-28): only the session that made the dog learn the
+                // command for the first time; null otherwise. A repeat of that finish returns the same
+                // object (read-only, QA #1737 M2) — the row and the push below are written once.
+                'command_learned' => $learnedAt === null ? null : [
+                    'command' => $session->command->value,
+                    'learned_at' => $learnedAt->setTimezone($locked->effectiveTimezone())->toIso8601String(),
+                ],
+            ];
             if ($finished['repeat']) {
                 return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
             }
@@ -536,6 +552,11 @@ class PetActivityService
             $locked->saveQuietly();
             if ($finished['full']) {
                 $this->logActivity($locked, ActivityType::TrainedPet, (int) ($session->result['successes'] ?? 0), $child->id);
+            }
+            if ($learnedAt !== null) {
+                // Parent timeline row (actor = this child) + one parent push (queued after commit).
+                $this->logActivity($locked, ActivityType::CommandLearned, $session->command->code(), $child->id);
+                app(NotificationService::class)->commandLearned($locked, $session->command);
             }
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);

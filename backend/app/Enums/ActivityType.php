@@ -27,6 +27,11 @@ enum ActivityType: string
     // M5-R03 (David 2026-10-06): child completed a training session (the
     // day's training routine); value = correctly timed praises.
     case TrainedPet = 'trained_pet';
+    // School milestone (David 2026-11-28): the child's training session made the
+    // dog LEARN a command for the first time (PetTrainingSkill::isMastered). One
+    // row per pet + command ever; value = TrainingCommand::code() (1 sit, 2 come,
+    // 3 place, 4 potty). Parent timeline + report only — never a routine, score or stat.
+    case CommandLearned = 'command_learned';
     // M5-R05 (David 2026-10-07/08): a child finished a ball game / a cuddle.
     // Parent timeline only — never a routine, score or stat (value = plays
     // merged into this row, PlayService::TIMELINE merge window).

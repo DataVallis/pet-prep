@@ -621,10 +621,10 @@ describe('ChildHudScreen — training fair share & starting progress (M5-R03b)',
 
   it('a dog that arrived older shows its starting progress (sit 50 %, potty 70 %), nothing learned', async () => {
     const commands = [
-      { command: 'sit' as const, progress: 50, learned: false, last_practised_at: null },
-      { command: 'come' as const, progress: 30, learned: false, last_practised_at: null },
-      { command: 'place' as const, progress: 0, learned: false, last_practised_at: null },
-      { command: 'potty' as const, progress: 70, learned: false, last_practised_at: null },
+      { command: 'sit' as const, progress: 50, learned: false, last_practised_at: null, learned_at: null },
+      { command: 'come' as const, progress: 30, learned: false, last_practised_at: null, learned_at: null },
+      { command: 'place' as const, progress: 0, learned: false, last_practised_at: null, learned_at: null },
+      { command: 'potty' as const, progress: 70, learned: false, last_practised_at: null, learned_at: null },
     ];
     await renderHud(withTraining(makeEnabledTraining({ commands })));
     expect(screen.getByTestId('hud-training-badge')).toBeTruthy();

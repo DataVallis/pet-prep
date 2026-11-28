@@ -251,6 +251,20 @@ return [
     // Samo starši (»vi«); naslov je ime ljubljenčka (če ga ima), besedilo nikoli ne omenja ne ljubljenčka ne otroka. Brez cene.
     'upgrade_reminder' => 'Vaš otrok že 7 dni skrbi za kužka. Je čas za pravi preizkus? V aplikaciji lahko z istim kužkom začnete 12-tedenski izziv.',
 
+    // Šola, mejnik (David 28. 11. 2026): kuža se je prvič naučil ukaza. Samo starši; naslov je ime
+    // ljubljenčka (če ga ima), besedilo nikoli ne omenja otroka. Imena ukazov = aplikacija (training.json).
+    'command_learned' => [
+        'body' => 'Kuža zna nov ukaz: »:command«!',
+        // A stored row with an unknown command.
+        'other' => 'Kuža zna nov ukaz!',
+        'commands' => [
+            'sit' => 'Sedi',
+            'come' => 'Pridi',
+            'place' => 'Prostor',
+            'potty' => 'Lulat zunaj',
+        ],
+    ],
+
     // M5-R18 / R20 (David 24. 10. 2026): novo obdobje opomnika staršu. Samo starši (»vi«);
     // naslov je ime ljubljenčka (če ga ima), besedilo nikoli.
     'care_reminder' => [

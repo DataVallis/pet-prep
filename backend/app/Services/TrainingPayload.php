@@ -21,7 +21,9 @@ use Illuminate\Support\Collection;
  *   `training`); false for legacy pets and pets created by older apps —
  *   then `commands` is empty.
  * - `commands`: every command (sit, come, place, potty) with the displayed
- *   progress 0–100, `learned` (100 %) and the last completed session.
+ *   progress 0–100, `learned` (100 %), the last completed session and
+ *   `learned_at` (the moment it was learned, null until then — the school
+ *   milestone, David 2026-11-28; also in the parent summary / PetUpdated).
  * - `today_done`: a session was completed today (the training routine).
  * - `session` (child state only): the running session, else null; for the
  *   viewing child's OWN session (`mine`) also its schedule (duration,
@@ -45,7 +47,7 @@ use Illuminate\Support\Collection;
 final class TrainingPayload
 {
     /**
-     * @param  list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>  $commands
+     * @param  list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null, learned_at: string|null}>  $commands
      * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}|null  $session
      */
     public function __construct(
@@ -129,7 +131,7 @@ final class TrainingPayload
 
     /**
      * @param  Collection<string, PetTrainingSkill>  $skills
-     * @return list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>
+     * @return list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null, learned_at: string|null}>
      */
     private static function commandsOf(Pet $pet, $skills, ?string $tz = null): array
     {
@@ -143,6 +145,8 @@ final class TrainingPayload
                 'progress' => $progress,
                 'learned' => PetTrainingSkill::isMasteredProgress($progress),
                 'last_practised_at' => $skill?->last_practised_at?->copy()->setTimezone($tz)->toIso8601String(),
+                // School milestone (David 2026-11-28): when the command was learned (null = not yet).
+                'learned_at' => $skill?->learned_at?->copy()->setTimezone($tz)->toIso8601String(),
             ];
         }
 
@@ -158,7 +162,7 @@ final class TrainingPayload
     /**
      * Full object for the child state.
      *
-     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int, treat_token: bool}
+     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null, learned_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, perform_at_ms?: int|null, obey_at_ms: int|null, window_end_ms: int|null, release_at_ms?: int|null}>|null, rules_version?: int, mask_ms?: int, round_break_ms?: int, round_breaks_ms?: list<int>, rounds?: list<array{round: int, first_index: int, last_index: int, start_ms: int, end_ms: int}>}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int, treat_token: bool}
      */
     public function toArray(): array
     {
@@ -168,7 +172,7 @@ final class TrainingPayload
             /**
              * Every command with displayed progress 0–100 (empty when not enabled).
              *
-             * @var list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>
+             * @var list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null, learned_at: string|null}>
              */
             'commands' => $this->commands,
             // A session was completed today (the daily training routine).
@@ -206,14 +210,14 @@ final class TrainingPayload
     /**
      * Summary for the parent dashboard and PetUpdated ("Kuža zna: sedi ✓, pridi 60 %").
      *
-     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session_active: bool}
+     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null, learned_at: string|null}>, today_done: bool, session_active: bool}
      */
     public function summary(): array
     {
         return [
             'enabled' => $this->enabled,
             /**
-             * @var list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>
+             * @var list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null, learned_at: string|null}>
              */
             'commands' => $this->commands,
             'today_done' => $this->todayDone,

@@ -136,9 +136,9 @@ describe('command learned — readers and rules', () => {
       ...makeEnabledTraining(),
       commands: [
         { command: 'sit', progress: 100, learned: true, last_practised_at: null, learned_at: '2026-11-25T08:00:00Z' },
-        { command: 'come', progress: 60, learned: false, last_practised_at: null },
+        { command: 'come', progress: 60, learned: false, last_practised_at: null, learned_at: null },
         { command: 'place', progress: 100, learned: true, last_practised_at: null, learned_at: '2026-11-28T08:00:00Z' },
-        { command: 'potty', progress: 10, learned: false, last_practised_at: null },
+        { command: 'potty', progress: 10, learned: false, last_practised_at: null, learned_at: null },
       ],
     }).commands;
     expect(orderedCommands(commands).map((c) => c.command)).toEqual(['sit', 'place', 'come', 'potty']);

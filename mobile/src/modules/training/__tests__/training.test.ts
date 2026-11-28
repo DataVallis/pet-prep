@@ -43,9 +43,9 @@ describe('readChildTraining', () => {
     const t = readChildTraining(
       makeEnabledTraining({
         commands: [
-          { command: 'potty', progress: 12.6, learned: false, last_practised_at: null },
-          { command: 'sit', progress: 100, learned: true, last_practised_at: '2026-10-03T17:00:00+02:00' },
-          { command: 'jump' as never, progress: 50, learned: false, last_practised_at: null },
+          { command: 'potty', progress: 12.6, learned: false, last_practised_at: null, learned_at: null },
+          { command: 'sit', progress: 100, learned: true, last_practised_at: '2026-10-03T17:00:00+02:00', learned_at: null },
+          { command: 'jump' as never, progress: 50, learned: false, last_practised_at: null, learned_at: null },
         ],
         today_done: true,
       }),

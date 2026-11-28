@@ -147,10 +147,22 @@ enum PushType: string
      */
     case UpgradeReminder = 'upgrade_reminder';
 
+    /**
+     * School milestone (David 2026-11-28): a child's training session made the dog LEARN a
+     * command for the first time (PetTrainingSkill::isMastered) — »Kuža zna nov ukaz:
+     * »Prostor«!« to the family's parents (never the children; title = the pet's name when
+     * set; the body names the command, never the child). Metric = the command (sit | come |
+     * place | potty); once per pet + command ever (TrainingService writes
+     * `pet_training_skills.learned_at` once; isDuplicate also refuses a second row with the
+     * same metric). Good news, normal priority; held (not dropped) over quiet hours; sent even
+     * when the pet is locked at delivery (like WishCreated — good news never vanishes, QA #1737 m1). Dog only — school is dog-only.
+     */
+    case CommandLearned = 'command_learned';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TakeOutReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady, self::UpgradeReminder], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TakeOutReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady, self::UpgradeReminder, self::CommandLearned], true);
     }
 
     /**
@@ -172,7 +184,7 @@ enum PushType: string
     public function holdsOverQuietHours(): bool
     {
         return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder || $this === self::WishCreated || $this === self::ItemReady
-            || $this === self::UpgradeReminder;
+            || $this === self::UpgradeReminder || $this === self::CommandLearned;
     }
 
     /**
@@ -225,6 +237,8 @@ enum PushType: string
             self::ItemReady => 12 * 3600,
             // M6-U02: the dashboard card says the same; still useful later that day.
             self::UpgradeReminder => 12 * 3600,
+            // School milestone: still news later that day.
+            self::CommandLearned => 12 * 3600,
         };
     }
 }

@@ -89,8 +89,9 @@ export function commandsLine(commands: readonly CommandProgress[]): string | nul
 export const COMMAND_LEARNED_ACTIVITY = 'command_learned';
 
 /**
- * The command of a timeline item: `command` or `meta.command` (defensive until the backend's shape
- * is in `schema.ts`; TODO(schema)). Anything else → null (the plain text).
+ * The command of a timeline item: `command` (typed in `schema.ts`: dashboard timeline and the
+ * activities list, null on other rows), `meta.command` kept as a lenient fallback. Anything else →
+ * null (the plain text).
  */
 export function timelineCommandOf(item: Record<string, unknown>): TrainingCommand | null {
   if (isTrainingCommand(item.command)) return item.command;

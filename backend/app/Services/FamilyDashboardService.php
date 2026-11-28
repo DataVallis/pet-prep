@@ -6,6 +6,7 @@ use App\Enums\ActivityType;
 use App\Enums\MediaDisplay;
 use App\Enums\PetStatusPeriodKind;
 use App\Enums\RoutineType;
+use App\Enums\TrainingCommand;
 use App\Models\ActivityLog;
 use App\Models\ChallengeCertificate;
 use App\Models\Family;
@@ -490,7 +491,38 @@ class FamilyDashboardService
                 /** @var 'done'|'open'|'not_done' */
                 'status' => $r['status'],
             ], $this->careTasks->reminderHistory($pet, Carbon::parse($from, $tz)->startOfDay()->utc(), now())) : [],
+            // School milestone (David 2026-11-28): the commands THIS child's sessions taught the
+            // dog in the period (`command_learned` timeline rows), newest first. Shown, never scored.
+            'commands_learned' => $pet !== null ? $this->commandsLearned($pet, $child->id, Carbon::parse($from, $tz)->startOfDay()->utc(), $tz) : [],
         ];
+    }
+
+    /**
+     * The `command_learned` rows of $childId for $pet since $since (newest first).
+     *
+     * @return list<array{command: 'sit'|'come'|'place'|'potty', learned_at: string}>
+     */
+    private function commandsLearned(Pet $pet, int $childId, Carbon $since, string $tz): array
+    {
+        $out = [];
+        $rows = ActivityLog::where('pet_id', $pet->id)
+            ->where('actor_user_id', $childId)
+            ->where('activity_type', ActivityType::CommandLearned->value)
+            ->where('created_at', '>=', $since)
+            ->orderByDesc('created_at')
+            ->orderByDesc('id')
+            ->get(['value', 'created_at']);
+        foreach ($rows as $row) {
+            $command = TrainingCommand::fromCode($row->value === null ? null : (int) $row->value);
+            if ($command !== null) {
+                $out[] = [
+                    'command' => $command->value,
+                    'learned_at' => $row->created_at->copy()->setTimezone($tz)->toIso8601String(),
+                ];
+            }
+        }
+
+        return $out;
     }
 
     /**
@@ -537,10 +569,21 @@ class FamilyDashboardService
                 'created_at' => Carbon::parse($row->created_at, 'UTC')->setTimezone($tz)->toIso8601String(),
                 // Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative.
                 'is_positive' => ! (ActivityType::tryFrom((string) $row->activity_type)?->isNegativeEvent() ?? false),
+                // School milestone (David 2026-11-28): the learned command of a `command_learned` row, else null.
+                'command' => self::timelineCommand((string) $row->activity_type, $row->value !== null ? (int) $row->value : null),
             ];
         }
 
         return $out;
+    }
+
+    /**
+     * The command (sit|come|place|potty) of a `command_learned` timeline row (value =
+     * TrainingCommand::code()); null for every other row.
+     */
+    public static function timelineCommand(string $activityType, ?int $value): ?string
+    {
+        return $activityType === ActivityType::CommandLearned->value ? TrainingCommand::fromCode($value)?->value : null;
     }
 
     /**
