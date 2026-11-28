@@ -403,7 +403,7 @@ class AccountExportService
         $periods = $byPet('pet_status_periods', ['kind', 'started_at', 'ended_at'], 'started_at');
         $hygiene = $byPet('pet_hygiene_events', ['local_date', 'scheduled_at', 'status', 'cleaned_at', 'kind', 'due_at'], 'scheduled_at');
         // M5-R03 training: progress per command and every session (who, when, how well).
-        $skills = $byPet('pet_training_skills', ['command', 'progress', 'last_practised_at', 'sessions_completed']);
+        $skills = $byPet('pet_training_skills', ['command', 'progress', 'last_practised_at', 'sessions_completed', 'learned_at']);
         $sessions = $byPet('pet_training_sessions', ['user_id', 'command', 'local_date', 'started_at', 'status', 'finished_at', 'taps', 'result', 'progress_gain'], 'started_at');
         // M5-R06-04 / 05: cat care sessions (wand play, grooming, litter change, scratching) — who, when, verdict.
         $careSessions = $byPet('pet_care_sessions', ['user_id', 'kind', 'local_date', 'started_at', 'status', 'finished_at', 'result'], 'started_at');
@@ -538,6 +538,8 @@ class AccountExportService
                     'progress' => Pet::displayValue((float) $r->progress),
                     'last_practised_at' => $this->iso($r->last_practised_at),
                     'sessions_completed' => (int) $r->sessions_completed,
+                    // School milestone (David 2026-11-28): when the command was learned (null = not yet).
+                    'learned_at' => $this->iso($r->learned_at),
                 ])->values()->all(),
                 'training_sessions' => $rows($sessions)->map(fn ($r) => [
                     // null = a deleted child.

@@ -581,10 +581,10 @@ describe('starting progress', function () {
         tdAt('2026-10-07 06:00:00');
         [$child, $pet] = tdCreateViaPin('adopted', 'adult');
         $commands = [
-            ['command' => 'sit', 'progress' => 50, 'learned' => false, 'last_practised_at' => null],
-            ['command' => 'come', 'progress' => 30, 'learned' => false, 'last_practised_at' => null],
-            ['command' => 'place', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
-            ['command' => 'potty', 'progress' => 70, 'learned' => false, 'last_practised_at' => null],
+            ['command' => 'sit', 'progress' => 50, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+            ['command' => 'come', 'progress' => 30, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+            ['command' => 'place', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+            ['command' => 'potty', 'progress' => 70, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
         ];
 
         tdState($child)->assertJsonPath('training.enabled', true)->assertJsonPath('training.commands', $commands);

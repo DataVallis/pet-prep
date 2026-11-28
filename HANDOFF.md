@@ -178,6 +178,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-28 (backend, `feat/command-learned-milestone`)
+- David: mejnik »Kuža zna nov ukaz« (strežnik). Odgovor `POST …/training/finish` + `command_learned` {command, learned_at} | null (samo vaja, ki je ukaz prvič naučila); `training.commands[].learned_at` (stanje, nadzorna plošča, PetUpdated); push `command_learned` samo staršem (enkrat na psa + ukaz, počaka čez tihe ure); vrstica `command_learned` v časovnici (value = koda ukaza 1–4) in `commands_learned` v poročilu; `learned_at` v izvozu. Migracija na obstoječih podatkih (backfill naučenih = `updated_at`) → QA pred združitvijo. Aplikacija (proslava, značke, `pushData.ts`) gradi mobilni agent vzporedno.
+
 ### 2026-11-28 (mobile, `feat/command-learned-celebration`)
 - David: first-time learned school command = milestone result screen (»{ime} zna ukaz »Prostor«!«, burst / static badge with reduce motion, pose clip / image, chime + haptic via lazy `MilestoneFx`, details collapsed), »Ukazi: Sedi ✓ · …« row in the pet profile sheet, parent push `command_learned` + timeline row (graduation cap). App reads `command_learned` / `learned_at` / timeline `command` | `meta.command` defensively — **depends on the parallel backend PR**; TODO(schema) in `training.ts` + `commandLearned.ts` after `schema.ts` is regenerated. OTA-safe (no native change).
 

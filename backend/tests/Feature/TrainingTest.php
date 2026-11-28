@@ -1003,10 +1003,10 @@ describe('payload', function () {
         getJson('/api/child/pet')->assertOk()
             ->assertJsonPath('training.enabled', true)
             ->assertJsonPath('training.commands', [
-                ['command' => 'sit', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
-                ['command' => 'come', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
-                ['command' => 'place', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
-                ['command' => 'potty', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
+                ['command' => 'sit', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+                ['command' => 'come', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+                ['command' => 'place', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+                ['command' => 'potty', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
             ])
             ->assertJsonPath('training.today_done', false)
             ->assertJsonPath('training.session', null)
@@ -1020,10 +1020,10 @@ describe('payload', function () {
         expect($payload['training'])->toBe([
             'enabled' => true,
             'commands' => [
-                ['command' => 'sit', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
-                ['command' => 'come', 'progress' => 60, 'learned' => false, 'last_practised_at' => null],
-                ['command' => 'place', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
-                ['command' => 'potty', 'progress' => 0, 'learned' => false, 'last_practised_at' => null],
+                ['command' => 'sit', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+                ['command' => 'come', 'progress' => 60, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+                ['command' => 'place', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
+                ['command' => 'potty', 'progress' => 0, 'learned' => false, 'last_practised_at' => null, 'learned_at' => null],
             ],
             'today_done' => false,
             'session_active' => false,

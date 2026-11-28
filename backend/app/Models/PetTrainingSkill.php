@@ -17,13 +17,15 @@ use Illuminate\Support\Carbon;
  * @property float $progress
  * @property Carbon|null $last_practised_at Last completed session of this command.
  * @property int $sessions_completed
+ * @property Carbon|null $learned_at The moment the command was first learned (isMastered), written once
+ *                                   by TrainingService — the school milestone (David 2026-11-28).
  */
 class PetTrainingSkill extends Model
 {
     /**
      * @var list<string>
      */
-    protected $fillable = ['pet_id', 'command', 'progress', 'last_practised_at', 'sessions_completed'];
+    protected $fillable = ['pet_id', 'command', 'progress', 'last_practised_at', 'sessions_completed', 'learned_at'];
 
     /**
      * @return array<string, string>
@@ -35,6 +37,7 @@ class PetTrainingSkill extends Model
             'progress' => 'float',
             'last_practised_at' => 'datetime',
             'sessions_completed' => 'integer',
+            'learned_at' => 'datetime',
         ];
     }
 

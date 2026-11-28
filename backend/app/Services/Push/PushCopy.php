@@ -4,6 +4,7 @@ namespace App\Services\Push;
 
 use App\Enums\PushType;
 use App\Enums\Species;
+use App\Enums\TrainingCommand;
 use App\Models\PushNotification;
 use App\Support\RequestLocale;
 use Illuminate\Support\Facades\Lang;
@@ -215,6 +216,11 @@ final class PushCopy
             PushType::ItemReady => $line('item_ready.'.(is_string($variant) && Lang::has("push.item_ready.{$variant}", $locale, false) ? $variant : 'other')),
             // M6-U02: parents only, formal; dog / cat text, no names, no price.
             PushType::UpgradeReminder => $line('upgrade_reminder'),
+            // School milestone (David 2026-11-28): parents only; metric = the command → its name in
+            // this language (the app's names), inside quotes; never the child's name.
+            PushType::CommandLearned => in_array($metric, TrainingCommand::values(), true)
+                ? $line('command_learned.body', ['command' => $line("command_learned.commands.{$metric}")])
+                : $line('command_learned.other'),
         };
     }
 

@@ -9,6 +9,7 @@ use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Enums\Species;
 use App\Enums\TimeFormat;
+use App\Enums\TrainingCommand;
 use App\Enums\WishStatus;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
@@ -106,7 +107,7 @@ class NotificationService
         $sendAfter = null;
         $suppressed = match (true) {
             $recipients === [] => 'no_recipients',
-            $this->isDuplicate($pet, $type, $now) => 'duplicate',
+            $this->isDuplicate($pet, $type, $now, $metric) => 'duplicate',
             default => null,
         };
 
@@ -366,6 +367,17 @@ class NotificationService
     public function upgradeReminder(Pet $pet): ?PushNotification
     {
         return $this->escalation($pet, PushType::UpgradeReminder);
+    }
+
+    /**
+     * School milestone (David 2026-11-28): the dog learned `$command` for the first time — to
+     * the family's parents, metric = the command. Called by PetActivityService::finishTraining
+     * under the pet's row lock (queued after commit), only for the session that crossed the
+     * »learned« threshold (TrainingService::finish `learned_at`).
+     */
+    public function commandLearned(Pet $pet, TrainingCommand $command): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::CommandLearned, $command->value);
     }
 
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
@@ -766,6 +778,8 @@ class NotificationService
             // M6-U02: buying is the parent's business — never the child (no prices on the child side).
             // QA #983 m4: to the parents whose app shows the reminder card (`free_breed_challenge`), all when none.
             PushType::UpgradeReminder => $this->parentsSupporting($pet, ClientFeature::FreeBreedChallenge),
+            // School milestone (David 2026-11-28): the parents' news — never the children.
+            PushType::CommandLearned => $parents(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -775,7 +789,7 @@ class NotificationService
      * Same pet + type within PUSH_DEDUPE_MINUTES (held, queued or sent); the
      * walk reminder at most once per family-local day.
      */
-    private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now): bool
+    private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now, ?string $metric = null): bool
     {
         // QA M5-R06-05 m2: the litter reminder is once per litter use (litterReminder), not per type.
         if ($type === PushType::LitterReminder || $type === PushType::TakeOutReminder) {
@@ -801,6 +815,14 @@ class NotificationService
         // M6-U02: once per pet — UpgradeReminderService guards with `upgrade_reminder_sent_at`.
         if ($type === PushType::UpgradeReminder) {
             return false;
+        }
+        // School milestone: once per pet + command ever (metric = the command) — learned_at is
+        // written once; this also refuses a second row for the same command.
+        if ($type === PushType::CommandLearned) {
+            return $metric !== null && PushNotification::where('pet_id', $pet->id)
+                ->where('type', $type->value)
+                ->where('metric', $metric)
+                ->exists();
         }
 
         $since = $type->isDailyReminder()

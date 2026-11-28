@@ -248,6 +248,20 @@ return [
     // Parents only; title = the pet's name (when set), the body never names the pet or the child. No price.
     'upgrade_reminder' => 'Your child has been looking after the dog for 7 days. Time for the real test? In the app you can start the 12-week challenge with the same dog.',
 
+    // School milestone (David 2026-11-28): the dog learned a command for the first time. Parents only;
+    // title = the pet's name (when set), the body never names the child. Command names = the app (training.json).
+    'command_learned' => [
+        'body' => 'Your pup learned a new command: “:command”!',
+        // A stored row with an unknown command.
+        'other' => 'Your pup learned a new command!',
+        'commands' => [
+            'sit' => 'Sit',
+            'come' => 'Come',
+            'place' => 'Place',
+            'potty' => 'Potty outside',
+        ],
+    ],
+
     // M5-R18 / R20 follow-up (David 2026-10-24): a new period of the parent's care reminder.
     // Parents only; title = the pet's name (when set), the body never names it.
     'care_reminder' => [

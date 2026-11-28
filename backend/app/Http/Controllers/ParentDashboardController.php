@@ -311,6 +311,8 @@ class ParentDashboardController extends Controller
                 'created_at' => $log->created_at?->toIso8601String(),
                 // Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative.
                 'is_positive' => ! $log->activity_type->isNegativeEvent(),
+                // School milestone (David 2026-11-28): the learned command of a `command_learned` row, else null.
+                'command' => FamilyDashboardService::timelineCommand($log->activity_type->value, $log->value),
             ];
         }
 
