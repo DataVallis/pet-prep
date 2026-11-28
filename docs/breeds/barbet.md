@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `barbet` (viri S1094–S1099; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: kolki, komolci, oči (Barbet Club of America prek AKC, K47) |
 | Izvor | FCI št. 105 »Barbet« (francoski vodni pes), skupina 8, sekcija 3 (vodni psi), s preizkusom dela, Francija (S1094) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 142. mesto »Barbet« (S174, prebrano 2026-11-28: »141 Saluki«, »142 Barbet«) |
-| PR-ji | pet-prep #1716 (pasma, združen `3a1acfd` 2026-11-28) · portret: zagon `breed-portraits.yml` 46091239924 (črn, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-146-barbet-portrait` · barvne različice: `feat/M5-R10-146-barbet-colours` · spletna stran: pet-prep-website `feat/register-barbet` |
+| PR-ji | pet-prep #1716 (pasma, združen `3a1acfd` 2026-11-28) · portret: zagon `breed-portraits.yml` 46091239924 (črn, sprejet v prvem poskusu), pet-prep PR #1719 (združen `f33e965`) · barvne različice: zagon 46092311507 (7/7 odobril Claude), pet-prep PR `feat/M5-R10-146-barbet-colours` · spletna stran: pet-prep-website `feat/register-barbet` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,6 +41,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-146 | 2026-11-28 |
 | Česanje 3× na teden, ščetkanje zob vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R17 | 2026-11-28 |
 | Barva (izbirnik: črn, rjav, siv, plavo rjav, črno-bel, rjavo-bel, svetlo plavo rjav, bel) | 🛠 | 💶 izziv | M5-R21 | 2026-11-28 |
+| Barvne fotografije (izbirnik in spletna stran): rjav, siv, plavo rjav, črno-bel, rjavo-bel, svetlo plavo rjav, bel — vseh sedem odobril Claude (zagon `breed-portraits.yml` 46092311507); črn = portret | ✅ AI fotografije | — | M5-R21 / §8b | 2026-11-28 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), črn, naravna kodrasta dlaka z brado, naraven rep, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-28 |
 | Stran na petprep.si (`/animals/dogs/barbet`, `/sl/zivali/psi/barbet`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
