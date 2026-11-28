@@ -2476,7 +2476,7 @@ flowchart TD
     SHOWN -->|"already_shown / 422 refused<br/>(not an error): write state, open nothing"| NONE["nothing opens"]
     APP -->|"no"| CHIP["chip »Nekaj novega o tvoji pasmi«<br/>(only may_auto_show && !shown_today — option A;<br/>gone after a read today / family midnight)"]
     CHIP -->|"tap = today's card:<br/>open + POST …/shown (refusal ignored)"| SHEET
-    BOOK["book button (raspberry dot = unread)"] --> GUIDE["BreedGuideScreen »Moja pasma«<br/>search (diacritic-insensitive), categories"]
+    BOOK["settings row »Ali si vedel?«<br/>(raspberry dot on row + gear = unread)"] --> GUIDE["BreedGuideScreen »Moja pasma«<br/>search (diacritic-insensitive), categories"]
     GUIDE -->|"tap a fact"| SHEET
     SHEET --> READ["POST /api/breed-facts/{fact}/read<br/>(breed_fact_reads, idempotent)"]
     CHIP --> READ

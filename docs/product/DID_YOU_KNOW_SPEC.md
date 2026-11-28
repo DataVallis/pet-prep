@@ -20,7 +20,7 @@
 | | Otrok (temni simulator) | Starš (svetli pregled) |
 |---|---|---|
 | Okno »Ali si vedel? / Ali ste vedeli?« | Spodnji list (bottom sheet) čez glavni zaslon, **2-krat na teden** | **Ni okna.** Mirna kartica na zavihku Pregled; »Naslednja« pokaže drugo |
-| Baza znanja | Gumb »knjiga« v zgornji vrstici → zaslon **Moja pasma** | Kartica → **Vodnik po pasmi**; tudi vrstica »O pasmi« v podrobnostih otroka |
+| Baza znanja | Vrstica »Ali si vedel?« v oknu Nastavitve (zobnik) → zaslon **Moja pasma** | Kartica → **Vodnik po pasmi**; tudi vrstica »O pasmi« v podrobnostih otroka |
 | Vsebina | Kratko, otroški ton, brez zdravstvenih tveganj | Vse kategorije + **Zdravje** (z opombo »ni veterinarsko preverjeno«), vir pri vsaki zanimivosti, preklop »Kar bere otrok« |
 | Pasme | Samo pasma njegovega ljubljenčka | Samo pasme ljubljenčkov družine |
 
@@ -28,7 +28,7 @@
 
 ## 3. Otrok
 ### 3.1 Vstopa (osnutek »Otrok · vstopa na glavnem zaslonu«)
-1. **Gumb »knjiga«** (52 px, steklo) desno od naslova v zgornji vrstici. Drobna malinasta pika = neprebrana zanimivost (edini malinast poudarek na zaslonu, po CGP).
+1. **Vrstica »Ali si vedel?«** (ikona knjige) v oknu **Nastavitve** (zobnik v zgornji vrstici), za »Kako skrbim«. Drobna malinasta pika = neprebrana zanimivost — na vrstici **in** na zobniku v zgornji vrstici (edini malinast poudarek na zaslonu, po CGP); bralnik zaslona pri zobniku reče »Nastavitve, nove zanimivosti o tvoji pasmi«. **David 28. 11. 2026:** gumb knjiga ni več v zgornji vrstici (stiskal je ime in razpoloženje ljubljenčka).
 2. **Čip »Nekaj novega o tvoji pasmi«** nad vrstico gumbov skrbi na dan, ko je okno na vrsti, pa se še ni odprlo samo (trenutek ni bil miren). Dotik odpre list. Čip izgine po branju ali ob polnoči (družinski čas); okno se prestavi na naslednji dan.
    **David 13. 10. 2026 (možnost A):** dotik čipa **šteje kot okno tega dne** — aplikacija zabeleži `shown` (če strežnik zavrne, se zanimivost vseeno odpre, ker jo je otrok sam želel), zato čip in samodejno okno skupaj ostaneta **največ 2-krat na teden**. Čip je viden **samo**, ko strežnik pravi, da je danes dan okna in ga še ni bilo (`may_auto_show` in ne `shown_today`); sicer ne. Okno, ki ga strežnik zabeleži, a se zaradi spremembe trenutka (igra, zaklep) ne odpre, porabi eno tedensko okno — ta dan ostane dosegljivo prek čipa.
    **Prebrano:** zanimivost šteje kot prebrana, ko se okno pokaže (David 13. 10. 2026).

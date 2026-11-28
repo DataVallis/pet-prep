@@ -20,6 +20,7 @@ import {
   makePet,
 } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { findHudSettingsRow, pressHudSettingsRow } from '@/test-utils/hudSettings';
 import { configure } from '@testing-library/react-native';
 
 configure({ defaultIncludeHiddenElements: true });
@@ -152,41 +153,53 @@ afterEach(async () => {
 });
 
 describe('HUD — »Ali si vedel?« entry points', () => {
-  it('pedigree pet with facts: book button with the raspberry dot while a fact is unread', async () => {
+  it('pedigree pet with facts: »Ali si vedel?« row in the settings sheet + raspberry dot on the row and the gear while a fact is unread', async () => {
     await renderHud();
-    const book = screen.getByTestId('hud-facts-open');
-    expect(book.props.accessibilityLabel).toBe('Ali si vedel? Zanimivosti o tvoji pasmi, čakajo nove zanimivosti');
-    expect(screen.getByTestId('hud-facts-unread')).toBeTruthy();
+    // David 2026-11-28: no book in the header any more (it squeezed the name / mood line).
+    expect(screen.queryByTestId('hud-facts-open')).toBeNull();
+    const gear = screen.getByTestId('hud-settings-open');
+    expect(gear.props.accessibilityLabel).toBe('Nastavitve, nove zanimivosti o tvoji pasmi');
+    expect(screen.getByTestId('hud-settings-unread')).toBeTruthy();
+    const row = findHudSettingsRow('hud-facts-row');
+    expect(row).not.toBeNull();
+    expect(row?.props.accessibilityLabel).toBe('Ali si vedel? Zanimivosti o tvoji pasmi, čakajo nove zanimivosti');
+    expect(screen.getByText('Ali si vedel?')).toBeTruthy();
+    expect(screen.getByTestId('hud-facts-row-unread')).toBeTruthy();
     expect(getBreedFacts).toHaveBeenCalledWith('border_collie', expect.anything());
   });
 
-  it('every fact read → book without the dot', async () => {
+  it('every fact read → row without the dot, plain gear', async () => {
     getBreedFacts.mockResolvedValue(makeBreedFacts([{ ...FACT_1, read: true, read_at: '2026-10-01T10:00:00Z' }]));
     getFactOfTheDay.mockResolvedValue(makeFactOfTheDay({ fact: null, may_auto_show: false, reason: 'no_fact' }));
     await renderHud();
-    expect(screen.getByTestId('hud-facts-open')).toBeTruthy();
-    expect(screen.queryByTestId('hud-facts-unread')).toBeNull();
+    expect(screen.queryByTestId('hud-settings-unread')).toBeNull();
+    expect(screen.getByTestId('hud-settings-open').props.accessibilityLabel).toBe('Nastavitve');
     expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+    expect(findHudSettingsRow('hud-facts-row')).not.toBeNull();
+    expect(screen.queryByTestId('hud-facts-row-unread')).toBeNull();
   });
 
   it('mutt: no request, no book, no chip, no sheet', async () => {
     await renderHud(collieState({ pet: { breed_type: 'mutt' } }));
     expect(getBreedFacts).not.toHaveBeenCalled();
     expect(getFactOfTheDay).not.toHaveBeenCalled();
-    expect(screen.queryByTestId('hud-facts-open')).toBeNull();
+    expect(findHudSettingsRow('hud-facts-row')).toBeNull();
+    expect(screen.queryByTestId('hud-settings-unread')).toBeNull();
     expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
   });
 
   it('domestic cat: nothing', async () => {
     await renderHud(collieState({ pet: { breed_type: 'domestic_cat', species: 'cat' } }));
     expect(getBreedFacts).not.toHaveBeenCalled();
-    expect(screen.queryByTestId('hud-facts-open')).toBeNull();
+    expect(findHudSettingsRow('hud-facts-row')).toBeNull();
+    expect(screen.queryByTestId('hud-settings-unread')).toBeNull();
   });
 
   it('a breed without approved facts (empty list): nothing empty ever shows', async () => {
     getBreedFacts.mockResolvedValue(makeBreedFacts([]));
     await renderHud();
-    expect(screen.queryByTestId('hud-facts-open')).toBeNull();
+    expect(findHudSettingsRow('hud-facts-row')).toBeNull();
+    expect(screen.queryByTestId('hud-settings-unread')).toBeNull();
     expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
     expect(getFactOfTheDay).not.toHaveBeenCalled();
   });
@@ -194,7 +207,8 @@ describe('HUD — »Ali si vedel?« entry points', () => {
   it('the list fails to load: no book (no broken entry)', async () => {
     getBreedFacts.mockRejectedValue(new TypeError('Network request failed'));
     await renderHud();
-    expect(screen.queryByTestId('hud-facts-open')).toBeNull();
+    expect(findHudSettingsRow('hud-facts-row')).toBeNull();
+    expect(screen.queryByTestId('hud-settings-unread')).toBeNull();
   });
 });
 
@@ -259,8 +273,8 @@ describe('HUD — calm moment', () => {
     expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
     // Never a refusal text for the child.
     expect(screen.queryByText(/week_cap|refused/)).toBeNull();
-    // The book still opens every fact.
-    expect(screen.getByTestId('hud-facts-open')).toBeTruthy();
+    // The settings row still opens every fact.
+    expect(findHudSettingsRow('hud-facts-row')).not.toBeNull();
   });
 
   it('already_shown (another device used today\'s card) → nothing opens, the chip goes', async () => {
@@ -427,7 +441,7 @@ describe('HUD — read marks', () => {
   it('offline: the read mark is undone (»Novo« comes back) and retried the next time the card shows', async () => {
     markBreedFactRead.mockRejectedValue(new TypeError('Network request failed'));
     await renderHud();
-    fireEvent.press(screen.getByTestId('hud-facts-open'));
+    pressHudSettingsRow('hud-facts-row');
     await flush(0);
     fireEvent.press(screen.getByTestId('breed-guide-fact-2'));
     await flush(0);
@@ -451,7 +465,7 @@ describe('HUD — read marks', () => {
   it('parent-only facts from the server never reach the child (second guard)', async () => {
     getBreedFacts.mockResolvedValue(makeBreedFacts([FACT_1, makeBreedFact({ id: 9, audience: 'parent', category: 'health', title: 'Zdravje: samo za starše.' })]));
     await renderHud();
-    fireEvent.press(screen.getByTestId('hud-facts-open'));
+    pressHudSettingsRow('hud-facts-row');
     await flush(0);
     expect(screen.queryByTestId('breed-guide-fact-9')).toBeNull();
     expect(screen.getByTestId('breed-guide-progress')).toHaveTextContent('Prebrano: 0 od 1');
@@ -471,7 +485,7 @@ describe('HUD — read marks', () => {
 describe('HUD — »Moja pasma«', () => {
   it('book → guide: progress, »Novo«, diacritic-insensitive search, tap opens the card, back closes', async () => {
     await renderHud();
-    fireEvent.press(screen.getByTestId('hud-facts-open'));
+    pressHudSettingsRow('hud-facts-row');
     await flush(0);
     expect(screen.getByTestId('breed-guide-breed')).toHaveTextContent('Border collie');
     expect(screen.getByTestId('breed-guide-progress')).toHaveTextContent('Prebrano: 0 od 2');

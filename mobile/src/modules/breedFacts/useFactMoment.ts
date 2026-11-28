@@ -48,9 +48,9 @@ export interface FactMomentInput {
 }
 
 export interface FactMoment {
-  /** Book button in the header (an approved fact exists for this breed). */
+  /** »Ali si vedel?« row in the settings sheet (an approved fact exists for this breed; David 2026-11-28 — no header book). */
   showBook: boolean;
-  /** Raspberry dot on the book. */
+  /** Raspberry dot on the settings row and on the header gear. */
   unread: boolean;
   /** »Nekaj novega o tvoji pasmi« above the dock. */
   showChip: boolean;

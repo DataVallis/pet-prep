@@ -60,7 +60,7 @@ describe('ChildHudScreen in English', () => {
     });
   });
 
-  it('dock, hints, steps and badge are English', async () => {
+  it('dock, hints, steps and the connection line are English', async () => {
     await act(async () => {
       await i18n.changeLanguage('en');
     });
@@ -73,8 +73,11 @@ describe('ChildHudScreen in English', () => {
     expect(screen.getByText('at 17:00')).toBeTruthy();
     expect(screen.getByText('1,250/4,000')).toBeTruthy();
     expect(screen.getByText('Mixed breed')).toBeTruthy();
-    expect(screen.getByText('LIVE')).toBeTruthy();
     expect(screen.getByTestId('metric-hunger').props.accessibilityLabel).toBe('Food 60%');
+    // David 2026-11-28: no LIVE pill in the header; the connection line lives in settings.
+    expect(screen.queryByText('LIVE')).toBeNull();
+    fireEvent.press(screen.getByTestId('hud-settings-open'));
+    expect(screen.getByText('Connection to server: live')).toBeTruthy();
   });
 
   it('a refused feed explains itself in simple English', async () => {
