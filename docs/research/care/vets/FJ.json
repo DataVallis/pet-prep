@@ -59,7 +59,8 @@
         "de": "Mobile Tierklinik mit Hausbesuchen und Notdienst, rund um die Uhr erreichbar in Suva, Nausori, Navua und Pacific Harbour.",
         "fr": "Clinique mobile pour animaux avec visites à domicile et urgences, disponible 24 h/24, 7 j/7 à Suva, Nausori, Navua et Pacific Harbour.",
         "es": "Clínica veterinaria móvil con visitas a domicilio y urgencias las 24 horas en Suva, Nausori, Navua y Pacific Harbour.",
-        "it": "Clinica veterinaria mobile con visite a domicilio e pronto soccorso, disponibile 24 ore su 24, 7 giorni su 7, a Suva, Nausori, Navua e Pacific Harbour."
+        "it": "Clinica veterinaria mobile con visite a domicilio e pronto soccorso, disponibile 24 ore su 24, 7 giorni su 7, a Suva, Nausori, Navua e Pacific Harbour.",
+        "pt": "Clínica veterinária móvel com visitas ao domicílio e atendimento de urgência, disponível 24 h/24, 7 dias por semana, em Suva, Nausori, Navua e Pacific Harbour."
       }
     },
     {
@@ -87,7 +88,8 @@
         "de": "Mo–Sa 8.00–16.30 Uhr geöffnet. Notfälle außerhalb der Sprechzeiten nur 17.00–22.00 Uhr, per SMS an 992 2634.",
         "fr": "Ouvert du lundi au samedi 8 h–16 h 30. En dehors des horaires, urgences uniquement, 17 h–22 h, par SMS au 992 2634.",
         "es": "Abierto de lunes a sábado 8:00–16:30 h. Urgencias fuera de horario solo de 17:00 a 22:00 h, por mensaje de texto al 992 2634.",
-        "it": "Aperto da lunedì a sabato 8:00–16:30. Solo urgenze fuori orario, 17:00–22:00, tramite SMS al 992 2634."
+        "it": "Aperto da lunedì a sabato 8:00–16:30. Solo urgenze fuori orario, 17:00–22:00, tramite SMS al 992 2634.",
+        "pt": "Aberto de segunda a sábado, 8h00–16h30. Urgências fora de horas apenas das 17h00 às 22h00, por mensagem de texto para 992 2634."
       }
     },
     {
@@ -114,7 +116,8 @@
         "de": "Mo–Sa 8.30–17.00 Uhr geöffnet, sonntags geschlossen. Notfall- und Nachttelefon unter derselben Nummer, wird nach Möglichkeit beantwortet (kein Dienst rund um die Uhr).",
         "fr": "Ouvert du lundi au samedi 8 h 30–17 h, fermé le dimanche. Ligne d’urgence et hors horaires sur le même numéro, assurée selon les disponibilités (pas un service 24 h/24).",
         "es": "Abierto de lunes a sábado 8:30–17:00 h, cerrado domingo. Línea de urgencias y fuera de horario en el mismo número, atendida según disponibilidad (no es un servicio 24 horas).",
-        "it": "Aperto da lunedì a sabato 8:30–17:00, domenica chiuso. Linea di emergenza e fuori orario sullo stesso numero, con risposta nei limiti del possibile (non è un servizio 24 ore su 24)."
+        "it": "Aperto da lunedì a sabato 8:30–17:00, domenica chiuso. Linea di emergenza e fuori orario sullo stesso numero, con risposta nei limiti del possibile (non è un servizio 24 ore su 24).",
+        "pt": "Aberto de segunda a sábado, 8h30–17h00, encerrado ao domingo. Linha de urgência e fora de horas no mesmo número, atendida sempre que possível (não é um serviço 24 h/24)."
       }
     },
     {
@@ -141,7 +144,8 @@
         "de": "Di–Sa 8.30–17.00 Uhr geöffnet; sonntags und montags geschlossen.",
         "fr": "Ouvert du mardi au samedi 8 h 30–17 h ; fermé le dimanche et le lundi.",
         "es": "Abierto de martes a sábado 8:30–17:00 h; cerrado domingo y lunes.",
-        "it": "Aperto da martedì a sabato 8:30–17:00; chiuso domenica e lunedì."
+        "it": "Aperto da martedì a sabato 8:30–17:00; chiuso domenica e lunedì.",
+        "pt": "Aberto de terça a sábado, 8h30–17h00; encerrado ao domingo e à segunda-feira."
       }
     },
     {
@@ -168,7 +172,8 @@
         "de": "Di–Fr 8.00–17.00 Uhr und Sa 8.00–13.00 Uhr geöffnet; sonntags und montags geschlossen.",
         "fr": "Ouvert du mardi au vendredi 8 h–17 h et le samedi 8 h–13 h ; fermé le dimanche et le lundi.",
         "es": "Abierto de martes a viernes 8:00–17:00 h y sábados 8:00–13:00 h; cerrado domingo y lunes.",
-        "it": "Aperto da martedì a venerdì 8:00–17:00 e sabato 8:00–13:00; chiuso domenica e lunedì."
+        "it": "Aperto da martedì a venerdì 8:00–17:00 e sabato 8:00–13:00; chiuso domenica e lunedì.",
+        "pt": "Aberto de terça a sexta-feira, 8h00–17h00, e sábado, 8h00–13h00; encerrado ao domingo e à segunda-feira."
       }
     },
     {
@@ -195,7 +200,8 @@
         "de": "Di–Fr 8.30–17.00 Uhr und Sa 8.00–13.00 Uhr geöffnet; sonntags und montags geschlossen.",
         "fr": "Ouvert du mardi au vendredi 8 h 30–17 h et le samedi 8 h–13 h ; fermé le dimanche et le lundi.",
         "es": "Abierto de martes a viernes 8:30–17:00 h y sábado 8:00–13:00 h; cerrado domingo y lunes.",
-        "it": "Aperto da martedì a venerdì 8:30–17:00 e sabato 8:00–13:00; chiuso domenica e lunedì."
+        "it": "Aperto da martedì a venerdì 8:30–17:00 e sabato 8:00–13:00; chiuso domenica e lunedì.",
+        "pt": "Aberto de terça a sexta-feira, 8h30–17h00, e sábado, 8h00–13h00; encerrado ao domingo e à segunda-feira."
       }
     },
     {
@@ -221,7 +227,8 @@
         "de": "Tierheim und Tierarztpraxis, Di–Sa 8.00–17.00 Uhr geöffnet. Bitte telefonisch Termin vereinbaren.",
         "fr": "Refuge de sauvetage et clinique vétérinaire, ouverts du mardi au samedi 8 h–17 h. Rendez-vous par téléphone.",
         "es": "Refugio de rescate y clínica veterinaria, abierto de martes a sábado 8:00–17:00 h. Reserva por teléfono.",
-        "it": "Rifugio e clinica veterinaria, aperti da martedì a sabato 8:00–17:00. Prenotare per telefono."
+        "it": "Rifugio e clinica veterinaria, aperti da martedì a sabato 8:00–17:00. Prenotare per telefono.",
+        "pt": "Abrigo de resgate e clínica veterinária, aberto de terça a sábado, 8h00–17h00. Marcação por telefone."
       }
     }
   ],
