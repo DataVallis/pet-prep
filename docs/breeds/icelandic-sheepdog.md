@@ -48,7 +48,7 @@
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč z belimi oznakami, pokončna ušesa, zavit košat rep, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-28 |
 | Barvne fotografije (izbirnik in spletna stran): trobarven, kremasto-bel, rdeče sobolji z belo, sivo-bel, čokoladno-rjavkasto-bel, bel z rdečimi lisami — vseh šest odobril Claude (zagon `breed-portraits.yml` 46102520830); rdeče-bel = portret | ✅ AI fotografije | — | M5-R21 / §8b | 2026-11-28 |
 | Stran na petprep.si (`/animals/dogs/icelandic-sheepdog`, `/sl/zivali/psi/islandski-ovcar`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
-| »Ali si vedel?« | 🛠 samodejno le **2** dejstvi (življenjska doba, konec rasti) — manj kot 4: gibanje (Dogs NSW »40 min/day«) je v registru brez kvalifikatorja, teža je v citatu v funtih, citat FCI za izvor ne vsebuje »Iceland«, višina / velikost / dlaka se s citati ne ujemajo dobesedno | — | M5-R09e | 2026-11-28 |
+| »Ali si vedel?« | 🛠 samodejno **3** dejstva (gibanje 40 minut na dan, življenjska doba, konec rasti; gibanje dodano s popravkom izvoza `fix/M5-R10-147-icelandic-sheepdog-exercise-qualifier` — »about 40« kot pri Bluetick coonhoundu) — manj kot 4: teža je v citatu v funtih, citat FCI za izvor ne vsebuje »Iceland«, višina / velikost / dlaka se s citati ne ujemajo dobesedno | — | M5-R09e | 2026-11-28 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -63,6 +63,6 @@
 - **Teža:** standardi teže ne navajajo — uporabljena je WebMD (vir B), za oba spola enako; Dogs NSW navaja »Small (under 11kg)«.
 - **Majhni otroci:** VCA ocenjuje »With Kids« z »Excellent«, a s pogojem socializacije → čipa `small_children` ni.
 - **Lajanje:** PetMD »can also bark a lot« — za lajanje v besednjaku ni ključa; nov čip bi bil nova odločitev.
-- **»Ali si vedel?«:** generator je zapisal le 2 dejstvi (manj kot 4). Islandija (`IS`) še ni v seznamu držav `scripts/generate-breed-facts.mjs` (in na spletni strani so potrebne besede EN / SL za novo državo izvora), citat FCI za izvor pa države ne navaja — dejstvo o izvoru zato manjka.
+- **»Ali si vedel?«:** generator je zapisal 3 dejstva (manj kot 4). Islandija (`IS`) še ni v seznamu držav `scripts/generate-breed-facts.mjs` (besede za novo državo izvora so na spletni strani dodane v vseh 15 jezikih, pet-prep-website #774), citat FCI za izvor pa države ne navaja — dejstvo o izvoru zato manjka.
 - **Ime / iskanje:** slovensko »islandski ovčar« / »islandski špic« ni preverjeno na straneh KZS.
 - **Skupni dokumenti:** število pasem psov v FEATURES / predstavitvah se po pravilu »Own files only« ne spreminja v tem zagonu.
