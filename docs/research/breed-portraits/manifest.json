@@ -1803,6 +1803,19 @@
             "prompt_hash": "sha256:8ecfe1911e2ed6bf8488dfc5e63f042623d822364eb2703b859adc69b7c823a6",
             "generated_at": "2026-11-28T01:05:14+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "icelandic_sheepdog",
+            "species": "dog",
+            "colour": "red-white",
+            "file": "dog/icelandic-sheepdog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:1a97cee04aea541bf091c62e027023941c69649d1d1696f1b3f03460ff34c8b4",
+            "generated_at": "2026-11-28T03:08:30+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
