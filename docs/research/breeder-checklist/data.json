@@ -4683,6 +4683,37 @@
         }
       ],
       "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk/search/breeds-a-to-z/breeds/hound/saluki redirects to royalkennelclub.com, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-27) → no minimum / best_practice level. WSAVA (K46 = dog-data S1093, a veterinary association): NCL8 DNA test recommended before breeding (existing key dna_ncl8, other_scheme); 'this fatal neurodegenerative disease is likely extremely rare in the breed' (S1093). PDSA (S1086) only refers to the Canine Health Schemes in general. No new key (M5-R10-145)."
+    },
+    "barbet": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K47",
+        "quote": "Breeders on the BCA website are required to test hips, elbows, and eyes."
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip test (Barbet Club of America breeder requirement)",
+          "source_id": "K47",
+          "quote": "Breeders on the BCA website are required to test hips, elbows, and eyes."
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "other_scheme",
+          "name": "Elbow test (Barbet Club of America breeder requirement)",
+          "source_id": "K47",
+          "quote": "Breeders on the BCA website are required to test hips, elbows, and eyes."
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye test (Barbet Club of America breeder requirement)",
+          "source_id": "K47",
+          "quote": "Breeders on the BCA website are required to test hips, elbows, and eyes."
+        }
+      ],
+      "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk display.aspx?id=2442 redirects to royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/barbet-imp, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-28) → no minimum / best_practice level. AKC (K47 = dog-data S1097): the Barbet Club of America requires breeders listed on its website to test hips, elbows and eyes (existing keys hip_scheme, elbow_scheme, eye_scheme; other_scheme). No new key (M5-R10-146)."
     }
   }
 }
