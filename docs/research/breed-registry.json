@@ -86382,12 +86382,12 @@
           "field": "exercise",
           "kind": "quantity",
           "unit": "min_per_day",
-          "qualifier": null,
+          "qualifier": "about",
           "value": 40,
           "source_ids": [
             "S1104"
           ],
-          "ref": "proposed_game_parameters.icelandic_sheepdog.exercise_minutes_adult",
+          "ref": "icelandic_sheepdog.exercise.adult",
           "confidence": "medium"
         },
         {

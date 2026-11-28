@@ -3687,7 +3687,7 @@ const DOG_FACTS = {
     ],
   },
   // M5-R10-147. RKC Breeds A–Z page not reachable, no PDSA / Woodgreen / Dogs Trust page → Dogs NSW (S1104): exercise
-  // '40 min/day' (the game value, exact); grooming PetMD 'Once a week' (S1101), shedding PetMD 'Yes'; lifespan WebMD 12–14 y
+  // '40 min/day' (about 40, like the Bluetick Coonhound — the website's real-cost page needs a qualifier); grooming PetMD 'Once a week' (S1101), shedding PetMD 'Yes'; lifespan WebMD 12–14 y
   // (S1102) + PetMD (S1101) span; height = FCI-Standard N° 289 ideal heights (S1100); weight = WebMD 25–30 lb both sexes
   // (S1102 — no standard gives a weight); coat FCI 'Medium' (two varieties). Not ranked by Coren (S35) → coren_rank: false.
   // FCI origin Iceland (IS, new in FCI_ORIGINS). Not exported: weight alternatives, lifespan.mcmillan_2024 (null) /
@@ -3697,7 +3697,7 @@ const DOG_FACTS = {
     height: ['height.fci'],
     weight: [['adult_weight.webmd', null]],
     lifespan: [['lifespan.webmd', 'span'], ['lifespan.petmd', 'span']],
-    exercise: [['@proposed_game_parameters.icelandic_sheepdog.exercise_minutes_adult', null]],
+    exercise: [['exercise.adult', 'about']],
     coat: ['suitability.fci_coat_length'],
     grooming: [['suitability.petmd_grooming', 'grooming_frequency']],
     shedding: ['suitability.petmd_shedding'],

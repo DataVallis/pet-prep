@@ -4615,7 +4615,7 @@ test('Icelandic Sheepdog (M5-R10-147): Dogs NSW 40 min, FCI height + WebMD weigh
   const d = registry.breeds.find((b) => b.id === 'icelandic_sheepdog');
   assert.deepEqual(d.name, { en: 'Icelandic Sheepdog', sl: 'Islandski ovčar' });
   assert.equal(d.availability, expectedAvailability(d.id));
-  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[40, null, ['S1104']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[40, 'about', ['S1104']]]);
   // Iceland is a new FCI origin (IS).
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 289, group: 5, section: 3, origin: 'IS' });
   assert.ok(!d.facts.some((f) => f.field === 'coren_rank'));

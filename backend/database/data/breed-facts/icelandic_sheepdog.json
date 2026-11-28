@@ -2,6 +2,28 @@
   "breed": "icelandic_sheepdog",
   "facts": [
     {
+      "key": "icelandic_sheepdog-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Icelandic Sheepdog needs 40 minutes of exercise every day.",
+        "sl": "Islandski ovčar potrebuje vsak dan 40 minut gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 4,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 4.000 korakov."
+      },
+      "source_id": "S1104",
+      "source_name": "Dogs NSW (ANKC member)",
+      "source_url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/icelandic-sheepdog/",
+      "quote": "40 min/day",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "e9c76ebe6b99ead69caf45a66dc63acc991b976eeb382530e1fe4972c8b05d3c"
+    },
+    {
       "key": "icelandic_sheepdog-auto-lifespan",
       "category": "body",
       "audience": "child",
