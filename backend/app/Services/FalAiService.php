@@ -1092,6 +1092,13 @@ class FalAiService
                 .'a long, narrow head with a black nose, dark to hazel, large oval eyes that are not prominent, '
                 .'long, high-set ears covered with long silky hair, hanging close to the skull, a deep, moderately narrow chest, '
                 .'a long, low-set tail carried naturally in a curve and well feathered underneath, photorealistic, studio quality, natural lighting',
+            // M5-R10-146: FCI-Standard N° 105 (S1094) — a medium-sized French water dog with a thick, woolly, curly coat
+            // in its natural state and a beard; colours of the FCI standard, black = the portrait default; natural tail.
+            BreedType::Barbet => 'A medium-sized Barbet French water dog, solid black: '
+                .'a long, thick, woolly and curly coat covering the whole body in a natural, untrimmed state, a beard on the chin, '
+                .'a broad rounded skull with hair falling onto the bridge of the nose, a quite square muzzle covered by long hair, a broad black nose, '
+                .'round dark brown eyes, low-set, long, flat, wide ears covered by long hair hanging in strands, '
+                .'a low-set tail slightly raised with a slight hook at the tip, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2537,6 +2544,13 @@ class FalAiService
                 'eye_color' => 'dark to hazel',
                 'fur_texture' => 'smooth, soft, silky coat with feathering on the ears, legs and tail',
                 'markings' => 'long feathered ears, natural long tail carried in a curve, never brindle',
+            ],
+            // M5-R10-146: FCI S1094 "Solid black, grey, brown, fawn, pale fawn, white or more or less pied." (black = default).
+            BreedType::Barbet => [
+                'color_scheme' => 'solid black',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, thick, woolly and curly coat in a natural state, with a beard',
+                'markings' => 'long low-set ears covered by long hair, natural tail with a slight hook at the tip, never shaved',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

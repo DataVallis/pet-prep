@@ -3403,5 +3403,30 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S1087'], 'refs' => ['saluki.behaviour.time_alone']],
             ],
         ],
+
+        // M5-R10-146 Barbet (data.json proposed_game_parameters.barbet.suitability_tags; S1095, S1096), runbook rules.
+        // RKC Breed Watch category not reached (RKC page refused) → no welfare chip; in marketing. low_shedding from PetMD
+        // "doesn’t shed very much" — never "hypoallergenic" (PetMD's word is not used). No apartment chip (AKC "can thrive in
+        // apartments" is not the RKC key fact). No new vocabulary key.
+        'barbet' => [
+            'suits' => [
+                // S1095 "Intelligent, loyal, and highly trainable, Barbet dogs are excellent companions for active families."
+                ['tag' => 'active_family', 'source_ids' => ['S1095'], 'refs' => ['barbet.behaviour.family']],
+                // S1096 "this dog gets along well with children, the elderly, and usually with other dogs."
+                ['tag' => 'children', 'source_ids' => ['S1096'], 'refs' => ['barbet.behaviour.children']],
+                // S1095 "Barbet are calm and friendly dogs, and they generally get along well with other pets and children,"
+                ['tag' => 'other_pets', 'source_ids' => ['S1095'], 'refs' => ['barbet.behaviour.other_pets']],
+                // S1095 "This breed doesn’t shed very much"
+                ['tag' => 'low_shedding', 'source_ids' => ['S1095'], 'refs' => ['barbet.suitability.petmd_shedding']],
+            ],
+            'consider' => [
+                // S1095 breed club "two to three times a week"; "Brushing is required at least twice a week, …"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S1095'], 'refs' => ['barbet.suitability.petmd_grooming', 'barbet.suitability.petmd_grooming_min']],
+                // S1095 "They may not thrive in homes where they are left alone for extended periods without stimulation."
+                ['tag' => 'needs_company', 'source_ids' => ['S1095'], 'refs' => ['barbet.behaviour.time_alone']],
+                // S1096 "… their thick coat tends to make their body overheat really quickly."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S1096'], 'refs' => ['barbet.exercise.heat']],
+            ],
+        ],
     ],
 ];
