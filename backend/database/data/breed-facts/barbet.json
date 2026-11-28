@@ -1,0 +1,103 @@
+{
+  "breed": "barbet",
+  "facts": [
+    {
+      "key": "barbet-auto-exercise",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "The Barbet needs at least 1 hour of exercise every day.",
+        "sl": "Barbet potrebuje vsak dan vsaj 1 uro gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 6,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 6.000 korakov."
+      },
+      "source_id": "S1095",
+      "source_name": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated 2024-07-16)",
+      "source_url": "https://www.petmd.com/dog/breeds/barbet",
+      "quote": "Expect to spend at least an hour exercising your Barbet every day.",
+      "game_rule_key": "daily_steps",
+      "sort": 10,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "63013984f89b4b4b0396c49e29a553de9b5babe376049abd60015def19b9580b"
+    },
+    {
+      "key": "barbet-auto-size",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Barbet is a medium-sized dog breed.",
+        "sl": "Barbet je srednje velika pasma psov."
+      },
+      "why": null,
+      "source_id": "S1095",
+      "source_name": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated 2024-07-16)",
+      "source_url": "https://www.petmd.com/dog/breeds/barbet",
+      "quote": "The Barbet is a friendly, medium-sized dog, typically standing 19.5–24.5 inches tall and weighing 35–65 pounds.",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0dfa59c37028cd793358eb6036c532b304adfa895cfba65a18a45d0f0209bb31"
+    },
+    {
+      "key": "barbet-auto-coat",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Barbet has a long coat.",
+        "sl": "Barbet ima dolgo dlako."
+      },
+      "why": null,
+      "source_id": "S1094",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/105g08-en.pdf",
+      "quote": "Long, woolly and curly; can form strands.",
+      "game_rule_key": null,
+      "sort": 50,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "04f03bb06b76bd07c344bf853719eb9af78f690cff2b49a4a8511fb577d22653"
+    },
+    {
+      "key": "barbet-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Barbet usually lives more than 10 years.",
+        "sl": "Barbet običajno živi več kot 10 let."
+      },
+      "why": null,
+      "source_id": "S1096",
+      "source_name": "WebMD — Christine Loconti; medically reviewed by Zilpah Sheikh, MD (2026-04-29)",
+      "source_url": "https://www.webmd.com/pets/dogs/what-to-know-about-barbets",
+      "quote": "The average barbet lifespan is over 10 years, with many dogs living between 12 to 14 years.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "0c68b5a7c14e6c240ac0a8da85925e02113256aa041d16e3199de744ca6e2c92"
+    },
+    {
+      "key": "barbet-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Barbet reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je barbet, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "049eb7762698557bd2237739136d42b5b94a272fa3282ce9fb78b6fbcfc58c4f"
+    }
+  ]
+}

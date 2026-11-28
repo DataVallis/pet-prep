@@ -143,6 +143,7 @@ return [
     'welsh_springer_spaniel' => 'Velški springer španjel',
     'smooth_fox_terrier' => 'Gladkodlaki foksterier',
     'saluki' => 'Saluki',
+    'barbet' => 'Barbet',
     'bearded_collie' => 'Bradati koli',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',

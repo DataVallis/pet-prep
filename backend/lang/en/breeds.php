@@ -143,6 +143,7 @@ return [
     'welsh_springer_spaniel' => 'Welsh Springer Spaniel',
     'smooth_fox_terrier' => 'Smooth Fox Terrier',
     'saluki' => 'Saluki',
+    'barbet' => 'Barbet',
     'bearded_collie' => 'Bearded Collie',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',

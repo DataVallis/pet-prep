@@ -6573,4 +6573,44 @@ return [
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
+    // M5-R10-146 (docs/research/dog-data/data.json barbet.appearance; runbook rules 2026-10-10: FCI-Standard N° 105 (S1094)
+    // "Solid black, grey, brown, fawn, pale fawn, white or more or less pied." — never another colour (FCI fault); black = the
+    // portrait default (Claude — weights unsourced); the natural, never-shaved curly coat with a beard; natural tail).
+    'barbet' => [
+        'display_name' => 'Barbet',
+        // Colour frequencies are in no source (barbet.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 105 (S1094), AKC (S1097) and PetMD (S1095) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'PetMD S1095 "The Barbet is a friendly, medium-sized dog, typically standing 19.5–24.5 inches tall and weighing 35–65 pounds."; S1094 "With a tolerance of +/- 1cm" (58–65 / 53–61 cm)',
+            'build' => 'S1094 "characterized by a thick, woolly coat which guarantees efficient protection against cold and damp."',
+            'coat_length' => 'S1094 "Long, woolly and curly; can form strands."; AKC S1097 "They were not meant to be shaved to the skin"',
+            'coat_color' => 'S1094 "Solid black, grey, brown, fawn, pale fawn, white or more or less pied."; S1097 "Coat colors include all shades of black, gray, brown, and fawn, which all may include white markings." (weights unsourced)',
+            'muzzle' => 'S1094 "Broad, with well opened nostrils; black or brown depending on the colour of the coat."',
+            'ear_carriage' => 'S1094 "Set on low (at eye level or slightly lower), long, flat, wide, covered by long hair hanging in strands."',
+            'eye_color' => 'S1094 "Round, preferably dark brown. The rim of the eyelid is black or brown."',
+            'tail' => 'S1094 "Slightly raised, carried above the horizontal when the dog is in action, low set, forming a slight hook at the tip." (natural)',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'sturdy, medium-sized water dog with a thick, woolly coat and a beard on the chin', 'weight' => 3], 'well-balanced, athletic water dog covered in a natural curly coat'],
+            'coat_length' => ['long, thick, woolly and curly coat covering the whole body in a natural, untrimmed state, never shaved'],
+            // FCI S1094 colour list (pied = with white markings, AKC S1097) — never another colour.
+            'coat_color' => [
+                ['value' => 'solid black with a black nose', 'weight' => 25],
+                ['value' => 'solid brown with a brown nose', 'weight' => 20],
+                ['value' => 'solid grey', 'weight' => 12],
+                ['value' => 'fawn (red-fawn)', 'weight' => 12],
+                ['value' => 'black with white markings (pied)', 'weight' => 10],
+                ['value' => 'brown with white markings (pied)', 'weight' => 10],
+                ['value' => 'pale fawn', 'weight' => 6],
+                ['value' => 'white', 'weight' => 5],
+            ],
+            'muzzle' => ['broad rounded skull, quite square muzzle covered by long hair, a beard, a broad nose'],
+            'ear_carriage' => ['low-set, long, flat, wide ears covered by long hair hanging in strands'],
+            'eye_color' => ['round, dark brown eyes'],
+            'tail' => ['low-set natural tail, slightly raised, with a slight hook at the tip'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
 ];

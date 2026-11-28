@@ -526,6 +526,7 @@ const SPECIES = [
       { id: 'smooth_fox_terrier', synonyms: { en: ['Fox Terrier (Smooth)', 'Smooth-coated Fox Terrier', 'Foxie'], sl: ['foksterier', 'gladkodlaki fox terier', 'kratkodlaki foksterier'] } },
       { id: 'bearded_collie', synonyms: { en: ['Beardie', 'Highland Collie', 'Hairy Mou\'ed Collie'], sl: ['bearded collie', 'beardie', 'bradati collie'] } },
       { id: 'saluki', synonyms: { en: ['Persian Greyhound', 'Gazelle Hound', 'Arabian Hound'], sl: ['perzijski hrt', 'saluki hrt'] } },
+      { id: 'barbet', synonyms: { en: ['French Water Dog'], sl: ['francoski vodni pes'] } },
     ],
   },
   {
@@ -3660,6 +3661,30 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.thyroid'],
     ],
   },
+  // M5-R10-146. RKC Breeds A–Z page not reachable, no PDSA / Woodgreen / Dogs Trust page → PetMD (S1095): exercise 'at least
+  // an hour' (the game value, 'at_least'), grooming 'More than once a week' (breed club two to three times), shedding
+  // 'Minimal' (never hypoallergenic); lifespan WebMD 'over 10 years' (S1096) + the PetMD span 12–15 y; height = FCI-Standard
+  // N° 105 (S1094); weight = WebMD per sex (S1096 — no standard gives a weight); coat FCI 'Long'. Not ranked by Coren (S35)
+  // → coren_rank: false. FCI origin France (FR). Not exported: weight alternatives, lifespan.mcmillan_2024 (null) /
+  // senior_from (derived). No new health key.
+  barbet: {
+    height: ['height.fci'],
+    weight: [['adult_weight.webmd', null]],
+    lifespan: [['lifespan.webmd', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.barbet.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.fci_coat_length'],
+    grooming: [['suitability.petmd_grooming', 'grooming_frequency']],
+    shedding: ['suitability.petmd_shedding'],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['ear_infections_long_ears', 'health.ears'],
+      ['itchy_skin_allergy', 'health.allergies'],
+      ['epilepsy', 'health.epilepsy'],
+    ],
+  },
 
 
 
@@ -3761,6 +3786,7 @@ export const DOG_CARE_TASKS = {
   welsh_springer_spaniel: [['tooth_brushing', 7, 7, 'proposed_game_parameters.welsh_springer_spaniel.tooth_brushing'], ['nail_trim', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.welsh_springer_spaniel.bathing']],
   smooth_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.smooth_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.smooth_fox_terrier.ear_cleaning']],
   saluki: [['tooth_brushing', 7, 7, 'proposed_game_parameters.saluki.tooth_brushing']],
+  barbet: [['tooth_brushing', 7, 7, 'proposed_game_parameters.barbet.tooth_brushing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4870,6 +4896,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.saluki.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.saluki.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.saluki.exercise_minutes_senior',
+  },
+  barbet: {
+    adult_minutes: ['proposed_game_parameters.barbet.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.barbet.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.barbet.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.barbet.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.barbet.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.barbet.exercise_minutes_senior',
   },
 
 

@@ -1018,4 +1018,16 @@ return [
         ['key' => 'tricolour', 'value' => 'tricolour (white, black and tan)', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
         ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
     ],
+    // M5-R10-146: FCI-Standard N° 105 S1094 "Solid black, grey, brown, fawn, pale fawn, white or more or less pied."
+    // (AKC S1097: all may include white markings) — same order as the appearance block; black = the portrait default.
+    'barbet' => [
+        ['key' => 'black', 'value' => 'solid black with a black nose', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'brown', 'value' => 'solid brown with a brown nose', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'grey', 'value' => 'solid grey', 'en' => 'Grey', 'sl' => 'Siv'],
+        ['key' => 'fawn', 'value' => 'fawn (red-fawn)', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'black-white', 'value' => 'black with white markings (pied)', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'brown-white', 'value' => 'brown with white markings (pied)', 'en' => 'Brown and white', 'sl' => 'Rjavo-bel'],
+        ['key' => 'pale-fawn', 'value' => 'pale fawn', 'en' => 'Pale fawn', 'sl' => 'Svetlo plavo rjav'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
 ];

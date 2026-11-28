@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "052307110652e243b9edf3aaf6e8a320bef81eab898b9d78483518630c4a7a6b"
+      "sha256": "8388950e7dc5da6127063ee07039712ff2607707bc338e69f538df4cf8f0d5b3"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "f613116e21c24ddd28b71d5b94c25c6a9f013bfbdfea6a19f9057c6a21f22457"
+      "sha256": "c687aa1e631dd0678639f159a4fb0623a0643e45a85dc15b5b35f23b4749a4b2"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "29a1a671dc388b1144b9772ca3d51121fc4c798baabe8b6b988ea8f0281ee00a"
+      "sha256": "d19e4bb5e873f15866e9fef75f8d31279ef07e3f7feaf0ae25076e714f83c004"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "8c9732e0db3260a3dcfb576eb7ed00fd1260a22a46c8cf321c387eb4f6632af3"
+      "sha256": "bb12b453637b82548d0210401c87c111e54ddb57bbd471e5fa6a2781044d40d7"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "bdda3a9d5b9949ab1c0f153e53613895999853600dd4cc9f4df9f545df114494"
+      "sha256": "9a30bb55f74c2f9b379a7d1a556b95f9cc72ef30c346fc660136b6241af87b2a"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "88088a90e762bdcd68262655d2fa76d1b23b947dcc09d2fd2ca092a2908e7eb8"
+      "sha256": "4d9ec6c3df5897e2050cc7040d5d858179a53863953a3f8214aecd9b5124950e"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "4f589c007c0a6da56e2bfcd1a0565929e1e81409c9fae21890811830cf388118"
+      "sha256": "65ea9dc53751c6d8fd5c663a6fa99328ba3201740ac26900f9fa05ba417da774"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "d29a2b881b8c64aa02359c54da96141d23df4e6d964af618e2a32f1360f17c1d"
+      "sha256": "68f26574434190a4b706411550fe5bd17cacce16bf214f8335dd3dfc8866130c"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 136,
+      "breed_count": 137,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -85596,6 +85596,584 @@
       ]
     },
     {
+      "id": "barbet",
+      "species": "dog",
+      "order": 136,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Barbet",
+        "sl": "Barbet"
+      },
+      "slug": {
+        "en": "barbet",
+        "sl": "barbet"
+      },
+      "synonyms": {
+        "en": [
+          "French Water Dog"
+        ],
+        "sl": [
+          "francoski vodni pes"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              65
+            ],
+            "female": [
+              53,
+              61
+            ]
+          },
+          "source_ids": [
+            "S1094"
+          ],
+          "ref": "barbet.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              18,
+              27
+            ],
+            "female": [
+              13.5,
+              23
+            ]
+          },
+          "source_ids": [
+            "S1096"
+          ],
+          "ref": "barbet.adult_weight.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "barbet.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S1096"
+          ],
+          "ref": "barbet.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "proposed_game_parameters.barbet.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S1094"
+          ],
+          "ref": "barbet.suitability.fci_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.suitability.petmd_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "minimal",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.suitability.petmd_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 105,
+            "group": 8,
+            "section": 3,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S1094"
+          ],
+          "ref": "barbet.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "ear_infections_long_ears",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.health.ears",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.health.allergies",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S1095"
+          ],
+          "ref": "barbet.health.epilepsy",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1095"
+            ],
+            "refs": [
+              "barbet.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1096"
+            ],
+            "refs": [
+              "barbet.behaviour.children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S1095"
+            ],
+            "refs": [
+              "barbet.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S1095"
+            ],
+            "refs": [
+              "barbet.suitability.petmd_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S1095"
+            ],
+            "refs": [
+              "barbet.suitability.petmd_grooming",
+              "barbet.suitability.petmd_grooming_min"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1095"
+            ],
+            "refs": [
+              "barbet.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S1096"
+            ],
+            "refs": [
+              "barbet.exercise.heat"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.barbet.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1095"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S1095 'at least an hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.barbet.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.barbet.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1096"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × WebMD lower bound 'over 10 years', S1096)"
+          },
+          {
+            "ref": "proposed_game_parameters.barbet.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.barbet.grooming",
+            "basis_source_ids": [
+              "S1095"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (PetMD / klub pasme »two to three times a week« → zgornja meja); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.barbet.tooth_brushing",
+            "basis_source_ids": [
+              "S1096"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »every day or two« → vsak dan (krajši razmik)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1095",
+          "S1096"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K47"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K47"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K47"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K47"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1094",
+        "S1095",
+        "S1096",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K47"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -93165,6 +93743,27 @@
       "url": "https://www.webmd.com/pets/dogs/what-to-know-salukis"
     },
     {
+      "id": "S1094",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 105 — BARBET (French Water Dog) (EN, 29.03.2006)",
+      "url": "https://www.fci.be/Nomenclature/Standards/105g08-en.pdf"
+    },
+    {
+      "id": "S1095",
+      "tier": "B",
+      "publisher": "PetMD — Erica Vasquez, reviewed by Barri J. Morrison, DVM (updated 2024-07-16)",
+      "title": "Barbet Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/barbet"
+    },
+    {
+      "id": "S1096",
+      "tier": "B",
+      "publisher": "WebMD — Christine Loconti; medically reviewed by Zilpah Sheikh, MD (2026-04-29)",
+      "title": "What to Know About Barbets",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-about-barbets"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -93653,6 +94252,13 @@
       "publisher": "WSAVA (World Small Animal Veterinary Association)",
       "title": "Dog Breeds: What you need to know about Salukis (2020-10-13, modified 2024-04-02)",
       "url": "https://wsava.org/updates/dog-breeds-what-you-need-to-know-about-salukis/"
+    },
+    {
+      "id": "K47",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Meet the Barbet: 2020's new AKC-recognized breed",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/barbet-2020-new-akc-recognized-breed/"
     }
   ]
 }
