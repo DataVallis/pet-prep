@@ -13,7 +13,7 @@
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "815106deea4f6105fa43702151915b60f7d0a34bf37089807c2edefbd74e7598"
+      "sha256": "2775744e295c35f794f0ee8f52814f0c8ea1fa0c607fdd274dada6379e49ada2"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
