@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "e3a6464deb06abed34dde113e99f70fdc3d51ce73c44eefb51a9cac7a9bc1533"
+      "sha256": "87230909fdcf076bf6f9be75f4135c42be0cce1846cc9efb22199e89cbec6f0a"
     }
   },
   "suitability_vocabulary": {
@@ -86120,7 +86120,74 @@
         "file": "barbet.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_photo"
+        "kind": "ai_photo",
+        "colours": [
+          {
+            "key": "black",
+            "label": {
+              "en": "Black",
+              "sl": "Črn"
+            },
+            "file": "dog/barbet.webp",
+            "default": true
+          },
+          {
+            "key": "brown",
+            "label": {
+              "en": "Brown",
+              "sl": "Rjav"
+            },
+            "file": "dog/barbet--brown.webp"
+          },
+          {
+            "key": "grey",
+            "label": {
+              "en": "Grey",
+              "sl": "Siv"
+            },
+            "file": "dog/barbet--grey.webp"
+          },
+          {
+            "key": "fawn",
+            "label": {
+              "en": "Fawn",
+              "sl": "Plavo rjav"
+            },
+            "file": "dog/barbet--fawn.webp"
+          },
+          {
+            "key": "black-white",
+            "label": {
+              "en": "Black and white",
+              "sl": "Črno-bel"
+            },
+            "file": "dog/barbet--black-white.webp"
+          },
+          {
+            "key": "brown-white",
+            "label": {
+              "en": "Brown and white",
+              "sl": "Rjavo-bel"
+            },
+            "file": "dog/barbet--brown-white.webp"
+          },
+          {
+            "key": "pale-fawn",
+            "label": {
+              "en": "Pale fawn",
+              "sl": "Svetlo plavo rjav"
+            },
+            "file": "dog/barbet--pale-fawn.webp"
+          },
+          {
+            "key": "white",
+            "label": {
+              "en": "White",
+              "sl": "Bel"
+            },
+            "file": "dog/barbet--white.webp"
+          }
+        ]
       },
       "breeder_checklist": {
         "status": "listed",

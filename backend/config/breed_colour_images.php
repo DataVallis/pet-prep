@@ -783,6 +783,16 @@ return [
         'tricolour' => 'dogs/saluki--tricolour.webp',
         'black-tan' => 'dogs/saluki--black-tan.webp',
     ],
+    'barbet' => [
+        'black' => 'dogs/barbet.webp',
+        'brown' => 'dogs/barbet--brown.webp',
+        'grey' => 'dogs/barbet--grey.webp',
+        'fawn' => 'dogs/barbet--fawn.webp',
+        'black-white' => 'dogs/barbet--black-white.webp',
+        'brown-white' => 'dogs/barbet--brown-white.webp',
+        'pale-fawn' => 'dogs/barbet--pale-fawn.webp',
+        'white' => 'dogs/barbet--white.webp',
+    ],
     'maine_coon' => [
         'brown' => 'cats/maine-coon.webp',
         'red' => 'cats/maine-coon--red.webp',
