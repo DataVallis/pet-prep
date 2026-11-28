@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\AiCallFailure;
 use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
@@ -14,6 +15,7 @@ use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaQualityCheck;
 use App\Models\User;
+use App\Services\Alerts\DiscordWebhook;
 use App\Services\AppSettingsService;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
@@ -401,7 +403,7 @@ describe('»looks older« check of a pet\'s own stage image', function () {
         expect($image->status)->toBe('ready')->and($image->quality)->toBeNull()->and(saiVisionCalls())->toHaveCount(0);
     });
 
-    it('never checks a first reference image (no earlier stage to compare)', function () {
+    it('never checks a same-stage regenerate of a pet\'s own slot (text-to-image, no earlier stage to compare)', function () {
         saiFakeFal();
         [$pet, $old] = saiYoungDog();
         // An admin regenerate at the SAME stage: the stored file is not an earlier stage's image.
@@ -413,6 +415,36 @@ describe('»looks older« check of a pet\'s own stage image', function () {
 
         expect(PetMedia::where('pet_id', $pet->id)->images()->sole()->status)->toBe('ready')
             ->and(saiVisionCalls())->toHaveCount(0);
+    });
+});
+
+describe('»looks older« alert and retry planning', function () {
+    it('posts the aggregated alert with the count only — no pet, look or family fields, no AI Lab hint', function () {
+        config(['services.discord.alerts_webhook_url' => 'https://discord.com/api/webhooks/1/test']);
+        Http::fake(['discord.com/*' => Http::response(null, 204)]);
+        StillQualityService::countStageAlert();
+        StillQualityService::countStageAlert();
+        StillQualityService::countStageAlert();
+
+        (new SendStageImageAlert)->handle(app(DiscordWebhook::class));
+
+        $posts = Http::recorded(fn (Request $r) => str_contains($r->url(), 'discord.com'))->map(fn (array $p) => $p[0]->data())->values();
+        expect($posts)->toHaveCount(1);
+        $embed = $posts[0]['embeds'][0];
+        expect($posts[0]['content'])->toContain('3 life-stage image')
+            ->and($embed['fields'])->toBe([])
+            ->and($embed['description'])->not->toContain('AI Lab')
+            ->and($embed['description'])->toContain('re-renders it from text')
+            ->and($embed['description'])->toContain('AI media → Shared looks → »Regenerate media«')
+            ->and(StillQualityService::takeStageAlertCount())->toBe(0);
+    });
+
+    it('refuses a remake while the fal balance is flagged exhausted (fail closed), allows it otherwise', function () {
+        expect(app(PetMediaService::class)->stageRetryRefusal())->toBeNull();
+
+        Cache::put(FalGateway::BALANCE_FLAG_KEY, now()->toIso8601String(), now()->addDay());
+
+        expect(app(PetMediaService::class)->stageRetryRefusal())->toBe(AiCallFailure::FalBalance->value);
     });
 });
 
@@ -455,5 +487,77 @@ describe('»looks older« check of a shared look\'s stage image', function () {
             ->and($young->quality)->toBe(PetMedia::QUALITY_PASSED)
             ->and($young->storage_path)->toBe("looks/{$pet->pet_look_id}/reference-young-g2.jpg")
             ->and(PetMedia::where('pet_id', $pet->id)->images()->value('storage_path'))->toBe($young->storage_path);
+    });
+
+    /** The look's young row with a failed candidate, plus linked pets of the same look (in id order). */
+    function saiFailedYoungLookRow(Pet $pet): PetMedia
+    {
+        Storage::disk('pet_media')->put("looks/{$pet->pet_look_id}/candidate.jpg", SAI_JPEG);
+
+        return PetMedia::create([
+            'pet_look_id' => $pet->pet_look_id, 'kind' => 'image', 'state' => null, 'status' => 'running', 'generation' => 1,
+            'life_stage' => 'young', 'profile' => 'nano_banana_pro_edit', 'candidate_path' => "looks/{$pet->pet_look_id}/candidate.jpg",
+            'candidate_mime' => 'image/jpeg', 'candidate_bytes' => 20,
+        ]);
+    }
+
+    function saiLinkedPet(Pet $like, PetMedia $lookRow, string $status, bool $active): Pet
+    {
+        $child = createChildUser(['parent_id' => $like->user->parent_id]);
+        $other = disableHygieneEvents(Pet::factory()->state(['breed_type' => 'mutt'])->create([
+            'user_id' => $child->id, 'pet_look_id' => $like->pet_look_id, 'life_stage' => 'young', 'born_at' => now()->subWeeks(3), 'arrival_age_months' => 2,
+            'is_active' => $active, 'plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null,
+        ]))->fresh();
+        PetMedia::create(['pet_id' => $other->id, 'kind' => 'image', 'state' => null, 'status' => $status, 'generation' => 1, 'life_stage' => 'young', 'look_media_id' => $lookRow->id]);
+
+        return $other;
+    }
+
+    function saiRetryStage(PetMedia $row): string
+    {
+        $service = app(StillQualityService::class);
+
+        return (fn () => $this->retryStage($row->fresh(), (string) $row->candidate_path, 'still a puppy'))->call($service);
+    }
+
+    it('enforce: a look row remake goes to an ACTIVE pet still waiting for it — never a ready or inactive linked pet with a lower id', function () {
+        saiFakeFal();
+        $pet = saiPoolPet();
+        $row = saiFailedYoungLookRow($pet);
+        // Lower ids first: the pool pet's own slot is READY (linked), an inactive pet waits, then the waiting active pet.
+        PetMedia::where('pet_id', $pet->id)->images()->update(['look_media_id' => $row->id, 'status' => 'ready']);
+        $inactive = saiLinkedPet($pet, $row, 'pending', false);
+        $waiting = saiLinkedPet($pet, $row, 'pending', true);
+        $before = Queue::pushed(GeneratePetReferenceImage::class)->count();
+
+        expect(app(StillQualityService::class)->lookStageRetryPetId($row))->toBe($waiting->id)
+            ->and(saiRetryStage($row))->toBe('retrying');
+
+        $pushed = Queue::pushed(GeneratePetReferenceImage::class)->slice($before)->values();
+        expect($pushed)->toHaveCount(1)
+            ->and($pushed[0]->petId)->toBe($waiting->id)
+            ->and($pushed[0]->petId)->not->toBe($inactive->id);
+        $row->refresh();
+        expect($row->status)->toBe('pending')->and((int) $row->generation)->toBe(2)->and($row->candidate_path)->toBeNull();
+    });
+
+    it('enforce: no pet waits for the look row — it stays pending for the next pet of the look, no job, nothing paid', function () {
+        saiFakeFal();
+        $pet = saiPoolPet();
+        $row = saiFailedYoungLookRow($pet);
+        PetMedia::where('pet_id', $pet->id)->images()->update(['look_media_id' => $row->id, 'status' => 'ready']);
+        saiLinkedPet($pet, $row, 'pending', false);
+        $before = Queue::pushed(GeneratePetReferenceImage::class)->count();
+        $edits = saiEdits()->count();
+
+        expect(saiRetryStage($row))->toBe('retry_queued');
+
+        expect(Queue::pushed(GeneratePetReferenceImage::class)->count())->toBe($before)
+            ->and(saiEdits()->count())->toBe($edits);
+        $row->refresh();
+        expect($row->status)->toBe('pending')
+            ->and((int) $row->still_retries)->toBe(1)
+            ->and($row->candidate_path)->toBeNull();
+        Storage::disk('pet_media')->assertMissing("looks/{$pet->pet_look_id}/candidate.jpg");
     });
 });
