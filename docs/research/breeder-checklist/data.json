@@ -4714,6 +4714,30 @@
         }
       ],
       "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk display.aspx?id=2442 redirects to royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/barbet-imp, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-28) → no minimum / best_practice level. AKC (K47 = dog-data S1097): the Barbet Club of America requires breeders listed on its website to test hips, elbows and eyes (existing keys hip_scheme, elbow_scheme, eye_scheme; other_scheme). No new key (M5-R10-146)."
+    },
+    "icelandic_sheepdog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K48",
+        "quote": "Breeding stock should be eye tested by an Ophthalmologist and Hip Dysplasia (HD) scored."
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye test by a veterinary ophthalmologist (Dogs Victoria breeding advice)",
+          "source_id": "K48",
+          "quote": "Breeding stock should be eye tested by an Ophthalmologist and Hip Dysplasia (HD) scored."
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip dysplasia (HD) scoring (Dogs Victoria breeding advice)",
+          "source_id": "K48",
+          "quote": "Breeding stock should be eye tested by an Ophthalmologist and Hip Dysplasia (HD) scored."
+        }
+      ],
+      "notes": "The RKC Breeds A–Z page (health-testing section) was not reachable — thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/icelandic-sheepdog-imp redirects to royalkennelclub.com, refused by the fetch tool (PROVENANCE_REQUIRED, 2026-11-28) → no minimum / best_practice level. Dogs Victoria (K48 = dog-data S1105, an ANKC member body): breeding stock eye tested by an ophthalmologist and hip-dysplasia scored (existing keys eye_scheme, hip_scheme; other_scheme). No new key (M5-R10-147)."
     }
   }
 }
