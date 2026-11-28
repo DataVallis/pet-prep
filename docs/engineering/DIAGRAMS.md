@@ -2240,7 +2240,7 @@ sequenceDiagram
     alt pass, or shadow
       MS->>MS: store (quality passed / shadow_failed / unchecked + reason)
     else enforce fail, ≤ 2 remakes (budget planned first)
-      MS->>MS: generation + 1, fresh seed, prompt_variant + 1 → GeneratePetReferenceImage (edit again)
+      MS->>MS: generation + 1, fresh seed, prompt_variant + 1 → GeneratePetReferenceImage (edit again)<br/>look row: job of an ACTIVE pet still waiting for it · none → row stays pending (retry_queued, 0 $)
     else retries used up / not affordable
       MS->>MS: keep the last image (shadow_failed, »failed — kept«) + one Discord post per 15 min (count)
     end

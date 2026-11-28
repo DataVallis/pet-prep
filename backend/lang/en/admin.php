@@ -781,7 +781,7 @@ return [
     'stage_check' => [
         'discord' => [
             'title' => 'Stage image check: :count life-stage image(s) still do not look older after every automatic remake',
-            'body' => 'A pet / shared look grew into a new life stage, but the AI check says the new image does not look older than the previous stage (or not like the same animal) — also after its automatic remakes with a stronger prompt. The last image was kept and is shown. Optional: Pets → AI media (verdict in the Quality column) → Regenerate, or Shared looks → »Regenerate media«; try the prompt in AI Lab first.',
+            'body' => 'A pet / shared look grew into a new life stage, but the AI check says the new image does not look older than the previous stage (or not like the same animal) — also after its automatic remakes with a stronger prompt. The last image was kept and is shown. Optional: a pet\'s own image — Pets → AI media (verdict in the Quality column) → Regenerate (re-renders it from text); a shared look — AI media → Shared looks → »Regenerate media«.',
         ],
     ],
     'still_check' => [
