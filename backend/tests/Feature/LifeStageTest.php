@@ -659,7 +659,7 @@ describe('appearance prompt by stage and origin', function () {
         [, , $pet] = lsFamily('2026-10-05 08:00:00', ['origin' => 'adopted', 'pet_dna' => ['version' => 2, 'seed' => 1, 'breed' => 'mutt', 'traits' => ['coat_color' => 'black']]]);
         $prompt = app(PetAppearancePrompt::class)->stageEditPrompt($pet->fresh(), LifeStage::Young);
 
-        expect($prompt)->toContain('same individual dog')->toContain('identical coat colours')->toContain('adolescent')->toContain('Not sad');
+        expect($prompt)->toContain('identity of this individual dog')->toContain('identical coat colours')->toContain('adolescent')->toContain('Not sad');
     });
 });
 

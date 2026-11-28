@@ -38,9 +38,50 @@ class PetAppearancePrompt
     /** Adopted dogs (M5-R01): neutral — no "sad shelter dog" clichés (David 2026-10-05). */
     public const ADOPTED_AVOID = 'Not sad, not scared, not thin, not injured, no cage, no kennel bars, no shelter background.';
 
-    /** Stage growth edit (M5-R01): the same individual dog, only its age changes. */
-    public const EDIT_KEEP = 'Keep it clearly the same individual dog: identical coat colours, coat pattern and markings, '
-        .'identical eye colour and ear carriage, same breed type. Change only what ageing changes.';
+    /**
+     * Stage growth edit (M5-R01): the same individual dog at its new age. David 2026-11-28 (production:
+     * a mutt's »young« edit still showed the fluffy puppy — »change only what ageing changes« let the
+     * model copy the puppy body): keep the IDENTITY only, re-draw proportions, size and coat.
+     */
+    public const EDIT_KEEP = 'Keep only the identity of this individual dog: identical coat colours, coat pattern and markings, '
+        .'identical eye colour, the same ear shape and ear set, the same breed type. '
+        .'Change the body proportions, the size and the coat texture and length to the new age: do not keep the earlier age\'s proportions, paws or coat.';
+
+    /**
+     * David 2026-11-28: what a dog's body looks like at the stage it grows INTO (stage edits only —
+     * the text-to-image cue LifeStage::promptCue() is unchanged). A puppy is never an edit target.
+     */
+    public const STAGE_EDIT_CHANGES = [
+        'young' => 'It is clearly no longer a puppy: noticeably bigger and taller than in the reference image, with clearly longer legs, '
+            .'a longer muzzle, a head that is smaller in proportion to the body, a leaner and deeper chest and a longer body; '
+            .'the paws are in proportion to the legs, no longer oversized, and the soft, fluffy puppy coat is replaced by the sleeker, smoother adult coat of the breed. '
+            .'It looks like a teenage dog, not a puppy.',
+        'adult' => 'It is clearly a fully grown adult dog, no longer a young one: the full adult size and height of the breed, a fully developed deep chest, '
+            .'a filled-out, muscular body, an adult head with an adult-length muzzle and the complete adult coat of the breed; '
+            .'nothing lanky, leggy or puppy-like is left.',
+        'senior' => 'It is clearly an old dog now: a clearly greying muzzle with grey around the eyes and on the face, a slightly thinner, duller and coarser coat, '
+            .'a softer, slightly less muscular body, a slightly lower head carriage and a calm, relaxed posture; the same adult size as in the reference image.',
+    ];
+
+    /**
+     * David 2026-11-28: the »looks older« check's automatic retries (StillQualityService::checkStageCandidate)
+     * each add the next, stronger sentence (variant 0 = none). Same species-free wording for cats.
+     */
+    public const STAGE_EDIT_VARIANT_NOTES = [
+        1 => 'Make the age difference unmistakable at first glance: anyone comparing the two photographs must see an older animal, not the same young one again.',
+        2 => 'Do not copy the body of the reference image: draw the animal anew at its new age and size, taking only its colours, markings, eyes and ears from the reference image.',
+    ];
+
+    /** Variants of the stage edit prompt (0 = base, then each STAGE_EDIT_VARIANT_NOTES step). */
+    public const STAGE_EDIT_VARIANTS = 3;
+
+    /**
+     * David 2026-11-28: the photo style of a stage edit — the room, light and camera distance of the
+     * reference image, so the growth in size is visible (full-body framing alone hid it).
+     */
+    public const STAGE_EDIT_STYLE = 'The same room, background, light and camera distance and angle as in the reference image, so the change in size is visible. '
+        .'Full body in frame, standing on all four paws, three-quarter side view at the dog\'s eye level. '
+        .'Sharp focus, true-to-life fur texture and colours, realistic 35mm photograph. Only the dog: no people, no children, no hands, no text, no watermark, no logo.';
 
     /** State videos (M4-03): the same dog, subtle realistic motion, nothing else changes. */
     public const VIDEO_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
@@ -63,8 +104,26 @@ class PetAppearancePrompt
     /** The cat is indoor-only in the game (CAT_SPEC Q7): "adopted" also covers a cat given by acquaintances (§1). */
     public const CAT_ADOPTED_AVOID = 'Not sad, not scared, not thin, not injured, no cage, no carrier, no shelter background.';
 
-    public const CAT_EDIT_KEEP = 'Keep it clearly the same individual cat: identical coat colours, coat pattern and markings, '
-        .'identical eye colour and ear shape, same breed type. Change only what ageing changes.';
+    /** David 2026-11-28: as EDIT_KEEP — keep the identity, re-draw proportions, size and coat. */
+    public const CAT_EDIT_KEEP = 'Keep only the identity of this individual cat: identical coat colours, coat pattern and markings, '
+        .'identical eye colour, the same ear shape and ear set, the same breed type. '
+        .'Change the body proportions, the size and the coat texture and length to the new age: do not keep the earlier age\'s proportions or coat.';
+
+    /** David 2026-11-28: as STAGE_EDIT_CHANGES for a cat (a breed's `stage_notes` still follow, e.g. the young Maine Coon). */
+    public const CAT_STAGE_EDIT_CHANGES = [
+        'young' => 'It is clearly no longer a kitten: noticeably bigger than in the reference image, with longer legs and a longer body, '
+            .'a head and ears that are smaller in proportion to the body and a longer, leaner face; '
+            .'the soft, fuzzy kitten coat is replaced by the smoother coat of a young cat of the breed. It looks like a young cat, not a kitten.',
+        'adult' => 'It is clearly a fully grown adult cat, no longer a young one: the full adult size of the breed, a broader face and chest, '
+            .'a filled-out body in adult proportions and the full adult coat of the breed; nothing lanky or kitten-like is left.',
+        'senior' => 'It is clearly an older cat now: slightly leaner, with slightly bonier hips and spine, a slightly less glossy, coarser coat '
+            .'and a calm, relaxed posture; the same adult size as in the reference image.',
+    ];
+
+    /** David 2026-11-28: as STAGE_EDIT_STYLE for a cat (sitting or standing). */
+    public const CAT_STAGE_EDIT_STYLE = 'The same room, background, light and camera distance and angle as in the reference image, so the change in size is visible. '
+        .'Full body in frame, sitting or standing naturally, three-quarter side view at the cat\'s eye level. '
+        .'Sharp focus, true-to-life fur texture and colours, realistic 35mm photograph. Only the cat: no people, no children, no hands, no text, no watermark, no logo.';
 
     /**
      * AI Lab custom motion (training / game clips, 2026-10-20): same look lock,
@@ -163,42 +222,52 @@ class PetAppearancePrompt
 
     /**
      * Image-to-image prompt for the stage growth (M5-R01): the dog of the
-     * reference image, now at the new stage, identity kept.
+     * reference image, now at the new stage, identity kept. `$variant` = the
+     * »looks older« check's retry step (David 2026-11-28; 0 = first try).
      */
-    public function stageEditPrompt(Pet $pet, LifeStage $stage): string
+    public function stageEditPrompt(Pet $pet, LifeStage $stage, int $variant = 0): string
     {
         [$breedKey, $traits] = $this->dnaOf($pet);
 
-        return $this->stageEditPromptFor($breedKey, $traits, $stage, $this->originOf($pet));
+        return $this->stageEditPromptFor($breedKey, $traits, $stage, $this->originOf($pet), $variant);
     }
 
     /**
      * stageEditPrompt() from breed + traits + origin (a shared look of the
      * free-pet pool has no origin, M4-10).
      *
+     * David 2026-11-28: cue + what the body looks like at the new stage
+     * (STAGE_EDIT_CHANGES) + the retry variant's note + keep identity only
+     * (EDIT_KEEP) + the reference image's room / camera (STAGE_EDIT_STYLE).
+     *
      * @param  array<string, string>  $traits
      */
-    public function stageEditPromptFor(string $breedKey, array $traits, LifeStage $stage, ?PetOrigin $origin = null): string
+    public function stageEditPromptFor(string $breedKey, array $traits, LifeStage $stage, ?PetOrigin $origin = null, int $variant = 0): string
     {
         $species = self::speciesOf($breedKey);
         $this->refuseCatWithoutTraits($species, $traits);
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
+        $note = self::STAGE_EDIT_VARIANT_NOTES[max(0, min($variant, self::STAGE_EDIT_VARIANTS - 1))] ?? null;
 
         if ($species === Species::Cat) {
             return trim(implode(' ', array_filter([
                 'The same cat as in the reference image ('.$subject.'), shown at a later age: now '.$stage->promptCue($species).'.',
+                self::CAT_STAGE_EDIT_CHANGES[$stage->value] ?? null,
                 $this->stageNote($breedKey, $stage),
+                $note,
                 self::CAT_EDIT_KEEP,
                 $origin === PetOrigin::Adopted ? self::CAT_ADOPTED_AVOID : null,
-                self::CAT_STYLE,
+                self::CAT_STAGE_EDIT_STYLE,
             ])));
         }
 
         return trim(implode(' ', array_filter([
             'The same dog as in the reference image ('.$subject.'), shown at a later age: now '.$stage->promptCue().'.',
+            self::STAGE_EDIT_CHANGES[$stage->value] ?? null,
+            $note,
             self::EDIT_KEEP,
             $origin === PetOrigin::Adopted ? self::ADOPTED_AVOID : null,
-            self::STYLE,
+            self::STAGE_EDIT_STYLE,
         ])));
     }
 

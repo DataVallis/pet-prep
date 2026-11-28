@@ -209,7 +209,8 @@ class PetMediaService
         try {
             if ($growFrom && $this->profiles->stageEdit() !== null) {
                 $result = $this->fal->editReferenceImage(
-                    $this->prompts->stageEditPrompt($pet, $pet->life_stage),
+                    // David 2026-11-28: the »looks older« check's retries move to the next, stronger variant.
+                    $this->prompts->stageEditPrompt($pet, $pet->life_stage, (int) $slot->prompt_variant),
                     $this->falFetchUrl($slot),
                     $slot->seedFor((int) ($dna['seed'] ?? 0)),
                     $pet->id,
@@ -1144,6 +1145,13 @@ class PetMediaService
             return $this->stageCandidate($slot, $sourceUrl, $path, $file['bytes'], $file['mime']);
         }
 
+        // David 2026-11-28: a LIFE-STAGE reference image is a candidate until the »looks older« check
+        // (StillQualityService::checkStageCandidate: previous stage + new image) has recorded its
+        // verdict — the pet keeps showing the previous stage's image until then.
+        if ($slot->isImage() && $this->stageCheckEnabled() && $this->stageImageSource($slot) !== null) {
+            return $this->stageCandidate($slot, $sourceUrl, $path, $file['bytes'], $file['mime']);
+        }
+
         $previous = null;
         $stored = DB::transaction(function () use ($slot, $sourceUrl, $path, $file, &$previous): bool {
             $locked = PetMedia::whereKey($slot->id)->lockForUpdate()->first();
@@ -1191,6 +1199,62 @@ class PetMediaService
     public function stillCheckMode(): string
     {
         return $this->settings->qualityPetStillsMode(fresh: true);
+    }
+
+    /** David 2026-11-28: off | shadow | enforce of the »looks older« check of life-stage images (fresh read). */
+    public function stageCheckMode(): string
+    {
+        return $this->settings->qualityStageMode(fresh: true);
+    }
+
+    /** David 2026-11-28: the »looks older« check runs (shadow or enforce; fresh read). */
+    public function stageCheckEnabled(): bool
+    {
+        return $this->stageCheckMode() !== AppSettingsService::QUALITY_OFF;
+    }
+
+    /**
+     * David 2026-11-28: the previous life stage's picture a reference image row grows from — the
+     * ONE definition for the stage edit (generateReferenceImage / generateLookImage) and the
+     * »looks older« check. A pet's own slot: its stored file while that file was archived at an
+     * EARLIER stage than the slot's (pet_media_history; during the edit / check the slot still
+     * serves it). A look row: the look's latest READY image of an earlier stage. Null = no stage
+     * growth (a first image, a regenerate at the same stage, another kind).
+     *
+     * @return array{media: PetMedia, stage: string}|null
+     */
+    public function stageImageSource(PetMedia $row): ?array
+    {
+        if (! $row->isImage() || $row->life_stage === null) {
+            return null;
+        }
+
+        if ($row->isLookMedia()) {
+            $source = $this->lookStageSource((int) $row->pet_look_id, (string) $row->life_stage);
+
+            return $source !== null ? ['media' => $source, 'stage' => (string) $source->life_stage] : null;
+        }
+
+        if ($row->storage_path === null) {
+            return null;
+        }
+
+        $archived = PetMediaHistory::query()->where('pet_id', $row->pet_id)->where('storage_path', $row->storage_path)->value('life_stage');
+
+        return is_string($archived) && self::stageRank($archived) >= 0 && self::stageRank($archived) < self::stageRank((string) $row->life_stage)
+            ? ['media' => $row, 'stage' => $archived]
+            : null;
+    }
+
+    /** A look's latest stored image of a stage before `$stage` (the stage edit's source). */
+    private function lookStageSource(int $lookId, string $stage): ?PetMedia
+    {
+        return PetMedia::query()->where('pet_look_id', $lookId)->images()
+            ->where('status', PetMedia::STATUS_READY)->whereNotNull('storage_path')
+            ->whereIn('life_stage', array_map(fn (LifeStage $s) => $s->value, array_slice(LifeStage::ordered(), 0, max(0, self::stageRank($stage)))))
+            ->get()
+            ->sortByDesc(fn (PetMedia $m) => self::stageRank($m->life_stage))
+            ->first();
     }
 
     /**
@@ -1502,6 +1566,20 @@ class PetMediaService
         }
 
         return -1;
+    }
+
+    /**
+     * David 2026-11-28: why an automatic remake of a stage image (the »looks older« check's retry)
+     * would be refused right now — null = it may run. Planned against the production budget and the
+     * fal balance BEFORE the retry is queued (fail closed: no retry that would only fail on the cap).
+     */
+    public function stageRetryRefusal(): ?string
+    {
+        if (FalGateway::balanceExhaustedAt() !== null) {
+            return AiCallFailure::FalBalance->value;
+        }
+
+        return app(AiSpendGuard::class)->refusalFor($this->stageImageCostUsd(), AiSpendPurpose::ReferenceImage)?->value;
     }
 
     /** Estimated cost of one stage image (the edit profile, else text-to-image). */
@@ -2644,17 +2722,12 @@ class PetMediaService
         $stage = LifeStage::from((string) $row->life_stage);
         $breedKey = $look->breed_type->value;
         $traits = $look->traits();
-        $growFrom = PetMedia::query()->where('pet_look_id', $look->id)->images()
-            ->where('status', PetMedia::STATUS_READY)->whereNotNull('storage_path')
-            ->whereIn('life_stage', array_map(fn (LifeStage $s) => $s->value, array_slice(LifeStage::ordered(), 0, self::stageRank($stage->value))))
-            ->get()
-            ->sortByDesc(fn (PetMedia $m) => self::stageRank($m->life_stage))
-            ->first();
+        $growFrom = $this->lookStageSource((int) $look->id, $stage->value);
 
         try {
             $result = $growFrom !== null && $this->profiles->stageEdit() !== null
                 ? $this->fal->editReferenceImage(
-                    $this->prompts->stageEditPromptFor($breedKey, $traits, $stage),
+                    $this->prompts->stageEditPromptFor($breedKey, $traits, $stage, null, (int) $row->prompt_variant),
                     $this->falFetchUrl($growFrom),
                     $row->seedFor($look->seed()),
                     null,

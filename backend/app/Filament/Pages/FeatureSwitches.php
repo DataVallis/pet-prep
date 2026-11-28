@@ -88,6 +88,7 @@ class FeatureSwitches extends Page implements HasForms
             'quality_check' => $settings->qualityCheckMode(),
             'quality_stills' => $settings->qualityStillsMode(),
             'quality_pet_stills' => $settings->qualityPetStillsMode(),
+            'quality_stage' => $settings->qualityStageMode(),
             'quality_clip_ai' => $settings->qualityClipAi(),
             'app_error_reports' => $settings->appErrorReports(),
             'video_compression' => $settings->videoCompression(fresh: true),
@@ -227,6 +228,17 @@ class FeatureSwitches extends Page implements HasForms
                             ])
                             ->in(AppSettingsService::QUALITY_CHECK_MODES)
                             ->required(),
+                        // David 2026-11-28: the »looks older« check of life-stage images — default shadow until calibrated.
+                        Radio::make('quality_stage')
+                            ->label(__('admin.features.quality_stage'))
+                            ->helperText(__('admin.features.quality_stage_help'))
+                            ->options([
+                                AppSettingsService::QUALITY_OFF => __('admin.features.quality_check_off'),
+                                AppSettingsService::QUALITY_SHADOW => __('admin.features.quality_check_shadow'),
+                                AppSettingsService::QUALITY_ENFORCE => __('admin.features.quality_check_enforce'),
+                            ])
+                            ->in(AppSettingsService::QUALITY_CHECK_MODES)
+                            ->required(),
                     ]),
                 // M5-05 (QA #375 B1): app crash / render-error reports, default off.
                 Section::make(__('admin.features.app_error_reports_section'))
@@ -289,6 +301,7 @@ class FeatureSwitches extends Page implements HasForms
         $qualityStills = (string) ($data['quality_stills'] ?? AppSettingsService::qualityStillsDefault());
         $qualityPetStills = (string) ($data['quality_pet_stills'] ?? AppSettingsService::qualityPetStillsDefault());
         $qualityClipAi = (bool) ($data['quality_clip_ai'] ?? AppSettingsService::qualityClipAiDefault());
+        $qualityStage = (string) ($data['quality_stage'] ?? AppSettingsService::qualityStageDefault());
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
         $compression = (bool) ($data['video_compression'] ?? false);
         $giftVouchers = (bool) ($data['gift_vouchers'] ?? false);
@@ -320,8 +333,9 @@ class FeatureSwitches extends Page implements HasForms
                 $settings->updateFrugalClips($this->admin(), $frugalClips);
             }
             if ($qualityCheck !== $settings->qualityCheckMode(fresh: true) || $qualityStills !== $settings->qualityStillsMode(fresh: true)
-                || $qualityPetStills !== $settings->qualityPetStillsMode(fresh: true) || $qualityClipAi !== $settings->qualityClipAi(fresh: true)) {
-                $settings->updateQualityCheck($this->admin(), $qualityCheck, $qualityStills, $qualityPetStills, $qualityClipAi);
+                || $qualityPetStills !== $settings->qualityPetStillsMode(fresh: true) || $qualityClipAi !== $settings->qualityClipAi(fresh: true)
+                || $qualityStage !== $settings->qualityStageMode(fresh: true)) {
+                $settings->updateQualityCheck($this->admin(), $qualityCheck, $qualityStills, $qualityPetStills, $qualityClipAi, $qualityStage);
             }
             if ($appErrors !== $settings->appErrorReports(fresh: true)) {
                 $settings->updateAppErrorReports($this->admin(), $appErrors);
@@ -357,6 +371,7 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())])
             .' · '.__('admin.features.saved_body_quality_stills', ['state' => __('admin.features.quality_check_'.$settings->qualityStillsMode())])
             .' · '.__('admin.features.saved_body_quality_pet_stills', ['state' => __('admin.features.quality_check_'.$settings->qualityPetStillsMode())])
+            .' · '.__('admin.features.saved_body_quality_stage', ['state' => __('admin.features.quality_check_'.$settings->qualityStageMode())])
             .' · '.__('admin.features.saved_body_quality_clip_ai', ['state' => $settings->qualityClipAi() ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])

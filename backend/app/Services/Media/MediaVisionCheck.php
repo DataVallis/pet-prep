@@ -145,6 +145,13 @@ class MediaVisionCheck
     /** Rubric of an ITEM clip (contact sheet + its start frame) — judgeItemClip(). */
     public const RUBRIC_ITEM_CLIP = 'item_clip';
 
+    /**
+     * Rubric of a LIFE-STAGE reference image (David 2026-11-28, production: a mutt's »young« image
+     * still showed the fluffy puppy): image 1 = the previous stage's picture, image 2 = the new one —
+     * the same individual animal AND visibly at the older stage (proportions, coat). judgeStage().
+     */
+    public const RUBRIC_STAGE = 'stage';
+
     /** The boolean keys of each still rubric (all must be true to pass). */
     public const STILL_KEYS = [
         self::RUBRIC_ANIMAL => ['one_animal', 'legs_ok', 'no_ghost_parts', 'scene_ok', 'clean'],
@@ -152,7 +159,40 @@ class MediaVisionCheck
         self::RUBRIC_OBJECT => ['object_ok', 'no_animal', 'clean'],
         self::RUBRIC_ITEM => ['one_animal', 'legs_ok', 'no_ghost_parts', 'scene_ok', 'clean', 'item_grounded', 'item_integrated', 'scale_ok'],
         self::RUBRIC_ITEM_CLIP => ['anatomy_ok', 'same_animal', 'action_done', 'item_grounded', 'item_integrated', 'scale_ok', 'no_artifacts'],
+        self::RUBRIC_STAGE => ['same_animal', 'visibly_older', 'stage_matches', 'one_animal'],
     ];
+
+    public const STAGE_SYSTEM_PROMPT = 'You compare two AI-generated photographs of the same pet at two ages for a children\'s pet app. '
+        .'Be strict about whether the second photo really shows an older animal. Answer with ONE JSON object only, no markdown, no other text.';
+
+    /**
+     * David 2026-11-28: the »looks older« check of a life-stage image — image 1 = the previous stage
+     * (`$fromCue`), image 2 = the new image that should show `$toCue`. Same budget, ledger and
+     * statuses as judgeStill(); the ledger links the pet_media row (a pet's slot or a look row).
+     *
+     * @return array{status: string, verdict: array<string, mixed>|null, reason: string|null, cost_usd: float, reported_cost_usd: float|null}
+     */
+    public function judgeStage(Species $species, string $fromCue, string $toCue, string $previousUrl, string $newUrl, ?int $petId, int $petMediaId): array
+    {
+        return $this->runRubric(self::RUBRIC_STAGE, $this->stagePrompt($species, $fromCue, $toCue), self::STAGE_SYSTEM_PROMPT, [$previousUrl, $newUrl], $petId, $petMediaId, null);
+    }
+
+    /** The stage rubric (fixed; only the species and the two stage cues change). */
+    public function stagePrompt(Species $species, string $fromCue, string $toCue): string
+    {
+        $animal = $species === Species::Cat ? 'cat' : 'dog';
+        $young = $species === Species::Cat ? 'kitten' : 'puppy';
+        $json = '{'.implode(', ', array_map(fn (string $k) => "\"{$k}\": true|false", self::STILL_KEYS[self::RUBRIC_STAGE])).', "verdict": "pass"|"fail", "reason": "<one short sentence>"}';
+
+        return "Image 1 shows a {$animal} at an earlier age: {$fromCue}. "
+            ."Image 2 should show the SAME {$animal} later in life: {$toCue}.\n"
+            ."Check image 2 against image 1:\n"
+            ."- same_animal: it is clearly the same individual {$animal}: the same coat colours, pattern and markings, the same eye colour, the same ear shape and set, the same breed type.\n"
+            ."- visibly_older: at first glance image 2 shows an older {$animal} than image 1 — the body proportions changed with age (for a growing animal: longer legs and muzzle, a head smaller in proportion to the body, a leaner, deeper chest, the soft {$young} coat replaced by the coat of the new age; for an old animal: grey on the face, a duller coat); false if image 2 looks like the same age as image 1 or is mostly a copy of it with small changes.\n"
+            ."- stage_matches: image 2 fits the described later age (not still a {$young} when it should be young or adult, not old when it should be adult).\n"
+            ."- one_animal: image 2 shows exactly one {$animal}, whole and with normal anatomy, and no people, hands or text.\n"
+            .'Be strict: if you would hesitate to call image 2 older, visibly_older is false. Answer only: '.$json;
+    }
 
     /** The keys of the item rubrics that judge the OBJECT in the scene (a fail of these in a clip = its start frame is wrong). */
     public const ITEM_PLACEMENT_KEYS = ['item_grounded', 'item_integrated', 'scale_ok'];

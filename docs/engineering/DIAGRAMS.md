@@ -1987,7 +1987,7 @@ Every key / pose image (pet slot or look row), item key image and catalogue pict
 ```mermaid
 flowchart TD
   W[fal webhook OK — key / pose / item image / catalogue picture] --> D[StorePetMedia / StoreItemMedia: download]
-  D --> M{mode: items stills_mode default enforce ·<br/>pet key / pose pet_stills_mode default shadow}
+  D --> M{mode: items stills_mode default enforce ·<br/>pet key / pose pet_stills_mode default shadow ·<br/>life-stage images stage_mode default shadow (12c)}
   M -->|off| ST[stored at once — old behaviour]
   M -->|shadow / enforce| C[candidate_path set · row running · old file still served<br/>loops · transitions · phase clips · item clip wait]
   C --> J[CheckPetMediaQuality → StillQualityService / CheckItemMediaQuality]
@@ -2226,9 +2226,20 @@ sequenceDiagram
   MS->>MS: image slot in flight → busy (release 10 min)<br/>already this stage → up_to_date
   MS->>MS: archive stored image → pet_media_history (file kept)
   MS->>MS: reset slot (generation + 1) → GeneratePetReferenceImage
-  MS->>FAL: edit {image_urls: [our signed URL of the old image], prompt: same dog, now <stage cue>, seed}
+  MS->>FAL: edit {image_urls: [our signed URL of the old image], prompt: same dog, now <stage cue> + new-stage body (STAGE_EDIT_CHANGES) + keep identity only + same room / camera, seed}
   Note over MS,FAL: edit profile off → text-to-image, same seed + DNA traits + stage/origin cues
   FAL-->>MS: images[0].url → StorePetMedia (new file, old one kept)
+  alt stage_mode shadow / enforce (David 2026-11-28, default shadow)
+    MS->>MS: candidate (pet still shows the previous stage) → CheckPetMediaQuality
+    MS->>FAL: vision {image_urls: [previous stage, candidate], rubric stage: same_animal, visibly_older, stage_matches, one_animal}
+    alt pass, or shadow
+      MS->>MS: store (quality passed / shadow_failed / unchecked + reason)
+    else enforce fail, ≤ 2 remakes (budget planned first)
+      MS->>MS: generation + 1, fresh seed, prompt_variant + 1 → GeneratePetReferenceImage (edit again)
+    else retries used up / not affordable
+      MS->>MS: keep the last image (shadow_failed, »failed — kept«) + one Discord post per 15 min (count)
+    end
+  end
   MS->>MS: queueStateVideos(): entitled videos regenerated (older source generation)
 ```
 

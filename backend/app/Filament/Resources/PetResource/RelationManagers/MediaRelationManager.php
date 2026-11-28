@@ -170,7 +170,7 @@ class MediaRelationManager extends RelationManager
                     ->getStateUsing(fn (PetMedia $record): ?string => self::qualityLabel($record))
                     ->color(fn (?string $state): string => match ($state) {
                         'passed', 'approved' => 'success',
-                        'needs review', 'flagged' => 'danger',
+                        'needs review', 'flagged', 'failed — kept' => 'danger',
                         'would fail (shadow)' => 'warning',
                         'checking', 'retrying' => 'info',
                         null => 'gray',
@@ -385,11 +385,12 @@ class MediaRelationManager extends RelationManager
 
     /**
      * Quality badge: the waiting candidate first, else the verdict of the stored file. Clips (David
-     * 2026-10-23) and, since 2026-11-04, key / pose images (AI still check before a video is made).
+     * 2026-10-23) and, since 2026-11-04, key / pose images (AI still check before a video is made);
+     * since 2026-11-28 life-stage reference images (»looks older« check — a first image has no verdict).
      */
     private static function qualityLabel(PetMedia $record): ?string
     {
-        if (! $record->isClip() && ! $record->isPoseStill()) {
+        if (! $record->isClip() && ! $record->isPoseStill() && ! $record->isImage()) {
             return null;
         }
 
@@ -399,7 +400,9 @@ class MediaRelationManager extends RelationManager
             $row->needsReview() => 'needs review',
             $row->status === PetMedia::STATUS_RUNNING && filled($row->candidate_path) => 'checking',
             // Still check: an automatic regeneration with a new seed after a failed check is on its way.
-            $row->isPoseStill() && $row->isInFlight() && (int) $row->still_retries > 0 => 'retrying',
+            ($row->isPoseStill() || $row->isImage()) && $row->isInFlight() && (int) $row->still_retries > 0 => 'retrying',
+            // David 2026-11-28: enforce kept the last stage image after its remakes (shown, counted in the alert).
+            $row->isImage() && $row->quality === PetMedia::QUALITY_SHADOW_FAILED && str_starts_with((string) $row->quality_reason, 'Stage check failed') => 'failed — kept',
             $row->isInFlight() && $row->quality_retry_generation !== null && (int) $row->quality_retry_generation === (int) $row->generation => 'retrying',
             $row->quality === PetMedia::QUALITY_PASSED => 'passed',
             $row->quality === PetMedia::QUALITY_PASSED_TECHNICAL => 'not AI-checked',
@@ -415,7 +418,7 @@ class MediaRelationManager extends RelationManager
     private static function qualityDetail(PetMedia $record): ?string
     {
         $row = $record->look_media_id !== null && $record->lookMedia !== null ? $record->lookMedia : $record;
-        $stillRetry = $row->isPoseStill() && $row->isInFlight() && (int) $row->still_retries > 0;
+        $stillRetry = ($row->isPoseStill() || $row->isImage()) && $row->isInFlight() && (int) $row->still_retries > 0;
         $text = $row->needsReview() ? $row->error : ($stillRetry ? $row->error : ($row->quality_reason ?? ($row->isInFlight() && $row->quality_retry_generation === $row->generation ? $row->error : null)));
 
         return $text !== null ? mb_strimwidth($text, 0, 160, '…') : null;

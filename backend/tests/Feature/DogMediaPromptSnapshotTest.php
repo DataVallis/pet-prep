@@ -32,6 +32,9 @@ use App\Services\Media\PetDnaService;
 | movement — media 123 »melted« into the sit): ONLY the 4 `phase|school_*_performing` keys changed.
 | Re-recorded on purpose 2026-11-19 (David: calm sleep clips — the puppy woke up in its bed clip):
 | ONLY the 11 `*sleeping*` keys changed (video / video_no_traits / state modifier / loop).
+| Re-recorded on purpose 2026-11-28 (David: mutt »Bafo«'s young image still showed the puppy — stronger
+| stage edit prompts): ONLY the 96 `stage_edit|*` / `v1_stage_edit|*` keys changed (STAGE_EDIT_CHANGES,
+| new EDIT_KEEP, STAGE_EDIT_STYLE); the text-to-image stage cues (`stage_cue*`, `pet_image*`) are unchanged.
 */
 
 const DMP_FIXTURE = __DIR__.'/../Fixtures/dog_media_prompts_snapshot.json';

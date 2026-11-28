@@ -323,6 +323,9 @@ return [
         'quality_pet_stills' => 'Pet image check mode (key images, pose images)',
         'quality_pet_stills_help' => 'The same AI check for the pet\'s state key images and school / game pose images (own media and shared looks). SHADOW (default until calibrated): verdicts recorded in Pet → AI media (»would fail«), every picture is used. After ~48 h look at the verdicts, then switch to ENFORCE: a failed picture is regenerated with a new seed (≤ 2 times), then it is not used (»Needs review«; activities run in simple mode, a state keeps its current clip; one Discord post per 15 min with the count). OFF: no check.',
         'saved_body_quality_pet_stills' => 'Pet image check: :state',
+        'quality_stage' => 'Life-stage image check mode (»looks older«)',
+        'quality_stage_help' => 'When a pet grows into a new life stage, the previous stage\'s image and the new one go to the AI check (same animal AND visibly older — proportions, coat). SHADOW (default until calibrated): the verdict is recorded in Pet → AI media (»would fail«), the new image is always used. ENFORCE: a failed image is remade with a stronger stage prompt (≤ 2 times, ≈ 0.15 $ each); after that the last image is kept and one Discord post per 15 min reports the count. OFF: no check. Applies only to stage images made from now on.',
+        'saved_body_quality_stage' => 'Life-stage image check: :state',
         'saved_body_quality_clip_ai' => 'Clip AI call: :state',
         'saved_body_quality_check' => 'Quality check: :state',
         'saved_body_app_error_reports' => 'App error reports: :state',
@@ -775,6 +778,12 @@ return [
         ],
     ],
     // M6-W03: »Želje« item content given up after its automatic recovery (ItemMediaService::heal).
+    'stage_check' => [
+        'discord' => [
+            'title' => 'Stage image check: :count life-stage image(s) still do not look older after every automatic remake',
+            'body' => 'A pet / shared look grew into a new life stage, but the AI check says the new image does not look older than the previous stage (or not like the same animal) — also after its automatic remakes with a stronger prompt. The last image was kept and is shown. Optional: Pets → AI media (verdict in the Quality column) → Regenerate, or Shared looks → »Regenerate media«; try the prompt in AI Lab first.',
+        ],
+    ],
     'still_check' => [
         'discord' => [
             'title' => 'Still check: :count key image(s) rejected after every automatic retry',
