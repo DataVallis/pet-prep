@@ -184,6 +184,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-28 (claude.ai chat, docs only, `docs/acquisition-test-run`)
+- New `docs/business/ACQUISITION_TEST.md` (David decided: paid test before launch, 150 €, Slovenia): Meta ads to the early-access signup, 3 creatives, UTM into `email_signups`, thresholds (Claude's assumptions), who does what. **Nothing launched.** Open before launch: FAQ age range on the website, bottom-bar wording, one test signup with UTM. DECISIONS 2026-11-28.
+
 ### 2026-11-28 (backend, `fix/stage-check-followups`)
 - QA minors of #1738: a look row's stage remake goes only to an ACTIVE pet whose linked slot still waits (pending / running / failed, `StillQualityService::lookStageRetryPetId()`); no such pet → row stays pending, outcome `retry_queued`, 0 $; Discord body drops the AI Lab hint (own slot Regenerate = text-to-image; shared look → AI media → Shared looks → »Regenerate media«); ARCHITECTURE same-stage regenerate wording; tests in `StageImageAgeingTest`. No new debt.
 

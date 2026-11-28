@@ -9,6 +9,7 @@
 | `business/VALIDATION_PLAN.md` | 8-tedenski načrt validacije: 100 plačljivih družin, hipoteze s pragovi, kaj je zamrznjeno, odločitve V1–V4 (David 10. 11. 2026); mejniki prihodka 6 / 60 / 150 prodaj na mesec (§8, 22. 11. 2026) | SL |
 | `business/STARTUP_CREDITS.md` | Startup krediti za AI / cloud: fal.ai Startup Program (prijava oddana 22. 11. 2026), NVIDIA, Microsoft, Anthropic; ideja vnaprejšnjega generiranja skupnih videzov | SL |
 | `business/SUSTAINABILITY.md` | Trajnostni vpliv za razpise: trije stebri (okoljski, družbeni, ekonomski), kaj lahko pošteno trdimo in česa ne, predlogi T1–T5 (meritev odločitve po izzivu, okoljski odtis ljubljenčka, zavetišča); *predlog*, neodločeno (26. 11. 2026) | SL |
+| `business/ACQUISITION_TEST.md` | Testni zagon pridobivanja strank pred izidom (David 28. 11. 2026): 150 €, Slovenija, Meta, 3 kreative, UTM, pragovi, kdo naredi kaj | SL |
 | `business/ACCELERATORS.md` | Pospeševalniki in investitorji: YC (v teku), 500 Global Eurasia (najboljše ujemanje), Antler, Techstars; kaj za zdaj ne (22. 11. 2026) | SL |
 | `business/DUOLINGO_ROVER_LESSONS.md` | Poslovni in marketinški model Duolinga in Roverja, 15 predlogov za PetPrep (Claudovi, neodločeno), pot do IPO, simulacije lijaka in naročnine (22. 11. 2026) | SL |
 | `business/DIGITAL_TWIN.md` | Digitalni dvojček poslovanja (ideja za razpise, David 26. 11. 2026): definicije in stopnje model / senca / dvojček, kaj že imamo, prakse, predlog korakov D1–D5; *ideja*, obseg neodločen (dopolnjeno 27. 11. 2026) | SL |
