@@ -6023,6 +6023,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -7096,6 +7097,7 @@ export interface operations {
                                 progress: number;
                                 learned: boolean;
                                 last_practised_at: string | null;
+                                learned_at: string | null;
                             }[];
                             /** @description A session was completed today (the daily training routine). */
                             today_done: boolean;
@@ -8190,6 +8192,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -9282,6 +9285,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -10374,6 +10378,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -11466,6 +11471,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -12558,6 +12564,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -13654,6 +13661,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -14750,6 +14758,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -15846,6 +15855,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -16942,6 +16952,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -18038,6 +18049,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -19130,6 +19142,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -20222,6 +20235,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -21318,6 +21332,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -22410,6 +22425,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -23506,6 +23522,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -24598,6 +24615,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -25694,6 +25712,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -26790,6 +26809,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -27886,6 +27906,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -28982,6 +29003,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -30078,6 +30100,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -31632,6 +31655,11 @@ export interface operations {
                             created_at: string | null;
                             /** @description Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative. */
                             is_positive: boolean;
+                            /**
+                             * @description School milestone (David 2026-11-28): the learned command of a `command_learned` row, else null.
+                             * @enum {string|null}
+                             */
+                            command: "sit" | "come" | "place" | "potty" | null;
                         }[];
                         weekly_performance: {
                             date: string;
@@ -31857,6 +31885,7 @@ export interface operations {
                                         progress: number;
                                         learned: boolean;
                                         last_practised_at: string | null;
+                                        learned_at: string | null;
                                     }[];
                                     today_done: boolean;
                                     /** @description A child is training the dog right now. */
@@ -32509,6 +32538,7 @@ export interface operations {
                                         progress: number;
                                         learned: boolean;
                                         last_practised_at: string | null;
+                                        learned_at: string | null;
                                     }[];
                                     today_done: boolean;
                                     /** @description A child is training the dog right now. */
@@ -32975,6 +33005,11 @@ export interface operations {
                             created_at: string | null;
                             /** @description Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative. */
                             is_positive: boolean;
+                            /**
+                             * @description School milestone (David 2026-11-28): the learned command of a `command_learned` row, else null.
+                             * @enum {string|null}
+                             */
+                            command: "sit" | "come" | "place" | "potty" | null;
                         }[];
                         meta: {
                             current_page: number;
@@ -34927,6 +34962,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
@@ -36001,6 +36037,7 @@ export interface operations {
                                     progress: number;
                                     learned: boolean;
                                     last_practised_at: string | null;
+                                    learned_at: string | null;
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
