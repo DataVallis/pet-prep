@@ -271,6 +271,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.bearded_collie.slug, { en: 'bearded-collie', sl: 'bradati-koli' });
   assert.deepEqual(byId.saluki.slug, { en: 'saluki', sl: 'saluki' });
   assert.deepEqual(byId.barbet.slug, { en: 'barbet', sl: 'barbet' });
+  assert.deepEqual(byId.icelandic_sheepdog.slug, { en: 'icelandic-sheepdog', sl: 'islandski-ovcar' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -504,6 +505,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     bearded_collie: { adult: 6000, senior: 4500, seniorFrom: 125, learning: 1.2 },
     saluki: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
     barbet: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
+    icelandic_sheepdog: { adult: 4000, senior: 3000, seniorFrom: 108, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -994,7 +996,9 @@ test('every dog breed has a Coren rank fact except the explicitly unranked Havan
     // Saluki: S35 (IPFS mirror 2026-11-27) lists it under 'Average' without a readable rank number (M5-R10-145, Welsh Terrier precedent).
     'saluki',
     // Barbet: not in S35 (neither 'Barbet' nor 'French Water Dog', read 2026-11-28, M5-R10-146).
-    'barbet'];
+    'barbet',
+    // Icelandic Sheepdog: not in S35 (neither 'Icelandic Sheepdog' nor 'Iceland Dog', read 2026-11-28, M5-R10-147).
+    'icelandic_sheepdog'];
   for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
     const has = b.facts.some((f) => f.field === 'coren_rank');
     assert.equal(has, !unranked.includes(b.id), `${b.id} coren_rank fact`);
@@ -4605,4 +4609,40 @@ test('Barbet (M5-R10-146): PetMD 1 h minimum, FCI height + WebMD weight, WebMD o
   ]);
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|dapple|brindle/i);
+});
+
+test('Icelandic Sheepdog (M5-R10-147): Dogs NSW 40 min, FCI height + WebMD weight, WebMD 12–14 y → senior 108, unranked → 1.0, brushing 1×, teeth / ears / bath, Iceland origin, chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'icelandic_sheepdog');
+  assert.deepEqual(d.name, { en: 'Icelandic Sheepdog', sl: 'Islandski ovčar' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[40, null, ['S1104']]]);
+  // Iceland is a new FCI origin (IS).
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 289, group: 5, section: 3, origin: 'IS' });
+  assert.ok(!d.facts.some((f) => f.field === 'coren_rank'));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [11.3, 13.6], female: [11.3, 13.6] }, ['S1102']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [46, 46], female: [42, 42] }, ['S1100']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.value, f.qualifier, f.source_ids]), [[[12, 14], 'span', ['S1102']], [[12, 14], 'span', ['S1101']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'coat').value, ['medium']);
+  assert.equal(d.facts.find((f) => f.field === 'grooming_frequency').value, 'once_a_week');
+  assert.equal(d.facts.find((f) => f.field === 'shedding').value, 'yes');
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 4000, cap_month: 4 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 3000 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 1 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 1 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => r.params), [
+    { task: 'tooth_brushing', actor: 'child', times: 7, period_days: 7 },
+    { task: 'ear_cleaning', actor: 'child', times: 1, period_days: 28 },
+    { task: 'bath', actor: 'parent', times: 1, period_days: 28 },
+  ]);
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.ok(!d.game.rules.some((r) => r.key === 'meal_exercise_gap'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_company', 'sheds', 'secure_fencing']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'kneecap_luxation', 'eye_conditions']);
+  assert.deepEqual(d.breeder_checklist.tests, [
+    { key: 'eye_scheme', level: 'other_scheme', source_ids: ['K48'] },
+    { key: 'hip_scheme', level: 'other_scheme', source_ids: ['K48'] },
+  ]);
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|\d%|merle|dapple|brindle|saddle/i);
 });

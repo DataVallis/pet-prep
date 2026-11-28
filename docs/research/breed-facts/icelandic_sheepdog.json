@@ -1,0 +1,43 @@
+{
+  "breed": "icelandic_sheepdog",
+  "facts": [
+    {
+      "key": "icelandic_sheepdog-auto-lifespan",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Icelandic Sheepdog usually lives 12 to 14 years.",
+        "sl": "Islandski ovčar običajno živi od 12 do 14 let."
+      },
+      "why": null,
+      "source_id": "S1102",
+      "source_name": "WebMD — Ariel Grucza; medically reviewed by Shruthi N, MD (2025-03-09)",
+      "source_url": "https://www.webmd.com/pets/dogs/what-to-know-icelandic-sheepdog",
+      "quote": "The average Icelandic sheepdog lifespan is 12 to 14 years.",
+      "game_rule_key": null,
+      "sort": 80,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "a9b246c0902c5b53b85d5baf2c34380c778592b8fa5175c292a898117f6551d1"
+    },
+    {
+      "key": "icelandic_sheepdog-auto-growth_end",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog the size of the Icelandic Sheepdog reaches its adult weight at about 12–15 months.",
+        "sl": "Pes takšne velikosti, kot je islandski ovčar, doseže odraslo težo pri približno 12–15 mesecih."
+      },
+      "why": null,
+      "source_id": "S10",
+      "source_name": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "source_url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing",
+      "quote": "Medium (24–59 pounds): 12–15 months",
+      "game_rule_key": null,
+      "sort": 90,
+      "status": "verified",
+      "verified_by": "generate-breed-facts.mjs (numbers and terms checked against the quote)",
+      "verified_hash": "41c56a0af615c45c074db546625f0a2566e751a66f6cb8a9a20470819f486f5d"
+    }
+  ]
+}

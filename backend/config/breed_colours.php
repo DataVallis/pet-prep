@@ -1030,4 +1030,16 @@ return [
         ['key' => 'pale-fawn', 'value' => 'pale fawn', 'en' => 'Pale fawn', 'sl' => 'Svetlo plavo rjav'],
         ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-147: FCI-Standard N° 289 S1100 "White markings always accompany the main colour." (fawn / red from cream to
+    // reddish brown, grey shaded, chocolate brown, black, pied) — same order as the appearance block; red and white = the
+    // portrait default.
+    'icelandic_sheepdog' => [
+        ['key' => 'red-white', 'value' => 'red with white markings', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'black-tan-white', 'value' => 'black and tan with white markings', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
+        ['key' => 'cream-white', 'value' => 'cream with white markings', 'en' => 'Cream and white', 'sl' => 'Kremasto-bel'],
+        ['key' => 'sable-white', 'value' => 'red sable with white markings', 'en' => 'Red sable and white', 'sl' => 'Rdeče sobolji z belo'],
+        ['key' => 'grey-white', 'value' => 'grey with white markings', 'en' => 'Grey and white', 'sl' => 'Sivo-bel'],
+        ['key' => 'chocolate-tan-white', 'value' => 'chocolate and tan with white markings', 'en' => 'Chocolate, tan and white', 'sl' => 'Čokoladno-rjavkasto-bel'],
+        ['key' => 'white-red', 'value' => 'white with red patches (pied)', 'en' => 'White with red patches', 'sl' => 'Bel z rdečimi lisami'],
+    ],
 ];

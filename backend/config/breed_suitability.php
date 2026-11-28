@@ -3428,5 +3428,28 @@ return [
                 ['tag' => 'heat_sensitive', 'source_ids' => ['S1096'], 'refs' => ['barbet.exercise.heat']],
             ],
         ],
+
+        // M5-R10-147 Icelandic Sheepdog (data.json proposed_game_parameters.icelandic_sheepdog.suitability_tags; S1101, S1102,
+        // S1106), runbook rules. RKC Breed Watch category not reached (RKC page refused) → no welfare chip; in marketing. No
+        // small_children / other_pets (conditional), no chases_small_pets (no "high prey drive" wording), no frequent_grooming
+        // (weekly vs "a few times a week" conflict), no apartment / large_home (no RKC key fact). No new vocabulary key.
+        'icelandic_sheepdog' => [
+            'suits' => [
+                // S1102 "Icelandic sheepdogs need moderate exercise every day and are best suited to an active family."
+                ['tag' => 'active_family', 'source_ids' => ['S1102'], 'refs' => ['icelandic_sheepdog.exercise.webmd']],
+                // S1102 "They're loving family dogs that prefer to be with their owners as much as possible."
+                ['tag' => 'family_pet', 'source_ids' => ['S1102'], 'refs' => ['icelandic_sheepdog.behaviour.family']],
+                // S1102 "The Icelandic Sheepdog temperament is typically loving and patient with small children,"
+                ['tag' => 'children', 'source_ids' => ['S1102'], 'refs' => ['icelandic_sheepdog.behaviour.children']],
+            ],
+            'consider' => [
+                // S1102 "Icelandic sheepdogs may be unhappy if they're regularly left on their own for long periods."
+                ['tag' => 'needs_company', 'source_ids' => ['S1102'], 'refs' => ['icelandic_sheepdog.behaviour.time_alone']],
+                // S1101 "Icelandic Sheepdogs shed year-round, but more heavily in the spring and fall."
+                ['tag' => 'sheds', 'source_ids' => ['S1101'], 'refs' => ['icelandic_sheepdog.suitability.petmd_shedding']],
+                // S1106 "So a secure fence is essential in order to keep them from escaping the yard."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S1106'], 'refs' => ['icelandic_sheepdog.behaviour.escaping']],
+            ],
+        ],
     ],
 ];

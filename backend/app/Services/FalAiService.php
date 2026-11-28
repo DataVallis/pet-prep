@@ -1099,6 +1099,13 @@ class FalAiService
                 .'a broad rounded skull with hair falling onto the bridge of the nose, a quite square muzzle covered by long hair, a broad black nose, '
                 .'round dark brown eyes, low-set, long, flat, wide ears covered by long hair hanging in strands, '
                 .'a low-set tail slightly raised with a slight hook at the tip, photorealistic, studio quality, natural lighting',
+            // M5-R10-147: FCI-Standard N° 289 (S1100) — a sturdy Nordic herding spitz slightly under medium size with erect
+            // ears and a curled tail; red with white markings = the portrait default; natural tail.
+            BreedType::IcelandicSheepdog => 'A slightly under medium-sized Icelandic Sheepdog Nordic herding spitz, red with white markings: '
+                .'a sturdy, slightly rectangular body, a thick, weather-resistant double coat with a soft undercoat, '
+                .'a white blaze, collar, chest, socks and tail tip, a gentle, happy expression, '
+                .'almond-shaped dark brown eyes, erect, medium-sized triangular ears with slightly rounded tips, '
+                .'a high-set bushy tail curled over and touching the back, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -2551,6 +2558,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'long, thick, woolly and curly coat in a natural state, with a beard',
                 'markings' => 'long low-set ears covered by long hair, natural tail with a slight hook at the tip, never shaved',
+            ],
+            // M5-R10-147: FCI S1100 "White markings always accompany the main colour." (red with white markings = default).
+            BreedType::IcelandicSheepdog => [
+                'color_scheme' => 'red with white markings',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'thick, weather-resistant double coat with a soft undercoat',
+                'markings' => 'white blaze, collar, chest, socks and tail tip, erect triangular ears, bushy tail curled over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "8388950e7dc5da6127063ee07039712ff2607707bc338e69f538df4cf8f0d5b3"
+      "sha256": "b5464083b23811e567e0d6ba2100807dda872d97e4fb5880512eb6684746712b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "c687aa1e631dd0678639f159a4fb0623a0643e45a85dc15b5b35f23b4749a4b2"
+      "sha256": "815106deea4f6105fa43702151915b60f7d0a34bf37089807c2edefbd74e7598"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "d19e4bb5e873f15866e9fef75f8d31279ef07e3f7feaf0ae25076e714f83c004"
+      "sha256": "0ad9af51faaca51b81c10fb0e0a80145f7f4fb218e261b89243dadcf03b16662"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "bb12b453637b82548d0210401c87c111e54ddb57bbd471e5fa6a2781044d40d7"
+      "sha256": "3b1e0b9c9e4507f39f9c9e5ea6efa2d80d85122a699bded24ee11be035528502"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9a30bb55f74c2f9b379a7d1a556b95f9cc72ef30c346fc660136b6241af87b2a"
+      "sha256": "19a09ce1e338a4b120d81ff2fc41e4065d047091a3140ccb9860c952d789db69"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "4d9ec6c3df5897e2050cc7040d5d858179a53863953a3f8214aecd9b5124950e"
+      "sha256": "097affe84dc99de8c66fc1aaad4cf9a3ca23438c0c70ee4f14ca90618594c1d4"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "65ea9dc53751c6d8fd5c663a6fa99328ba3201740ac26900f9fa05ba417da774"
+      "sha256": "06fa4fb7ae2ec07eda8c19e24d88be51d4d154a5beccb6794887c242d44e2cbf"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "68f26574434190a4b706411550fe5bd17cacce16bf214f8335dd3dfc8866130c"
+      "sha256": "6aa461b0f9a1dd37b5953eb27596340f8fc4f53bee211d5452c34586a5e0b637"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -228,7 +228,7 @@
         }
       },
       "status": "available",
-      "breed_count": 137,
+      "breed_count": 138,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -86246,6 +86246,593 @@
       ]
     },
     {
+      "id": "icelandic_sheepdog",
+      "species": "dog",
+      "order": 137,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Icelandic Sheepdog",
+        "sl": "Islandski ovčar"
+      },
+      "slug": {
+        "en": "icelandic-sheepdog",
+        "sl": "islandski-ovcar"
+      },
+      "synonyms": {
+        "en": [
+          "Icelandic Spitz",
+          "Iceland Dog",
+          "Íslenskur Fjárhundur"
+        ],
+        "sl": [
+          "islandski ovcar",
+          "islandski špic"
+        ]
+      },
+      "facets": {
+        "size": "small_medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small_medium",
+          "source_ids": [
+            "S1102"
+          ],
+          "ref": "icelandic_sheepdog.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              46,
+              46
+            ],
+            "female": [
+              42,
+              42
+            ]
+          },
+          "source_ids": [
+            "S1100"
+          ],
+          "ref": "icelandic_sheepdog.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              11.3,
+              13.6
+            ],
+            "female": [
+              11.3,
+              13.6
+            ]
+          },
+          "source_ids": [
+            "S1102"
+          ],
+          "ref": "icelandic_sheepdog.adult_weight.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "icelandic_sheepdog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S1102"
+          ],
+          "ref": "icelandic_sheepdog.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S1101"
+          ],
+          "ref": "icelandic_sheepdog.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": null,
+          "value": 40,
+          "source_ids": [
+            "S1104"
+          ],
+          "ref": "proposed_game_parameters.icelandic_sheepdog.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S1100"
+          ],
+          "ref": "icelandic_sheepdog.suitability.fci_coat_length",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S1101"
+          ],
+          "ref": "icelandic_sheepdog.suitability.petmd_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S1101"
+          ],
+          "ref": "icelandic_sheepdog.suitability.petmd_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 289,
+            "group": 5,
+            "section": 3,
+            "origin": "IS"
+          },
+          "source_ids": [
+            "S1100"
+          ],
+          "ref": "icelandic_sheepdog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S1102"
+          ],
+          "ref": "icelandic_sheepdog.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S1103"
+          ],
+          "ref": "icelandic_sheepdog.health.elbows_knees",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_conditions",
+          "source_ids": [
+            "S1102"
+          ],
+          "ref": "icelandic_sheepdog.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S1102"
+            ],
+            "refs": [
+              "icelandic_sheepdog.exercise.webmd"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S1102"
+            ],
+            "refs": [
+              "icelandic_sheepdog.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S1102"
+            ],
+            "refs": [
+              "icelandic_sheepdog.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S1102"
+            ],
+            "refs": [
+              "icelandic_sheepdog.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S1101"
+            ],
+            "refs": [
+              "icelandic_sheepdog.suitability.petmd_shedding"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S1106"
+            ],
+            "refs": [
+              "icelandic_sheepdog.behaviour.escaping"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 4000,
+              "cap_month": 4
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 4000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 40,
+              "steps": 4000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S1104"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 40 min/day (Dogs NSW S1104 '40 min/day'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min → 3,000 steps (75 % of 40)"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S1102"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × WebMD lower bound '12 to 14 years', S1102)"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (unranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.grooming",
+            "basis_source_ids": [
+              "S1101"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PetMD »at least once a week«); mehanika česanja psa ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.tooth_brushing",
+            "basis_source_ids": [
+              "S1102"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »every day« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.ear_care",
+            "basis_source_ids": [
+              "S1101"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »once a month« → vsake 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.icelandic_sheepdog.bathing",
+            "basis_source_ids": [
+              "S1102"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every 4 to 6 weeks« → vsake 4 tedne (spodnja meja)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S1101",
+          "S1102",
+          "S1104"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K48"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K48"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K48"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S1100",
+        "S1101",
+        "S1102",
+        "S1103",
+        "S1104",
+        "S1106",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K48"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -93836,6 +94423,48 @@
       "url": "https://www.webmd.com/pets/dogs/what-to-know-about-barbets"
     },
     {
+      "id": "S1100",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 289 — ICELANDIC SHEEPDOG (EN, 03.07.2018)",
+      "url": "https://fci.be/Nomenclature/Standards/289g05-en.pdf"
+    },
+    {
+      "id": "S1101",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM (2024-09-17)",
+      "title": "Icelandic Sheepdog",
+      "url": "https://petmd.com/dog/breeds/icelandic-sheepdog"
+    },
+    {
+      "id": "S1102",
+      "tier": "B",
+      "publisher": "WebMD — Ariel Grucza; medically reviewed by Shruthi N, MD (2025-03-09)",
+      "title": "What to Know About Icelandic Sheepdogs",
+      "url": "https://www.webmd.com/pets/dogs/what-to-know-icelandic-sheepdog"
+    },
+    {
+      "id": "S1103",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn, created 2014-05-29)",
+      "title": "Icelandic Sheepdog",
+      "url": "https://vcahospitals.com/know-your-pet/icelandic-sheepdog"
+    },
+    {
+      "id": "S1104",
+      "tier": "B",
+      "publisher": "Dogs NSW (ANKC member)",
+      "title": "Icelandic Sheepdog — breed profile (breed standard last updated 09 Jul 2018)",
+      "url": "https://www.dogsnsw.org.au/breeds/browse-all-breeds/icelandic-sheepdog/"
+    },
+    {
+      "id": "S1106",
+      "tier": "B",
+      "publisher": "American Kennel Club — Mary Robins (updated 2025-10-06)",
+      "title": "10 Facts About Icelandic Sheepdogs",
+      "url": "https://www.akc.org/expert-advice/lifestyle/10-facts-about-icelandic-sheepdogs/"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -94331,6 +94960,13 @@
       "publisher": "American Kennel Club",
       "title": "Meet the Barbet: 2020's new AKC-recognized breed",
       "url": "https://www.akc.org/expert-advice/dog-breeds/barbet-2020-new-akc-recognized-breed/"
+    },
+    {
+      "id": "K48",
+      "tier": "B",
+      "publisher": "Dogs Victoria (ANKC member)",
+      "title": "Icelandic Sheepdog — breed page (Choosing a breed)",
+      "url": "https://dogsvictoria.org.au/choosing-a-breed/browse-all-breeds/144/Icelandic-Sheepdog/"
     }
   ]
 }
