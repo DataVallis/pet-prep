@@ -3,11 +3,14 @@
 namespace App\Services\Media;
 
 use App\Enums\AiCallFailure;
+use App\Enums\LifeStage;
 use App\Enums\PetPose;
 use App\Enums\Species;
 use App\Events\PetUpdated;
 use App\Jobs\GenerateItemMedia;
 use App\Jobs\GeneratePetKeyframe;
+use App\Jobs\GeneratePetReferenceImage;
+use App\Jobs\SendStageImageAlert;
 use App\Jobs\SendStillQualityAlert;
 use App\Models\AppSettingChange;
 use App\Models\ItemMedia;
@@ -41,8 +44,10 @@ use Throwable;
  *  check's mode) and, since David 2026-11-19, the AI realism check (contact sheet + start frame,
  *  rubric `item_clip`, the ITEM mode while `clip_ai` is on) — decideItemClip(). Item key images use
  *  the `item` rubric (grounded / integrated / scale). Stored files: recheckItemRealism() (media:item-recheck).
- *  The reference image is NOT checked: it is generated during pairing, its failure path (pets.
- *  media_status, stage remakes) is separate, and every key / pose image made from it is checked.
+ *  The FIRST reference image is NOT checked: it is generated during pairing, its failure path (pets.
+ *  media_status) is separate, and every key / pose image made from it is checked. A LIFE-STAGE
+ *  reference image (David 2026-11-28) gets the »looks older« check — checkStageCandidate(): the
+ *  previous stage's picture + the new one, rubric `stage`, own mode `stage_mode` (default shadow).
  *
  * Modes (independent of the clip mode, which stays shadow while it is calibrated):
  * `app_settings.quality_check.stills_mode` for ITEM key images + catalogue pictures (default
@@ -313,6 +318,205 @@ class StillQualityService
         $path = URL::temporarySignedRoute('media.candidate', $this->media->urlExpiry(30), ['media' => $slot->id, 'v' => substr(sha1((string) $slot->candidate_path), 0, 10)], absolute: false);
 
         return rtrim((string) config('app.url'), '/').$path;
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Life-stage reference images (David 2026-11-28 — »looks older«)
+    // ──────────────────────────────────────────────────────────────
+
+    /** Cache keys of the aggregated stage image alert (one Discord post per ALERT_WINDOW_MINUTES). */
+    public const STAGE_ALERT_COUNT_KEY = 'stage-image-alert:count';
+
+    public const STAGE_ALERT_WINDOW_KEY = 'stage-image-alert:window';
+
+    /** off | shadow | enforce of the »looks older« check (fresh read). */
+    public function stageMode(): string
+    {
+        return $this->settings->qualityStageMode(fresh: true);
+    }
+
+    /**
+     * David 2026-11-28 (production: mutt look 1's »young« image still showed the fluffy puppy): the
+     * previous stage's picture + the new life-stage image go to the vision model (rubric `stage`:
+     * same animal AND visibly older). Idempotent.
+     *  - shadow (default): the verdict is recorded on the row (`quality` passed | shadow_failed |
+     *    unchecked + `quality_reason`) and the image is ALWAYS used — no retry, no wait for budget;
+     *  - enforce: fail → a new stage edit with the next, stronger prompt variant and a fresh seed
+     *    (≤ max_still_retries per chain, each planned against the budget first); then — or when
+     *    the retry is not affordable — the LAST image is kept (`shadow_failed`, »Needs review« list)
+     *    and one aggregated Discord post counts it (countStageAlert). Without budget for the check
+     *    itself the image WAITS (nothing claimed or paid; media:sweep re-runs it hourly);
+     *  - off: stored at once.
+     *
+     * @return 'promoted'|'retrying'|'kept'|'waiting'|'busy'|'skipped'
+     */
+    public function checkStageCandidate(PetMedia $slot): string
+    {
+        if ($slot->status !== PetMedia::STATUS_RUNNING || blank($slot->candidate_path) || ! $slot->isImage()) {
+            return 'skipped';
+        }
+
+        $candidate = (string) $slot->candidate_path;
+        $mode = $this->stageMode();
+        $source = $this->media->stageImageSource($slot);
+
+        if ($mode === AppSettingsService::QUALITY_OFF || $source === null) {
+            return $this->promotePet($slot, $candidate, null, null);
+        }
+
+        $shadow = $mode === AppSettingsService::QUALITY_SHADOW;
+        $check = PetMediaQualityCheck::query()->where('pet_media_id', $slot->id)->where('generation', $slot->generation)
+            ->where('trigger', PetMediaQualityCheck::TRIGGER_PIPELINE)->first();
+
+        if ($check === null || $check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
+            $gate = $this->gate();
+            if ($gate === 'disabled') {
+                return $this->promotePet($slot, $candidate, PetMedia::QUALITY_UNCHECKED, 'Not AI-checked (no vision profile / fal disabled)');
+            }
+            if ($gate === 'waiting') {
+                return $this->stageWithoutBudget($slot, $candidate, $shadow);
+            }
+
+            $check = $this->claim(PetMediaQualityCheck::class, 'pet_media_id', $slot->id, $slot->generation, PetMediaQualityCheck::TRIGGER_PIPELINE);
+            if ($check === null) {
+                return 'busy';
+            }
+
+            if ($check->status !== PetMediaQualityCheck::STATUS_DECIDED) {
+                $species = $slot->isLookMedia() ? ($slot->look?->breed_type?->species() ?? Species::Dog) : ($slot->pet?->speciesValue() ?? Species::Dog);
+                $from = LifeStage::tryFrom($source['stage']);
+                $to = LifeStage::tryFrom((string) $slot->life_stage);
+                $judged = $this->judge($check, fn (): array => $this->vision->judgeStage(
+                    $species,
+                    $from?->promptCue($species) ?? $source['stage'],
+                    $to?->promptCue($species) ?? (string) $slot->life_stage,
+                    $this->media->falFetchUrl($source['media']),
+                    $this->petCandidateUrl($slot),
+                    $slot->pet_id,
+                    (int) $slot->id,
+                ));
+                if ($judged === 'waiting') {
+                    return $this->stageWithoutBudget($slot, $candidate, $shadow);
+                }
+            }
+            $check->refresh();
+        }
+
+        $fresh = $slot->fresh();
+        if ($fresh === null || $fresh->status !== PetMedia::STATUS_RUNNING || $fresh->candidate_path !== $candidate) {
+            return 'skipped'; // regenerated / decided meanwhile
+        }
+
+        if ($check->verdict === PetMediaQualityCheck::VERDICT_PASS) {
+            return $this->promotePet($fresh, $candidate, self::passQuality($check), $check->reason);
+        }
+
+        if ($shadow) {
+            Log::warning('StillQualityService: stage image would fail the »looks older« check (shadow mode — used anyway)', ['pet_media_id' => $slot->id, 'reason' => $check->reason]);
+
+            return $this->promotePet($fresh, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason);
+        }
+
+        if ($fresh->still_retries < self::maxRetries()) {
+            $refusal = $this->media->stageRetryRefusal();
+            if ($refusal === null) {
+                return $this->retryStage($fresh, $candidate, (string) $check->reason) ? 'retrying' : 'skipped';
+            }
+
+            return $this->keepStage($fresh, $candidate, 'Stage check failed — no budget for a new stage edit ('.$refusal.'), kept: '.$check->reason);
+        }
+
+        return $this->keepStage($fresh, $candidate, 'Stage check failed '.((int) $fresh->still_retries + 1).'× — kept the last image: '.$check->reason);
+    }
+
+    /** No AI budget for the check: shadow never holds an image (used unchecked); enforce waits, nothing paid. */
+    private function stageWithoutBudget(PetMedia $slot, string $candidate, bool $shadow): string
+    {
+        if ($shadow) {
+            return $this->promotePet($slot, $candidate, PetMedia::QUALITY_UNCHECKED, 'Not AI-checked (no AI budget for the »looks older« check)');
+        }
+
+        Log::info('StillQualityService: stage image waits for the AI budget before its »looks older« check', ['pet_media_id' => $slot->id]);
+
+        return 'waiting';
+    }
+
+    /** A failed stage image with retries left: a NEW stage edit (next, stronger prompt variant, fresh seed). */
+    private function retryStage(PetMedia $slot, string $candidate, string $reason): bool
+    {
+        $variant = min((int) $slot->prompt_variant + 1, PetAppearancePrompt::STAGE_EDIT_VARIANTS - 1);
+
+        $retried = PetMedia::query()->whereKey($slot->id)->where('status', PetMedia::STATUS_RUNNING)->where('candidate_path', $candidate)
+            ->update([
+                'status' => PetMedia::STATUS_PENDING,
+                'generation' => DB::raw('generation + 1'),
+                'seed_override' => PetMedia::freshSeed(),
+                'still_retries' => DB::raw('still_retries + 1'),
+                'prompt_variant' => $variant,
+                'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
+                'source_url' => null,
+                'candidate_path' => null,
+                'candidate_bytes' => null,
+                'candidate_mime' => null,
+                'error_reason' => null,
+                'error' => mb_substr('Stage check failed, remaking the stage image automatically: '.$reason, 0, 2000),
+                'updated_at' => now(),
+            ]) === 1;
+
+        if (! $retried) {
+            return false;
+        }
+
+        if ($candidate !== $slot->storage_path) {
+            $this->media->disk()->delete($candidate);
+        }
+
+        // A pet's own slot: its job re-runs the edit from the still stored previous-stage file. A look row
+        // has no job of its own — a pet waiting for it runs it (referenceImageFromLook claims the row).
+        $petId = $slot->isLookMedia()
+            ? PetMedia::query()->where('look_media_id', $slot->id)->images()->whereNotNull('pet_id')->orderBy('id')->value('pet_id')
+            : $slot->pet_id;
+        if ($petId !== null) {
+            GeneratePetReferenceImage::dispatch((int) $petId);
+        }
+
+        Log::warning('StillQualityService: stage image failed the »looks older« check — remaking it with a stronger prompt', ['pet_media_id' => $slot->id, 'retry' => $slot->still_retries + 1, 'variant' => $variant, 'reason' => $reason]);
+
+        return true;
+    }
+
+    /** Retries used up (or not affordable): the LAST image is kept (shown), marked failed, one aggregated alert. */
+    private function keepStage(PetMedia $slot, string $candidate, string $reason): string
+    {
+        if ($this->promotePet($slot, $candidate, PetMedia::QUALITY_SHADOW_FAILED, mb_substr($reason, 0, 2000)) !== 'promoted') {
+            return 'skipped';
+        }
+
+        Log::warning('StillQualityService: stage image still fails the »looks older« check — kept the last image', ['pet_media_id' => $slot->id, 'reason' => $reason]);
+        self::countStageAlert();
+
+        return 'kept';
+    }
+
+    /** One given-up stage image counted; ONE Discord post per window with the count (counts only). */
+    public static function countStageAlert(): void
+    {
+        Cache::add(self::STAGE_ALERT_COUNT_KEY, 0, now()->addDay());
+        Cache::increment(self::STAGE_ALERT_COUNT_KEY);
+
+        if (Cache::add(self::STAGE_ALERT_WINDOW_KEY, true, now()->addMinutes(self::ALERT_WINDOW_MINUTES + 5))) {
+            SendStageImageAlert::dispatch()->delay(now()->addMinutes(self::ALERT_WINDOW_MINUTES));
+        }
+    }
+
+    /** The count of the stage alert window that ends now. */
+    public static function takeStageAlertCount(): int
+    {
+        Cache::forget(self::STAGE_ALERT_WINDOW_KEY);
+
+        return (int) Cache::pull(self::STAGE_ALERT_COUNT_KEY, 0);
     }
 
     // ──────────────────────────────────────────────────────────────

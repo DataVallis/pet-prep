@@ -115,6 +115,12 @@
    2. Ročno napisane zanimivosti (border collie 42, maine coon 43) še čakajo tebe: `/admin/breed-facts` → filter **Status = Verified** → označi vse → **Approve selected**.
    3. Če je katera osnovna zanimivost napačna: odpri jo → **Back to draft** (ostane skrita, uvoz je ne odobri znova) in povej Claudu.
 
+27. **Slike obdobij »je videti starejši« (28. 11., po deployu tega PR-ja):** novi poziv velja samo za slike obdobij od deploya naprej; obstoječa mlada slika Bafa (skupni videz 1) se ne naredi znova sama.
+   1. AI Lab novega poziva **ne more** preizkusiti: zna le sliko iz besedila (obdobje »young« tam uporabi stari opis obdobja), urejanja iz prejšnje slike nima. Preizkus novega poziva je zato korak 2 sam.
+   2. Ponovna izdelava: `/admin` → *AI media* → **Shared looks** → vrstica **1** → **»Regenerate media«** → potrdi. Stane ≈ 13–18 $ (ponovno vse vrstice aktivnih obdobij videza — sliko obdobja, ključne slike, zanke, prehode, poze, posnetke šole / iger); videz 1 uporablja samo Bafo. Pred tem preveri `/admin` → *AI budget*, da je za danes dovolj (50 $ / dan).
+   3. Po ~10–30 min: `/admin` → Ljubljenčki → Bafo (pet 7) → *AI media* → vrstica slike: stolpec **»Quality«** pokaže rezultat preverjanja (»passed« ali »would fail (shadow)« z razlogom).
+   4. Umerjanje: po nekaj prehodih obdobij odpri vrstice z »would fail (shadow)« in »passed«; če se rezultati ujemajo s tem, kar vidiš, `/admin` → *Feature switches* → **»Life-stage image check mode«** → **Enforce** (do 2 samodejni ponovitvi po ≈ 0,15 $, nato obdrži zadnjo sliko + eno Discord sporočilo). Do takrat ostane **Shadow** (samo zapis, nikoli ponovitev).
+
 ## 2. Decisions
 
 All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on top). Standing rules to know before any work:
@@ -177,6 +183,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 ## 6. Session log
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
+
+### 2026-11-28 (backend, `fix/stage-image-ageing`)
+- David (Bafo's young image still a fluffy puppy): stronger stage edit prompts (dogs + cats: new-stage body, keep identity only, same room / camera; retry variants) + »looks older« vision check of every new stage image (previous + new image, rubric `stage`, switch `quality_check.stage_mode`, default **shadow** = verdict on the row only; enforce ≤ 2 remakes then keep the last + one Discord post). AI-cost logic → one QA round before merge. No automatic regeneration — §1b 27. Debt: the rubric is uncalibrated (stay on shadow until David has looked at verdicts); a look row whose retry finds no waiting pet slot waits until the next pet of that look needs the stage image.
 
 ### 2026-11-28 (mobile, `feat/command-learned-celebration`)
 - David: first-time learned school command = milestone result screen (»{ime} zna ukaz »Prostor«!«, burst / static badge with reduce motion, pose clip / image, chime + haptic via lazy `MilestoneFx`, details collapsed), »Ukazi: Sedi ✓ · …« row in the pet profile sheet, parent push `command_learned` + timeline row (graduation cap). App reads `command_learned` / `learned_at` / timeline `command` | `meta.command` defensively — **depends on the parallel backend PR**; TODO(schema) in `training.ts` + `commandLearned.ts` after `schema.ts` is regenerated. OTA-safe (no native change).

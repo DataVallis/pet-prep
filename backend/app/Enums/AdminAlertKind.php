@@ -29,6 +29,8 @@ enum AdminAlertKind: string
     case ItemMediaStuck = 'item_media_stuck';
     /** David 2026-11-04: a state key image failed the AI still check after its automatic regenerations (needs review — informative). */
     case StillQualityRejected = 'still_quality_rejected';
+    /** David 2026-11-28: a life-stage image still failed the »looks older« check after its automatic remakes — the last one is kept (informative, counts only). */
+    case StageImageNotOlder = 'stage_image_not_older';
     /** DEPLOYMENT.md D31 (incident 2026-11-04): the server's root disk is ≥ system_health.disk_alert_percent full (once per day, numbers only). */
     case DiskSpace = 'disk_space';
     /** David 2026-11-04 (after PR #737): a pet's game-loop work threw in `pets:process-decay` — the other pets were processed (once per pet per day; pet id + stage + exception class only). */
@@ -53,7 +55,7 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected, self::ShopIssue => 'warning',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected, self::StageImageNotOlder, self::ShopIssue => 'warning',
             self::DiskSpace, self::GameLoopPetError, self::GameLoopStalled, self::UnassignedChallengeCredit => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::PartnerInquiry, self::Test => 'info',
@@ -75,7 +77,7 @@ enum AdminAlertKind: string
     {
         return match ($this) {
             self::AiBudgetWarning, self::AiBudgetBlocked => '/admin/ai-budget',
-            self::ActivityMediaStuck, self::FrugalClipFallback, self::StillQualityRejected => '/admin/pets',
+            self::ActivityMediaStuck, self::FrugalClipFallback, self::StillQualityRejected, self::StageImageNotOlder => '/admin/pets',
             self::ItemMediaStuck => '/admin/item-media',
             self::UnassignedChallengeCredit => '/admin/challenge-credits',
             self::ShopIssue => '/admin/shop-orders',

@@ -322,6 +322,9 @@ return [
         'quality_pet_stills' => 'Način preverjanja slik ljubljenčka (ključne slike, poze)',
         'quality_pet_stills_help' => 'Isto AI preverjanje za ključne slike stanj in poze šole / iger (lastni mediji in skupni videzi). SENCA (privzeto do umerjanja): rezultati se zapišejo v Ljubljenček → AI media (»would fail«), vsaka slika se uporabi. Po ~48 urah poglej rezultate in preklopi na UVELJAVI: neuspešna slika se ustvari znova z novim semenom (največ 2-krat), nato se ne uporabi (»Potrebuje pregled«; aktivnosti v preprostem načinu, stanje obdrži trenutni posnetek; eno Discord sporočilo na 15 minut s številom). IZKLOP: brez preverjanja.',
         'saved_body_quality_pet_stills' => 'Preverjanje slik ljubljenčka: :state',
+        'quality_stage' => 'Način preverjanja slik življenjskih obdobij (»je videti starejši«)',
+        'quality_stage_help' => 'Ko ljubljenček preide v novo življenjsko obdobje, gresta slika prejšnjega obdobja in nova slika na AI preverjanje (ista žival IN vidno starejša — razmerja, dlaka). SENCA (privzeto do umerjanja): rezultat se zapiše v Ljubljenček → AI media (»would fail«), nova slika se vedno uporabi. UVELJAVI: neuspešna slika se naredi znova z močnejšim pozivom za obdobje (največ 2-krat, ≈ 0,15 $ na poskus); nato se obdrži zadnja slika in eno Discord sporočilo na 15 minut sporoči število. IZKLOP: brez preverjanja. Velja samo za slike obdobij, narejene od zdaj naprej.',
+        'saved_body_quality_stage' => 'Preverjanje slik obdobij: :state',
         'saved_body_quality_clip_ai' => 'AI klic pri posnetkih: :state',
         'saved_body_quality_check' => 'Preverjanje kakovosti: :state',
         'saved_body_app_error_reports' => 'Poročila o napakah iz aplikacije: :state',
@@ -774,6 +777,12 @@ return [
         ],
     ],
     // M6-W03: AI vsebine kupljenih stvari, ki niso uspele niti po samodejnih poskusih (ItemMediaService::heal).
+    'stage_check' => [
+        'discord' => [
+            'title' => 'Preverjanje obdobij: :count slik(e) življenjskega obdobja po vseh samodejnih ponovitvah še vedno niso videti starejše',
+            'body' => 'Ljubljenček / skupni videz je prešel v novo življenjsko obdobje, a AI preverjanje pravi, da nova slika ni videti starejša od prejšnjega obdobja (ali ni ista žival) — tudi po samodejnih ponovitvah z močnejšim pozivom. Obdržana je zadnja slika in je prikazana. Neobvezno: Ljubljenčki → AI media (rezultat v stolpcu Quality) → Regenerate ali Shared looks → »Regenerate media«; poziv najprej preizkusi v AI Lab.',
+        ],
+    ],
     'still_check' => [
         'discord' => [
             'title' => 'Preverjanje slik: :count ključnih slik zavrnjenih po vseh samodejnih poskusih',

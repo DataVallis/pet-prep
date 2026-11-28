@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-28 — Ko kuža odraste, mora biti tudi na sliki večji
+
+**Kaj:** mešanček »Bafo« je opolnoči prešel iz mladička v mladega psa, nova slika pa je še vedno kazala puhastega mladička (velike tace, mladičja dlaka, okrogla glava). AI je sliko ustvaril pravilno po proračunu (≈ 0,15 $), a poziv je bil preblag (»spremeni samo, kar spremeni staranje«) in nič ni preverilo, ali je kuža res videti starejši. Zdaj poziv natančno opiše novo telo (daljše noge in gobec, manjša glava v razmerju, gladka odrasla dlaka, isti prostor in razdalja kamere) in ohrani samo to, kar je »on« (barve, oznake, oči, ušesa). Vsako novo sliko obdobja AI primerja s prejšnjo (»ista žival in vidno starejša«, ≈ 0,003 $); privzeto se rezultat samo zapiše za administratorja, v strogem načinu se slika naredi znova (največ 2-krat).
+**Zakaj je pomembno:** rast je jedro obljube »kuža raste z otrokom«. Če je pes po 9 tednih na sliki še vedno mladiček, otrok ne vidi, da čas teče in da ga je pripeljal skozi obdobje.
+**Kako povedati:** 🧒 »Ko tvoj kuža odraste, ga vidiš večjega — z daljšimi nogami in odraslo dlako.« · 👩 »Slika vsakega obdobja je isti pes, starejši — AI to tudi preveri.« · 🛠 »Image-to-image urejanje zna kopirati vhodno sliko; dodali smo primerjavo dveh slik z vizijskim modelom (0,003 $) kot vratarja pred 0,15 $ sliko in 26 videi, ki iz nje sledijo.«
+
+---
+
 ## 2026-11-28 — »Pika zna ukaz »Prostor«!«: naučen ukaz je praznik
 
 **Kaj:** tester je kužka naučil ukaz »Prostor« (94 % → 100 %), a rezultat je bil isti »Bravo!« kot vsak dan — dosežek je bil le majhna zelena vrstica. David: »bilo bi lahko bolj izpostavljeno«. Zdaj je vaja, ki ukaz nauči **prvič**, zaslon mejnika: velik naslov z imenom kužka, poza ukaza, značka z izbruhom zvezdic, zvonček in vibracija; podrobnosti vaje so zložene spodaj. Profil kužka pokaže »Ukazi: Sedi ✓ · Prostor ✓ · …«, starši dobijo obvestilo in vrstico v časovnici. Aplikacija je pripravljena (samo JS), deluje, ko strežnik pošlje novo polje (*v delu*).
