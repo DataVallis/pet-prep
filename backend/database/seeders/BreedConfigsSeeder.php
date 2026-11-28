@@ -2919,6 +2919,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.barbet',
                 'search_keywords' => ['barbet', 'french water dog'],
             ],
+            // M5-R10-147 Icelandic Sheepdog (docs/research/dog-data/data.json icelandic_sheepdog, sources S1100–S1109; runbook
+            // rules confirmed by David 2026-10-10). daily_steps_required = adult steps 4,000
+            // (proposed_game_parameters.icelandic_sheepdog.step_goal_adult: 40 min × 100 steps/min — Dogs NSW S1104
+            // "40 min/day"; the RKC Breeds A–Z page was not reachable) — only the legacy-profile fallback. Hunger / thirst
+            // decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::IcelandicSheepdog->slug(),
+                'daily_steps_required' => 4000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 1380,
+                'label_key' => 'breeds.icelandic_sheepdog',
+                'search_keywords' => ['icelandic sheepdog', 'islandski ovčar', 'islandski ovcar', 'icelandic spitz', 'iceland dog', 'islandski špic', 'íslenskur fjárhundur'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

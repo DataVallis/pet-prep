@@ -144,6 +144,7 @@ return [
     'smooth_fox_terrier' => 'Smooth Fox Terrier',
     'saluki' => 'Saluki',
     'barbet' => 'Barbet',
+    'icelandic_sheepdog' => 'Icelandic Sheepdog',
     'bearded_collie' => 'Bearded Collie',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',

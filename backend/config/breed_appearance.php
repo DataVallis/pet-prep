@@ -6613,4 +6613,43 @@ return [
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
+    // M5-R10-147 (docs/research/dog-data/data.json icelandic_sheepdog.appearance; runbook rules 2026-10-10: FCI-Standard N° 289
+    // (S1100) "Fawn and red in various shades, ranging from cream to reddish brown.", "Grey shaded.", "Chocolate brown in various
+    // shades.", "Black.", "White markings always accompany the main colour." — never white-dominant (UKC S1107), never a hound
+    // saddle, never blue / yellow eyes; red with white markings = the portrait default (Claude — weights unsourced); natural
+    // curled tail).
+    'icelandic_sheepdog' => [
+        'display_name' => 'Icelandic Sheepdog',
+        // Colour frequencies are in no source (icelandic_sheepdog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 289 (S1100), UKC (S1107) and WebMD (S1102) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S1100 "The Icelandic Sheepdog is a Nordic Herding Spitz, slightly under medium size, sturdy, with erect ears and a curled tail."; "Ideal height at withers: Male: 46 cm. Female: 42 cm."; WebMD S1102 "medium-small dogs"',
+            'build' => 'S1100 "The Icelandic Sheepdog is a Nordic Herding Spitz, slightly under medium size, sturdy, with erect ears and a curled tail." (rectangular body seen from the side, paraphrase)',
+            'coat_length' => 'S1100 "Double coat, thick and extremely weather resistant." (short-haired and long-haired varieties)',
+            'coat_color' => 'S1100 "White markings always accompany the main colour." (fawn / red from cream to reddish brown, grey shaded, chocolate brown, black with tan markings, pied); UKC S1107 white never predominant (weights unsourced)',
+            'ear_carriage' => 'S1100 "Erect and of medium size." (close to an equilateral triangle with slightly rounded tips)',
+            'eye_color' => 'S1100 "Almond shaped, of medium size." (dark brown; blue / yellow eyes serious faults)',
+            'tail' => 'S1100 "High set, curled over and touching the back." (natural)',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'sturdy Nordic herding spitz, slightly under medium size, with a rectangular body and a gentle, happy expression', 'weight' => 3], 'agile, hardy herding spitz with a slightly rectangular body'],
+            'coat_length' => [['value' => 'thick, weather-resistant double coat of medium length with a soft undercoat and a bushy tail', 'weight' => 3], 'longer, thick, weather-resistant double coat with a soft undercoat, a full ruff and a bushy tail'],
+            // FCI S1100 colour list — white markings always accompany the main colour; white never predominant.
+            'coat_color' => [
+                ['value' => 'red with white markings', 'weight' => 30],
+                ['value' => 'black and tan with white markings', 'weight' => 16],
+                ['value' => 'cream with white markings', 'weight' => 12],
+                ['value' => 'red sable with white markings', 'weight' => 12],
+                ['value' => 'grey with white markings', 'weight' => 12],
+                ['value' => 'chocolate and tan with white markings', 'weight' => 10],
+                ['value' => 'white with red patches (pied)', 'weight' => 8],
+            ],
+            'ear_carriage' => ['erect, medium-sized triangular ears with slightly rounded tips'],
+            'eye_color' => ['almond-shaped, medium-sized dark brown eyes'],
+            'tail' => ['high-set bushy natural tail curled over and touching the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
 ];
