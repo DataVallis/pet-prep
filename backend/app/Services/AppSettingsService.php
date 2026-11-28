@@ -73,6 +73,9 @@ use InvalidArgumentException;
  * and pose images (no key → env AI_QUALITY_PET_STILLS_MODE, default SHADOW until the verdicts are
  * calibrated); `clip_ai` (bool) = whether the CLIP check makes its paid vision call (no key → env
  * AI_QUALITY_CLIP_AI, default on) — clip spend can be stopped without touching the stills.
+ * David 2026-11-28: `stage_mode` (off|shadow|enforce) = the »looks older« check of a life-stage
+ * reference image against the previous stage's image (StillQualityService::checkStageCandidate; no
+ * key → env AI_QUALITY_STAGE_MODE, default SHADOW: verdict recorded on the row, never a retry).
  */
 class AppSettingsService
 {
@@ -749,9 +752,9 @@ class AppSettingsService
      * Save the quality check settings (superadmin), audit them and bust the cache. A null argument
      * keeps the stored value (David 2026-11-04, QA #736 M2 / M3).
      */
-    public function updateQualityCheck(User $actor, string $mode, ?string $stillsMode = null, ?string $petStillsMode = null, ?bool $clipAi = null): void
+    public function updateQualityCheck(User $actor, string $mode, ?string $stillsMode = null, ?string $petStillsMode = null, ?bool $clipAi = null, ?string $stageMode = null): void
     {
-        foreach (array_filter([$mode, $stillsMode, $petStillsMode], fn ($m) => $m !== null) as $value) {
+        foreach (array_filter([$mode, $stillsMode, $petStillsMode, $stageMode], fn ($m) => $m !== null) as $value) {
             if (! in_array($value, self::QUALITY_CHECK_MODES, true)) {
                 throw new InvalidArgumentException("Unknown quality check mode {$value}.");
             }
@@ -762,11 +765,13 @@ class AppSettingsService
             'stills_mode' => $stillsMode ?? $this->qualityStillsMode(fresh: true),
             'pet_stills_mode' => $petStillsMode ?? $this->qualityPetStillsMode(fresh: true),
             'clip_ai' => $clipAi ?? $this->qualityClipAi(fresh: true),
+            'stage_mode' => $stageMode ?? $this->qualityStageMode(fresh: true),
         ], [
             'mode' => self::qualityCheckDefault(),
             'stills_mode' => self::qualityStillsDefault(),
             'pet_stills_mode' => self::qualityPetStillsDefault(),
             'clip_ai' => self::qualityClipAiDefault(),
+            'stage_mode' => self::qualityStageDefault(),
         ]);
     }
 
@@ -816,6 +821,27 @@ class AppSettingsService
     public static function qualityPetStillsDefault(): string
     {
         $mode = (string) config('media.quality_check.pet_stills_mode', self::QUALITY_SHADOW);
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::QUALITY_SHADOW;
+    }
+
+    /**
+     * David 2026-11-28 (production: a mutt's »young« image still showed the puppy): mode of the
+     * »looks older« check of a life-stage reference image — `shadow` (default: verdict recorded on
+     * the pet_media row, the image is always used, never a retry), `enforce` (≤ max_still_retries
+     * stage edits with the next prompt variant, then the last image is kept + one admin alert) or `off`.
+     */
+    public function qualityStageMode(bool $fresh = false): string
+    {
+        $mode = $this->qualityCheckValue($fresh)['stage_mode'] ?? null;
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::qualityStageDefault();
+    }
+
+    /** The stage image mode "no key" stands for (env AI_QUALITY_STAGE_MODE, default shadow). */
+    public static function qualityStageDefault(): string
+    {
+        $mode = (string) config('media.quality_check.stage_mode', self::QUALITY_SHADOW);
 
         return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::QUALITY_SHADOW;
     }

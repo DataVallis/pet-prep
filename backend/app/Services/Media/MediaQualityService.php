@@ -96,6 +96,13 @@ class MediaQualityService
             return $outcome === 'waiting' ? 'skipped' : $outcome;
         }
 
+        // David 2026-11-28: a life-stage reference image candidate gets the »looks older« check (its own mode).
+        if ($slot !== null && $slot->isImage()) {
+            $outcome = app(StillQualityService::class)->checkStageCandidate($slot);
+
+            return $outcome === 'waiting' ? 'skipped' : $outcome;
+        }
+
         if ($slot === null || $slot->status !== PetMedia::STATUS_RUNNING || blank($slot->candidate_path) || ! $slot->isClip()) {
             return 'skipped';
         }

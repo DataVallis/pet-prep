@@ -241,7 +241,8 @@ return [
     | catalogue pictures get the vision check BEFORE a video is made from them — own modes
     | `stills_mode` (items, default enforce) and `pet_stills_mode` (pet / look key + pose images,
     | default shadow — QA #736), ≤ `max_still_retries` regenerations with a new seed; `clip_ai`
-    | switches the clip check's paid AI call.
+    | switches the clip check's paid AI call. Life-stage reference images (David 2026-11-28) get
+    | the »looks older« check (`stage_mode`, default shadow).
     */
     'quality_check' => [
         // QA #363 M1: off | shadow | enforce — only the default while /admin → Feature switches has
@@ -283,6 +284,12 @@ return [
         // David has looked at the verdicts, then enforce.
         'stills_mode' => env('AI_QUALITY_STILLS_MODE', 'enforce'),
         'pet_stills_mode' => env('AI_QUALITY_PET_STILLS_MODE', 'shadow'),
+        // David 2026-11-28: the »looks older« check of a life-stage reference image (previous stage +
+        // new image, one vision call, StillQualityService::checkStageCandidate). off | shadow | enforce —
+        // only the default while /admin → Feature switches has no `quality_check.stage_mode`. Shadow =
+        // verdict recorded on the pet_media row, the image is always used, never a retry; enforce = up to
+        // `max_still_retries` stage edits with the next prompt variant, then the last image is kept.
+        'stage_mode' => env('AI_QUALITY_STAGE_MODE', 'shadow'),
         // QA #736 M3: the clip check's paid AI vision call (on / off; off = technical check alone).
         'clip_ai' => (bool) env('AI_QUALITY_CLIP_AI', true),
         // Cap of automatic regenerations one media:still-check run may start (each ≈ a $0.15 image +

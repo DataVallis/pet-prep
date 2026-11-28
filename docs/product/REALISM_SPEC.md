@@ -16,7 +16,7 @@
 - Čas: **1 realni teden = 1 mesec** psove starosti (obstoječe pravilo) → 12 tednov = 12 mesecev.
 - Mladiček, ki pride pri 2 mesecih, je ob koncu izziva star ~14 mesecev — prehod mladiček → mlad pes → (skoraj) odrasel.
 - **Faze** (meje po pasmi/velikosti iz virov): mladiček · mladostnik · odrasel · starejši. Vsaka faza ima svoje potrebe (število obrokov, spanje, gibanje, vedenje).
-- **Slika in videi rastejo s psom:** ob prehodu faze (in npr. vsak mesec pri mladičku) se ustvari nova referenčna slika istega psa (image-to-image iz prejšnje → ohranjena identiteta: barva, oznake), nato videi stanj. Strošek: ~0,15 $ slika + videi po fazah — v proračunu (M4-07).
+- **Slika in videi rastejo s psom:** ob prehodu faze (in npr. vsak mesec pri mladičku) se ustvari nova referenčna slika istega psa (image-to-image iz prejšnje → ohranjena identiteta: barva, oznake), nato videi stanj. Strošek: ~0,15 $ slika + videi po fazah — v proračunu (M4-07). **David 2026-11-28:** nova slika mora biti **vidno starejša** — poziv opiše telo novega obdobja (mlad pes: ni več mladiček — daljše noge in gobec, manjša glava v razmerju, gladka odrasla dlaka; odrasel: polna velikost; starejši: siv obraz), ohrani samo identiteto (barve, vzorec, oznake, oči, ušesa) in isti prostor / razdaljo kamere; AI preverjanje primerja prejšnjo in novo sliko (»ista žival in vidno starejša«; privzeto le zapis, v načinu uveljavi do 2 ponovitvi, nato ostane zadnja slika).
 
 ## 3. Vedenje glede na starost in izvor
 | Pojav | Kdaj | V igri |
