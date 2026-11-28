@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "87230909fdcf076bf6f9be75f4135c42be0cce1846cc9efb22199e89cbec6f0a"
+      "sha256": "c62edd1d815724724a91b98668eb2c31bb081fb9232942dd9a2d61453c36883b"
     }
   },
   "suitability_vocabulary": {
@@ -86779,7 +86779,12 @@
           "S1104"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "icelandic-sheepdog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
