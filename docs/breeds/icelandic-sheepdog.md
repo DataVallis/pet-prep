@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `icelandic_sheepdog` (viri S1100–S1109; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: oči in kolki (Dogs Victoria, K48) |
 | Izvor | FCI št. 289 »Icelandic Sheepdog«, skupina 5 (špici in pasme pratipa), sekcija 3 (nordijski čuvaji in pastirski psi), brez preizkusa dela, Islandija (S1100) — nova država izvora `IS` v izvozu registra |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 143. mesto »Icelandic Sheepdog« (S174, prebrano 2026-11-28: »142 Barbet«, »143 Icelandic Sheepdog«) |
-| PR-ji | pet-prep #1723 (pasma) · portret: 🗓 po združitvi (`breed-portraits.yml`) · barvne različice: 🗓 · spletna stran: 🗓 pet-prep-website `feat/register-icelandic-sheepdog` |
+| PR-ji | pet-prep #1723 (pasma, združen `866723b` 2026-11-28) · portret: zagon `breed-portraits.yml` 46101350384 (rdeče-bel, sprejet v prvem poskusu), pet-prep PR `feat/M5-R10-147-icelandic-sheepdog-portrait` · barvne različice: `feat/M5-R10-147-icelandic-sheepdog-colours` · spletna stran: 🗓 pet-prep-website `feat/register-icelandic-sheepdog` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -45,7 +45,7 @@
 | Opomnik staršem za kopanje vsake 4 tedne | 🛠 | 💶 izziv | M5-R20 | 2026-11-28 |
 | Barva (izbirnik: rdeče-bel, trobarven, kremasto-bel, rdeče sobolji z belo, sivo-bel, čokoladno-rjavkasto-bel, bel z rdečimi lisami) | 🛠 | 💶 izziv | M5-R21 | 2026-11-28 |
 | Barvne fotografije (izbirnik in spletna stran) | 🗓 po portretu | — | M5-R21 / §8b | — |
-| AI portret v registru | 🗓 po združitvi (`breed-portraits.yml`, rdeče-bel) | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč z belimi oznakami, pokončna ušesa, zavit košat rep, svetlo sivo studijsko ozadje | — | M5-R11-04 | 2026-11-28 |
 | Stran na petprep.si (`/animals/dogs/icelandic-sheepdog`, `/sl/zivali/psi/islandski-ovcar`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 | »Ali si vedel?« | 🛠 samodejno le **2** dejstvi (življenjska doba, konec rasti) — manj kot 4: gibanje (Dogs NSW »40 min/day«) je v registru brez kvalifikatorja, teža je v citatu v funtih, citat FCI za izvor ne vsebuje »Iceland«, višina / velikost / dlaka se s citati ne ujemajo dobesedno | — | M5-R09e | 2026-11-28 |
 
