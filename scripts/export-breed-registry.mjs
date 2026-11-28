@@ -527,6 +527,7 @@ const SPECIES = [
       { id: 'bearded_collie', synonyms: { en: ['Beardie', 'Highland Collie', 'Hairy Mou\'ed Collie'], sl: ['bearded collie', 'beardie', 'bradati collie'] } },
       { id: 'saluki', synonyms: { en: ['Persian Greyhound', 'Gazelle Hound', 'Arabian Hound'], sl: ['perzijski hrt', 'saluki hrt'] } },
       { id: 'barbet', synonyms: { en: ['French Water Dog'], sl: ['francoski vodni pes'] } },
+      { id: 'icelandic_sheepdog', synonyms: { en: ['Icelandic Spitz', 'Iceland Dog', 'Íslenskur Fjárhundur'], sl: ['islandski ovcar', 'islandski špic'] } },
     ],
   },
   {
@@ -551,7 +552,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO', Finland: 'FI', 'Middle East': 'XME' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG', Afghanistan: 'AF', Norway: 'NO', Finland: 'FI', 'Middle East': 'XME', Iceland: 'IS' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -3685,6 +3686,29 @@ const DOG_FACTS = {
       ['epilepsy', 'health.epilepsy'],
     ],
   },
+  // M5-R10-147. RKC Breeds A–Z page not reachable, no PDSA / Woodgreen / Dogs Trust page → Dogs NSW (S1104): exercise
+  // '40 min/day' (the game value, exact); grooming PetMD 'Once a week' (S1101), shedding PetMD 'Yes'; lifespan WebMD 12–14 y
+  // (S1102) + PetMD (S1101) span; height = FCI-Standard N° 289 ideal heights (S1100); weight = WebMD 25–30 lb both sexes
+  // (S1102 — no standard gives a weight); coat FCI 'Medium' (two varieties). Not ranked by Coren (S35) → coren_rank: false.
+  // FCI origin Iceland (IS, new in FCI_ORIGINS). Not exported: weight alternatives, lifespan.mcmillan_2024 (null) /
+  // senior_from (derived), VCA / Dogs Victoria spans. No new health key (elbow dysplasia is named next to the kneecap in
+  // health.elbows_knees; the existing key kneecap_luxation is used).
+  icelandic_sheepdog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.webmd', null]],
+    lifespan: [['lifespan.webmd', 'span'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.icelandic_sheepdog.exercise_minutes_adult', null]],
+    coat: ['suitability.fci_coat_length'],
+    grooming: [['suitability.petmd_grooming', 'grooming_frequency']],
+    shedding: ['suitability.petmd_shedding'],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['kneecap_luxation', 'health.elbows_knees'],
+      ['eye_conditions', 'health.eyes'],
+    ],
+  },
 
 
 
@@ -3787,6 +3811,7 @@ export const DOG_CARE_TASKS = {
   smooth_fox_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.smooth_fox_terrier.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.smooth_fox_terrier.ear_cleaning']],
   saluki: [['tooth_brushing', 7, 7, 'proposed_game_parameters.saluki.tooth_brushing']],
   barbet: [['tooth_brushing', 7, 7, 'proposed_game_parameters.barbet.tooth_brushing']],
+  icelandic_sheepdog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.icelandic_sheepdog.tooth_brushing'], ['ear_cleaning', 1, 28, 'proposed_game_parameters.icelandic_sheepdog.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.icelandic_sheepdog.bathing']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -4904,6 +4929,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.barbet.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.barbet.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.barbet.exercise_minutes_senior',
+  },
+  icelandic_sheepdog: {
+    adult_minutes: ['proposed_game_parameters.icelandic_sheepdog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.icelandic_sheepdog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.icelandic_sheepdog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.icelandic_sheepdog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.icelandic_sheepdog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.icelandic_sheepdog.exercise_minutes_senior',
   },
 
 
