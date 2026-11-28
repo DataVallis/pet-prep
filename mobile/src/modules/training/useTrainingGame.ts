@@ -54,6 +54,7 @@ import {
   TRAINING_STRINGS,
   trainingRefusalMessage,
   type TrainingCommand,
+  type CommandLearned,
   type TrainingResult,
   type TrainingSession,
 } from '@/modules/training/training';
@@ -94,7 +95,13 @@ export type TrainingPhase =
       /** School v2: an early end after round 1 is being saved (the game clock keeps running). */
       early?: true;
     }
-  | { kind: 'result'; result: TrainingResult; status: 'accepted' | 'unchanged' }
+  | {
+      kind: 'result';
+      result: TrainingResult;
+      status: 'accepted' | 'unchanged';
+      /** David 2026-11-28: set only on the session that learned the command for the first time. */
+      learned: CommandLearned | null;
+    }
   | {
       kind: 'failed';
       message: string;
@@ -253,7 +260,7 @@ export function useTrainingGame({
           onSuccess: (response) => {
             // `unchanged` after a retry = our own first attempt arrived; show it like a fresh result.
             const status = isRetry && response.status === 'unchanged' ? 'accepted' : response.status;
-            setPhase({ kind: 'result', result: response.result, status });
+            setPhase({ kind: 'result', result: response.result, status, learned: response.command_learned });
           },
           onError: (error) => {
             const sessionClock = clockRef.current;

@@ -24,7 +24,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { Check, ChevronLeft, Heart, Sparkles, X } from 'lucide-react-native';
+import { Check, ChevronLeft, GraduationCap, Heart, Sparkles, X } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
 import { useServerOutage } from '@/store/serverStatusStore';
@@ -90,6 +90,7 @@ import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behavi
 import { careGuideTitle, readCareGuide } from '@/modules/careGuide/careGuide';
 import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
+import { COMMAND_LEARNED_ACTIVITY } from '@/modules/training/commandLearned';
 import { playKindOfActivity } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
 import { currentLanguage, t, tSpecies } from '@/i18n';
@@ -200,6 +201,9 @@ function Timeline({
                 {/* M5-R05: play / cuddles get a heart (no points — not a care tick). */}
                 {playKindOfActivity(item.activity_type) !== null ? (
                   <Heart color={palette.white} fill={palette.white} size={11} />
+                ) : item.activity_type === COMMAND_LEARNED_ACTIVITY ? (
+                  // David 2026-11-28: a command learned — the graduation cap of the school.
+                  <GraduationCap color={palette.white} size={12} testID={`timeline-item-${item.id}-learned`} />
                 ) : item.is_positive ? (
                   <Check color={palette.white} size={12} />
                 ) : (
@@ -207,7 +211,7 @@ function Timeline({
                 )}
               </View>
               <Text style={styles.timelineText}>
-                {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value }, species)}
+                {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value, command: item.command }, species)}
               </Text>
               <Text style={styles.muted}>
                 {activityWhenText(item.created_at, zone, today)}

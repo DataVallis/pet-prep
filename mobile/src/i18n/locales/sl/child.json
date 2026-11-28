@@ -37,7 +37,8 @@
         "origin": "Od kod je",
         "nextStage": "Naslednja faza",
         "meals": "Obroki na dan",
-        "challenge": "Izziv"
+        "challenge": "Izziv",
+        "commands": "Ukazi"
       },
       "challengeWeek": "Teden {{week}} od {{total}}"
     },

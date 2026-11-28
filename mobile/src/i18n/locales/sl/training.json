@@ -120,7 +120,18 @@
         "ignores": "Kuža gleda metuljčka …",
         "lower": "lulat zunaj"
       }
-    }
+    },
+    "milestone": {
+      "title": "{{pet}} zna ukaz »{{name}}«!",
+      "titleNoName": "Kuža zna ukaz »{{name}}«!",
+      "sub": "Vaja se je splačala!",
+      "badge": "Naučeno",
+      "badgeA11y": "Značka: ukaz »{{name}}« naučen",
+      "details": "Podrobnosti vaje",
+      "detailsHide": "Skrij podrobnosti"
+    },
+    "commandLearned": "{{name}} ✓",
+    "commandProgress": "{{name}} {{value}} %"
   },
   "parent": {
     "title": "Šola",
@@ -129,7 +140,10 @@
     "sessionActive": "Otrok zdaj vadi s kužkom.",
     "knows": "Kuža zna: {{list}}",
     "knowsLearned": "{{name}} ✓",
-    "knowsProgress": "{{name}} {{value}} %"
+    "knowsProgress": "{{name}} {{value}} %",
+    "learnedTimeline": "Kuža zna ukaz »{{name}}«",
+    "learnedTimelinePlain": "Kuža se je naučil nov ukaz",
+    "learnedTimelineBy": "{{text}} · {{child}}"
   },
   "school": {
     "rule": "Uboga → ♥ · Ne uboga → počakaj",
