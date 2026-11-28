@@ -11,6 +11,11 @@
  * - at the very bottom a muted read-only app version line (`modules/appVersion`, David 2026-10-29).
  * - **Želje** (M6-W04): the wish catalogue (`WishesSheet`) — not a care action, so it lives
  *   here and not in the dock / top stack.
+ * - **Ali si vedel?** (M5-R09c; David 2026-11-28 — the header book squeezed the name / mood line):
+ *   opens »Moja pasma« (an in-screen layer, so at once like the album); a raspberry dot while a fact
+ *   is unread (the gear in the header carries the same dot).
+ * - above the version line the realtime line »Povezava s strežnikom: v živo / povezujem … /
+ *   samodejno osveževanje« (David 2026-11-28 — the header »V ŽIVO« pill read like »the dog is alive«).
  * A row closes the sheet first. The album is an in-screen layer and opens at once; the care
  * guide and the exit open a `Modal` (care guide sheet, parental gate), so they run once this
  * sheet is gone (iOS `onDismiss`, else after the slide-out) — iOS can't present a modal while
@@ -22,7 +27,7 @@
 import { useCallback, useContext, useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
-import { ChevronRight, CircleQuestionMark, Gift, Images, LogOut, X } from 'lucide-react-native';
+import { BookOpen, ChevronRight, CircleQuestionMark, Gift, Images, LogOut, X } from 'lucide-react-native';
 
 import LanguageSwitch from '@/components/LanguageSwitch';
 import MediaDisplaySwitch from '@/components/MediaDisplaySwitch';
@@ -31,6 +36,8 @@ import { useSetMediaDisplay } from '@/hooks/queries/useChildSettings';
 import type { MediaDisplay } from '@/modules/display/display';
 import { appVersionFrom, formatAppVersionLine } from '@/modules/appVersion/appVersion';
 import { readAppVersionSources } from '@/modules/appVersion/appVersionSource';
+import { wsStatusLine } from '@/modules/hud/wsBadge';
+import type { WebSocketStatus } from '@/store/appStore';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { MIN_TOUCH, alpha, dark, fonts, palette, radius, tightTracking } from '@/theme';
@@ -47,12 +54,16 @@ interface ChildSettingsSheetProps {
   album?: { label: string; onOpen: () => void };
   /** »Kako skrbim« row (care guide) — omitted on an older server without `care_guide`. */
   careGuide?: { label: string; hint: string; onOpen: () => void };
+  /** »Ali si vedel?« row (M5-R09c) — omitted without approved facts for the breed. In-screen layer. */
+  facts?: { label: string; accessibilityLabel: string; hint: string; unread: boolean; onOpen: () => void };
   /** »Želje« row (M6-W04) — omitted on an older server without the `wishes` block. Opens a Modal. */
   wishes?: { label: string; hint: string; onOpen: () => void };
   /** The exit row at the bottom (»Odjava« / »Nazaj k staršu«). */
   exit?: { label: string; onPress: () => void };
   /** The family's IANA zone (`view.timezone`) for the update time in the version line. */
   timeZone?: string | null;
+  /** Realtime status for the connection line above the version (omitted = no line). */
+  wsStatus?: WebSocketStatus;
   testID?: string;
 }
 
@@ -65,9 +76,11 @@ export default function ChildSettingsSheet({
   mediaDisplay,
   album,
   careGuide,
+  facts,
   wishes,
   exit,
   timeZone = null,
+  wsStatus,
   testID = 'hud-settings-sheet',
 }: ChildSettingsSheetProps) {
   const S = CHILD_SETTINGS_STRINGS.settingsSheet;
@@ -76,6 +89,7 @@ export default function ChildSettingsSheet({
   // Read only while the sheet is open (never at boot); same short line as the parent's Nadzor.
   const versionInfo = useMemo(() => (visible ? appVersionFrom(readAppVersionSources()) : null), [visible]);
   const versionLine = versionInfo ? formatAppVersionLine(versionInfo, timeZone) : null;
+  const connection = wsStatus !== undefined ? wsStatusLine(wsStatus) : null;
 
   // A row's action waits until this sheet is dismissed: iOS can't present a modal while another one closes.
   const pending = useRef<(() => void) | null>(null);
@@ -156,7 +170,7 @@ export default function ChildSettingsSheet({
             </Text>
           )}
 
-          {(album || careGuide || wishes) && (
+          {(album || careGuide || facts || wishes) && (
             <View style={styles.rows}>
               {album && (
                 <SettingsRow
@@ -176,6 +190,20 @@ export default function ChildSettingsSheet({
                   hint={careGuide.hint}
                   onPress={() => closeThen(careGuide.onOpen)}
                   testID="hud-care-guide-open"
+                />
+              )}
+              {facts && (
+                <SettingsRow
+                  icon={<BookOpen color={palette.mint} size={18} />}
+                  label={facts.label}
+                  accessibilityLabel={facts.accessibilityLabel}
+                  hint={facts.hint}
+                  unread={facts.unread}
+                  onPress={() => {
+                    onClose();
+                    facts.onOpen();
+                  }}
+                  testID="hud-facts-row"
                 />
               )}
               {wishes && (
@@ -203,6 +231,13 @@ export default function ChildSettingsSheet({
             </Pressable>
           )}
 
+          {connection && (
+            <View style={styles.connection} accessible accessibilityLabel={connection.text} testID="child-ws-status">
+              <View style={[styles.connectionDot, styles[`ws_${connection.tone}`]]} testID={`child-ws-status-${connection.tone}`} />
+              <Text style={styles.version}>{connection.text}</Text>
+            </View>
+          )}
+
           {/* Read-only app version (David 2026-10-29) — no copy, no update button: the child can't act on it. */}
           {versionLine && (
             <Text
@@ -219,11 +254,23 @@ export default function ChildSettingsSheet({
   );
 }
 
-function SettingsRow({ icon, label, hint, onPress, testID }: { icon: ReactNode; label: string; hint?: string; onPress: () => void; testID: string }) {
+interface SettingsRowProps {
+  icon: ReactNode;
+  label: string;
+  /** Screen-reader label when it differs from the visible label (e.g. mentions unread facts). */
+  accessibilityLabel?: string;
+  hint?: string;
+  /** Raspberry dot before the chevron. */
+  unread?: boolean;
+  onPress: () => void;
+  testID: string;
+}
+
+function SettingsRow({ icon, label, accessibilityLabel, hint, unread = false, onPress, testID }: SettingsRowProps) {
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={label}
+      accessibilityLabel={accessibilityLabel ?? label}
       accessibilityHint={hint}
       onPress={onPress}
       style={({ pressed }) => [styles.row, pressed && styles.pressed]}
@@ -233,6 +280,7 @@ function SettingsRow({ icon, label, hint, onPress, testID }: { icon: ReactNode; 
       <Text style={styles.rowLabel} numberOfLines={1}>
         {label}
       </Text>
+      {unread && <View style={styles.unreadDot} testID={`${testID}-unread`} />}
       <ChevronRight color={alpha(palette.white, 0.5)} size={18} />
     </Pressable>
   );
@@ -294,6 +342,12 @@ const styles = StyleSheet.create({
     borderColor: dark.glassBorder,
   },
   exitText: { color: palette.n400, fontSize: 15, fontWeight: '600' },
+  unreadDot: { width: 9, height: 9, borderRadius: 5, backgroundColor: palette.raspberry },
+  connection: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 },
+  connectionDot: { width: 6, height: 6, borderRadius: 3 },
+  ws_live: { backgroundColor: palette.okDark },
+  ws_connecting: { backgroundColor: palette.warnDark },
+  ws_polling: { backgroundColor: palette.n500 },
   version: { color: alpha(palette.n400, 0.7), fontSize: 11, textAlign: 'center', fontVariant: ['tabular-nums'] },
   pressed: { opacity: 0.8 },
 });

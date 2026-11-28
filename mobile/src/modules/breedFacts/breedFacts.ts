@@ -267,7 +267,7 @@ export function childFactsOnly<T extends { facts: BreedFact[]; read_count: numbe
   return { ...list, facts, read_count: facts.filter((f) => f.read).length, total_count: facts.length };
 }
 
-/** The book's raspberry dot: an unread approved fact exists. */
+/** The raspberry dot (settings row + header gear, David 2026-11-28): an unread approved fact exists. */
 export function hasUnreadFacts(list: Pick<BreedFact, 'read'>[]): boolean {
   return list.some((f) => !f.read);
 }

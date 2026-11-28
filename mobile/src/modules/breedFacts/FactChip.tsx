@@ -1,8 +1,8 @@
 /**
  * M5-R09c — »Nekaj novega o tvoji pasmi« (DID_YOU_KNOW_SPEC §3.1): a glass chip above the care
  * buttons on a day the sheet may open by itself but hasn't yet (the moment wasn't calm, or the
- * server refused). Tap → the same card. Calm: mint accent, no dot (the book carries the one
- * raspberry dot).
+ * server refused). Tap → the same card. Calm: mint accent, no dot (the settings row and the header gear carry the one
+ * raspberry dot, David 2026-11-28).
  */
 
 import { Pressable, StyleSheet } from 'react-native';

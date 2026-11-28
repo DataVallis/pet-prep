@@ -34,8 +34,9 @@
  * praskalnik" on the scratched-sofa card, the "first aid" note while hungry (C24) and the cat
  * mini-games (`CatCareOverlay`, opened with `openCatGame`). Child texts switch to the cat's
  * (`setTextSpecies`). A dog's HUD is unchanged.
- * M5-R09c »Ali si vedel?«: a pedigree pet with approved facts gets the book button in the header
- * (raspberry dot while a fact is unread) → »Moja pasma«; the card opens by itself in a calm moment
+ * M5-R09c »Ali si vedel?«: a pedigree pet with approved facts gets the »Ali si vedel?« row in the
+ * settings sheet (David 2026-11-28 — the header book squeezed the name / mood line; a raspberry dot
+ * on the row and on the gear while a fact is unread) → »Moja pasma«; the card opens by itself in a calm moment
  * after a care success (`modules/breedFacts/useFactMoment`), otherwise the chip »Nekaj novega o
  * tvoji pasmi« sits above the dock. A mutt / domestic cat / breed without facts sees nothing new.
  */
@@ -56,7 +57,6 @@ import {
   Heart,
   ChevronDown,
   PawPrint,
-  RefreshCw,
   Sparkles,
   WifiOff,
   Settings,
@@ -142,7 +142,8 @@ import {
   type HudLayout,
 } from '@/modules/hud/hudLayout';
 import { STACK_PRIORITY } from '@/modules/hud/topStack';
-import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
+import { WS_BADGE_STRINGS } from '@/modules/hud/wsBadge';
+import { useWsOfflineIndicator } from '@/modules/hud/useWsOfflineIndicator';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import { useStepSync } from '@/modules/steps/useStepSync';
 import { useChildExit } from '@/modules/session/useChildExit';
@@ -251,22 +252,16 @@ function headerA11y(name: string | null, profile: string): string {
 
 
 /**
- * Realtime status in the top bar: green "V ŽIVO", amber "POVEZUJEM", otherwise only a
- * small grey refresh icon — the HUD keeps updating by polling (`modules/hud/wsBadge`).
+ * David 2026-11-28: nothing in the header while the socket is connected (the »V ŽIVO« pill read
+ * like »the dog is alive«; the connection line is in the settings sheet). Only after
+ * `WS_OFFLINE_DEBOUNCE_MS` without a connection a small amber icon (`modules/hud/wsBadge`).
  */
-function WsStatusDot({ status }: { status: WebSocketStatus }) {
-  const badge = wsBadge(status);
-  if (badge.tone === 'polling') {
-    return (
-      <View style={styles.wsRow} testID="hud-ws-polling" accessible accessibilityLabel={badge.accessibilityLabel}>
-        <RefreshCw color={palette.n500} size={11} />
-      </View>
-    );
-  }
+function WsOfflineIcon({ status }: { status: WebSocketStatus }) {
+  const offline = useWsOfflineIndicator(status);
+  if (!offline) return null;
   return (
-    <View style={styles.wsRow} testID={`hud-ws-${badge.tone}`} accessible accessibilityLabel={badge.accessibilityLabel}>
-      <View style={[styles.wsDot, badge.tone === 'live' ? styles.wsConnected : styles.wsConnecting]} />
-      <Text style={styles.wsText}>{badge.label}</Text>
+    <View style={styles.wsOffline} testID="hud-ws-offline" accessible accessibilityRole="image" accessibilityLabel={WS_BADGE_STRINGS.offline}>
+      <WifiOff color={palette.warnDark} size={14} />
     </View>
   );
 }
@@ -1133,30 +1128,20 @@ export default function ChildHudScreen() {
           </Pressable>
 
           <View style={styles.topBarRight}>
-            {facts.showBook && (
-              <Pressable
-                accessibilityRole="button"
-                accessibilityLabel={facts.unread ? t('facts:child.bookUnread') : t('facts:child.book')}
-                accessibilityHint={t('facts:child.bookHint')}
-                testID="hud-facts-open"
-                hitSlop={4}
-                style={({ pressed }) => [styles.bookButton, pressed && styles.pressed]}
-                onPress={facts.openGuide}
-              >
-                <BookOpen color={palette.mint} size={20} />
-                {facts.unread && <View style={styles.unreadDot} testID="hud-facts-unread" />}
-              </Pressable>
-            )}
-            <WsStatusDot status={wsStatus} />
+            <WsOfflineIcon status={wsStatus} />
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel={t('child:hud.settingsSheet.open')}
+              accessibilityLabel={
+                facts.showBook && facts.unread ? t('child:hud.settingsSheet.openUnread') : t('child:hud.settingsSheet.open')
+              }
               testID="hud-settings-open"
               hitSlop={5}
               style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
               onPress={() => setSettingsVisible(true)}
             >
               <Settings color={palette.n400} size={16} />
+              {/* David 2026-11-28: »Ali si vedel?« lives in the settings sheet; the gear carries its unread dot. */}
+              {facts.showBook && facts.unread && <View style={styles.settingsUnreadDot} testID="hud-settings-unread" />}
             </Pressable>
             {childCertificateEntry(view.certificate).kind !== 'none' && (
               <Pressable
@@ -1536,11 +1521,23 @@ export default function ChildHudScreen() {
         careGuide={
           view.care_guide !== null ? { label: t('careGuide:open'), hint: t('careGuide:openHint'), onOpen: careGuide.open } : undefined
         }
+        facts={
+          facts.showBook
+            ? {
+                label: t('facts:child.entry'),
+                accessibilityLabel: facts.unread ? t('facts:child.bookUnread') : t('facts:child.book'),
+                hint: t('facts:child.bookHint'),
+                unread: facts.unread,
+                onOpen: facts.openGuide,
+              }
+            : undefined
+        }
         wishes={
           view.wishes !== null ? { label: t('wishes:child.entry'), hint: t('wishes:child.entryA11y'), onOpen: () => setWishesVisible(true) } : undefined
         }
         exit={{ label: childExit.shared ? PARENTAL_GATE_STRINGS.backToParent : HUD_STRINGS.logout, onPress: handleLogout }}
         timeZone={view.timezone}
+        wsStatus={wsStatus}
       />
       {view.wishes !== null && (
         <WishesSheet visible={isWishesVisible} onClose={() => setWishesVisible(false)} nowMs={() => Date.now() + view.clockSkewMs} />
@@ -1735,31 +1732,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
   },
-  wsRow: {
-    flexDirection: 'row',
+  wsOffline: {
+    width: 24,
+    height: 24,
     alignItems: 'center',
-    minHeight: 20,
-    gap: 5,
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 8,
-    backgroundColor: alpha(palette.white, 0.06),
-  },
-  wsDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-  },
-  wsConnected: {
-    backgroundColor: palette.okDark,
-  },
-  wsConnecting: {
-    backgroundColor: palette.warnDark,
-  },
-  wsText: {
-    fontSize: 9,
-    fontWeight: '700',
-    color: palette.n400,
+    justifyContent: 'center',
   },
   logoutButton: {
     width: 34,
@@ -1769,23 +1746,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  /** M5-R09c: the book (glass, ≥ 44 pt + hitSlop → 52 pt target) with the one raspberry accent. */
-  bookButton: {
-    width: 44,
-    height: 44,
-    borderRadius: 14,
-    backgroundColor: alpha(palette.white, 0.1),
-    borderWidth: 1,
-    borderColor: alpha(palette.white, 0.15),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  unreadDot: {
+  /** »Ali si vedel?« unread signal on the gear (the one raspberry accent, David 2026-11-28). */
+  settingsUnreadDot: {
     position: 'absolute',
-    top: 7,
-    right: 7,
-    width: 9,
-    height: 9,
+    top: 3,
+    right: 3,
+    width: 8,
+    height: 8,
     borderRadius: 5,
     backgroundColor: palette.raspberry,
     borderWidth: 1.5,

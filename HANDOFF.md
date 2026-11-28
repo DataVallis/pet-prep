@@ -111,7 +111,7 @@
 24. **Prijava na strani za unovčitev (M6-S01b) — končni preizkus:** z »Darilni boni« za kratek čas ON se na `petprep.si/redeem` prijavi (a) z Google računom iz aplikacije, (b) z Apple ID-jem iz aplikacije na iPhonu, (c) z e-naslovom + geslom testnega starša — vsak mora priti do koraka s kodo. **Če Apple vrne `account_not_found`, USTAVI in sporoči Claudu.** Stikalo nazaj OFF.
 25. **#walkyourpet galerija z Instagrama (odobreno 15. 11., ni zgrajeno):** (1) @petprep.si → profesionalni račun (Business / Creator); (2) poveži ga s Facebook stranjo PetPrep (Meta Business Suite → Nastavitve → Računi → Instagram); (3) developers.facebook.com → aplikacija vrste *Business* + izdelek *Instagram* → Claudu »Meta app done« (ID; skrivnosti v `/opt/petprep/.env`).
 26. **»Ali si vedel?« (M5-R09e / R09f, 27. 11.):** osnovne zanimivosti (821, vse pasme razen ragdolla) so uvožene na produkcijo (ročni deploy 27. 11.) in se **od deploya z R09f odobrijo same** — zate ni koraka. Ostane samo:
-   1. Po naslednjem produkcijskem deployu odpri aplikacijo z dobermanom: gumb **knjiga** v zgornji vrstici; okno »Ali si vedel?« samo od sebe največ 2-krat na teden po uspešni skrbi.
+   1. Po naslednjem produkcijskem deployu odpri aplikacijo z dobermanom: zobnik → vrstica **»Ali si vedel?«** (malinasta pika na zobniku, dokler čaka nova zanimivost); okno »Ali si vedel?« samo od sebe največ 2-krat na teden po uspešni skrbi.
    2. Ročno napisane zanimivosti (border collie 42, maine coon 43) še čakajo tebe: `/admin/breed-facts` → filter **Status = Verified** → označi vse → **Approve selected**.
    3. Če je katera osnovna zanimivost napačna: odpri jo → **Back to draft** (ostane skrita, uvoz je ne odobri znova) in povej Claudu.
 
@@ -177,6 +177,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 ## 6. Session log
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
+
+### 2026-11-28 (mobile, `fix/facts-entry-in-settings`)
+- David: »Ali si vedel?« iz zgornje vrstice v Nastavitve (vrstica `hud-facts-row`, malinasta pika na vrstici in zobniku `hud-settings-unread`); »V ŽIVO« iz zgornje vrstice v Nastavitve (vrstica »Povezava s strežnikom: …« nad različico), v glavi samo jantarna `WifiOff` po 5 s brez povezave. Naprava: preveri na iPhonu, da ime/razpoloženje ni več odrezano (OTA, brez nove gradnje). Dolg: `ACHIEVEMENTS_SPEC.md` §otrok še omenja album v zgornji vrstici (zastarelo od 23. 10.).
 
 ### 2026-11-27 (claude.ai chat, backend, `feat/M5-R09f-auto-approve-generated-facts-2`)
 - David »ja«: osnovne zanimivosti se odobrijo same. `BreedFactImportService` generirano zanimivost z dokazom shrani kot `approved` (`approved_by` null); že uvožene `verified` odobri naslednji uvoz (= naslednji deploy); vrnjena v osnutek ostane osnutek. Test v `BreedFactImportTest` (Pest samo v CI). #1710 je bil združen in na Davidovo zahtevo ročno deployan (run 46068608762, uvoz je tekel: vse vrstice »new«). Projektne kopije dokumentov usklajene. **Naslednje:** po deployu preveri na telefonu (§1b.26); bogatejše zanimivosti po pasmah.

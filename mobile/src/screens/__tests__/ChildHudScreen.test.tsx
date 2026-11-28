@@ -4,6 +4,7 @@
  * (hard stop) and the contract route.
  */
 import { act, fireEvent, screen, waitFor, within } from '@testing-library/react-native';
+import { WS_OFFLINE_DEBOUNCE_MS } from '@/modules/hud/wsBadge';
 import { PARENTAL_GATE_STRINGS } from '@/components/ParentalGate';
 import { Dimensions, StyleSheet, type ViewStyle } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
@@ -473,18 +474,26 @@ describe('ChildHudScreen', () => {
     const styleOf = (testID: string): ViewStyle => StyleSheet.flatten(screen.getByTestId(testID).props.style) as ViewStyle;
     const METRICS = ['metric-hunger', 'metric-thirst', 'metric-energy', 'metric-hygiene'] as const;
 
-    it('realtime badge: green "V ŽIVO" when live, a calm grey icon (no "BREZ POVEZAVE") while polling', async () => {
+    it('David 2026-11-28: no »V ŽIVO« pill in the header; the connection line is in the settings sheet, an amber icon only after a lasting outage', async () => {
       await renderHud();
-      expect(screen.getByTestId('hud-ws-live')).toBeTruthy();
-      expect(screen.getByText(HUD_STRINGS.ws.live)).toBeTruthy();
+      expect(screen.queryByText('V ŽIVO')).toBeNull();
+      expect(screen.queryByTestId('hud-ws-offline')).toBeNull();
 
-      act(() => useAppStore.getState().setWsStatus('disconnected'));
-      expect(screen.getByTestId('hud-ws-polling')).toBeTruthy();
-      expect(screen.getByLabelText(HUD_STRINGS.ws.polling)).toBeTruthy();
+      jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+      act(() => useAppStore.getState().setWsStatus('reconnecting'));
+      // A brief reconnect never flashes.
+      act(() => jest.advanceTimersByTime(WS_OFFLINE_DEBOUNCE_MS - 1_000));
+      expect(screen.queryByTestId('hud-ws-offline')).toBeNull();
+      act(() => jest.advanceTimersByTime(1_000));
+      expect(screen.getByTestId('hud-ws-offline').props.accessibilityLabel).toBe('Ni povezave s strežnikom');
       expect(screen.queryByText('BREZ POVEZAVE')).toBeNull();
 
-      act(() => useAppStore.getState().setWsStatus('connecting'));
-      expect(screen.getByText(HUD_STRINGS.ws.connecting)).toBeTruthy();
+      act(() => useAppStore.getState().setWsStatus('connected'));
+      expect(screen.queryByTestId('hud-ws-offline')).toBeNull();
+      fireEvent.press(screen.getByTestId('hud-settings-open'));
+      expect(screen.getByTestId('child-ws-status').props.accessibilityLabel).toBe('Povezava s strežnikom: v živo');
+      expect(screen.getByTestId('child-ws-status-live')).toBeTruthy();
+      jest.useRealTimers();
     });
 
     it('renders all four metric bars with the computed track height', async () => {

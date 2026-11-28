@@ -43,6 +43,7 @@
     },
     "settingsSheet": {
       "open": "Settings",
+      "openUnread": "Settings, new facts about your breed",
       "title": "Settings",
       "close": "Close",
       "language": "Language",
@@ -73,9 +74,11 @@
     "challengeStarted": "The challenge has started! Week {{week}} of {{total}}"
   },
   "ws": {
-    "live": "LIVE",
-    "connecting": "CONNECTING",
-    "polling": "Auto-refresh"
+    "label": "Connection to server",
+    "live": "live",
+    "connecting": "connecting …",
+    "polling": "auto-refresh",
+    "offline": "No connection to the server"
   },
   "time": {
     "at": "at {{time}}",

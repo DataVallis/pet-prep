@@ -43,6 +43,7 @@
     },
     "settingsSheet": {
       "open": "Nastavitve",
+      "openUnread": "Nastavitve, nove zanimivosti o tvoji pasmi",
       "title": "Nastavitve",
       "close": "Zapri",
       "language": "Jezik",
@@ -73,9 +74,11 @@
     "challengeStarted": "Izziv se je začel! Teden {{week}} od {{total}}"
   },
   "ws": {
-    "live": "V ŽIVO",
-    "connecting": "POVEZUJEM",
-    "polling": "Samodejno osveževanje"
+    "label": "Povezava s strežnikom",
+    "live": "v živo",
+    "connecting": "povezujem …",
+    "polling": "samodejno osveževanje",
+    "offline": "Ni povezave s strežnikom"
   },
   "time": {
     "at": "ob {{time}}",
