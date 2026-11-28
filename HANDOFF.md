@@ -178,6 +178,9 @@ All decisions (who / what / why / PR): `docs/product/DECISIONS.md` (newest on to
 
 *Last ~7 days, condensed. Full entries (files, tests, QA details): archive, block »Archived 2026-11-21«.*
 
+### 2026-11-28 (mobile, `feat/command-learned-celebration`)
+- David: first-time learned school command = milestone result screen (»{ime} zna ukaz »Prostor«!«, burst / static badge with reduce motion, pose clip / image, chime + haptic via lazy `MilestoneFx`, details collapsed), »Ukazi: Sedi ✓ · …« row in the pet profile sheet, parent push `command_learned` + timeline row (graduation cap). App reads `command_learned` / `learned_at` / timeline `command` | `meta.command` defensively — **depends on the parallel backend PR**; TODO(schema) in `training.ts` + `commandLearned.ts` after `schema.ts` is regenerated. OTA-safe (no native change).
+
 ### 2026-11-28 (mobile, `fix/facts-entry-in-settings`)
 - David: »Ali si vedel?« iz zgornje vrstice v Nastavitve (vrstica `hud-facts-row`, malinasta pika na vrstici in zobniku `hud-settings-unread`); »V ŽIVO« iz zgornje vrstice v Nastavitve (vrstica »Povezava s strežnikom: …« nad različico), v glavi samo jantarna `WifiOff` po 5 s brez povezave. Naprava: preveri na iPhonu, da ime/razpoloženje ni več odrezano (OTA, brez nove gradnje). Dolg: `ACHIEVEMENTS_SPEC.md` §otrok še omenja album v zgornji vrstici (zastarelo od 23. 10.).
 

@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-28 — »Pika zna ukaz »Prostor«!«: naučen ukaz je praznik
+
+**Kaj:** tester je kužka naučil ukaz »Prostor« (94 % → 100 %), a rezultat je bil isti »Bravo!« kot vsak dan — dosežek je bil le majhna zelena vrstica. David: »bilo bi lahko bolj izpostavljeno«. Zdaj je vaja, ki ukaz nauči **prvič**, zaslon mejnika: velik naslov z imenom kužka, poza ukaza, značka z izbruhom zvezdic, zvonček in vibracija; podrobnosti vaje so zložene spodaj. Profil kužka pokaže »Ukazi: Sedi ✓ · Prostor ✓ · …«, starši dobijo obvestilo in vrstico v časovnici. Aplikacija je pripravljena (samo JS), deluje, ko strežnik pošlje novo polje (*v delu*).
+**Zakaj je pomembno:** naučen ukaz je cilj šole in dokaz odgovornosti, ki jo otrok gradi — če ga aplikacija ne praznuje, ga otrok (in starš) spregleda.
+**Kako povedati:** 🧒 »Ko se kuža nauči nov ukaz, ti to pokaže z velikim napisom in zvezdicami.« · 👩 »Dobite obvestilo, ko vaš otrok kužka nauči nov ukaz — brez imena otroka.« · 🛠 »Mejnik pride samo iz strežnikovega `command_learned` (enkrat na ukaz), nikoli iz 100 % v aplikaciji; zvok samo prek lenega nalaganja nativnega sloja.«
+
+---
+
 ## 2026-11-27 — »Ali si vedel?« za vse pasme, ne samo za dve
 
 **Kaj:** David je opazil, da mu doberman Suki še nikoli ni pokazal zanimivosti. Vzrok: vsebina je obstajala samo za border collieja in maine coona, na produkciji pa ni bila uvožena niti ta (`/admin/breed-facts` prazen). Zdaj skripta iz podatkov registra pasem (istih kot na petprep.si) in njihovih dobesednih citatov napiše **821 osnovnih zanimivosti za 139 pasem** (EN + SL): koliko gibanja potrebuje, kako pogosto nega dlake, velikost, država izvora, dlaka, višina, teža, življenjska doba, do kdaj raste. Uvoz teče ob vsakem deployu; nova pasma dobi zanimivosti po runbooku. *(Otroci jih vidijo po Davidovi odobritvi v administraciji.)*

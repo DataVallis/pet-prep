@@ -11,11 +11,17 @@
  * while practices remain today (»Poskusi še enkrat — danes imaš še 4 vaje.« from the training state's
  * `sessionsLeftToday`); one tip at the most common mistake (`commonMistake`).
  *
+ * Command learned (David 2026-11-28, GAMES_SPEC §4.1 »Mejnik«): with `milestone` (TrainingOverlay
+ * passes it only when the finish answer carries `command_learned`) the result becomes a milestone
+ * screen — the hero (`CommandLearnedHero`) replaces »Bravo!« at the top, the gain line and the
+ * buttons follow, and the stars / rounds / »Pravočasne pohvale« sit below behind »Podrobnosti vaje«.
+ *
  * Plain React Native (no game-layer import) — TrainingOverlay renders it for a v2 result.
  */
 
+import { useState, type ReactNode } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import { Check, Star, X } from 'lucide-react-native';
+import { Check, ChevronDown, ChevronUp, Star, X } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
 import { commonMistake, isStarOutcome, resultHeadline, resultRounds, type SchoolResultHeadline } from '@/modules/training/schoolV2/schoolV2';
@@ -44,10 +50,14 @@ export interface SchoolResultV2Props {
   practicesLeft: number;
   onAgain: () => void;
   onDone: () => void;
+  /** The milestone hero (`CommandLearnedHero`) — only for the session that learned the command. */
+  milestone?: ReactNode;
   testID?: string;
 }
 
-export default function SchoolResultV2({ result, status, canStartAgain, practicesLeft, onAgain, onDone, testID = 'training-result' }: SchoolResultV2Props) {
+export default function SchoolResultV2({ result, status, canStartAgain, practicesLeft, onAgain, onDone, milestone = null, testID = 'training-result' }: SchoolResultV2Props) {
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const isMilestone = milestone !== null;
   const name = T.commands[result.command].name;
   const stored = status === 'unchanged';
   const counts = trainingResultCounts(result);
@@ -63,6 +73,117 @@ export default function SchoolResultV2({ result, status, canStartAgain, practice
   const nextLine = headline === 'success' || stored ? null : practicesLeft > 0 ? S.result.tryAgainLeft(practicesLeft) : S.result.noneLeft;
   const mistake = stored ? null : commonMistake(result.trials);
 
+  const starsRow = (
+    <View style={[styles.stars, isMilestone && styles.starsSmall]} accessible accessibilityLabel={S.result.stars(stars, result.trials.length)} testID="training-result-stars">
+      {result.trials.map((t, i) => (
+        <Star key={t.index} size={isMilestone ? 20 : 30} color={palette.warnDark} fill={i < stars ? palette.warnDark : 'transparent'} />
+      ))}
+    </View>
+  );
+  const rounds = resultRounds(result.trials).map((round, r) => (
+    <View key={r} style={[styles.round, isMilestone && styles.roundSmall]} testID={`training-result-round-${r + 1}`}>
+      <Text style={styles.roundTitle}>{S.result.roundTitle(r + 1)}</Text>
+      <View style={styles.cues}>
+        {round.map((t) => {
+          const good = isStarOutcome(t.outcome);
+          return (
+            <View
+              key={t.index}
+              style={[styles.cue, good ? styles.cueGood : styles.cueTry]}
+              accessible
+              accessibilityLabel={S.result.trialA11y(t.index + 1, S.result.outcome[t.outcome])}
+              testID={`training-result-trial-${t.index}`}
+            >
+              {good ? (
+                <Check color={palette.mint} size={22} strokeWidth={3} testID={`training-result-trial-${t.index}-ok`} />
+              ) : (
+                <X color={palette.warnDark} size={22} strokeWidth={3} testID={`training-result-trial-${t.index}-try`} />
+              )}
+              <Text style={styles.cueText} testID={`training-result-trial-${t.index}-label`}>
+                {S.result.outcome[t.outcome]}
+              </Text>
+            </View>
+          );
+        })}
+      </View>
+    </View>
+  ));
+  const successes = (
+    <Text style={styles.body} testID="training-result-successes">
+      {T.result.successes(counts.onTime, counts.obeyed)}
+    </Text>
+  );
+  const gain = (
+    <Text style={styles.bodyStrong} testID="training-result-gain">
+      {gainLine}
+    </Text>
+  );
+  const next =
+    nextLine !== null ? (
+      <Text style={styles.body} testID="training-result-next">
+        {nextLine}
+      </Text>
+    ) : null;
+  const tip =
+    mistake !== null ? (
+      <Text style={styles.tip} testID="training-result-tip">
+        {S.result.tip[mistake]}
+      </Text>
+    ) : null;
+  const routine =
+    routineLine !== null ? (
+      <Text style={styles.muted} testID="training-result-routine">
+        {routineLine}
+      </Text>
+    ) : null;
+  const buttons = (
+    <View style={styles.row}>
+      {canStartAgain && (
+        <Pressable accessibilityRole="button" testID="training-again" onPress={onAgain} style={({ pressed }) => [styles.secondary, pressed && styles.pressed]}>
+          <Text style={styles.secondaryText}>{T.result.again}</Text>
+        </Pressable>
+      )}
+      <Pressable accessibilityRole="button" testID="training-done" onPress={onDone} style={({ pressed }) => [styles.primary, pressed && styles.pressed]}>
+        <Text style={styles.primaryText}>{T.result.done}</Text>
+      </Pressable>
+    </View>
+  );
+
+  if (isMilestone) {
+    // David 2026-11-28: the milestone on top; the practice's details below, collapsed.
+    const Chevron = detailsOpen ? ChevronUp : ChevronDown;
+    return (
+      <View style={styles.backdrop} testID={testID}>
+        <ScrollView contentContainerStyle={styles.content}>
+          {milestone}
+          {stored && <Text style={styles.muted}>{T.result.stored}</Text>}
+          {gain}
+          {routine}
+          {buttons}
+          <Pressable
+            accessibilityRole="button"
+            accessibilityState={{ expanded: detailsOpen }}
+            testID="training-result-details-toggle"
+            onPress={() => setDetailsOpen((open) => !open)}
+            style={({ pressed }) => [styles.detailsToggle, pressed && styles.pressed]}
+          >
+            <Text style={styles.detailsText}>{detailsOpen ? T.milestone.detailsHide : T.milestone.details}</Text>
+            <Chevron color={palette.n300} size={18} />
+          </Pressable>
+          {detailsOpen && (
+            <View style={styles.details} testID="training-result-details">
+              {starsRow}
+              {rounds}
+              {successes}
+              {next}
+              {tip}
+            </View>
+          )}
+        </ScrollView>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.backdrop} testID={testID}>
       <ScrollView contentContainerStyle={styles.content}>
@@ -70,75 +191,19 @@ export default function SchoolResultV2({ result, status, canStartAgain, practice
           {stored ? T.result.titleStored : titleOf(headline)}
         </Text>
         {stored && <Text style={styles.muted}>{T.result.stored}</Text>}
-        <View style={styles.stars} accessible accessibilityLabel={S.result.stars(stars, result.trials.length)} testID="training-result-stars">
-          {result.trials.map((t, i) => (
-            <Star key={t.index} size={30} color={palette.warnDark} fill={i < stars ? palette.warnDark : 'transparent'} />
-          ))}
-        </View>
-        {resultRounds(result.trials).map((round, r) => (
-          <View key={r} style={styles.round} testID={`training-result-round-${r + 1}`}>
-            <Text style={styles.roundTitle}>{S.result.roundTitle(r + 1)}</Text>
-            <View style={styles.cues}>
-              {round.map((t) => {
-                const good = isStarOutcome(t.outcome);
-                return (
-                  <View
-                    key={t.index}
-                    style={[styles.cue, good ? styles.cueGood : styles.cueTry]}
-                    accessible
-                    accessibilityLabel={S.result.trialA11y(t.index + 1, S.result.outcome[t.outcome])}
-                    testID={`training-result-trial-${t.index}`}
-                  >
-                    {good ? (
-                      <Check color={palette.mint} size={22} strokeWidth={3} testID={`training-result-trial-${t.index}-ok`} />
-                    ) : (
-                      <X color={palette.warnDark} size={22} strokeWidth={3} testID={`training-result-trial-${t.index}-try`} />
-                    )}
-                    <Text style={styles.cueText} testID={`training-result-trial-${t.index}-label`}>
-                      {S.result.outcome[t.outcome]}
-                    </Text>
-                  </View>
-                );
-              })}
-            </View>
-          </View>
-        ))}
-        <Text style={styles.body} testID="training-result-successes">
-          {T.result.successes(counts.onTime, counts.obeyed)}
-        </Text>
-        <Text style={styles.bodyStrong} testID="training-result-gain">
-          {gainLine}
-        </Text>
-        {nextLine !== null && (
-          <Text style={styles.body} testID="training-result-next">
-            {nextLine}
-          </Text>
-        )}
-        {mistake !== null && (
-          <Text style={styles.tip} testID="training-result-tip">
-            {S.result.tip[mistake]}
-          </Text>
-        )}
+        {starsRow}
+        {rounds}
+        {successes}
+        {gain}
+        {next}
+        {tip}
         {learned && (
           <Text style={styles.learned} testID="training-result-learned">
             {T.result.learned(name)}
           </Text>
         )}
-        {routineLine !== null && (
-          <Text style={styles.muted} testID="training-result-routine">
-            {routineLine}
-          </Text>
-        )}
-        <View style={styles.row}>
-          {canStartAgain && (
-            <Pressable accessibilityRole="button" testID="training-again" onPress={onAgain} style={({ pressed }) => [styles.secondary, pressed && styles.pressed]}>
-              <Text style={styles.secondaryText}>{T.result.again}</Text>
-            </Pressable>
-          )}
-          <Pressable accessibilityRole="button" testID="training-done" onPress={onDone} style={({ pressed }) => [styles.primary, pressed && styles.pressed]}>
-            <Text style={styles.primaryText}>{T.result.done}</Text>
-          </Pressable>
-        </View>
+        {routine}
+        {buttons}
       </ScrollView>
     </View>
   );
@@ -149,6 +214,11 @@ const styles = StyleSheet.create({
   content: { gap: 14, paddingBottom: 24, alignItems: 'stretch' },
   title: { color: palette.white, fontSize: 30, letterSpacing: tightTracking(30), fontFamily: fonts.display, textAlign: 'center' },
   stars: { flexDirection: 'row', justifyContent: 'center', gap: 6 },
+  starsSmall: { gap: 4 },
+  roundSmall: { padding: 10, gap: 6 },
+  detailsToggle: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 44 },
+  detailsText: { color: palette.n300, fontSize: 14, fontWeight: '700' },
+  details: { gap: 10 },
   round: {
     gap: 8,
     padding: 14,

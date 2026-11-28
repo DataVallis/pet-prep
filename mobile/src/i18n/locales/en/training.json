@@ -118,7 +118,18 @@
         "ignores": "Your pup is watching a butterfly …",
         "lower": "potty outside"
       }
-    }
+    },
+    "milestone": {
+      "title": "{{pet}} knows “{{name}}”!",
+      "titleNoName": "Your pup knows “{{name}}”!",
+      "sub": "All that practice paid off!",
+      "badge": "Learned",
+      "badgeA11y": "Badge: “{{name}}” learned",
+      "details": "Practice details",
+      "detailsHide": "Hide details"
+    },
+    "commandLearned": "{{name}} ✓",
+    "commandProgress": "{{name}} {{value}}%"
   },
   "parent": {
     "title": "Training",
@@ -127,7 +138,10 @@
     "sessionActive": "Your child is practising with the dog right now.",
     "knows": "The dog knows: {{list}}",
     "knowsLearned": "{{name}} ✓",
-    "knowsProgress": "{{name}} {{value}}%"
+    "knowsProgress": "{{name}} {{value}}%",
+    "learnedTimeline": "Your pup knows “{{name}}”",
+    "learnedTimelinePlain": "Your pup learned a new command",
+    "learnedTimelineBy": "{{text}} · {{child}}"
   },
   "school": {
     "rule": "Obeys → ♥ · Doesn’t obey → wait",

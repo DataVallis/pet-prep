@@ -52,10 +52,10 @@ describe('family training (M5-R03)', () => {
     expect(pet.training).toEqual({
       enabled: true,
       commands: [
-        { command: 'sit', progress: 70, learned: false, last_practised_at: null },
-        { command: 'come', progress: 0, learned: false, last_practised_at: null },
-        { command: 'place', progress: 0, learned: false, last_practised_at: null },
-        { command: 'potty', progress: 0, learned: false, last_practised_at: null },
+        { command: 'sit', progress: 70, learned: false, last_practised_at: null, learned_at: null },
+        { command: 'come', progress: 0, learned: false, last_practised_at: null, learned_at: null },
+        { command: 'place', progress: 0, learned: false, last_practised_at: null, learned_at: null },
+        { command: 'potty', progress: 0, learned: false, last_practised_at: null, learned_at: null },
       ],
       today_done: false,
       session_active: false,

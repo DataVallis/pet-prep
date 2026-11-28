@@ -37,7 +37,8 @@
         "origin": "Where it's from",
         "nextStage": "Next stage",
         "meals": "Meals per day",
-        "challenge": "Challenge"
+        "challenge": "Challenge",
+        "commands": "Commands"
       },
       "challengeWeek": "Week {{week}} of {{total}}"
     },

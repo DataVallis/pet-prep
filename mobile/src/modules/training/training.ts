@@ -34,6 +34,11 @@ export interface CommandProgress {
   progress: number;
   learned: boolean;
   last_practised_at: string | null;
+  /**
+   * When the command was learned for the first time (David 2026-11-28); null = not yet, or an older
+   * server. TODO(schema): switch to the generated type once `schema.ts` carries `learned_at`.
+   */
+  learned_at: string | null;
 }
 
 /** The running session as the child state shows it (no schedule). */
@@ -232,10 +237,21 @@ export interface StartTrainingResponse {
   state: ChildPetState;
 }
 
+/**
+ * David 2026-11-28: the finish answer of the session that learned a command for the FIRST time
+ * (server `command_learned`); null on every other finish and from an older server.
+ */
+export interface CommandLearned {
+  command: TrainingCommand;
+  learned_at: string;
+}
+
 export interface FinishTrainingResponse {
   status: TrainingActionStatus;
   result: TrainingResult;
   state: ChildPetState;
+  /** The milestone screen shows only when this is set (never derived from `progress_after`). */
+  command_learned: CommandLearned | null;
 }
 
 // ── Readers (unknown → typed, never throw) ────────────────────
@@ -284,11 +300,12 @@ function readCommands(value: unknown): CommandProgress[] {
       progress,
       learned: item.learned === true || progress >= 100,
       last_practised_at: iso(item.last_practised_at),
+      learned_at: iso(item.learned_at),
     });
   }
   if (byCommand.size === 0) return [];
   return TRAINING_COMMANDS.map(
-    (command) => byCommand.get(command) ?? { command, progress: 0, learned: false, last_practised_at: null },
+    (command) => byCommand.get(command) ?? { command, progress: 0, learned: false, last_practised_at: null, learned_at: null },
   );
 }
 
@@ -522,7 +539,17 @@ export function readFinishResponse(raw: unknown): FinishTrainingResponse | null 
   const s = status(raw.status);
   const result = readTrainingResult(raw.result);
   const state = stateOf(raw.state);
-  return s !== null && result !== null && state !== null ? { status: s, result, state } : null;
+  return s !== null && result !== null && state !== null ? { status: s, result, state, command_learned: readCommandLearned(raw.command_learned) } : null;
+}
+
+/**
+ * Finish `command_learned` (David 2026-11-28); missing / malformed → null (old behaviour).
+ * TODO(schema): switch to the generated type once `schema.ts` carries `command_learned`.
+ */
+export function readCommandLearned(raw: unknown): CommandLearned | null {
+  if (!isObj(raw) || !isTrainingCommand(raw.command)) return null;
+  const at = iso(raw.learned_at);
+  return at === null ? null : { command: raw.command, learned_at: at };
 }
 
 // ── Result title (M5-F04) ─────────────────────────────────────

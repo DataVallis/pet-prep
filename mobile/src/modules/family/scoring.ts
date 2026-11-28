@@ -14,6 +14,8 @@ import { playTimelineText } from '@/modules/play/play';
 import { hasGroomingRoutine } from '@/modules/species/species';
 import { readReportSocialisation, socialisationTimelineText, type ReportSocialisation } from '@/modules/socialisation/socialisation';
 import { CARE_TASKS, careTaskTimelineText, readCareReminderReport, readCareReminders, type CareReminder, type CareReminderReportRow, type CareTaskKey } from '@/modules/careTasks/careTasks';
+import { commandLearnedTimelineText, COMMAND_LEARNED_ACTIVITY, timelineCommandOf } from '@/modules/training/commandLearned';
+import type { TrainingCommand } from '@/modules/training/training';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -127,6 +129,8 @@ export interface TimelineEntry {
   actor_nickname: string | null;
   created_at: string | null;
   is_positive: boolean;
+  /** David 2026-11-28: the command of a `command_learned` row (absent = another row / not sent). */
+  command?: TrainingCommand;
 }
 
 export interface TypeTotals {
@@ -323,6 +327,7 @@ export function readTimeline(value: unknown): TimelineEntry[] {
     const id = num(item.id, Number.NaN);
     if (Number.isNaN(id) || typeof item.activity_type !== 'string') return [];
     const actor = numOrNull(item.actor_user_id);
+    const command = item.activity_type === COMMAND_LEARNED_ACTIVITY ? timelineCommandOf(item) : null;
     return [
       {
         id,
@@ -333,6 +338,7 @@ export function readTimeline(value: unknown): TimelineEntry[] {
         created_at: strOrNull(item.created_at),
         is_positive:
           typeof item.is_positive === 'boolean' ? item.is_positive : !NEGATIVE_ACTIVITIES.includes(item.activity_type),
+        ...(command !== null ? { command } : {}),
       },
     ];
   });
@@ -555,9 +561,12 @@ const SYSTEM_ACTIVITY_LABELS = strings('family', 'systemActivities') as Readonly
  * "Muca je opraskala kavč" …) and, for a cat (`species`), "nahranil(a) muco".
  */
 export function activityText(
-  entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'> & { value?: number | null },
+  entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'> & { value?: number | null; command?: TrainingCommand },
   species: string | null = null,
 ): string {
+  // David 2026-11-28: »Kuža zna ukaz »Prostor« · Mia« (a school command learned for the first time).
+  const learned = commandLearnedTimelineText(entry.activity_type, entry.command, entry.actor_nickname);
+  if (learned !== null) return learned;
   const play = playTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
   if (play !== null) return play;
   // M5-R17: "Nova izkušnja: nov zvok · Mia" (value = the experience code).

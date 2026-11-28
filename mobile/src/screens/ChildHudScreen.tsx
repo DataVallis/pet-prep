@@ -771,7 +771,13 @@ export default function ChildHudScreen() {
   });
   // M6-U01: an upgraded pet's sheet also says »Izziv: Teden N od 12« (week from the purchase).
   const profileRows = pet.profile
-    ? profileSheetRows(breedName(pet.breed_type, pet.species), pet.profile, challengeStartedAt(pet.plan) !== null ? childChallengeWeek(pet) : null)
+    ? profileSheetRows(
+        breedName(pet.breed_type, pet.species),
+        pet.profile,
+        challengeStartedAt(pet.plan) !== null ? childChallengeWeek(pet) : null,
+        // David 2026-11-28: the school commands with a ✓ for each learned one.
+        view.training.enabled ? view.training.commands : [],
+      )
     : [];
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';

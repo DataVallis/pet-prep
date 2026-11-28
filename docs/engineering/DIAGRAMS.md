@@ -1897,8 +1897,10 @@ flowchart TD
   TL -->|break after round 1| B["»1. krog ✓« + stars · token hidden<br/>»Nadaljuj (3…1)« → round 2 at its start_ms<br/>small »Končaj« while earlyEndOpen()"]
   B -->|Končaj| E["POST /training/finish {taps, ended_after_round: 1}<br/>(clock keeps running)"]
   E -->|200| RES["SchoolResultV2: Bravo! / Dober začetek! / Vaja dela mojstra<br/>per-cue outcomes (waited = green ✓), N practices left, one tip, routine line"]
+  E -->|200 + command_learned| MS["milestone (David 2026-11-28): CommandLearnedHero on top<br/>»{ime} zna ukaz »…«!« · pose · badge + burst (reduce motion: static) · chime + haptic<br/>details (stars, rounds) collapsed below the buttons"]
   E -->|422 training_round_two_started / offline| RUN
   RUN -->|duration over| FULL["POST /training/finish {taps}"] --> RES
+  FULL -->|command_learned| MS
 ```
 
 ### 10f-5. Wand hunt (simple rule), cuddles v2 and the care games on the game layer (GAMES_SPEC §5, §4.4 C1, §5.5 / §7.7 — phases 2 + 4 app side, 2026-10-31; the wand's simple rule David 2026-11-08)

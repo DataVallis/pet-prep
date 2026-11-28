@@ -24,7 +24,7 @@
  */
 
 import { mediaModeOf } from '@/modules/display/display';
-import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { ActivityIndicator, Animated, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Check, GraduationCap, Heart, X } from 'lucide-react-native';
@@ -74,6 +74,9 @@ import { gameLayerAvailable } from '@/modules/gameLayer/capability';
 import { GameExitProvider } from '@/modules/gameLayer/gameExit';
 import type SchoolGameV2Component from '@/modules/training/schoolV2/SchoolGameV2';
 import SchoolResultV2 from '@/modules/training/schoolV2/SchoolResultV2';
+import CommandLearnedHero from '@/modules/training/milestone/CommandLearnedHero';
+import { milestoneFor } from '@/modules/training/commandLearned';
+import { gameFeedbackOf } from '@/modules/gameLayer/gameFeedback';
 import { isSchoolV2Session, SCHOOL_RULES_V2 } from '@/modules/training/training';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
@@ -249,6 +252,7 @@ function ResultView({
   onDone,
   onAgain,
   canStartAgain,
+  milestone = null,
 }: {
   result: TrainingResult;
   /** `unchanged` = the server returned a result it had saved before (a repeated finish). */
@@ -256,6 +260,8 @@ function ResultView({
   onDone: () => void;
   onAgain: () => void;
   canStartAgain: boolean;
+  /** David 2026-11-28: the milestone hero replaces the title (only the session that learned the command). */
+  milestone?: ReactNode;
 }) {
   const name = S.commands[result.command].name;
   // Title and facts line from the same parsed trials (M5-F04): they always agree.
@@ -269,9 +275,11 @@ function ResultView({
   else gainLine = S.result.noGain;
   return (
     <View style={styles.resultBox} testID="training-result">
-      <Text style={styles.resultTitle} testID="training-result-title" accessibilityRole="header">
-        {stored ? S.result.titleStored : resultTitle(bucket)}
-      </Text>
+      {milestone ?? (
+        <Text style={styles.resultTitle} testID="training-result-title" accessibilityRole="header">
+          {stored ? S.result.titleStored : resultTitle(bucket)}
+        </Text>
+      )}
       {stored && <Text style={styles.muted}>{S.result.stored}</Text>}
       <Text style={styles.body} testID="training-result-successes">
         {S.result.successes(counts.onTime, counts.obeyed)}
@@ -279,7 +287,7 @@ function ResultView({
       <Text style={styles.bodyStrong} testID="training-result-gain">
         {gainLine}
       </Text>
-      {learned && (
+      {learned && milestone === null && (
         <Text style={styles.learnedLine} testID="training-result-learned">
           {S.result.learned(name)}
         </Text>
@@ -349,6 +357,22 @@ export default function TrainingOverlay({ view, onClose, clock, reduceMotion: re
   const dayEnding = isDayEnding(training, serverNow, familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   const block = startBlock(training, dayEnding);
   const left = sessionsLeftToday(training);
+  // David 2026-11-28: the first time a command is learned, the result is a milestone screen.
+  const learnedNow = phase.kind === 'result' ? milestoneFor(phase.learned, phase.result.command) : null;
+  const milestone =
+    learnedNow === null ? null : (
+      <CommandLearnedHero
+        command={learnedNow.command}
+        petName={view.pet.name}
+        media={view.pet.media}
+        mode={mediaModeOf(view)}
+        breed={view.pet.breed_type}
+        species={view.pet.species}
+        reduceMotion={reduceMotion}
+        soundAndHaptics={gameFeedbackOf(view)}
+        onMediaExpired={() => void queryClient.invalidateQueries({ queryKey: childPetKey })}
+      />
+    );
 
   if (SchoolGameV2 !== null && (phase.kind === 'preparing' || phase.kind === 'running' || phase.kind === 'finishing') && isSchoolV2Session(phase.session)) {
     // `preparing` → `running` → `finishing` keep the same game (its deck is never remounted).
@@ -377,7 +401,7 @@ export default function TrainingOverlay({ view, onClose, clock, reduceMotion: re
   if (phase.kind === 'result' && phase.result.rules_version === SCHOOL_RULES_V2) {
     return (
       <View style={styles.fullScreen} testID={testID} accessibilityViewIsModal>
-        <SchoolResultV2 result={phase.result} status={phase.status} canStartAgain={left > 0} practicesLeft={left} onAgain={game.reset} onDone={onClose} />
+        <SchoolResultV2 result={phase.result} status={phase.status} canStartAgain={left > 0} practicesLeft={left} onAgain={game.reset} onDone={onClose} milestone={milestone} />
       </View>
     );
   }
@@ -456,7 +480,7 @@ export default function TrainingOverlay({ view, onClose, clock, reduceMotion: re
 
       {phase.kind === 'result' && (
         <ScrollView contentContainerStyle={styles.content}>
-          <ResultView result={phase.result} status={phase.status} onDone={onClose} onAgain={game.reset} canStartAgain={left > 0} />
+          <ResultView result={phase.result} status={phase.status} onDone={onClose} onAgain={game.reset} canStartAgain={left > 0} milestone={milestone} />
         </ScrollView>
       )}
 

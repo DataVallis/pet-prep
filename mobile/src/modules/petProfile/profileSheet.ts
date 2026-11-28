@@ -16,8 +16,10 @@ import {
   originLine,
   type PetProfileInfo,
 } from '@/modules/petProfile/petProfile';
+import { commandsLine } from '@/modules/training/commandLearned';
+import type { CommandProgress } from '@/modules/training/training';
 
-export type ProfileSheetRowKey = 'breed' | 'stage' | 'age' | 'origin' | 'nextStage' | 'meals' | 'challenge';
+export type ProfileSheetRowKey = 'breed' | 'stage' | 'age' | 'origin' | 'nextStage' | 'meals' | 'challenge' | 'commands';
 
 const CHALLENGE_WEEKS = 12;
 
@@ -32,8 +34,15 @@ export interface ProfileSheetRow {
  * `challengeWeek` (M6-U01): the child's week (1–12) of the 12-week challenge of a pet a parent
  * upgraded from the free plan (the child's own server progress — QA #978 e) → »Izziv: Teden N
  * od 12«; null = no such row (every other pet: the sheet is unchanged).
+ * `commands` (David 2026-11-28): the school commands → »Ukazi: Sedi ✓ · Prostor ✓ · Pridi 60 % ·
+ * Lulat zunaj 10 %« (learned first); none (no school / older server) → no row.
  */
-export function profileSheetRows(breedLabel: string, profile: PetProfileInfo, challengeWeek: number | null = null): ProfileSheetRow[] {
+export function profileSheetRows(
+  breedLabel: string,
+  profile: PetProfileInfo,
+  challengeWeek: number | null = null,
+  commands: readonly CommandProgress[] = [],
+): ProfileSheetRow[] {
   const values: Record<ProfileSheetRowKey, string | null> = {
     breed: breedLabel.trim() === '' ? null : breedLabel,
     stage: profile.stage ? PET_PROFILE_STRINGS.stages[profile.stage] : null,
@@ -45,15 +54,19 @@ export function profileSheetRows(breedLabel: string, profile: PetProfileInfo, ch
       challengeWeek === null
         ? null
         : t('child:hud.profileSheet.challengeWeek', { week: Math.min(CHALLENGE_WEEKS, Math.max(1, Math.floor(challengeWeek))), total: CHALLENGE_WEEKS }),
+    commands: commandsLine(commands),
   };
-  const order: readonly ProfileSheetRowKey[] = ['breed', 'stage', 'age', 'origin', 'nextStage', 'meals', 'challenge'];
+  const order: readonly ProfileSheetRowKey[] = ['breed', 'stage', 'age', 'origin', 'nextStage', 'meals', 'challenge', 'commands'];
   return order.flatMap((key) => {
     const value = values[key];
     return value === null ? [] : [{ key, label: t(`child:hud.profileSheet.labels.${key}`), value }];
   });
 }
 
-/** Screen-reader label of the tappable header: the whole profile in one sentence. */
+/** Screen-reader label of the tappable header: the whole profile in one sentence (without the commands list). */
 export function profileHeaderA11y(rows: readonly ProfileSheetRow[]): string {
-  return rows.map((r) => r.value).join(', ');
+  return rows
+    .filter((r) => r.key !== 'commands')
+    .map((r) => r.value)
+    .join(', ');
 }

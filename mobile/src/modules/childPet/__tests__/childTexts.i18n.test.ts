@@ -98,8 +98,8 @@ describe('English child copy', () => {
     expect(TRAINING_STRINGS.result.gain('Sit', 40, 60)).toBe('Sit: 40% → 60%');
     expect(
       knowsLine([
-        { command: 'sit', progress: 100, learned: true, last_practised_at: null },
-        { command: 'come', progress: 60, learned: false, last_practised_at: null },
+        { command: 'sit', progress: 100, learned: true, last_practised_at: null, learned_at: null },
+        { command: 'come', progress: 60, learned: false, last_practised_at: null, learned_at: null },
       ]),
     ).toBe('The dog knows: sit ✓, come 60%');
   });

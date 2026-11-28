@@ -28,6 +28,8 @@ export const PUSH_TYPES = [
   'item_ready',
   // M6-U02: a free pet's day-7 reminder »Je čas za pravi preizkus?« (parents only, once per pet).
   'upgrade_reminder',
+  // David 2026-11-28: a child's dog learned a school command for the first time (parents; `{type, pet_id}`).
+  'command_learned',
 ] as const;
 
 export type PushType = (typeof PUSH_TYPES)[number];
@@ -70,13 +72,14 @@ export function isUrgentPush(type: PushType | null | undefined): boolean {
     type !== 'soft_warning' &&
     type !== 'walk_reminder' &&
     type !== 'take_out_reminder' &&
-    // Good news / a reminder, never an alarm (M2-01d, M5-T06, M5-T13, M5-R18).
+    // Good news / a reminder, never an alarm (M2-01d, M5-T06, M5-T13, M5-R18, command learned).
     type !== 'challenge_completed' &&
     type !== 'pet_ready' &&
     type !== 'pet_birthday' &&
     type !== 'care_reminder' &&
     type !== 'wish_created' &&
     type !== 'item_ready' &&
-    type !== 'upgrade_reminder'
+    type !== 'upgrade_reminder' &&
+    type !== 'command_learned'
   );
 }
