@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "112ff790af7bd326edefb0441dc97c7b93598bfcd589c7a59880e9b7ee8a27f9"
+      "sha256": "d8ed1a9d07103c92408cd88d1e96171fd2ca8caa65f6707f477da12d2ba73dc5"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -85599,7 +85599,7 @@
       "id": "barbet",
       "species": "dog",
       "order": 136,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Barbet",
         "sl": "Barbet"
@@ -86249,7 +86249,7 @@
       "id": "icelandic_sheepdog",
       "species": "dog",
       "order": 137,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Icelandic Sheepdog",
         "sl": "Islandski ovčar"
