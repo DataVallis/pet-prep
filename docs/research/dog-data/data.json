@@ -75685,13 +75685,21 @@
     },
     "suitability": {
       "_note": "Source = PetMD (S1095), WebMD (S1096), AKC (S1097). The RKC Breeds A–Z key facts (size of home, sheds, town or country, Breed Watch) were not reachable → no rkc_* entries, no apartment / large_home chip (AKC 'can thrive in apartments' is not the RKC 'Flat/ Apartment' key fact).",
+      "fci_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S1094",
+        "quote": "Long, woolly and curly; can form strands.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 105 (S1094) 'HAIR' — value = the register category."
+      },
       "petmd_grooming": {
-        "value": "brushing two to three times a week (breed club); at least twice a week",
+        "value": "More than once a week",
         "unit": "—",
         "source_id": "S1095",
         "quote": "According to the breed club, Barbet dogs should be brushed two to three times a week with a slicker or pin brush",
         "confidence": "high",
-        "notes": "PetMD (S1095), continued 'to prevent matting, …' (paraphrase). Also 'Brushing is required at least twice a week, and your Barbet will need occasional professional grooming as well.' (S1095). The basis of brushing 3× a week (M5-R13 rule: a range → the upper bound) and of the frequent_grooming chip."
+        "notes": "PetMD (S1095), continued 'to prevent matting, …' (paraphrase); value = the register category (two to three times a week). Also 'Brushing is required at least twice a week, and your Barbet will need occasional professional grooming as well.' (S1095). The basis of brushing 3× a week (M5-R13 rule: a range → the upper bound) and of the frequent_grooming chip."
       },
       "petmd_grooming_min": {
         "value": "at least twice a week",
@@ -75710,12 +75718,12 @@
         "notes": "WebMD (S1096) — no number; hair trimmed to three to five inches (paraphrase, no interval)."
       },
       "petmd_shedding": {
-        "value": "does not shed much",
+        "value": "Minimal",
         "unit": "—",
         "source_id": "S1095",
         "quote": "This breed doesn’t shed very much",
         "confidence": "high",
-        "notes": "PetMD (S1095, fragment; the sentence goes on to call it 'hypoallergenic' — never used: no dog is). WebMD (S1096) 'this breed doesn't drool or shed very much, and could be a good option for people with dog allergies.' Basis of low_shedding — never 'hypoallergenic'."
+        "notes": "PetMD (S1095, fragment; value = the register category; the sentence goes on to call it 'hypoallergenic' — never used: no dog is). WebMD (S1096) 'this breed doesn't drool or shed very much, and could be a good option for people with dog allergies.' Basis of low_shedding — never 'hypoallergenic'."
       },
       "webmd_teeth": {
         "value": "tooth brushing every day or two",
