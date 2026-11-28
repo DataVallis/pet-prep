@@ -60,7 +60,8 @@
         "de": "Versorgung aller Notfälle rund um die Uhr; bitte vorher anrufen.",
         "fr": "Soins 24 h/24 pour toutes les urgences ; appelez avant de venir.",
         "es": "Atención las 24 horas para todo tipo de urgencias; llama antes.",
-        "it": "Assistenza 24 ore su 24 per tutte le urgenze; telefonare in anticipo."
+        "it": "Assistenza 24 ore su 24 per tutte le urgenze; telefonare in anticipo.",
+        "pt": "Atendimento 24 h/24 para todas as urgências; liga antes."
       }
     },
     {
@@ -89,7 +90,8 @@
         "de": "Mo–Fr 8.00–19.00 Uhr und Sa 8.00–15.00 Uhr geöffnet; dringende Fälle rund um die Uhr.",
         "fr": "Ouvert lun.–ven. 8 h–19 h et sam. 8 h–15 h ; soins urgents disponibles 24 h/24.",
         "es": "Abierto lun–vie 8:00–19:00 h y sáb 8:00–15:00 h; urgencias las 24 horas.",
-        "it": "Aperto lun–ven 8:00–19:00 e sab 8:00–15:00; urgenze 24 ore su 24."
+        "it": "Aperto lun–ven 8:00–19:00 e sab 8:00–15:00; urgenze 24 ore su 24.",
+        "pt": "Aberto seg–sex 8h00–19h00 e sáb 8h00–15h00; atendimento urgente 24 h/24."
       }
     },
     {
@@ -118,7 +120,8 @@
         "de": "Täglich 8.00–19.00 Uhr geöffnet.",
         "fr": "Ouvert tous les jours 8 h–19 h.",
         "es": "Abierto a diario 8:00–19:00 h.",
-        "it": "Aperto tutti i giorni 8:00–19:00."
+        "it": "Aperto tutti i giorni 8:00–19:00.",
+        "pt": "Aberto todos os dias das 8h00 às 19h00."
       }
     },
     {
@@ -147,7 +150,8 @@
         "de": "Mo–Sa 8.00–20.00 Uhr, So und feiertags 8.00–13.00 Uhr geöffnet.",
         "fr": "Ouvert lun.–sam. 8 h–20 h, dim. et jours fériés 8 h–13 h.",
         "es": "Abierto lun–sáb 8:00–20:00 h, dom y festivos 8:00–13:00 h.",
-        "it": "Aperto lun–sab 8:00–20:00, dom e festivi 8:00–13:00."
+        "it": "Aperto lun–sab 8:00–20:00, dom e festivi 8:00–13:00.",
+        "pt": "Aberto seg–sáb 8h00–20h00, dom e feriados 8h00–13h00."
       }
     }
   ],

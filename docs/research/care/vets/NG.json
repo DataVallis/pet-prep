@@ -54,7 +54,8 @@
         "de": "Mobiler Tierarzt mit Hausbesuchen für Hunde und Katzen; rund um die Uhr erreichbar, 7 Tage die Woche, auch bei Notfällen. Einzugsgebiet: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
         "fr": "Vétérinaire mobile à domicile pour chiens et chats ; ouvert 24 h/24, 7 j/7, urgences comprises. Zones desservies : Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
         "es": "Veterinario móvil a domicilio para perros y gatos; abierto las 24 horas, los 7 días de la semana, también para urgencias. Zonas de servicio: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
-        "it": "Veterinario a domicilio per cani e gatti; aperto 24 ore su 24, 7 giorni su 7, emergenze incluse. Zone servite: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
+        "it": "Veterinario a domicilio per cani e gatti; aperto 24 ore su 24, 7 giorni su 7, emergenze incluse. Zone servite: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun.",
+        "pt": "Veterinário móvel com visitas ao domicílio para cães e gatos; aberto 24 h/24, 7 dias por semana, incluindo urgências. Zonas servidas: Ikola, Ipaja, Abesan, Iyana Ipaja, Ikotun."
       }
     },
     {
@@ -83,7 +84,8 @@
         "de": "Mo–Sa 8.00–18.00 Uhr; sonntags auf Anfrage. Bei Notfällen bitte vorher anrufen.",
         "fr": "Lun.–sam. 8 h–18 h ; dimanche sur demande. Appelez avant de venir en cas d’urgence.",
         "es": "Lun–sáb 8:00–18:00 h; domingo a petición. Llama antes para urgencias.",
-        "it": "Lun–sab 08:00–18:00; domenica su richiesta. Telefonare in anticipo per le emergenze."
+        "it": "Lun–sab 08:00–18:00; domenica su richiesta. Telefonare in anticipo per le emergenze.",
+        "pt": "Seg–sáb 8h00–18h00; domingo a pedido. Liga antes em caso de urgência."
       }
     },
     {
@@ -111,7 +113,8 @@
         "de": "Universitäre Lehr- und Überweisungsklinik für Tiere; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital vétérinaire universitaire d’enseignement et de référence ; appelez pour connaître les horaires.",
         "es": "Hospital universitario docente y de referencia para animales; llama antes para consultar el horario.",
-        "it": "Ospedale didattico universitario di riferimento; telefonare in anticipo per gli orari."
+        "it": "Ospedale didattico universitario di riferimento; telefonare in anticipo per gli orari.",
+        "pt": "Hospital veterinário universitário de ensino e referência; liga antes para saber o horário."
       }
     },
     {
@@ -138,7 +141,8 @@
         "de": "Universitäre Lehrklinik für Haustiere, Nutztiere und Wildtiere; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital universitaire d’enseignement pour animaux de compagnie, animaux d’élevage et faune sauvage ; appelez pour connaître les horaires.",
         "es": "Hospital universitario docente para mascotas, animales de abasto y fauna salvaje; llama antes para consultar el horario.",
-        "it": "Ospedale didattico universitario per animali da compagnia, animali da reddito e fauna selvatica; telefonare in anticipo per gli orari."
+        "it": "Ospedale didattico universitario per animali da compagnia, animali da reddito e fauna selvatica; telefonare in anticipo per gli orari.",
+        "pt": "Hospital universitário de ensino para animais de estimação, animais de produção e animais selvagens; liga antes para saber o horário."
       }
     },
     {
@@ -166,7 +170,8 @@
         "de": "Kleintierklinik mit Intensivstation und Infektionsstation; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Clinique pour petits animaux avec soins intensifs et service des maladies infectieuses ; appelez pour connaître les horaires.",
         "es": "Clínica de animales pequeños con cuidados intensivos y sala de enfermedades infecciosas; llama antes para consultar el horario.",
-        "it": "Clinica per piccoli animali con terapia intensiva e reparto per malattie infettive; telefonare in anticipo per gli orari."
+        "it": "Clinica per piccoli animali con terapia intensiva e reparto per malattie infettive; telefonare in anticipo per gli orari.",
+        "pt": "Clínica de animais de companhia com cuidados intensivos e enfermaria de doenças infecciosas; liga antes para saber o horário."
       }
     }
   ],

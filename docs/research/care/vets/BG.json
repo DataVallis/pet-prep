@@ -60,7 +60,8 @@
         "de": "Täglich 8.00–22.00 Uhr geöffnet; Notfälle werden in dieser Zeit angenommen, nach 22.00 Uhr keine neuen Patienten. Stationäre Abteilung rund um die Uhr für aufgenommene Tiere.",
         "fr": "Ouvert tous les jours 8 h–22 h ; urgences acceptées pendant ces heures, aucun nouveau patient après 22 h. Hospitalisation surveillée 24 h/24.",
         "es": "Abierto a diario 8:00–22:00 h; se atienden urgencias en este horario, sin nuevos pacientes después de las 22:00 h. Hospitalización las 24 horas para animales ingresados.",
-        "it": "Aperto tutti i giorni 08:00–22:00; urgenze accolte in questo orario, nessun nuovo paziente dopo le 22:00. Reparto di degenza aperto 24 ore su 24 per gli animali ricoverati."
+        "it": "Aperto tutti i giorni 08:00–22:00; urgenze accolte in questo orario, nessun nuovo paziente dopo le 22:00. Reparto di degenza aperto 24 ore su 24 per gli animali ricoverati.",
+        "pt": "Aberto todos os dias das 8h00 às 22h00; urgências atendidas neste horário, sem novos pacientes após as 22h00. Internamento 24 h/24 para animais hospitalizados."
       }
     },
     {
@@ -89,7 +90,8 @@
         "de": "Di–Sa 9.30–19.00 Uhr geöffnet; sonntags und montags geschlossen.",
         "fr": "Ouvert du mardi au samedi 9 h 30–19 h ; fermé le dimanche et le lundi.",
         "es": "Abierto martes–sábado 9:30–19:00 h; cerrado domingo y lunes.",
-        "it": "Aperto martedì–sabato 09:30–19:00; chiuso domenica e lunedì."
+        "it": "Aperto martedì–sabato 09:30–19:00; chiuso domenica e lunedì.",
+        "pt": "Aberto de terça a sábado, 9h30–19h00; encerrado ao domingo e à segunda-feira."
       }
     }
   ],

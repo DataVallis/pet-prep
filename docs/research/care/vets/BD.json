@@ -65,7 +65,8 @@
         "de": "So–Do 9.00–17.00 Uhr, Sa 9.00–14.00 Uhr; an Feiertagen geschlossen. Behandelt Hunde, Katzen, Vögel, Kaninchen und Schildkröten; Notfälle über den mobilen Dienst.",
         "fr": "Dim.–jeu. 9 h–17 h, sam. 9 h–14 h ; fermé les jours fériés. Soins pour chiens, chats, oiseaux, lapins et tortues ; urgences par le service mobile.",
         "es": "Dom–jue 9:00–17:00 h, sáb 9:00–14:00 h; cerrado en festivos. Atiende perros, gatos, aves, conejos y tortugas; urgencias mediante el servicio ambulatorio.",
-        "it": "Dom–gio 9:00–17:00, sab 9:00–14:00; chiuso nei giorni festivi. Cura cani, gatti, uccelli, conigli e tartarughe; urgenze tramite il servizio di ambulanza."
+        "it": "Dom–gio 9:00–17:00, sab 9:00–14:00; chiuso nei giorni festivi. Cura cani, gatti, uccelli, conigli e tartarughe; urgenze tramite il servizio di ambulanza.",
+        "pt": "Dom–qui 9h00–17h00, sáb 9h00–14h00; encerrado nos feriados. Trata cães, gatos, aves, coelhos e tartarugas; chamadas de urgência através do serviço ambulatório."
       }
     },
     {
@@ -94,7 +95,8 @@
         "de": "Kleintierklinik der Chattogram Veterinary and Animal Sciences University; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital pour animaux de compagnie géré par l’université vétérinaire et des sciences animales de Chattogram ; appelez pour connaître les horaires.",
         "es": "Hospital veterinario de pequeños animales gestionado por la Chattogram Veterinary and Animal Sciences University; llama antes para consultar el horario.",
-        "it": "Ospedale veterinario per piccoli animali gestito dalla Chattogram Veterinary and Animal Sciences University; telefonare per gli orari."
+        "it": "Ospedale veterinario per piccoli animali gestito dalla Chattogram Veterinary and Animal Sciences University; telefonare per gli orari.",
+        "pt": "Hospital veterinário de animais de companhia gerido pela Chattogram Veterinary and Animal Sciences University; liga antes para saber o horário."
       }
     },
     {
@@ -123,7 +125,8 @@
         "de": "Universitäre Lehrklinik für Haustiere und Nutztiere; Öffnungszeiten bitte telefonisch erfragen.",
         "fr": "Hôpital universitaire pour animaux de compagnie et domestiques ; appelez pour connaître les horaires.",
         "es": "Hospital universitario docente para mascotas y animales domésticos; llama para consultar el horario.",
-        "it": "Ospedale veterinario universitario per animali da compagnia e domestici; telefonare per gli orari."
+        "it": "Ospedale veterinario universitario per animali da compagnia e domestici; telefonare per gli orari.",
+        "pt": "Hospital universitário de ensino para animais de estimação e animais domésticos; liga para saber o horário."
       }
     },
     {
@@ -151,7 +154,8 @@
         "de": "Private Tierklinik mit Tagesbetreuung in Uttara.",
         "fr": "Hôpital privé pour animaux de compagnie et garderie à Uttara.",
         "es": "Hospital privado para mascotas y guardería de día en Uttara.",
-        "it": "Ospedale veterinario privato e asilo diurno per animali a Uttara."
+        "it": "Ospedale veterinario privato e asilo diurno per animali a Uttara.",
+        "pt": "Hospital veterinário privado e creche para animais de estimação em Uttara."
       }
     },
     {
@@ -180,7 +184,8 @@
         "de": "Rund um die Uhr in Betrieb, mit Notdienst, Hausbesuchen sowie telefonischer oder Online-Terminvereinbarung.",
         "fr": "Ouvert 24 h/24, 7 j/7, avec service d’urgence, visites à domicile et rendez-vous par téléphone ou en ligne.",
         "es": "Abierto las 24 horas, con servicio de urgencias, visitas a domicilio y citas por teléfono u online.",
-        "it": "Aperto 24 ore su 24, 7 giorni su 7, con servizio di emergenza, visite a domicilio e appuntamenti telefonici od online."
+        "it": "Aperto 24 ore su 24, 7 giorni su 7, con servizio di emergenza, visite a domicilio e appuntamenti telefonici od online.",
+        "pt": "Aberto 24 h/24, 7 dias por semana, com serviço de urgência, visitas ao domicílio e marcações por telefone ou online."
       }
     }
   ],
