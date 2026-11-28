@@ -157,6 +157,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   smooth_fox_terrier: 'dog',
   bearded_collie: 'dog',
   saluki: 'dog',
+  barbet: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -316,6 +317,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'smooth_fox_terrier',
   'bearded_collie',
   'saluki',
+  'barbet',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
